@@ -1,40 +1,40 @@
-import type { TokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse.ts";
-import { GrantType } from "../types/grantTypes.ts";
-import type { ItslearningScope } from "../types/scopes.ts";
-import { fetchWrapper } from "../utils/fetchWrapper";
+import type { ItsolutionsItslearningWebRestApiPersonalTokenResponse } from '../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse'
+import { GrantType } from '../types/grantTypes'
+import type { ItslearningScope } from '../types/scopes'
+import { ApiService } from '../utils/api-service'
 
 type OAuth2Config = {
-	clientId: string;
-	clientSecret: string;
-	redirectUri: string;
-	tokenUrl: string;
-};
+	clientId: string
+	clientSecret: string
+	redirectUri: string
+	tokenUrl: string
+}
 
 export class OAuth2Client {
-	private config: OAuth2Config;
-	private accessToken: string | null = null;
-	private refreshToken: string | null = null;
+	private config: OAuth2Config
+	private accessToken: string | null = null
+	private refreshToken: string | null = null
 
 	constructor(config: OAuth2Config) {
-		this.config = config;
+		this.config = config
 	}
 
 	getAuthorizationUrl(state: string, scope: ItslearningScope[]): string {
 		const params = new URLSearchParams({
 			client_id: this.config.clientId,
-			response_type: "code",
+			response_type: 'code',
 			redirect_uri: this.config.redirectUri,
-			scope: scope.join(" "),
+			scope: scope.join(' '),
 			state,
-		});
-		return `${this.config.tokenUrl}/authorize?${params.toString()}`;
+		})
+		return `${this.config.tokenUrl}/authorize?${params.toString()}`
 	}
 
 	async getTokenFromCode(code: string): Promise<void> {
-		const response = await fetchWrapper<TokenResponse>(
+		const response = await fetchWrapper<ItsolutionsItslearningWebRestApiPersonalTokenResponse>(
 			`${this.config.tokenUrl}/token`,
 			{
-				method: "POST",
+				method: 'POST',
 				body: new URLSearchParams({
 					grant_type: GrantType.AuthorizationCode,
 					code,
@@ -43,40 +43,40 @@ export class OAuth2Client {
 					client_secret: this.config.clientSecret,
 				}),
 				headers: {
-					"Content-Type": "application/x-www-form-urlencoded",
+					'Content-Type': 'application/x-www-form-urlencoded',
 				},
-			},
-		);
+			}
+		)
 
-		this.accessToken = response.access_token;
-		this.refreshToken = response.refresh_token;
+		this.accessToken = response.access_token
+		this.refreshToken = response.refresh_token
 	}
 
 	async refreshAccessToken(): Promise<void> {
-		if (!this.refreshToken) throw new Error("No refresh token available");
+		if (!this.refreshToken) throw new Error('No refresh token available')
 
 		const response = await fetchWrapper<TokenResponse>(this.config.tokenUrl, {
-			method: "POST",
+			method: 'POST',
 			body: new URLSearchParams({
-				grant_type: "refresh_token",
+				grant_type: 'refresh_token',
 				refresh_token: this.refreshToken,
 				client_id: this.config.clientId,
 				client_secret: this.config.clientSecret,
 			}),
 			headers: {
-				"Content-Type": "application/x-www-form-urlencoded",
+				'Content-Type': 'application/x-www-form-urlencoded',
 			},
-		});
+		})
 
-		this.accessToken = response.access_token;
-		this.refreshToken = response.refresh_token;
+		this.accessToken = response.access_token
+		this.refreshToken = response.refresh_token
 	}
 
 	getAccessToken(): string | null {
-		return this.accessToken;
+		return this.accessToken
 	}
 
 	setAccessToken(token: string): void {
-		this.accessToken = token;
+		this.accessToken = token
 	}
 }
