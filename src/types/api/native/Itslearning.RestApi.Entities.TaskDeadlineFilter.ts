@@ -3,7 +3,7 @@ export const ItslearningRestApiEntitiesTaskDeadlineFilterValues = {
 	Deadline: 1,
 	Overdue: 2,
 	NoDeadline: 3,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesTaskDeadlineFilterType =
-	(typeof ItslearningRestApiEntitiesTaskDeadlineFilterValues)[keyof typeof ItslearningRestApiEntitiesTaskDeadlineFilterValues]
+	(typeof ItslearningRestApiEntitiesTaskDeadlineFilterValues)[keyof typeof ItslearningRestApiEntitiesTaskDeadlineFilterValues];

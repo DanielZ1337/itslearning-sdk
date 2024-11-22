@@ -5,7 +5,7 @@ export const ItslearningRestApiEntitiesTaskStatusFilter = {
 	All: 10,
 	ActiveViewAsInCourse: 20,
 	CompletedViewAsInCourse: 21,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesTaskStatusFilter =
-	(typeof ItslearningRestApiEntitiesTaskStatusFilter)[keyof typeof ItslearningRestApiEntitiesTaskStatusFilter]
+	(typeof ItslearningRestApiEntitiesTaskStatusFilter)[keyof typeof ItslearningRestApiEntitiesTaskStatusFilter];

@@ -7,7 +7,7 @@ export const ItslearningRestApiEntitiesPersonContextRole = {
 	Mentor: 5,
 	Administrator: 6,
 	TeachingAssistant: 7,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesPersonContextRole =
-	(typeof ItslearningRestApiEntitiesPersonContextRole)[keyof typeof ItslearningRestApiEntitiesPersonContextRole]
+	(typeof ItslearningRestApiEntitiesPersonContextRole)[keyof typeof ItslearningRestApiEntitiesPersonContextRole];

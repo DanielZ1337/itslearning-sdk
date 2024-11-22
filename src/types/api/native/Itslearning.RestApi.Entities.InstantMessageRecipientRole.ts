@@ -4,7 +4,7 @@ export const ItslearningRestApiEntitiesInstantMessageRecipientRole = {
 	Teacher: 3,
 	Administrator: 4,
 	Parent: 5,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesInstantMessageRecipientRoleType =
-	(typeof ItslearningRestApiEntitiesInstantMessageRecipientRole)[keyof typeof ItslearningRestApiEntitiesInstantMessageRecipientRole]
+	(typeof ItslearningRestApiEntitiesInstantMessageRecipientRole)[keyof typeof ItslearningRestApiEntitiesInstantMessageRecipientRole];

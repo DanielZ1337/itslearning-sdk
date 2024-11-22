@@ -6,7 +6,7 @@ export const ItsolutionsItslUtilsConstantsLocationType = {
 	Site: 6,
 	PersonCache: 7,
 	Library: 8,
-} as const
+} as const;
 
 export type ItsolutionsItslUtilsConstantsLocationType =
-	(typeof ItsolutionsItslUtilsConstantsLocationType)[keyof typeof ItsolutionsItslUtilsConstantsLocationType]
+	(typeof ItsolutionsItslUtilsConstantsLocationType)[keyof typeof ItsolutionsItslUtilsConstantsLocationType];

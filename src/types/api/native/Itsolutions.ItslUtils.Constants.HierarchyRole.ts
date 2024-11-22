@@ -4,7 +4,7 @@ export const ItsolutionsItslUtilsConstantsHierarchyRole = {
 	Student: 2,
 	Teacher: 3,
 	Administrator: 4,
-} as const
+} as const;
 
 export type ItsolutionsItslUtilsConstantsHierarchyRole =
-	(typeof ItsolutionsItslUtilsConstantsHierarchyRole)[keyof typeof ItsolutionsItslUtilsConstantsHierarchyRole]
+	(typeof ItsolutionsItslUtilsConstantsHierarchyRole)[keyof typeof ItsolutionsItslUtilsConstantsHierarchyRole];

@@ -5,7 +5,7 @@ export const ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult = {
 	AfterDeadline: 3,
 	AfterAllAttempts: 4,
 	WhenTeacherDecides: 5,
-} as const
+} as const;
 
 export type ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult =
-	(typeof ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult)[keyof typeof ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult]
+	(typeof ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult)[keyof typeof ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult];

@@ -3,7 +3,7 @@ export const ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod = {
 	Expired: 1,
 	Scheduled: 2,
 	All: 3,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod =
-	(typeof ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod)[keyof typeof ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod]
+	(typeof ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod)[keyof typeof ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod];

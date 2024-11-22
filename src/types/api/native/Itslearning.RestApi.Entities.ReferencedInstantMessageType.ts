@@ -4,7 +4,7 @@ export const ItslearningRestApiEntitiesReferencedInstantMessageType = {
 	Replied: 3,
 	AbuseReported: 4,
 	AbuseReportedThread: 5,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesReferencedInstantMessageType =
-	(typeof ItslearningRestApiEntitiesReferencedInstantMessageType)[keyof typeof ItslearningRestApiEntitiesReferencedInstantMessageType]
+	(typeof ItslearningRestApiEntitiesReferencedInstantMessageType)[keyof typeof ItslearningRestApiEntitiesReferencedInstantMessageType];

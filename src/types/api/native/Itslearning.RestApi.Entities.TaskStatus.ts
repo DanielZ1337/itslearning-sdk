@@ -3,7 +3,7 @@ export const ItslearningRestApiEntitiesTaskStatus = {
 	NotStarted: 1,
 	InProgress: 2,
 	Completed: 3,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesTaskStatus =
-	(typeof ItslearningRestApiEntitiesTaskStatus)[keyof typeof ItslearningRestApiEntitiesTaskStatus]
+	(typeof ItslearningRestApiEntitiesTaskStatus)[keyof typeof ItslearningRestApiEntitiesTaskStatus];

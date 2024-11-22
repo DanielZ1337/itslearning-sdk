@@ -40,7 +40,7 @@ export const ItsolutionsItslUtilsConstantsElementType = {
 	CanContainSubElements: 1048580,
 	AllowedInLearningPath: 1072690425,
 	Hidden: 4194304,
-} as const
+} as const;
 
 export type ItsolutionsItslUtilsConstantsElementType =
-	(typeof ItsolutionsItslUtilsConstantsElementType)[keyof typeof ItsolutionsItslUtilsConstantsElementType]
+	(typeof ItsolutionsItslUtilsConstantsElementType)[keyof typeof ItsolutionsItslUtilsConstantsElementType];

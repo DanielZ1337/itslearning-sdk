@@ -30,7 +30,7 @@ export const ItslearningRestApiEntitiesElementType = {
 	LearningToolElement: 131072,
 	CustomActivity: 524288,
 	LearningPath: 1048576,
-} as const
+} as const;
 
 export type ItslearningRestApiEntitiesElementType =
-	(typeof ItslearningRestApiEntitiesElementType)[keyof typeof ItslearningRestApiEntitiesElementType]
+	(typeof ItslearningRestApiEntitiesElementType)[keyof typeof ItslearningRestApiEntitiesElementType];
