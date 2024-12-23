@@ -1,4 +1,6 @@
 import { Manager } from "../lib/Manager";
+import type { EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.TaskDailyWorkflow";
+import type { EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.TaskDailyWorkflowSection";
 import { createSearchParams } from "../utils/search-params";
 
 /**
@@ -23,14 +25,14 @@ export class TaskListDailyWorkflowAPI extends Manager {
    *
    * @param courseId - The unique ID of the course.
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of completed tasks per page (default = 10).
+   * @param pageSize - The number of completed tasks per page (default = 100).
    * @returns A promise that resolves to a list of completed tasks for the specified course.
    */
   public async getCourseCompletedTasks(
     courseId: number,
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
@@ -50,14 +52,14 @@ export class TaskListDailyWorkflowAPI extends Manager {
    *
    * @param courseId - The unique ID of the course.
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of tasks per page (default = 10).
+   * @param pageSize - The number of tasks per page (default = 100).
    * @returns A promise that resolves to a list of tasks separated into sections for the specified course.
    */
   public async getCourseTasksSeparated(
     courseId: number,
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
@@ -77,14 +79,14 @@ export class TaskListDailyWorkflowAPI extends Manager {
    *
    * @param courseId - The unique ID of the course.
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of tasks per page (default = 10).
+   * @param pageSize - The number of tasks per page (default = 100).
    * @returns A promise that resolves to a list of tasks in "View As" mode for the specified course.
    */
   public async getViewAsTasks(
     courseId: number,
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
@@ -104,14 +106,14 @@ export class TaskListDailyWorkflowAPI extends Manager {
    *
    * @param childId - The unique ID of the child.
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of tasks per page (default = 10).
+   * @param pageSize - The number of tasks per page (default = 100).
    * @returns A promise that resolves to a list of tasks separated into sections for the specified child.
    */
   public async getChildTasksSeparated(
     childId: number,
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
@@ -131,14 +133,14 @@ export class TaskListDailyWorkflowAPI extends Manager {
    *
    * @param childId - The unique ID of the child.
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of completed tasks per page (default = 10).
+   * @param pageSize - The number of completed tasks per page (default = 100).
    * @returns A promise that resolves to a list of completed tasks for the specified child.
    */
   public async getChildCompletedTasks(
     childId: number,
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
@@ -157,13 +159,13 @@ export class TaskListDailyWorkflowAPI extends Manager {
    * Supports paging. If paging is not used, it will use a default `pageSize` on `pageIndex` 0.
    *
    * @param pageIndex - The index of the page to retrieve (default = 0).
-   * @param pageSize - The number of tasks per page (default = 10).
+   * @param pageSize - The number of tasks per page (default = 100).
    * @returns A promise that resolves to a list of tasks separated into sections for the user.
    */
   public async getUserTasksSeparated(
     pageIndex = 0,
-    pageSize = 10,
-  ): Promise<unknown> {
+    pageSize = 100,
+  ): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
