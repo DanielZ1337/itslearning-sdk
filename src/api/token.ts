@@ -1,9 +1,9 @@
 import axios from "axios";
-import { HttpClient } from "../lib/HttpClient";
+import type { HttpClient } from "../lib/HttpClient";
+import { Manager } from "../lib/Manager";
+import type { ItsolutionsItslearningWebRestApiPersonalTokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse";
 import { defaultConfig } from "../types/config";
 import { GrantType } from "../types/grantTypes";
-import { type ItsolutionsItslearningWebRestApiPersonalTokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse";
-import { Manager } from "../lib/Manager";
 
 export class TokenAPI extends Manager {
   private clientId: string;

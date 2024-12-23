@@ -1,8 +1,5 @@
+import type { PaginatedResponse } from "../../paginated";
 import type { ItslearningRestApiEntitiesAggregatedOrganisationLite } from "./Itslearning.RestApi.Entities.AggregatedOrganisationLite";
 
-export type EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite = {
-  EntityArray: ItslearningRestApiEntitiesAggregatedOrganisationLite[];
-  Total: number;
-  CurrentPageIndex: number;
-  PageSize: number;
-};
+export type EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite =
+  PaginatedResponse<ItslearningRestApiEntitiesAggregatedOrganisationLite>;

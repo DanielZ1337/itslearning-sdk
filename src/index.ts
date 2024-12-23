@@ -1,4 +1,6 @@
 import { CalendarAPI } from "./api/Calendar";
+import { CoursesAPI } from "./api/Courses";
+import { SitesAPI } from "./api/Sites";
 import { TokenAPI } from "./api/Token";
 import { HttpClient } from "./lib/HttpClient";
 import { defaultConfig } from "./types/config";
@@ -21,6 +23,8 @@ export class ItsLearningSDK {
 
   public token: TokenAPI;
   public calendar: CalendarAPI;
+  public courses: CoursesAPI;
+  public sites: SitesAPI;
 
   constructor(config: SDKConfig) {
     this.clientId = config.clientId;
@@ -30,6 +34,8 @@ export class ItsLearningSDK {
     this.http = new HttpClient(this.baseURL, this.accessToken);
     this.token = new TokenAPI(this.http);
     this.calendar = new CalendarAPI(this.http);
+    this.courses = new CoursesAPI(this.http);
+    this.sites = new SitesAPI(this.http);
   }
 }
 
@@ -37,4 +43,11 @@ const sdk = new ItsLearningSDK({
   clientId: defaultConfig.clientId,
   redirectUri: defaultConfig.redirectUri,
   baseURL: defaultConfig.baseURL,
+  accessToken: process.env.ACCESS_TOKEN,
 });
+
+const courses = await sdk.courses.getCoursesV3();
+
+console.log(courses);
+
+console.log(await sdk.sites.getSites());

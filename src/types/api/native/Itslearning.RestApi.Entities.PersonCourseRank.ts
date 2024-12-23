@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesPersonCourseRank = {
-  CourseId: number;
-  Rank: number;
+	CourseId: number;
+	Rank: number;
 };

@@ -34,21 +34,15 @@ export class CalendarAPI extends Manager {
    * @returns A promise that resolves to a CalendarEventList containing the events.
    */
   public async getEvents(
-    fromDate?: string | Date,
-    pageIndex: number = 0,
-    pageSize: number = 10,
+    fromDate: string | Date,
+    pageIndex = 0,
+    pageSize = 10,
   ): Promise<ItslearningRestApiEntitiesPersonalCalendarCalendarEventV2> {
     const queryParams = new URLSearchParams({
+      fromDate: fromDate instanceof Date ? fromDate.toISOString() : fromDate,
       PageIndex: pageIndex.toString(),
       PageSize: pageSize.toString(),
     });
-
-    if (fromDate) {
-      queryParams.append(
-        "fromDate",
-        fromDate instanceof Date ? fromDate.toISOString() : fromDate,
-      );
-    }
 
     return this.http.get(`/restapi/personal/calendar/events/v1`, {
       params: queryParams,

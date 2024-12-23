@@ -1,6 +1,6 @@
 export type ItslearningRestApiEntitiesAggregatedOrganisationLite = {
-  CustomerId: number;
-  SiteName: string;
-  SchoolName: string;
-  IsSite: boolean;
+	CustomerId: number;
+	SiteName: string;
+	SchoolName: string;
+	IsSite: boolean;
 };

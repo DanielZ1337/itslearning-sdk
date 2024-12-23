@@ -70,11 +70,11 @@ export class CourseCardsAPI extends Manager {
    * @returns A promise that resolves to a paginated list of starred course cards.
    */
   public async getStarredCourseCards(
-    pageIndex: number = 0,
-    pageSize: number = 10,
-    sortBy: string = "Title",
+    pageIndex = 0,
+    pageSize = 10,
+    sortBy = "Title",
     searchText?: string,
-    isShowMore: boolean = false,
+    isShowMore = false,
   ): Promise<EntityListOfItslearningRestApiEntitiesCourseCard> {
     const queryParams = new URLSearchParams({
       PageIndex: pageIndex.toString(),
@@ -105,11 +105,11 @@ export class CourseCardsAPI extends Manager {
    * @returns A promise that resolves to a paginated list of unstarred course cards.
    */
   public async getUnstarredCourseCards(
-    pageIndex: number = 0,
-    pageSize: number = 10,
-    sortBy: string = "Title",
+    pageIndex = 0,
+    pageSize = 10,
+    sortBy = "Title",
     searchText?: string,
-    isShowMore: boolean = false,
+    isShowMore = false,
   ): Promise<EntityListOfItslearningRestApiEntitiesCourseCard> {
     const queryParams = new URLSearchParams({
       PageIndex: pageIndex.toString(),
