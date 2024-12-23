@@ -1,3 +1,4 @@
+import { CalendarAPI } from "./api/Calendar";
 import { TokenAPI } from "./api/Token";
 import { HttpClient } from "./lib/HttpClient";
 import { defaultConfig } from "./types/config";
@@ -19,6 +20,7 @@ export class ItsLearningSDK {
   private http: HttpClient;
 
   public token: TokenAPI;
+  public calendar: CalendarAPI;
 
   constructor(config: SDKConfig) {
     this.clientId = config.clientId;
@@ -27,6 +29,7 @@ export class ItsLearningSDK {
     this.accessToken = config.accessToken;
     this.http = new HttpClient(this.baseURL, this.accessToken);
     this.token = new TokenAPI(this.http);
+    this.calendar = new CalendarAPI(this.http);
   }
 }
 
@@ -35,5 +38,3 @@ const sdk = new ItsLearningSDK({
   redirectUri: defaultConfig.redirectUri,
   baseURL: defaultConfig.baseURL,
 });
-
-const test = await sdk.token.getAccessToken("yeet");

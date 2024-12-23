@@ -41,7 +41,10 @@ export class HttpClient {
         }),
         options,
       )
-      .then((response) => response.data);
+      .then((response) => response.data)
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   async post<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
