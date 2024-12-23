@@ -897,7 +897,7 @@ export class CoursesAPI extends Manager {
    * Retrieves a list of courses for a given teacher.
    *
    * @param pageIndex - The index of the page to retrieve (default is 0).
-   * @param pageSize - The number of courses per page (default is 10).
+   * @param pageSize - The number of courses per page (default is 100).
    * @param onlyWithResources - Indicates whether to include only courses with resources.
    * @returns A promise that resolves to a paginated list of courses.
    */
@@ -1003,8 +1003,7 @@ export class CoursesAPI extends Manager {
    * Retrieves a paginated list of courses.
    *
    * @param pageIndex - The index of the page to retrieve (default is 0).
-   * @param pageSize - The number of courses per page (default is 10).
-   * @param filter - The filter criteria to apply to the course list.
+   * @param pageSize - The number of courses per page (default is 100).
    * @returns A promise that resolves to a paginated list of courses.
    *
    * @deprecated This endpoint returns only favorite courses. Use `getCoursesV2` instead.
@@ -1031,7 +1030,7 @@ export class CoursesAPI extends Manager {
    * Retrieves a paginated list of courses with filtering options.
    *
    * @param pageIndex - The index of the page to retrieve (default is 0).
-   * @param pageSize - The number of courses per page (default is 10).
+   * @param pageSize - The number of courses per page (default is 100).
    * @param filter - The filter criteria to apply to the course list.
    * @returns A promise that resolves to a paginated list of courses.
    */
@@ -1055,7 +1054,7 @@ export class CoursesAPI extends Manager {
    * Retrieves a paginated list of courses with additional information.
    *
    * @param pageIndex - The index of the page to retrieve (default is 0).
-   * @param pageSize - The number of courses per page (default is 10).
+   * @param pageSize - The number of courses per page (default is 100).
    * @param filter - The filter criteria to apply to the course list.
    * @returns A promise that resolves to a paginated list of courses with additional information.
    */

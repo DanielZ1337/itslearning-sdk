@@ -3,7 +3,7 @@ import type { EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite }
 import type { ItslearningRestApiEntitiesSite } from "../types/api/native/Itslearning.RestApi.Entities.Site";
 import type { ItslearningRestApiEntitiesSiteBase } from "../types/api/native/Itslearning.RestApi.Entities.SiteBase";
 import type { ItslearningRestApiEntitiesSiteLoginDetails } from "../types/api/native/Itslearning.RestApi.Entities.SiteLoginDetails";
-import type { ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Public.Unauthenticated.SitesFilter";
+import { ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Public.Unauthenticated.SitesFilter";
 import { createSearchParams } from "../utils/search-params";
 
 export class SitesAPI extends Manager {
@@ -67,13 +67,13 @@ export class SitesAPI extends Manager {
     startsWith?: string,
     pageIndex: number = 0,
     pageSize: number = 100,
-    sitesFilter?: ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter,
+    sitesFilter: ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter = ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter.All,
   ): Promise<ItslearningRestApiEntitiesSiteBase> {
     const queryParams = createSearchParams({
       PageIndex: pageIndex,
       PageSize: pageSize,
-      startsWith: startsWith,
-      sitesFilter: sitesFilter,
+      startsWith,
+      sitesFilter,
     });
 
     return this.http.get(`/restapi/sites/v1`, {

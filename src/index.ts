@@ -1,6 +1,7 @@
 import { CalendarAPI } from "./api/Calendar";
 import { CoursesAPI } from "./api/Courses";
 import { SitesAPI } from "./api/Sites";
+import { SsoAPI } from "./api/Sso";
 import { TokenAPI } from "./api/Token";
 import { HttpClient } from "./lib/HttpClient";
 import { defaultConfig } from "./types/config";
@@ -25,6 +26,7 @@ export class ItsLearningSDK {
   public calendar: CalendarAPI;
   public courses: CoursesAPI;
   public sites: SitesAPI;
+  public sso: SsoAPI;
 
   constructor(config: SDKConfig) {
     this.clientId = config.clientId;
@@ -36,6 +38,7 @@ export class ItsLearningSDK {
     this.calendar = new CalendarAPI(this.http);
     this.courses = new CoursesAPI(this.http);
     this.sites = new SitesAPI(this.http);
+    this.sso = new SsoAPI(this.http);
   }
 }
 
