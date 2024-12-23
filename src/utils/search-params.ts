@@ -5,27 +5,27 @@
  * @returns An instance of URLSearchParams.
  */
 export function createSearchParams(
-  params: Record<string, unknown>,
+	params: Record<string, unknown>,
 ): URLSearchParams {
-  const searchParams = new URLSearchParams();
+	const searchParams = new URLSearchParams();
 
-  Object.entries(params).forEach(([key, value]) => {
-    if (value === undefined || value === null) return;
-    if (value instanceof Date) {
-      searchParams.append(key, value.toISOString());
+	Object.entries(params).forEach(([key, value]) => {
+		if (value === undefined || value === null) return;
+		if (value instanceof Date) {
+			searchParams.append(key, value.toISOString());
 
-      return;
-    }
+			return;
+		}
 
-    if (Array.isArray(value)) {
-      value.forEach((item, index) => {
-        searchParams.append(`${key}[${index}]`, item.toString());
-      });
-      return;
-    }
+		if (Array.isArray(value)) {
+			value.forEach((item, index) => {
+				searchParams.append(`${key}[${index}]`, item.toString());
+			});
+			return;
+		}
 
-    searchParams.append(key, value.toString());
-  });
+		searchParams.append(key, value.toString());
+	});
 
-  return searchParams;
+	return searchParams;
 }

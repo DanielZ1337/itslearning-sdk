@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesPersonImageDimensions = {
-  PixelWidth: number;
-  PixelHeight: number;
+	PixelWidth: number;
+	PixelHeight: number;
 };

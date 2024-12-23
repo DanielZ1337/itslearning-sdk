@@ -3,7 +3,7 @@ import type { ItslearningRestApiEntitiesRelationInfo } from "./Itslearning.RestA
 import type { ItslearningRestApiEntitiesRelationType } from "./Itslearning.RestApi.Entities.RelationType";
 
 export type ItslearningRestApiEntitiesRelatedPerson = {
-  Person: ItslearningRestApiEntitiesPersonSimple;
-  RelationType: ItslearningRestApiEntitiesRelationType;
-  RelationInfo: ItslearningRestApiEntitiesRelationInfo;
+	Person: ItslearningRestApiEntitiesPersonSimple;
+	RelationType: ItslearningRestApiEntitiesRelationType;
+	RelationInfo: ItslearningRestApiEntitiesRelationInfo;
 };

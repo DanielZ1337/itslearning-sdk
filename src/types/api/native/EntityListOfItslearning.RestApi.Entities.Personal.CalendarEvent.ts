@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesPersonalCalendarEvent } from "./Itslearn
 // };
 
 export type EntityListOfItslearningRestApiEntitiesPersonalCalendarEvent =
-  PaginatedResponse<ItslearningRestApiEntitiesPersonalCalendarEvent>;
+	PaginatedResponse<ItslearningRestApiEntitiesPersonalCalendarEvent>;

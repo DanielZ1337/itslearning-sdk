@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesTaskDailyWorkflow } from "./Itslearning.
 // };
 
 export type EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow =
-  PaginatedResponse<ItslearningRestApiEntitiesTaskDailyWorkflow>;
+	PaginatedResponse<ItslearningRestApiEntitiesTaskDailyWorkflow>;

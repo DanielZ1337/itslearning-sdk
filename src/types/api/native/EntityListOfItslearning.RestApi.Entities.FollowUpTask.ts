@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesFollowUpTask } from "./Itslearning.RestA
 // };
 
 export type EntityListOfItslearningRestApiEntitiesFollowUpTask =
-  PaginatedResponse<ItslearningRestApiEntitiesFollowUpTask>;
+	PaginatedResponse<ItslearningRestApiEntitiesFollowUpTask>;

@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesInstantMessageToPatch = {
-  InstantMessageId: number;
-  Text: string;
+	InstantMessageId: number;
+	Text: string;
 };

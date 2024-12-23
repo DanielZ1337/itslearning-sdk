@@ -10,4 +10,4 @@ import type { ItslearningRestApiEntitiesPersonalCourseCourseResource } from "./I
 // 	};
 
 export type EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource =
-  PaginatedResponse<ItslearningRestApiEntitiesPersonalCourseCourseResource>;
+	PaginatedResponse<ItslearningRestApiEntitiesPersonalCourseCourseResource>;

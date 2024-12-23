@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesSiteBase } from "./Itslearning.RestApi.E
 // };
 
 export type EntityListOfItslearningRestApiEntitiesSiteBase =
-  PaginatedResponse<ItslearningRestApiEntitiesSiteBase>;
+	PaginatedResponse<ItslearningRestApiEntitiesSiteBase>;

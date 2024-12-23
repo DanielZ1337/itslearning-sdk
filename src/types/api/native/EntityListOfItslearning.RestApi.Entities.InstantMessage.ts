@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesInstantMessage } from "./Itslearning.Res
 // };
 
 export type EntityListOfItslearningRestApiEntitiesInstantMessage =
-  PaginatedResponse<ItslearningRestApiEntitiesInstantMessage>;
+	PaginatedResponse<ItslearningRestApiEntitiesInstantMessage>;

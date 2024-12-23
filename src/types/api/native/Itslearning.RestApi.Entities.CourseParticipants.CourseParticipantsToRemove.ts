@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesCourseParticipantsCourseParticipantsToRemove =
-  {
-    ParticipantIdsToBeRemoved: Array<number>;
-  };
+	{
+		ParticipantIdsToBeRemoved: Array<number>;
+	};

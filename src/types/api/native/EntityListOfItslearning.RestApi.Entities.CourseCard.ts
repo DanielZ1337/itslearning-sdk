@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesCourseCard } from "./Itslearning.RestApi
 // };
 
 export type EntityListOfItslearningRestApiEntitiesCourseCard =
-  PaginatedResponse<ItslearningRestApiEntitiesCourseCard>;
+	PaginatedResponse<ItslearningRestApiEntitiesCourseCard>;

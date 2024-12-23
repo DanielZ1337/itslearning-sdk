@@ -3,6 +3,6 @@ import type { ItslearningRestApiEntitiesPersonalCourseCourseResource } from "./I
 
 //Array<ItslearningRestApiEntitiesPersonalCourseCourseResource>
 export type ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails = {
-  Resources: EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource;
-  AddElementUrl: string;
+	Resources: EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource;
+	AddElementUrl: string;
 };

@@ -9,4 +9,4 @@ import type { ItslearningRestApiEntitiesPersonSimple } from "./Itslearning.RestA
 // };
 
 export type EntityListOfItslearningRestApiEntitiesPersonSimple =
-  PaginatedResponse<ItslearningRestApiEntitiesPersonSimple>;
+	PaginatedResponse<ItslearningRestApiEntitiesPersonSimple>;
