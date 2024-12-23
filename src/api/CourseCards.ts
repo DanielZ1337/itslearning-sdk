@@ -2,6 +2,7 @@ import { Manager } from "../lib/Manager";
 import type { EntityListOfItslearningRestApiEntitiesCourseCard } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.CourseCard";
 import type { ItslearningRestApiEntitiesCourseCardSettings } from "../types/api/native/Itslearning.RestApi.Entities.CourseCardSettings";
 import type { ItslearningRestApiEntitiesPersonCourseRank } from "../types/api/native/Itslearning.RestApi.Entities.PersonCourseRank";
+import { createSearchParams } from "../utils/search-params";
 
 /**
  * CourseCardsAPI
@@ -76,22 +77,17 @@ export class CourseCardsAPI extends Manager {
 		searchText?: string,
 		isShowMore = false,
 	): Promise<EntityListOfItslearningRestApiEntitiesCourseCard> {
-		const queryParams = new URLSearchParams({
-			PageIndex: pageIndex.toString(),
-			PageSize: pageSize.toString(),
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
+			sortBy,
+			searchText,
+			isShowMore,
 		});
 
-		if (sortBy) {
-			queryParams.append("sortBy", sortBy);
-		}
-		if (searchText) {
-			queryParams.append("searchText", encodeURIComponent(searchText));
-		}
-		queryParams.append("isShowMore", isShowMore.toString());
-
-		return this.http.get(
-			`/restapi/personal/courses/cards/starred/v1?${queryParams.toString()}`,
-		);
+		return this.http.get(`/restapi/personal/courses/cards/starred/v1`, {
+			params: queryParams,
+		});
 	}
 
 	/**
@@ -111,21 +107,16 @@ export class CourseCardsAPI extends Manager {
 		searchText?: string,
 		isShowMore = false,
 	): Promise<EntityListOfItslearningRestApiEntitiesCourseCard> {
-		const queryParams = new URLSearchParams({
-			PageIndex: pageIndex.toString(),
-			PageSize: pageSize.toString(),
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
+			sortBy,
+			searchText,
+			isShowMore,
 		});
 
-		if (sortBy) {
-			queryParams.append("sortBy", sortBy);
-		}
-		if (searchText) {
-			queryParams.append("searchText", encodeURIComponent(searchText));
-		}
-		queryParams.append("isShowMore", isShowMore.toString());
-
-		return this.http.get(
-			`/restapi/personal/courses/cards/unstarred/v1?${queryParams.toString()}`,
-		);
+		return this.http.get(`/restapi/personal/courses/cards/unstarred/v1`, {
+			params: queryParams,
+		});
 	}
 }
