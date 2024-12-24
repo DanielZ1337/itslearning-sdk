@@ -1,5 +1,5 @@
 {
-  "name": "itslearning-sdk",
+  "name": "@danielz1337/itslearning-sdk",
   "version": "1.0.0",
   "description": "A lightweight SDK for itslearning's REST API.",
   "main": "dist/index.js",
