@@ -1,96 +1,98 @@
+import type { ItsolutionsItslearningWebRestApiPersonalTokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse";
 import { GrantType } from "../types/grantTypes";
 import type { ItslearningScope } from "../types/scopes";
+import type { ConfigManager } from "./ConfigManager";
 
 export class AuthManager {
-	private clientId: string;
-	private redirectUri: string;
-	private baseURL: string;
-	private accessToken?: string;
-	private refreshToken?: string;
+  private config: ConfigManager;
 
-	constructor(
-		clientId: string,
-		redirectUri: string,
-		baseURL: string,
-		accessToken?: string,
-		refreshToken?: string,
-	) {
-		this.clientId = clientId;
-		this.redirectUri = redirectUri;
-		this.baseURL = baseURL;
-		this.accessToken = accessToken;
-		this.refreshToken = refreshToken;
-	}
+  constructor(config: ConfigManager) {
+    this.config = config;
+  }
 
-	setAccessToken(token: string) {
-		this.accessToken = token;
-	}
+  setAccessToken(token: string) {
+    this.config.setAccessToken(token);
+  }
 
-	getAccessToken(): string | undefined {
-		return this.accessToken;
-	}
+  getAccessToken(): string | undefined {
+    return this.config.getAccessToken();
+  }
 
-	getAuthorizationUrl(
-		state: string,
-		scope: ItslearningScope[] | ItslearningScope,
-	): string {
-		const params = new URLSearchParams({
-			client_id: this.clientId,
-			response_type: "code",
-			redirect_uri: this.redirectUri,
-			scope: scope instanceof Array ? scope.join(" ") : scope,
-			state,
-		});
-		return new URL(
-			`/restapi/oauth2/authorize?${params.toString()}`,
-			this.baseURL,
-		).toString();
-	}
+  setRefreshToken(token: string) {
+    this.config.setRefreshToken(token);
+  }
 
-	async exchangeCodeForToken(code: string): Promise<void> {
-		const response = await fetch(
-			new URL("/restapi/oauth2/token", this.baseURL),
-			{
-				method: "POST",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: new URLSearchParams({
-					grant_type: GrantType.AuthorizationCode,
-					code,
-					client_id: this.clientId,
-				}),
-			},
-		);
+  getRefreshToken(): string | undefined {
+    return this.config.getRefreshToken();
+  }
 
-		if (!response.ok) {
-			throw new Error(`Failed to exchange code: ${response.statusText}`);
-		}
+  getAuthorizationUrl(
+    state: string,
+    scope: ItslearningScope[] | ItslearningScope,
+  ): string {
+    const params = new URLSearchParams({
+      client_id: this.config.getClientId(),
+      response_type: "code",
+      redirect_uri: this.config.getRedirectUri(),
+      scope: scope instanceof Array ? scope.join(" ") : scope,
+      state,
+    });
 
-		const data = await response.json();
-		this.accessToken = data.access_token;
-		this.refreshToken = data.refresh_token;
-	}
+    const url = new URL("/restapi/oauth2/authorize", this.config.getBaseURL());
+    url.search = params.toString();
+    return url.toString();
+  }
 
-	async handleRefreshToken(): Promise<void> {
-		if (!this.refreshToken) throw new Error("No refresh token available");
+  async exchangeCodeForToken(code: string): Promise<void> {
+    const response = await fetch(
+      new URL("/restapi/oauth2/token", this.config.getBaseURL()),
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: GrantType.AuthorizationCode,
+          code,
+          client_id: this.config.getClientId(),
+        }),
+      },
+    );
 
-		const response = await fetch(
-			new URL("/restapi/oauth2/token", this.baseURL),
-			{
-				method: "POST",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: new URLSearchParams({
-					grant_type: GrantType.RefreshToken,
-					refresh_token: this.refreshToken,
-					client_id: this.clientId,
-				}),
-			},
-		);
+    if (!response.ok) {
+      throw new Error(`Failed to exchange code: ${response.statusText}`);
+    }
 
-		if (!response.ok) {
-			throw new Error(`Failed to refresh token: ${response.statusText}`);
-		}
+    const data =
+      (await response.json()) as ItsolutionsItslearningWebRestApiPersonalTokenResponse;
+    this.config.setAccessToken(data.access_token);
+    this.config.setRefreshToken(data.refresh_token);
+  }
 
-		const data = await response.json();
-		this.accessToken = data.access_token;
-	}
+  async handleRefreshToken(): Promise<void> {
+    const refreshToken = this.config.getRefreshToken();
+    const clientId = this.config.getClientId();
+    if (!refreshToken) throw new Error("No refresh token available");
+    if (!clientId) throw new Error("No client id available");
+
+    const response = await fetch(
+      new URL("/restapi/oauth2/token", this.config.getBaseURL()),
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          grant_type: GrantType.RefreshToken,
+          refresh_token: refreshToken,
+          client_id: clientId,
+        }),
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to refresh token: ${response.statusText}`);
+    }
+
+    const data =
+      (await response.json()) as ItsolutionsItslearningWebRestApiPersonalTokenResponse;
+    this.config.setAccessToken(data.access_token);
+    this.config.setRefreshToken(data.refresh_token);
+  }
 }

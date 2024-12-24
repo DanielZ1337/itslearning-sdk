@@ -1,5 +1,7 @@
 import { CalendarAPI } from "./api/Calendar";
 import { CoursesAPI } from "./api/Courses";
+import { InstantMessagesAPI } from "./api/InstantMessage";
+import { InstantMessageBroadcastAPI } from "./api/InstantMessageBroadcast";
 import { LtiExtensionAPI } from "./api/LtiExtension";
 import { NativeAppAPI } from "./api/NativeApp";
 import { NotificationsPostAPI } from "./api/NotificationsPost";
@@ -14,30 +16,30 @@ import { TaskListDailyWorkflowAPI } from "./api/TaskListDailyWorkflow";
 import { TasksAPI } from "./api/Tasks";
 import { TokenAPI } from "./api/Token";
 import { WorkloadAPI } from "./api/Workload";
+import { AuthManager } from "./lib/AuthManager";
+import { ConfigManager } from "./lib/ConfigManager";
 import { HttpClient } from "./lib/HttpClient";
 import { defaultConfig } from "./types/config";
-import { GrantType } from "./types/grantTypes";
-import { ApiService } from "./utils/api-service";
 
 export interface SDKConfig {
-  clientId: string;
-  redirectUri: string;
-  baseURL: string;
+  clientId?: string;
+  redirectUri?: string;
+  baseURL?: string;
   accessToken?: string;
+  refreshToken?: string;
 }
 
 export class ItsLearningSDK {
-  private clientId: string;
-  private redirectUri: string;
-  private baseURL: string;
-  private accessToken?: string;
   private http: HttpClient;
+  public config: ConfigManager;
 
   public token: TokenAPI;
   public calendar: CalendarAPI;
   public courses: CoursesAPI;
   public sites: SitesAPI;
   public sso: SsoAPI;
+  public instantMessage: InstantMessagesAPI;
+  public instantMessageBroadcast: InstantMessageBroadcastAPI;
   public lti: LtiExtensionAPI;
   public nativeApp: NativeAppAPI;
   public notifications: NotificationsPostAPI;
@@ -49,13 +51,19 @@ export class ItsLearningSDK {
   public taskListDailyWorkflow: TaskListDailyWorkflowAPI;
   public tasks: TasksAPI;
   public workload: WorkloadAPI;
+  public auth: AuthManager;
 
-  constructor(config: SDKConfig) {
-    this.clientId = config.clientId;
-    this.redirectUri = config.redirectUri;
-    this.baseURL = config.baseURL;
-    this.accessToken = config.accessToken;
-    this.http = new HttpClient(this.baseURL, this.accessToken);
+  constructor(config?: SDKConfig) {
+    this.config = new ConfigManager(
+      config?.clientId ?? defaultConfig.clientId,
+      config?.redirectUri ?? defaultConfig.redirectUri,
+      config?.baseURL ?? defaultConfig.baseURL,
+      config?.accessToken,
+      config?.refreshToken,
+    );
+
+    this.auth = new AuthManager(this.config);
+    this.http = new HttpClient(this.config, this.auth);
     this.token = new TokenAPI(this.http);
     this.calendar = new CalendarAPI(this.http);
     this.courses = new CoursesAPI(this.http);
@@ -72,20 +80,7 @@ export class ItsLearningSDK {
     this.taskListDailyWorkflow = new TaskListDailyWorkflowAPI(this.http);
     this.tasks = new TasksAPI(this.http);
     this.workload = new WorkloadAPI(this.http);
+    this.instantMessage = new InstantMessagesAPI(this.http);
+    this.instantMessageBroadcast = new InstantMessageBroadcastAPI(this.http);
   }
 }
-
-const sdk = new ItsLearningSDK({
-  clientId: defaultConfig.clientId,
-  redirectUri: defaultConfig.redirectUri,
-  baseURL: defaultConfig.baseURL,
-  accessToken: process.env.ACCESS_TOKEN,
-});
-
-const courses = await sdk.courses.getCoursesV3();
-
-console.log(courses);
-
-console.log(await sdk.sites.getSites());
-
-sdk.planner.getPlansInfo([1, 23, 123]).then((data) => data[0].CourseName);
