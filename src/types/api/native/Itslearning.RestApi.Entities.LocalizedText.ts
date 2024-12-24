@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesLocalizedText = {
-  LocalizedKey: string;
-  LocalizedArgs: Array<string>;
+	LocalizedKey: string;
+	LocalizedArgs: Array<string>;
 };

@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesTypedId = {
-  Type: string;
-  Id: number;
+	Type: string;
+	Id: number;
 };

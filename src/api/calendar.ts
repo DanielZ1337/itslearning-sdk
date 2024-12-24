@@ -44,7 +44,7 @@ export class CalendarAPI extends Manager {
 			PageSize: pageSize.toString(),
 		});
 
-		return this.http.get(`/restapi/personal/calendar/events/v1`, {
+		return this.http.get("/restapi/personal/calendar/events/v1", {
 			params: queryParams,
 		});
 	}

@@ -26,7 +26,9 @@
     "test": "bun test",
     "biome:format": "biome format --write ./src",
     "biome:lint": "biome lint --write ./src",
-    "biome:check": "biome check --write ./src"
+    "biome:check": "biome check --write ./src",
+    "biome:check:fix": "biome check --fix ./src",
+    "biome:check:fix-unsafe": "biome check --fix --unsafe ./src"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

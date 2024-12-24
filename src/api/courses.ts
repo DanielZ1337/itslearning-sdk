@@ -878,7 +878,7 @@ export class CoursesAPI extends Manager {
 			endDate: encodeURIComponent(endDate),
 		});
 
-		return this.http.post(`/restapi/personal/courses/activeplans/v1`);
+		return this.http.post("/restapi/personal/courses/activeplans/v1");
 	}
 
 	/**
@@ -890,7 +890,7 @@ export class CoursesAPI extends Manager {
 	public async getEligiblePersons(searchText: string): Promise<unknown> {
 		throw new Error("Not implemented");
 		const queryParams = new URLSearchParams({ searchText });
-		return this.http.get(`/restapi/personal/courses/addparticipants/search/v1`);
+		return this.http.get("/restapi/personal/courses/addparticipants/search/v1");
 	}
 
 	/**
@@ -912,7 +912,7 @@ export class CoursesAPI extends Manager {
 			onlyWithResources,
 		});
 
-		return this.http.get(`/restapi/personal/courses/iteach/v1`, {
+		return this.http.get("/restapi/personal/courses/iteach/v1", {
 			params: queryParams,
 		});
 	}
@@ -968,7 +968,7 @@ export class CoursesAPI extends Manager {
 	public async searchCourseBySyncKey(courseSyncKey: string): Promise<unknown> {
 		throw new Error("Not implemented");
 		const queryParams = new URLSearchParams({ courseSyncKey });
-		return this.http.get(`/restapi/personal/courses/search/v1`);
+		return this.http.get("/restapi/personal/courses/search/v1");
 	}
 
 	/**
@@ -985,7 +985,7 @@ export class CoursesAPI extends Manager {
 			PageSize: pageSize.toString(),
 		});
 
-		return this.http.get(`/restapi/personal/courses/students/v1`);
+		return this.http.get("/restapi/personal/courses/students/v1");
 	}
 
 	/**
@@ -996,7 +996,7 @@ export class CoursesAPI extends Manager {
 	 */
 	public async createCourse(createData: unknown): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.post(`/restapi/personal/courses/v1`, { data: createData });
+		return this.http.post("/restapi/personal/courses/v1", { data: createData });
 	}
 
 	/**
@@ -1021,7 +1021,7 @@ export class CoursesAPI extends Manager {
 			PageSize: pageSize,
 		});
 
-		return this.http.get(`/restapi/personal/courses/v1`, {
+		return this.http.get("/restapi/personal/courses/v1", {
 			params: queryParams,
 		});
 	}
@@ -1045,7 +1045,7 @@ export class CoursesAPI extends Manager {
 			filter,
 		});
 
-		return this.http.get(`/restapi/personal/courses/v2`, {
+		return this.http.get("/restapi/personal/courses/v2", {
 			params: queryParams,
 		});
 	}
@@ -1069,7 +1069,7 @@ export class CoursesAPI extends Manager {
 			filter,
 		});
 
-		return this.http.get(`/restapi/personal/courses/v3`, {
+		return this.http.get("/restapi/personal/courses/v3", {
 			params: queryParams,
 		});
 	}
@@ -1092,7 +1092,7 @@ export class CoursesAPI extends Manager {
 	 */
 	public async getStudentsCourses(): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.get(`/restapi/personal/courses/yourstudents/courses/v1`);
+		return this.http.get("/restapi/personal/courses/yourstudents/courses/v1");
 	}
 
 	/**
@@ -1121,7 +1121,7 @@ export class CoursesAPI extends Manager {
 			search,
 		});
 
-		return this.http.get(`/restapi/personal/courses/yourstudents/v1`, {
+		return this.http.get("/restapi/personal/courses/yourstudents/v1", {
 			params: queryParams,
 		});
 	}

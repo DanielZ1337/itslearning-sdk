@@ -55,7 +55,7 @@ export class CourseCardsAPI extends Manager {
 	public async rankCourseCard(
 		body: ItslearningRestApiEntitiesPersonCourseRank,
 	): Promise<void> {
-		return this.http.post(`/restapi/personal/courses/cards/rank/v1`, {
+		return this.http.post("/restapi/personal/courses/cards/rank/v1", {
 			data: body,
 		});
 	}
@@ -85,7 +85,7 @@ export class CourseCardsAPI extends Manager {
 			isShowMore,
 		});
 
-		return this.http.get(`/restapi/personal/courses/cards/starred/v1`, {
+		return this.http.get("/restapi/personal/courses/cards/starred/v1", {
 			params: queryParams,
 		});
 	}
@@ -115,7 +115,7 @@ export class CourseCardsAPI extends Manager {
 			isShowMore,
 		});
 
-		return this.http.get(`/restapi/personal/courses/cards/unstarred/v1`, {
+		return this.http.get("/restapi/personal/courses/cards/unstarred/v1", {
 			params: queryParams,
 		});
 	}

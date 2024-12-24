@@ -21,7 +21,7 @@ export class InstantMessageBroadcastAPI extends Manager {
 	public async sendBroadcastMessage(
 		data: ItslearningRestApiEntitiesBroadcastInstantMessageToSend,
 	): Promise<unknown> {
-		return this.http.post(`/restapi/personal/instantmessages/broadcast/v1`, {
+		return this.http.post("/restapi/personal/instantmessages/broadcast/v1", {
 			data,
 		});
 	}
@@ -31,7 +31,7 @@ export class InstantMessageBroadcastAPI extends Manager {
 	 * to permanently delete them and all associated data.
 	 */
 	public async deleteBroadcastThreads(data: Array<number>): Promise<void> {
-		return this.http.delete(`/restapi/personal/instantmessages/broadcast/v1`);
+		return this.http.delete("/restapi/personal/instantmessages/broadcast/v1");
 	}
 
 	/**

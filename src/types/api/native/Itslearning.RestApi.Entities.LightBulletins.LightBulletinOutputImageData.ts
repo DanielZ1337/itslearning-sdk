@@ -2,9 +2,9 @@ import type { ItslearningRestApiEntitiesLocalizedText } from "./Itslearning.Rest
 import type { ItslearningRestApiEntitiesUpdatableFileDataV1 } from "./Itslearning.RestApi.Entities.Updatable.FileDataV1";
 
 export type ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData =
-  {
-    IsError: boolean;
-    ErrorMessage: ItslearningRestApiEntitiesLocalizedText;
-    PreviewFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
-    OriginalFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
-  };
+	{
+		IsError: boolean;
+		ErrorMessage: ItslearningRestApiEntitiesLocalizedText;
+		PreviewFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
+		OriginalFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
+	};

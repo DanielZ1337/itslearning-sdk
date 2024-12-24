@@ -45,14 +45,14 @@ export class PersonAPI extends Manager {
 	 * Gets available features for the current person.
 	 */
 	public async getPersonFeatures(): Promise<ItslearningRestApiEntitiesPersonalFeature> {
-		return this.http.get(`/restapi/personal/person/features/v1`);
+		return this.http.get("/restapi/personal/person/features/v1");
 	}
 
 	/**
 	 * Gets the max image dimensions allowed for a profile image upload.
 	 */
 	public async getImageDimensions(): Promise<ItslearningRestApiEntitiesPersonImageDimensions> {
-		return this.http.get(`/restapi/personal/person/image/dimensions/v1`);
+		return this.http.get("/restapi/personal/person/image/dimensions/v1");
 	}
 
 	/**
@@ -67,7 +67,7 @@ export class PersonAPI extends Manager {
 		throw new Error("Not implemented");
 		// If using multipart/form-data, wrap the file in FormData
 		// If using raw binary, ensure correct headers set for content type
-		return this.http.post(`/restapi/personal/person/image/v1`, {
+		return this.http.post("/restapi/personal/person/image/v1", {
 			data: imageData,
 		});
 	}
@@ -78,7 +78,7 @@ export class PersonAPI extends Manager {
 	 * @returns the interval in seconds before you should call this method again
 	 */
 	public async setOnlineStatus(): Promise<number> {
-		return this.http.put(`/restapi/personal/person/online/v1`);
+		return this.http.put("/restapi/personal/person/online/v1");
 	}
 
 	/**
@@ -90,7 +90,7 @@ export class PersonAPI extends Manager {
 		// Could also pass data in body, depending on how the endpoint expects the parameter
 		throw new Error("Not implemented");
 		return this.http.put(
-			`/restapi/personal/person/PersonSetting/RemindConnectGoogleOnLogin/v1`,
+			"/restapi/personal/person/PersonSetting/RemindConnectGoogleOnLogin/v1",
 			{ data: { remind } },
 		);
 	}
@@ -103,7 +103,7 @@ export class PersonAPI extends Manager {
 	 */
 	public async setPushNotifications(pushData: unknown): Promise<void> {
 		throw new Error("Not implemented");
-		return this.http.post(`/restapi/personal/person/push/v1`, {
+		return this.http.post("/restapi/personal/person/push/v1", {
 			data: pushData,
 		});
 	}
@@ -125,7 +125,7 @@ export class PersonAPI extends Manager {
 	public async getPersonRoles(): Promise<
 		Array<ItslearningRestApiEntitiesPersonRole>
 	> {
-		return this.http.get(`/restapi/personal/person/roles/v1`);
+		return this.http.get("/restapi/personal/person/roles/v1");
 	}
 
 	/**
@@ -144,6 +144,6 @@ export class PersonAPI extends Manager {
 	 * Gets the user's profile details (language codes, etc.).
 	 */
 	public async getMyProfile(): Promise<ItslearningRestApiEntitiesPersonProfile> {
-		return this.http.get(`/restapi/personal/person/v1`);
+		return this.http.get("/restapi/personal/person/v1");
 	}
 }

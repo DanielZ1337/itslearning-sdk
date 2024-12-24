@@ -70,7 +70,7 @@ export class InstantMessagesAPI extends Manager {
 	 */
 	public async uploadAttachment(fileData: FormData): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.post(`/restapi/personal/instantmessages/attachment/v1`, {
+		return this.http.post("/restapi/personal/instantmessages/attachment/v1", {
 			data: fileData,
 		});
 	}
@@ -84,7 +84,7 @@ export class InstantMessagesAPI extends Manager {
 		fileId: string,
 	): Promise<SystemNetHttpHttpResponseMessage> {
 		const queryParams = createSearchParams({ fileId });
-		return this.http.delete(`/restapi/personal/instantmessages/attachment/v1`, {
+		return this.http.delete("/restapi/personal/instantmessages/attachment/v1", {
 			params: queryParams,
 		});
 	}
@@ -404,7 +404,7 @@ export class InstantMessagesAPI extends Manager {
 		searchData: ItslearningRestApiEntitiesInstantMessageThreadSearchParams,
 	): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread> {
 		return this.http.post(
-			`/restapi/personal/instantmessages/messagethreads/search/v1`,
+			"/restapi/personal/instantmessages/messagethreads/search/v1",
 			{ data: searchData },
 		);
 	}
@@ -419,7 +419,7 @@ export class InstantMessagesAPI extends Manager {
 	): Promise<Array<ItslearningRestApiEntitiesInstantMessageThread>> {
 		const queryParams = createSearchParams({ searchText });
 		return this.http.get(
-			`/restapi/personal/instantmessages/messagethreads/suggestions/v1`,
+			"/restapi/personal/instantmessages/messagethreads/suggestions/v1",
 			{ params: queryParams },
 		);
 	}
@@ -429,7 +429,7 @@ export class InstantMessagesAPI extends Manager {
 	 */
 	public async getUnreadThreadsCount(): Promise<number> {
 		return this.http.get(
-			`/restapi/personal/instantmessages/messagethreads/unread/count/v1`,
+			"/restapi/personal/instantmessages/messagethreads/unread/count/v1",
 		);
 	}
 
@@ -454,7 +454,7 @@ export class InstantMessagesAPI extends Manager {
 			maxMessages,
 		});
 		return this.http.get(
-			`/restapi/personal/instantmessages/messagethreads/v1`,
+			"/restapi/personal/instantmessages/messagethreads/v1",
 			{
 				params: queryParams,
 			},
@@ -479,7 +479,7 @@ export class InstantMessagesAPI extends Manager {
 			maxMessages,
 		});
 		return this.http.get(
-			`/restapi/personal/instantmessages/messagethreads/v2`,
+			"/restapi/personal/instantmessages/messagethreads/v2",
 			{
 				params: queryParams,
 			},
@@ -498,7 +498,7 @@ export class InstantMessagesAPI extends Manager {
 	): Promise<ItslearningRestApiEntitiesInstantMessageThreadListModel> {
 		const queryParams = createSearchParams({ fromSortIndex, pageSize });
 		return this.http.get(
-			`/restapi/personal/instantmessages/messagethreads/v3`,
+			"/restapi/personal/instantmessages/messagethreads/v3",
 			{
 				params: queryParams,
 			},
@@ -509,7 +509,7 @@ export class InstantMessagesAPI extends Manager {
 	 * Gets permissions for the instant message system.
 	 */
 	public async getInstantMessagePermissions(): Promise<ItslearningRestApiEntitiesInstantMessagePermissions> {
-		return this.http.get(`/restapi/personal/instantmessages/permissions/v1`);
+		return this.http.get("/restapi/personal/instantmessages/permissions/v1");
 	}
 
 	/**
@@ -532,7 +532,7 @@ export class InstantMessagesAPI extends Manager {
 	public async getRecipientPersons(requestData: unknown): Promise<unknown> {
 		throw new Error("Not implemented");
 		return this.http.post(
-			`/restapi/personal/instantmessages/recipients/persons/v1`,
+			"/restapi/personal/instantmessages/recipients/persons/v1",
 			{ data: requestData },
 		);
 	}
@@ -559,7 +559,7 @@ export class InstantMessagesAPI extends Manager {
 		});
 
 		return this.http.get(
-			`/restapi/personal/instantmessages/recipients/search/v1`,
+			"/restapi/personal/instantmessages/recipients/search/v1",
 			{ params: queryParams },
 		);
 	}
@@ -583,7 +583,7 @@ export class InstantMessagesAPI extends Manager {
 			personIds,
 		});
 
-		return this.http.get(`/restapi/personal/instantmessages/recipients/v1`, {
+		return this.http.get("/restapi/personal/instantmessages/recipients/v1", {
 			params: queryParams,
 		});
 	}
@@ -607,7 +607,7 @@ export class InstantMessagesAPI extends Manager {
 			projectIds,
 		});
 
-		return this.http.get(`/restapi/personal/instantmessages/recipients/v2`, {
+		return this.http.get("/restapi/personal/instantmessages/recipients/v2", {
 			params: queryParams,
 		});
 	}
@@ -617,7 +617,7 @@ export class InstantMessagesAPI extends Manager {
 	 */
 	public async getSettingsV1(): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.get(`/restapi/personal/instantmessages/settings/v1`);
+		return this.http.get("/restapi/personal/instantmessages/settings/v1");
 	}
 
 	/**
@@ -625,14 +625,14 @@ export class InstantMessagesAPI extends Manager {
 	 */
 	public async getSettingsV2(): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.get(`/restapi/personal/instantmessages/settings/v2`);
+		return this.http.get("/restapi/personal/instantmessages/settings/v2");
 	}
 
 	/**
 	 * Gets the number of starred messages for the current user.
 	 */
 	public async getStarredMessagesCount(): Promise<number> {
-		return this.http.get(`/restapi/personal/instantmessages/starred/count/v1`);
+		return this.http.get("/restapi/personal/instantmessages/starred/count/v1");
 	}
 
 	/**
@@ -646,7 +646,7 @@ export class InstantMessagesAPI extends Manager {
 		maxSuggestions = 10,
 	): Promise<Array<ItslearningRestApiEntitiesInstantMessageFilterSuggestion>> {
 		const queryParams = createSearchParams({ searchText, maxSuggestions });
-		return this.http.get(`/restapi/personal/instantmessages/suggestions/v1`, {
+		return this.http.get("/restapi/personal/instantmessages/suggestions/v1", {
 			params: queryParams,
 		});
 	}
@@ -695,7 +695,7 @@ export class InstantMessagesAPI extends Manager {
 	public async updateInstantMessageText(
 		data: ItslearningRestApiEntitiesInstantMessageToPatch,
 	): Promise<ItslearningRestApiEntitiesInstantMessage> {
-		return this.http.patch(`/restapi/personal/instantmessages/v1`, { data });
+		return this.http.patch("/restapi/personal/instantmessages/v1", { data });
 	}
 
 	/**
@@ -707,6 +707,6 @@ export class InstantMessagesAPI extends Manager {
 	public async sendInstantMessageV2(
 		data: ItslearningRestApiEntitiesInstantMessageToSendV2,
 	): Promise<ItslearningRestApiEntitiesInstantMessageThread> {
-		return this.http.post(`/restapi/personal/instantmessages/v2`, { data });
+		return this.http.post("/restapi/personal/instantmessages/v2", { data });
 	}
 }

@@ -1,3 +1,3 @@
 export type ItslearningRestApiEntitiesLightBulletinsLightBulletinIdentifier = {
-  LightBulletinId: number;
+	LightBulletinId: number;
 };

@@ -71,7 +71,7 @@ export class NotificationsAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/notifications/newsfeed/v1`, {
+		return this.http.get("/restapi/personal/notifications/newsfeed/v1", {
 			params: queryParams,
 		});
 	}
@@ -80,7 +80,7 @@ export class NotificationsAPI extends Manager {
 	 * Updates all personal notifications to be seen.
 	 */
 	public async markAllAsSeen(): Promise<void> {
-		return this.http.put(`/restapi/personal/notifications/seenmark/all/v1`);
+		return this.http.put("/restapi/personal/notifications/seenmark/all/v1");
 	}
 
 	/**
@@ -108,7 +108,7 @@ export class NotificationsAPI extends Manager {
 			PageSize: pageSize,
 			fromPublishedDate,
 		});
-		return this.http.get(`/restapi/personal/notifications/stream/v1`, {
+		return this.http.get("/restapi/personal/notifications/stream/v1", {
 			params: queryParams,
 		});
 	}
@@ -137,7 +137,7 @@ export class NotificationsAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/notifications/stream/v2`, {
+		return this.http.get("/restapi/personal/notifications/stream/v2", {
 			params: queryParams,
 		});
 	}
@@ -146,14 +146,14 @@ export class NotificationsAPI extends Manager {
 	 * Returns the number of unread personal notifications for the user.
 	 */
 	public async getUnreadCount(): Promise<number> {
-		return this.http.get(`/restapi/personal/notifications/unread/count/v1`);
+		return this.http.get("/restapi/personal/notifications/unread/count/v1");
 	}
 
 	/**
 	 * Returns the number of unseen personal notifications for the user.
 	 */
 	public async getUnseenCount(): Promise<number> {
-		return this.http.get(`/restapi/personal/notifications/unseen/count/v1`);
+		return this.http.get("/restapi/personal/notifications/unseen/count/v1");
 	}
 
 	/**
@@ -168,7 +168,7 @@ export class NotificationsAPI extends Manager {
 		console.warn(
 			"updateNotificationsV1 is obsolete. Use updateNotificationsV2 instead.",
 		);
-		return this.http.put(`/restapi/personal/notifications/v1`, { data });
+		return this.http.put("/restapi/personal/notifications/v1", { data });
 	}
 
 	/**
@@ -189,7 +189,7 @@ export class NotificationsAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/notifications/v1`, {
+		return this.http.get("/restapi/personal/notifications/v1", {
 			params: queryParams,
 		});
 	}
@@ -202,7 +202,7 @@ export class NotificationsAPI extends Manager {
 	public async updateNotificationsV2(
 		data: Array<ItslearningRestApiEntitiesUpdatableNotificationUpdateV1>,
 	): Promise<SystemNetHttpHttpResponseMessage> {
-		return this.http.put(`/restapi/personal/notifications/v2`, { data });
+		return this.http.put("/restapi/personal/notifications/v2", { data });
 	}
 
 	/**
@@ -225,7 +225,7 @@ export class NotificationsAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/notifications/v2`, {
+		return this.http.get("/restapi/personal/notifications/v2", {
 			params: queryParams,
 		});
 	}

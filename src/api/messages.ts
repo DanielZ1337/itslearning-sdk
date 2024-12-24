@@ -101,7 +101,7 @@ export class MessagesAPI extends Manager {
 			"This method is obsolete. Use restapi/personal/person/push/v1 instead.",
 		);
 		throw new Error("Not implemented");
-		return this.http.post(`/restapi/personal/messages/push/v1`, { data });
+		return this.http.post("/restapi/personal/messages/push/v1", { data });
 	}
 
 	/**
@@ -112,7 +112,7 @@ export class MessagesAPI extends Manager {
 	public async searchMessageRecipients(searchText: string): Promise<unknown> {
 		throw new Error("Not implemented");
 		const queryParams = createSearchParams({ searchText });
-		return this.http.get(`/restapi/personal/messages/recipients/search/v1`, {
+		return this.http.get("/restapi/personal/messages/recipients/search/v1", {
 			params: queryParams,
 		});
 	}
@@ -124,14 +124,14 @@ export class MessagesAPI extends Manager {
 	 */
 	public async sendMessage(data: unknown): Promise<unknown> {
 		throw new Error("Not implemented");
-		return this.http.post(`/restapi/personal/messages/send/v1`, { data });
+		return this.http.post("/restapi/personal/messages/send/v1", { data });
 	}
 
 	/**
 	 * Returns the number of unread messages for the user.
 	 */
 	public async getUnreadCount(): Promise<number> {
-		return this.http.get(`/restapi/personal/messages/unread/count/v1`);
+		return this.http.get("/restapi/personal/messages/unread/count/v1");
 	}
 
 	/**
@@ -149,7 +149,7 @@ export class MessagesAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/messages/unread/v1`, {
+		return this.http.get("/restapi/personal/messages/unread/v1", {
 			params: queryParams,
 		});
 	}
@@ -161,7 +161,7 @@ export class MessagesAPI extends Manager {
 	 */
 	public async updateMessages(data: unknown): Promise<void> {
 		throw new Error("Not implemented");
-		return this.http.put(`/restapi/personal/messages/v1`, { data });
+		return this.http.put("/restapi/personal/messages/v1", { data });
 	}
 
 	/**
@@ -185,7 +185,7 @@ export class MessagesAPI extends Manager {
 			PageIndex: pageIndex,
 			PageSize: pageSize,
 		});
-		return this.http.get(`/restapi/personal/messages/v1`, {
+		return this.http.get("/restapi/personal/messages/v1", {
 			params: queryParams,
 		});
 	}

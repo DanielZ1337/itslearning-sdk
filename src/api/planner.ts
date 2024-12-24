@@ -27,7 +27,7 @@ export class PlannerAPI extends Manager {
 			plansIds,
 		});
 
-		return this.http.get(`/restapi/personal/planner/plansinfo/v1`, {
+		return this.http.get("/restapi/personal/planner/plansinfo/v1", {
 			params: queryParams,
 		});
 	}
@@ -73,7 +73,7 @@ export class PlannerAPI extends Manager {
 			stopDate,
 		});
 
-		return this.http.get(`/restapi/personal/planner/v1`, {
+		return this.http.get("/restapi/personal/planner/v1", {
 			params: queryParams,
 		});
 	}

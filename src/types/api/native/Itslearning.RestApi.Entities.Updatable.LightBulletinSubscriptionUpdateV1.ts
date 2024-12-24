@@ -1,4 +1,4 @@
 export type ItslearningRestApiEntitiesUpdatableLightBulletinSubscriptionUpdateV1 =
-  {
-    IsSubscribed: boolean;
-  };
+	{
+		IsSubscribed: boolean;
+	};
