@@ -1,13 +1,12 @@
 # .github/workflows/publish.yml
 name: Build and Publish npm Package
 
-# Trigger the workflow on push to the main branch or when a new tag is created
 on:
   push:
     branches:
       - main
     tags:
-      - "v*.*.*" # For semantic version tags like v1.2.3
+      - "v*.*.*" # Triggers on tags like v1.2.3
 
 jobs:
   build-and-publish:
@@ -25,21 +24,31 @@ jobs:
           node-version: "18" # Specify the Node.js version you need
           cache: "npm" # Enables caching for npm dependencies
 
-      # Step 3: Install dependencies
+      # Step 3: Verify Node.js installation
+      - name: Verify Node.js installation
+        run: node --version
+
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build the project
+      # Step 5: Build the project
       - name: Build
-        run: npm run build # Adjust this if your build script has a different name
+        run: npm run build # Ensure your package.json has a "build" script
 
-      # Step 5: Configure npm authentication
+      # Step 6: Configure npm authentication
       - name: Configure npm authentication
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Step 6: Publish to npm
+      # Step 7: Verify npm authentication (optional)
+      - name: Verify npm authentication
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Step 8: Publish to npm
       - name: Publish to npm
         run: npm publish
         env:
