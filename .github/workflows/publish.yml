@@ -1,7 +1,6 @@
 # .github/workflows/publish.yml
 name: Build and Publish npm Package
 
-# Trigger the workflow on push to main or on tag creation
 on:
   push:
     branches:
@@ -21,6 +20,8 @@ jobs:
       # Step 2: Set up Bun environment
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "latest"
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -30,17 +31,14 @@ jobs:
       - name: Build
         run: bun run build
 
-      # Step 5: Login to npm
-      - name: Login to npm
+      # Step 5: Configure npm authentication
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          bunx npm login --scope=@danielz1337 --auth-type=legacy --registry=https://npm.pkg.github.com
 
       # Step 6: Publish to npm
       - name: Publish to npm
+        run: bun publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          bun publish --auth-type legacy
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
