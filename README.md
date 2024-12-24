@@ -1,4 +1,4 @@
-# itslearning-sdk-test
+# itslearning-sdk
 
 A lightweight SDK for itslearning's REST API, written in TypeScript. This SDK provides easy access to various itslearning APIs, enabling seamless integration and interaction with itslearning services within your applications.
 
@@ -33,7 +33,7 @@ Ensure you have [Node.js](https://nodejs.org/) (version 16 or higher) or [Bun](h
 ### Using npm
 
 ```bash
-npm install itslearning-sdk-test
+npm install itslearning-sdk
 ```
 
 ## Usage
@@ -43,7 +43,7 @@ npm install itslearning-sdk-test
 First, import and initialize the SDK with your configuration.
 
 ```typescript
-import { ItsLearningSDK, SDKConfig } from 'itslearning-sdk-test';
+import { ItsLearningSDK, SDKConfig } from 'itslearning-sdk';
 
 // Define your SDK configuration
 const config: SDKConfig = {
@@ -202,12 +202,6 @@ Contributions are welcome! Please follow these steps to contribute:
    git push origin feature/your-feature-name
    ```
 8. **Open a Pull Request**: Go to the original repository and create a pull request.
-
-### Code Standards
-
-- Follow [TypeScript](https://www.typescriptlang.org/) best practices.
-- Ensure all new features are accompanied by relevant tests.
-- Maintain clear and concise documentation.
 
 ## License
 
