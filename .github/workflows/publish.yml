@@ -28,27 +28,33 @@ jobs:
       - name: Verify Node.js installation
         run: node --version
 
-      # Step 4: Install dependencies
+      # Step 4: Clean up package-lock.json and node_modules
+      - name: Clean up package-lock.json and node_modules
+        run: |
+          rm -f package-lock.json
+          rm -rf node_modules
+
+      # Step 5: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 5: Build the project
+      # Step 6: Build the project
       - name: Build
         run: npm run build # Ensure your package.json has a "build" script
 
-      # Step 6: Configure npm authentication
+      # Step 7: Configure npm authentication
       - name: Configure npm authentication
         run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Step 7: Verify npm authentication (optional)
+      # Step 8: Verify npm authentication (optional)
       - name: Verify npm authentication
         run: npm whoami
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Step 8: Publish to npm
+      # Step 9: Publish to npm
       - name: Publish to npm
         run: npm publish
         env:
