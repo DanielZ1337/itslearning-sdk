@@ -1,0 +1,19 @@
+{
+  "directory": "./src/types",
+  "delete": true,
+  "rename": true,
+  "prefix": "",
+  "postfix": "",
+  "validate": false,
+  "name": "index.ts",
+  "ignoreExportClasses": false,
+  "ignoreExportInterfaces": false,
+  "ignoreExportEnums": false,
+  "ignoreExportConstants": false,
+  "ignoreExportTypeAliases": false,
+  "includeIndex": false,
+  "extension": "ts",
+  "exportAll": true,
+  "silent": false,
+  "sort": false
+}
