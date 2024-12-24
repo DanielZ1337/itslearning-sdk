@@ -30,10 +30,17 @@ jobs:
       - name: Build
         run: bun run build
 
-      # Step 5: Publish to npm
-      - name: Publish to npm
+      # Step 5: Login to npm
+      - name: Login to npm
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          bun publish
+          bunx npm login --scope=@danielz1337 --auth-type=legacy --registry=https://npm.pkg.github.com
+
+      # Step 6: Publish to npm
+      - name: Publish to npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          bun publish --auth-type legacy
