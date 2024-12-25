@@ -1,0 +1,46 @@
+export type EligiblePersonsResponse = {
+	OperationLog: {
+		RequestedOperation: any;
+		Errors: Array<any>;
+		Warnings: Array<any>;
+		HasErrors: boolean;
+		HasWarnings: boolean;
+	};
+	HasValidImportData: boolean;
+	HasValidImportDataInsert: boolean;
+	HasValidImportDataForUpdate: boolean;
+	PersonId: number;
+	Prefix: string;
+	FirstName: string;
+	LastName: string;
+	UserName: string;
+	Mail: string;
+	LastLogOn: {
+		TimeZoneId: number;
+		Hour: number;
+		Minute: number;
+		Second: number;
+		IsNull: boolean;
+		IsUtc: boolean;
+		IsAtEndOfDay: boolean;
+		IsAtBeginningOfDay: boolean;
+		Year: number;
+		Month: number;
+		Day: number;
+		DayOfYear: number;
+		DayOfWeek: number;
+		IsEmpty: boolean;
+		Date: string;
+	};
+	ExternalUserId: string;
+	SyncPersonKey: string;
+	CustomString1: string;
+	CustomString2: string;
+	CustomString3: string;
+	CustomString4: string;
+	CustomString5: string;
+	UserNameIsGenerated: boolean;
+	IsExternalUser: boolean;
+	Name: string;
+	IsPrimaryKeyValid: boolean;
+};

@@ -1,4 +1,5 @@
 import { Manager } from "../lib/Manager";
+import type { EligiblePersonsResponse } from "../types/api/EligiblePersonsResponse";
 import type { EntityListOfItslearningRestApiEntitiesCourse } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Course";
 import type { EntityListOfItslearningRestApiEntitiesElementLink } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.ElementLink";
 import type { EntityListOfItslearningRestApiEntitiesFollowUpTask } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.FollowUpTask";
@@ -15,13 +16,18 @@ import type { ItslearningPlatformRestApiSdkCommonEntitiesLearningToolType } from
 import type { ItslearningRestApiEntitiesCourse } from "../types/api/native/Itslearning.RestApi.Entities.Course";
 import type { ItslearningRestApiEntitiesCourseParticipantToAdd } from "../types/api/native/Itslearning.RestApi.Entities.CourseParticipantToAdd";
 import type { ItslearningRestApiEntitiesCourseParticipantsCourseParticipantsToRemove } from "../types/api/native/Itslearning.RestApi.Entities.CourseParticipants.CourseParticipantsToRemove";
+import type { ItslearningRestApiEntitiesCourseWithContextRole } from "../types/api/native/Itslearning.RestApi.Entities.CourseWithContextRole";
 import type { ItslearningRestApiEntitiesFollowUpTask } from "../types/api/native/Itslearning.RestApi.Entities.FollowUpTask";
 import type { ItslearningRestApiEntitiesPersonCourseCardData } from "../types/api/native/Itslearning.RestApi.Entities.PersonCourseCardData";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseApplicant } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseApplicant";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseFolderDetails";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseResource } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseResource";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseResourceWithRole";
+import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSetup";
 import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseProfile";
+import type { ItslearningRestApiEntitiesPersonalCourseYourStudent } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.YourStudent";
+import type { ItslearningRestApiEntitiesPersonalCourseYourStudentCourse } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.YourStudentCourse";
+import type { ItslearningRestApiEntitiesPersonalCourseWithActivePlans } from "../types/api/native/Itslearning.RestApi.Entities.Personal.CourseWithActivePlans";
 import type { ItslearningRestApiEntitiesStreamItemV2 } from "../types/api/native/Itslearning.RestApi.Entities.StreamItemV2";
 import { ItslearningRestApiEntitiesTaskDeadlineFilter } from "../types/api/native/Itslearning.RestApi.Entities.TaskDeadlineFilter";
 import { ItslearningRestApiEntitiesTaskStatusFilter } from "../types/api/native/Itslearning.RestApi.Entities.TaskStatusFilter";
@@ -97,7 +103,7 @@ export class CoursesAPI extends Manager {
 	 * @param fromDate - The start date to filter events, in ISO 8601 format.
 	 * @param toDate - The end date to filter events, in ISO 8601 format.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of events per page (default is 10).
+	 * @param pageSize - The number of events per page (default is 100).
 	 * @returns A promise that resolves to a paginated list of calendar events.
 	 */
 	public async getCalendarEvents(
@@ -130,19 +136,15 @@ export class CoursesAPI extends Manager {
 	 */
 	public async changeRoleBulk(
 		courseId: number,
-		roleId: string,
-		participantIds: string[],
+		roleId: number,
+		participantIds: number[],
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		// const payload = { participantIds };
-		// const queryParams = new URLSearchParams({ roleId });
+		const queryParams = createSearchParams({ roleId });
 
-		// await this.http.post(
-		//   `/restapi/personal/courses/${encodeURIComponent(
-		//     courseId,
-		//   )}/changerole/bulk/v1`,
-		//   payload,
-		// );
+		return this.http.post(
+			`/restapi/personal/courses/${courseId}/changerole/bulk/v1`,
+			{ data: participantIds, params: queryParams },
+		);
 	}
 
 	/**
@@ -155,20 +157,18 @@ export class CoursesAPI extends Manager {
 	 */
 	public async changeParticipantRole(
 		courseId: number,
-		participantId: string,
-		roleId: string,
+		participantId: number,
+		roleId: number,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		// const queryParams = new URLSearchParams({
-		//   participantId,
-		//   roleId,
-		// });
+		const queryParams = createSearchParams({
+			participantId,
+			roleId,
+		});
 
-		// await this.http.post(
-		//   `/restapi/personal/courses/${encodeURIComponent(
-		//     courseId,
-		//   )}/changerole/v1`,
-		// );
+		return this.http.post(
+			`/restapi/personal/courses/${courseId}/changerole/v1`,
+			{ params: queryParams },
+		);
 	}
 
 	/**
@@ -256,7 +256,7 @@ export class CoursesAPI extends Manager {
 	 * @param courseId - The unique identifier of the course.
 	 * @param folderId - The unique identifier of the folder within the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of resources per page (default is 10).
+	 * @param pageSize - The number of resources per page (default is 100).
 	 * @param elementType - The type of elements to filter (e.g., 'file', 'link').
 	 * @param learningToolType - The type of learning tool to filter.
 	 * @returns A promise that resolves to a paginated list of resources.
@@ -287,7 +287,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of tasks per page (default is 10).
+	 * @param pageSize - The number of tasks per page (default is 100).
 	 * @returns A promise that resolves to a paginated list of follow-up tasks.
 	 */
 	public async getFollowUpTasks(
@@ -322,7 +322,9 @@ export class CoursesAPI extends Manager {
 	 * @param courseId - The unique identifier of the course.
 	 * @returns A promise that resolves to the setup information.
 	 */
-	public async getParticipantSetup(courseId: number): Promise<unknown> {
+	public async getParticipantSetup(
+		courseId: number,
+	): Promise<ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup> {
 		return this.http.get(
 			`/restapi/personal/courses/${courseId}/participants/setup/v1`,
 		);
@@ -360,7 +362,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of participants per page (default is 10).
+	 * @param pageSize - The number of participants per page (default is 100).
 	 * @param searchText - The text to search within participant names or emails.
 	 * @param orderByField - The field to order the participants by.
 	 * @param orderAscending - Indicates whether the order is ascending.
@@ -395,7 +397,6 @@ export class CoursesAPI extends Manager {
 	 * Removes one or more participants from the given course.
 	 *
 	 * @param courseId - The unique identifier of the course.
-	 * @param participantIds - An array of participant identifiers to remove.
 	 * @returns A promise that resolves when the participants are successfully removed.
 	 */
 	public async removeParticipants(
@@ -413,12 +414,14 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of participants per page (default is 10).
+	 * @param pageSize - The number of participants per page (default is 100).
 	 * @param courseProfileId - The course profile identifier to filter participants.
 	 * @param searchText - The text to search within participant names or emails.
 	 * @param orderByField - The field to order the participants by.
 	 * @param orderAscending - Indicates whether the order is ascending.
 	 * @returns A promise that resolves to a paginated list of course participants.
+	 *
+	 * @deprecated This endpoint returns only favorite courses. Use `getCourseParticipantsV2` instead.
 	 */
 	public async getCourseParticipants(
 		courseId: number,
@@ -448,7 +451,6 @@ export class CoursesAPI extends Manager {
 	 * Removes one or more participants from the given course (Version 2).
 	 *
 	 * @param courseId - The unique identifier of the course.
-	 * @param participantIds - An array of participant identifiers to remove.
 	 * @returns A promise that resolves when the participants are successfully removed.
 	 */
 	public async removeParticipantsV2(
@@ -468,12 +470,14 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of participants per page (default is 10).
+	 * @param pageSize - The number of participants per page (default is 100).
 	 * @param courseProfileIds - An array of course profile identifiers to filter participants.
 	 * @param searchText - The text to search within participant names or emails.
 	 * @param orderByField - The field to order the participants by.
 	 * @param orderAscending - Indicates whether the order is ascending.
 	 * @returns A promise that resolves to a paginated list of course participants.
+	 *
+	 * @deprecated This endpoint returns only favorite courses. Use `getCourseParticipantsV3` instead.
 	 */
 	public async getCourseParticipantsV2(
 		courseId: number,
@@ -481,21 +485,16 @@ export class CoursesAPI extends Manager {
 		pageSize = 100,
 		courseProfileIds: string[] = [],
 		searchText?: string,
-		orderByField?: string,
+		orderByField = "fullName",
 		orderAscending = true,
-	): Promise<unknown> {
-		throw new Error("Not implemented");
-
+	): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant> {
 		const queryParams = createSearchParams({
 			"paging.PageIndex": pageIndex,
 			"paging.PageSize": pageSize,
 			searchText,
 			orderByField,
 			orderAscending,
-		});
-
-		courseProfileIds.forEach((id, index) => {
-			queryParams.append(`courseProfileIds[${index}]`, id);
+			courseProfileIds,
 		});
 
 		return this.http.get(
@@ -509,7 +508,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of participants per page (default is 10).
+	 * @param pageSize - The number of participants per page (default is 100).
 	 * @param courseProfileIds - An array of course profile identifiers to filter participants.
 	 * @param groupIds - An array of group identifiers to filter participants.
 	 * @param hierarchyIds - An array of hierarchy identifiers to filter participants.
@@ -568,7 +567,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of resources per page (default is 10).
+	 * @param pageSize - The number of resources per page (default is 100).
 	 * @returns A promise that resolves to a list of all resources in the course.
 	 */
 	public async getExtendedResources(
@@ -619,7 +618,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of resources per page (default is 10).
+	 * @param pageSize - The number of resources per page (default is 100).
 	 * @param elementType - The type of elements to filter (e.g., 'file', 'link').
 	 * @param learningToolType - The type of learning tool to filter.
 	 * @returns A promise that resolves to a paginated list of resources.
@@ -731,7 +730,7 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of tasks per page (default is 10).
+	 * @param pageSize - The number of tasks per page (default is 100).
 	 * @param status - The status to filter tasks (e.g., 'pending', 'completed').
 	 * @param deadline - The deadline to filter tasks, in ISO 8601 format.
 	 * @param isHomework - Indicates whether to filter homework tasks.
@@ -793,35 +792,32 @@ export class CoursesAPI extends Manager {
 	 */
 	public async updateCourse(
 		courseId: number,
-		updateData: unknown,
-	): Promise<void> {
-		throw new Error("Not implemented");
-		await this.http.put(`/restapi/personal/courses/${courseId}/v1`, {
+		updateData: ItslearningRestApiEntitiesCourse,
+	): Promise<ItslearningRestApiEntitiesCourse> {
+		return this.http.put(`/restapi/personal/courses/${courseId}/v1`, {
 			data: updateData,
 		});
 	}
 
 	/**
-	 * Retrieves a list of students for a given course.
+	 * Retrieves a list of your students for a given course.
 	 *
 	 * @param courseId - The unique identifier of the course.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of students per page (default is 10).
+	 * @param pageSize - The number of students per page (default is 100).
 	 * @param sort - The field to sort the students by.
 	 * @param sortDescending - Indicates whether the sort order is descending.
 	 * @param search - The text to search within student names or emails.
 	 * @returns A promise that resolves to a paginated list of students.
 	 */
-	public async getStudents(
+	public async getYourStudents(
 		courseId: number,
 		pageIndex = 0,
 		pageSize = 100,
 		sort = "LastVisited",
 		sortDescending = true,
 		search = "",
-	): Promise<unknown> {
-		throw new Error("Not implemented");
-
+	): Promise<Array<ItslearningRestApiEntitiesPersonalCourseYourStudent>> {
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
@@ -869,16 +865,18 @@ export class CoursesAPI extends Manager {
 	 * @returns A promise that resolves to the information about the courses.
 	 */
 	public async getActivePlans(
-		startDate: string,
-		endDate: string,
-	): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({
-			startDate: encodeURIComponent(startDate),
-			endDate: encodeURIComponent(endDate),
+		startDate: string | Date,
+		endDate: string | Date,
+		syncKeys: string[],
+	): Promise<Array<ItslearningRestApiEntitiesPersonalCourseWithActivePlans>> {
+		const queryParams = createSearchParams({
+			startDate,
+			endDate,
 		});
 
-		return this.http.post("/restapi/personal/courses/activeplans/v1");
+		return this.http.post("/restapi/personal/courses/activeplans/v1", {
+			data: syncKeys,
+		});
 	}
 
 	/**
@@ -887,10 +885,14 @@ export class CoursesAPI extends Manager {
 	 * @param searchText - The text to search for in person names or emails.
 	 * @returns A promise that resolves to a list of eligible persons.
 	 */
-	public async getEligiblePersons(searchText: string): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({ searchText });
-		return this.http.get("/restapi/personal/courses/addparticipants/search/v1");
+	public async getEligiblePersons(
+		searchText: string,
+	): Promise<Array<EligiblePersonsResponse>> {
+		const queryParams = createSearchParams({ searchText });
+		return this.http.get(
+			"/restapi/personal/courses/addparticipants/search/v1",
+			{ params: queryParams },
+		);
 	}
 
 	/**
@@ -923,7 +925,7 @@ export class CoursesAPI extends Manager {
 	 * @param courseId - The unique identifier of the course.
 	 * @param notificationId - The unique identifier of the notification.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of elements per page (default is 10).
+	 * @param pageSize - The number of elements per page (default is 100).
 	 * @returns A promise that resolves to a list of related elements.
 	 */
 	public async getNotificationElements(
@@ -965,27 +967,34 @@ export class CoursesAPI extends Manager {
 	 * @param courseSyncKey - The synchronization key of the course.
 	 * @returns A promise that resolves to the course details.
 	 */
-	public async searchCourseBySyncKey(courseSyncKey: string): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({ courseSyncKey });
-		return this.http.get("/restapi/personal/courses/search/v1");
+	public async searchCourseBySyncKey(
+		courseSyncKey: string,
+	): Promise<ItslearningRestApiEntitiesCourse> {
+		const queryParams = createSearchParams({ courseSyncKey });
+		return this.http.get("/restapi/personal/courses/search/v1", {
+			params: queryParams,
+		});
 	}
 
 	/**
 	 * Retrieves a list of the user's students.
 	 *
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of students per page (default is 10).
+	 * @param pageSize - The number of students per page (default is 100).
 	 * @returns A promise that resolves to a paginated list of students.
 	 */
-	public async getMyStudents(pageIndex = 0, pageSize = 100): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({
-			PageIndex: pageIndex.toString(),
-			PageSize: pageSize.toString(),
+	public async getMyStudents(
+		pageIndex = 0,
+		pageSize = 100,
+	): Promise<EntityListOfItslearningRestApiEntitiesCourse> {
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
 		});
 
-		return this.http.get("/restapi/personal/courses/students/v1");
+		return this.http.get("/restapi/personal/courses/students/v1", {
+			params: queryParams,
+		});
 	}
 
 	/**
@@ -994,8 +1003,9 @@ export class CoursesAPI extends Manager {
 	 * @param createData - The data required to create the course.
 	 * @returns A promise that resolves to the created course's details.
 	 */
-	public async createCourse(createData: unknown): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async createCourse(
+		createData: ItslearningRestApiEntitiesCourse,
+	): Promise<ItslearningRestApiEntitiesCourse> {
 		return this.http.post("/restapi/personal/courses/v1", { data: createData });
 	}
 
@@ -1033,12 +1043,18 @@ export class CoursesAPI extends Manager {
 	 * @param pageSize - The number of courses per page (default is 100).
 	 * @param filter - The filter criteria to apply to the course list.
 	 * @returns A promise that resolves to a paginated list of courses.
+	 *
+	 * @deprecated This endpoint returns only favorite courses. Use `getCoursesV3` instead.
 	 */
 	public async getCoursesV2(
 		pageIndex = 0,
 		pageSize = 100,
 		filter: ItsolutionsItslUtilsConstantsContentAreaFilterType = ItsolutionsItslUtilsConstantsContentAreaFilterType.All,
 	): Promise<EntityListOfItslearningRestApiEntitiesPersonCourse> {
+		console.warn(
+			"getCoursesV2 is deprecated and returns only favorite courses. Use getCoursesV3 instead.",
+		);
+
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
@@ -1080,8 +1096,9 @@ export class CoursesAPI extends Manager {
 	 * @param courseId - The unique identifier of the course.
 	 * @returns A promise that resolves to the course information and user role.
 	 */
-	public async getCourseWithRole(courseId: number): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async getCourseWithRole(
+		courseId: number,
+	): Promise<ItslearningRestApiEntitiesCourseWithContextRole> {
 		return this.http.get(`/restapi/personal/courses/withrole/${courseId}/v1`);
 	}
 
@@ -1090,8 +1107,9 @@ export class CoursesAPI extends Manager {
 	 *
 	 * @returns A promise that resolves to the list of courses.
 	 */
-	public async getStudentsCourses(): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async getStudentsCourses(): Promise<
+		Array<ItslearningRestApiEntitiesPersonalCourseYourStudentCourse>
+	> {
 		return this.http.get("/restapi/personal/courses/yourstudents/courses/v1");
 	}
 
@@ -1099,7 +1117,7 @@ export class CoursesAPI extends Manager {
 	 * Retrieves a list of all students for a teacher across all courses where the teacher has a teacher's role.
 	 *
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
-	 * @param pageSize - The number of students per page (default is 10).
+	 * @param pageSize - The number of students per page (default is 100).
 	 * @param sort - The field to sort the students by.
 	 * @param sortDescending - Indicates whether the sort order is descending.
 	 * @param search - The text to search within student names or emails.
@@ -1111,8 +1129,7 @@ export class CoursesAPI extends Manager {
 		sort = "LastLogon",
 		sortDescending = true,
 		search = "",
-	): Promise<unknown> {
-		throw new Error("Not implemented");
+	): Promise<Array<ItslearningRestApiEntitiesPersonalCourseYourStudent>> {
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,

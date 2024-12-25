@@ -1,0 +1,12 @@
+import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantLanguage } from "./Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantLanguage";
+import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPaths } from "./Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPaths";
+import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPermissions } from "./Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPermissions";
+import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSettings } from "./Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSettings";
+
+export type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup =
+	{
+		Language: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantLanguage;
+		Paths: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPaths;
+		Settings: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSettings;
+		Permissions: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPermissions;
+	};

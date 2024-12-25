@@ -1,6 +1,7 @@
 import { Manager } from "../lib/Manager";
 import type { ItslearningRestApiEntitiesPersonalCalendarCalendarEventV2 } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2";
 import type { ItslearningRestApiEntitiesPersonalCalendarEvent } from "../types/api/native/Itslearning.RestApi.Entities.Personal.CalendarEvent";
+import { createSearchParams } from "../utils/search-params";
 
 /**
  * CalendarAPI
@@ -38,10 +39,10 @@ export class CalendarAPI extends Manager {
 		pageIndex = 0,
 		pageSize = 10,
 	): Promise<ItslearningRestApiEntitiesPersonalCalendarCalendarEventV2> {
-		const queryParams = new URLSearchParams({
-			fromDate: fromDate instanceof Date ? fromDate.toISOString() : fromDate,
-			PageIndex: pageIndex.toString(),
-			PageSize: pageSize.toString(),
+		const queryParams = createSearchParams({
+			fromDate,
+			PageIndex: pageIndex,
+			PageSize: pageSize,
 		});
 
 		return this.http.get("/restapi/personal/calendar/events/v1", {
