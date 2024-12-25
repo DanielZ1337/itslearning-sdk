@@ -1,12 +1,12 @@
 export const ItslearningRestApiEntitiesPersonContextRole = {
-	Member: 0,
-	Learner: 1,
-	Instructor: 2,
-	ContentDeveloper: 3,
-	Manager: 4,
-	Mentor: 5,
-	Administrator: 6,
-	TeachingAssistant: 7,
+	Member: 1,
+	Learner: 2,
+	Instructor: 3,
+	ContentDeveloper: 4,
+	Manager: 5,
+	Mentor: 6,
+	Administrator: 7,
+	TeachingAssistant: 8,
 } as const;
 
 export type ItslearningRestApiEntitiesPersonContextRole =
