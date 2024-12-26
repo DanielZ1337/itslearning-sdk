@@ -15,5 +15,7 @@
   "extension": "ts",
   "exportAll": true,
   "silent": false,
-  "sort": false
+  "sort": false,
+  "noComments": true,
+  "noHeader": true
 }

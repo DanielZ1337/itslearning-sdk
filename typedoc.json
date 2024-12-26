@@ -1,0 +1,9 @@
+{
+  "out": "./docs",
+  "entryPoints": [
+    "src/index.ts",
+    "src/types/index.ts",
+    "src/api/*.ts",
+    "src/lib/*.ts"
+  ]
+}

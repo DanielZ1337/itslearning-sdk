@@ -214,7 +214,7 @@ itslearning-sdk is in no way affiliated with itslearning.
 ## Author
 
 **Daniel Bermann Schmidt**
-<danielz@danielz.dev>
+[\<danielz@danielz.dev\>](mailto:danielz@danielz.dev)
 
 ## Repository
 
