@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@nolebase/vitepress-plugin-og-image": "^2.11.1",
     "@types/bun": "latest",
     "barrelsby": "^2.8.1",
     "tsup": "^8.3.5",
