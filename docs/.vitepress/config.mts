@@ -57,4 +57,33 @@ export default defineConfig({
     ["meta", { property: "twitter:url", content: url }],
     ["meta", { name: "twitter:image", content: ogImage }],
   ],
+  transformPageData(pageData) {
+    pageData.frontmatter.head ??= [];
+    pageData.frontmatter.head.push([
+      "meta",
+      {
+        name: "og:title",
+        content:
+          pageData.frontmatter.layout === "home"
+            ? siteName
+            : `${pageData.title} | ${siteName}`,
+      },
+      {
+        property: "og:description",
+        content: pageData.description ?? pageData.frontmatter.description,
+      },
+      { property: "twitter:title", content: pageData.title },
+      {
+        property: "twitter:description",
+        content: pageData.description ?? pageData.frontmatter.description,
+      },
+      { property: "twitter:image", content: ogImage },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "twitter:domain", content: new URL(url).hostname },
+    ]);
+  },
 });
