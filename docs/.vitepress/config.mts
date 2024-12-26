@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 import typedocSidebar from "../api/typedoc-sidebar.json";
-import { buildEndGenerateOpenGraphImages } from "@nolebase/vitepress-plugin-og-image/vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -33,11 +32,15 @@ export default defineConfig({
       },
     ],
   },
-  async buildEnd(siteConfig) {
-    const newBuilder = buildEndGenerateOpenGraphImages({
-      baseUrl: "https://itslearning-sdk.danielz.dev",
-    });
-
-    await newBuilder(siteConfig);
-  },
+  head: [
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://itslearning-sdk.danielz.dev/og-image.png",
+      },
+    ],
+    ["meta", { property: "og:image:width", content: "1200" }],
+    ["meta", { property: "og:image:height", content: "630" }],
+  ],
 });
