@@ -38,7 +38,7 @@ export class AuthManager {
 			state,
 		});
 
-		const url = new URL("/restapi/oauth2/authorize", this.config.getBaseURL());
+		const url = new URL("/oauth2/authorize.aspx", this.config.getBaseURL());
 		url.search = params.toString();
 		return url.toString();
 	}
