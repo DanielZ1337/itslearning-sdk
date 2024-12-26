@@ -1,9 +1,26 @@
 {
-  "out": "./docs",
+  "$schema": "https://typedoc-plugin-markdown.org/schema.json",
+  "plugin": ["typedoc-plugin-markdown", "typedoc-vitepress-theme"],
+  "out": "./docs/api",
+  "docsRoot": "./docs",
   "entryPoints": [
     "src/index.ts",
     "src/types/index.ts",
     "src/api/*.ts",
     "src/lib/*.ts"
-  ]
+  ],
+  "sidebar": {
+    "autoConfiguration": true,
+    "format": "vitepress",
+    "pretty": false,
+    "collapsed": true
+  },
+  "githubPages": false,
+  "indexFormat": "table",
+  "useCodeBlocks": true,
+  "disableSources": true,
+  "textContentMappings": {
+    "title.indexPage": "API Reference",
+    "title.memberPage": "{name}"
+  }
 }

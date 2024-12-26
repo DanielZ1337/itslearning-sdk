@@ -1,0 +1,55 @@
+# API Reference
+
+## Modules
+
+| Module | Description |
+| ------ | ------ |
+| [api/ApplicationInitialisationCacheWarmUp](api/ApplicationInitialisationCacheWarmUp/index.md) | - |
+| [api/AssessmentRecord](api/AssessmentRecord/index.md) | - |
+| [api/Calendar](api/Calendar/index.md) | - |
+| [api/Children](api/Children/index.md) | - |
+| [api/ChildrenCalendar](api/ChildrenCalendar/index.md) | - |
+| [api/ChildrenCourses](api/ChildrenCourses/index.md) | - |
+| [api/ChildrenOrganisation](api/ChildrenOrganisation/index.md) | - |
+| [api/ChildrenPlans](api/ChildrenPlans/index.md) | - |
+| [api/CourseCards](api/CourseCards/index.md) | - |
+| [api/CourseFeatures](api/CourseFeatures/index.md) | - |
+| [api/Courses](api/Courses/index.md) | - |
+| [api/CoursesGroups](api/CoursesGroups/index.md) | - |
+| [api/CustomerSettings](api/CustomerSettings/index.md) | - |
+| [api/Hierarchies](api/Hierarchies/index.md) | - |
+| [api/ImmersiveReader](api/ImmersiveReader/index.md) | - |
+| [api/InstantMessage](api/InstantMessage/index.md) | - |
+| [api/InstantMessageBroadcast](api/InstantMessageBroadcast/index.md) | - |
+| [api/LearningObjectiveRepository](api/LearningObjectiveRepository/index.md) | - |
+| [api/LearningObjectivesReports](api/LearningObjectivesReports/index.md) | - |
+| [api/LightBulletin](api/LightBulletin/index.md) | - |
+| [api/LightBulletinCourse](api/LightBulletinCourse/index.md) | - |
+| [api/LtiExtension](api/LtiExtension/index.md) | - |
+| [api/MediaRecorder](api/MediaRecorder/index.md) | - |
+| [api/Messages](api/Messages/index.md) | - |
+| [api/NativeApp](api/NativeApp/index.md) | - |
+| [api/Notifications](api/Notifications/index.md) | - |
+| [api/NotificationsPost](api/NotificationsPost/index.md) | - |
+| [api/PageUrl](api/PageUrl/index.md) | - |
+| [api/Person](api/Person/index.md) | - |
+| [api/PersonRelation](api/PersonRelation/index.md) | - |
+| [api/Planner](api/Planner/index.md) | - |
+| [api/Projects](api/Projects/index.md) | - |
+| [api/SearchData](api/SearchData/index.md) | - |
+| [api/SiteLinks](api/SiteLinks/index.md) | - |
+| [api/Sites](api/Sites/index.md) | - |
+| [api/Sso](api/Sso/index.md) | - |
+| [api/Statistics](api/Statistics/index.md) | - |
+| [api/StudentPlan](api/StudentPlan/index.md) | - |
+| [api/Supervisor](api/Supervisor/index.md) | - |
+| [api/TaskListDailyWorkflow](api/TaskListDailyWorkflow/index.md) | - |
+| [api/Tasks](api/Tasks/index.md) | - |
+| [api/Token](api/Token/index.md) | - |
+| [api/Workload](api/Workload/index.md) | - |
+| [index](index/index.md) | - |
+| [lib/AuthManager](lib/AuthManager/index.md) | - |
+| [lib/ConfigManager](lib/ConfigManager/index.md) | - |
+| [lib/HttpClient](lib/HttpClient/index.md) | - |
+| [lib/Manager](lib/Manager/index.md) | - |
+| [types](types/index.md) | - |
