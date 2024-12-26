@@ -58,6 +58,9 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.29.1"
+  },
   "engines": {
     "bun": ">=1.0.0",
     "node": ">=16.0.0"
