@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "homepage": "https://itslearning-sdk
-danielz.dev/",
+  "homepage": "https://itslearning-sdk.danielz.dev/",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
