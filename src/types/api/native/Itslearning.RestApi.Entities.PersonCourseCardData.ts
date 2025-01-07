@@ -1,9 +1,11 @@
+import type { ItslearningRestApiEntitiesPersonContextRole } from "./Itslearning.RestApi.Entities.PersonContextRole.ts";
 import type { ItslearningRestApiEntitiesPersonSimple } from "./Itslearning.RestApi.Entities.PersonSimple.ts";
 
 export type ItslearningRestApiEntitiesPersonCourseCardData = {
 	FollowUpTaskCount: number;
 	TaskCount: number;
 	TeachersInCourse: ItslearningRestApiEntitiesPersonSimple[];
+	Role: ItslearningRestApiEntitiesPersonContextRole;
 	LastUpdatedUtc: Date;
 	NewNotificationsCount: number;
 	NewBulletinsCount: number;
