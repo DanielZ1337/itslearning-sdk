@@ -1,7 +1,10 @@
 import { CalendarAPI } from "./api/Calendar";
+import { CourseCardsAPI } from "./api/CourseCards";
 import { CoursesAPI } from "./api/Courses";
 import { InstantMessagesAPI } from "./api/InstantMessage";
 import { InstantMessageBroadcastAPI } from "./api/InstantMessageBroadcast";
+import { LightBulletinAPI } from "./api/LightBulletin";
+import { LightBulletinCourseAPI } from "./api/LightBulletinCourse";
 import { LtiExtensionAPI } from "./api/LtiExtension";
 import { NativeAppAPI } from "./api/NativeApp";
 import { NotificationsPostAPI } from "./api/NotificationsPost";
@@ -36,10 +39,13 @@ export class ItsLearningSDK {
 	public token: TokenAPI;
 	public calendar: CalendarAPI;
 	public courses: CoursesAPI;
+	public courseCards: CourseCardsAPI;
 	public sites: SitesAPI;
 	public sso: SsoAPI;
 	public instantMessage: InstantMessagesAPI;
 	public instantMessageBroadcast: InstantMessageBroadcastAPI;
+	public lightBulletin: LightBulletinAPI;
+	public lightBulletinCourse: LightBulletinCourseAPI;
 	public lti: LtiExtensionAPI;
 	public nativeApp: NativeAppAPI;
 	public notifications: NotificationsPostAPI;
@@ -67,8 +73,11 @@ export class ItsLearningSDK {
 		this.token = new TokenAPI(this.http);
 		this.calendar = new CalendarAPI(this.http);
 		this.courses = new CoursesAPI(this.http);
+		this.courseCards = new CourseCardsAPI(this.http);
 		this.sites = new SitesAPI(this.http);
 		this.sso = new SsoAPI(this.http);
+		this.lightBulletin = new LightBulletinAPI(this.http);
+		this.lightBulletinCourse = new LightBulletinCourseAPI(this.http);
 		this.lti = new LtiExtensionAPI(this.http);
 		this.nativeApp = new NativeAppAPI(this.http);
 		this.notifications = new NotificationsPostAPI(this.http);
