@@ -23,8 +23,7 @@ export class MediaRecorderAPI extends Manager {
 		settings?: Record<string, unknown>,
 	): Promise<unknown> {
 		return this.http.post("/restapi/personal/mediarecorder/createplayer/v1", {
-			applicationKey,
-			settings,
+			data: { applicationKey, settings },
 		});
 	}
 
@@ -41,7 +40,7 @@ export class MediaRecorderAPI extends Manager {
 	): Promise<unknown> {
 		return this.http.post(
 			"/restapi/personal/mediarecorder/recordingcomplete/v1",
-			{ recordingId, name },
+			{ data: { recordingId, name } },
 		);
 	}
 
@@ -60,7 +59,7 @@ export class MediaRecorderAPI extends Manager {
 	): Promise<unknown> {
 		return this.http.post(
 			"/restapi/personal/mediarecorder/saveziggeorecording/v1",
-			{ recordingId, name },
+			{ data: { recordingId, name } },
 		);
 	}
 
@@ -86,7 +85,7 @@ export class MediaRecorderAPI extends Manager {
 		}
 		return this.http.post(
 			"/restapi/personal/mediarecorder/uploadrecording/v1",
-			formData,
+			{ data: formData },
 		);
 	}
 

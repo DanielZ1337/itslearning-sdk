@@ -21,15 +21,23 @@ import { LearningObjectivesReportsAPI } from "./api/LearningObjectivesReports";
 import { LightBulletinAPI } from "./api/LightBulletin";
 import { LightBulletinCourseAPI } from "./api/LightBulletinCourse";
 import { LtiExtensionAPI } from "./api/LtiExtension";
+import { MediaRecorderAPI } from "./api/MediaRecorder";
+import { MessagesAPI } from "./api/Messages";
 import { NativeAppAPI } from "./api/NativeApp";
+import { NotificationsAPI } from "./api/Notifications";
 import { NotificationsPostAPI } from "./api/NotificationsPost";
 import { PageUrlAPI } from "./api/PageUrl";
 import { PersonAPI } from "./api/Person";
+import { PersonRelationAPI } from "./api/PersonRelation";
 import { PlannerAPI } from "./api/Planner";
+import { ProjectsAPI } from "./api/Projects";
 import { SearchDataAPI } from "./api/SearchData";
+import { SiteLinksAPI } from "./api/SiteLinks";
 import { SitesAPI } from "./api/Sites";
 import { SsoAPI } from "./api/Sso";
+import { StatisticsAPI } from "./api/Statistics";
 import { StudentPlanAPI } from "./api/StudentPlan";
+import { SupervisorAPI } from "./api/Supervisor";
 import { TaskListDailyWorkflowAPI } from "./api/TaskListDailyWorkflow";
 import { TasksAPI } from "./api/Tasks";
 import { TokenAPI } from "./api/Token";
@@ -64,7 +72,7 @@ export class ItsLearningSDK {
 	public lightBulletinCourse: LightBulletinCourseAPI;
 	public lti: LtiExtensionAPI;
 	public nativeApp: NativeAppAPI;
-	public notifications: NotificationsPostAPI;
+	public notificationsPost: NotificationsPostAPI;
 	public pageUrl: PageUrlAPI;
 	public person: PersonAPI;
 	public planner: PlannerAPI;
@@ -90,6 +98,14 @@ export class ItsLearningSDK {
 	public learningObjectiveRepository: LearningObjectiveRepositoryAPI;
 	public learningObjectivesReports: LearningObjectivesReportsAPI;
 	public yourFiles: YourFilesAPI;
+	public mediaRecorder: MediaRecorderAPI;
+	public messages: MessagesAPI;
+	public notifications: NotificationsAPI;
+	public personRelation: PersonRelationAPI;
+	public projects: ProjectsAPI;
+	public siteLinks: SiteLinksAPI;
+	public statistics: StatisticsAPI;
+	public supervisor: SupervisorAPI;
 
 	constructor(config?: SDKConfig) {
 		this.config = new ConfigManager(
@@ -112,7 +128,7 @@ export class ItsLearningSDK {
 		this.lightBulletinCourse = new LightBulletinCourseAPI(this.http);
 		this.lti = new LtiExtensionAPI(this.http);
 		this.nativeApp = new NativeAppAPI(this.http);
-		this.notifications = new NotificationsPostAPI(this.http);
+		this.notificationsPost = new NotificationsPostAPI(this.http);
 		this.pageUrl = new PageUrlAPI(this.http);
 		this.person = new PersonAPI(this.http);
 		this.planner = new PlannerAPI(this.http);
@@ -123,7 +139,6 @@ export class ItsLearningSDK {
 		this.workload = new WorkloadAPI(this.http);
 		this.instantMessage = new InstantMessagesAPI(this.http);
 		this.instantMessageBroadcast = new InstantMessageBroadcastAPI(this.http);
-		// New APIs
 		this.ai = new AiAPI(this.http);
 		this.applicationInitialisationCacheWarmUp =
 			new ApplicationInitialisationCacheWarmUpAPI(this.http);
@@ -145,5 +160,13 @@ export class ItsLearningSDK {
 			this.http,
 		);
 		this.yourFiles = new YourFilesAPI(this.http);
+		this.mediaRecorder = new MediaRecorderAPI(this.http);
+		this.messages = new MessagesAPI(this.http);
+		this.notifications = new NotificationsAPI(this.http);
+		this.personRelation = new PersonRelationAPI(this.http);
+		this.projects = new ProjectsAPI(this.http);
+		this.siteLinks = new SiteLinksAPI(this.http);
+		this.statistics = new StatisticsAPI(this.http);
+		this.supervisor = new SupervisorAPI(this.http);
 	}
 }
