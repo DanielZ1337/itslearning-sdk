@@ -327,20 +327,28 @@ export class InstantMessagesAPI extends Manager {
 
 	/**
 	 * Gets messages in a specific thread (v1).
+	 * One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
+	 *
 	 * @param threadId - The unique ID of the thread.
-	 * @param maxMessages - The max number of messages to retrieve.
-	 * @param upperBoundInstantMessageId - The message ID to retrieve messages before.
-	 * @param lowerBoundInstantMessageId - The message ID to retrieve messages after.
+	 * @param maxMessages - Maximum number of messages to get.
+	 * @param upperBoundInstantMessageId - Load messages before this instant message ID.
+	 * @param lowerBoundInstantMessageId - Load messages after this instant message ID.
 	 * @deprecated Use getThreadMessagesV2 instead.
 	 */
 	public async getThreadMessagesV1(
 		threadId: number,
-		_maxMessages?: number,
-		_upperBoundInstantMessageId?: number,
-		_lowerBoundInstantMessageId?: number,
+		maxMessages?: number,
+		upperBoundInstantMessageId?: number,
+		lowerBoundInstantMessageId?: number,
 	): Promise<EntityListOfItslearningRestApiEntitiesInstantMessage> {
+		const queryParams = createSearchParams({
+			maxMessages,
+			upperBoundInstantMessageId,
+			lowerBoundInstantMessageId,
+		});
 		return this.http.get(
 			`/restapi/personal/instantmessages/messagethreads/${threadId}/v1`,
+			{ params: queryParams },
 		);
 	}
 
@@ -525,7 +533,7 @@ export class InstantMessagesAPI extends Manager {
 	/**
 	 * Gets recipient persons requested (bulk lookup).
 	 *
-	 * @param requestData - The request body containing criteria for recipients.
+	 * @param personIds - Array of person IDs to look up.
 	 */
 	public async getRecipientPersons(
 		personIds: number[],

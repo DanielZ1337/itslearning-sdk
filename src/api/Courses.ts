@@ -879,7 +879,6 @@ export class CoursesAPI extends Manager {
 	/**
 	 * Retrieves the list of elements related to a given notification.
 	 *
-	 * @param courseId - The unique identifier of the course.
 	 * @param notificationId - The unique identifier of the notification.
 	 * @param pageIndex - The index of the page to retrieve (default is 0).
 	 * @param pageSize - The number of elements per page (default is 100).
