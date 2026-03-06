@@ -1,5 +1,4 @@
 import { Manager } from "../lib/Manager";
-import { createSearchParams } from "../utils/search-params";
 
 /**
  * ProjectsAPI

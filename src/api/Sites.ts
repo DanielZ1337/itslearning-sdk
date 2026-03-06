@@ -2,7 +2,6 @@ import { Manager } from "../lib/Manager";
 import type { EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.AggregatedOrganisationLite";
 import type { EntityListOfItslearningRestApiEntitiesSiteBase } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.SiteBase";
 import type { ItslearningRestApiEntitiesSite } from "../types/api/native/Itslearning.RestApi.Entities.Site";
-import type { ItslearningRestApiEntitiesSiteBase } from "../types/api/native/Itslearning.RestApi.Entities.SiteBase";
 import type { ItslearningRestApiEntitiesSiteLoginDetails } from "../types/api/native/Itslearning.RestApi.Entities.SiteLoginDetails";
 import { ItsolutionsItslearningWebRestApiPublicUnauthenticatedSitesFilter } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Public.Unauthenticated.SitesFilter";
 import { createSearchParams } from "../utils/search-params";

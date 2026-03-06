@@ -1,5 +1,4 @@
 import { Manager } from "../lib/Manager";
-import { createSearchParams } from "../utils/search-params";
 
 /**
  * MediaRecorderAPI
@@ -21,27 +20,12 @@ export class MediaRecorderAPI extends Manager {
 	 */
 	public async createPlayer(
 		applicationKey: string,
-		settings?: Record<string, any>,
+		settings?: Record<string, unknown>,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		if (!applicationKey || typeof applicationKey !== "string") {
-			throw new Error(
-				"Parameter 'applicationKey' is required and must be a string.",
-			);
-		}
-
-		const requestData = { applicationKey, settings };
-
-		try {
-			const response = await this.http.post(
-				"/restapi/personal/mediarecorder/createplayer/v1",
-				{ data: requestData },
-			);
-			return response;
-		} catch (error) {
-			console.error("Failed to create media recorder player:", error);
-			throw error;
-		}
+		return this.http.post("/restapi/personal/mediarecorder/createplayer/v1", {
+			applicationKey,
+			settings,
+		});
 	}
 
 	/**
@@ -55,29 +39,10 @@ export class MediaRecorderAPI extends Manager {
 		recordingId: string,
 		name: string,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		if (!recordingId || typeof recordingId !== "string") {
-			throw new Error(
-				"Parameter 'recordingId' is required and must be a string.",
-			);
-		}
-
-		if (!name || typeof name !== "string") {
-			throw new Error("Parameter 'name' is required and must be a string.");
-		}
-
-		const requestData = { recordingId, name };
-
-		try {
-			const response = await this.http.post(
-				"/restapi/personal/mediarecorder/recordingcomplete/v1",
-				{ data: requestData },
-			);
-			return response;
-		} catch (error) {
-			console.error("Failed to mark recording as complete:", error);
-			throw error;
-		}
+		return this.http.post(
+			"/restapi/personal/mediarecorder/recordingcomplete/v1",
+			{ recordingId, name },
+		);
 	}
 
 	/**
@@ -93,29 +58,10 @@ export class MediaRecorderAPI extends Manager {
 		recordingId: string,
 		name: string,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		if (!recordingId || typeof recordingId !== "string") {
-			throw new Error(
-				"Parameter 'recordingId' is required and must be a string.",
-			);
-		}
-
-		if (!name || typeof name !== "string") {
-			throw new Error("Parameter 'name' is required and must be a string.");
-		}
-
-		const requestData = { recordingId, name };
-
-		try {
-			const response = await this.http.post(
-				"/restapi/personal/mediarecorder/saveziggeorecording/v1",
-				{ data: requestData },
-			);
-			return response;
-		} catch (error) {
-			console.error("Failed to save Ziggeo recording:", error);
-			throw error;
-		}
+		return this.http.post(
+			"/restapi/personal/mediarecorder/saveziggeorecording/v1",
+			{ recordingId, name },
+		);
 	}
 
 	/**
@@ -129,31 +75,19 @@ export class MediaRecorderAPI extends Manager {
 	 */
 	public async uploadRecording(
 		recordingData: Blob | Buffer,
-		metadata?: Record<string, any>,
+		metadata?: Record<string, unknown>,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		// if (!recordingData) {
-		//   throw new Error("Parameter 'recordingData' is required.");
-		// }
-
-		// const formData = new FormData();
-		// formData.append("recording", recordingData);
-		// if (metadata) {
-		//   Object.entries(metadata).forEach(([key, value]) => {
-		//     formData.append(key, value);
-		//   });
-		// }
-
-		// try {
-		//   const response = await this.http.post(
-		//     `/restapi/personal/mediarecorder/uploadrecording/v1`,
-		//     { data: formData },
-		//   );
-		//   return response;
-		// } catch (error) {
-		//   console.error("Failed to upload recording:", error);
-		//   throw error;
-		// }
+		const formData = new FormData();
+		formData.append("recording", recordingData as Blob);
+		if (metadata) {
+			for (const [key, value] of Object.entries(metadata)) {
+				formData.append(key, String(value));
+			}
+		}
+		return this.http.post(
+			"/restapi/personal/mediarecorder/uploadrecording/v1",
+			formData,
+		);
 	}
 
 	/**
@@ -165,20 +99,9 @@ export class MediaRecorderAPI extends Manager {
 	 * @returns A promise that resolves to the video streams.
 	 */
 	public async getVideoStreams(videoId: string): Promise<unknown> {
-		throw new Error("Not implemented");
-		if (!videoId || typeof videoId !== "string") {
-			throw new Error("Parameter 'videoId' is required and must be a string.");
-		}
-
-		try {
-			const response = await this.http.get(
-				`/restapi/personal/mediarecorder/video/${videoId}/streams/v1`,
-			);
-			return response;
-		} catch (error) {
-			console.error("Failed to retrieve video streams:", error);
-			throw error;
-		}
+		return this.http.get(
+			`/restapi/personal/mediarecorder/video/${videoId}/streams/v1`,
+		);
 	}
 
 	/**
@@ -188,19 +111,8 @@ export class MediaRecorderAPI extends Manager {
 	 * @returns A promise that resolves to the Ziggeo video streams.
 	 */
 	public async getZiggeoVideoStreams(videoId: string): Promise<unknown> {
-		throw new Error("Not implemented");
-		if (!videoId || typeof videoId !== "string") {
-			throw new Error("Parameter 'videoId' is required and must be a string.");
-		}
-
-		try {
-			const response = await this.http.get(
-				`/restapi/personal/mediarecorder/ziggeo/video/${videoId}/streams/v1`,
-			);
-			return response;
-		} catch (error) {
-			console.error("Failed to retrieve Ziggeo video streams:", error);
-			throw error;
-		}
+		return this.http.get(
+			`/restapi/personal/mediarecorder/ziggeo/video/${videoId}/streams/v1`,
+		);
 	}
 }

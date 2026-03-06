@@ -1,4 +1,8 @@
 import { Manager } from "../lib/Manager";
+import type { ItslearningRestApiEntitiesMessage } from "../types/api/native/Itslearning.RestApi.Entities.Message";
+import type { ItslearningRestApiEntitiesMessageToSend } from "../types/api/native/Itslearning.RestApi.Entities.MessageToSend";
+import type { ItslearningRestApiEntitiesPushSetting } from "../types/api/native/Itslearning.RestApi.Entities.PushSetting";
+import type { ItslearningRestApiEntitiesUpdatableMessageUpdateV1 } from "../types/api/native/Itslearning.RestApi.Entities.Updatable.MessageUpdateV1";
 import type { ItsolutionsItslUtilsConstantsMessageOrigin } from "../types/api/native/Itsolutions.ItslUtils.Constants.MessageOrigin";
 import type { SystemNetHttpHttpResponseMessage } from "../types/api/native/System.Net.Http.HttpResponseMessage";
 import { createSearchParams } from "../utils/search-params";
@@ -38,8 +42,9 @@ export class MessagesAPI extends Manager {
 	 *
 	 * @param messageId - The unique ID of the message.
 	 */
-	public async getMessage(messageId: number): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async getMessage(
+		messageId: number,
+	): Promise<ItslearningRestApiEntitiesMessage> {
 		return this.http.get(`/restapi/personal/messages/${messageId}/v1`);
 	}
 
@@ -53,9 +58,8 @@ export class MessagesAPI extends Manager {
 	public async updateMessage(
 		messageId: number,
 		messageOrigin: string,
-		updateData: unknown,
+		updateData: ItslearningRestApiEntitiesUpdatableMessageUpdateV1,
 	): Promise<void> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({ messageOrigin });
 		return this.http.put(`/restapi/personal/messages/${messageId}/v1`, {
 			params: queryParams,
@@ -73,7 +77,6 @@ export class MessagesAPI extends Manager {
 		messageId: number,
 		messageOrigin: string,
 	): Promise<void> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({ messageOrigin });
 		return this.http.delete(`/restapi/personal/messages/${messageId}/v1`, {
 			params: queryParams,
@@ -86,7 +89,6 @@ export class MessagesAPI extends Manager {
 	 * @param fileId - The unique ID of the attachment file.
 	 */
 	public async getMessageAttachment(fileId: string): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get(`/restapi/personal/messages/attachments/${fileId}/v1`);
 	}
 
@@ -96,11 +98,12 @@ export class MessagesAPI extends Manager {
 	 *
 	 * @param data - The push configuration data.
 	 */
-	public async setPushNotifications(data: unknown): Promise<void> {
+	public async setPushNotifications(
+		data: ItslearningRestApiEntitiesPushSetting,
+	): Promise<void> {
 		console.warn(
 			"This method is obsolete. Use restapi/personal/person/push/v1 instead.",
 		);
-		throw new Error("Not implemented");
 		return this.http.post("/restapi/personal/messages/push/v1", { data });
 	}
 
@@ -110,7 +113,6 @@ export class MessagesAPI extends Manager {
 	 * @param searchText - The text to search for recipients (min 3 chars).
 	 */
 	public async searchMessageRecipients(searchText: string): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({ searchText });
 		return this.http.get("/restapi/personal/messages/recipients/search/v1", {
 			params: queryParams,
@@ -122,8 +124,9 @@ export class MessagesAPI extends Manager {
 	 *
 	 * @param data - Message details, including recipients and optional ReplyToMessageId.
 	 */
-	public async sendMessage(data: unknown): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async sendMessage(
+		data: ItslearningRestApiEntitiesMessageToSend,
+	): Promise<ItslearningRestApiEntitiesMessage> {
 		return this.http.post("/restapi/personal/messages/send/v1", { data });
 	}
 
@@ -144,7 +147,6 @@ export class MessagesAPI extends Manager {
 		pageIndex = 0,
 		pageSize = 20,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
@@ -159,8 +161,9 @@ export class MessagesAPI extends Manager {
 	 *
 	 * @param data - The data containing message IDs and IsRead values to update.
 	 */
-	public async updateMessages(data: unknown): Promise<void> {
-		throw new Error("Not implemented");
+	public async updateMessages(
+		data: ItslearningRestApiEntitiesUpdatableMessageUpdateV1[],
+	): Promise<void> {
 		return this.http.put("/restapi/personal/messages/v1", { data });
 	}
 
@@ -178,7 +181,6 @@ export class MessagesAPI extends Manager {
 		pageIndex = 0,
 		pageSize = 20,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({
 			UseNewerThan: useNewerThan,
 			FromId: fromId,

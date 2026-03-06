@@ -5,10 +5,12 @@ import type { ItslearningRestApiEntitiesInstantMessage } from "../types/api/nati
 import type { ItslearningRestApiEntitiesInstantMessageFilterSuggestion } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageFilterSuggestion";
 import type { ItslearningRestApiEntitiesInstantMessageListModel } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageListModel";
 import type { ItslearningRestApiEntitiesInstantMessagePermissions } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessagePermissions";
+import type { ItslearningRestApiEntitiesInstantMessageRecipient } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageRecipient";
 import type { ItslearningRestApiEntitiesInstantMessageThread } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageThread";
 import type { ItslearningRestApiEntitiesInstantMessageThreadListModel } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageThreadListModel";
 import type { ItslearningRestApiEntitiesInstantMessageThreadSearchParams } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageThreadSearchParams";
 import type { ItslearningRestApiEntitiesInstantMessageToPatch } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageToPatch";
+import type { ItslearningRestApiEntitiesInstantMessageToSend } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageToSend";
 import type { ItslearningRestApiEntitiesInstantMessageToSendV2 } from "../types/api/native/Itslearning.RestApi.Entities.InstantMessageToSendV2";
 import type { ItslearningRestApiEntitiesMessagesDisabledThreadParticipants } from "../types/api/native/Itslearning.RestApi.Entities.MessagesDisabledThreadParticipants";
 import type { ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1 } from "../types/api/native/Itslearning.RestApi.Entities.Updatable.InstantMessageThreadUpdateV1";
@@ -69,7 +71,6 @@ export class InstantMessagesAPI extends Manager {
 	 * @param fileData - The file to upload, wrapped in FormData.
 	 */
 	public async uploadAttachment(fileData: FormData): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.post("/restapi/personal/instantmessages/attachment/v1", {
 			data: fileData,
 		});
@@ -110,7 +111,6 @@ export class InstantMessagesAPI extends Manager {
 		channelId: string,
 		unregister = false,
 	): Promise<void> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({ unregister });
 		return this.http.post(
 			`/restapi/personal/instantmessages/communicationchannel/${channelId}/v1`,
@@ -202,12 +202,14 @@ export class InstantMessagesAPI extends Manager {
 	 * @param threadId - The unique ID of the thread.
 	 * @param moderatorData - The moderator data (e.g., participant IDs).
 	 */
-	public async addModeratorToThread(threadId: number, moderatorData: unknown) {
-		throw new Error("Not implemented");
-		// return this.http.put(
-		//   `/restapi/personal/instantmessages/messagethreads/${threadId}/moderators/v1`,
-		//   { data: moderatorData },
-		// );
+	public async addModeratorToThread(
+		threadId: number,
+		moderatorData: ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1,
+	) {
+		return this.http.put(
+			`/restapi/personal/instantmessages/messagethreads/${threadId}/moderators/v1`,
+			{ data: moderatorData },
+		);
 	}
 
 	/**
@@ -261,7 +263,6 @@ export class InstantMessagesAPI extends Manager {
 	 * @param threadId - The unique ID of the thread to restore.
 	 */
 	public async restoreThread(threadId: number): Promise<void> {
-		throw new Error("Not implemented");
 		return this.http.patch(
 			`/restapi/personal/instantmessages/messagethreads/${threadId}/restore/v1`,
 		);
@@ -273,7 +274,6 @@ export class InstantMessagesAPI extends Manager {
 	 * @param threadId - The unique ID of the thread.
 	 */
 	public async toggleThreadReplies(threadId: number): Promise<void> {
-		throw new Error("Not implemented");
 		return this.http.put(
 			`/restapi/personal/instantmessages/messagethreads/${threadId}/toggleEnableDisableReplies/v1`,
 		);
@@ -335,9 +335,9 @@ export class InstantMessagesAPI extends Manager {
 	 */
 	public async getThreadMessagesV1(
 		threadId: number,
-		maxMessages?: number,
-		upperBoundInstantMessageId?: number,
-		lowerBoundInstantMessageId?: number,
+		_maxMessages?: number,
+		_upperBoundInstantMessageId?: number,
+		_lowerBoundInstantMessageId?: number,
 	): Promise<EntityListOfItslearningRestApiEntitiesInstantMessage> {
 		return this.http.get(
 			`/restapi/personal/instantmessages/messagethreads/${threadId}/v1`,
@@ -378,7 +378,6 @@ export class InstantMessagesAPI extends Manager {
 	public async getCollaborationThreadId(
 		collaborationId: number,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get(
 			`/restapi/personal/instantmessages/messagethreads/collaborations/${collaborationId}/v1`,
 		);
@@ -518,7 +517,6 @@ export class InstantMessagesAPI extends Manager {
 	 * @param personId - The unique ID of the person.
 	 */
 	public async checkPrivacyRules(personId: number): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get(
 			`/restapi/personal/instantmessages/privacy/${personId}/v1`,
 		);
@@ -529,11 +527,12 @@ export class InstantMessagesAPI extends Manager {
 	 *
 	 * @param requestData - The request body containing criteria for recipients.
 	 */
-	public async getRecipientPersons(requestData: unknown): Promise<unknown> {
-		throw new Error("Not implemented");
+	public async getRecipientPersons(
+		personIds: number[],
+	): Promise<ItslearningRestApiEntitiesInstantMessageRecipient[]> {
 		return this.http.post(
 			"/restapi/personal/instantmessages/recipients/persons/v1",
-			{ data: requestData },
+			{ data: personIds },
 		);
 	}
 
@@ -549,7 +548,6 @@ export class InstantMessagesAPI extends Manager {
 		instantMessageThreadId?: number,
 		recipientRoles?: string[],
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({
 			searchText,
 			instantMessageThreadId,
@@ -557,7 +555,6 @@ export class InstantMessagesAPI extends Manager {
 		(recipientRoles || []).forEach((role, idx) => {
 			queryParams.append(`recipientRoles[${idx}]`, role);
 		});
-
 		return this.http.get(
 			"/restapi/personal/instantmessages/recipients/search/v1",
 			{ params: queryParams },
@@ -576,13 +573,11 @@ export class InstantMessagesAPI extends Manager {
 		courseId?: number,
 		projectId?: number,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({
 			courseId,
 			projectId,
 			personIds,
 		});
-
 		return this.http.get("/restapi/personal/instantmessages/recipients/v1", {
 			params: queryParams,
 		});
@@ -600,13 +595,11 @@ export class InstantMessagesAPI extends Manager {
 		courseIds: number[],
 		projectIds: number[],
 	): Promise<unknown> {
-		throw new Error("Not implemented");
 		const queryParams = createSearchParams({
 			personIds,
 			courseIds,
 			projectIds,
 		});
-
 		return this.http.get("/restapi/personal/instantmessages/recipients/v2", {
 			params: queryParams,
 		});
@@ -616,7 +609,6 @@ export class InstantMessagesAPI extends Manager {
 	 * Gets the settings for the instant message system (v1).
 	 */
 	public async getSettingsV1(): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get("/restapi/personal/instantmessages/settings/v1");
 	}
 
@@ -624,7 +616,6 @@ export class InstantMessagesAPI extends Manager {
 	 * Gets the settings for the instant message system (v2).
 	 */
 	public async getSettingsV2(): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get("/restapi/personal/instantmessages/settings/v2");
 	}
 
@@ -679,12 +670,13 @@ export class InstantMessagesAPI extends Manager {
 	 * @param data - The data required to send the message.
 	 * @deprecated Use sendInstantMessageV2 instead.
 	 */
-	public async sendInstantMessageV1(data: unknown): Promise<void> {
+	public async sendInstantMessageV1(
+		data: ItslearningRestApiEntitiesInstantMessageToSend,
+	): Promise<ItslearningRestApiEntitiesInstantMessageThread> {
 		console.warn(
 			"sendInstantMessageV1 is deprecated. Use sendInstantMessageV2 instead.",
 		);
-		throw new Error("Not implemented");
-		// return this.http.post(`/restapi/personal/instantmessages/v1`, { data });
+		return this.http.post("/restapi/personal/instantmessages/v1", { data });
 	}
 
 	/**
@@ -708,5 +700,50 @@ export class InstantMessagesAPI extends Manager {
 		data: ItslearningRestApiEntitiesInstantMessageToSendV2,
 	): Promise<ItslearningRestApiEntitiesInstantMessageThread> {
 		return this.http.post("/restapi/personal/instantmessages/v2", { data });
+	}
+
+	/**
+	 * Gets the instant message thread and messages (v3).
+	 * Does not return thread participants for course threads (for performance reasons).
+	 * One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
+	 *
+	 * @param threadId - The unique ID of the thread.
+	 * @param maxMessages - The max number of messages to retrieve. Default: 100. Maximum: 500.
+	 * @param upperBoundInstantMessageId - Load messages before this instant message ID.
+	 * @param lowerBoundInstantMessageId - Load messages after this instant message ID.
+	 */
+	public async getThreadAndMessagesV3(
+		threadId: number,
+		maxMessages = 100,
+		upperBoundInstantMessageId?: number,
+		lowerBoundInstantMessageId?: number,
+	): Promise<ItslearningRestApiEntitiesInstantMessageThread> {
+		const queryParams = createSearchParams({
+			maxMessages,
+			upperBoundInstantMessageId,
+			lowerBoundInstantMessageId,
+		});
+		return this.http.get(
+			`/restapi/personal/instantmessages/messagethreads/${threadId}/v3`,
+			{ params: queryParams },
+		);
+	}
+
+	/**
+	 * Gets a collection of threads for the user, extended with a hasMore field (v4).
+	 * Does not return thread participants for course threads (for performance reasons).
+	 *
+	 * @param fromSortIndex - The sort index to start from.
+	 * @param pageSize - The number of threads to retrieve.
+	 */
+	public async getMessageThreadsV4(
+		fromSortIndex?: number,
+		pageSize = 100,
+	): Promise<ItslearningRestApiEntitiesInstantMessageThreadListModel> {
+		const queryParams = createSearchParams({ fromSortIndex, pageSize });
+		return this.http.get(
+			"/restapi/personal/instantmessages/messagethreads/v4",
+			{ params: queryParams },
+		);
 	}
 }

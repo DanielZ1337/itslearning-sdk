@@ -1,7 +1,6 @@
 import { Manager } from "../lib/Manager";
 import type { ItslearningRestApiEntitiesBroadcastInstantMessageToSend } from "../types/api/native/Itslearning.RestApi.Entities.BroadcastInstantMessageToSend";
 import type { ItsolutionsItslearningItslCoreBusinessLayerInstantMessageBroadcastBroadcastMessageStatisticsEntity } from "../types/api/native/Itsolutions.Itslearning.ItslCore.BusinessLayer.InstantMessage.Broadcast.BroadcastMessageStatisticsEntity";
-import { createSearchParams } from "../utils/search-params";
 
 /**
  * InstantMessageBroadcastAPI
@@ -30,7 +29,7 @@ export class InstantMessageBroadcastAPI extends Manager {
 	 * Marks broadcast threads as deleted and creates an async task
 	 * to permanently delete them and all associated data.
 	 */
-	public async deleteBroadcastThreads(data: Array<number>): Promise<void> {
+	public async deleteBroadcastThreads(_data: Array<number>): Promise<void> {
 		return this.http.delete("/restapi/personal/instantmessages/broadcast/v1");
 	}
 

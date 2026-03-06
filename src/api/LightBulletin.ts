@@ -151,7 +151,7 @@ export class LightBulletinAPI extends Manager {
 	 * @returns A promise that resolves to the response from the API.
 	 */
 	public async markBulletinsAsSeen(
-		data: Array<ItslearningRestApiEntitiesUpdatableLightBulletinUpdateV1>,
+		_data: Array<ItslearningRestApiEntitiesUpdatableLightBulletinUpdateV1>,
 	): Promise<SystemNetHttpHttpResponseMessage> {
 		return this.http.put("/restapi/personal/lightbulletins/v1");
 	}

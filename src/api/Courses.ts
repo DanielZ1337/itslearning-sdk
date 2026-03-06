@@ -1,34 +1,32 @@
 import { Manager } from "../lib/Manager";
+import type { ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails } from "../types";
 import type { EligiblePersonsResponse } from "../types/api/EligiblePersonsResponse";
 import type { EntityListOfItslearningRestApiEntitiesCourse } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Course";
+import type { EntityListOfItslearningRestApiEntitiesCourseTopic } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.CourseTopic";
 import type { EntityListOfItslearningRestApiEntitiesElementLink } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.ElementLink";
 import type { EntityListOfItslearningRestApiEntitiesFollowUpTask } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.FollowUpTask";
-import type { EntityListOfItslearningRestApiEntitiesPersonCourse } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonCourse";
-import type { EntityListOfItslearningRestApiEntitiesPersonCourseCardData } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonCourseCardData";
-import type { EntityListOfItslearningRestApiEntitiesPersonSimple } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonSimple";
 import type { EntityListOfItslearningRestApiEntitiesPersonalCalendarEvent } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Personal.CalendarEvent";
 import type { EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant";
 import type { EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled";
 import type { EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseResource";
+import type { EntityListOfItslearningRestApiEntitiesPersonCourse } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonCourse";
+import type { EntityListOfItslearningRestApiEntitiesPersonCourseCardData } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonCourseCardData";
+import type { EntityListOfItslearningRestApiEntitiesPersonSimple } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.PersonSimple";
 import type { EntityListOfItslearningRestApiEntitiesStreamItemV2 } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.StreamItemV2";
 import type { EntityListOfItslearningRestApiEntitiesTask } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.Task";
 import type { ItslearningPlatformRestApiSdkCommonEntitiesLearningToolType } from "../types/api/native/Itslearning.Platform.RestApi.Sdk.Common.Entities.LearningToolType";
 import type { ItslearningRestApiEntitiesCourse } from "../types/api/native/Itslearning.RestApi.Entities.Course";
-import type { ItslearningRestApiEntitiesCourseParticipantToAdd } from "../types/api/native/Itslearning.RestApi.Entities.CourseParticipantToAdd";
 import type { ItslearningRestApiEntitiesCourseParticipantsCourseParticipantsToRemove } from "../types/api/native/Itslearning.RestApi.Entities.CourseParticipants.CourseParticipantsToRemove";
+import type { ItslearningRestApiEntitiesCourseParticipantToAdd } from "../types/api/native/Itslearning.RestApi.Entities.CourseParticipantToAdd";
 import type { ItslearningRestApiEntitiesCourseWithContextRole } from "../types/api/native/Itslearning.RestApi.Entities.CourseWithContextRole";
-import type { ItslearningRestApiEntitiesFollowUpTask } from "../types/api/native/Itslearning.RestApi.Entities.FollowUpTask";
-import type { ItslearningRestApiEntitiesPersonCourseCardData } from "../types/api/native/Itslearning.RestApi.Entities.PersonCourseCardData";
+import type { ItslearningRestApiEntitiesPersonalCourseCourseAiSettings } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseAiSettings";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseApplicant } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseApplicant";
-import type { ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseFolderDetails";
-import type { ItslearningRestApiEntitiesPersonalCourseCourseResource } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseResource";
 import type { ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.CourseResourceWithRole";
 import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSetup";
 import type { ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseProfile";
 import type { ItslearningRestApiEntitiesPersonalCourseYourStudent } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.YourStudent";
 import type { ItslearningRestApiEntitiesPersonalCourseYourStudentCourse } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Course.YourStudentCourse";
 import type { ItslearningRestApiEntitiesPersonalCourseWithActivePlans } from "../types/api/native/Itslearning.RestApi.Entities.Personal.CourseWithActivePlans";
-import type { ItslearningRestApiEntitiesStreamItemV2 } from "../types/api/native/Itslearning.RestApi.Entities.StreamItemV2";
 import { ItslearningRestApiEntitiesTaskDeadlineFilter } from "../types/api/native/Itslearning.RestApi.Entities.TaskDeadlineFilter";
 import { ItslearningRestApiEntitiesTaskStatusFilter } from "../types/api/native/Itslearning.RestApi.Entities.TaskStatusFilter";
 import { ItsolutionsItslUtilsConstantsContentAreaFilterType } from "../types/api/native/Itsolutions.ItslUtils.Constants.ContentAreaFilterType";
@@ -189,23 +187,11 @@ export class CoursesAPI extends Manager {
 		planId: string,
 		fileData: FormData,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		// const queryParams = new URLSearchParams({ planId });
-
-		// const response = await this.http.post(
-		//   `/restapi/personal/courses/${encodeURIComponent(
-		//     courseId,
-		//   )}/folders/${folderId}/file/cloud/v1`,
-		//   fileData,
-		// );
-
-		// if (response.status === 403) {
-		//   throw new Error("Access to the course or folder is forbidden.");
-		// } else if (response.status === 404) {
-		//   throw new Error("The course does not exist.");
-		// }
-
-		// return response.json();
+		const queryParams = createSearchParams({ planId });
+		return this.http.post(
+			`/restapi/personal/courses/${courseId}/folders/${folderId}/file/cloud/v1`,
+			{ data: fileData, params: queryParams },
+		);
 	}
 
 	/**
@@ -226,28 +212,11 @@ export class CoursesAPI extends Manager {
 		planId: string,
 		fileData: FormData,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		// const queryParams = new URLSearchParams({ planId });
-
-		// const response = await this.http.post(
-		//   `/restapi/personal/courses/${encodeURIComponent(
-		//     courseId,
-		//   )}/folders/${folderId}/file/filerepo/v1`,
-		//   fileData,
-		//   {
-		//     headers: {
-		//       // 'Content-Type' is set automatically when using FormData
-		//     },
-		//   },
-		// );
-
-		// if (response.status === 403) {
-		//   throw new Error("Access to the course or folder is forbidden.");
-		// } else if (response.status === 404) {
-		//   throw new Error("The course does not exist.");
-		// }
-
-		// return response.json();
+		const queryParams = createSearchParams({ planId });
+		return this.http.post(
+			`/restapi/personal/courses/${courseId}/folders/${folderId}/file/filerepo/v1`,
+			{ data: fileData, params: queryParams },
+		);
 	}
 
 	/**
@@ -343,18 +312,10 @@ export class CoursesAPI extends Manager {
 		participantIds: string[],
 		duration: number,
 	): Promise<void> {
-		throw new Error("Not implemented");
-		// const payload = {
-		//   participantIds,
-		//   duration,
-		// };
-
-		// await this.http.post(
-		//   `/restapi/personal/courses/${encodeURIComponent(
-		//     courseId,
-		//   )}/participants/temporaryaccess/v1`,
-		//   payload,
-		// );
+		await this.http.post(
+			`/restapi/personal/courses/${courseId}/participants/temporaryaccess/v1`,
+			{ data: { participantIds, duration } },
+		);
 	}
 
 	/**
@@ -575,14 +536,13 @@ export class CoursesAPI extends Manager {
 		pageIndex = 0,
 		pageSize = 100,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({
-			PageIndex: pageIndex.toString(),
-			PageSize: pageSize.toString(),
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
 		});
-
 		return this.http.post(
 			`/restapi/personal/courses/${courseId}/resources/extended/v1`,
+			{ params: queryParams },
 		);
 	}
 
@@ -653,11 +613,10 @@ export class CoursesAPI extends Manager {
 		courseId: number,
 		searchText: string,
 	): Promise<unknown> {
-		throw new Error("Not implemented");
-		const queryParams = new URLSearchParams({ searchText });
-
+		const queryParams = createSearchParams({ searchText });
 		return this.http.get(
 			`/restapi/personal/courses/${courseId}/searchhierarchies/v1`,
+			{ params: queryParams },
 		);
 	}
 
@@ -716,12 +675,9 @@ export class CoursesAPI extends Manager {
 		courseId: number,
 		hierarchies: string[],
 	): Promise<void> {
-		throw new Error("Not implemented");
-		const data = { hierarchies };
-
 		await this.http.post(
 			`/restapi/personal/courses/${courseId}/synchronisehierarchies/v1`,
-			{ data },
+			{ data: hierarchies },
 		);
 	}
 
@@ -876,6 +832,7 @@ export class CoursesAPI extends Manager {
 
 		return this.http.post("/restapi/personal/courses/activeplans/v1", {
 			data: syncKeys,
+			params: queryParams,
 		});
 	}
 
@@ -929,7 +886,6 @@ export class CoursesAPI extends Manager {
 	 * @returns A promise that resolves to a list of related elements.
 	 */
 	public async getNotificationElements(
-		courseId: number,
 		notificationId: number,
 		pageIndex = 0,
 		pageSize = 100,
@@ -940,7 +896,7 @@ export class CoursesAPI extends Manager {
 		});
 
 		return this.http.get(
-			`/restapi/personal/courses/${courseId}/notifications/${notificationId}/elements/v1`,
+			`/restapi/personal/courses/notifications/${notificationId}/elements/v1`,
 			{ params: queryParams },
 		);
 	}
@@ -1139,6 +1095,157 @@ export class CoursesAPI extends Manager {
 		});
 
 		return this.http.get("/restapi/personal/courses/yourstudents/v1", {
+			params: queryParams,
+		});
+	}
+
+	/**
+	 * Updates the AI settings for a course.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @param settings - The AI settings to update.
+	 * @returns A promise that resolves when the settings are successfully updated.
+	 */
+	public async updateAiSettings(
+		courseId: number,
+		settings: ItslearningRestApiEntitiesPersonalCourseCourseAiSettings,
+	): Promise<ItslearningRestApiEntitiesPersonalCourseCourseAiSettings> {
+		return this.http.put(
+			`/restapi/personal/courses/${courseId}/aisettings/v1`,
+			{ data: settings },
+		);
+	}
+
+	/**
+	 * Retrieves a paginated list of participant groups in a course.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @param pageIndex - The index of the page to retrieve (default is 0).
+	 * @param pageSize - The number of groups per page (default is 100).
+	 * @param search - Optional search text to filter groups.
+	 * @returns A promise that resolves to a paginated list of participant groups.
+	 */
+	public async getParticipantGroups(
+		courseId: number,
+		pageIndex = 0,
+		pageSize = 100,
+		search?: string,
+	): Promise<unknown> {
+		const queryParams = createSearchParams({
+			pageIndex,
+			pageSize,
+			search,
+		});
+		return this.http.get(
+			`/restapi/personal/courses/${courseId}/participantgroups/v1`,
+			{ params: queryParams },
+		);
+	}
+
+	/**
+	 * Retrieves students enrolled in a course.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @param pageIndex - The index of the page to retrieve (default is 0).
+	 * @param pageSize - The number of students per page (default is 100).
+	 * @param search - Optional search text to filter students.
+	 * @returns A promise that resolves to a list of students.
+	 */
+	public async getCourseStudents(
+		courseId: number,
+		pageIndex = 0,
+		pageSize = 100,
+		search?: string,
+	): Promise<unknown> {
+		const queryParams = createSearchParams({
+			pageIndex,
+			pageSize,
+			search,
+		});
+		return this.http.get(`/restapi/personal/courses/${courseId}/students/v1`, {
+			params: queryParams,
+		});
+	}
+
+	/**
+	 * Retrieves follow-up task count and task count for a course for the current user.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @returns A promise that resolves to the task counts.
+	 */
+	public async getTaskCounts(courseId: number): Promise<unknown> {
+		return this.http.get(
+			`/restapi/personal/courses/${courseId}/tasks/count/v1`,
+		);
+	}
+
+	/**
+	 * Provides the list of topic IDs and names for a given course.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @param pageIndex - The index of the page to retrieve (default is 0).
+	 * @param pageSize - The number of topics per page (default is 100).
+	 * @returns A promise that resolves to a paginated list of course topics.
+	 */
+	public async getCourseTopics(
+		courseId: number,
+		pageIndex = 0,
+		pageSize = 100,
+	): Promise<EntityListOfItslearningRestApiEntitiesCourseTopic> {
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
+		});
+		return this.http.get(`/restapi/personal/courses/${courseId}/topics/v1`, {
+			params: queryParams,
+		});
+	}
+
+	/**
+	 * Provides the list of element IDs for a given topic in a course.
+	 *
+	 * @param courseId - The unique identifier of the course.
+	 * @param topicId - The unique identifier of the topic.
+	 * @param pageIndex - The index of the page to retrieve (default is 0).
+	 * @param pageSize - The number of element IDs per page (default is 100).
+	 * @returns A promise that resolves to a paginated list of element IDs.
+	 */
+	public async getTopicElementIds(
+		courseId: number,
+		topicId: number,
+		pageIndex = 0,
+		pageSize = 100,
+	): Promise<unknown> {
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
+		});
+		return this.http.get(
+			`/restapi/personal/courses/${courseId}/topics/${topicId}/elementids/v1`,
+			{ params: queryParams },
+		);
+	}
+
+	/**
+	 * Retrieves a paginated list of courses with additional information and list of teachers,
+	 * without follow-up task count and task count (v4).
+	 *
+	 * @param pageIndex - The index of the page to retrieve (default is 0).
+	 * @param pageSize - The number of courses per page (default is 100).
+	 * @param filter - The filter criteria to apply to the course list.
+	 * @returns A promise that resolves to a paginated list of courses.
+	 */
+	public async getCoursesV4(
+		pageIndex = 0,
+		pageSize = 100,
+		filter: ItsolutionsItslUtilsConstantsContentAreaFilterType = ItsolutionsItslUtilsConstantsContentAreaFilterType.All,
+	): Promise<EntityListOfItslearningRestApiEntitiesPersonCourseCardData> {
+		const queryParams = createSearchParams({
+			PageIndex: pageIndex,
+			PageSize: pageSize,
+			filter,
+		});
+		return this.http.get("/restapi/personal/courses/v4", {
 			params: queryParams,
 		});
 	}

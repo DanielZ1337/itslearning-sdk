@@ -44,7 +44,7 @@ export class PlannerAPI extends Manager {
 		targetCourseId: number,
 		targetTopicId: number,
 		targetPlanId: number,
-		data: unknown,
+		data: ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest,
 	): Promise<ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest> {
 		return this.http.post(
 			`/restapi/personal/planner/targetCourse/${targetCourseId}/targetTopic/${targetTopicId}/targetPlan/${targetPlanId}/v1`,

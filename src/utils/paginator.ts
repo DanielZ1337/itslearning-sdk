@@ -26,11 +26,11 @@ export function paginate<T>(
 			return this;
 		},
 		return: (
-			value: void | PromiseLike<void>,
+			_value: void | PromiseLike<void>,
 		): Promise<IteratorResult<T[], void>> => {
 			throw new Error("Function not implemented.");
 		},
-		throw: (e: Error): Promise<IteratorResult<T[], void>> => {
+		throw: (_e: Error): Promise<IteratorResult<T[], void>> => {
 			throw new Error("Function not implemented.");
 		},
 		[Symbol.asyncDispose]: (): PromiseLike<void> => {

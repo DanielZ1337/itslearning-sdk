@@ -1,5 +1,5 @@
 import { Manager } from "../lib/Manager";
-import { createSearchParams } from "../utils/search-params";
+import type { ItsolutionsItslearningWebRestApiServiceLogicStatisticsEventsUserEventDto } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.ServiceLogic.Statistics.Events.UserEventDto";
 
 /**
  * StatisticsAPI
@@ -11,14 +11,15 @@ import { createSearchParams } from "../utils/search-params";
  */
 export class StatisticsAPI extends Manager {
 	/**
-	 * Posts a user event to the Statistics API.
+	 * Posts a batch of user events to the Statistics API.
 	 *
-	 * @param eventData - The data representing the user event to be posted.
-	 * @returns A promise that resolves to the response from the API.
+	 * @param events - A collection of user event DTOs to be processed.
 	 */
-	public async postUserEvent(eventData: unknown): Promise<unknown> {
+	public async postUserEvent(
+		events: ItsolutionsItslearningWebRestApiServiceLogicStatisticsEventsUserEventDto[],
+	): Promise<void> {
 		return this.http.post("/restapi/personal/statistics/events/v1", {
-			data: eventData,
+			data: events,
 		});
 	}
 }

@@ -1,8 +1,23 @@
+import { AiAPI } from "./api/Ai";
+import { ApplicationInitialisationCacheWarmUpAPI } from "./api/ApplicationInitialisationCacheWarmUp";
+import { AssessmentRecordAPI } from "./api/AssessmentRecord";
 import { CalendarAPI } from "./api/Calendar";
+import { ChildrenAPI } from "./api/Children";
+import { ChildrenCalendarAPI } from "./api/ChildrenCalendar";
+import { ChildrenCoursesAPI } from "./api/ChildrenCourses";
+import { ChildrenOrganisationAPI } from "./api/ChildrenOrganisation";
+import { ChildrenPlansAPI } from "./api/ChildrenPlans";
 import { CourseCardsAPI } from "./api/CourseCards";
+import { CourseFeaturesAPI } from "./api/CourseFeatures";
 import { CoursesAPI } from "./api/Courses";
+import { CoursesGroupsAPI } from "./api/CoursesGroups";
+import { CustomerSettingsAPI } from "./api/CustomerSettings";
+import { HierarchiesAPI } from "./api/Hierarchies";
+import { ImmersiveReaderAPI } from "./api/ImmersiveReader";
 import { InstantMessagesAPI } from "./api/InstantMessage";
 import { InstantMessageBroadcastAPI } from "./api/InstantMessageBroadcast";
+import { LearningObjectiveRepositoryAPI } from "./api/LearningObjectiveRepository";
+import { LearningObjectivesReportsAPI } from "./api/LearningObjectivesReports";
 import { LightBulletinAPI } from "./api/LightBulletin";
 import { LightBulletinCourseAPI } from "./api/LightBulletinCourse";
 import { LtiExtensionAPI } from "./api/LtiExtension";
@@ -19,6 +34,7 @@ import { TaskListDailyWorkflowAPI } from "./api/TaskListDailyWorkflow";
 import { TasksAPI } from "./api/Tasks";
 import { TokenAPI } from "./api/Token";
 import { WorkloadAPI } from "./api/Workload";
+import { YourFilesAPI } from "./api/YourFiles";
 import { AuthManager } from "./lib/AuthManager";
 import { ConfigManager } from "./lib/ConfigManager";
 import { HttpClient } from "./lib/HttpClient";
@@ -58,6 +74,22 @@ export class ItsLearningSDK {
 	public tasks: TasksAPI;
 	public workload: WorkloadAPI;
 	public auth: AuthManager;
+	public ai: AiAPI;
+	public applicationInitialisationCacheWarmUp: ApplicationInitialisationCacheWarmUpAPI;
+	public assessmentRecord: AssessmentRecordAPI;
+	public children: ChildrenAPI;
+	public childrenCalendar: ChildrenCalendarAPI;
+	public childrenCourses: ChildrenCoursesAPI;
+	public childrenOrganisation: ChildrenOrganisationAPI;
+	public childrenPlans: ChildrenPlansAPI;
+	public courseFeatures: CourseFeaturesAPI;
+	public coursesGroups: CoursesGroupsAPI;
+	public customerSettings: CustomerSettingsAPI;
+	public hierarchies: HierarchiesAPI;
+	public immersiveReader: ImmersiveReaderAPI;
+	public learningObjectiveRepository: LearningObjectiveRepositoryAPI;
+	public learningObjectivesReports: LearningObjectivesReportsAPI;
+	public yourFiles: YourFilesAPI;
 
 	constructor(config?: SDKConfig) {
 		this.config = new ConfigManager(
@@ -91,5 +123,27 @@ export class ItsLearningSDK {
 		this.workload = new WorkloadAPI(this.http);
 		this.instantMessage = new InstantMessagesAPI(this.http);
 		this.instantMessageBroadcast = new InstantMessageBroadcastAPI(this.http);
+		// New APIs
+		this.ai = new AiAPI(this.http);
+		this.applicationInitialisationCacheWarmUp =
+			new ApplicationInitialisationCacheWarmUpAPI(this.http);
+		this.assessmentRecord = new AssessmentRecordAPI(this.http);
+		this.children = new ChildrenAPI(this.http);
+		this.childrenCalendar = new ChildrenCalendarAPI(this.http);
+		this.childrenCourses = new ChildrenCoursesAPI(this.http);
+		this.childrenOrganisation = new ChildrenOrganisationAPI(this.http);
+		this.childrenPlans = new ChildrenPlansAPI(this.http);
+		this.courseFeatures = new CourseFeaturesAPI(this.http);
+		this.coursesGroups = new CoursesGroupsAPI(this.http);
+		this.customerSettings = new CustomerSettingsAPI(this.http);
+		this.hierarchies = new HierarchiesAPI(this.http);
+		this.immersiveReader = new ImmersiveReaderAPI(this.http);
+		this.learningObjectiveRepository = new LearningObjectiveRepositoryAPI(
+			this.http,
+		);
+		this.learningObjectivesReports = new LearningObjectivesReportsAPI(
+			this.http,
+		);
+		this.yourFiles = new YourFilesAPI(this.http);
 	}
 }

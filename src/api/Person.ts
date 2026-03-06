@@ -1,12 +1,12 @@
 import { Manager } from "../lib/Manager";
+import type { ItslearningRestApiEntitiesPersonalFeature } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Feature";
 import type { ItslearningRestApiEntitiesPersonImageDimensions } from "../types/api/native/Itslearning.RestApi.Entities.PersonImageDimensions";
 import type { ItslearningRestApiEntitiesPersonProfile } from "../types/api/native/Itslearning.RestApi.Entities.PersonProfile";
 import type { ItslearningRestApiEntitiesPersonRole } from "../types/api/native/Itslearning.RestApi.Entities.PersonRole";
 import type { ItslearningRestApiEntitiesPersonSimple } from "../types/api/native/Itslearning.RestApi.Entities.PersonSimple";
-import type { ItslearningRestApiEntitiesPersonalFeature } from "../types/api/native/Itslearning.RestApi.Entities.Personal.Feature";
+import type { ItslearningRestApiEntitiesPushSetting } from "../types/api/native/Itslearning.RestApi.Entities.PushSetting";
 import type { ItslearningRestApiEntitiesRelation } from "../types/api/native/Itslearning.RestApi.Entities.Relation";
 import type { ItsolutionsItslearningItslCoreBusinessLayerPersonCustomInfoExtraUserInformationField } from "../types/api/native/Itsolutions.Itslearning.ItslCore.BusinessLayer.Person.CustomInfo.ExtraUserInformationField";
-import { createSearchParams } from "../utils/search-params";
 
 /**
  * PersonAPI
@@ -64,9 +64,6 @@ export class PersonAPI extends Manager {
 	public async uploadProfileImage(
 		imageData: FormData | ArrayBuffer,
 	): Promise<void> {
-		throw new Error("Not implemented");
-		// If using multipart/form-data, wrap the file in FormData
-		// If using raw binary, ensure correct headers set for content type
 		return this.http.post("/restapi/personal/person/image/v1", {
 			data: imageData,
 		});
@@ -87,8 +84,6 @@ export class PersonAPI extends Manager {
 	 * @param remind - Boolean to enable or disable the reminder.
 	 */
 	public async setRemindConnectGoogleOnLogin(remind: boolean): Promise<void> {
-		// Could also pass data in body, depending on how the endpoint expects the parameter
-		throw new Error("Not implemented");
 		return this.http.put(
 			"/restapi/personal/person/PersonSetting/RemindConnectGoogleOnLogin/v1",
 			{ data: { remind } },
@@ -101,8 +96,9 @@ export class PersonAPI extends Manager {
 	 *
 	 * @param pushData - The configuration data for push notifications.
 	 */
-	public async setPushNotifications(pushData: unknown): Promise<void> {
-		throw new Error("Not implemented");
+	public async setPushNotifications(
+		pushData: ItslearningRestApiEntitiesPushSetting,
+	): Promise<void> {
 		return this.http.post("/restapi/personal/person/push/v1", {
 			data: pushData,
 		});
@@ -134,7 +130,6 @@ export class PersonAPI extends Manager {
 	 * @param serviceName - The name of the service.
 	 */
 	public async getServiceAccessToken(serviceName: string): Promise<unknown> {
-		throw new Error("Not implemented");
 		return this.http.get(
 			`/restapi/personal/person/serviceaccess/${serviceName}/v1`,
 		);

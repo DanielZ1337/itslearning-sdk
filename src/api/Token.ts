@@ -1,4 +1,3 @@
-import axios from "axios";
 import type { HttpClient } from "../lib/HttpClient";
 import { Manager } from "../lib/Manager";
 import type { ItsolutionsItslearningWebRestApiPersonalTokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse";
