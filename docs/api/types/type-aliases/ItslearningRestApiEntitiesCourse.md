@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesCourse = object;
 ```
 
-## Type declaration
+Represents a course in the itslearning system.
+
+## Properties
 
 ### Code
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesCourse = object;
 Code: string;
 ```
 
+The course code used for identification and display.
+
+***
+
 ### CourseColorClass
 
 ```ts
 CourseColorClass: string;
 ```
+
+CSS class name used for styling the course color in the user interface.
+
+***
 
 ### CourseId
 
@@ -26,11 +36,19 @@ CourseColorClass: string;
 CourseId: number;
 ```
 
+Unique identifier for the course.
+
+***
+
 ### CreatedDateTimeUtc
 
 ```ts
 CreatedDateTimeUtc: Date;
 ```
+
+UTC timestamp of when the course was created.
+
+***
 
 ### OrganisationId
 
@@ -38,14 +56,24 @@ CreatedDateTimeUtc: Date;
 OrganisationId: number;
 ```
 
+Unique identifier of the organisation that owns this course.
+
+***
+
 ### SyncKey
 
 ```ts
 SyncKey: string;
 ```
 
+Synchronization key used for tracking external system synchronizations.
+
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+Official title of the course.

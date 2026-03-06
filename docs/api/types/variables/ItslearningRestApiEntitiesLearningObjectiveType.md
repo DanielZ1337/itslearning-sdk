@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesLearningObjectiveType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Category
 

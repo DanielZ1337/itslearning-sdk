@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new ProjectsAPI()
+### Constructor
 
 ```ts
-new ProjectsAPI(http): ProjectsAPI
+new ProjectsAPI(http): ProjectsAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new ProjectsAPI(http): ProjectsAPI
 
 #### Returns
 
-[`ProjectsAPI`](ProjectsAPI.md)
+`ProjectsAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### toggleFavoriteProject()
 
 ```ts
-toggleFavoriteProject(projectId): Promise<void>
+toggleFavoriteProject(projectId): Promise<void>;
 ```
 
 Toggles the user's favorite status for the specified project.

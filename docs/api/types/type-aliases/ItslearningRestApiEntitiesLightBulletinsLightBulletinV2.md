@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesLightBulletinsLightBulletinV2 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ActiveFromDate
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesLightBulletinsLightBulletinV2 = object;
 ActiveFromDate: Date;
 ```
 
+***
+
 ### ActiveToDate
 
 ```ts
 ActiveToDate: Date;
 ```
+
+***
 
 ### AllowComments
 
@@ -26,11 +30,15 @@ ActiveToDate: Date;
 AllowComments: boolean;
 ```
 
+***
+
 ### AttachedImages
 
 ```ts
 AttachedImages: ItslearningRestApiEntitiesLightBulletinsLightBulletinImage[];
 ```
+
+***
 
 ### CommentsCount
 
@@ -38,11 +46,15 @@ AttachedImages: ItslearningRestApiEntitiesLightBulletinsLightBulletinImage[];
 CommentsCount: number;
 ```
 
+***
+
 ### EmbedUrl
 
 ```ts
 EmbedUrl: string;
 ```
+
+***
 
 ### HasResources
 
@@ -50,11 +62,15 @@ EmbedUrl: string;
 HasResources: boolean;
 ```
 
+***
+
 ### IsSubscribed
 
 ```ts
 IsSubscribed: boolean;
 ```
+
+***
 
 ### LightBulletinId
 
@@ -62,11 +78,15 @@ IsSubscribed: boolean;
 LightBulletinId: number;
 ```
 
+***
+
 ### PublishedBy
 
 ```ts
 PublishedBy: ItslearningRestApiEntitiesPersonSimple;
 ```
+
+***
 
 ### PublishedDate
 
@@ -74,11 +94,15 @@ PublishedBy: ItslearningRestApiEntitiesPersonSimple;
 PublishedDate: Date;
 ```
 
+***
+
 ### ResourcesCount
 
 ```ts
 ResourcesCount: number;
 ```
+
+***
 
 ### Text
 

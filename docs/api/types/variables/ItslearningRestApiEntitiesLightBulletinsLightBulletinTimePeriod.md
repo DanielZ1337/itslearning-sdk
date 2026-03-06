@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### All
 

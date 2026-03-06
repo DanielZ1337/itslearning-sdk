@@ -15,10 +15,10 @@ Secured with OAuth2, requires the OAuth2 API scope `Notifications`.
 
 ## Constructors
 
-### new NotificationsAPI()
+### Constructor
 
 ```ts
-new NotificationsAPI(http): NotificationsAPI
+new NotificationsAPI(http): NotificationsAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new NotificationsAPI(http): NotificationsAPI
 
 #### Returns
 
-[`NotificationsAPI`](NotificationsAPI.md)
+`NotificationsAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,7 +45,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -54,8 +54,8 @@ protected readonly http: HttpClient;
 ```ts
 getBulletinElements(
    bulletinId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesElementLink>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesElementLink>;
 ```
 
 Gets the list of resources attached to a given bulletin.
@@ -68,13 +68,13 @@ Gets the list of resources attached to a given bulletin.
 
 The unique identifier of the bulletin.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 Which page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -89,7 +89,7 @@ The size of the page (default = 10).
 ### getNewsFeed()
 
 ```ts
-getNewsFeed(pageIndex, pageSize): Promise<unknown>
+getNewsFeed(pageIndex?, pageSize?): Promise<unknown>;
 ```
 
 Gets the user's news feed (activities, resources, bulletins).
@@ -97,13 +97,13 @@ The feed is collected from all or favorite courses/projects, depending on user s
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 Which page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -120,8 +120,8 @@ How many items per page (default = 10).
 ```ts
 getNotificationElements(
    notificationId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesElementLink>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesElementLink>;
 ```
 
 Gets the list of elements related to a given notification.
@@ -134,13 +134,13 @@ Gets the list of elements related to a given notification.
 
 The unique identifier of the notification.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 Which page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -155,20 +155,20 @@ The size of the page (default = 10).
 ### ~~getNotificationsV1()~~
 
 ```ts
-getNotificationsV1(pageIndex, pageSize): Promise<EntityListOfItslearningRestApiEntitiesNotification>
+getNotificationsV1(pageIndex?, pageSize?): Promise<EntityListOfItslearningRestApiEntitiesNotification>;
 ```
 
 Gets personal notifications (read and unread) (v1).
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 Which page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -191,7 +191,7 @@ getNotificationsV2(
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<EntityListOfItslearningRestApiEntitiesNotification>
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesNotification>;
 ```
 
 Gets personal notifications (read and unread) (v2). Supports paging.
@@ -236,7 +236,7 @@ getStreamV1(
    fromId?, 
    pageIndex?, 
    pageSize?, 
-fromPublishedDate?): Promise<unknown>
+fromPublishedDate?): Promise<unknown>;
 ```
 
 Gets the user's stream feed (collected from user's favorite courses/projects).
@@ -288,11 +288,11 @@ Use getStreamV2 instead.
 
 ```ts
 getStreamV2(
-   showLightBulletins, 
+   showLightBulletins?, 
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<EntityListOfItslearningRestApiEntitiesStreamItemV2>
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesStreamItemV2>;
 ```
 
 Gets the user's stream feed (v2). Collected from user's favorite courses/projects.
@@ -300,7 +300,7 @@ Uses FromId + UseNewerThan to page.
 
 #### Parameters
 
-##### showLightBulletins
+##### showLightBulletins?
 
 `boolean` = `true`
 
@@ -339,7 +339,7 @@ The size of the page (default = 100).
 ### getUnreadCount()
 
 ```ts
-getUnreadCount(): Promise<number>
+getUnreadCount(): Promise<number>;
 ```
 
 Returns the number of unread personal notifications for the user.
@@ -353,7 +353,7 @@ Returns the number of unread personal notifications for the user.
 ### getUnseenCount()
 
 ```ts
-getUnseenCount(): Promise<number>
+getUnseenCount(): Promise<number>;
 ```
 
 Returns the number of unseen personal notifications for the user.
@@ -367,7 +367,7 @@ Returns the number of unseen personal notifications for the user.
 ### markAllAsSeen()
 
 ```ts
-markAllAsSeen(): Promise<void>
+markAllAsSeen(): Promise<void>;
 ```
 
 Updates all personal notifications to be seen.
@@ -381,7 +381,7 @@ Updates all personal notifications to be seen.
 ### ~~updateNotificationsV1()~~
 
 ```ts
-updateNotificationsV1(data): Promise<EntityListOfItslearningRestApiEntitiesNotification>
+updateNotificationsV1(data): Promise<EntityListOfItslearningRestApiEntitiesNotification>;
 ```
 
 Updates the personal notifications to be read (v1).
@@ -407,7 +407,7 @@ Use updateNotificationsV2 instead.
 ### updateNotificationsV2()
 
 ```ts
-updateNotificationsV2(data): Promise<SystemNetHttpHttpResponseMessage>
+updateNotificationsV2(data): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Updates the personal notifications to be read (v2).

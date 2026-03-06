@@ -6,7 +6,7 @@
 const GrantType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### AuthorizationCode
 

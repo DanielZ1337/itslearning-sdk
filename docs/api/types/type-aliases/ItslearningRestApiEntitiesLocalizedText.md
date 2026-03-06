@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesLocalizedText = object;
 ```
 
-## Type declaration
+## Properties
 
 ### LocalizedArgs
 
 ```ts
 LocalizedArgs: string[];
 ```
+
+***
 
 ### LocalizedKey
 

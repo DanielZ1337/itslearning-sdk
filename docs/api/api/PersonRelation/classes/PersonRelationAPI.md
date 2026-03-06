@@ -15,10 +15,10 @@ Secured with OAuth2, requires the OAuth2 API scope `Person`.
 
 ## Constructors
 
-### new PersonRelationAPI()
+### Constructor
 
 ```ts
-new PersonRelationAPI(http): PersonRelationAPI
+new PersonRelationAPI(http): PersonRelationAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new PersonRelationAPI(http): PersonRelationAPI
 
 #### Returns
 
-[`PersonRelationAPI`](PersonRelationAPI.md)
+`PersonRelationAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getRelatedPersons()
 
 ```ts
-getRelatedPersons(personId, relationType?): Promise<ItslearningRestApiEntitiesRelatedPerson[]>
+getRelatedPersons(personId, relationType?): Promise<ItslearningRestApiEntitiesRelatedPerson[]>;
 ```
 
 Gets the relation between persons with detailed info

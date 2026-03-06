@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesInstantMessageRecipientRole: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Administrator
 

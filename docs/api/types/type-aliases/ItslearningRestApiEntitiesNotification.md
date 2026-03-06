@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesNotification = object;
 ```
 
-## Type declaration
+Represents a notification in itslearning.
+
+## Properties
 
 ### ContentUrl
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesNotification = object;
 ContentUrl: string;
 ```
 
+Url to the location in itslearning connected to the notification that open without master page.
+
+***
+
 ### IsAnonymous
 
 ```ts
 IsAnonymous: boolean;
 ```
+
+True if notification is anonymous
+
+***
 
 ### IsRead
 
@@ -26,11 +36,19 @@ IsAnonymous: boolean;
 IsRead: boolean;
 ```
 
+True if the user has read the notification.
+
+***
+
 ### NotificationId
 
 ```ts
 NotificationId: number;
 ```
+
+The unique id for for the notification, in scope of a site (itslearning customer).
+
+***
 
 ### PublishedBy
 
@@ -38,11 +56,19 @@ NotificationId: number;
 PublishedBy: ItslearningRestApiEntitiesPersonSimple;
 ```
 
+The person who published the notification.
+
+***
+
 ### PublishedDate
 
 ```ts
 PublishedDate: Date;
 ```
+
+Date time when the notification was published. Time zone is UTC.
+
+***
 
 ### Text
 
@@ -50,14 +76,24 @@ PublishedDate: Date;
 Text: string;
 ```
 
+Descriptive text for the notification
+
+***
+
 ### Type
 
 ```ts
 Type: ItslearningRestApiEntitiesNotificationType;
 ```
 
+The type of notification.
+
+***
+
 ### Url
 
 ```ts
 Url: string;
 ```
+
+Url to the location in itslearning connected to the notification.

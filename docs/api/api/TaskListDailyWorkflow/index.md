@@ -2,9 +2,7 @@
 
 # api/TaskListDailyWorkflow
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

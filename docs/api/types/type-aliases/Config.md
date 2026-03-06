@@ -6,7 +6,7 @@
 type Config = object;
 ```
 
-## Type declaration
+## Properties
 
 ### baseURL?
 
@@ -14,11 +14,15 @@ type Config = object;
 optional baseURL: string;
 ```
 
+***
+
 ### clientId?
 
 ```ts
 optional clientId: string;
 ```
+
+***
 
 ### redirectUri?
 

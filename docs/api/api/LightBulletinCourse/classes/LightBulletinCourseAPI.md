@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new LightBulletinCourseAPI()
+### Constructor
 
 ```ts
-new LightBulletinCourseAPI(http): LightBulletinCourseAPI
+new LightBulletinCourseAPI(http): LightBulletinCourseAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new LightBulletinCourseAPI(http): LightBulletinCourseAPI
 
 #### Returns
 
-[`LightBulletinCourseAPI`](LightBulletinCourseAPI.md)
+`LightBulletinCourseAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### createBulletin()
 
 ```ts
-createBulletin(bulletinData): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinIdentifier>
+createBulletin(bulletinData): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinIdentifier>;
 ```
 
 Creates a new light bulletin for a course.
@@ -76,7 +76,7 @@ A promise that resolves to the response from the API.
 ### deleteBulletin()
 
 ```ts
-deleteBulletin(bulletinId): Promise<SystemNetHttpHttpResponseMessage>
+deleteBulletin(bulletinId): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Deletes a specific bulletin along with its comments, embedded links, attached images, and resources.
@@ -100,7 +100,7 @@ A promise that resolves to the response from the API.
 ### getBulletinById()
 
 ```ts
-getBulletinById(bulletinId): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinV2>
+getBulletinById(bulletinId): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinV2>;
 ```
 
 Gets a specific light bulletin by its identifier.
@@ -126,8 +126,8 @@ A promise that resolves to the light bulletin details.
 ```ts
 getBulletinElements(
    bulletinId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesElementLink>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesElementLink>;
 ```
 
 Gets the list of resources attached to the specified bulletin.
@@ -140,13 +140,13 @@ Gets the list of resources attached to the specified bulletin.
 
 The unique ID of the light bulletin.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 (Optional) The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -165,11 +165,11 @@ A promise that resolves to the list of attached resources.
 ```ts
 getCourseBulletins(
    courseId, 
-   timePeriod, 
+   timePeriod?, 
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinV2>
+pageSize?): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinV2>;
 ```
 
 Gets light bulletins by course identifier.
@@ -182,7 +182,7 @@ Gets light bulletins by course identifier.
 
 The unique ID of the course.
 
-##### timePeriod
+##### timePeriod?
 
 [`ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod`](../../../types/type-aliases/ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod.md) = `ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod.Current`
 
@@ -223,7 +223,7 @@ A promise that resolves to the list of light bulletins.
 ### toggleBulletinPinnedStatus()
 
 ```ts
-toggleBulletinPinnedStatus(bulletinId, pinned): Promise<SystemNetHttpHttpResponseMessage>
+toggleBulletinPinnedStatus(bulletinId, pinned): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Toggles the pinned status of a bulletin.
@@ -253,7 +253,7 @@ A promise that resolves to the response from the API.
 ### toggleCommentsForBulletin()
 
 ```ts
-toggleCommentsForBulletin(bulletinId, allowComments): Promise<SystemNetHttpHttpResponseMessage>
+toggleCommentsForBulletin(bulletinId, allowComments): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Enables or disables comments for the specified bulletin.
@@ -283,7 +283,7 @@ A promise that resolves to the response from the API.
 ### updateBulletin()
 
 ```ts
-updateBulletin(bulletinData): Promise<SystemNetHttpHttpResponseMessage>
+updateBulletin(bulletinData): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Updates an existing light bulletin.
@@ -307,7 +307,7 @@ A promise that resolves to the response from the API.
 ### uploadBulletinImage()
 
 ```ts
-uploadBulletinImage(bulletinId, file): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData>
+uploadBulletinImage(bulletinId, file): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData>;
 ```
 
 Uploads a file attachment to temporary storage for the specified bulletin.

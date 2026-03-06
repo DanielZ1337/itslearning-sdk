@@ -6,7 +6,10 @@
 const ItslearningRestApiEntitiesPersonContextRole: object;
 ```
 
-## Type declaration
+Represents the role of a person within a course or location context.
+This enum defines the different roles that a person can have in the system.
+
+## Type Declaration
 
 ### Administrator
 
@@ -14,11 +17,15 @@ const ItslearningRestApiEntitiesPersonContextRole: object;
 readonly Administrator: 7 = 7;
 ```
 
+The administrator role.
+
 ### ContentDeveloper
 
 ```ts
 readonly ContentDeveloper: 4 = 4;
 ```
+
+The content developer role.
 
 ### Instructor
 
@@ -26,11 +33,15 @@ readonly ContentDeveloper: 4 = 4;
 readonly Instructor: 3 = 3;
 ```
 
+The instructor role.
+
 ### Learner
 
 ```ts
 readonly Learner: 2 = 2;
 ```
+
+The learner role.
 
 ### Manager
 
@@ -38,11 +49,15 @@ readonly Learner: 2 = 2;
 readonly Manager: 5 = 5;
 ```
 
+The manager role.
+
 ### Member
 
 ```ts
 readonly Member: 1 = 1;
 ```
+
+The default member role.
 
 ### Mentor
 
@@ -50,8 +65,12 @@ readonly Member: 1 = 1;
 readonly Mentor: 6 = 6;
 ```
 
+The mentor role.
+
 ### TeachingAssistant
 
 ```ts
 readonly TeachingAssistant: 8 = 8;
 ```
+
+The teaching assistant role.

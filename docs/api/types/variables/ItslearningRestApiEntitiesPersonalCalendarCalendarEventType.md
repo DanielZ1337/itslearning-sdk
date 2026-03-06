@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesPersonalCalendarCalendarEventType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Course
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageThread = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanDelete
 
@@ -14,11 +14,23 @@ type ItslearningRestApiEntitiesInstantMessageThread = object;
 CanDelete: boolean;
 ```
 
-### ColorScheme
+***
+
+### CanShowParticipantsPage
 
 ```ts
-ColorScheme: string;
+CanShowParticipantsPage: boolean;
 ```
+
+***
+
+### ColorSchema
+
+```ts
+ColorSchema: string;
+```
+
+***
 
 ### Created
 
@@ -26,11 +38,15 @@ ColorScheme: string;
 Created: Date;
 ```
 
+***
+
 ### CreatedBy
 
 ```ts
 CreatedBy: number;
 ```
+
+***
 
 ### CreatedByTeacher
 
@@ -38,11 +54,47 @@ CreatedBy: number;
 CreatedByTeacher: boolean;
 ```
 
+***
+
+### HasActiveParticipants
+
+```ts
+HasActiveParticipants: boolean;
+```
+
+***
+
+### HasCreatorInThread
+
+```ts
+HasCreatorInThread: boolean;
+```
+
+***
+
+### HasInactiveParticipants
+
+```ts
+HasInactiveParticipants: boolean;
+```
+
+***
+
+### InactiveParticipantFullName
+
+```ts
+InactiveParticipantFullName: string | null;
+```
+
+***
+
 ### InstantMessageLocationId
 
 ```ts
 InstantMessageLocationId: number;
 ```
+
+***
 
 ### InstantMessageThreadId
 
@@ -50,11 +102,15 @@ InstantMessageLocationId: number;
 InstantMessageThreadId: number;
 ```
 
+***
+
 ### IsAbuse
 
 ```ts
 IsAbuse: boolean;
 ```
+
+***
 
 ### IsAbuseReportedByCurrentUser
 
@@ -62,11 +118,23 @@ IsAbuse: boolean;
 IsAbuseReportedByCurrentUser: boolean;
 ```
 
+***
+
 ### IsBlocked
 
 ```ts
 IsBlocked: boolean;
 ```
+
+***
+
+### IsCurrentUserARecipientWithSourceLocation
+
+```ts
+IsCurrentUserARecipientWithSourceLocation: boolean;
+```
+
+***
 
 ### IsThreadAdministrator
 
@@ -74,11 +142,15 @@ IsBlocked: boolean;
 IsThreadAdministrator: boolean;
 ```
 
+***
+
 ### IsThreadModerator
 
 ```ts
 IsThreadModerator: boolean;
 ```
+
+***
 
 ### LastMessage
 
@@ -86,11 +158,15 @@ IsThreadModerator: boolean;
 LastMessage: ItslearningRestApiEntitiesInstantMessage;
 ```
 
+***
+
 ### LastReadInstantMessageId
 
 ```ts
 LastReadInstantMessageId: number;
 ```
+
+***
 
 ### LocationRecipients
 
@@ -98,11 +174,15 @@ LastReadInstantMessageId: number;
 LocationRecipients: ItslearningRestApiEntitiesLocationRecipient[];
 ```
 
+***
+
 ### MassMessageType
 
 ```ts
 MassMessageType: ItslearningRestApiEntitiesInstantMessageMassMessageType;
 ```
+
+***
 
 ### MatchingMessageIds
 
@@ -110,11 +190,15 @@ MassMessageType: ItslearningRestApiEntitiesInstantMessageMassMessageType;
 MatchingMessageIds: number[];
 ```
 
+***
+
 ### Messages
 
 ```ts
 Messages: EntityListOfItslearningRestApiEntitiesInstantMessage;
 ```
+
+***
 
 ### Name
 
@@ -122,11 +206,23 @@ Messages: EntityListOfItslearningRestApiEntitiesInstantMessage;
 Name: string;
 ```
 
+***
+
+### NumberOfInactiveParticipants
+
+```ts
+NumberOfInactiveParticipants: number;
+```
+
+***
+
 ### OnlyThreadAdminCanSendToThread
 
 ```ts
 OnlyThreadAdminCanSendToThread: boolean;
 ```
+
+***
 
 ### Participants
 
@@ -134,11 +230,23 @@ OnlyThreadAdminCanSendToThread: boolean;
 Participants: ItslearningRestApiEntitiesThreadParticipant[];
 ```
 
+***
+
+### ParticipantsCount
+
+```ts
+ParticipantsCount: number;
+```
+
+***
+
 ### SortIndex
 
 ```ts
 SortIndex: number;
 ```
+
+***
 
 ### Tooltip
 
@@ -146,11 +254,15 @@ SortIndex: number;
 Tooltip: string;
 ```
 
+***
+
 ### Type
 
 ```ts
-Type: "Group" | "Course" | "Project" | "OneToOne" | "GroupPlaceHolder";
+Type: ItslearningRestApiEntitiesInstantMessageThreadType;
 ```
+
+***
 
 ### UserAllowToBlockThread
 

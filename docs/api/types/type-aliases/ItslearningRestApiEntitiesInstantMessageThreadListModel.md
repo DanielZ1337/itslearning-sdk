@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesInstantMessageThreadListModel = object;
 ```
 
-## Type declaration
+## Properties
 
 ### HasMore
 
 ```ts
 HasMore: boolean;
 ```
+
+***
 
 ### Threads
 

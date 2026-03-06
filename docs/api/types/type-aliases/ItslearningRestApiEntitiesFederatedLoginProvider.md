@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesFederatedLoginProvider = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ButtonText
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesFederatedLoginProvider = object;
 ButtonText: string;
 ```
 
+***
+
 ### IconUrl
 
 ```ts
 IconUrl: string;
 ```
+
+***
 
 ### Id
 
@@ -26,17 +30,23 @@ IconUrl: string;
 Id: number;
 ```
 
+***
+
 ### LogoutType
 
 ```ts
 LogoutType: ItslearningRestApiEntitiesLogoutType;
 ```
 
+***
+
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### OpenInExternalBrowser
 

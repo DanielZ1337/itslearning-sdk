@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalLtiExtensionDetails = object;
 ```
 
-## Type declaration
+## Properties
 
 ### DeploymentId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalLtiExtensionDetails = object;
 DeploymentId: string;
 ```
 
+***
+
 ### LaunchUrls
 
 ```ts
 LaunchUrls: string[];
 ```
+
+***
 
 ### LoginUri
 
@@ -26,11 +30,15 @@ LaunchUrls: string[];
 LoginUri: string;
 ```
 
+***
+
 ### PublicJwk
 
 ```ts
 PublicJwk: string;
 ```
+
+***
 
 ### PublicJwksUri
 
@@ -38,11 +46,15 @@ PublicJwk: string;
 PublicJwksUri: string;
 ```
 
+***
+
 ### PublicKey
 
 ```ts
 PublicKey: string;
 ```
+
+***
 
 ### TargetLinkUri
 

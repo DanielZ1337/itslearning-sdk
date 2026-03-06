@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Active
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole = object;
 Active: boolean;
 ```
 
+***
+
 ### AddElementUrl
 
 ```ts
 AddElementUrl: string;
 ```
+
+***
 
 ### ContentUrl
 
@@ -26,11 +30,15 @@ AddElementUrl: string;
 ContentUrl: string;
 ```
 
+***
+
 ### ContextRole
 
 ```ts
-ContextRole: any;
+ContextRole: ItslearningRestApiEntitiesPersonContextRole;
 ```
+
+***
 
 ### CourseCode
 
@@ -38,11 +46,15 @@ ContextRole: any;
 CourseCode: string;
 ```
 
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+***
 
 ### CourseTitle
 
@@ -50,11 +62,15 @@ CourseId: number;
 CourseTitle: string;
 ```
 
+***
+
 ### ElementId
 
 ```ts
 ElementId: number;
 ```
+
+***
 
 ### ElementType
 
@@ -62,11 +78,15 @@ ElementId: number;
 ElementType: ItslearningRestApiEntitiesElementType;
 ```
 
+***
+
 ### Homework
 
 ```ts
 Homework: boolean;
 ```
+
+***
 
 ### IconUrl
 
@@ -74,11 +94,15 @@ Homework: boolean;
 IconUrl: string;
 ```
 
+***
+
 ### LearningObjectId
 
 ```ts
 LearningObjectId: number;
 ```
+
+***
 
 ### LearningObjectInstanceId
 
@@ -86,11 +110,15 @@ LearningObjectId: number;
 LearningObjectInstanceId: number;
 ```
 
+***
+
 ### LearningToolId
 
 ```ts
 LearningToolId: number;
 ```
+
+***
 
 ### Path
 
@@ -98,11 +126,15 @@ LearningToolId: number;
 Path: string;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Url
 

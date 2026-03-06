@@ -6,13 +6,15 @@
 type SystemNetHttpHttpResponseMessage = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Content
 
 ```ts
-Content: any;
+Content: unknown;
 ```
+
+***
 
 ### Headers
 
@@ -20,11 +22,15 @@ Content: any;
 Headers: Headers;
 ```
 
+***
+
 ### IsSuccessStatusCode
 
 ```ts
 IsSuccessStatusCode: boolean;
 ```
+
+***
 
 ### ReasonPhrase
 
@@ -32,17 +38,23 @@ IsSuccessStatusCode: boolean;
 ReasonPhrase: string;
 ```
 
+***
+
 ### RequestMessage
 
 ```ts
-RequestMessage: any;
+RequestMessage: unknown;
 ```
+
+***
 
 ### StatusCode
 
 ```ts
 StatusCode: number;
 ```
+
+***
 
 ### Version
 

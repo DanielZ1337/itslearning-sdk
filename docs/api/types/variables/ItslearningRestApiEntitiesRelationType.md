@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesRelationType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Parent
 

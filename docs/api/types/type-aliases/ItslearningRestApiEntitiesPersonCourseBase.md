@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonCourseBase = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseCode
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonCourseBase = object;
 CourseCode: string;
 ```
 
+***
+
 ### CourseColor
 
 ```ts
 CourseColor: string;
 ```
+
+***
 
 ### CourseFillColor
 
@@ -26,17 +30,23 @@ CourseColor: string;
 CourseFillColor: string;
 ```
 
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
 
+***
+
 ### FriendlyName
 
 ```ts
 FriendlyName: string;
 ```
+
+***
 
 ### Title
 

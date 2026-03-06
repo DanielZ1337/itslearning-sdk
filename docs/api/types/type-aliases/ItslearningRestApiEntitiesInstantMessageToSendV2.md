@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageToSendV2 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseIds
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesInstantMessageToSendV2 = object;
 CourseIds: number[];
 ```
 
+***
+
 ### FileIds
 
 ```ts
 FileIds: number[];
 ```
+
+***
 
 ### InstantMessageIdToShare
 
@@ -26,11 +30,15 @@ FileIds: number[];
 InstantMessageIdToShare: number;
 ```
 
+***
+
 ### InstantMessageThreadId
 
 ```ts
 InstantMessageThreadId: number;
 ```
+
+***
 
 ### OriginInstantMessageId
 
@@ -38,11 +46,15 @@ InstantMessageThreadId: number;
 OriginInstantMessageId: number;
 ```
 
+***
+
 ### OriginMessageThreadId
 
 ```ts
 OriginMessageThreadId: number;
 ```
+
+***
 
 ### ProjectIds
 
@@ -50,17 +62,23 @@ OriginMessageThreadId: number;
 ProjectIds: number[];
 ```
 
+***
+
 ### ReferencedInstantMessageType
 
 ```ts
 ReferencedInstantMessageType: ItslearningRestApiEntitiesReferencedInstantMessageType;
 ```
 
+***
+
 ### SendAsIndividualMessages
 
 ```ts
 SendAsIndividualMessages: boolean;
 ```
+
+***
 
 ### ToPersonIds
 

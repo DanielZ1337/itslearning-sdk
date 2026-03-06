@@ -16,10 +16,10 @@ Secured with OAuth2 and requires the OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new CoursesAPI()
+### Constructor
 
 ```ts
-new CoursesAPI(http): CoursesAPI
+new CoursesAPI(http): CoursesAPI;
 ```
 
 #### Parameters
@@ -30,11 +30,11 @@ new CoursesAPI(http): CoursesAPI
 
 #### Returns
 
-[`CoursesAPI`](CoursesAPI.md)
+`CoursesAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -46,14 +46,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### addParticipants()
 
 ```ts
-addParticipants(courseId, participants): Promise<void>
+addParticipants(courseId, participants): Promise<void>;
 ```
 
 Adds persons to a course.
@@ -86,7 +86,7 @@ A promise that resolves when the participants are successfully added.
 changeParticipantRole(
    courseId, 
    participantId, 
-roleId): Promise<unknown>
+roleId): Promise<unknown>;
 ```
 
 Changes the role of a single participant in a course.
@@ -125,7 +125,7 @@ A promise that resolves when the role is successfully changed.
 changeRoleBulk(
    courseId, 
    roleId, 
-participantIds): Promise<unknown>
+participantIds): Promise<unknown>;
 ```
 
 Changes the role of multiple participants in bulk.
@@ -165,7 +165,7 @@ createCloudFile(
    courseId, 
    folderId, 
    planId, 
-fileData): Promise<unknown>
+fileData): Promise<unknown>;
 ```
 
 Creates a file element in the course containing the cloud file.
@@ -215,7 +215,7 @@ Error if the course does not exist.
 ### createCourse()
 
 ```ts
-createCourse(createData): Promise<ItslearningRestApiEntitiesCourse>
+createCourse(createData): Promise<ItslearningRestApiEntitiesCourse>;
 ```
 
 Creates a new course.
@@ -243,7 +243,7 @@ createFileRepoFile(
    courseId, 
    folderId, 
    planId, 
-fileData): Promise<unknown>
+fileData): Promise<unknown>;
 ```
 
 Creates a file element in the course containing the file from the file repository.
@@ -296,7 +296,7 @@ Error if the course does not exist.
 getActivePlans(
    startDate, 
    endDate, 
-syncKeys): Promise<ItslearningRestApiEntitiesPersonalCourseWithActivePlans[]>
+syncKeys): Promise<ItslearningRestApiEntitiesPersonalCourseWithActivePlans[]>;
 ```
 
 Retrieves information about courses with active lesson plans within a specified date range.
@@ -331,42 +331,42 @@ A promise that resolves to the information about the courses.
 
 ```ts
 getAllStudentsForTeacher(
-   pageIndex, 
-   pageSize, 
-   sort, 
-   sortDescending, 
-search): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudent[]>
+   pageIndex?, 
+   pageSize?, 
+   sort?, 
+   sortDescending?, 
+search?): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudent[]>;
 ```
 
 Retrieves a list of all students for a teacher across all courses where the teacher has a teacher's role.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of students per page (default is 100).
 
-##### sort
+##### sort?
 
 `string` = `"LastLogon"`
 
 The field to sort the students by.
 
-##### sortDescending
+##### sortDescending?
 
 `boolean` = `true`
 
 Indicates whether the sort order is descending.
 
-##### search
+##### search?
 
 `string` = `""`
 
@@ -383,7 +383,7 @@ A promise that resolves to a paginated list of students.
 ### getApplicants()
 
 ```ts
-getApplicants(courseId): Promise<ItslearningRestApiEntitiesPersonalCourseCourseApplicant[]>
+getApplicants(courseId): Promise<ItslearningRestApiEntitiesPersonalCourseCourseApplicant[]>;
 ```
 
 Retrieves the list of applicants for a course.
@@ -411,8 +411,8 @@ getCalendarEvents(
    courseId, 
    fromDate, 
    toDate, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesPersonalCalendarEvent>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCalendarEvent>;
 ```
 
 Retrieves calendar events for a given course within a date range.
@@ -437,13 +437,13 @@ The end date to filter events, in ISO 8601 format.
 
 `string` | `Date`
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -460,7 +460,7 @@ A promise that resolves to a paginated list of calendar events.
 ### getCourseBasicInfo()
 
 ```ts
-getCourseBasicInfo(courseId): Promise<ItslearningRestApiEntitiesCourse>
+getCourseBasicInfo(courseId): Promise<ItslearningRestApiEntitiesCourse>;
 ```
 
 Retrieves basic information about a course for the current user.
@@ -486,12 +486,12 @@ A promise that resolves to the basic course information.
 ```ts
 getCourseParticipants(
    courseId, 
-   pageIndex, 
-   pageSize, 
+   pageIndex?, 
+   pageSize?, 
    courseProfileId?, 
    searchText?, 
    orderByField?, 
-orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>
+orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>;
 ```
 
 Retrieves a list of course participants with various filters.
@@ -504,13 +504,13 @@ Retrieves a list of course participants with various filters.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -557,12 +557,12 @@ This endpoint returns only favorite courses. Use `getCourseParticipantsV2` inste
 ```ts
 getCourseParticipantsV2(
    courseId, 
-   pageIndex, 
-   pageSize, 
-   courseProfileIds, 
+   pageIndex?, 
+   pageSize?, 
+   courseProfileIds?, 
    searchText?, 
    orderByField?, 
-orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>
+orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>;
 ```
 
 Retrieves a list of course participants with advanced filtering (Version 2).
@@ -575,19 +575,19 @@ Retrieves a list of course participants with advanced filtering (Version 2).
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of participants per page (default is 100).
 
-##### courseProfileIds
+##### courseProfileIds?
 
 `string`[] = `[]`
 
@@ -628,15 +628,15 @@ This endpoint returns only favorite courses. Use `getCourseParticipantsV3` inste
 ```ts
 getCourseParticipantsV3(
    courseId, 
-   pageIndex, 
-   pageSize, 
-   courseProfileIds, 
-   groupIds, 
-   hierarchyIds, 
-   notInGroup, 
+   pageIndex?, 
+   pageSize?, 
+   courseProfileIds?, 
+   groupIds?, 
+   hierarchyIds?, 
+   notInGroup?, 
    searchText?, 
    orderByField?, 
-orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>
+orderAscending?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipant>;
 ```
 
 Retrieves a list of course participants with advanced filtering (Version 3).
@@ -649,37 +649,37 @@ Retrieves a list of course participants with advanced filtering (Version 3).
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of participants per page (default is 100).
 
-##### courseProfileIds
+##### courseProfileIds?
 
 `number`[] = `[]`
 
 An array of course profile identifiers to filter participants.
 
-##### groupIds
+##### groupIds?
 
 `number`[] = `[]`
 
 An array of group identifiers to filter participants.
 
-##### hierarchyIds
+##### hierarchyIds?
 
 `number`[] = `[]`
 
 An array of hierarchy identifiers to filter participants.
 
-##### notInGroup
+##### notInGroup?
 
 `boolean` = `false`
 
@@ -714,7 +714,7 @@ A promise that resolves to a paginated list of course participants.
 ### getCourseProfiles()
 
 ```ts
-getCourseProfiles(courseId): Promise<ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile[]>
+getCourseProfiles(courseId): Promise<ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile[]>;
 ```
 
 Retrieves information on available course profiles for a specific course.
@@ -735,23 +735,69 @@ A promise that resolves to the course profiles information.
 
 ***
 
+### getCourseStudents()
+
+```ts
+getCourseStudents(
+   courseId, 
+   pageIndex?, 
+   pageSize?, 
+search?): Promise<unknown>;
+```
+
+Retrieves students enrolled in a course.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+##### pageIndex?
+
+`number` = `0`
+
+The index of the page to retrieve (default is 0).
+
+##### pageSize?
+
+`number` = `100`
+
+The number of students per page (default is 100).
+
+##### search?
+
+`string`
+
+Optional search text to filter students.
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+A promise that resolves to a list of students.
+
+***
+
 ### ~~getCoursesV1()~~
 
 ```ts
-getCoursesV1(pageIndex, pageSize): Promise<EntityListOfItslearningRestApiEntitiesPersonCourse>
+getCoursesV1(pageIndex?, pageSize?): Promise<EntityListOfItslearningRestApiEntitiesPersonCourse>;
 ```
 
 Retrieves a paginated list of courses.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -773,28 +819,28 @@ This endpoint returns only favorite courses. Use `getCoursesV2` instead.
 
 ```ts
 getCoursesV2(
-   pageIndex, 
-   pageSize, 
-filter): Promise<EntityListOfItslearningRestApiEntitiesPersonCourse>
+   pageIndex?, 
+   pageSize?, 
+filter?): Promise<EntityListOfItslearningRestApiEntitiesPersonCourse>;
 ```
 
 Retrieves a paginated list of courses with filtering options.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of courses per page (default is 100).
 
-##### filter
+##### filter?
 
 [`ItsolutionsItslUtilsConstantsContentAreaFilterType`](../../../types/type-aliases/ItsolutionsItslUtilsConstantsContentAreaFilterType.md) = `ItsolutionsItslUtilsConstantsContentAreaFilterType.All`
 
@@ -816,28 +862,28 @@ This endpoint returns only favorite courses. Use `getCoursesV3` instead.
 
 ```ts
 getCoursesV3(
-   pageIndex, 
-   pageSize, 
-filter): Promise<EntityListOfItslearningRestApiEntitiesPersonCourseCardData>
+   pageIndex?, 
+   pageSize?, 
+filter?): Promise<EntityListOfItslearningRestApiEntitiesPersonCourseCardData>;
 ```
 
 Retrieves a paginated list of courses with additional information.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of courses per page (default is 100).
 
-##### filter
+##### filter?
 
 [`ItsolutionsItslUtilsConstantsContentAreaFilterType`](../../../types/type-aliases/ItsolutionsItslUtilsConstantsContentAreaFilterType.md) = `ItsolutionsItslUtilsConstantsContentAreaFilterType.All`
 
@@ -851,10 +897,89 @@ A promise that resolves to a paginated list of courses with additional informati
 
 ***
 
+### getCoursesV4()
+
+```ts
+getCoursesV4(
+   pageIndex?, 
+   pageSize?, 
+filter?): Promise<EntityListOfItslearningRestApiEntitiesPersonCourseCardData>;
+```
+
+Retrieves a paginated list of courses with additional information and list of teachers,
+without follow-up task count and task count (v4).
+
+#### Parameters
+
+##### pageIndex?
+
+`number` = `0`
+
+The index of the page to retrieve (default is 0).
+
+##### pageSize?
+
+`number` = `100`
+
+The number of courses per page (default is 100).
+
+##### filter?
+
+[`ItsolutionsItslUtilsConstantsContentAreaFilterType`](../../../types/type-aliases/ItsolutionsItslUtilsConstantsContentAreaFilterType.md) = `ItsolutionsItslUtilsConstantsContentAreaFilterType.All`
+
+The filter criteria to apply to the course list.
+
+#### Returns
+
+`Promise`\<[`EntityListOfItslearningRestApiEntitiesPersonCourseCardData`](../../../types/type-aliases/EntityListOfItslearningRestApiEntitiesPersonCourseCardData.md)\>
+
+A promise that resolves to a paginated list of courses.
+
+***
+
+### getCourseTopics()
+
+```ts
+getCourseTopics(
+   courseId, 
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesCourseTopic>;
+```
+
+Provides the list of topic IDs and names for a given course.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+##### pageIndex?
+
+`number` = `0`
+
+The index of the page to retrieve (default is 0).
+
+##### pageSize?
+
+`number` = `100`
+
+The number of topics per page (default is 100).
+
+#### Returns
+
+`Promise`\<[`EntityListOfItslearningRestApiEntitiesCourseTopic`](../../../types/type-aliases/EntityListOfItslearningRestApiEntitiesCourseTopic.md)\>
+
+A promise that resolves to a paginated list of course topics.
+
+***
+
 ### getCourseWithRole()
 
 ```ts
-getCourseWithRole(courseId): Promise<ItslearningRestApiEntitiesCourseWithContextRole>
+getCourseWithRole(courseId): Promise<ItslearningRestApiEntitiesCourseWithContextRole>;
 ```
 
 Retrieves basic information about a course and the user's role in it.
@@ -878,7 +1003,7 @@ A promise that resolves to the course information and user role.
 ### getEligiblePersons()
 
 ```ts
-getEligiblePersons(searchText): Promise<EligiblePersonsResponse[]>
+getEligiblePersons(searchText): Promise<EligiblePersonsResponse[]>;
 ```
 
 Retrieves persons that the user is allowed to communicate with, given the customer's eSafety rules.
@@ -904,8 +1029,8 @@ A promise that resolves to a list of eligible persons.
 ```ts
 getExtendedResources(
    courseId, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Retrieves all resources in a course with extended information.
@@ -918,13 +1043,13 @@ Retrieves all resources in a course with extended information.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -943,8 +1068,8 @@ A promise that resolves to a list of all resources in the course.
 ```ts
 getFollowUpTasks(
    courseId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesFollowUpTask>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesFollowUpTask>;
 ```
 
 Retrieves follow-up tasks for a given course.
@@ -957,13 +1082,13 @@ Retrieves follow-up tasks for a given course.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -983,8 +1108,8 @@ A promise that resolves to a paginated list of follow-up tasks.
 getLastUpdatedResources(
    courseId, 
    elementType, 
-   numberOfElements, 
-excludeLearningPathSubElements): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource>
+   numberOfElements?, 
+excludeLearningPathSubElements?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseResource>;
 ```
 
 Retrieves the last updated resources for a given element type in a course.
@@ -1003,13 +1128,13 @@ The unique identifier of the course.
 
 The type of elements to filter (e.g., 'file', 'link').
 
-##### numberOfElements
+##### numberOfElements?
 
 `number` = `3`
 
 The number of elements to retrieve. Default is 3. Maximum is 10.
 
-##### excludeLearningPathSubElements
+##### excludeLearningPathSubElements?
 
 `boolean` = `false`
 
@@ -1026,20 +1151,20 @@ A promise that resolves to the list of last updated resources.
 ### getMyStudents()
 
 ```ts
-getMyStudents(pageIndex, pageSize): Promise<EntityListOfItslearningRestApiEntitiesCourse>
+getMyStudents(pageIndex?, pageSize?): Promise<EntityListOfItslearningRestApiEntitiesCourse>;
 ```
 
 Retrieves a list of the user's students.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -1057,21 +1182,14 @@ A promise that resolves to a paginated list of students.
 
 ```ts
 getNotificationElements(
-   courseId, 
    notificationId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesElementLink>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesElementLink>;
 ```
 
 Retrieves the list of elements related to a given notification.
 
 #### Parameters
-
-##### courseId
-
-`number`
-
-The unique identifier of the course.
 
 ##### notificationId
 
@@ -1079,13 +1197,13 @@ The unique identifier of the course.
 
 The unique identifier of the notification.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -1099,10 +1217,56 @@ A promise that resolves to a list of related elements.
 
 ***
 
+### getParticipantGroups()
+
+```ts
+getParticipantGroups(
+   courseId, 
+   pageIndex?, 
+   pageSize?, 
+search?): Promise<unknown>;
+```
+
+Retrieves a paginated list of participant groups in a course.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+##### pageIndex?
+
+`number` = `0`
+
+The index of the page to retrieve (default is 0).
+
+##### pageSize?
+
+`number` = `100`
+
+The number of groups per page (default is 100).
+
+##### search?
+
+`string`
+
+Optional search text to filter groups.
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+A promise that resolves to a paginated list of participant groups.
+
+***
+
 ### getParticipantSetup()
 
 ```ts
-getParticipantSetup(courseId): Promise<ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup>
+getParticipantSetup(courseId): Promise<ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup>;
 ```
 
 Retrieves setup information for the course participant and add participant page.
@@ -1126,7 +1290,7 @@ A promise that resolves to the setup information.
 ### getResourceDetails()
 
 ```ts
-getResourceDetails(courseId, resourceId): Promise<ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole>
+getResourceDetails(courseId, resourceId): Promise<ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole>;
 ```
 
 Retrieves a specific resource and information about the course and the user's role.
@@ -1159,10 +1323,10 @@ A promise that resolves to the resource details, course information, and user ro
 getResources(
    courseId, 
    folderId, 
-   pageIndex, 
-   pageSize, 
+   pageIndex?, 
+   pageSize?, 
    elementType?, 
-learningToolType?): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>
+learningToolType?): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>;
 ```
 
 Retrieves a list of resources for a given course and folder.
@@ -1181,13 +1345,13 @@ The unique identifier of the course.
 
 The unique identifier of the folder within the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -1218,10 +1382,10 @@ A promise that resolves to a paginated list of resources.
 ```ts
 getRootResources(
    courseId, 
-   pageIndex, 
-   pageSize, 
+   pageIndex?, 
+   pageSize?, 
    elementType?, 
-learningToolType?): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>
+learningToolType?): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>;
 ```
 
 Retrieves a list of resources (in the root folder) for a given course.
@@ -1234,13 +1398,13 @@ Retrieves a list of resources (in the root folder) for a given course.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -1271,11 +1435,11 @@ A promise that resolves to a paginated list of resources.
 ```ts
 getStreamFeed(
    courseId, 
-   showLightBulletins, 
+   showLightBulletins?, 
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<EntityListOfItslearningRestApiEntitiesStreamItemV2>
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesStreamItemV2>;
 ```
 
 Retrieves the user's stream feed from a course.
@@ -1288,7 +1452,7 @@ Retrieves the user's stream feed from a course.
 
 The unique identifier of the course.
 
-##### showLightBulletins
+##### showLightBulletins?
 
 `boolean` = `true`
 
@@ -1329,7 +1493,7 @@ A promise that resolves to the list of stream items.
 ### getStudentsCourses()
 
 ```ts
-getStudentsCourses(): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudentCourse[]>
+getStudentsCourses(): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudentCourse[]>;
 ```
 
 Retrieves all courses of the user's students.
@@ -1345,7 +1509,7 @@ A promise that resolves to the list of courses.
 ### getSynchronizedHierarchies()
 
 ```ts
-getSynchronizedHierarchies(courseId): Promise<unknown>
+getSynchronizedHierarchies(courseId): Promise<unknown>;
 ```
 
 Retrieves all hierarchies synchronized with a given course.
@@ -1366,16 +1530,40 @@ A promise that resolves to the list of synchronized hierarchies.
 
 ***
 
+### getTaskCounts()
+
+```ts
+getTaskCounts(courseId): Promise<unknown>;
+```
+
+Retrieves follow-up task count and task count for a course for the current user.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+A promise that resolves to the task counts.
+
+***
+
 ### getTasks()
 
 ```ts
 getTasks(
    courseId, 
-   pageIndex, 
-   pageSize, 
-   status, 
-   deadline, 
-isHomework?): Promise<EntityListOfItslearningRestApiEntitiesTask>
+   pageIndex?, 
+   pageSize?, 
+   status?, 
+   deadline?, 
+isHomework?): Promise<EntityListOfItslearningRestApiEntitiesTask>;
 ```
 
 Retrieves a list of tasks for a given course with optional filters.
@@ -1388,25 +1576,25 @@ Retrieves a list of tasks for a given course with optional filters.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of tasks per page (default is 100).
 
-##### status
+##### status?
 
 [`ItslearningRestApiEntitiesTaskStatusFilter`](../../../types/type-aliases/ItslearningRestApiEntitiesTaskStatusFilter.md) = `ItslearningRestApiEntitiesTaskStatusFilter.All`
 
 The status to filter tasks (e.g., 'pending', 'completed').
 
-##### deadline
+##### deadline?
 
 [`ItslearningRestApiEntitiesTaskDeadlineFilter`](../../../types/type-aliases/ItslearningRestApiEntitiesTaskDeadlineFilter.md) = `ItslearningRestApiEntitiesTaskDeadlineFilter.All`
 
@@ -1430,28 +1618,28 @@ A promise that resolves to a paginated list of tasks.
 
 ```ts
 getTeacherCourses(
-   pageIndex, 
-   pageSize, 
-onlyWithResources): Promise<EntityListOfItslearningRestApiEntitiesCourse>
+   pageIndex?, 
+   pageSize?, 
+onlyWithResources?): Promise<EntityListOfItslearningRestApiEntitiesCourse>;
 ```
 
 Retrieves a list of courses for a given teacher.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of courses per page (default is 100).
 
-##### onlyWithResources
+##### onlyWithResources?
 
 `boolean` = `false`
 
@@ -1465,17 +1653,63 @@ A promise that resolves to a paginated list of courses.
 
 ***
 
+### getTopicElementIds()
+
+```ts
+getTopicElementIds(
+   courseId, 
+   topicId, 
+   pageIndex?, 
+pageSize?): Promise<unknown>;
+```
+
+Provides the list of element IDs for a given topic in a course.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+##### topicId
+
+`number`
+
+The unique identifier of the topic.
+
+##### pageIndex?
+
+`number` = `0`
+
+The index of the page to retrieve (default is 0).
+
+##### pageSize?
+
+`number` = `100`
+
+The number of element IDs per page (default is 100).
+
+#### Returns
+
+`Promise`\<`unknown`\>
+
+A promise that resolves to a paginated list of element IDs.
+
+***
+
 ### getUnenrolledParticipants()
 
 ```ts
 getUnenrolledParticipants(
    courseId, 
-   pageIndex, 
-   pageSize, 
+   pageIndex?, 
+   pageSize?, 
    searchText?, 
    orderByField?, 
    orderAscending?, 
-dropDateFrom?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled>
+dropDateFrom?): Promise<EntityListOfItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled>;
 ```
 
 Retrieves a list of unenrolled participants for a given course.
@@ -1488,13 +1722,13 @@ Retrieves a list of unenrolled participants for a given course.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -1537,11 +1771,11 @@ A promise that resolves to a paginated list of unenrolled participants.
 ```ts
 getYourStudents(
    courseId, 
-   pageIndex, 
-   pageSize, 
-   sort, 
-   sortDescending, 
-search): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudent[]>
+   pageIndex?, 
+   pageSize?, 
+   sort?, 
+   sortDescending?, 
+search?): Promise<ItslearningRestApiEntitiesPersonalCourseYourStudent[]>;
 ```
 
 Retrieves a list of your students for a given course.
@@ -1554,31 +1788,31 @@ Retrieves a list of your students for a given course.
 
 The unique identifier of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
 The number of students per page (default is 100).
 
-##### sort
+##### sort?
 
 `string` = `"LastVisited"`
 
 The field to sort the students by.
 
-##### sortDescending
+##### sortDescending?
 
 `boolean` = `true`
 
 Indicates whether the sort order is descending.
 
-##### search
+##### search?
 
 `string` = `""`
 
@@ -1598,7 +1832,7 @@ A promise that resolves to a paginated list of students.
 grantTemporaryAccess(
    courseId, 
    participantIds, 
-duration): Promise<void>
+duration): Promise<void>;
 ```
 
 Grants temporary access to persons for a course.
@@ -1634,7 +1868,7 @@ A promise that resolves when temporary access is successfully granted.
 ### removeParticipants()
 
 ```ts
-removeParticipants(courseId, data): Promise<void>
+removeParticipants(courseId, data): Promise<void>;
 ```
 
 Removes one or more participants from the given course.
@@ -1662,7 +1896,7 @@ A promise that resolves when the participants are successfully removed.
 ### removeParticipantsV2()
 
 ```ts
-removeParticipantsV2(courseId, data): Promise<SystemNetHttpHttpResponseMessage>
+removeParticipantsV2(courseId, data): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Removes one or more participants from the given course (Version 2).
@@ -1690,7 +1924,7 @@ A promise that resolves when the participants are successfully removed.
 ### searchCourseBySyncKey()
 
 ```ts
-searchCourseBySyncKey(courseSyncKey): Promise<ItslearningRestApiEntitiesCourse>
+searchCourseBySyncKey(courseSyncKey): Promise<ItslearningRestApiEntitiesCourse>;
 ```
 
 Searches for a course by its synchronization key.
@@ -1714,7 +1948,7 @@ A promise that resolves to the course details.
 ### searchHierarchies()
 
 ```ts
-searchHierarchies(courseId, searchText): Promise<unknown>
+searchHierarchies(courseId, searchText): Promise<unknown>;
 ```
 
 Searches syncable hierarchies for a given course based on the search text.
@@ -1744,7 +1978,7 @@ A promise that resolves to the list of matching hierarchies.
 ### searchParticipants()
 
 ```ts
-searchParticipants(courseId, searchText): Promise<EntityListOfItslearningRestApiEntitiesPersonSimple>
+searchParticipants(courseId, searchText): Promise<EntityListOfItslearningRestApiEntitiesPersonSimple>;
 ```
 
 Searches for persons to add to a course based on the search text.
@@ -1777,7 +2011,7 @@ A promise that resolves to a list of participants matching the search criteria.
 searchResources(
    locationId, 
    locationType, 
-searchText): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>
+searchText?): Promise<ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails>;
 ```
 
 Searches for resources in a course based on location type and search text.
@@ -1796,7 +2030,7 @@ The unique identifier of the course or project.
 
 The type of location to filter resources (e.g., 'folder', 'file').
 
-##### searchText
+##### searchText?
 
 `string` = `""`
 
@@ -1813,7 +2047,7 @@ A promise that resolves to the list of matching resources.
 ### synchronizeHierarchies()
 
 ```ts
-synchronizeHierarchies(courseId, hierarchies): Promise<void>
+synchronizeHierarchies(courseId, hierarchies): Promise<void>;
 ```
 
 Synchronizes hierarchies to a course.
@@ -1843,7 +2077,7 @@ A promise that resolves when synchronization is successful.
 ### toggleFavorite()
 
 ```ts
-toggleFavorite(courseId): Promise<SystemNetHttpHttpResponseMessage>
+toggleFavorite(courseId): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Toggles whether the user has marked a course as favorite.
@@ -1864,10 +2098,40 @@ A promise that resolves to the updated favorite status.
 
 ***
 
+### updateAiSettings()
+
+```ts
+updateAiSettings(courseId, settings): Promise<ItslearningRestApiEntitiesPersonalCourseCourseAiSettings>;
+```
+
+Updates the AI settings for a course.
+
+#### Parameters
+
+##### courseId
+
+`number`
+
+The unique identifier of the course.
+
+##### settings
+
+[`ItslearningRestApiEntitiesPersonalCourseCourseAiSettings`](../../../types/type-aliases/ItslearningRestApiEntitiesPersonalCourseCourseAiSettings.md)
+
+The AI settings to update.
+
+#### Returns
+
+`Promise`\<[`ItslearningRestApiEntitiesPersonalCourseCourseAiSettings`](../../../types/type-aliases/ItslearningRestApiEntitiesPersonalCourseCourseAiSettings.md)\>
+
+A promise that resolves when the settings are successfully updated.
+
+***
+
 ### updateCourse()
 
 ```ts
-updateCourse(courseId, updateData): Promise<ItslearningRestApiEntitiesCourse>
+updateCourse(courseId, updateData): Promise<ItslearningRestApiEntitiesCourse>;
 ```
 
 Updates the course information.
@@ -1897,7 +2161,7 @@ A promise that resolves when the course is successfully updated.
 ### updateLastVisited()
 
 ```ts
-updateLastVisited(courseId): Promise<void>
+updateLastVisited(courseId): Promise<void>;
 ```
 
 Updates the timestamp for when the user last visited the course.

@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Planner`.
 
 ## Constructors
 
-### new PlannerAPI()
+### Constructor
 
 ```ts
-new PlannerAPI(http): PlannerAPI
+new PlannerAPI(http): PlannerAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new PlannerAPI(http): PlannerAPI
 
 #### Returns
 
-[`PlannerAPI`](PlannerAPI.md)
+`PlannerAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,7 +45,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -56,7 +56,7 @@ addSharedPlanElements(
    targetCourseId, 
    targetTopicId, 
    targetPlanId, 
-data): Promise<ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest>
+data): Promise<ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest>;
 ```
 
 Adds shared plan elements to the course plan.
@@ -83,7 +83,7 @@ The unique ID of the target plan.
 
 ##### data
 
-`unknown`
+[`ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest`](../../../types/type-aliases/ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest.md)
 
 Any additional data (e.g., list of elements) to be added.
 
@@ -99,7 +99,7 @@ Any additional data (e.g., list of elements) to be added.
 getCoursePlans(
    courseId, 
    startDate?, 
-stopDate?): Promise<EntityListOfItslearningRestApiEntitiesPlannerPlanPreview>
+stopDate?): Promise<EntityListOfItslearningRestApiEntitiesPlannerPlanPreview>;
 ```
 
 Gets previews of plans for the specified course. Can filter by date range.
@@ -136,7 +136,7 @@ The unique ID of the course.
 ### getPlansInfo()
 
 ```ts
-getPlansInfo(plansIds): Promise<ItslearningRestApiEntitiesPersonalPlanWithObjectivesAndElements[]>
+getPlansInfo(plansIds): Promise<ItslearningRestApiEntitiesPersonalPlanWithObjectivesAndElements[]>;
 ```
 
 Gets a list of plans, with learning objectives and elements attached.

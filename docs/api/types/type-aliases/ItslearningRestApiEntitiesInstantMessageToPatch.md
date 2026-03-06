@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesInstantMessageToPatch = object;
 ```
 
-## Type declaration
+## Properties
 
 ### InstantMessageId
 
 ```ts
 InstantMessageId: number;
 ```
+
+***
 
 ### Text
 

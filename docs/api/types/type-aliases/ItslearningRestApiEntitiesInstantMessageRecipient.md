@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageRecipient = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanReceive
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesInstantMessageRecipient = object;
 CanReceive: boolean;
 ```
 
+***
+
 ### Code
 
 ```ts
 Code: string;
 ```
+
+***
 
 ### ColorSchema
 
@@ -26,11 +30,15 @@ Code: string;
 ColorSchema: string;
 ```
 
+***
+
 ### EncodedLabel
 
 ```ts
 EncodedLabel: string;
 ```
+
+***
 
 ### Id
 
@@ -38,11 +46,15 @@ EncodedLabel: string;
 Id: number;
 ```
 
+***
+
 ### Label
 
 ```ts
 Label: string;
 ```
+
+***
 
 ### Organization
 
@@ -50,11 +62,15 @@ Label: string;
 Organization: string;
 ```
 
+***
+
 ### ParticipantsCount
 
 ```ts
 ParticipantsCount: number;
 ```
+
+***
 
 ### ProfileImageUrl
 
@@ -62,11 +78,15 @@ ParticipantsCount: number;
 ProfileImageUrl: string;
 ```
 
+***
+
 ### RoleInHierarchyTitle
 
 ```ts
 RoleInHierarchyTitle: string;
 ```
+
+***
 
 ### SearchLabel
 
@@ -74,11 +94,15 @@ RoleInHierarchyTitle: string;
 SearchLabel: string;
 ```
 
+***
+
 ### ShortLabel
 
 ```ts
 ShortLabel: string;
 ```
+
+***
 
 ### SortField
 
@@ -86,11 +110,15 @@ ShortLabel: string;
 SortField: number;
 ```
 
+***
+
 ### TypeName
 
 ```ts
 TypeName: string;
 ```
+
+***
 
 ### TypeNameId
 

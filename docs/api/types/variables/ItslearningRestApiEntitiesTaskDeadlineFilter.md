@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesTaskDeadlineFilter: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### All
 

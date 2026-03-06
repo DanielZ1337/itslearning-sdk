@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsLocationType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Course
 

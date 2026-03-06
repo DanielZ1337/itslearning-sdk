@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonalCalendarAttendanceAttendanceDetails = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AttendanceStatistics
 
 ```ts
 AttendanceStatistics: ItslearningRestApiEntitiesPersonalCalendarAttendanceAttendanceStatistics;
 ```
+
+***
 
 ### KeepAttendancePageUrl
 

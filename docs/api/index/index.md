@@ -2,15 +2,13 @@
 
 # index
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |
 | [ItsLearningSDK](classes/ItsLearningSDK.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

@@ -2,9 +2,7 @@
 
 # lib/Manager
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

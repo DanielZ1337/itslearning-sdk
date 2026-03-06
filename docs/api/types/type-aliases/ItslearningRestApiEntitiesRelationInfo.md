@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesRelationInfo = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Courses
 

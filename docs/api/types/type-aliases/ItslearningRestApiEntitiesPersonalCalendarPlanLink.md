@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCalendarPlanLink = object;
 ```
 
-## Type declaration
+## Properties
 
 ### PlanId
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesPersonalCalendarPlanLink = object;
 PlanId: number;
 ```
 
+***
+
 ### PlanName
 
 ```ts
 PlanName: string;
 ```
 
+***
+
 ### TopicName
 
 ```ts
 TopicName: string;
 ```
+
+***
 
 ### Url
 

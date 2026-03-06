@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesCourseCardSettings = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanEditCourseColour
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesCourseCardSettings = object;
 CanEditCourseColour: boolean;
 ```
 
+***
+
 ### CanEditFriendlyName
 
 ```ts
 CanEditFriendlyName: boolean;
 ```
+
+***
 
 ### CourseColorClass
 
@@ -26,11 +30,15 @@ CanEditFriendlyName: boolean;
 CourseColorClass: string;
 ```
 
+***
+
 ### CourseTitle
 
 ```ts
 CourseTitle: string;
 ```
+
+***
 
 ### FriendlyName
 
@@ -38,11 +46,15 @@ CourseTitle: string;
 FriendlyName: string;
 ```
 
+***
+
 ### VisibleCourseCardCandidateIds
 
 ```ts
 VisibleCourseCardCandidateIds: string;
 ```
+
+***
 
 ### VisibleCourseCardCandidates
 

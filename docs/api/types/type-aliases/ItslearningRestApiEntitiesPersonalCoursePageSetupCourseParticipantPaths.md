@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPaths = object;
 ```
 
-## Type declaration
+## Properties
 
 ### EmptyStateImage
 
 ```ts
 EmptyStateImage: string;
 ```
+
+***
 
 ### StaticContent
 

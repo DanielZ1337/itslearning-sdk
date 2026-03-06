@@ -6,7 +6,7 @@
 const ItslearningScopes: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Calendar
 

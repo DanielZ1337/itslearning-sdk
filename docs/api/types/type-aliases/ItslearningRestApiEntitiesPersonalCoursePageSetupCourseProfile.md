@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanBeUsedForAddingParticipantsToCourse
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile = object;
 CanBeUsedForAddingParticipantsToCourse: boolean;
 ```
 
+***
+
 ### CourseProfileId
 
 ```ts
 CourseProfileId: number;
 ```
 
+***
+
 ### ExistsInCourse
 
 ```ts
 ExistsInCourse: boolean;
 ```
+
+***
 
 ### Title
 

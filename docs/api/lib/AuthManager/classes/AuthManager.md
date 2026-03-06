@@ -4,10 +4,10 @@
 
 ## Constructors
 
-### new AuthManager()
+### Constructor
 
 ```ts
-new AuthManager(config): AuthManager
+new AuthManager(config): AuthManager;
 ```
 
 #### Parameters
@@ -18,14 +18,14 @@ new AuthManager(config): AuthManager
 
 #### Returns
 
-[`AuthManager`](AuthManager.md)
+`AuthManager`
 
 ## Methods
 
 ### exchangeCodeForToken()
 
 ```ts
-exchangeCodeForToken(code): Promise<void>
+exchangeCodeForToken(code): Promise<void>;
 ```
 
 #### Parameters
@@ -43,19 +43,19 @@ exchangeCodeForToken(code): Promise<void>
 ### getAccessToken()
 
 ```ts
-getAccessToken(): undefined | string
+getAccessToken(): string | undefined;
 ```
 
 #### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 ***
 
 ### getAuthorizationUrl()
 
 ```ts
-getAuthorizationUrl(state, scope): string
+getAuthorizationUrl(state, scope): string;
 ```
 
 #### Parameters
@@ -77,19 +77,19 @@ getAuthorizationUrl(state, scope): string
 ### getRefreshToken()
 
 ```ts
-getRefreshToken(): undefined | string
+getRefreshToken(): string | undefined;
 ```
 
 #### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 ***
 
 ### handleRefreshToken()
 
 ```ts
-handleRefreshToken(): Promise<void>
+handleRefreshToken(): Promise<void>;
 ```
 
 #### Returns
@@ -101,7 +101,7 @@ handleRefreshToken(): Promise<void>
 ### setAccessToken()
 
 ```ts
-setAccessToken(token): void
+setAccessToken(token): void;
 ```
 
 #### Parameters
@@ -119,7 +119,7 @@ setAccessToken(token): void
 ### setRefreshToken()
 
 ```ts
-setRefreshToken(token): void
+setRefreshToken(token): void;
 ```
 
 #### Parameters

@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesReferencedInstantMessageType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### AbuseReported
 

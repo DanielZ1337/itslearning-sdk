@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalPlanWithObjectivesAndElements = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalPlanWithObjectivesAndElements = object;
 CourseId: number;
 ```
 
+***
+
 ### CourseName
 
 ```ts
 CourseName: string;
 ```
+
+***
 
 ### CoursePlannerUrl
 
@@ -26,11 +30,15 @@ CourseName: string;
 CoursePlannerUrl: string;
 ```
 
+***
+
 ### CourseSyncKey
 
 ```ts
 CourseSyncKey: string;
 ```
+
+***
 
 ### Elements
 
@@ -38,11 +46,15 @@ CourseSyncKey: string;
 Elements: ItslearningRestApiEntitiesPersonalPlanElementBasic[];
 ```
 
+***
+
 ### LearningObjectives
 
 ```ts
 LearningObjectives: ItslearningRestApiEntitiesPersonalPlanLearningObjectiveBasic[];
 ```
+
+***
 
 ### PlanDescription
 
@@ -50,11 +62,15 @@ LearningObjectives: ItslearningRestApiEntitiesPersonalPlanLearningObjectiveBasic
 PlanDescription: string;
 ```
 
+***
+
 ### PlanEndDate
 
 ```ts
 PlanEndDate: string;
 ```
+
+***
 
 ### PlanId
 
@@ -62,11 +78,15 @@ PlanEndDate: string;
 PlanId: number;
 ```
 
+***
+
 ### PlanStartDate
 
 ```ts
 PlanStartDate: string;
 ```
+
+***
 
 ### PlanTitle
 
@@ -74,11 +94,15 @@ PlanStartDate: string;
 PlanTitle: string;
 ```
 
+***
+
 ### PlanTopicColor
 
 ```ts
 PlanTopicColor: string;
 ```
+
+***
 
 ### PlanTopicName
 

@@ -2,9 +2,7 @@
 
 # api/InstantMessageBroadcast
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

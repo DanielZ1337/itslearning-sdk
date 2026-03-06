@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantLanguage = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Accepted
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantLanguage 
 Accepted: string;
 ```
 
+***
+
 ### Add
 
 ```ts
 Add: string;
 ```
+
+***
 
 ### AddHierarchy
 
@@ -26,11 +30,15 @@ Add: string;
 AddHierarchy: string;
 ```
 
+***
+
 ### AddParticipant
 
 ```ts
 AddParticipant: string;
 ```
+
+***
 
 ### AddParticipantsEmptyState
 
@@ -38,11 +46,15 @@ AddParticipant: string;
 AddParticipantsEmptyState: string;
 ```
 
+***
+
 ### All
 
 ```ts
 All: string;
 ```
+
+***
 
 ### Applicants
 
@@ -50,11 +62,15 @@ All: string;
 Applicants: string;
 ```
 
+***
+
 ### ApplicantsEmptyState
 
 ```ts
 ApplicantsEmptyState: string;
 ```
+
+***
 
 ### ApplicationState
 
@@ -62,11 +78,15 @@ ApplicantsEmptyState: string;
 ApplicationState: string;
 ```
 
+***
+
 ### Approve
 
 ```ts
 Approve: string;
 ```
+
+***
 
 ### Assessment
 
@@ -74,11 +94,15 @@ Approve: string;
 Assessment: string;
 ```
 
+***
+
 ### BrowseHierarchies
 
 ```ts
 BrowseHierarchies: string;
 ```
+
+***
 
 ### BrowseUsers
 
@@ -86,11 +110,15 @@ BrowseHierarchies: string;
 BrowseUsers: string;
 ```
 
+***
+
 ### Cancel
 
 ```ts
 Cancel: string;
 ```
+
+***
 
 ### ChangeRole
 
@@ -98,11 +126,15 @@ Cancel: string;
 ChangeRole: string;
 ```
 
+***
+
 ### ChangeRoleFor
 
 ```ts
 ChangeRoleFor: string;
 ```
+
+***
 
 ### Close
 
@@ -110,11 +142,15 @@ ChangeRoleFor: string;
 Close: string;
 ```
 
+***
+
 ### ConfirmRemoveMultipleParticipants
 
 ```ts
 ConfirmRemoveMultipleParticipants: string;
 ```
+
+***
 
 ### ConfirmRemoveParticipant
 
@@ -122,11 +158,15 @@ ConfirmRemoveMultipleParticipants: string;
 ConfirmRemoveParticipant: string;
 ```
 
+***
+
 ### CouldNotRemoveMultipleParticipants
 
 ```ts
 CouldNotRemoveMultipleParticipants: string;
 ```
+
+***
 
 ### CouldNotRemoveParticipant
 
@@ -134,11 +174,15 @@ CouldNotRemoveMultipleParticipants: string;
 CouldNotRemoveParticipant: string;
 ```
 
+***
+
 ### CourseGroups
 
 ```ts
 CourseGroups: string;
 ```
+
+***
 
 ### DateUnenrolled
 
@@ -146,11 +190,15 @@ CourseGroups: string;
 DateUnenrolled: string;
 ```
 
+***
+
 ### Email
 
 ```ts
 Email: string;
 ```
+
+***
 
 ### FilteredParticipantsCount
 
@@ -158,11 +206,15 @@ Email: string;
 FilteredParticipantsCount: string;
 ```
 
+***
+
 ### Freely
 
 ```ts
 Freely: string;
 ```
+
+***
 
 ### Hierarchy
 
@@ -170,11 +222,15 @@ Freely: string;
 Hierarchy: string;
 ```
 
+***
+
 ### LastVisited
 
 ```ts
 LastVisited: string;
 ```
+
+***
 
 ### MaxAllowedInstantMessageRecipientsExceeded
 
@@ -182,11 +238,15 @@ LastVisited: string;
 MaxAllowedInstantMessageRecipientsExceeded: string;
 ```
 
+***
+
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### NoApplicants
 
@@ -194,11 +254,15 @@ Name: string;
 NoApplicants: string;
 ```
 
+***
+
 ### NoParticipants
 
 ```ts
 NoParticipants: string;
 ```
+
+***
 
 ### NoSearchResults
 
@@ -206,11 +270,15 @@ NoParticipants: string;
 NoSearchResults: string;
 ```
 
+***
+
 ### Ok
 
 ```ts
 Ok: string;
 ```
+
+***
 
 ### OpenProfileCardFor
 
@@ -218,11 +286,15 @@ Ok: string;
 OpenProfileCardFor: string;
 ```
 
+***
+
 ### Options
 
 ```ts
 Options: string;
 ```
+
+***
 
 ### Participants
 
@@ -230,11 +302,15 @@ Options: string;
 Participants: string;
 ```
 
+***
+
 ### ParticipantsCount
 
 ```ts
 ParticipantsCount: string;
 ```
+
+***
 
 ### Password
 
@@ -242,11 +318,15 @@ ParticipantsCount: string;
 Password: string;
 ```
 
+***
+
 ### Pending
 
 ```ts
 Pending: string;
 ```
+
+***
 
 ### Registration
 
@@ -254,11 +334,15 @@ Pending: string;
 Registration: string;
 ```
 
+***
+
 ### Reject
 
 ```ts
 Reject: string;
 ```
+
+***
 
 ### Rejected
 
@@ -266,11 +350,15 @@ Reject: string;
 Rejected: string;
 ```
 
+***
+
 ### Remove
 
 ```ts
 Remove: string;
 ```
+
+***
 
 ### RemoveParticipantsConfirmation
 
@@ -278,11 +366,15 @@ Remove: string;
 RemoveParticipantsConfirmation: string;
 ```
 
+***
+
 ### Role
 
 ```ts
 Role: string;
 ```
+
+***
 
 ### Save
 
@@ -290,11 +382,15 @@ Role: string;
 Save: string;
 ```
 
+***
+
 ### Search
 
 ```ts
 Search: string;
 ```
+
+***
 
 ### SelectAll
 
@@ -302,11 +398,15 @@ Search: string;
 SelectAll: string;
 ```
 
+***
+
 ### SelectUsersFrom
 
 ```ts
 SelectUsersFrom: string;
 ```
+
+***
 
 ### SendMessage
 
@@ -314,11 +414,15 @@ SelectUsersFrom: string;
 SendMessage: string;
 ```
 
+***
+
 ### SendMessageToolTip
 
 ```ts
 SendMessageToolTip: string;
 ```
+
+***
 
 ### SynchronizedHierarchiesEmptyState
 
@@ -326,11 +430,15 @@ SendMessageToolTip: string;
 SynchronizedHierarchiesEmptyState: string;
 ```
 
+***
+
 ### Tasks
 
 ```ts
 Tasks: string;
 ```
+
+***
 
 ### TemporaryAccess
 
@@ -338,17 +446,23 @@ Tasks: string;
 TemporaryAccess: string;
 ```
 
+***
+
 ### UnerolledParticipantsEmptyState
 
 ```ts
 UnerolledParticipantsEmptyState: string;
 ```
 
+***
+
 ### User
 
 ```ts
 User: string;
 ```
+
+***
 
 ### Users
 

@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesUpdatableNotificationUpdateV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### IsRead
 
 ```ts
 IsRead: boolean;
 ```
+
+***
 
 ### NotificationId
 

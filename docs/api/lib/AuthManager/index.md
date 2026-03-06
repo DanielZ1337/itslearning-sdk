@@ -2,9 +2,7 @@
 
 # lib/AuthManager
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

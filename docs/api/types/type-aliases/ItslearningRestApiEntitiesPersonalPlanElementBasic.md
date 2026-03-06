@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalPlanElementBasic = object;
 ```
 
-## Type declaration
+## Properties
 
 ### IconUri
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalPlanElementBasic = object;
 IconUri: string;
 ```
 
+***
+
 ### Id
 
 ```ts
 Id: number;
 ```
+
+***
 
 ### IsMarkedAsHomework
 
@@ -26,11 +30,15 @@ Id: number;
 IsMarkedAsHomework: boolean;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Type
 

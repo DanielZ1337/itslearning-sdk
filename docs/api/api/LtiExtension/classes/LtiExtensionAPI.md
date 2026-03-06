@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new LtiExtensionAPI()
+### Constructor
 
 ```ts
-new LtiExtensionAPI(http): LtiExtensionAPI
+new LtiExtensionAPI(http): LtiExtensionAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new LtiExtensionAPI(http): LtiExtensionAPI
 
 #### Returns
 
-[`LtiExtensionAPI`](LtiExtensionAPI.md)
+`LtiExtensionAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getLtiDetailsV1()
 
 ```ts
-getLtiDetailsV1(extensionId, courseId): Promise<ItslearningRestApiEntitiesPersonalLtiExtensionDetails>
+getLtiDetailsV1(extensionId, courseId?): Promise<ItslearningRestApiEntitiesPersonalLtiExtensionDetails>;
 ```
 
 Gets the LTI details for the user and for the given course (if defined).
@@ -65,7 +65,7 @@ Gets the LTI details for the user and for the given course (if defined).
 
 The unique ID of the LTI extension.
 
-##### courseId
+##### courseId?
 
 `number` = `0`
 
@@ -82,7 +82,7 @@ A promise that resolves to the LTI details.
 ### getLtiDetailsV2()
 
 ```ts
-getLtiDetailsV2(extensionId, courseId): Promise<ItslearningRestApiEntitiesPersonalLtiExtensionCustomerSetup>
+getLtiDetailsV2(extensionId, courseId?): Promise<ItslearningRestApiEntitiesPersonalLtiExtensionCustomerSetup>;
 ```
 
 Gets the LTI customer setup for the user and for the given course (if defined).
@@ -95,7 +95,7 @@ Gets the LTI customer setup for the user and for the given course (if defined).
 
 The unique ID of the LTI extension.
 
-##### courseId
+##### courseId?
 
 `number` = `0`
 

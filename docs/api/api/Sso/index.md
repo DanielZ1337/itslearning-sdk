@@ -2,9 +2,7 @@
 
 # api/Sso
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

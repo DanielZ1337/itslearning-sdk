@@ -2,9 +2,7 @@
 
 # api/NativeApp
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

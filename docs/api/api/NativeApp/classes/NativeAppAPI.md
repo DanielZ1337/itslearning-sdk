@@ -18,10 +18,10 @@ However, if authentication is needed in the future, consider implementing it acc
 
 ## Constructors
 
-### new NativeAppAPI()
+### Constructor
 
 ```ts
-new NativeAppAPI(http): NativeAppAPI
+new NativeAppAPI(http): NativeAppAPI;
 ```
 
 #### Parameters
@@ -32,11 +32,11 @@ new NativeAppAPI(http): NativeAppAPI
 
 #### Returns
 
-[`NativeAppAPI`](NativeAppAPI.md)
+`NativeAppAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -48,7 +48,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -58,7 +58,7 @@ protected readonly http: HttpClient;
 checkVersion(
    applicationKey, 
    currentVersion, 
-operatingSystem): Promise<ItslearningCommonRestApiEntitiesVersionResponse>
+operatingSystem): Promise<ItslearningCommonRestApiEntitiesVersionResponse>;
 ```
 
 Checks if the current version of the application is up to date.

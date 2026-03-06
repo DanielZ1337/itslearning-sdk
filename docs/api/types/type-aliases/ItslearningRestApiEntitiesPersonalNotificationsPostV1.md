@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalNotificationsPostV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### LocalizedMessages
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalNotificationsPostV1 = object;
 LocalizedMessages: Record<string, string>[];
 ```
 
+***
+
 ### Locations
 
 ```ts
 Locations: ItslearningRestApiEntitiesTypedId[];
 ```
+
+***
 
 ### Message
 
@@ -26,11 +30,15 @@ Locations: ItslearningRestApiEntitiesTypedId[];
 Message: string;
 ```
 
+***
+
 ### NotificationType
 
 ```ts
 NotificationType: string;
 ```
+
+***
 
 ### Object
 
@@ -38,11 +46,15 @@ NotificationType: string;
 Object: ItslearningRestApiEntitiesTypedId;
 ```
 
+***
+
 ### ToPersonIds
 
 ```ts
 ToPersonIds: number[];
 ```
+
+***
 
 ### Url
 

@@ -2,9 +2,7 @@
 
 # api/Workload
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

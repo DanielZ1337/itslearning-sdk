@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Person`.
 
 ## Constructors
 
-### new PersonAPI()
+### Constructor
 
 ```ts
-new PersonAPI(http): PersonAPI
+new PersonAPI(http): PersonAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new PersonAPI(http): PersonAPI
 
 #### Returns
 
-[`PersonAPI`](PersonAPI.md)
+`PersonAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getExtraUserInfo()
 
 ```ts
-getExtraUserInfo(personId): Promise<ItsolutionsItslearningItslCoreBusinessLayerPersonCustomInfoExtraUserInformationField>
+getExtraUserInfo(personId): Promise<ItsolutionsItslearningItslCoreBusinessLayerPersonCustomInfoExtraUserInformationField>;
 ```
 
 Gets extra user information for a given person (if configured and accessible).
@@ -74,7 +74,7 @@ The unique ID of the person.
 ### getImageDimensions()
 
 ```ts
-getImageDimensions(): Promise<ItslearningRestApiEntitiesPersonImageDimensions>
+getImageDimensions(): Promise<ItslearningRestApiEntitiesPersonImageDimensions>;
 ```
 
 Gets the max image dimensions allowed for a profile image upload.
@@ -88,7 +88,7 @@ Gets the max image dimensions allowed for a profile image upload.
 ### getMyProfile()
 
 ```ts
-getMyProfile(): Promise<ItslearningRestApiEntitiesPersonProfile>
+getMyProfile(): Promise<ItslearningRestApiEntitiesPersonProfile>;
 ```
 
 Gets the user's profile details (language codes, etc.).
@@ -102,7 +102,7 @@ Gets the user's profile details (language codes, etc.).
 ### getPersonFeatures()
 
 ```ts
-getPersonFeatures(): Promise<ItslearningRestApiEntitiesPersonalFeature>
+getPersonFeatures(): Promise<ItslearningRestApiEntitiesPersonalFeature>;
 ```
 
 Gets available features for the current person.
@@ -116,7 +116,7 @@ Gets available features for the current person.
 ### getPersonInfo()
 
 ```ts
-getPersonInfo(personId): Promise<ItslearningRestApiEntitiesPersonSimple>
+getPersonInfo(personId): Promise<ItslearningRestApiEntitiesPersonSimple>;
 ```
 
 Gets basic information about the requested person (subject to eSafety rules).
@@ -138,7 +138,7 @@ The unique ID of the person.
 ### getPersonRelations()
 
 ```ts
-getPersonRelations(personId): Promise<ItslearningRestApiEntitiesRelation[]>
+getPersonRelations(personId): Promise<ItslearningRestApiEntitiesRelation[]>;
 ```
 
 Gets list of relations for the specified person.
@@ -160,7 +160,7 @@ The unique ID of the person.
 ### getPersonRoles()
 
 ```ts
-getPersonRoles(): Promise<ItslearningRestApiEntitiesPersonRole[]>
+getPersonRoles(): Promise<ItslearningRestApiEntitiesPersonRole[]>;
 ```
 
 Gets list of roles for the current person.
@@ -174,7 +174,7 @@ Gets list of roles for the current person.
 ### getServiceAccessToken()
 
 ```ts
-getServiceAccessToken(serviceName): Promise<unknown>
+getServiceAccessToken(serviceName): Promise<unknown>;
 ```
 
 Gets an access token for the specified service on behalf of the user.
@@ -196,7 +196,7 @@ The name of the service.
 ### setOnlineStatus()
 
 ```ts
-setOnlineStatus(): Promise<number>
+setOnlineStatus(): Promise<number>;
 ```
 
 Marks the user as online.
@@ -213,7 +213,7 @@ the interval in seconds before you should call this method again
 ### setPushNotifications()
 
 ```ts
-setPushNotifications(pushData): Promise<void>
+setPushNotifications(pushData): Promise<void>;
 ```
 
 Sets push notifications in itslearning (on/off) for a device.
@@ -223,7 +223,7 @@ Also registers the device for push notifications (if needed).
 
 ##### pushData
 
-`unknown`
+[`ItslearningRestApiEntitiesPushSetting`](../../../types/type-aliases/ItslearningRestApiEntitiesPushSetting.md)
 
 The configuration data for push notifications.
 
@@ -236,7 +236,7 @@ The configuration data for push notifications.
 ### setRemindConnectGoogleOnLogin()
 
 ```ts
-setRemindConnectGoogleOnLogin(remind): Promise<void>
+setRemindConnectGoogleOnLogin(remind): Promise<void>;
 ```
 
 Sets the person setting "RemindConnectGoogleOnLogin".
@@ -258,7 +258,7 @@ Boolean to enable or disable the reminder.
 ### uploadProfileImage()
 
 ```ts
-uploadProfileImage(imageData): Promise<void>
+uploadProfileImage(imageData): Promise<void>;
 ```
 
 Uploads/updates the person's profile image.

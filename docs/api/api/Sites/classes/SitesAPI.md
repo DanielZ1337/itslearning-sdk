@@ -8,10 +8,10 @@
 
 ## Constructors
 
-### new SitesAPI()
+### Constructor
 
 ```ts
-new SitesAPI(http): SitesAPI
+new SitesAPI(http): SitesAPI;
 ```
 
 #### Parameters
@@ -22,11 +22,11 @@ new SitesAPI(http): SitesAPI
 
 #### Returns
 
-[`SitesAPI`](SitesAPI.md)
+`SitesAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -38,14 +38,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getAllCustomerSites()
 
 ```ts
-getAllCustomerSites(sitesFilter?): Promise<ItslearningRestApiEntitiesSite>
+getAllCustomerSites(sitesFilter?): Promise<ItslearningRestApiEntitiesSite>;
 ```
 
 #### Parameters
@@ -63,7 +63,7 @@ getAllCustomerSites(sitesFilter?): Promise<ItslearningRestApiEntitiesSite>
 ### getAllOrganisations()
 
 ```ts
-getAllOrganisations(sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite>
+getAllOrganisations(sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite>;
 ```
 
 #### Parameters
@@ -81,7 +81,7 @@ getAllOrganisations(sitesFilter?): Promise<EntityListOfItslearningRestApiEntitie
 ### getLoginDetails()
 
 ```ts
-getLoginDetails(customerId): Promise<ItslearningRestApiEntitiesSiteLoginDetails>
+getLoginDetails(customerId): Promise<ItslearningRestApiEntitiesSiteLoginDetails>;
 ```
 
 #### Parameters
@@ -99,7 +99,7 @@ getLoginDetails(customerId): Promise<ItslearningRestApiEntitiesSiteLoginDetails>
 ### getSiteByCustomerId()
 
 ```ts
-getSiteByCustomerId(customerId): Promise<ItslearningRestApiEntitiesSite>
+getSiteByCustomerId(customerId): Promise<ItslearningRestApiEntitiesSite>;
 ```
 
 #### Parameters
@@ -117,7 +117,7 @@ getSiteByCustomerId(customerId): Promise<ItslearningRestApiEntitiesSite>
 ### getSiteByShortname()
 
 ```ts
-getSiteByShortname(shortname): Promise<ItslearningRestApiEntitiesSite>
+getSiteByShortname(shortname): Promise<ItslearningRestApiEntitiesSite>;
 ```
 
 #### Parameters
@@ -139,7 +139,7 @@ getSites(
    startsWith?, 
    pageIndex?, 
    pageSize?, 
-sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesSiteBase>
+sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesSiteBase>;
 ```
 
 #### Parameters
@@ -171,9 +171,9 @@ sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesSiteBase>
 ```ts
 searchOrganisations(
    searchText, 
-   pageIndex, 
-   pageSize, 
-sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite>
+   pageIndex?, 
+   pageSize?, 
+sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesAggregatedOrganisationLite>;
 ```
 
 #### Parameters
@@ -182,11 +182,11 @@ sitesFilter?): Promise<EntityListOfItslearningRestApiEntitiesAggregatedOrganisat
 
 `string`
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 

@@ -2,9 +2,7 @@
 
 # api/SiteLinks
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

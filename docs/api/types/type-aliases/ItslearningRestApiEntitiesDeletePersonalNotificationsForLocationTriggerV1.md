@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesDeletePersonalNotificationsForLocationTriggerV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Location
 

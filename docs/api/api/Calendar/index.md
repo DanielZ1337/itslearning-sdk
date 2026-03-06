@@ -2,9 +2,7 @@
 
 # api/Calendar
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

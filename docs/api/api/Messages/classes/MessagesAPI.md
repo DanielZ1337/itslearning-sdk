@@ -15,10 +15,10 @@ Secured with OAuth2 and requires the OAuth2 API scope `Messages`.
 
 ## Constructors
 
-### new MessagesAPI()
+### Constructor
 
 ```ts
-new MessagesAPI(http): MessagesAPI
+new MessagesAPI(http): MessagesAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new MessagesAPI(http): MessagesAPI
 
 #### Returns
 
-[`MessagesAPI`](MessagesAPI.md)
+`MessagesAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### deleteMessage()
 
 ```ts
-deleteMessage(messageId, messageOrigin): Promise<void>
+deleteMessage(messageId, messageOrigin): Promise<void>;
 ```
 
 Deletes a message by moving it to the deleted folder.
@@ -80,7 +80,7 @@ The origin of the message.
 ### getMessage()
 
 ```ts
-getMessage(messageId): Promise<unknown>
+getMessage(messageId): Promise<ItslearningRestApiEntitiesMessage>;
 ```
 
 Gets a single message by its ID.
@@ -95,14 +95,14 @@ The unique ID of the message.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise`\<[`ItslearningRestApiEntitiesMessage`](../../../types/type-aliases/ItslearningRestApiEntitiesMessage.md)\>
 
 ***
 
 ### getMessageAttachment()
 
 ```ts
-getMessageAttachment(fileId): Promise<unknown>
+getMessageAttachment(fileId): Promise<unknown>;
 ```
 
 Gets an attachment from a message.
@@ -128,7 +128,7 @@ getMessages(
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<unknown>
+pageSize?): Promise<unknown>;
 ```
 
 Gets the user's messages. Supports paging with UseNewerThan & FromId.
@@ -168,7 +168,7 @@ The size of the page (default = 20).
 ### getUnreadCount()
 
 ```ts
-getUnreadCount(): Promise<number>
+getUnreadCount(): Promise<number>;
 ```
 
 Returns the number of unread messages for the user.
@@ -182,20 +182,20 @@ Returns the number of unread messages for the user.
 ### getUnreadMessages()
 
 ```ts
-getUnreadMessages(pageIndex, pageSize): Promise<unknown>
+getUnreadMessages(pageIndex?, pageSize?): Promise<unknown>;
 ```
 
 Gets the user's unread messages, supports paging.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The page index (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `20`
 
@@ -210,7 +210,7 @@ The page size (default = 20, for example).
 ### searchMessageRecipients()
 
 ```ts
-searchMessageRecipients(searchText): Promise<unknown>
+searchMessageRecipients(searchText): Promise<unknown>;
 ```
 
 Searches for message recipients, given esafety rules.
@@ -232,7 +232,7 @@ The text to search for recipients (min 3 chars).
 ### sendMessage()
 
 ```ts
-sendMessage(data): Promise<unknown>
+sendMessage(data): Promise<ItslearningRestApiEntitiesMessage>;
 ```
 
 Sends a message to recipients.
@@ -241,20 +241,20 @@ Sends a message to recipients.
 
 ##### data
 
-`unknown`
+[`ItslearningRestApiEntitiesMessageToSend`](../../../types/type-aliases/ItslearningRestApiEntitiesMessageToSend.md)
 
 Message details, including recipients and optional ReplyToMessageId.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise`\<[`ItslearningRestApiEntitiesMessage`](../../../types/type-aliases/ItslearningRestApiEntitiesMessage.md)\>
 
 ***
 
 ### setPushNotifications()
 
 ```ts
-setPushNotifications(data): Promise<void>
+setPushNotifications(data): Promise<void>;
 ```
 
 (Obsolete) Sets push notifications for a device in itslearning.
@@ -264,7 +264,7 @@ Use `restapi/personal/person/push/v1` instead.
 
 ##### data
 
-`unknown`
+[`ItslearningRestApiEntitiesPushSetting`](../../../types/type-aliases/ItslearningRestApiEntitiesPushSetting.md)
 
 The push configuration data.
 
@@ -280,7 +280,7 @@ The push configuration data.
 toggleFavorite(
    messageId, 
    isFavorite?, 
-messageOrigin?): Promise<SystemNetHttpHttpResponseMessage>
+messageOrigin?): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Toggles a message's favorite status.
@@ -317,7 +317,7 @@ The origin of the message.
 updateMessage(
    messageId, 
    messageOrigin, 
-updateData): Promise<void>
+updateData): Promise<void>;
 ```
 
 Updates a message's properties (only supports updating IsRead).
@@ -338,7 +338,7 @@ The origin of the message.
 
 ##### updateData
 
-`unknown`
+[`ItslearningRestApiEntitiesUpdatableMessageUpdateV1`](../../../types/type-aliases/ItslearningRestApiEntitiesUpdatableMessageUpdateV1.md)
 
 The data to update (e.g., { IsRead: true }).
 
@@ -351,7 +351,7 @@ The data to update (e.g., { IsRead: true }).
 ### updateMessages()
 
 ```ts
-updateMessages(data): Promise<void>
+updateMessages(data): Promise<void>;
 ```
 
 Updates messages (only supports updating IsRead field).
@@ -360,7 +360,7 @@ Updates messages (only supports updating IsRead field).
 
 ##### data
 
-`unknown`
+[`ItslearningRestApiEntitiesUpdatableMessageUpdateV1`](../../../types/type-aliases/ItslearningRestApiEntitiesUpdatableMessageUpdateV1.md)[]
 
 The data containing message IDs and IsRead values to update.
 

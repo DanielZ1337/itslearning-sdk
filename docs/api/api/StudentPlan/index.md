@@ -2,9 +2,7 @@
 
 # api/StudentPlan
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

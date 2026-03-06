@@ -6,7 +6,7 @@
 const ItslearningPlatformRestApiSdkCommonEntitiesSharingScope: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Community
 

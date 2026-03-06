@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesDeletePersonalNotificationsForObjectTriggerV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Object
 

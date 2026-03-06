@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonalLtiExtensionCustomerSetup = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ClientId
 
 ```ts
 ClientId: string;
 ```
+
+***
 
 ### DeploymentId
 

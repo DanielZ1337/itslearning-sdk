@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageThreadSearchParams = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AttachmentFilter
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesInstantMessageThreadSearchParams = object;
 AttachmentFilter: boolean;
 ```
 
+***
+
 ### MaxMessages
 
 ```ts
 MaxMessages: number;
 ```
+
+***
 
 ### MaxThreadCount
 
@@ -26,11 +30,15 @@ MaxMessages: number;
 MaxThreadCount: number;
 ```
 
+***
+
 ### PersonIdFilter
 
 ```ts
 PersonIdFilter: number;
 ```
+
+***
 
 ### SearchText
 
@@ -38,11 +46,15 @@ PersonIdFilter: number;
 SearchText: string;
 ```
 
+***
+
 ### SentFilter
 
 ```ts
 SentFilter: boolean;
 ```
+
+***
 
 ### StarredFilter
 
@@ -50,17 +62,23 @@ SentFilter: boolean;
 StarredFilter: boolean;
 ```
 
+***
+
 ### ThreadIdFilter
 
 ```ts
 ThreadIdFilter: number;
 ```
 
+***
+
 ### ThreadPage
 
 ```ts
 ThreadPage: number;
 ```
+
+***
 
 ### UnreadFilter
 

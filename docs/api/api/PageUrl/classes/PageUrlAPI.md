@@ -15,10 +15,10 @@ This API does not require authentication.
 
 ## Constructors
 
-### new PageUrlAPI()
+### Constructor
 
 ```ts
-new PageUrlAPI(http): PageUrlAPI
+new PageUrlAPI(http): PageUrlAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new PageUrlAPI(http): PageUrlAPI
 
 #### Returns
 
-[`PageUrlAPI`](PageUrlAPI.md)
+`PageUrlAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getCkEditorConfigUrls()
 
 ```ts
-getCkEditorConfigUrls(): Promise<Record<string, string>>
+getCkEditorConfigUrls(): Promise<Record<string, string>>;
 ```
 
 Gets the URLs required to configure the CkEditor.
@@ -71,7 +71,7 @@ A promise that resolves to the CkEditor configuration URLs.
 getCourseElementPageUrl(
    courseId, 
    elementId, 
-elementType?): Promise<string>
+elementType?): Promise<string>;
 ```
 
 Gets the 'course element' page URL.
@@ -107,7 +107,7 @@ A promise that resolves to the URL of the specified course element.
 ### getServicesBaseUrl()
 
 ```ts
-getServicesBaseUrl(): Promise<Record<string, string>>
+getServicesBaseUrl(): Promise<Record<string, string>>;
 ```
 
 Gets the base URLs for different customer-specific services.
@@ -123,7 +123,7 @@ A promise that resolves to the base URLs of various services.
 ### getTreeLinkBaseUrl()
 
 ```ts
-getTreeLinkBaseUrl(): Promise<string>
+getTreeLinkBaseUrl(): Promise<string>;
 ```
 
 Gets the base URL to build tree link navigation URLs.
@@ -139,7 +139,7 @@ A promise that resolves to the base URL for tree link navigation.
 ### getViewLearningToolElementPageUrl()
 
 ```ts
-getViewLearningToolElementPageUrl(elementId): Promise<string>
+getViewLearningToolElementPageUrl(elementId): Promise<string>;
 ```
 
 Gets the 'view learning tool element' page URL.

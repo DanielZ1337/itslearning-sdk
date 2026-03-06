@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalFeature = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Features
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalFeature = object;
 Features: ItslearningRestApiEntitiesPersonalFeature[];
 ```
 
+***
+
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### Url
 

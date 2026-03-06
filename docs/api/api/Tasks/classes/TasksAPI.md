@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Tasks`.
 
 ## Constructors
 
-### new TasksAPI()
+### Constructor
 
 ```ts
-new TasksAPI(http): TasksAPI
+new TasksAPI(http): TasksAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new TasksAPI(http): TasksAPI
 
 #### Returns
 
-[`TasksAPI`](TasksAPI.md)
+`TasksAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,7 +45,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -54,8 +54,8 @@ protected readonly http: HttpClient;
 ```ts
 getCourseFollowUpTasks(
    courseId, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Gets follow-up tasks for a specific course.
@@ -73,13 +73,13 @@ Supports paging. If paging is not used, it will use a default pageSize on pageIn
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -96,7 +96,7 @@ A promise that resolves to a list of follow-up tasks for the specified course.
 ### getUserFollowUpTasks()
 
 ```ts
-getUserFollowUpTasks(pageIndex, pageSize): Promise<unknown>
+getUserFollowUpTasks(pageIndex?, pageSize?): Promise<unknown>;
 ```
 
 Gets the user's follow-up tasks.
@@ -108,13 +108,13 @@ Supports paging. If paging is not used, it will use a default pageSize on pageIn
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -132,24 +132,24 @@ A promise that resolves to a list of the user's follow-up tasks.
 
 ```ts
 getUserTasks(
-   pageIndex, 
-   pageSize, 
+   pageIndex?, 
+   pageSize?, 
    status?, 
    deadline?, 
-isHomework?): Promise<unknown>
+isHomework?): Promise<unknown>;
 ```
 
 Gets a list of tasks assigned to the user with optional filters.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 

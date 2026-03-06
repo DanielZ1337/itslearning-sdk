@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesTypedId = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Id
 
 ```ts
 Id: number;
 ```
+
+***
 
 ### Type
 

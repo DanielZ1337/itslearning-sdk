@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesInstantMessageListModel = object;
 ```
 
-## Type declaration
+## Properties
 
 ### HasMore
 
 ```ts
 HasMore: boolean;
 ```
+
+***
 
 ### Messages
 

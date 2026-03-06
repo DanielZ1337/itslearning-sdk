@@ -2,9 +2,7 @@
 
 # api/Projects
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

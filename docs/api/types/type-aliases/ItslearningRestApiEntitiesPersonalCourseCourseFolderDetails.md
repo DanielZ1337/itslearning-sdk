@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseFolderDetails = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AddElementUrl
 
 ```ts
 AddElementUrl: string;
 ```
+
+***
 
 ### Resources
 

@@ -6,7 +6,7 @@
 type ItsolutionsItslearningItslCoreBusinessLayerInstantMessageBroadcastBroadcastMessageStatisticsEntity = object;
 ```
 
-## Type declaration
+## Properties
 
 ### InstantMessageThreadId
 
@@ -14,17 +14,23 @@ type ItsolutionsItslearningItslCoreBusinessLayerInstantMessageBroadcastBroadcast
 InstantMessageThreadId: number;
 ```
 
+***
+
 ### ReadMessagePercentage
 
 ```ts
 ReadMessagePercentage: number;
 ```
 
+***
+
 ### ReadMessageRecipientsCount
 
 ```ts
 ReadMessageRecipientsCount: number;
 ```
+
+***
 
 ### TotalRecipientsCount
 

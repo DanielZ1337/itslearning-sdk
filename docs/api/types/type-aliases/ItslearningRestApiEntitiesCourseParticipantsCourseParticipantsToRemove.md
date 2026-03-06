@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesCourseParticipantsCourseParticipantsToRemove = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ParticipantIdsToBeRemoved
 

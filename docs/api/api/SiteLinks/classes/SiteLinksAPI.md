@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Person`.
 
 ## Constructors
 
-### new SiteLinksAPI()
+### Constructor
 
 ```ts
-new SiteLinksAPI(http): SiteLinksAPI
+new SiteLinksAPI(http): SiteLinksAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new SiteLinksAPI(http): SiteLinksAPI
 
 #### Returns
 
-[`SiteLinksAPI`](SiteLinksAPI.md)
+`SiteLinksAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getSiteLinks()
 
 ```ts
-getSiteLinks(): Promise<unknown>
+getSiteLinks(): Promise<unknown>;
 ```
 
 Gets the site links visible to the user.

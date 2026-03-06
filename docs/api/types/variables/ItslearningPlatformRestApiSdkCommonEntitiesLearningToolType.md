@@ -6,7 +6,7 @@
 const ItslearningPlatformRestApiSdkCommonEntitiesLearningToolType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### LearningActivity
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCalendarAttendanceAttendanceStatistics = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Absent
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCalendarAttendanceAttendanceStatistics = 
 Absent: number;
 ```
 
+***
+
 ### Excluded
 
 ```ts
 Excluded: number;
 ```
+
+***
 
 ### Present
 

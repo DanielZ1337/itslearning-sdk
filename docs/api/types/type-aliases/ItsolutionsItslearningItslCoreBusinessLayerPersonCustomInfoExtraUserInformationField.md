@@ -6,13 +6,15 @@
 type ItsolutionsItslearningItslCoreBusinessLayerPersonCustomInfoExtraUserInformationField = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### Value
 

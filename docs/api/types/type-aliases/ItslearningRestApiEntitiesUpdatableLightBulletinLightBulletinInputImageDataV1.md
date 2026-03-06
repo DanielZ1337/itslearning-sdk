@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesUpdatableLightBulletinLightBulletinInputImageDataV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### OriginalFile
 
 ```ts
 OriginalFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
 ```
+
+***
 
 ### PreviewFile
 

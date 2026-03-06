@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesLocationType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Course
 

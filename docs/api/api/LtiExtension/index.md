@@ -2,9 +2,7 @@
 
 # api/LtiExtension
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

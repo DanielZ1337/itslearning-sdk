@@ -2,9 +2,7 @@
 
 # api/Planner
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

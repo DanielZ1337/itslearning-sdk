@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseApplicant = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCourseCourseApplicant = object;
 CourseId: number;
 ```
 
+***
+
 ### DefaultOrganisation
 
 ```ts
 DefaultOrganisation: string;
 ```
+
+***
 
 ### Email
 
@@ -26,11 +30,15 @@ DefaultOrganisation: string;
 Email: string;
 ```
 
+***
+
 ### FullName
 
 ```ts
 FullName: string;
 ```
+
+***
 
 ### IsExternal
 
@@ -38,11 +46,15 @@ FullName: string;
 IsExternal: boolean;
 ```
 
+***
+
 ### IsMember
 
 ```ts
 IsMember: boolean;
 ```
+
+***
 
 ### Mode
 
@@ -50,11 +62,15 @@ IsMember: boolean;
 Mode: number;
 ```
 
+***
+
 ### PersonId
 
 ```ts
 PersonId: number;
 ```
+
+***
 
 ### PictureUrl
 
@@ -62,11 +78,15 @@ PersonId: number;
 PictureUrl: string;
 ```
 
+***
+
 ### Role
 
 ```ts
 Role: string;
 ```
+
+***
 
 ### Status
 

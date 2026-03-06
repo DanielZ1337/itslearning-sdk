@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesPersonRole: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Admin
 

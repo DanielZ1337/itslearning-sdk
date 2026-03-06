@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesNotificationType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Assessment
 

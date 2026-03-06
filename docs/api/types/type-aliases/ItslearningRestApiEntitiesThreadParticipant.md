@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesThreadParticipant = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AdditionalInfo
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesThreadParticipant = object;
 AdditionalInfo: string;
 ```
 
+***
+
 ### CanReceive
 
 ```ts
 CanReceive: boolean;
 ```
+
+***
 
 ### FirstName
 
@@ -26,11 +30,15 @@ CanReceive: boolean;
 FirstName: string;
 ```
 
+***
+
 ### FullName
 
 ```ts
 FullName: string;
 ```
+
+***
 
 ### IsDeleted
 
@@ -38,11 +46,15 @@ FullName: string;
 IsDeleted: boolean;
 ```
 
+***
+
 ### LastName
 
 ```ts
 LastName: string;
 ```
+
+***
 
 ### PersonId
 
@@ -50,11 +62,15 @@ LastName: string;
 PersonId: number;
 ```
 
+***
+
 ### ProfileImageUrl
 
 ```ts
 ProfileImageUrl: string;
 ```
+
+***
 
 ### ProfileImageUrlSmall
 
@@ -62,11 +78,15 @@ ProfileImageUrl: string;
 ProfileImageUrlSmall: string;
 ```
 
+***
+
 ### ProfileUrl
 
 ```ts
 ProfileUrl: string;
 ```
+
+***
 
 ### RoleInHierarchy
 
@@ -74,11 +94,15 @@ ProfileUrl: string;
 RoleInHierarchy: ItsolutionsItslUtilsConstantsHierarchyRole;
 ```
 
+***
+
 ### SourceLocationId
 
 ```ts
 SourceLocationId: number;
 ```
+
+***
 
 ### SourceLocationType
 

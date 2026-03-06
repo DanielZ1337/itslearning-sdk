@@ -2,9 +2,7 @@
 
 # api/InstantMessage
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

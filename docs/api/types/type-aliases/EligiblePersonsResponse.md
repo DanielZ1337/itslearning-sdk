@@ -6,7 +6,7 @@
 type EligiblePersonsResponse = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CustomString1
 
@@ -14,11 +14,15 @@ type EligiblePersonsResponse = object;
 CustomString1: string;
 ```
 
+***
+
 ### CustomString2
 
 ```ts
 CustomString2: string;
 ```
+
+***
 
 ### CustomString3
 
@@ -26,11 +30,15 @@ CustomString2: string;
 CustomString3: string;
 ```
 
+***
+
 ### CustomString4
 
 ```ts
 CustomString4: string;
 ```
+
+***
 
 ### CustomString5
 
@@ -38,11 +46,15 @@ CustomString4: string;
 CustomString5: string;
 ```
 
+***
+
 ### ExternalUserId
 
 ```ts
 ExternalUserId: string;
 ```
+
+***
 
 ### FirstName
 
@@ -50,11 +62,15 @@ ExternalUserId: string;
 FirstName: string;
 ```
 
+***
+
 ### HasValidImportData
 
 ```ts
 HasValidImportData: boolean;
 ```
+
+***
 
 ### HasValidImportDataForUpdate
 
@@ -62,11 +78,15 @@ HasValidImportData: boolean;
 HasValidImportDataForUpdate: boolean;
 ```
 
+***
+
 ### HasValidImportDataInsert
 
 ```ts
 HasValidImportDataInsert: boolean;
 ```
+
+***
 
 ### IsExternalUser
 
@@ -74,11 +94,15 @@ HasValidImportDataInsert: boolean;
 IsExternalUser: boolean;
 ```
 
+***
+
 ### IsPrimaryKeyValid
 
 ```ts
 IsPrimaryKeyValid: boolean;
 ```
+
+***
 
 ### LastLogOn
 
@@ -86,95 +110,97 @@ IsPrimaryKeyValid: boolean;
 LastLogOn: object;
 ```
 
-#### LastLogOn.Date
+#### Date
 
 ```ts
 Date: string;
 ```
 
-#### LastLogOn.Day
+#### Day
 
 ```ts
 Day: number;
 ```
 
-#### LastLogOn.DayOfWeek
+#### DayOfWeek
 
 ```ts
 DayOfWeek: number;
 ```
 
-#### LastLogOn.DayOfYear
+#### DayOfYear
 
 ```ts
 DayOfYear: number;
 ```
 
-#### LastLogOn.Hour
+#### Hour
 
 ```ts
 Hour: number;
 ```
 
-#### LastLogOn.IsAtBeginningOfDay
+#### IsAtBeginningOfDay
 
 ```ts
 IsAtBeginningOfDay: boolean;
 ```
 
-#### LastLogOn.IsAtEndOfDay
+#### IsAtEndOfDay
 
 ```ts
 IsAtEndOfDay: boolean;
 ```
 
-#### LastLogOn.IsEmpty
+#### IsEmpty
 
 ```ts
 IsEmpty: boolean;
 ```
 
-#### LastLogOn.IsNull
+#### IsNull
 
 ```ts
 IsNull: boolean;
 ```
 
-#### LastLogOn.IsUtc
+#### IsUtc
 
 ```ts
 IsUtc: boolean;
 ```
 
-#### LastLogOn.Minute
+#### Minute
 
 ```ts
 Minute: number;
 ```
 
-#### LastLogOn.Month
+#### Month
 
 ```ts
 Month: number;
 ```
 
-#### LastLogOn.Second
+#### Second
 
 ```ts
 Second: number;
 ```
 
-#### LastLogOn.TimeZoneId
+#### TimeZoneId
 
 ```ts
 TimeZoneId: number;
 ```
 
-#### LastLogOn.Year
+#### Year
 
 ```ts
 Year: number;
 ```
+
+***
 
 ### LastName
 
@@ -182,11 +208,15 @@ Year: number;
 LastName: string;
 ```
 
+***
+
 ### Mail
 
 ```ts
 Mail: string;
 ```
+
+***
 
 ### Name
 
@@ -194,41 +224,45 @@ Mail: string;
 Name: string;
 ```
 
+***
+
 ### OperationLog
 
 ```ts
 OperationLog: object;
 ```
 
-#### OperationLog.Errors
+#### Errors
 
 ```ts
-Errors: any[];
+Errors: unknown[];
 ```
 
-#### OperationLog.HasErrors
+#### HasErrors
 
 ```ts
 HasErrors: boolean;
 ```
 
-#### OperationLog.HasWarnings
+#### HasWarnings
 
 ```ts
 HasWarnings: boolean;
 ```
 
-#### OperationLog.RequestedOperation
+#### RequestedOperation
 
 ```ts
-RequestedOperation: any;
+RequestedOperation: unknown;
 ```
 
-#### OperationLog.Warnings
+#### Warnings
 
 ```ts
-Warnings: any[];
+Warnings: unknown[];
 ```
+
+***
 
 ### PersonId
 
@@ -236,11 +270,15 @@ Warnings: any[];
 PersonId: number;
 ```
 
+***
+
 ### Prefix
 
 ```ts
 Prefix: string;
 ```
+
+***
 
 ### SyncPersonKey
 
@@ -248,11 +286,15 @@ Prefix: string;
 SyncPersonKey: string;
 ```
 
+***
+
 ### UserName
 
 ```ts
 UserName: string;
 ```
+
+***
 
 ### UserNameIsGenerated
 

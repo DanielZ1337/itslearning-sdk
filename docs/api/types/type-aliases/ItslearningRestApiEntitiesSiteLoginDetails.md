@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesSiteLoginDetails = object;
 ```
 
-## Type declaration
+## Properties
 
 ### BaseUrl
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesSiteLoginDetails = object;
 BaseUrl: string;
 ```
 
+***
+
 ### CountryCode
 
 ```ts
 CountryCode: string;
 ```
+
+***
 
 ### CultureName
 
@@ -26,11 +30,15 @@ CountryCode: string;
 CultureName: string;
 ```
 
+***
+
 ### CustomerId
 
 ```ts
 CustomerId: string;
 ```
+
+***
 
 ### DisableForgottenPasswordLink
 
@@ -38,11 +46,15 @@ CustomerId: string;
 DisableForgottenPasswordLink: boolean;
 ```
 
+***
+
 ### FederatedLoginProviders
 
 ```ts
 FederatedLoginProviders: ItslearningRestApiEntitiesFederatedLoginProvider[];
 ```
+
+***
 
 ### IsFronterUpgradedSite
 
@@ -50,11 +62,15 @@ FederatedLoginProviders: ItslearningRestApiEntitiesFederatedLoginProvider[];
 IsFronterUpgradedSite: boolean;
 ```
 
+***
+
 ### IsNativeLoginDefault
 
 ```ts
 IsNativeLoginDefault: boolean;
 ```
+
+***
 
 ### IsParentAppEnabled
 
@@ -62,11 +78,15 @@ IsNativeLoginDefault: boolean;
 IsParentAppEnabled: boolean;
 ```
 
+***
+
 ### IsParentPortalEnabled
 
 ```ts
 IsParentPortalEnabled: boolean;
 ```
+
+***
 
 ### IsPersonalRestApiEnabled
 
@@ -74,11 +94,15 @@ IsParentPortalEnabled: boolean;
 IsPersonalRestApiEnabled: boolean;
 ```
 
+***
+
 ### OrgApiBaseUrl
 
 ```ts
 OrgApiBaseUrl: string;
 ```
+
+***
 
 ### Segment
 
@@ -86,11 +110,15 @@ OrgApiBaseUrl: string;
 Segment: ItsolutionsItslUtilsConstantsCustomerEducationSegment;
 ```
 
+***
+
 ### ShortName
 
 ```ts
 ShortName: string;
 ```
+
+***
 
 ### ShowCustomerInDropdownList
 
@@ -98,11 +126,15 @@ ShortName: string;
 ShowCustomerInDropdownList: boolean;
 ```
 
+***
+
 ### StateCode
 
 ```ts
 StateCode: string;
 ```
+
+***
 
 ### Title
 

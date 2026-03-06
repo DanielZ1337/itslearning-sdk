@@ -4,7 +4,7 @@
 
 ## Constructors
 
-### new ConfigManager()
+### Constructor
 
 ```ts
 new ConfigManager(
@@ -12,7 +12,7 @@ new ConfigManager(
    redirectUri, 
    baseURL, 
    accessToken?, 
-   refreshToken?): ConfigManager
+   refreshToken?): ConfigManager;
 ```
 
 #### Parameters
@@ -39,26 +39,26 @@ new ConfigManager(
 
 #### Returns
 
-[`ConfigManager`](ConfigManager.md)
+`ConfigManager`
 
 ## Methods
 
 ### getAccessToken()
 
 ```ts
-getAccessToken(): undefined | string
+getAccessToken(): string | undefined;
 ```
 
 #### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 ***
 
 ### getBaseURL()
 
 ```ts
-getBaseURL(): string
+getBaseURL(): string;
 ```
 
 #### Returns
@@ -70,7 +70,7 @@ getBaseURL(): string
 ### getClientId()
 
 ```ts
-getClientId(): string
+getClientId(): string;
 ```
 
 #### Returns
@@ -82,7 +82,7 @@ getClientId(): string
 ### getRedirectUri()
 
 ```ts
-getRedirectUri(): string
+getRedirectUri(): string;
 ```
 
 #### Returns
@@ -94,19 +94,19 @@ getRedirectUri(): string
 ### getRefreshToken()
 
 ```ts
-getRefreshToken(): undefined | string
+getRefreshToken(): string | undefined;
 ```
 
 #### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 ***
 
 ### setAccessToken()
 
 ```ts
-setAccessToken(token): void
+setAccessToken(token): void;
 ```
 
 #### Parameters
@@ -124,7 +124,7 @@ setAccessToken(token): void
 ### setBaseURL()
 
 ```ts
-setBaseURL(url): void
+setBaseURL(url): void;
 ```
 
 #### Parameters
@@ -142,7 +142,7 @@ setBaseURL(url): void
 ### setClientId()
 
 ```ts
-setClientId(id): void
+setClientId(id): void;
 ```
 
 #### Parameters
@@ -160,7 +160,7 @@ setClientId(id): void
 ### setRedirectUri()
 
 ```ts
-setRedirectUri(uri): void
+setRedirectUri(uri): void;
 ```
 
 #### Parameters
@@ -178,7 +178,7 @@ setRedirectUri(uri): void
 ### setRefreshToken()
 
 ```ts
-setRefreshToken(token): void
+setRefreshToken(token): void;
 ```
 
 #### Parameters

@@ -8,10 +8,10 @@
 
 ## Constructors
 
-### new SsoAPI()
+### Constructor
 
 ```ts
-new SsoAPI(http): SsoAPI
+new SsoAPI(http): SsoAPI;
 ```
 
 #### Parameters
@@ -22,11 +22,11 @@ new SsoAPI(http): SsoAPI
 
 #### Returns
 
-[`SsoAPI`](SsoAPI.md)
+`SsoAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -38,14 +38,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### generateSSOUrl()
 
 ```ts
-generateSSOUrl(url): Promise<string>
+generateSSOUrl(url): Promise<string>;
 ```
 
 #### Parameters

@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsItslearningSectionUrlParameter: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### AdministrationMenu
 

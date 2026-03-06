@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesUpdatableLightBulletinLightBulletinAddInputDataV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ActiveFromDate
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesUpdatableLightBulletinLightBulletinAddInputDataV1
 ActiveFromDate: Date;
 ```
 
+***
+
 ### ActiveToDate
 
 ```ts
 ActiveToDate: Date;
 ```
+
+***
 
 ### AllowComments
 
@@ -26,11 +30,15 @@ ActiveToDate: Date;
 AllowComments: boolean;
 ```
 
+***
+
 ### AttachedImages
 
 ```ts
 AttachedImages: ItslearningRestApiEntitiesUpdatableLightBulletinLightBulletinInputImageDataV1[];
 ```
+
+***
 
 ### CourseId
 
@@ -38,11 +46,15 @@ AttachedImages: ItslearningRestApiEntitiesUpdatableLightBulletinLightBulletinInp
 CourseId: number;
 ```
 
+***
+
 ### ElementIdsToAttach
 
 ```ts
 ElementIdsToAttach: string[];
 ```
+
+***
 
 ### Text
 

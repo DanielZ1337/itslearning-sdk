@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesLocationRecipient = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ColorScheme
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesLocationRecipient = object;
 ColorScheme: string;
 ```
 
+***
+
 ### LocationRecipientId
 
 ```ts
 LocationRecipientId: number;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Type
 

@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsContentAreaFilterType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### All
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPermissions = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanViewDetailedInformation
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPermissio
 CanViewDetailedInformation: boolean;
 ```
 
+***
+
 ### HasGeneralAdministrationPermission
 
 ```ts
 HasGeneralAdministrationPermission: boolean;
 ```
+
+***
 
 ### HasManageParticipantsAndGroupsPermission
 

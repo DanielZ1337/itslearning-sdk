@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesAssessmentRecordAssessmentScaleValue = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AssessmentItemId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesAssessmentRecordAssessmentScaleValue = object;
 AssessmentItemId: number;
 ```
 
+***
+
 ### OrderPosition
 
 ```ts
 OrderPosition: number;
 ```
+
+***
 
 ### PercentFrom
 
@@ -26,11 +30,15 @@ OrderPosition: number;
 PercentFrom: number;
 ```
 
+***
+
 ### PercentTo
 
 ```ts
 PercentTo: number;
 ```
+
+***
 
 ### Title
 

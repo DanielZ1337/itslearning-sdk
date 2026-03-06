@@ -6,7 +6,7 @@
 type ItsolutionsItslearningWebRestApiPersonalTokenResponse = object;
 ```
 
-## Type declaration
+## Properties
 
 ### access\_token
 
@@ -14,17 +14,23 @@ type ItsolutionsItslearningWebRestApiPersonalTokenResponse = object;
 access_token: string;
 ```
 
+***
+
 ### expires\_in
 
 ```ts
 expires_in: number;
 ```
 
+***
+
 ### refresh\_token
 
 ```ts
 refresh_token: string;
 ```
+
+***
 
 ### token\_type
 

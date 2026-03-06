@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageParticipant = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AvatarUrl
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesInstantMessageParticipant = object;
 AvatarUrl: string;
 ```
 
+***
+
 ### LocationId
 
 ```ts
 LocationId: number;
 ```
+
+***
 
 ### LocationType
 
@@ -26,11 +30,15 @@ LocationId: number;
 LocationType: number;
 ```
 
+***
+
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### PersonId
 

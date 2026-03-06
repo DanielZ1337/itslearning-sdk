@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesTaskDailyWorkflow = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CompletedTaskAssessmentText
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesTaskDailyWorkflow = object;
 CompletedTaskAssessmentText: string;
 ```
 
+***
+
 ### CourseColorClass
 
 ```ts
 CourseColorClass: string;
 ```
+
+***
 
 ### CourseId
 
@@ -26,11 +30,15 @@ CourseColorClass: string;
 CourseId: number;
 ```
 
+***
+
 ### CourseTitle
 
 ```ts
 CourseTitle: string;
 ```
+
+***
 
 ### Deadline
 
@@ -38,11 +46,15 @@ CourseTitle: string;
 Deadline: Date;
 ```
 
+***
+
 ### DeadlineDisplayTime
 
 ```ts
 DeadlineDisplayTime: string;
 ```
+
+***
 
 ### IconUrl
 
@@ -50,11 +62,15 @@ DeadlineDisplayTime: string;
 IconUrl: string;
 ```
 
+***
+
 ### IsHomework
 
 ```ts
 IsHomework: boolean;
 ```
+
+***
 
 ### IsPeerAssessment
 
@@ -62,11 +78,15 @@ IsHomework: boolean;
 IsPeerAssessment: boolean;
 ```
 
+***
+
 ### IsSelfAssessment
 
 ```ts
 IsSelfAssessment: boolean;
 ```
+
+***
 
 ### Status
 
@@ -74,11 +94,15 @@ IsSelfAssessment: boolean;
 Status: string;
 ```
 
+***
+
 ### TaskId
 
 ```ts
 TaskId: number;
 ```
+
+***
 
 ### TaskTitle
 
@@ -86,11 +110,15 @@ TaskId: number;
 TaskTitle: string;
 ```
 
+***
+
 ### TaskUrl
 
 ```ts
 TaskUrl: string;
 ```
+
+***
 
 ### TaskUrlTarget
 

@@ -2,9 +2,7 @@
 
 # lib/ConfigManager
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

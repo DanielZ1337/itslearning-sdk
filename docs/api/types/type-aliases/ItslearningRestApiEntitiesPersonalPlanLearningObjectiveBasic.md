@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalPlanLearningObjectiveBasic = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Description
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalPlanLearningObjectiveBasic = object;
 Description: string;
 ```
 
+***
+
 ### Id
 
 ```ts
 Id: number;
 ```
+
+***
 
 ### IsFromRepository
 
@@ -26,11 +30,15 @@ Id: number;
 IsFromRepository: boolean;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Type
 

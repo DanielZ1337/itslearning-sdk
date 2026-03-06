@@ -2,9 +2,7 @@
 
 # api/LightBulletinCourse
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

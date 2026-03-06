@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesRelation = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Items
 
 ```ts
 Items: string[];
 ```
+
+***
 
 ### Text
 

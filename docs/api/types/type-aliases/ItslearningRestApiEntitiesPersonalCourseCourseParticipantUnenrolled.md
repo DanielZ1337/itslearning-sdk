@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AssessmentUrl
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled = objec
 AssessmentUrl: string;
 ```
 
+***
+
 ### DateUnenrolled
 
 ```ts
 DateUnenrolled: string;
 ```
+
+***
 
 ### DateUnenrolledRelative
 
@@ -26,11 +30,15 @@ DateUnenrolled: string;
 DateUnenrolledRelative: string;
 ```
 
+***
+
 ### ExtraInformation
 
 ```ts
 ExtraInformation: string;
 ```
+
+***
 
 ### FullName
 
@@ -38,11 +46,15 @@ ExtraInformation: string;
 FullName: string;
 ```
 
+***
+
 ### MemberOfCourseGroups
 
 ```ts
 MemberOfCourseGroups: string;
 ```
+
+***
 
 ### PersonId
 
@@ -50,11 +62,15 @@ MemberOfCourseGroups: string;
 PersonId: number;
 ```
 
+***
+
 ### PictureUrl
 
 ```ts
 PictureUrl: string;
 ```
+
+***
 
 ### TemporaryAccess
 

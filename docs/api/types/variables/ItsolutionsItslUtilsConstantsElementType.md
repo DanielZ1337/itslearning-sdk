@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsElementType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### AchievementGoal
 

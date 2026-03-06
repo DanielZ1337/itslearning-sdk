@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesCourseParticipantToAdd = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseProfileId
 
 ```ts
 CourseProfileId: number;
 ```
+
+***
 
 ### PersonId
 

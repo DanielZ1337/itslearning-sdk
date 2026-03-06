@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesPersonCourse = object;
 ```
 
-## Type declaration
+Represents the course with personalized data.
+
+## Properties
 
 ### CourseCode
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesPersonCourse = object;
 CourseCode: string;
 ```
 
+Code for the course.
+
+***
+
 ### CourseColorClass
 
 ```ts
 CourseColorClass: string;
 ```
+
+Color code for the course.
+
+***
 
 ### CourseFillColor
 
@@ -26,11 +36,19 @@ CourseColorClass: string;
 CourseFillColor: string;
 ```
 
+Fill color code for the course.
+
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+The unique id for the course, in scope of a site (itslearning customer).
+
+***
 
 ### FriendlyName
 
@@ -38,11 +56,19 @@ CourseId: number;
 FriendlyName: string;
 ```
 
+The course friendly name.
+
+***
+
 ### HasAdminPermissions
 
 ```ts
 HasAdminPermissions: boolean;
 ```
+
+Defines if person has administration permissions in the course.
+
+***
 
 ### HasStudentPermissions
 
@@ -50,11 +76,19 @@ HasAdminPermissions: boolean;
 HasStudentPermissions: boolean;
 ```
 
+Defines if person has student permissions in the course.
+
+***
+
 ### LastUpdatedUtc
 
 ```ts
 LastUpdatedUtc: Date;
 ```
+
+The course last updated date. Time zone is UTC. Can be null if it was never updated.
+
+***
 
 ### NewBulletinsCount
 
@@ -62,11 +96,19 @@ LastUpdatedUtc: Date;
 NewBulletinsCount: number;
 ```
 
+The new bulletins in course for person.
+
+***
+
 ### NewNotificationsCount
 
 ```ts
 NewNotificationsCount: number;
 ```
+
+The new notifications count in course for person.
+
+***
 
 ### Title
 
@@ -74,8 +116,14 @@ NewNotificationsCount: number;
 Title: string;
 ```
 
+The course title.
+
+***
+
 ### Url
 
 ```ts
 Url: string;
 ```
+
+The itslearning internal URL for the course.

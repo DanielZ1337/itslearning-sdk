@@ -8,10 +8,10 @@
 
 ## Constructors
 
-### new TokenAPI()
+### Constructor
 
 ```ts
-new TokenAPI(http, clientId): TokenAPI
+new TokenAPI(http, clientId?): TokenAPI;
 ```
 
 #### Parameters
@@ -20,17 +20,17 @@ new TokenAPI(http, clientId): TokenAPI
 
 [`HttpClient`](../../../lib/HttpClient/classes/HttpClient.md)
 
-##### clientId
+##### clientId?
 
 `string` = `defaultConfig.clientId`
 
 #### Returns
 
-[`TokenAPI`](TokenAPI.md)
+`TokenAPI`
 
 #### Overrides
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -42,14 +42,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getAccessToken()
 
 ```ts
-getAccessToken(code): Promise<ItsolutionsItslearningWebRestApiPersonalTokenResponse>
+getAccessToken(code): Promise<ItsolutionsItslearningWebRestApiPersonalTokenResponse>;
 ```
 
 #### Parameters
@@ -67,7 +67,7 @@ getAccessToken(code): Promise<ItsolutionsItslearningWebRestApiPersonalTokenRespo
 ### refreshAccessToken()
 
 ```ts
-refreshAccessToken(clientId, refreshToken): Promise<ItsolutionsItslearningWebRestApiPersonalTokenResponse>
+refreshAccessToken(clientId, refreshToken): Promise<ItsolutionsItslearningWebRestApiPersonalTokenResponse>;
 ```
 
 #### Parameters
@@ -89,7 +89,7 @@ refreshAccessToken(clientId, refreshToken): Promise<ItsolutionsItslearningWebRes
 ### revokeToken()
 
 ```ts
-revokeToken(refreshToken): Promise<void>
+revokeToken(refreshToken): Promise<void>;
 ```
 
 #### Parameters

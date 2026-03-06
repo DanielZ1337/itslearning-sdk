@@ -16,10 +16,10 @@ Secured with OAuth2, and requires OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new CourseCardsAPI()
+### Constructor
 
 ```ts
-new CourseCardsAPI(http): CourseCardsAPI
+new CourseCardsAPI(http): CourseCardsAPI;
 ```
 
 #### Parameters
@@ -30,11 +30,11 @@ new CourseCardsAPI(http): CourseCardsAPI
 
 #### Returns
 
-[`CourseCardsAPI`](CourseCardsAPI.md)
+`CourseCardsAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -46,14 +46,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### applyCourseCardSettings()
 
 ```ts
-applyCourseCardSettings(courseId, settings): Promise<ItslearningRestApiEntitiesCourseCardSettings>
+applyCourseCardSettings(courseId, settings): Promise<ItslearningRestApiEntitiesCourseCardSettings>;
 ```
 
 Applies course card settings to a specific course.
@@ -83,7 +83,7 @@ A promise that resolves when the settings are successfully applied.
 ### getCourseCardSettings()
 
 ```ts
-getCourseCardSettings(courseId): Promise<ItslearningRestApiEntitiesCourseCardSettings>
+getCourseCardSettings(courseId): Promise<ItslearningRestApiEntitiesCourseCardSettings>;
 ```
 
 Retrieves the course card settings for a specific course.
@@ -108,30 +108,30 @@ A promise that resolves to the CourseCardSettings.
 
 ```ts
 getStarredCourseCards(
-   pageIndex, 
-   pageSize, 
-   sortBy, 
+   pageIndex?, 
+   pageSize?, 
+   sortBy?, 
    searchText?, 
-isShowMore?): Promise<EntityListOfItslearningRestApiEntitiesCourseCard>
+isShowMore?): Promise<EntityListOfItslearningRestApiEntitiesCourseCard>;
 ```
 
 Retrieves a paginated list of course cards for the user's starred courses.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
 The number of course cards per page (default is 10).
 
-##### sortBy
+##### sortBy?
 
 `string` = `"Title"`
 
@@ -161,30 +161,30 @@ A promise that resolves to a paginated list of starred course cards.
 
 ```ts
 getUnstarredCourseCards(
-   pageIndex, 
-   pageSize, 
-   sortBy, 
+   pageIndex?, 
+   pageSize?, 
+   sortBy?, 
    searchText?, 
-isShowMore?): Promise<EntityListOfItslearningRestApiEntitiesCourseCard>
+isShowMore?): Promise<EntityListOfItslearningRestApiEntitiesCourseCard>;
 ```
 
 Retrieves a paginated list of course cards for the user's unstarred courses.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
 The number of course cards per page (default is 10).
 
-##### sortBy
+##### sortBy?
 
 `string` = `"Title"`
 
@@ -213,7 +213,7 @@ A promise that resolves to a paginated list of unstarred course cards.
 ### rankCourseCard()
 
 ```ts
-rankCourseCard(body): Promise<void>
+rankCourseCard(body): Promise<void>;
 ```
 
 Ranks a course card. (No documentation available; assumptions made based on endpoint name)

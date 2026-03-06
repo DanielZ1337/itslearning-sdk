@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesMessagesDisabledThreadParticipants = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Count
 
 ```ts
 Count: number;
 ```
+
+***
 
 ### ThreadParticipants
 

@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsHierarchyRole: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Administrator
 

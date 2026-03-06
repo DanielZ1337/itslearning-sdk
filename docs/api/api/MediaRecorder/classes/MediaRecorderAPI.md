@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `MediaRecorder`.
 
 ## Constructors
 
-### new MediaRecorderAPI()
+### Constructor
 
 ```ts
-new MediaRecorderAPI(http): MediaRecorderAPI
+new MediaRecorderAPI(http): MediaRecorderAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new MediaRecorderAPI(http): MediaRecorderAPI
 
 #### Returns
 
-[`MediaRecorderAPI`](MediaRecorderAPI.md)
+`MediaRecorderAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### createPlayer()
 
 ```ts
-createPlayer(applicationKey, settings?): Promise<unknown>
+createPlayer(applicationKey, settings?): Promise<unknown>;
 ```
 
 Creates a player for media recording.
@@ -69,7 +69,7 @@ The unique key identifying the application.
 
 ##### settings?
 
-`Record`\<`string`, `any`\>
+`Record`\<`string`, `unknown`\>
 
 (Optional) Additional settings for the player.
 
@@ -84,7 +84,7 @@ A promise that resolves to the player creation response.
 ### getVideoStreams()
 
 ```ts
-getVideoStreams(videoId): Promise<unknown>
+getVideoStreams(videoId): Promise<unknown>;
 ```
 
 Retrieves the streams for a specific video.
@@ -110,7 +110,7 @@ A promise that resolves to the video streams.
 ### getZiggeoVideoStreams()
 
 ```ts
-getZiggeoVideoStreams(videoId): Promise<unknown>
+getZiggeoVideoStreams(videoId): Promise<unknown>;
 ```
 
 Retrieves the streams for a Ziggeo video. The `region` parameter is left only for backwards compatibility and is not in use.
@@ -134,7 +134,7 @@ A promise that resolves to the Ziggeo video streams.
 ### recordingComplete()
 
 ```ts
-recordingComplete(recordingId, name): Promise<unknown>
+recordingComplete(recordingId, name): Promise<unknown>;
 ```
 
 Marks a recording as complete and saves it to the server with the provided name.
@@ -164,7 +164,7 @@ A promise that resolves to the recording completion response.
 ### saveZiggeoRecording()
 
 ```ts
-saveZiggeoRecording(recordingId, name): Promise<unknown>
+saveZiggeoRecording(recordingId, name): Promise<unknown>;
 ```
 
 Saves a Ziggeo recorded video or audio clip to the server with the provided name.
@@ -196,7 +196,7 @@ A promise that resolves to the Ziggeo recording save response.
 ### uploadRecording()
 
 ```ts
-uploadRecording(recordingData, metadata?): Promise<unknown>
+uploadRecording(recordingData, metadata?): Promise<unknown>;
 ```
 
 Uploads a recording to the server.
@@ -213,7 +213,7 @@ The binary data of the recording to upload.
 
 ##### metadata?
 
-`Record`\<`string`, `any`\>
+`Record`\<`string`, `unknown`\>
 
 (Optional) Additional metadata for the recording.
 

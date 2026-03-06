@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesTaskStatus: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Completed
 

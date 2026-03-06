@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesLightBulletinsLightBulletinIdentifier = object;
 ```
 
-## Type declaration
+## Properties
 
 ### LightBulletinId
 

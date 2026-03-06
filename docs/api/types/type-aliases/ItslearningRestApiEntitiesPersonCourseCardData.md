@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesPersonCourseCardData = object;
 ```
 
-## Type declaration
+Represents the course with personalized data.
+
+## Properties
 
 ### CourseCode
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesPersonCourseCardData = object;
 CourseCode: string;
 ```
 
+Official course code identifier.
+
+***
+
 ### CourseColor
 
 ```ts
 CourseColor: string;
 ```
+
+Hex color code or color name associated with the course.
+
+***
 
 ### CourseFillColor
 
@@ -26,11 +36,19 @@ CourseColor: string;
 CourseFillColor: string;
 ```
 
+Fill color used for course styling elements.
+
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+Unique identifier for the course.
+
+***
 
 ### FollowUpTaskCount
 
@@ -38,11 +56,19 @@ CourseId: number;
 FollowUpTaskCount: number;
 ```
 
+Number of follow-up tasks assigned to the user in this course.
+
+***
+
 ### FriendlyName
 
 ```ts
 FriendlyName: string;
 ```
+
+Friendly name of the course for display purposes.
+
+***
 
 ### HasAdminPermissions
 
@@ -50,11 +76,19 @@ FriendlyName: string;
 HasAdminPermissions: boolean;
 ```
 
+Indicates whether the user has administrative permissions in the course.
+
+***
+
 ### HasStudentPermissions
 
 ```ts
 HasStudentPermissions: boolean;
 ```
+
+Indicates whether the user has student permissions in the course.
+
+***
 
 ### LastUpdatedUtc
 
@@ -62,11 +96,19 @@ HasStudentPermissions: boolean;
 LastUpdatedUtc: Date;
 ```
 
+UTC timestamp of when this course data was last updated.
+
+***
+
 ### NewBulletinsCount
 
 ```ts
 NewBulletinsCount: number;
 ```
+
+Number of new bulletins posted in this course.
+
+***
 
 ### NewNotificationsCount
 
@@ -74,11 +116,29 @@ NewBulletinsCount: number;
 NewNotificationsCount: number;
 ```
 
+Number of new notifications for the user in this course.
+
+***
+
+### Role
+
+```ts
+Role: ItslearningRestApiEntitiesPersonContextRole;
+```
+
+Role of the user in the course (student, teacher, administrator, etc.).
+
+***
+
 ### TaskCount
 
 ```ts
 TaskCount: number;
 ```
+
+Total number of tasks assigned to the user in this course.
+
+***
 
 ### TeachersInCourse
 
@@ -86,14 +146,24 @@ TaskCount: number;
 TeachersInCourse: ItslearningRestApiEntitiesPersonSimple[];
 ```
 
+List of teachers in the course.
+
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
 
+Official title of the course.
+
+***
+
 ### Url
 
 ```ts
 Url: string;
 ```
+
+URL to access the course.

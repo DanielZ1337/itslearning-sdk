@@ -2,9 +2,7 @@
 
 # api/PageUrl
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

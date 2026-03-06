@@ -4,6 +4,7 @@
 
 | Module | Description |
 | ------ | ------ |
+| [api/Ai](api/Ai/index.md) | - |
 | [api/ApplicationInitialisationCacheWarmUp](api/ApplicationInitialisationCacheWarmUp/index.md) | - |
 | [api/AssessmentRecord](api/AssessmentRecord/index.md) | - |
 | [api/Calendar](api/Calendar/index.md) | - |
@@ -47,6 +48,7 @@
 | [api/Tasks](api/Tasks/index.md) | - |
 | [api/Token](api/Token/index.md) | - |
 | [api/Workload](api/Workload/index.md) | - |
+| [api/YourFiles](api/YourFiles/index.md) | - |
 | [index](index/index.md) | - |
 | [lib/AuthManager](lib/AuthManager/index.md) | - |
 | [lib/ConfigManager](lib/ConfigManager/index.md) | - |

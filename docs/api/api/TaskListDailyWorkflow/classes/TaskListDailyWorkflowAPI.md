@@ -18,10 +18,10 @@ Secured with OAuth2, requires the OAuth2 API scope `TaskListDailyWorkflow`.
 
 ## Constructors
 
-### new TaskListDailyWorkflowAPI()
+### Constructor
 
 ```ts
-new TaskListDailyWorkflowAPI(http): TaskListDailyWorkflowAPI
+new TaskListDailyWorkflowAPI(http): TaskListDailyWorkflowAPI;
 ```
 
 #### Parameters
@@ -32,11 +32,11 @@ new TaskListDailyWorkflowAPI(http): TaskListDailyWorkflowAPI
 
 #### Returns
 
-[`TaskListDailyWorkflowAPI`](TaskListDailyWorkflowAPI.md)
+`TaskListDailyWorkflowAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -48,7 +48,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -57,8 +57,8 @@ protected readonly http: HttpClient;
 ```ts
 getChildCompletedTasks(
    childId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow>;
 ```
 
 For a parent, gets a list of completed tasks for a child.
@@ -75,13 +75,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 The unique ID of the child.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -100,8 +100,8 @@ A promise that resolves to a list of completed tasks for the specified child.
 ```ts
 getChildTasksSeparated(
    childId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>;
 ```
 
 For a parent, gets a list of tasks assigned to a child, separated into sections.
@@ -118,13 +118,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 The unique ID of the child.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -143,8 +143,8 @@ A promise that resolves to a list of tasks separated into sections for the speci
 ```ts
 getCourseCompletedTasks(
    courseId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflow>;
 ```
 
 Gets a list of completed tasks for a user in a specific course.
@@ -162,13 +162,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -187,8 +187,8 @@ A promise that resolves to a list of completed tasks for the specified course.
 ```ts
 getCourseTasksSeparated(
    courseId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>;
 ```
 
 Gets a list of tasks assigned to the user in a specific course, separated into sections.
@@ -205,13 +205,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -228,7 +228,7 @@ A promise that resolves to a list of tasks separated into sections for the speci
 ### getUserTasksSeparated()
 
 ```ts
-getUserTasksSeparated(pageIndex, pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>
+getUserTasksSeparated(pageIndex?, pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>;
 ```
 
 Gets a list of tasks assigned to the user, separated into sections.
@@ -239,13 +239,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 
@@ -264,8 +264,8 @@ A promise that resolves to a list of tasks separated into sections for the user.
 ```ts
 getViewAsTasks(
    courseId, 
-   pageIndex, 
-pageSize): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>
+   pageIndex?, 
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesTaskDailyWorkflowSection>;
 ```
 
 Gets a list of tasks assigned to a user in "View As" mode.
@@ -282,13 +282,13 @@ Supports paging. If paging is not used, it will use a default `pageSize` on `pag
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `100`
 

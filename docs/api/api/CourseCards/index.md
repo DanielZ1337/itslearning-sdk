@@ -2,9 +2,7 @@
 
 # api/CourseCards
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

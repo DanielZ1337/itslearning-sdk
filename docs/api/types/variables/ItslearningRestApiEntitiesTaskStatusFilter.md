@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesTaskStatusFilter: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Active
 

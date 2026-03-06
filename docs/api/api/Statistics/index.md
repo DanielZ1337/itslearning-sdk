@@ -2,9 +2,7 @@
 
 # api/Statistics
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

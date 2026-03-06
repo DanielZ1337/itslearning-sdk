@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `light bulletin`.
 
 ## Constructors
 
-### new LightBulletinAPI()
+### Constructor
 
 ```ts
-new LightBulletinAPI(http): LightBulletinAPI
+new LightBulletinAPI(http): LightBulletinAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new LightBulletinAPI(http): LightBulletinAPI
 
 #### Returns
 
-[`LightBulletinAPI`](LightBulletinAPI.md)
+`LightBulletinAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### addCommentV1()
 
 ```ts
-addCommentV1(lightBulletinId, comment): Promise<ItslearningRestApiEntitiesComment>
+addCommentV1(lightBulletinId, comment): Promise<ItslearningRestApiEntitiesComment>;
 ```
 
 Adds a new comment to the specified light bulletin.
@@ -82,7 +82,7 @@ A promise that resolves to the response from the API.
 ### addCommentV2()
 
 ```ts
-addCommentV2(lightBulletinId, comment): Promise<ItslearningRestApiEntitiesComment>
+addCommentV2(lightBulletinId, comment): Promise<ItslearningRestApiEntitiesComment>;
 ```
 
 Adds a new comment to the specified light bulletin (Version 2).
@@ -112,7 +112,7 @@ A promise that resolves to the response from the API.
 ### deleteComment()
 
 ```ts
-deleteComment(commentId): Promise<SystemNetHttpHttpResponseMessage>
+deleteComment(commentId): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Deletes a specific comment.
@@ -141,7 +141,7 @@ getComments(
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<EntityListOfItslearningRestApiEntitiesComment>
+pageSize?): Promise<EntityListOfItslearningRestApiEntitiesComment>;
 ```
 
 Retrieves the list of comments for the specified light bulletin.
@@ -189,14 +189,14 @@ A promise that resolves to the list of comments.
 ### markBulletinsAsSeen()
 
 ```ts
-markBulletinsAsSeen(data): Promise<SystemNetHttpHttpResponseMessage>
+markBulletinsAsSeen(_data): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Marks light bulletins as seen.
 
 #### Parameters
 
-##### data
+##### \_data
 
 [`ItslearningRestApiEntitiesUpdatableLightBulletinUpdateV1`](../../../types/type-aliases/ItslearningRestApiEntitiesUpdatableLightBulletinUpdateV1.md)[]
 
@@ -211,7 +211,7 @@ A promise that resolves to the response from the API.
 ### toggleCommentSubscription()
 
 ```ts
-toggleCommentSubscription(lightBulletinId, subscribe): Promise<SystemNetHttpHttpResponseMessage>
+toggleCommentSubscription(lightBulletinId, subscribe): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Turns on/off notifications for new comments for the specified light bulletin.
@@ -241,7 +241,7 @@ A promise that resolves to the response from the API.
 ### updateCommentV1()
 
 ```ts
-updateCommentV1(commentId, newText): Promise<SystemNetHttpHttpResponseMessage>
+updateCommentV1(commentId, newText): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Updates the text of a specific comment.
@@ -271,7 +271,7 @@ A promise that resolves to the response from the API.
 ### updateCommentV2()
 
 ```ts
-updateCommentV2(commentId, newText): Promise<SystemNetHttpHttpResponseMessage>
+updateCommentV2(commentId, newText): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Updates the text of a specific comment (Version 2).

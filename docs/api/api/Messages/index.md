@@ -2,9 +2,7 @@
 
 # api/Messages
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

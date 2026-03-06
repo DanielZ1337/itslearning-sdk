@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesFollowUpTask = object;
 ```
 
-## Type declaration
+Represents a follow up task.
+
+## Properties
 
 ### ContentUrl
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesFollowUpTask = object;
 ContentUrl: string;
 ```
 
+URL to the task content or instructions.
+
+***
+
 ### ElementId
 
 ```ts
 ElementId: number;
 ```
+
+Unique identifier of the learning element (task).
+
+***
 
 ### ElementType
 
@@ -26,11 +36,19 @@ ElementId: number;
 ElementType: ItslearningRestApiEntitiesElementType;
 ```
 
+Type of the learning element (assignment, project, assessment, etc.).
+
+***
+
 ### IconUrl
 
 ```ts
 IconUrl: string;
 ```
+
+URL to an icon representing the task type.
+
+***
 
 ### LearningToolId
 
@@ -38,11 +56,19 @@ IconUrl: string;
 LearningToolId: number;
 ```
 
+Unique identifier of the learning tool that provides this task.
+
+***
+
 ### LocationTitle
 
 ```ts
 LocationTitle: string;
 ```
+
+Title of the location (course, project, or group) where the task resides.
+
+***
 
 ### NumberOfNewOrUpdatedSubmissions
 
@@ -50,11 +76,19 @@ LocationTitle: string;
 NumberOfNewOrUpdatedSubmissions: number;
 ```
 
+Number of new or recently updated task submissions.
+
+***
+
 ### NumberOfSubmissionsToAssess
 
 ```ts
 NumberOfSubmissionsToAssess: number;
 ```
+
+Number of task submissions that are awaiting assessment or grading.
+
+***
 
 ### Title
 
@@ -62,14 +96,24 @@ NumberOfSubmissionsToAssess: number;
 Title: string;
 ```
 
+Title of the follow-up task.
+
+***
+
 ### TotalNumberOfEvaluateSubmissions
 
 ```ts
 TotalNumberOfEvaluateSubmissions: number;
 ```
 
+Total number of task submissions that require evaluation.
+
+***
+
 ### Url
 
 ```ts
 Url: string;
 ```
+
+URL to access the follow-up task details.

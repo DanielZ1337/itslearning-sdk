@@ -6,13 +6,15 @@
 type ItsolutionsItslearningWebRestApiInternalModelsPlannerShareablePlannerAddSharedResourcesToCoursePlanRequest = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AddOnlyExistingInCourseLearningObjectives
 
 ```ts
 AddOnlyExistingInCourseLearningObjectives: boolean;
 ```
+
+***
 
 ### Elements
 

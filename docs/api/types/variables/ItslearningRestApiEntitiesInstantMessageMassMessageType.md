@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesInstantMessageMassMessageType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Broadcast
 

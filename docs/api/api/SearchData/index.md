@@ -2,9 +2,7 @@
 
 # api/SearchData
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

@@ -15,10 +15,10 @@ Secured with OAuth2 and requires the OAuth2 API scope `InstantMessage`.
 
 ## Constructors
 
-### new InstantMessagesAPI()
+### Constructor
 
 ```ts
-new InstantMessagesAPI(http): InstantMessagesAPI
+new InstantMessagesAPI(http): InstantMessagesAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new InstantMessagesAPI(http): InstantMessagesAPI
 
 #### Returns
 
-[`InstantMessagesAPI`](InstantMessagesAPI.md)
+`InstantMessagesAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### addModeratorToThread()
 
 ```ts
-addModeratorToThread(threadId, moderatorData): Promise<void>
+addModeratorToThread(threadId, moderatorData): Promise<unknown>;
 ```
 
 Adds a moderator to an instant message thread.
@@ -67,20 +67,20 @@ The unique ID of the thread.
 
 ##### moderatorData
 
-`unknown`
+[`ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1`](../../../types/type-aliases/ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1.md)
 
 The moderator data (e.g., participant IDs).
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<`unknown`\>
 
 ***
 
 ### addParticipantsToThread()
 
 ```ts
-addParticipantsToThread(threadId, participants): Promise<ItslearningRestApiEntitiesInstantMessageThread>
+addParticipantsToThread(threadId, participants): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Adds participants to an instant message thread.
@@ -108,7 +108,7 @@ The participants to add.
 ### cancelAbuseReport()
 
 ```ts
-cancelAbuseReport(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>
+cancelAbuseReport(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>;
 ```
 
 Cancels abuse report for an instant message.
@@ -130,7 +130,7 @@ The unique ID of the instant message.
 ### cancelAbuseThreadReport()
 
 ```ts
-cancelAbuseThreadReport(threadId): Promise<void>
+cancelAbuseThreadReport(threadId): Promise<void>;
 ```
 
 Cancels abuse report for a thread.
@@ -152,7 +152,7 @@ The unique ID of the thread.
 ### checkPrivacyRules()
 
 ```ts
-checkPrivacyRules(personId): Promise<unknown>
+checkPrivacyRules(personId): Promise<unknown>;
 ```
 
 Checks privacy rules to determine if the user is allowed to initiate communication with a person.
@@ -174,7 +174,7 @@ The unique ID of the person.
 ### deleteAttachment()
 
 ```ts
-deleteAttachment(fileId): Promise<SystemNetHttpHttpResponseMessage>
+deleteAttachment(fileId): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Deletes temporary files that were uploaded.
@@ -196,7 +196,7 @@ The ID of the file to delete.
 ### deleteInstantMessage()
 
 ```ts
-deleteInstantMessage(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>
+deleteInstantMessage(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>;
 ```
 
 Deletes an instant message.
@@ -218,7 +218,7 @@ The unique ID of the instant message to delete.
 ### deleteThread()
 
 ```ts
-deleteThread(threadId): Promise<void>
+deleteThread(threadId): Promise<void>;
 ```
 
 Deletes a thread.
@@ -240,7 +240,7 @@ The unique ID of the thread to delete.
 ### getCollaborationThreadId()
 
 ```ts
-getCollaborationThreadId(collaborationId): Promise<unknown>
+getCollaborationThreadId(collaborationId): Promise<unknown>;
 ```
 
 Gets the instant message thread ID for group answer. Creates it if not present.
@@ -262,7 +262,7 @@ The unique ID of the collaboration.
 ### getInstantMessagePermissions()
 
 ```ts
-getInstantMessagePermissions(): Promise<ItslearningRestApiEntitiesInstantMessagePermissions>
+getInstantMessagePermissions(): Promise<ItslearningRestApiEntitiesInstantMessagePermissions>;
 ```
 
 Gets permissions for the instant message system.
@@ -279,7 +279,7 @@ Gets permissions for the instant message system.
 getMessageThreadsV1(
    maxThreadCount?, 
    threadPage?, 
-maxMessages?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>
+maxMessages?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Gets the user's message threads (v1).
@@ -320,7 +320,7 @@ Use v2 or v3 instead.
 getMessageThreadsV2(
    maxThreadCount?, 
    threadPage?, 
-maxMessages?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>
+maxMessages?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Gets the user's message threads (v2).
@@ -354,7 +354,7 @@ The max number of messages to retrieve per thread.
 ### getMessageThreadsV3()
 
 ```ts
-getMessageThreadsV3(fromSortIndex?, pageSize?): Promise<ItslearningRestApiEntitiesInstantMessageThreadListModel>
+getMessageThreadsV3(fromSortIndex?, pageSize?): Promise<ItslearningRestApiEntitiesInstantMessageThreadListModel>;
 ```
 
 Gets a collection of threads for the user, extended with a hasMore field (v3).
@@ -379,10 +379,39 @@ The number of threads to retrieve.
 
 ***
 
+### getMessageThreadsV4()
+
+```ts
+getMessageThreadsV4(fromSortIndex?, pageSize?): Promise<ItslearningRestApiEntitiesInstantMessageThreadListModel>;
+```
+
+Gets a collection of threads for the user, extended with a hasMore field (v4).
+Does not return thread participants for course threads (for performance reasons).
+
+#### Parameters
+
+##### fromSortIndex?
+
+`number`
+
+The sort index to start from.
+
+##### pageSize?
+
+`number` = `100`
+
+The number of threads to retrieve.
+
+#### Returns
+
+`Promise`\<[`ItslearningRestApiEntitiesInstantMessageThreadListModel`](../../../types/type-aliases/ItslearningRestApiEntitiesInstantMessageThreadListModel.md)\>
+
+***
+
 ### getOneToOneThreadId()
 
 ```ts
-getOneToOneThreadId(personId): Promise<number>
+getOneToOneThreadId(personId): Promise<number>;
 ```
 
 Gets the instant message thread ID for a one-to-one conversation between the current user and another user.
@@ -404,7 +433,7 @@ The unique ID of the other user.
 ### getParticipantsWithDisabledMessages()
 
 ```ts
-getParticipantsWithDisabledMessages(threadId): Promise<ItslearningRestApiEntitiesMessagesDisabledThreadParticipants>
+getParticipantsWithDisabledMessages(threadId): Promise<ItslearningRestApiEntitiesMessagesDisabledThreadParticipants>;
 ```
 
 Gets a collection of thread participants who cannot see messages.
@@ -426,22 +455,22 @@ The unique ID of the thread.
 ### getRecipientPersons()
 
 ```ts
-getRecipientPersons(requestData): Promise<unknown>
+getRecipientPersons(personIds): Promise<ItslearningRestApiEntitiesInstantMessageRecipient[]>;
 ```
 
 Gets recipient persons requested (bulk lookup).
 
 #### Parameters
 
-##### requestData
+##### personIds
 
-`unknown`
+`number`[]
 
-The request body containing criteria for recipients.
+Array of person IDs to look up.
 
 #### Returns
 
-`Promise`\<`unknown`\>
+`Promise`\<[`ItslearningRestApiEntitiesInstantMessageRecipient`](../../../types/type-aliases/ItslearningRestApiEntitiesInstantMessageRecipient.md)[]\>
 
 ***
 
@@ -451,7 +480,7 @@ The request body containing criteria for recipients.
 getRecipientsV1(
    personIds, 
    courseId?, 
-projectId?): Promise<unknown>
+projectId?): Promise<unknown>;
 ```
 
 Gets recipients (persons, course or project) requested (v1).
@@ -488,7 +517,7 @@ Optional project ID.
 getRecipientsV2(
    personIds, 
    courseIds, 
-projectIds): Promise<unknown>
+projectIds): Promise<unknown>;
 ```
 
 Gets recipients (persons, courses, or projects) requested (v2).
@@ -522,7 +551,7 @@ Array of project IDs.
 ### getSettingsV1()
 
 ```ts
-getSettingsV1(): Promise<unknown>
+getSettingsV1(): Promise<unknown>;
 ```
 
 Gets the settings for the instant message system (v1).
@@ -536,7 +565,7 @@ Gets the settings for the instant message system (v1).
 ### getSettingsV2()
 
 ```ts
-getSettingsV2(): Promise<unknown>
+getSettingsV2(): Promise<unknown>;
 ```
 
 Gets the settings for the instant message system (v2).
@@ -550,7 +579,7 @@ Gets the settings for the instant message system (v2).
 ### getStarredMessagesCount()
 
 ```ts
-getStarredMessagesCount(): Promise<number>
+getStarredMessagesCount(): Promise<number>;
 ```
 
 Gets the number of starred messages for the current user.
@@ -564,7 +593,7 @@ Gets the number of starred messages for the current user.
 ### getSuggestions()
 
 ```ts
-getSuggestions(searchText, maxSuggestions): Promise<ItslearningRestApiEntitiesInstantMessageFilterSuggestion[]>
+getSuggestions(searchText, maxSuggestions?): Promise<ItslearningRestApiEntitiesInstantMessageFilterSuggestion[]>;
 ```
 
 Searches for suggestions of person names or thread names matching the input.
@@ -577,7 +606,7 @@ Searches for suggestions of person names or thread names matching the input.
 
 The text to search for.
 
-##### maxSuggestions
+##### maxSuggestions?
 
 `number` = `10`
 
@@ -594,9 +623,9 @@ The max number of suggestions to return.
 ```ts
 getThreadAndMessagesV2(
    threadId, 
-   maxMessages, 
+   maxMessages?, 
    upperBoundInstantMessageId?, 
-lowerBoundInstantMessageId?): Promise<ItslearningRestApiEntitiesInstantMessageThread>
+lowerBoundInstantMessageId?): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Gets an instant message thread and messages (v2).
@@ -610,7 +639,7 @@ One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
 
 The unique ID of the thread.
 
-##### maxMessages
+##### maxMessages?
 
 `number` = `100`
 
@@ -634,6 +663,52 @@ The message ID to retrieve after.
 
 ***
 
+### getThreadAndMessagesV3()
+
+```ts
+getThreadAndMessagesV3(
+   threadId, 
+   maxMessages?, 
+   upperBoundInstantMessageId?, 
+lowerBoundInstantMessageId?): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
+```
+
+Gets the instant message thread and messages (v3).
+Does not return thread participants for course threads (for performance reasons).
+One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
+
+#### Parameters
+
+##### threadId
+
+`number`
+
+The unique ID of the thread.
+
+##### maxMessages?
+
+`number` = `100`
+
+The max number of messages to retrieve. Default: 100. Maximum: 500.
+
+##### upperBoundInstantMessageId?
+
+`number`
+
+Load messages before this instant message ID.
+
+##### lowerBoundInstantMessageId?
+
+`number`
+
+Load messages after this instant message ID.
+
+#### Returns
+
+`Promise`\<[`ItslearningRestApiEntitiesInstantMessageThread`](../../../types/type-aliases/ItslearningRestApiEntitiesInstantMessageThread.md)\>
+
+***
+
 ### ~~getThreadMessagesV1()~~
 
 ```ts
@@ -641,10 +716,11 @@ getThreadMessagesV1(
    threadId, 
    maxMessages?, 
    upperBoundInstantMessageId?, 
-lowerBoundInstantMessageId?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessage>
+lowerBoundInstantMessageId?): Promise<EntityListOfItslearningRestApiEntitiesInstantMessage>;
 ```
 
 Gets messages in a specific thread (v1).
+One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
 
 #### Parameters
 
@@ -658,19 +734,19 @@ The unique ID of the thread.
 
 `number`
 
-The max number of messages to retrieve.
+Maximum number of messages to get.
 
 ##### upperBoundInstantMessageId?
 
 `number`
 
-The message ID to retrieve messages before.
+Load messages before this instant message ID.
 
 ##### lowerBoundInstantMessageId?
 
 `number`
 
-The message ID to retrieve messages after.
+Load messages after this instant message ID.
 
 #### Returns
 
@@ -689,7 +765,7 @@ getThreadMessagesV2(
    threadId, 
    maxMessages?, 
    upperBoundInstantMessageId?, 
-lowerBoundInstantMessageId?): Promise<unknown>
+lowerBoundInstantMessageId?): Promise<unknown>;
 ```
 
 Gets the messages in a specific thread (v2).
@@ -737,7 +813,7 @@ Use getThreadMessagesV3 instead.
 getThreadMessagesV3(
    threadId, 
    pageSize?, 
-fromId?): Promise<ItslearningRestApiEntitiesInstantMessageListModel>
+fromId?): Promise<ItslearningRestApiEntitiesInstantMessageListModel>;
 ```
 
 Gets a collection of instant messages extended with a `hasMore` field (v3).
@@ -771,7 +847,7 @@ The ID from which to start fetching.
 ### getThreadSuggestions()
 
 ```ts
-getThreadSuggestions(searchText): Promise<ItslearningRestApiEntitiesInstantMessageThread[]>
+getThreadSuggestions(searchText): Promise<ItslearningRestApiEntitiesInstantMessageThread[]>;
 ```
 
 Suggests conversations whose names contain the given search text.
@@ -793,7 +869,7 @@ The text to search within thread names.
 ### getThreadUnreadCount()
 
 ```ts
-getThreadUnreadCount(threadId): Promise<number>
+getThreadUnreadCount(threadId): Promise<number>;
 ```
 
 Gets the number of unread messages in a specific thread for the current user.
@@ -817,7 +893,7 @@ The count of unread messages.
 ### getUnreadThreadsCount()
 
 ```ts
-getUnreadThreadsCount(): Promise<number>
+getUnreadThreadsCount(): Promise<number>;
 ```
 
 Gets the number of threads that contain unread messages.
@@ -831,7 +907,7 @@ Gets the number of threads that contain unread messages.
 ### registerCommunicationChannel()
 
 ```ts
-registerCommunicationChannel(channelId, unregister): Promise<void>
+registerCommunicationChannel(channelId, unregister?): Promise<void>;
 ```
 
 Registers or unregisters a (SignalR) communication channel.
@@ -844,7 +920,7 @@ Registers or unregisters a (SignalR) communication channel.
 
 The unique ID of the communication channel.
 
-##### unregister
+##### unregister?
 
 `boolean` = `false`
 
@@ -859,7 +935,7 @@ True to unregister, false to register.
 ### removeParticipantsFromThread()
 
 ```ts
-removeParticipantsFromThread(threadId, participants): Promise<ItslearningRestApiEntitiesInstantMessageThread>
+removeParticipantsFromThread(threadId, participants): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Removes participants from an instant message thread.
@@ -887,7 +963,7 @@ The participants to remove.
 ### restoreInstantMessage()
 
 ```ts
-restoreInstantMessage(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>
+restoreInstantMessage(instantMessageId): Promise<ItslearningRestApiEntitiesInstantMessage>;
 ```
 
 Undelete (restore) an instant message.
@@ -909,7 +985,7 @@ The unique ID of the instant message to restore.
 ### restoreThread()
 
 ```ts
-restoreThread(threadId): Promise<void>
+restoreThread(threadId): Promise<void>;
 ```
 
 Restores deletion for a thread.
@@ -931,7 +1007,7 @@ The unique ID of the thread to restore.
 ### searchMessagesInThread()
 
 ```ts
-searchMessagesInThread(threadId, searchText): Promise<number[]>
+searchMessagesInThread(threadId, searchText): Promise<number[]>;
 ```
 
 Searches inside a given thread for messages matching the provided search text.
@@ -959,7 +1035,7 @@ The text to search for.
 ### searchMessageThreads()
 
 ```ts
-searchMessageThreads(searchData): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>
+searchMessageThreads(searchData): Promise<EntityListOfItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Searches the logged-in user's message threads.
@@ -984,7 +1060,7 @@ The data for the search (e.g. searchText, paging, etc.).
 searchRecipients(
    searchText, 
    instantMessageThreadId?, 
-recipientRoles?): Promise<unknown>
+recipientRoles?): Promise<unknown>;
 ```
 
 Gets persons that the user is allowed to communicate with, given eSafety rules.
@@ -1018,7 +1094,7 @@ Optional array of roles to filter.
 ### ~~sendInstantMessageV1()~~
 
 ```ts
-sendInstantMessageV1(data): Promise<void>
+sendInstantMessageV1(data): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Sends an instant message (v1). Use v2 instead.
@@ -1027,13 +1103,13 @@ Sends an instant message (v1). Use v2 instead.
 
 ##### data
 
-`unknown`
+[`ItslearningRestApiEntitiesInstantMessageToSend`](../../../types/type-aliases/ItslearningRestApiEntitiesInstantMessageToSend.md)
 
 The data required to send the message.
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`\<[`ItslearningRestApiEntitiesInstantMessageThread`](../../../types/type-aliases/ItslearningRestApiEntitiesInstantMessageThread.md)\>
 
 #### Deprecated
 
@@ -1044,7 +1120,7 @@ Use sendInstantMessageV2 instead.
 ### sendInstantMessageV2()
 
 ```ts
-sendInstantMessageV2(data): Promise<ItslearningRestApiEntitiesInstantMessageThread>
+sendInstantMessageV2(data): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Sends an instant message (v2).
@@ -1067,7 +1143,7 @@ The data required to send the message.
 ### toggleMessageStar()
 
 ```ts
-toggleMessageStar(instantMessageId): Promise<void>
+toggleMessageStar(instantMessageId): Promise<void>;
 ```
 
 Toggles whether the given message is starred or not.
@@ -1089,7 +1165,7 @@ The unique ID of the instant message.
 ### togglePersonBlock()
 
 ```ts
-togglePersonBlock(personId): Promise<boolean>
+togglePersonBlock(personId): Promise<boolean>;
 ```
 
 Toggles blocking a specific person.
@@ -1111,7 +1187,7 @@ The unique ID of the person to block/unblock.
 ### toggleThreadReplies()
 
 ```ts
-toggleThreadReplies(threadId): Promise<void>
+toggleThreadReplies(threadId): Promise<void>;
 ```
 
 Toggles whether students can send replies to this thread or not.
@@ -1133,7 +1209,7 @@ The unique ID of the thread.
 ### updateInstantMessageText()
 
 ```ts
-updateInstantMessageText(data): Promise<ItslearningRestApiEntitiesInstantMessage>
+updateInstantMessageText(data): Promise<ItslearningRestApiEntitiesInstantMessage>;
 ```
 
 Updates the text for an instant message.
@@ -1158,7 +1234,7 @@ The data with updated message text.
 updateLastRead(
    threadId, 
    lastReadInstantMessageId, 
-sortIndex?): Promise<void>
+sortIndex?): Promise<void>;
 ```
 
 Updates the last read instant message ID for a thread.
@@ -1192,7 +1268,7 @@ The sort index of the message (optional).
 ### updateThread()
 
 ```ts
-updateThread(threadId, updateData): Promise<ItslearningRestApiEntitiesInstantMessageThread>
+updateThread(threadId, updateData): Promise<ItslearningRestApiEntitiesInstantMessageThread>;
 ```
 
 Updates an instant message thread (e.g. name or participants).
@@ -1220,7 +1296,7 @@ The data for updating the thread.
 ### uploadAttachment()
 
 ```ts
-uploadAttachment(fileData): Promise<unknown>
+uploadAttachment(fileData): Promise<unknown>;
 ```
 
 Uploads a file attachment to temporary storage.

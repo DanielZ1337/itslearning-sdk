@@ -15,10 +15,10 @@ Secured with OAuth2, requires the OAuth2 API scope `Statistics`.
 
 ## Constructors
 
-### new StatisticsAPI()
+### Constructor
 
 ```ts
-new StatisticsAPI(http): StatisticsAPI
+new StatisticsAPI(http): StatisticsAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new StatisticsAPI(http): StatisticsAPI
 
 #### Returns
 
-[`StatisticsAPI`](StatisticsAPI.md)
+`StatisticsAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,28 +45,26 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### postUserEvent()
 
 ```ts
-postUserEvent(eventData): Promise<unknown>
+postUserEvent(events): Promise<void>;
 ```
 
-Posts a user event to the Statistics API.
+Posts a batch of user events to the Statistics API.
 
 #### Parameters
 
-##### eventData
+##### events
 
-`unknown`
+[`ItsolutionsItslearningWebRestApiServiceLogicStatisticsEventsUserEventDto`](../../../types/type-aliases/ItsolutionsItslearningWebRestApiServiceLogicStatisticsEventsUserEventDto.md)[]
 
-The data representing the user event to be posted.
+A collection of user event DTOs to be processed.
 
 #### Returns
 
-`Promise`\<`unknown`\>
-
-A promise that resolves to the response from the API.
+`Promise`\<`void`\>

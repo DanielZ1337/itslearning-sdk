@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCalendarEvent = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AttendanceDetails
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCalendarEvent = object;
 AttendanceDetails: ItslearningRestApiEntitiesPersonalCalendarAttendanceAttendanceDetails[];
 ```
 
+***
+
 ### CourseGroupId
 
 ```ts
 CourseGroupId: number;
 ```
+
+***
 
 ### CourseId
 
@@ -26,11 +30,15 @@ CourseGroupId: number;
 CourseId: number;
 ```
 
+***
+
 ### Description
 
 ```ts
 Description: string;
 ```
+
+***
 
 ### EventTitle
 
@@ -38,11 +46,15 @@ Description: string;
 EventTitle: string;
 ```
 
+***
+
 ### FromDate
 
 ```ts
 FromDate: Date;
 ```
+
+***
 
 ### id
 
@@ -50,11 +62,15 @@ FromDate: Date;
 id: number;
 ```
 
+***
+
 ### ImportDescription
 
 ```ts
 ImportDescription: string;
 ```
+
+***
 
 ### LocationColor
 
@@ -62,11 +78,15 @@ ImportDescription: string;
 LocationColor: string;
 ```
 
+***
+
 ### LocationFillColor
 
 ```ts
 LocationFillColor: string;
 ```
+
+***
 
 ### LocationFriendlyName
 
@@ -74,11 +94,15 @@ LocationFillColor: string;
 LocationFriendlyName: string;
 ```
 
+***
+
 ### LocationTitle
 
 ```ts
 LocationTitle: string;
 ```
+
+***
 
 ### ToDate
 

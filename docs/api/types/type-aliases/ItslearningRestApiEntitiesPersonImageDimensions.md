@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonImageDimensions = object;
 ```
 
-## Type declaration
+## Properties
 
 ### PixelHeight
 
 ```ts
 PixelHeight: number;
 ```
+
+***
 
 ### PixelWidth
 

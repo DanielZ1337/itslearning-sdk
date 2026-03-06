@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Language
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSetup = o
 Language: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantLanguage;
 ```
 
+***
+
 ### Paths
 
 ```ts
 Paths: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPaths;
 ```
 
+***
+
 ### Permissions
 
 ```ts
 Permissions: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantPermissions;
 ```
+
+***
 
 ### Settings
 

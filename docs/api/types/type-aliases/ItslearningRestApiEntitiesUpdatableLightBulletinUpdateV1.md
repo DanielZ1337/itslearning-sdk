@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesUpdatableLightBulletinUpdateV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### IsSeen
 
 ```ts
 IsSeen: boolean;
 ```
+
+***
 
 ### LightBulletinId
 

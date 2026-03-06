@@ -6,7 +6,7 @@
 const ItslearningCommonRestApiEntitiesVersionResponse: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### LatestVersion
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesLightBulletinsLightBulletinImage = object;
 ```
 
-## Type declaration
+## Properties
 
 ### OriginalFileId
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesLightBulletinsLightBulletinImage = object;
 OriginalFileId: number;
 ```
 
+***
+
 ### OriginalFileUrl
 
 ```ts
 OriginalFileUrl: string;
 ```
 
+***
+
 ### PreviewFileId
 
 ```ts
 PreviewFileId: number;
 ```
+
+***
 
 ### PreviewFileUrl
 

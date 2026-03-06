@@ -8,9 +8,11 @@ type PaginatedResponse<T> = object;
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Type declaration
+`T`
+
+## Properties
 
 ### CurrentPageIndex
 
@@ -18,17 +20,23 @@ type PaginatedResponse<T> = object;
 CurrentPageIndex: number;
 ```
 
+***
+
 ### EntityArray
 
 ```ts
 EntityArray: T[];
 ```
 
+***
+
 ### PageSize
 
 ```ts
 PageSize: number;
 ```
+
+***
 
 ### Total
 

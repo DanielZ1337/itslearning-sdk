@@ -6,7 +6,7 @@
 const ItslearningRestApiEntitiesLocationRecipientType: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### Collaboration
 

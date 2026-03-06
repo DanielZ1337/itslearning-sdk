@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSettings = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseProfiles
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCoursePageSetupCourseParticipantSettings 
 CourseProfiles: ItslearningRestApiEntitiesPersonalCoursePageSetupCourseProfile;
 ```
 
+***
+
 ### CurrentPersonId
 
 ```ts
 CurrentPersonId: number;
 ```
+
+***
 
 ### DefaultCourseProfileId
 
@@ -26,11 +30,15 @@ CurrentPersonId: number;
 DefaultCourseProfileId: number;
 ```
 
+***
+
 ### ExtraInformationTitle
 
 ```ts
 ExtraInformationTitle: string;
 ```
+
+***
 
 ### FirstNameFirst
 
@@ -38,11 +46,15 @@ ExtraInformationTitle: string;
 FirstNameFirst: boolean;
 ```
 
+***
+
 ### FunctionalityMessages
 
 ```ts
 FunctionalityMessages: boolean;
 ```
+
+***
 
 ### InstantMessageMaxPersonsPerThread
 
@@ -50,11 +62,15 @@ FunctionalityMessages: boolean;
 InstantMessageMaxPersonsPerThread: number;
 ```
 
+***
+
 ### ShowApplicantTab
 
 ```ts
 ShowApplicantTab: boolean;
 ```
+
+***
 
 ### TemporaryAccessToCourses
 

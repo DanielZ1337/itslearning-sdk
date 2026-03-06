@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPlannerPlanPreview = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ClassHours
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPlannerPlanPreview = object;
 ClassHours: number;
 ```
 
+***
+
 ### LocationColor
 
 ```ts
 LocationColor: string;
 ```
+
+***
 
 ### LocationId
 
@@ -26,11 +30,15 @@ LocationColor: string;
 LocationId: number;
 ```
 
+***
+
 ### LocationType
 
 ```ts
 LocationType: ItslearningRestApiEntitiesLocationType;
 ```
+
+***
 
 ### Order
 
@@ -38,11 +46,15 @@ LocationType: ItslearningRestApiEntitiesLocationType;
 Order: number;
 ```
 
+***
+
 ### PlanDescription
 
 ```ts
 PlanDescription: string;
 ```
+
+***
 
 ### PlanId
 
@@ -50,11 +62,15 @@ PlanDescription: string;
 PlanId: number;
 ```
 
+***
+
 ### PlanName
 
 ```ts
 PlanName: string;
 ```
+
+***
 
 ### Start
 
@@ -62,17 +78,23 @@ PlanName: string;
 Start: Date;
 ```
 
+***
+
 ### Stop
 
 ```ts
 Stop: Date;
 ```
 
+***
+
 ### TopicColor
 
 ```ts
 TopicColor: string;
 ```
+
+***
 
 ### TopicId
 

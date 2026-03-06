@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Courses`.
 
 ## Constructors
 
-### new SearchDataAPI()
+### Constructor
 
 ```ts
-new SearchDataAPI(http): SearchDataAPI
+new SearchDataAPI(http): SearchDataAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new SearchDataAPI(http): SearchDataAPI
 
 #### Returns
 
-[`SearchDataAPI`](SearchDataAPI.md)
+`SearchDataAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### postSearchData()
 
 ```ts
-postSearchData(data): Promise<unknown>
+postSearchData(data): Promise<unknown>;
 ```
 
 Posts search data to the SearchData API.

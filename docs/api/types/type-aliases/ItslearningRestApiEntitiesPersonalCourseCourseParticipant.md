@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseParticipant = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanHaveTasks
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCourseCourseParticipant = object;
 CanHaveTasks: boolean;
 ```
 
+***
+
 ### CompletedTasks
 
 ```ts
 CompletedTasks: number;
 ```
+
+***
 
 ### ExtraInformation
 
@@ -26,11 +30,15 @@ CompletedTasks: number;
 ExtraInformation: string;
 ```
 
+***
+
 ### FullName
 
 ```ts
 FullName: string;
 ```
+
+***
 
 ### Groups
 
@@ -38,11 +46,15 @@ FullName: string;
 Groups: string;
 ```
 
+***
+
 ### LastVisited
 
 ```ts
 LastVisited: Date;
 ```
+
+***
 
 ### LastVisitedRelative
 
@@ -50,11 +62,15 @@ LastVisited: Date;
 LastVisitedRelative: string;
 ```
 
+***
+
 ### PersonId
 
 ```ts
 PersonId: number;
 ```
+
+***
 
 ### PictureUrl
 
@@ -62,11 +78,15 @@ PersonId: number;
 PictureUrl: string;
 ```
 
+***
+
 ### Role
 
 ```ts
 Role: string;
 ```
+
+***
 
 ### RoleId
 
@@ -74,11 +94,15 @@ Role: string;
 RoleId: number;
 ```
 
+***
+
 ### TemporaryAccess
 
 ```ts
 TemporaryAccess: boolean;
 ```
+
+***
 
 ### TotalTasks
 

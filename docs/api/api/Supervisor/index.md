@@ -2,9 +2,7 @@
 
 # api/Supervisor
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

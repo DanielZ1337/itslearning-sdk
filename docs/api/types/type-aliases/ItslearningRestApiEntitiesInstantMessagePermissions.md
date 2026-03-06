@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessagePermissions = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanAccessInstantMessageSystem
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesInstantMessagePermissions = object;
 CanAccessInstantMessageSystem: boolean;
 ```
 
+***
+
 ### CanReplyToInstantMessages
 
 ```ts
 CanReplyToInstantMessages: boolean;
 ```
+
+***
 
 ### CanReportInstantMessages
 
@@ -26,11 +30,15 @@ CanReplyToInstantMessages: boolean;
 CanReportInstantMessages: boolean;
 ```
 
+***
+
 ### CanSearchForCourses
 
 ```ts
 CanSearchForCourses: boolean;
 ```
+
+***
 
 ### CanSendBroadcastMessages
 
@@ -38,11 +46,15 @@ CanSearchForCourses: boolean;
 CanSendBroadcastMessages: boolean;
 ```
 
+***
+
 ### CanShareInstantMessages
 
 ```ts
 CanShareInstantMessages: boolean;
 ```
+
+***
 
 ### CanStarInstantMessages
 
@@ -50,11 +62,15 @@ CanShareInstantMessages: boolean;
 CanStarInstantMessages: boolean;
 ```
 
+***
+
 ### CanUseSendAsIndividualMessages
 
 ```ts
 CanUseSendAsIndividualMessages: boolean;
 ```
+
+***
 
 ### IsUserBlockingEnabled
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesUpdatableFileDataV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### FileId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesUpdatableFileDataV1 = object;
 FileId: number;
 ```
 
+***
+
 ### FileName
 
 ```ts
 FileName: string;
 ```
+
+***
 
 ### Signature
 

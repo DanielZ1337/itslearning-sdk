@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonProfile = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CanAccessCalendar
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonProfile = object;
 CanAccessCalendar: boolean;
 ```
 
+***
+
 ### CanAccessCourses
 
 ```ts
 CanAccessCourses: boolean;
 ```
+
+***
 
 ### CanAccessInstantMessageSystem
 
@@ -26,11 +30,15 @@ CanAccessCourses: boolean;
 CanAccessInstantMessageSystem: boolean;
 ```
 
+***
+
 ### CanAccessMessageSystem
 
 ```ts
 CanAccessMessageSystem: boolean;
 ```
+
+***
 
 ### CanAccessPersonalSettings
 
@@ -38,11 +46,15 @@ CanAccessMessageSystem: boolean;
 CanAccessPersonalSettings: boolean;
 ```
 
+***
+
 ### Children
 
 ```ts
 Children: unknown[];
 ```
+
+***
 
 ### FirstName
 
@@ -50,11 +62,15 @@ Children: unknown[];
 FirstName: string;
 ```
 
+***
+
 ### FullName
 
 ```ts
 FullName: string;
 ```
+
+***
 
 ### HasHigherEducationLanguage
 
@@ -62,11 +78,15 @@ FullName: string;
 HasHigherEducationLanguage: boolean;
 ```
 
+***
+
 ### iCalFavoriteOnlyUrl
 
 ```ts
 iCalFavoriteOnlyUrl: string;
 ```
+
+***
 
 ### iCalUrl
 
@@ -74,11 +94,15 @@ iCalFavoriteOnlyUrl: string;
 iCalUrl: string;
 ```
 
+***
+
 ### Language
 
 ```ts
 Language: string;
 ```
+
+***
 
 ### LastName
 
@@ -86,11 +110,15 @@ Language: string;
 LastName: string;
 ```
 
+***
+
 ### PersonId
 
 ```ts
 PersonId: number;
 ```
+
+***
 
 ### ProfileImageUrl
 
@@ -98,17 +126,23 @@ PersonId: number;
 ProfileImageUrl: string;
 ```
 
+***
+
 ### SyncKey
 
 ```ts
 SyncKey: string;
 ```
 
+***
+
 ### TimeZoneId
 
 ```ts
 TimeZoneId: string;
 ```
+
+***
 
 ### Use12HTimeFormat
 

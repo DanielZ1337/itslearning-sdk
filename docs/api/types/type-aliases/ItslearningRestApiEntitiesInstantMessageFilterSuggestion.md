@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesInstantMessageFilterSuggestion = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Id
 
@@ -14,14 +14,18 @@ type ItslearningRestApiEntitiesInstantMessageFilterSuggestion = object;
 Id: number;
 ```
 
+***
+
 ### Label
 
 ```ts
 Label: string;
 ```
 
+***
+
 ### Type
 
 ```ts
-Type: "OneToOne" | "Course" | "Project" | "Group";
+Type: ItslearningRestApiEntitiesInstantMessageThreadType;
 ```

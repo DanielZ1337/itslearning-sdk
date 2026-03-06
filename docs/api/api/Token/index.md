@@ -2,9 +2,7 @@
 
 # api/Token
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

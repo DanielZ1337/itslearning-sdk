@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseWithActivePlans = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseId
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesPersonalCourseWithActivePlans = object;
 CourseId: number;
 ```
 
+***
+
 ### CourseSyncKey
 
 ```ts
 CourseSyncKey: string;
 ```
 
+***
+
 ### CourseTitle
 
 ```ts
 CourseTitle: string;
 ```
+
+***
 
 ### PlanIds
 

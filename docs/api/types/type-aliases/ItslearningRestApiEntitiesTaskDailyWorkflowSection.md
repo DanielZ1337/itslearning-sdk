@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesTaskDailyWorkflowSection = object;
 ```
 
-## Type declaration
+## Properties
 
 ### BackToText
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesTaskDailyWorkflowSection = object;
 BackToText: string;
 ```
 
+***
+
 ### SectionTitle
 
 ```ts
 SectionTitle: string;
 ```
 
+***
+
 ### StartOpen
 
 ```ts
 StartOpen: boolean;
 ```
+
+***
 
 ### TaskDailyWorkflow
 

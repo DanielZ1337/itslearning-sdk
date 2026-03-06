@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesCourseWithContextRole = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Code
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesCourseWithContextRole = object;
 Code: string;
 ```
 
+***
+
 ### ContextRole
 
 ```ts
 ContextRole: ItslearningRestApiEntitiesPersonContextRole;
 ```
+
+***
 
 ### CourseColorClass
 
@@ -26,11 +30,15 @@ ContextRole: ItslearningRestApiEntitiesPersonContextRole;
 CourseColorClass: string;
 ```
 
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+***
 
 ### CreatedDateTimeUtc
 
@@ -38,11 +46,15 @@ CourseId: number;
 CreatedDateTimeUtc: Date;
 ```
 
+***
+
 ### OrganisationId
 
 ```ts
 OrganisationId: number;
 ```
+
+***
 
 ### OrganisationLegalId
 
@@ -50,17 +62,23 @@ OrganisationId: number;
 OrganisationLegalId: string;
 ```
 
+***
+
 ### OrganisationSyncKey
 
 ```ts
 OrganisationSyncKey: string;
 ```
 
+***
+
 ### SyncKey
 
 ```ts
 SyncKey: string;
 ```
+
+***
 
 ### Title
 

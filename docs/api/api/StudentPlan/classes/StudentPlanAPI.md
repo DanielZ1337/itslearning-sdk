@@ -17,10 +17,10 @@ Secured with OAuth2, requires the OAuth2 API scope `StudentPlan`.
 
 ## Constructors
 
-### new StudentPlanAPI()
+### Constructor
 
 ```ts
-new StudentPlanAPI(http): StudentPlanAPI
+new StudentPlanAPI(http): StudentPlanAPI;
 ```
 
 #### Parameters
@@ -31,11 +31,11 @@ new StudentPlanAPI(http): StudentPlanAPI
 
 #### Returns
 
-[`StudentPlanAPI`](StudentPlanAPI.md)
+`StudentPlanAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -47,14 +47,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getActiveAchievementGoals()
 
 ```ts
-getActiveAchievementGoals(courseId): Promise<unknown>
+getActiveAchievementGoals(courseId): Promise<unknown>;
 ```
 
 Gets the active achievement goals for a specific course.
@@ -78,7 +78,7 @@ A promise that resolves to a list of active achievement goals.
 ### getArchivedAchievementGoals()
 
 ```ts
-getArchivedAchievementGoals(courseId): Promise<unknown>
+getArchivedAchievementGoals(courseId): Promise<unknown>;
 ```
 
 Gets the archived achievement goals for a specific course.
@@ -107,7 +107,7 @@ getComments(
    useNewerThan?, 
    fromId?, 
    pageIndex?, 
-pageSize?): Promise<unknown>
+pageSize?): Promise<unknown>;
 ```
 
 Retrieves a list of comments related to the specific person's student plan.
@@ -155,7 +155,7 @@ A promise that resolves to a list of related comments.
 ### getCourseWideAchievementGoals()
 
 ```ts
-getCourseWideAchievementGoals(): Promise<unknown>
+getCourseWideAchievementGoals(): Promise<unknown>;
 ```
 
 Gets the course-wide achievement goals.
@@ -173,7 +173,7 @@ A promise that resolves to a list of course-wide achievement goals.
 ### getStudentPlanCourses()
 
 ```ts
-getStudentPlanCourses(lastCommentReadDateTimesUtc?): Promise<unknown>
+getStudentPlanCourses(lastCommentReadDateTimesUtc?): Promise<unknown>;
 ```
 
 Returns a list of courses for the Student Plan.
@@ -197,7 +197,7 @@ A promise that resolves to a list of courses associated with the Student Plan.
 ### getStudentPlanOverview()
 
 ```ts
-getStudentPlanOverview(courseId, lastCommentReadDateTimeUtc?): Promise<unknown>
+getStudentPlanOverview(courseId, lastCommentReadDateTimeUtc?): Promise<unknown>;
 ```
 
 Returns an overview entity for the Student Plan.
@@ -227,7 +227,7 @@ A promise that resolves to an overview entity of the Student Plan.
 ### getTopicAssessments()
 
 ```ts
-getTopicAssessments(courseId, fromId?): Promise<unknown>
+getTopicAssessments(courseId, fromId?): Promise<unknown>;
 ```
 
 Gets a list of topic assessments for the specified course and student.

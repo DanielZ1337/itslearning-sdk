@@ -6,7 +6,9 @@
 type ItslearningRestApiEntitiesTask = object;
 ```
 
-## Type declaration
+Represents the task.
+
+## Properties
 
 ### ContentUrl
 
@@ -14,11 +16,19 @@ type ItslearningRestApiEntitiesTask = object;
 ContentUrl: string;
 ```
 
+The itslearning content URL for the task.
+
+***
+
 ### Deadline
 
 ```ts
-Deadline: Date;
+Deadline: Date | null;
 ```
+
+Task deadline. Time zone is UTC. Can be null if there is no deadline.
+
+***
 
 ### Description
 
@@ -26,11 +36,19 @@ Deadline: Date;
 Description: string;
 ```
 
+Task description.
+
+***
+
 ### ElementId
 
 ```ts
 ElementId: number;
 ```
+
+The identifier of related element.
+
+***
 
 ### ElementType
 
@@ -38,11 +56,19 @@ ElementId: number;
 ElementType: ItslearningRestApiEntitiesElementType;
 ```
 
+Type of related element.
+
+***
+
 ### Homework
 
 ```ts
 Homework: boolean;
 ```
+
+Marks the task as homework.
+
+***
 
 ### IconUrl
 
@@ -50,11 +76,19 @@ Homework: boolean;
 IconUrl: string;
 ```
 
+Url to related element icon.
+
+***
+
 ### LearningToolId
 
 ```ts
 LearningToolId: number;
 ```
+
+Identifier of learning tool (Assignment extension, test extension etc.). It's 0 for native itslearning elements. It is applicable only if ElementType is LearningToolElement.
+
+***
 
 ### LocationFriendlyName
 
@@ -62,11 +96,19 @@ LearningToolId: number;
 LocationFriendlyName: string;
 ```
 
+Friendly name of event location. Can be used instead of LocationTitle which is usually more official.
+
+***
+
 ### LocationId
 
 ```ts
 LocationId: number;
 ```
+
+The task location identifier.
+
+***
 
 ### LocationTitle
 
@@ -74,11 +116,19 @@ LocationId: number;
 LocationTitle: string;
 ```
 
+The name of the course or project that the task belong. Empty if the task is part of a individual learning plan.
+
+***
+
 ### LocationType
 
 ```ts
 LocationType: ItsolutionsItslUtilsConstantsLocationType;
 ```
+
+The task location type.
+
+***
 
 ### Status
 
@@ -86,11 +136,19 @@ LocationType: ItsolutionsItslUtilsConstantsLocationType;
 Status: keyof typeof ItslearningRestApiEntitiesTaskStatus;
 ```
 
+Task status.
+
+***
+
 ### TaskId
 
 ```ts
 TaskId: number;
 ```
+
+The unique id for for the task, in scope of a site (itslearning customer).
+
+***
 
 ### Title
 
@@ -98,8 +156,14 @@ TaskId: number;
 Title: string;
 ```
 
+Task title.
+
+***
+
 ### Url
 
 ```ts
 Url: string;
 ```
+
+The itslearning internal URL for the task.

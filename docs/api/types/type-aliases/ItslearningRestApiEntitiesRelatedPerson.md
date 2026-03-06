@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesRelatedPerson = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Person
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesRelatedPerson = object;
 Person: ItslearningRestApiEntitiesPersonSimple;
 ```
 
+***
+
 ### RelationInfo
 
 ```ts
 RelationInfo: ItslearningRestApiEntitiesRelationInfo;
 ```
+
+***
 
 ### RelationType
 

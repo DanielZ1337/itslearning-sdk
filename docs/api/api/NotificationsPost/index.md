@@ -2,9 +2,7 @@
 
 # api/NotificationsPost
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

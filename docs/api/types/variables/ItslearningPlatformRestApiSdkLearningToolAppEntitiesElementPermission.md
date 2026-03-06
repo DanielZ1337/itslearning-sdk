@@ -6,7 +6,7 @@
 const ItslearningPlatformRestApiSdkLearningToolAppEntitiesElementPermission: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### All
 

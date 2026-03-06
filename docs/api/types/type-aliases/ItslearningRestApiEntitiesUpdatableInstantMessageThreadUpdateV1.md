@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### InstantMessageThreadId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesUpdatableInstantMessageThreadUpdateV1 = object;
 InstantMessageThreadId: number;
 ```
 
+***
+
 ### Name
 
 ```ts
 Name: string;
 ```
+
+***
 
 ### PersonIds
 
@@ -26,11 +30,15 @@ Name: string;
 PersonIds: number[];
 ```
 
+***
+
 ### RepliesAreEnabled
 
 ```ts
 RepliesAreEnabled: boolean;
 ```
+
+***
 
 ### ToggleEnableDisableReplies
 
@@ -38,11 +46,15 @@ RepliesAreEnabled: boolean;
 ToggleEnableDisableReplies: boolean;
 ```
 
+***
+
 ### UpdateName
 
 ```ts
 UpdateName: boolean;
 ```
+
+***
 
 ### UpdateParticipants
 

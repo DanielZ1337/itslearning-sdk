@@ -6,7 +6,7 @@
 type ItslearningPlatformRestApiSdkItslEntitiesPlannerPlanElement = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AuthorName
 
@@ -14,11 +14,15 @@ type ItslearningPlatformRestApiSdkItslEntitiesPlannerPlanElement = object;
 AuthorName: string;
 ```
 
+***
+
 ### AuthorPersonId
 
 ```ts
 AuthorPersonId: number;
 ```
+
+***
 
 ### ElementId
 
@@ -26,11 +30,15 @@ AuthorPersonId: number;
 ElementId: number;
 ```
 
+***
+
 ### ElementLearningObjectives
 
 ```ts
 ElementLearningObjectives: number[];
 ```
+
+***
 
 ### ExtensionId
 
@@ -38,11 +46,15 @@ ElementLearningObjectives: number[];
 ExtensionId: number;
 ```
 
+***
+
 ### IconsVersion
 
 ```ts
 IconsVersion: number;
 ```
+
+***
 
 ### IconTypeId
 
@@ -50,11 +62,15 @@ IconsVersion: number;
 IconTypeId: number;
 ```
 
+***
+
 ### LearningObjectId
 
 ```ts
 LearningObjectId: number;
 ```
+
+***
 
 ### LearningObjectInstanceId
 
@@ -62,11 +78,15 @@ LearningObjectId: number;
 LearningObjectInstanceId: number;
 ```
 
+***
+
 ### LearningToolType
 
 ```ts
 LearningToolType: ItslearningPlatformRestApiSdkCommonEntitiesLearningToolType;
 ```
+
+***
 
 ### Order
 
@@ -74,11 +94,15 @@ LearningToolType: ItslearningPlatformRestApiSdkCommonEntitiesLearningToolType;
 Order: number;
 ```
 
+***
+
 ### SharedWith
 
 ```ts
 SharedWith: string;
 ```
+
+***
 
 ### SharingScope
 
@@ -86,17 +110,23 @@ SharedWith: string;
 SharingScope: ItslearningPlatformRestApiSdkCommonEntitiesSharingScope;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
 
+***
+
 ### VendorAuthorName
 
 ```ts
 VendorAuthorName: string;
 ```
+
+***
 
 ### VendorDefaultName
 

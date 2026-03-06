@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesCourseCardTeacher = object;
 ```
 
-## Type declaration
+## Properties
 
 ### FullName
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesCourseCardTeacher = object;
 FullName: string;
 ```
 
+***
+
 ### isVisibleOnCourseCard
 
 ```ts
 isVisibleOnCourseCard: boolean;
 ```
 
+***
+
 ### PersonId
 
 ```ts
 PersonId: number;
 ```
+
+***
 
 ### ProfileUrl
 

@@ -2,9 +2,7 @@
 
 # api/Sites
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

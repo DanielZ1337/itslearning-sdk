@@ -2,9 +2,7 @@
 
 # api/MediaRecorder
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

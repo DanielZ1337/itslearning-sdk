@@ -4,10 +4,10 @@
 
 ## Constructors
 
-### new HttpClient()
+### Constructor
 
 ```ts
-new HttpClient(config, authManager): HttpClient
+new HttpClient(config, authManager): HttpClient;
 ```
 
 #### Parameters
@@ -22,19 +22,21 @@ new HttpClient(config, authManager): HttpClient
 
 #### Returns
 
-[`HttpClient`](HttpClient.md)
+`HttpClient`
 
 ## Methods
 
 ### delete()
 
 ```ts
-delete<T>(endpoint, options?): Promise<T>
+delete<T>(endpoint, options?): Promise<T>;
 ```
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -44,7 +46,7 @@ delete<T>(endpoint, options?): Promise<T>
 
 ##### options?
 
-`AxiosRequestConfig`
+`AxiosRequestConfig`\<`any`\>
 
 #### Returns
 
@@ -55,12 +57,14 @@ delete<T>(endpoint, options?): Promise<T>
 ### get()
 
 ```ts
-get<T>(endpoint, options?): Promise<T>
+get<T>(endpoint, options?): Promise<T>;
 ```
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -70,7 +74,7 @@ get<T>(endpoint, options?): Promise<T>
 
 ##### options?
 
-`AxiosRequestConfig`
+`AxiosRequestConfig`\<`any`\>
 
 #### Returns
 
@@ -81,12 +85,14 @@ get<T>(endpoint, options?): Promise<T>
 ### patch()
 
 ```ts
-patch<T>(endpoint, options?): Promise<T>
+patch<T>(endpoint, options?): Promise<T>;
 ```
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -96,7 +102,7 @@ patch<T>(endpoint, options?): Promise<T>
 
 ##### options?
 
-`AxiosRequestConfig`
+`AxiosRequestConfig`\<`any`\>
 
 #### Returns
 
@@ -107,12 +113,14 @@ patch<T>(endpoint, options?): Promise<T>
 ### post()
 
 ```ts
-post<T>(endpoint, options?): Promise<T>
+post<T>(endpoint, options?): Promise<T>;
 ```
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -122,7 +130,7 @@ post<T>(endpoint, options?): Promise<T>
 
 ##### options?
 
-`AxiosRequestConfig`
+`AxiosRequestConfig`\<`any`\>
 
 #### Returns
 
@@ -133,12 +141,14 @@ post<T>(endpoint, options?): Promise<T>
 ### put()
 
 ```ts
-put<T>(endpoint, options?): Promise<T>
+put<T>(endpoint, options?): Promise<T>;
 ```
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
@@ -148,7 +158,7 @@ put<T>(endpoint, options?): Promise<T>
 
 ##### options?
 
-`AxiosRequestConfig`
+`AxiosRequestConfig`\<`any`\>
 
 #### Returns
 

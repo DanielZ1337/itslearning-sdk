@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesAssessmentRecordAssessmentRecordItem = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AssessmentId
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesAssessmentRecordAssessmentRecordItem = object;
 AssessmentId: number;
 ```
 
+***
+
 ### CategoryId
 
 ```ts
 CategoryId: number;
 ```
+
+***
 
 ### Deadline
 
@@ -26,11 +30,15 @@ CategoryId: number;
 Deadline: Date;
 ```
 
+***
+
 ### ElementId
 
 ```ts
 ElementId: number;
 ```
+
+***
 
 ### ElementType
 
@@ -38,11 +46,15 @@ ElementId: number;
 ElementType: string;
 ```
 
+***
+
 ### FormattedDeadline
 
 ```ts
 FormattedDeadline: string;
 ```
+
+***
 
 ### GradeBookItemId
 
@@ -50,11 +62,15 @@ FormattedDeadline: string;
 GradeBookItemId: number;
 ```
 
+***
+
 ### IsActive
 
 ```ts
 IsActive: boolean;
 ```
+
+***
 
 ### IsAssessmentVisible
 
@@ -62,11 +78,15 @@ IsActive: boolean;
 IsAssessmentVisible: boolean;
 ```
 
+***
+
 ### IsCustomAssessmentVisible
 
 ```ts
 IsCustomAssessmentVisible: boolean;
 ```
+
+***
 
 ### IsFinal
 
@@ -74,11 +94,15 @@ IsCustomAssessmentVisible: boolean;
 IsFinal: boolean;
 ```
 
+***
+
 ### IsLearningPathSubElement
 
 ```ts
 IsLearningPathSubElement: boolean;
 ```
+
+***
 
 ### IsPassedDeadline
 
@@ -86,11 +110,15 @@ IsLearningPathSubElement: boolean;
 IsPassedDeadline: boolean;
 ```
 
+***
+
 ### IsReadOnly
 
 ```ts
 IsReadOnly: boolean;
 ```
+
+***
 
 ### LearningToolId
 
@@ -98,11 +126,15 @@ IsReadOnly: boolean;
 LearningToolId: number;
 ```
 
+***
+
 ### MaxScore
 
 ```ts
 MaxScore: number;
 ```
+
+***
 
 ### TermId
 
@@ -110,11 +142,15 @@ MaxScore: number;
 TermId: number;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### UseScore
 
@@ -122,11 +158,15 @@ Title: string;
 UseScore: boolean;
 ```
 
+***
+
 ### Weight
 
 ```ts
 Weight: number;
 ```
+
+***
 
 ### WhenToShowResult
 

@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData = object;
 ```
 
-## Type declaration
+## Properties
 
 ### ErrorMessage
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData = obje
 ErrorMessage: ItslearningRestApiEntitiesLocalizedText;
 ```
 
+***
+
 ### IsError
 
 ```ts
 IsError: boolean;
 ```
 
+***
+
 ### OriginalFile
 
 ```ts
 OriginalFile: ItslearningRestApiEntitiesUpdatableFileDataV1;
 ```
+
+***
 
 ### PreviewFile
 

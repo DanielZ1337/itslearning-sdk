@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesSite = object;
 ```
 
-## Type declaration
+## Properties
 
 ### BaseUrl
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesSite = object;
 BaseUrl: string;
 ```
 
+***
+
 ### CountryCode
 
 ```ts
 CountryCode: string;
 ```
+
+***
 
 ### CultureName
 
@@ -26,11 +30,15 @@ CountryCode: string;
 CultureName: string;
 ```
 
+***
+
 ### CustomerId
 
 ```ts
 CustomerId: string;
 ```
+
+***
 
 ### IsFronterUpgradedSite
 
@@ -38,11 +46,15 @@ CustomerId: string;
 IsFronterUpgradedSite: boolean;
 ```
 
+***
+
 ### IsParentAppEnabled
 
 ```ts
 IsParentAppEnabled: boolean;
 ```
+
+***
 
 ### IsPersonalRestApiEnabled
 
@@ -50,11 +62,15 @@ IsParentAppEnabled: boolean;
 IsPersonalRestApiEnabled: boolean;
 ```
 
+***
+
 ### OrgApiBaseUrl
 
 ```ts
 OrgApiBaseUrl: string;
 ```
+
+***
 
 ### Segment
 
@@ -62,11 +78,15 @@ OrgApiBaseUrl: string;
 Segment: ItsolutionsItslUtilsConstantsCustomerEducationSegment;
 ```
 
+***
+
 ### ShortName
 
 ```ts
 ShortName: string;
 ```
+
+***
 
 ### ShowCustomerInDropdownList
 
@@ -74,11 +94,15 @@ ShortName: string;
 ShowCustomerInDropdownList: boolean;
 ```
 
+***
+
 ### StateCode
 
 ```ts
 StateCode: string;
 ```
+
+***
 
 ### Title
 

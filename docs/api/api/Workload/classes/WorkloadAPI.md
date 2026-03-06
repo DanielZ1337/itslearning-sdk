@@ -15,10 +15,10 @@ Secured with OAuth2, requires the OAuth2 API scope `Workload`.
 
 ## Constructors
 
-### new WorkloadAPI()
+### Constructor
 
 ```ts
-new WorkloadAPI(http): WorkloadAPI
+new WorkloadAPI(http): WorkloadAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new WorkloadAPI(http): WorkloadAPI
 
 #### Returns
 
-[`WorkloadAPI`](WorkloadAPI.md)
+`WorkloadAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,27 +45,27 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getAllStudentsWorkload()
 
 ```ts
-getAllStudentsWorkload(pageIndex, pageSize): Promise<unknown>
+getAllStudentsWorkload(pageIndex?, pageSize?): Promise<unknown>;
 ```
 
 Gets a list of all students with their corresponding workload.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -82,8 +82,8 @@ The number of students per page (default = 10).
 ```ts
 getCourseStudentsWorkload(
    courseId, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Gets a list of students in a specified course with their corresponding workload.
@@ -96,13 +96,13 @@ Gets a list of students in a specified course with their corresponding workload.
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -117,20 +117,20 @@ The number of students per page (default = 10).
 ### getMenteesWorkload()
 
 ```ts
-getMenteesWorkload(pageIndex, pageSize): Promise<unknown>
+getMenteesWorkload(pageIndex?, pageSize?): Promise<unknown>;
 ```
 
 Gets a list of mentees with their corresponding workload.
 
 #### Parameters
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -148,8 +148,8 @@ The number of mentees per page (default = 10).
 getStudentCourseAssignments(
    studentId, 
    courseId, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Gets a list of assignments for a particular student in a specific course with corresponding workload.
@@ -168,13 +168,13 @@ The unique ID of the student.
 
 The unique ID of the course.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 
@@ -191,8 +191,8 @@ The number of assignments per page (default = 10).
 ```ts
 getStudentCoursesWorkload(
    studentId, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Gets a list of courses with corresponding workload for a specific student.
@@ -205,13 +205,13 @@ Gets a list of courses with corresponding workload for a specific student.
 
 The unique ID of the student.
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 

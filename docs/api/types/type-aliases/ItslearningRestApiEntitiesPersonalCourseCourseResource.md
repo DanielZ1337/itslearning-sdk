@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesPersonalCourseCourseResource = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Active
 
@@ -14,11 +14,15 @@ type ItslearningRestApiEntitiesPersonalCourseCourseResource = object;
 Active: boolean;
 ```
 
+***
+
 ### AddElementUrl
 
 ```ts
 AddElementUrl: string | null;
 ```
+
+***
 
 ### ContentUrl
 
@@ -26,11 +30,15 @@ AddElementUrl: string | null;
 ContentUrl: string;
 ```
 
+***
+
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+***
 
 ### ElementId
 
@@ -38,11 +46,15 @@ CourseId: number;
 ElementId: number;
 ```
 
+***
+
 ### ElementType
 
 ```ts
 ElementType: ItslearningRestApiEntitiesElementType;
 ```
+
+***
 
 ### Homework
 
@@ -50,11 +62,15 @@ ElementType: ItslearningRestApiEntitiesElementType;
 Homework: boolean;
 ```
 
+***
+
 ### IconUrl
 
 ```ts
 IconUrl: string;
 ```
+
+***
 
 ### LearningObjectId
 
@@ -62,11 +78,15 @@ IconUrl: string;
 LearningObjectId: number;
 ```
 
+***
+
 ### LearningObjectInstanceId
 
 ```ts
 LearningObjectInstanceId: number;
 ```
+
+***
 
 ### LearningToolId
 
@@ -74,17 +94,23 @@ LearningObjectInstanceId: number;
 LearningToolId: number;
 ```
 
+***
+
 ### Path
 
 ```ts
 Path: string;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Url
 

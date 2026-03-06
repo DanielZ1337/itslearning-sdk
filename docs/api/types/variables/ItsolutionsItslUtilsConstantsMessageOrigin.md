@@ -6,7 +6,7 @@
 const ItsolutionsItslUtilsConstantsMessageOrigin: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### ContentBlock
 

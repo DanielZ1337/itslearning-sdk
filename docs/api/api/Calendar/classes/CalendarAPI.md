@@ -15,10 +15,10 @@ Secured with OAuth2 and requires the OAuth2 API scope `Calendar`.
 
 ## Constructors
 
-### new CalendarAPI()
+### Constructor
 
 ```ts
-new CalendarAPI(http): CalendarAPI
+new CalendarAPI(http): CalendarAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new CalendarAPI(http): CalendarAPI
 
 #### Returns
 
-[`CalendarAPI`](CalendarAPI.md)
+`CalendarAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### getEventById()
 
 ```ts
-getEventById(eventId): Promise<ItslearningRestApiEntitiesPersonalCalendarEvent>
+getEventById(eventId): Promise<ItslearningRestApiEntitiesPersonalCalendarEvent>;
 ```
 
 Retrieves a single calendar event by its unique identifier.
@@ -78,8 +78,8 @@ A promise that resolves to the requested CalendarEvent.
 ```ts
 getEvents(
    fromDate, 
-   pageIndex, 
-pageSize): Promise<ItslearningRestApiEntitiesPersonalCalendarCalendarEventV2>
+   pageIndex?, 
+pageSize?): Promise<ItslearningRestApiEntitiesPersonalCalendarCalendarEventV2>;
 ```
 
 Retrieves a paginated list of calendar events starting from a specific date.
@@ -92,13 +92,13 @@ The start date to filter events, in ISO 8601 format.
 
 `string` | `Date`
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default is 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 

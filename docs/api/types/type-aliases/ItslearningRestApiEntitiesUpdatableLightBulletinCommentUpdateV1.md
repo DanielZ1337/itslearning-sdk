@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesUpdatableLightBulletinCommentUpdateV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### Comment
 

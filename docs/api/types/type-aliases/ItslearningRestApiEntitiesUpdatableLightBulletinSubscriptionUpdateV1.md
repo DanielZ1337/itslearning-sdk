@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesUpdatableLightBulletinSubscriptionUpdateV1 = object;
 ```
 
-## Type declaration
+## Properties
 
 ### IsSubscribed
 

@@ -6,13 +6,15 @@
 type ItslearningRestApiEntitiesPersonalCourseYourStudentCourse = object;
 ```
 
-## Type declaration
+## Properties
 
 ### CourseId
 
 ```ts
 CourseId: number;
 ```
+
+***
 
 ### Title
 

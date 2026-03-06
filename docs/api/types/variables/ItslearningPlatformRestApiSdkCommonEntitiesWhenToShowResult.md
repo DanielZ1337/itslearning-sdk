@@ -6,7 +6,7 @@
 const ItslearningPlatformRestApiSdkCommonEntitiesWhenToShowResult: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### AfterAllAttempts
 

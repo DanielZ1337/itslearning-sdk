@@ -17,10 +17,10 @@ Secured with OAuth2, requires the OAuth2 API scope `Notifications`.
 
 ## Constructors
 
-### new NotificationsPostAPI()
+### Constructor
 
 ```ts
-new NotificationsPostAPI(http): NotificationsPostAPI
+new NotificationsPostAPI(http): NotificationsPostAPI;
 ```
 
 #### Parameters
@@ -31,11 +31,11 @@ new NotificationsPostAPI(http): NotificationsPostAPI
 
 #### Returns
 
-[`NotificationsPostAPI`](NotificationsPostAPI.md)
+`NotificationsPostAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -47,14 +47,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### deleteNotificationsByLocation()
 
 ```ts
-deleteNotificationsByLocation(location): Promise<SystemNetHttpHttpResponseMessage>
+deleteNotificationsByLocation(location): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Deletes all personal notifications related to a specific location.
@@ -78,7 +78,7 @@ A promise that resolves when the notifications are successfully deleted.
 ### deleteNotificationsByObject()
 
 ```ts
-deleteNotificationsByObject(object): Promise<SystemNetHttpHttpResponseMessage>
+deleteNotificationsByObject(object): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Deletes all personal notifications related to a specific object.
@@ -108,7 +108,7 @@ sendImportCompletedNotification(
    section, 
    state, 
    folders, 
-resources): Promise<SystemNetHttpHttpResponseMessage>
+resources): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Sends an "Import Completed" notification for a specific course and module.
@@ -164,7 +164,7 @@ A promise that resolves when the notification is successfully sent.
 ### sendPersonalNotifications()
 
 ```ts
-sendPersonalNotifications(notifications): Promise<SystemNetHttpHttpResponseMessage>
+sendPersonalNotifications(notifications): Promise<SystemNetHttpHttpResponseMessage>;
 ```
 
 Sends personal notifications. The current user will be set as the author of all notifications.

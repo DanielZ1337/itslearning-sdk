@@ -2,9 +2,7 @@
 
 # api/Tasks
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

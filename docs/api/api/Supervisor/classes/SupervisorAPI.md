@@ -15,10 +15,10 @@ Secured with OAuth2, requires OAuth2 API scope `Supervisor`.
 
 ## Constructors
 
-### new SupervisorAPI()
+### Constructor
 
 ```ts
-new SupervisorAPI(http): SupervisorAPI
+new SupervisorAPI(http): SupervisorAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new SupervisorAPI(http): SupervisorAPI
 
 #### Returns
 
-[`SupervisorAPI`](SupervisorAPI.md)
+`SupervisorAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,7 +45,7 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
@@ -54,8 +54,8 @@ protected readonly http: HttpClient;
 ```ts
 getSupervisedPersons(
    supervisorType, 
-   pageIndex, 
-pageSize): Promise<unknown>
+   pageIndex?, 
+pageSize?): Promise<unknown>;
 ```
 
 Gets a list of all persons the current user is a supervisor for (mentorees).
@@ -68,13 +68,13 @@ Gets a list of all persons the current user is a supervisor for (mentorees).
 
 The type of supervisor (e.g., 'Mentor', 'HeadTeacher').
 
-##### pageIndex
+##### pageIndex?
 
 `number` = `0`
 
 The index of the page to retrieve (default = 0).
 
-##### pageSize
+##### pageSize?
 
 `number` = `10`
 

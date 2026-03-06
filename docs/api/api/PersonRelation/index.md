@@ -2,9 +2,7 @@
 
 # api/PersonRelation
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

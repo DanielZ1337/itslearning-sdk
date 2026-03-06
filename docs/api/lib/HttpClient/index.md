@@ -2,9 +2,7 @@
 
 # lib/HttpClient
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

@@ -15,10 +15,10 @@ Secured with OAuth2 and requires the OAuth2 API scope `InstantMessage`.
 
 ## Constructors
 
-### new InstantMessageBroadcastAPI()
+### Constructor
 
 ```ts
-new InstantMessageBroadcastAPI(http): InstantMessageBroadcastAPI
+new InstantMessageBroadcastAPI(http): InstantMessageBroadcastAPI;
 ```
 
 #### Parameters
@@ -29,11 +29,11 @@ new InstantMessageBroadcastAPI(http): InstantMessageBroadcastAPI
 
 #### Returns
 
-[`InstantMessageBroadcastAPI`](InstantMessageBroadcastAPI.md)
+`InstantMessageBroadcastAPI`
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructors)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`constructor`](../../../lib/Manager/classes/Manager.md#constructor)
 
 ## Properties
 
@@ -45,14 +45,14 @@ protected readonly http: HttpClient;
 
 #### Inherited from
 
-[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http-1)
+[`Manager`](../../../lib/Manager/classes/Manager.md).[`http`](../../../lib/Manager/classes/Manager.md#http)
 
 ## Methods
 
 ### deleteBroadcastThreads()
 
 ```ts
-deleteBroadcastThreads(data): Promise<void>
+deleteBroadcastThreads(_data): Promise<void>;
 ```
 
 Marks broadcast threads as deleted and creates an async task
@@ -60,7 +60,7 @@ to permanently delete them and all associated data.
 
 #### Parameters
 
-##### data
+##### \_data
 
 `number`[]
 
@@ -73,7 +73,7 @@ to permanently delete them and all associated data.
 ### getBroadcastStatistics()
 
 ```ts
-getBroadcastStatistics(threadId): Promise<ItsolutionsItslearningItslCoreBusinessLayerInstantMessageBroadcastBroadcastMessageStatisticsEntity>
+getBroadcastStatistics(threadId): Promise<ItsolutionsItslearningItslCoreBusinessLayerInstantMessageBroadcastBroadcastMessageStatisticsEntity>;
 ```
 
 Gets statistics on how many recipients read messages of specified thread.
@@ -95,7 +95,7 @@ The unique ID of the broadcast thread.
 ### sendBroadcastMessage()
 
 ```ts
-sendBroadcastMessage(data): Promise<unknown>
+sendBroadcastMessage(data): Promise<unknown>;
 ```
 
 Sends a broadcast instant message.

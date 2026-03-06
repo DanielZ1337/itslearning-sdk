@@ -6,7 +6,7 @@
 type ItslearningRestApiEntitiesAssessmentRecordAssessmentScale = object;
 ```
 
-## Type declaration
+## Properties
 
 ### AssessmentScaleId
 
@@ -14,17 +14,23 @@ type ItslearningRestApiEntitiesAssessmentRecordAssessmentScale = object;
 AssessmentScaleId: number;
 ```
 
+***
+
 ### AssessmentTotals
 
 ```ts
 AssessmentTotals: number;
 ```
 
+***
+
 ### Title
 
 ```ts
 Title: string;
 ```
+
+***
 
 ### Values
 
