@@ -22,5 +22,5 @@ export const ItslearningScopes = {
 	Workload: "Workload",
 } as const;
 
-export type ItslearningScope =
+export type ItslearningScopes =
 	(typeof ItslearningScopes)[keyof typeof ItslearningScopes];

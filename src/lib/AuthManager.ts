@@ -1,6 +1,6 @@
 import type { ItsolutionsItslearningWebRestApiPersonalTokenResponse } from "../types/api/native/Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse";
 import { GrantType } from "../types/grantTypes";
-import type { ItslearningScope } from "../types/scopes";
+import type { ItslearningScopes } from "../types/scopes";
 import type { ConfigManager } from "./ConfigManager";
 
 export class AuthManager {
@@ -28,7 +28,7 @@ export class AuthManager {
 
 	getAuthorizationUrl(
 		state: string,
-		scope: ItslearningScope[] | ItslearningScope,
+		scope: ItslearningScopes[] | ItslearningScopes,
 	): string {
 		const params = new URLSearchParams({
 			client_id: this.config.getClientId(),
