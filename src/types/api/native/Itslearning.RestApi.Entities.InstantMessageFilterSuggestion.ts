@@ -1,5 +1,7 @@
+import type { ItslearningRestApiEntitiesInstantMessageThreadType } from "../InstantMessageThreadType";
+
 export type ItslearningRestApiEntitiesInstantMessageFilterSuggestion = {
-	Type: "OneToOne" | "Course" | "Project" | "Group";
+	Type: ItslearningRestApiEntitiesInstantMessageThreadType;
 	Id: number;
 	Label: string;
 };

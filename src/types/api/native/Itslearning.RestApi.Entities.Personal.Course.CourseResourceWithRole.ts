@@ -1,9 +1,10 @@
 import type { ItslearningRestApiEntitiesElementType } from "./Itslearning.RestApi.Entities.ElementType";
+import type { ItslearningRestApiEntitiesPersonContextRole } from "./Itslearning.RestApi.Entities.PersonContextRole";
 
 export type ItslearningRestApiEntitiesPersonalCourseCourseResourceWithRole = {
 	CourseCode: string;
 	CourseTitle: string;
-	ContextRole: any;
+	ContextRole: ItslearningRestApiEntitiesPersonContextRole;
 	Title: string;
 	ElementId: number;
 	ElementType: ItslearningRestApiEntitiesElementType;

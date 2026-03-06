@@ -1,8 +1,8 @@
 export type EligiblePersonsResponse = {
 	OperationLog: {
-		RequestedOperation: any;
-		Errors: Array<any>;
-		Warnings: Array<any>;
+		RequestedOperation: unknown;
+		Errors: Array<unknown>;
+		Warnings: Array<unknown>;
 		HasErrors: boolean;
 		HasWarnings: boolean;
 	};

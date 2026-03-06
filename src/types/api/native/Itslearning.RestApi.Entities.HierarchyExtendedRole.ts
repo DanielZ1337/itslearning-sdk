@@ -1,0 +1,1 @@
+export type ItslearningRestApiEntitiesHierarchyExtendedRole = string;

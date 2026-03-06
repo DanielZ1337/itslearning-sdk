@@ -1,0 +1,22 @@
+export type ItslearningRestApiEntitiesYourFilesFileModel = {
+	Name: string;
+	LastModified: string;
+	LastModifiedString: string;
+	FileType: string;
+	FileSize: number;
+	FileId: number;
+	FileRepoId: string;
+	SignedFileRepoId: string;
+	IsFolder: boolean;
+	VirtualPath: string;
+	Icon: string;
+	FolderId: number;
+	ParentFolderId: number;
+	NameWithoutExtension: string;
+	Extension: string;
+	Children: Array<ItslearningRestApiEntitiesYourFilesFileModel>;
+	IsEditable: boolean;
+	IsViewable: boolean;
+	FolderType: string;
+	PublicLink: string;
+};

@@ -1,0 +1,9 @@
+export type ItslearningRestApiEntitiesYourFilesMessageAttachmentModel = {
+	InstantMessageId: number;
+	InstantMessageThreadId: number;
+	FileName: string;
+	FileType: string;
+	UploadedDateString: string;
+	UploadedDate: string;
+	Icon: string;
+};

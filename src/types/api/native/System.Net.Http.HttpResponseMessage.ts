@@ -1,9 +1,9 @@
 export type SystemNetHttpHttpResponseMessage = {
 	Version: string;
-	Content: any;
+	Content: unknown;
 	StatusCode: number;
 	ReasonPhrase: string;
 	Headers: Headers;
-	RequestMessage: any;
+	RequestMessage: unknown;
 	IsSuccessStatusCode: boolean;
 };

@@ -1,0 +1,11 @@
+import type {
+	ItslearningRestApiEntitiesLearningObjectiveProgressReportReportGroupItem,
+	ItslearningRestApiEntitiesLearningObjectiveProgressReportReportLearningObjectiveParent,
+} from "./Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportGroupItem";
+
+export type ItslearningRestApiEntitiesLearningObjectiveProgressReportReportGroup =
+	{
+		GroupId: number;
+		Parents: Array<ItslearningRestApiEntitiesLearningObjectiveProgressReportReportLearningObjectiveParent>;
+		ReportGroupItems: Array<ItslearningRestApiEntitiesLearningObjectiveProgressReportReportGroupItem>;
+	};
