@@ -34,19 +34,39 @@ export class HttpClient {
 	}
 
 	/**
-	 * If data is FormData, ensure Content-Type is multipart/form-data so axios
-	 * doesn't serialize it to JSON (its default POST Content-Type is application/json).
+	 * If data is FormData, override transformRequest to pass it through unchanged
+	 * and strip Content-Type so the platform sets multipart/form-data with boundary.
+	 * Uses duck-typing instead of instanceof to handle RN's FormData polyfill.
 	 */
-	private applyFormDataHeaders(
+	private applyFormDataConfig(
 		data: unknown,
 		config: Record<string, unknown>,
 	): Record<string, unknown> {
+		if (
+			data &&
+			typeof data === "object" &&
+			typeof (data as any).append === "function" &&
+			typeof (data as any).getParts === "function"
+		) {
+			return {
+				...config,
+				transformRequest: () => data,
+				headers: {
+					...((config.headers as Record<string, unknown>) ?? {}),
+					"Content-Type": null,
+				},
+			};
+		}
 		if (data instanceof FormData) {
 			return {
 				...config,
-				headers: {
-					...(config.headers as Record<string, string> | undefined),
-					"Content-Type": "multipart/form-data",
+				transformRequest: (_d: unknown, headers: Record<string, unknown>) => {
+					if (headers && typeof headers.delete === "function") {
+						(headers as any).delete("Content-Type");
+					} else if (headers) {
+						delete headers["Content-Type"];
+					}
+					return data;
 				},
 			};
 		}
@@ -70,7 +90,7 @@ export class HttpClient {
 			.post(
 				this.getURL(endpoint, { query: params }),
 				data,
-				this.applyFormDataHeaders(data, config),
+				this.applyFormDataConfig(data, config),
 			)
 			.then((response) => response.data);
 	}
@@ -81,7 +101,7 @@ export class HttpClient {
 			.put(
 				this.getURL(endpoint, { query: params }),
 				data,
-				this.applyFormDataHeaders(data, config),
+				this.applyFormDataConfig(data, config),
 			)
 			.then((response) => response.data);
 	}
@@ -98,7 +118,7 @@ export class HttpClient {
 			.patch(
 				this.getURL(endpoint, { query: params }),
 				data,
-				this.applyFormDataHeaders(data, config),
+				this.applyFormDataConfig(data, config),
 			)
 			.then((response) => response.data);
 	}
