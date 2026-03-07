@@ -53,12 +53,16 @@ export class AuthManager {
 					grant_type: GrantType.AuthorizationCode,
 					code,
 					client_id: this.config.getClientId(),
+					redirect_uri: this.config.getRedirectUri(),
 				}),
 			},
 		);
 
 		if (!response.ok) {
-			throw new Error(`Failed to exchange code: ${response.statusText}`);
+			const body = await response.text().catch(() => "");
+			throw new Error(
+				`Failed to exchange code: ${response.status} ${response.statusText}${body ? ` — ${body}` : ""}`,
+			);
 		}
 
 		const data =
@@ -87,7 +91,10 @@ export class AuthManager {
 		);
 
 		if (!response.ok) {
-			throw new Error(`Failed to refresh token: ${response.statusText}`);
+			const body = await response.text().catch(() => "");
+			throw new Error(
+				`Failed to refresh token: ${response.status} ${response.statusText}${body ? ` — ${body}` : ""}`,
+			);
 		}
 
 		const data =
