@@ -33,6 +33,26 @@ export class HttpClient {
 		return url.toString();
 	}
 
+	/**
+	 * If data is FormData, ensure Content-Type is multipart/form-data so axios
+	 * doesn't serialize it to JSON (its default POST Content-Type is application/json).
+	 */
+	private applyFormDataHeaders(
+		data: unknown,
+		config: Record<string, unknown>,
+	): Record<string, unknown> {
+		if (data instanceof FormData) {
+			return {
+				...config,
+				headers: {
+					...(config.headers as Record<string, string> | undefined),
+					"Content-Type": "multipart/form-data",
+				},
+			};
+		}
+		return config;
+	}
+
 	async get<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		return await this.client
 			.get(
@@ -47,14 +67,22 @@ export class HttpClient {
 	async post<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.post(this.getURL(endpoint, { query: params }), data, config)
+			.post(
+				this.getURL(endpoint, { query: params }),
+				data,
+				this.applyFormDataHeaders(data, config),
+			)
 			.then((response) => response.data);
 	}
 
 	async put<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.put(this.getURL(endpoint, { query: params }), data, config)
+			.put(
+				this.getURL(endpoint, { query: params }),
+				data,
+				this.applyFormDataHeaders(data, config),
+			)
 			.then((response) => response.data);
 	}
 
@@ -67,7 +95,11 @@ export class HttpClient {
 	async patch<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.patch(this.getURL(endpoint, { query: params }), data, config)
+			.patch(
+				this.getURL(endpoint, { query: params }),
+				data,
+				this.applyFormDataHeaders(data, config),
+			)
 			.then((response) => response.data);
 	}
 }
