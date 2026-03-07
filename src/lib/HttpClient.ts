@@ -45,32 +45,29 @@ export class HttpClient {
 	}
 
 	async post<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
+		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.post(this.getURL(endpoint, options?.params), options?.data, {
-				data: options?.data,
-			})
+			.post(this.getURL(endpoint, { query: params }), data, config)
 			.then((response) => response.data);
 	}
 
 	async put<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
+		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.put(this.getURL(endpoint, options?.params), options?.data, {
-				data: options?.data,
-			})
+			.put(this.getURL(endpoint, { query: params }), data, config)
 			.then((response) => response.data);
 	}
 
 	async delete<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		return await this.client
-			.delete(this.getURL(endpoint, options?.params))
+			.delete(this.getURL(endpoint, { query: options?.params }))
 			.then((response) => response.data);
 	}
 
 	async patch<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
+		const { data, params, ...config } = options ?? {};
 		return await this.client
-			.patch(this.getURL(endpoint, options?.params), options?.data, {
-				data: options?.data,
-			})
+			.patch(this.getURL(endpoint, { query: params }), data, config)
 			.then((response) => response.data);
 	}
 }
