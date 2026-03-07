@@ -54,7 +54,7 @@ export class AuthManager {
 					code,
 					client_id: this.config.getClientId(),
 					redirect_uri: this.config.getRedirectUri(),
-				}),
+				}).toString(),
 			},
 		);
 
@@ -86,7 +86,7 @@ export class AuthManager {
 					grant_type: GrantType.RefreshToken,
 					refresh_token: refreshToken,
 					client_id: clientId,
-				}),
+				}).toString(),
 			},
 		);
 
