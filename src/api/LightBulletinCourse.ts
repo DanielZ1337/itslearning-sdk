@@ -1,5 +1,6 @@
 import { Manager } from "../lib/Manager";
 import type { EntityListOfItslearningRestApiEntitiesElementLink } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.ElementLink";
+import type { EntityListOfItslearningRestApiEntitiesLightBulletinsLightBulletinV2 } from "../types/api/native/EntityListOfItslearning.RestApi.Entities.LightBulletins.LightBulletinV2";
 import type { ItslearningRestApiEntitiesLightBulletinsLightBulletinIdentifier } from "../types/api/native/Itslearning.RestApi.Entities.LightBulletins.LightBulletinIdentifier";
 import type { ItslearningRestApiEntitiesLightBulletinsLightBulletinOutputImageData } from "../types/api/native/Itslearning.RestApi.Entities.LightBulletins.LightBulletinOutputImageData";
 import { ItslearningRestApiEntitiesLightBulletinsLightBulletinTimePeriod } from "../types/api/native/Itslearning.RestApi.Entities.LightBulletins.LightBulletinTimePeriod";
@@ -35,7 +36,7 @@ export class LightBulletinCourseAPI extends Manager {
 		fromId?: number,
 		pageIndex = 0,
 		pageSize = 100,
-	): Promise<ItslearningRestApiEntitiesLightBulletinsLightBulletinV2> {
+	): Promise<EntityListOfItslearningRestApiEntitiesLightBulletinsLightBulletinV2> {
 		const queryParams = createSearchParams({
 			timePeriod,
 			UseNewerThan: useNewerThan,
