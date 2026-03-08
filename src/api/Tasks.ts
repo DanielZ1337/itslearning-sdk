@@ -1,5 +1,5 @@
 import { Manager } from "../lib/Manager";
-import type { EntityListOfItslearningRestApiEntitiesFollowUpTask,type EntityListOfItslearningRestApiEntitiesTask } from "../types";
+import type { EntityListOfItslearningRestApiEntitiesFollowUpTask, EntityListOfItslearningRestApiEntitiesTask } from "../types";
 import { createSearchParams } from "../utils/search-params";
 
 /**
