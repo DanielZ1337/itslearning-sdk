@@ -1,59 +1,37 @@
 # .github/workflows/publish.yml
-name: Build and Publish npm Package
+name: Publish Package
 
 on:
   push:
     tags:
-      - "v*.*.*" # Triggers on tags like v1.2.3
+      - "v*.*.*"
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
-  build-and-publish:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Step 2: Setup Node.js environment
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "18" # Specify the Node.js version you need
-          cache: "npm" # Enables caching for npm dependencies
+          node-version: "24"
+          registry-url: "https://registry.npmjs.org"
 
-      # Step 3: Verify Node.js installation
-      - name: Verify Node.js installation
-        run: node --version
-
-      # Step 4: Clean up package-lock.json and node_modules
-      - name: Clean up package-lock.json and node_modules
-        run: |
-          rm -f package-lock.json
-          rm -rf node_modules
-
-      # Step 5: Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # Step 6: Build the project
       - name: Build
-        run: npm run build # Ensure your package.json has a "build" script
+        run: npm run build --if-present
 
-      # Step 7: Configure npm authentication
-      - name: Configure npm authentication
-        run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Test
+        run: npm test --if-present
 
-      # Step 8: Verify npm authentication (optional)
-      - name: Verify npm authentication
-        run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      # Step 9: Publish to npm
       - name: Publish to npm
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
