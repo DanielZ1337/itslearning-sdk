@@ -4,7 +4,7 @@ export type ItslearningRestApiEntitiesElement = {
 	Title: string;
 	LearningToolId: number;
 	ElementOrder: number;
-	ActiveFromDT: string | null;
-	ActiveToDT: string | null;
-	DeadlineDT: string | null;
+	ActiveFromDT: Date | null;
+	ActiveToDT: Date | null;
+	DeadlineDT: Date | null;
 };

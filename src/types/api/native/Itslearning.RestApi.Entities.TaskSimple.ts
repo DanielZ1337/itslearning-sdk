@@ -2,7 +2,7 @@ export type ItslearningRestApiEntitiesTaskSimple = {
 	TaskId: number;
 	Title: string;
 	Status: number;
-	Deadline: string | null;
+	Deadline: Date | null;
 	Url: string;
 	ContentUrl: string;
 	IconUrl: string;

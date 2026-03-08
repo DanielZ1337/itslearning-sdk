@@ -4,6 +4,6 @@ export type ItslearningRestApiEntitiesYourFilesMessageAttachmentModel = {
 	FileName: string;
 	FileType: string;
 	UploadedDateString: string;
-	UploadedDate: string;
+	UploadedDate: Date;
 	Icon: string;
 };

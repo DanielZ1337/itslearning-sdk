@@ -1,6 +1,8 @@
 import type { AxiosInstance, AxiosRequestConfig } from "axios";
 import axios from "axios";
+import { hydrateApiResponse } from "./response-transformer";
 import { createSearchParams } from "../utils/search-params";
+import { serializeRequestBodyDates } from "../utils/request-body";
 import type { AuthManager } from "./AuthManager";
 import type { ConfigManager } from "./ConfigManager";
 
@@ -15,16 +17,34 @@ export class HttpClient {
 		this.client = axios.create();
 	}
 
+	private normalizeQuery(
+		query?: AxiosRequestConfig["params"],
+	): Record<string, unknown> {
+		if (!query) {
+			return {};
+		}
+
+		if (query instanceof URLSearchParams) {
+			return Object.fromEntries(query.entries());
+		}
+
+		if (typeof query === "object") {
+			return query as Record<string, unknown>;
+		}
+
+		return {};
+	}
+
 	private getURL(
 		endpoint: string,
-		options?: { query?: Record<string, string> },
+		options?: { query?: AxiosRequestConfig["params"] },
 	) {
 		const url = new URL(this.config.getBaseURL());
 
 		url.pathname = endpoint;
 
 		const search = createSearchParams({
-			...options?.query,
+			...this.normalizeQuery(options?.query),
 			access_token: this.auth.getAccessToken(),
 		});
 
@@ -81,45 +101,48 @@ export class HttpClient {
 				}),
 				options,
 			)
-			.then((response) => response.data);
+			.then((response) => hydrateApiResponse("GET", endpoint, response.data));
 	}
 
 	async post<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
+		const serializedData = serializeRequestBodyDates(data);
 		return await this.client
 			.post(
 				this.getURL(endpoint, { query: params }),
-				data,
-				this.applyFormDataConfig(data, config),
+				serializedData,
+				this.applyFormDataConfig(serializedData, config),
 			)
-			.then((response) => response.data);
+			.then((response) => hydrateApiResponse("POST", endpoint, response.data));
 	}
 
 	async put<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
+		const serializedData = serializeRequestBodyDates(data);
 		return await this.client
 			.put(
 				this.getURL(endpoint, { query: params }),
-				data,
-				this.applyFormDataConfig(data, config),
+				serializedData,
+				this.applyFormDataConfig(serializedData, config),
 			)
-			.then((response) => response.data);
+			.then((response) => hydrateApiResponse("PUT", endpoint, response.data));
 	}
 
 	async delete<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		return await this.client
 			.delete(this.getURL(endpoint, { query: options?.params }))
-			.then((response) => response.data);
+			.then((response) => hydrateApiResponse("DELETE", endpoint, response.data));
 	}
 
 	async patch<T>(endpoint: string, options?: AxiosRequestConfig): Promise<T> {
 		const { data, params, ...config } = options ?? {};
+		const serializedData = serializeRequestBodyDates(data);
 		return await this.client
 			.patch(
 				this.getURL(endpoint, { query: params }),
-				data,
-				this.applyFormDataConfig(data, config),
+				serializedData,
+				this.applyFormDataConfig(serializedData, config),
 			)
-			.then((response) => response.data);
+			.then((response) => hydrateApiResponse("PATCH", endpoint, response.data));
 	}
 }

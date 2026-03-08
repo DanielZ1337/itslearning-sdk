@@ -22,6 +22,7 @@ export * from "./api/native/EntityListOfItslearning.RestApi.Entities.InstantMess
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportAssessmentStatus";
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportSubject";
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.LearningObjectiveRepository.SubjectLabel";
+export * from "./api/native/EntityListOfItslearning.RestApi.Entities.LightBulletins.LightBulletinV2";
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.Notification";
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.Personal.CalendarEvent";
 export * from "./api/native/EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant";

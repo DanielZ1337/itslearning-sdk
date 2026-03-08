@@ -4,7 +4,7 @@ import type { ItslearningRestApiEntitiesPersonSimple } from "./Itslearning.RestA
 export type ItslearningRestApiEntitiesCriteriaAssessmentReportCriterionAssessment =
 	{
 		AchievementLevelTitle: string;
-		AssessmentDate: string | null;
+		AssessmentDate: Date | null;
 		Comment: string;
 		PercentScore: number;
 		AssessedBy: ItslearningRestApiEntitiesPersonSimple;

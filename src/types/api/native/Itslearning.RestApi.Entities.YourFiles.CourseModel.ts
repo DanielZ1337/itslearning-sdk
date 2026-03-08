@@ -1,7 +1,7 @@
 export type ItslearningRestApiEntitiesYourFilesCourseModel = {
 	CourseId: number;
 	Title: string;
-	LastUpdated: string;
+	LastUpdated: Date;
 	LastUpdatedString: string;
 	Teachers: Array<string>;
 	IsActive: boolean;

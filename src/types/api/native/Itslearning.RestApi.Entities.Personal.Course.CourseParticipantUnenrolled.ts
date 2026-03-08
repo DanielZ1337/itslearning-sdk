@@ -3,7 +3,7 @@ export type ItslearningRestApiEntitiesPersonalCourseCourseParticipantUnenrolled 
 		PersonId: number;
 		FullName: string;
 		TemporaryAccess: boolean;
-		DateUnenrolled: string;
+		DateUnenrolled: Date;
 		DateUnenrolledRelative: string;
 		MemberOfCourseGroups: string;
 		PictureUrl: string;

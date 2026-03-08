@@ -14,5 +14,5 @@ export type ItslearningRestApiEntitiesLearningObjectiveProgressReportReportGroup
 		Description: string;
 		Status: ItslearningRestApiEntitiesLearningObjectiveProgressReportReportAssessmentStatus;
 		Mastered: boolean;
-		MasteredDate: string | null;
+		MasteredDate: Date | null;
 	};

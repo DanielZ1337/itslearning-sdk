@@ -55,7 +55,7 @@ export type ItslearningRestApiEntitiesCourseCard = {
 	/**
 	 * ISO 8601 timestamp of when the course content was last updated.
 	 */
-	LastUpdated: string;
+	LastUpdated: Date;
 	/**
 	 * Display-friendly timestamp of when someone was last active in the course.
 	 */
@@ -63,7 +63,7 @@ export type ItslearningRestApiEntitiesCourseCard = {
 	/**
 	 * ISO 8601 timestamp of when someone was last online in the course.
 	 */
-	LastOnline: string;
+	LastOnline: Date;
 	/**
 	 * Indicates whether the current user has marked this course as a favorite.
 	 */

@@ -29,7 +29,7 @@ export type ItslearningRestApiEntitiesYourFilesZipFileJobModel = {
 	JobId: number;
 	FileRepoId: string;
 	ZipFileName: string;
-	Created: string;
+	Created: Date;
 	Status: string;
 	DownloadUrl: string;
 };

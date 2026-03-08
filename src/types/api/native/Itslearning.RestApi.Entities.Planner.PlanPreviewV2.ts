@@ -9,7 +9,7 @@ export type ItslearningRestApiEntitiesPlannerPlanPreviewV2 = {
 	TopicColor: string;
 	PlanName: string;
 	PlanDescription: string;
-	Start: string | null;
-	Stop: string | null;
+	Start: Date | null;
+	Stop: Date | null;
 	TopicName: string;
 };

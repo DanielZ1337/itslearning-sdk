@@ -1,6 +1,6 @@
 export type ItslearningRestApiEntitiesYourFilesFileModel = {
 	Name: string;
-	LastModified: string;
+	LastModified: Date;
 	LastModifiedString: string;
 	FileType: string;
 	FileSize: number;

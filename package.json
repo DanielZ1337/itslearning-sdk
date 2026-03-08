@@ -36,6 +36,10 @@
   "scripts": {
     "docs": "npm run build && typedoc",
     "build": "npm run generate-barrels && tsup",
+    "generate:dates": "node scripts/generate-date-metadata.mjs",
+    "sync:help": "node scripts/sync-help-site.mjs",
+    "refresh:dates": "npm run sync:help && npm run generate:dates",
+    "verify:dates": "node scripts/verify-date-metadata.mjs",
     "generate-barrels": "barrelsby -c barrelsby.json",
     "test": "bun test",
     "biome:format": "biome format --write ./src",

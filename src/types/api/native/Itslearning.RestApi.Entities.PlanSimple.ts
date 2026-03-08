@@ -3,8 +3,8 @@ export type ItslearningRestApiEntitiesPlanSimple = {
 	TopicId: number;
 	Order: number;
 	Name: string;
-	StartDate: string | null;
-	StopDate: string | null;
+	StartDate: Date | null;
+	StopDate: Date | null;
 	LocationId: number;
 	LocationType: number;
 	TopicColor: string;

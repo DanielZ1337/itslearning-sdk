@@ -13,7 +13,7 @@ export type ItslearningRestApiEntitiesMessage = {
 	/** Basic details of who sent the message. */
 	From: ItslearningRestApiEntitiesPersonSimple;
 	/** When the message was received. Time zone is UTC. */
-	DateReceived: string;
+	DateReceived: Date;
 	/** The subject of the message. */
 	Subject: string;
 	/** The preview text (the first part of the message, stripped for html and html entities). */
@@ -29,9 +29,9 @@ export type ItslearningRestApiEntitiesMessage = {
 	/** True if this message has been forwarded. */
 	IsForwarded: boolean;
 	/** The time and date the last time this message was forwarded. */
-	LastForwardedDateTime: string | null;
+	LastForwardedDateTime: Date | null;
 	/** True if this message has been replied. */
 	IsReplied: boolean;
 	/** The time and date the last time this message was replied. */
-	LastRepliedDateTime: string | null;
+	LastRepliedDateTime: Date | null;
 };
