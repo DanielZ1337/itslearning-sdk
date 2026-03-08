@@ -1,4 +1,5 @@
 import { Manager } from "../lib/Manager";
+import type { EntityListOfItslearningRestApiEntitiesFollowUpTask,type EntityListOfItslearningRestApiEntitiesTask } from "../types";
 import { createSearchParams } from "../utils/search-params";
 
 /**
@@ -27,7 +28,7 @@ export class TasksAPI extends Manager {
 		courseId: number,
 		pageIndex = 0,
 		pageSize = 10,
-	): Promise<unknown> {
+	): Promise<EntityListOfItslearningRestApiEntitiesFollowUpTask> {
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
@@ -53,7 +54,7 @@ export class TasksAPI extends Manager {
 	public async getUserFollowUpTasks(
 		pageIndex = 0,
 		pageSize = 10,
-	): Promise<unknown> {
+	): Promise<EntityListOfItslearningRestApiEntitiesFollowUpTask> {
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
@@ -79,7 +80,7 @@ export class TasksAPI extends Manager {
 		status?: string,
 		deadline?: string,
 		isHomework?: boolean,
-	): Promise<unknown> {
+	): Promise<EntityListOfItslearningRestApiEntitiesTask> {
 		const queryParams = createSearchParams({
 			PageIndex: pageIndex,
 			PageSize: pageSize,
