@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/assignments/{elementId}/settings/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/assignments/{elementId}/settings/v1</h1>
+<div>
+    <p>Get settings for an assignment. This includes assessment scale (if used), and assessment status (if used).</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The elementId for the assignment, unique in scope of a customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Settings for the assignment</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Responses.ElementSettingsResponse">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Responses.ElementSettingsResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">StatusScale</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment status which is used to set a status item on an answer (submission).
+ Can be null if no assessment status is defined for the element.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.StatusScale">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.StatusScale</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentScale</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment scale which is used to set a grade on an answer (submission).
+ Can be null if no assessment scale is defined for the element.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssessmentScale">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssessmentScale</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningObjectives</td>
+                    <td class="parameter-documentation">
+                        <p>The learning objectives linked to the element.
+ Can be empty if no learning objectives are linked.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ElementLearningObjective">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ElementLearningObjective</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;StatusScale&quot;: {
+    &quot;AssessmentStatusId&quot;: 1,
+    &quot;Title&quot;: &quot;sample string 2&quot;,
+    &quot;Description&quot;: &quot;sample string 3&quot;,
+    &quot;StatusItems&quot;: [
+      {
+        &quot;AssessmentStatusItemId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;IsEditable&quot;: true,
+        &quot;IsCompleted&quot;: true,
+        &quot;IsSubmitted&quot;: true,
+        &quot;IsInitialStatus&quot;: true
+      },
+      {
+        &quot;AssessmentStatusItemId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;IsEditable&quot;: true,
+        &quot;IsCompleted&quot;: true,
+        &quot;IsSubmitted&quot;: true,
+        &quot;IsInitialStatus&quot;: true
+      }
+    ]
+  },
+  &quot;AssessmentScale&quot;: {
+    &quot;AssessmentId&quot;: 1,
+    &quot;Title&quot;: &quot;sample string 2&quot;,
+    &quot;Description&quot;: &quot;sample string 3&quot;,
+    &quot;AssessmentItems&quot;: [
+      {
+        &quot;AssessmentItemId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;PercentTo&quot;: 4.1,
+        &quot;PercentFromAndIncl&quot;: 5.1
+      },
+      {
+        &quot;AssessmentItemId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;PercentTo&quot;: 4.1,
+        &quot;PercentFromAndIncl&quot;: 5.1
+      }
+    ]
+  },
+  &quot;LearningObjectives&quot;: [
+    {
+      &quot;LearningObjectiveId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;
+    },
+    {
+      &quot;LearningObjectiveId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ElementSettingsResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Responses&quot;&gt;
+  &lt;AssessmentScale xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models&quot;&gt;
+    &lt;d2p1:AssessmentId&gt;1&lt;/d2p1:AssessmentId&gt;
+    &lt;d2p1:AssessmentItems&gt;
+      &lt;d2p1:AssessmentItem&gt;
+        &lt;d2p1:AssessmentItemId&gt;1&lt;/d2p1:AssessmentItemId&gt;
+        &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+        &lt;d2p1:PercentFromAndIncl&gt;5.1&lt;/d2p1:PercentFromAndIncl&gt;
+        &lt;d2p1:PercentTo&gt;4.1&lt;/d2p1:PercentTo&gt;
+        &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+      &lt;/d2p1:AssessmentItem&gt;
+      &lt;d2p1:AssessmentItem&gt;
+        &lt;d2p1:AssessmentItemId&gt;1&lt;/d2p1:AssessmentItemId&gt;
+        &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+        &lt;d2p1:PercentFromAndIncl&gt;5.1&lt;/d2p1:PercentFromAndIncl&gt;
+        &lt;d2p1:PercentTo&gt;4.1&lt;/d2p1:PercentTo&gt;
+        &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+      &lt;/d2p1:AssessmentItem&gt;
+    &lt;/d2p1:AssessmentItems&gt;
+    &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+    &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+  &lt;/AssessmentScale&gt;
+  &lt;LearningObjectives xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models&quot;&gt;
+    &lt;d2p1:ElementLearningObjective&gt;
+      &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+      &lt;d2p1:LearningObjectiveId&gt;1&lt;/d2p1:LearningObjectiveId&gt;
+      &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+    &lt;/d2p1:ElementLearningObjective&gt;
+    &lt;d2p1:ElementLearningObjective&gt;
+      &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+      &lt;d2p1:LearningObjectiveId&gt;1&lt;/d2p1:LearningObjectiveId&gt;
+      &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+    &lt;/d2p1:ElementLearningObjective&gt;
+  &lt;/LearningObjectives&gt;
+  &lt;StatusScale xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models&quot;&gt;
+    &lt;d2p1:AssessmentStatusId&gt;1&lt;/d2p1:AssessmentStatusId&gt;
+    &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+    &lt;d2p1:StatusItems xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses&quot;&gt;
+      &lt;d3p1:StatusItem&gt;
+        &lt;d3p1:AssessmentStatusItemId&gt;1&lt;/d3p1:AssessmentStatusItemId&gt;
+        &lt;d3p1:IsCompleted&gt;true&lt;/d3p1:IsCompleted&gt;
+        &lt;d3p1:IsEditable&gt;true&lt;/d3p1:IsEditable&gt;
+        &lt;d3p1:IsInitialStatus&gt;true&lt;/d3p1:IsInitialStatus&gt;
+        &lt;d3p1:IsSubmitted&gt;true&lt;/d3p1:IsSubmitted&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+      &lt;/d3p1:StatusItem&gt;
+      &lt;d3p1:StatusItem&gt;
+        &lt;d3p1:AssessmentStatusItemId&gt;1&lt;/d3p1:AssessmentStatusItemId&gt;
+        &lt;d3p1:IsCompleted&gt;true&lt;/d3p1:IsCompleted&gt;
+        &lt;d3p1:IsEditable&gt;true&lt;/d3p1:IsEditable&gt;
+        &lt;d3p1:IsInitialStatus&gt;true&lt;/d3p1:IsInitialStatus&gt;
+        &lt;d3p1:IsSubmitted&gt;true&lt;/d3p1:IsSubmitted&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+      &lt;/d3p1:StatusItem&gt;
+    &lt;/d2p1:StatusItems&gt;
+    &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+  &lt;/StatusScale&gt;
+&lt;/ElementSettingsResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

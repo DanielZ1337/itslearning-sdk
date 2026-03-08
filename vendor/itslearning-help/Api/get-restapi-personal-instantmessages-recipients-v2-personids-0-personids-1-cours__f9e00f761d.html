@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/instantmessages/recipients/v2?personIds[0]={personIds[0]}&amp;personIds[1]={personIds[1]}&amp;courseIds[0]={courseIds[0]}&amp;courseIds[1]={courseIds[1]}&amp;projectIds[0]={projectIds[0]}&amp;projectIds[1]={projectIds[1]}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/instantmessages/recipients/v2?personIds[0]={personIds[0]}&amp;personIds[1]={personIds[1]}&amp;courseIds[0]={courseIds[0]}&amp;courseIds[1]={courseIds[1]}&amp;projectIds[0]={projectIds[0]}&amp;projectIds[1]={projectIds[1]}</h1>
+<div>
+    <p>Gets recipients(persons, course or project) requested</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">personIds</td>
+                    <td class="parameter-documentation">
+                        <p>[optional] Persons to get data for</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">courseIds</td>
+                    <td class="parameter-documentation">
+                        <p>[optional] Courses to get data for.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">projectIds</td>
+                    <td class="parameter-documentation">
+                        <p>[optional] Projects to get data for.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of Person Simple</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageRecipient">Itslearning.RestApi.Entities.InstantMessageRecipient</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">TypeName</td>
+                    <td class="parameter-documentation">
+                        <p>TypeName can be: Person, Course, Project</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Id for recipient</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TypeNameId</td>
+                    <td class="parameter-documentation">
+                        <p>Unique identifier for a Person, Course or Project. Formatted like "TypeName-Id"</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserName</td>
+                    <td class="parameter-documentation">
+                        <p>UserName for a Person, for other types is empty</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ExtraUserInformation</td>
+                    <td class="parameter-documentation">
+                        <p>Contains extra user information which can be different depending on customer settings.
+ It can be either username, synchronization key, any of 5 custom strings or none.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Label</td>
+                    <td class="parameter-documentation">
+                        <p>Label for recipient. Stores one of the following: Person Name, Course Title, Project Title</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EncodedLabel</td>
+                    <td class="parameter-documentation">
+                        <p>Js-encoded Label for recipient.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Organization</td>
+                    <td class="parameter-documentation">
+                        <p>Organization for recipient.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ShortLabel</td>
+                    <td class="parameter-documentation">
+                        <p>Label for recipient. If Type = 0 this is set to persons initials</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SearchLabel</td>
+                    <td class="parameter-documentation">
+                        <p>Additional label for search recipient. If Type = 0 this is set to person name in the general format "FirstName LastName".</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SortField</td>
+                    <td class="parameter-documentation">
+                        <p>Label to sort on</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ParticipantsCount</td>
+                    <td class="parameter-documentation">
+                        <p>Used for Course or Projects. The number of participants in the conversation</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileImageUrl</td>
+                    <td class="parameter-documentation">
+                        <p>URL to avatar image for this recipient</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColorSchema</td>
+                    <td class="parameter-documentation">
+                        <p>Color schema for this recipient</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Code</td>
+                    <td class="parameter-documentation">
+                        <p>Extra code to be displayed after the recipients name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanReceive</td>
+                    <td class="parameter-documentation">
+                        <p>Check if recipient can receive new messages</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RoleInHierarchyTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the role in the home hierarchy.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;TypeName&quot;: &quot;sample string 1&quot;,
+    &quot;Id&quot;: 2,
+    &quot;TypeNameId&quot;: &quot;sample string 3&quot;,
+    &quot;UserName&quot;: &quot;sample string 4&quot;,
+    &quot;ExtraUserInformation&quot;: &quot;sample string 5&quot;,
+    &quot;Label&quot;: &quot;sample string 6&quot;,
+    &quot;EncodedLabel&quot;: &quot;sample string 7&quot;,
+    &quot;Organization&quot;: &quot;sample string 8&quot;,
+    &quot;ShortLabel&quot;: &quot;sample string 9&quot;,
+    &quot;SearchLabel&quot;: &quot;sample string 10&quot;,
+    &quot;SortField&quot;: 11,
+    &quot;ParticipantsCount&quot;: 12,
+    &quot;ProfileImageUrl&quot;: &quot;sample string 13&quot;,
+    &quot;ColorSchema&quot;: &quot;sample string 14&quot;,
+    &quot;Code&quot;: &quot;sample string 15&quot;,
+    &quot;CanReceive&quot;: true,
+    &quot;RoleInHierarchyTitle&quot;: &quot;sample string 16&quot;
+  },
+  {
+    &quot;TypeName&quot;: &quot;sample string 1&quot;,
+    &quot;Id&quot;: 2,
+    &quot;TypeNameId&quot;: &quot;sample string 3&quot;,
+    &quot;UserName&quot;: &quot;sample string 4&quot;,
+    &quot;ExtraUserInformation&quot;: &quot;sample string 5&quot;,
+    &quot;Label&quot;: &quot;sample string 6&quot;,
+    &quot;EncodedLabel&quot;: &quot;sample string 7&quot;,
+    &quot;Organization&quot;: &quot;sample string 8&quot;,
+    &quot;ShortLabel&quot;: &quot;sample string 9&quot;,
+    &quot;SearchLabel&quot;: &quot;sample string 10&quot;,
+    &quot;SortField&quot;: 11,
+    &quot;ParticipantsCount&quot;: 12,
+    &quot;ProfileImageUrl&quot;: &quot;sample string 13&quot;,
+    &quot;ColorSchema&quot;: &quot;sample string 14&quot;,
+    &quot;Code&quot;: &quot;sample string 15&quot;,
+    &quot;CanReceive&quot;: true,
+    &quot;RoleInHierarchyTitle&quot;: &quot;sample string 16&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfInstantMessageRecipient xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;InstantMessageRecipient&gt;
+    &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+    &lt;Code&gt;sample string 15&lt;/Code&gt;
+    &lt;ColorSchema&gt;sample string 14&lt;/ColorSchema&gt;
+    &lt;EncodedLabel&gt;sample string 7&lt;/EncodedLabel&gt;
+    &lt;ExtraUserInformation&gt;sample string 5&lt;/ExtraUserInformation&gt;
+    &lt;Id&gt;2&lt;/Id&gt;
+    &lt;Label&gt;sample string 6&lt;/Label&gt;
+    &lt;Organization&gt;sample string 8&lt;/Organization&gt;
+    &lt;ParticipantsCount&gt;12&lt;/ParticipantsCount&gt;
+    &lt;ProfileImageUrl&gt;sample string 13&lt;/ProfileImageUrl&gt;
+    &lt;RoleInHierarchyTitle&gt;sample string 16&lt;/RoleInHierarchyTitle&gt;
+    &lt;SearchLabel&gt;sample string 10&lt;/SearchLabel&gt;
+    &lt;ShortLabel&gt;sample string 9&lt;/ShortLabel&gt;
+    &lt;SortField&gt;11&lt;/SortField&gt;
+    &lt;TypeName&gt;sample string 1&lt;/TypeName&gt;
+    &lt;TypeNameId&gt;sample string 3&lt;/TypeNameId&gt;
+    &lt;UserName&gt;sample string 4&lt;/UserName&gt;
+  &lt;/InstantMessageRecipient&gt;
+  &lt;InstantMessageRecipient&gt;
+    &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+    &lt;Code&gt;sample string 15&lt;/Code&gt;
+    &lt;ColorSchema&gt;sample string 14&lt;/ColorSchema&gt;
+    &lt;EncodedLabel&gt;sample string 7&lt;/EncodedLabel&gt;
+    &lt;ExtraUserInformation&gt;sample string 5&lt;/ExtraUserInformation&gt;
+    &lt;Id&gt;2&lt;/Id&gt;
+    &lt;Label&gt;sample string 6&lt;/Label&gt;
+    &lt;Organization&gt;sample string 8&lt;/Organization&gt;
+    &lt;ParticipantsCount&gt;12&lt;/ParticipantsCount&gt;
+    &lt;ProfileImageUrl&gt;sample string 13&lt;/ProfileImageUrl&gt;
+    &lt;RoleInHierarchyTitle&gt;sample string 16&lt;/RoleInHierarchyTitle&gt;
+    &lt;SearchLabel&gt;sample string 10&lt;/SearchLabel&gt;
+    &lt;ShortLabel&gt;sample string 9&lt;/ShortLabel&gt;
+    &lt;SortField&gt;11&lt;/SortField&gt;
+    &lt;TypeName&gt;sample string 1&lt;/TypeName&gt;
+    &lt;TypeNameId&gt;sample string 3&lt;/TypeNameId&gt;
+    &lt;UserName&gt;sample string 4&lt;/UserName&gt;
+  &lt;/InstantMessageRecipient&gt;
+&lt;/ArrayOfInstantMessageRecipient&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title></title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <h1>Itslearning.RestApi.Entities.PersonSimpleWithHierarchyRoleAndCourseMembership</h1>
+    <p>A simplified structure to represent a person (user) in itslearning together with the role the user has in the requested hierarchy as well as their membership status for a desired course</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">MemberInCourse</td>
+                    <td class="parameter-documentation">
+                        <p>Wether the person is a member in a given course</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HierarchyRole</td>
+                    <td class="parameter-documentation">
+                        <p>The role the persons has in the hierarchy.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PersonId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for for the person, in scope of a site (itslearning customer).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FirstName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's first name. It can only be used when first name is displayed without last name. Otherwise must be used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's last name. It can only be used when last name is displayed without first name. Otherwise must be used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FullName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's full name formatted according to regional settings of a site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to view the person's profile in itslearning.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AdditionalInfo</td>
+                    <td class="parameter-documentation">
+                        <p>Additional information about the person. This can be context sensitive. For example when using the rest api method for message recipients search, this field
+ can contain extra information about the person, that helps the user distinguish between persons with identical names.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileImageUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The absolute URL to the person's profile image. This can be null or empty if the person does not have a profile image.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileImageUrlSmall</td>
+                    <td class="parameter-documentation">
+                        <p>The absolute URL to the person's profile image. This can be null or empty if the person does not have a profile image.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+</body>
+</html>

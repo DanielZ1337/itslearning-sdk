@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/lightbulletins/{lightBulletinId}/comments/v2</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/lightbulletins/{lightBulletinId}/comments/v2</h1>
+<div>
+    <p>Adds a new comment for light bulletin.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">lightBulletinId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier of light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Comment&#39;s text.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletinCommentUpdateV1">Itslearning.RestApi.Entities.Updatable.LightBulletinCommentUpdateV1</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Comment</td>
+                    <td class="parameter-documentation">
+                        <p>Light bulletin comment</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Comment&quot;: &quot;sample string 1&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;LightBulletinCommentUpdateV1 xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Updatable&quot;&gt;
+  &lt;Comment&gt;sample string 1&lt;/Comment&gt;
+&lt;/LightBulletinCommentUpdateV1&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Returns just added comment.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Comment">Itslearning.RestApi.Entities.Comment</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Comment identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Author</td>
+                    <td class="parameter-documentation">
+                        <p>The person who created the comment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CommentText</td>
+                    <td class="parameter-documentation">
+                        <p>Text message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AllowEditComment</td>
+                    <td class="parameter-documentation">
+                        <p><c>true</c> if it's allowed to edit the comment. Always true if current person is an author of the comment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AllowDeleteComment</td>
+                    <td class="parameter-documentation">
+                        <p><c>true</c> if it's allowed to delete the comment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>Date time in UTC when the comment was created.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsRead</td>
+                    <td class="parameter-documentation">
+                        <p><c>true</c> if the comment has been read by current person.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: 1,
+  &quot;Author&quot;: {
+    &quot;PersonId&quot;: 1,
+    &quot;FirstName&quot;: &quot;sample string 2&quot;,
+    &quot;LastName&quot;: &quot;sample string 3&quot;,
+    &quot;FullName&quot;: &quot;sample string 4&quot;,
+    &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+    &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+    &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+    &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+  },
+  &quot;CommentText&quot;: &quot;sample string 2&quot;,
+  &quot;AllowEditComment&quot;: true,
+  &quot;AllowDeleteComment&quot;: true,
+  &quot;CreatedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;IsRead&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;Comment xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;AllowDeleteComment&gt;true&lt;/AllowDeleteComment&gt;
+  &lt;AllowEditComment&gt;true&lt;/AllowEditComment&gt;
+  &lt;Author&gt;
+    &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+    &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+    &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+    &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+    &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+    &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+    &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+  &lt;/Author&gt;
+  &lt;CommentText&gt;sample string 2&lt;/CommentText&gt;
+  &lt;CreatedDateTime&gt;2026-03-07T09:02:56Z&lt;/CreatedDateTime&gt;
+  &lt;Id&gt;1&lt;/Id&gt;
+  &lt;IsRead&gt;true&lt;/IsRead&gt;
+&lt;/Comment&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title></title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <h1>Itslearning.RestApi.Entities.InstantMessage</h1>
+    <p>Represents a instance of an Instant Message</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">MessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for the message, in scope of a site (itslearning customer)</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>Obsolete use InstantMessageThreadId instead</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for the thread in scope of a site</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageThreadParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Recipients for new message threads - does not need to be filled if not used when posting a new thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageParticipant">Itslearning.RestApi.Entities.InstantMessageParticipant</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Created</td>
+                    <td class="parameter-documentation">
+                        <p>DateTime when the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedFormatted</td>
+                    <td class="parameter-documentation">
+                        <p>Formatted DateTime when the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedRelative</td>
+                    <td class="parameter-documentation">
+                        <p>How long ago the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EditedRelative</td>
+                    <td class="parameter-documentation">
+                        <p>How long ago the message was edited</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the author of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByName</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the author of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HomeOrganization</td>
+                    <td class="parameter-documentation">
+                        <p>Home organization of the author of the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByAvatar</td>
+                    <td class="parameter-documentation">
+                        <p>Url to the avatar of the author</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The message text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachmentUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to the attached file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachmentName</td>
+                    <td class="parameter-documentation">
+                        <p>File name of the attached file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Link</td>
+                    <td class="parameter-documentation">
+                        <p>The link to combine together with the message text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LinkTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Link title to create a friendly name for the link</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LinkTarget</td>
+                    <td class="parameter-documentation">
+                        <p>The target to the link eg. _blank</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSystemMessage</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message a system message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsDeleted</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message deleted</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DeletedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the person, who deleted this message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanDelete</td>
+                    <td class="parameter-documentation">
+                        <p>If the current user is allowed to delete the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsEdited</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message edited</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEdit</td>
+                    <td class="parameter-documentation">
+                        <p>If the current user is allowed to edit the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsStarred</td>
+                    <td class="parameter-documentation">
+                        <p>If this message has been marked as starred by the user</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSilent</td>
+                    <td class="parameter-documentation">
+                        <p>Flag used for messages we should not update the UI for</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuse</td>
+                    <td class="parameter-documentation">
+                        <p>This message was reported as abusive by the current user.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasShared</td>
+                    <td class="parameter-documentation">
+                        <p>The message is used to share another message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasRepliedTo</td>
+                    <td class="parameter-documentation">
+                        <p>The message is used to reply to another message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasAbuseReported</td>
+                    <td class="parameter-documentation">
+                        <p>The message is an abuse report. It has a child message that was marked as abusive message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasAbuseThreadReported</td>
+                    <td class="parameter-documentation">
+                        <p>The message is an report for abusive thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The origin message for child message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The origin instant message thread identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadDeletedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the person, who delete original instant message thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadName</td>
+                    <td class="parameter-documentation">
+                        <p>The origin instant message thread name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ChildMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The child message is shared by the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AdditionalHeading</td>
+                    <td class="parameter-documentation">
+                        <p>Additional heading to display. Extra information about where the message had its origin if a message was shared or replied to.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsBroadcastMassMessage</td>
+                    <td class="parameter-documentation">
+                        <p>This message was sent as broadcast mass message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsChildMessageDeletedPermanently</td>
+                    <td class="parameter-documentation">
+                        <p>Defines that child message has been deleted permanently</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocal</td>
+                    <td class="parameter-documentation">
+                        <p>DateTime when the message was created converted to user's timezone</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalTimeStamp</td>
+                    <td class="parameter-documentation">
+                        <p>Time when the message was created in user's timezone.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalDateStamp</td>
+                    <td class="parameter-documentation">
+                        <p>Date when the message was created in user's timezone formatted considering culture.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByShortName</td>
+                    <td class="parameter-documentation">
+                        <p>First name of the author.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalShortNumericDate</td>
+                    <td class="parameter-documentation">
+                        <p>Date when the message was created in user's timezone formatted as short numeric date without year.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+</body>
+</html>

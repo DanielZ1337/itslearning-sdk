@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/courses/bulletins/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/courses/bulletins/v1</h1>
+<div>
+    <p>Create new light bulletin.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Represents data for a single bulletin item for insert.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinAddInputDataV1">Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinAddInputDataV1</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CourseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The descriptive text for the light bulletin. It's intended to be a plain text, so should be encoded.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ElementIdsToAttach</td>
+                    <td class="parameter-documentation">
+                        <p>The collection of elements to attach.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachedImages</td>
+                    <td class="parameter-documentation">
+                        <p>The collection of attached images.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinInputImageDataV1">Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinInputImageDataV1</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AllowComments</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether comments creation is allowed for current light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveFromDate</td>
+                    <td class="parameter-documentation">
+                        <p>The time when to show the bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveToDate</td>
+                    <td class="parameter-documentation">
+                        <p>The time when to remove the bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;CourseId&quot;: 1,
+  &quot;Text&quot;: &quot;sample string 2&quot;,
+  &quot;ElementIdsToAttach&quot;: [
+    1,
+    2
+  ],
+  &quot;AttachedImages&quot;: [
+    {
+      &quot;PreviewFile&quot;: {
+        &quot;FileId&quot;: &quot;sample string 1&quot;,
+        &quot;Signature&quot;: &quot;sample string 2&quot;,
+        &quot;FileName&quot;: &quot;sample string 3&quot;
+      },
+      &quot;OriginalFile&quot;: {
+        &quot;FileId&quot;: &quot;sample string 1&quot;,
+        &quot;Signature&quot;: &quot;sample string 2&quot;,
+        &quot;FileName&quot;: &quot;sample string 3&quot;
+      }
+    },
+    {
+      &quot;PreviewFile&quot;: {
+        &quot;FileId&quot;: &quot;sample string 1&quot;,
+        &quot;Signature&quot;: &quot;sample string 2&quot;,
+        &quot;FileName&quot;: &quot;sample string 3&quot;
+      },
+      &quot;OriginalFile&quot;: {
+        &quot;FileId&quot;: &quot;sample string 1&quot;,
+        &quot;Signature&quot;: &quot;sample string 2&quot;,
+        &quot;FileName&quot;: &quot;sample string 3&quot;
+      }
+    }
+  ],
+  &quot;AllowComments&quot;: true,
+  &quot;ActiveFromDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;ActiveToDate&quot;: &quot;2026-03-07T09:02:56Z&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;LightBulletinAddInputDataV1 xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;ActiveFromDate&gt;2026-03-07T09:02:56Z&lt;/ActiveFromDate&gt;
+  &lt;ActiveToDate&gt;2026-03-07T09:02:56Z&lt;/ActiveToDate&gt;
+  &lt;AllowComments&gt;true&lt;/AllowComments&gt;
+  &lt;AttachedImages&gt;
+    &lt;LightBulletinInputImageDataV1&gt;
+      &lt;OriginalFile&gt;
+        &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+        &lt;FileName&gt;sample string 3&lt;/FileName&gt;
+        &lt;Signature&gt;sample string 2&lt;/Signature&gt;
+      &lt;/OriginalFile&gt;
+      &lt;PreviewFile&gt;
+        &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+        &lt;FileName&gt;sample string 3&lt;/FileName&gt;
+        &lt;Signature&gt;sample string 2&lt;/Signature&gt;
+      &lt;/PreviewFile&gt;
+    &lt;/LightBulletinInputImageDataV1&gt;
+    &lt;LightBulletinInputImageDataV1&gt;
+      &lt;OriginalFile&gt;
+        &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+        &lt;FileName&gt;sample string 3&lt;/FileName&gt;
+        &lt;Signature&gt;sample string 2&lt;/Signature&gt;
+      &lt;/OriginalFile&gt;
+      &lt;PreviewFile&gt;
+        &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+        &lt;FileName&gt;sample string 3&lt;/FileName&gt;
+        &lt;Signature&gt;sample string 2&lt;/Signature&gt;
+      &lt;/PreviewFile&gt;
+    &lt;/LightBulletinInputImageDataV1&gt;
+  &lt;/AttachedImages&gt;
+  &lt;ElementIdsToAttach xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/ElementIdsToAttach&gt;
+  &lt;Text&gt;sample string 2&lt;/Text&gt;
+  &lt;CourseId&gt;1&lt;/CourseId&gt;
+&lt;/LightBulletinAddInputDataV1&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The bulletin identifier.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinIdentifier">Itslearning.RestApi.Entities.LightBulletins.LightBulletinIdentifier</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">LightBulletinId</td>
+                    <td class="parameter-documentation">
+                        <p>The light bulletin identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;LightBulletinId&quot;: 1
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;LightBulletinIdentifier xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.LightBulletins&quot;&gt;
+  &lt;LightBulletinId&gt;1&lt;/LightBulletinId&gt;
+&lt;/LightBulletinIdentifier&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

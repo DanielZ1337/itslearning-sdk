@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/v3?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;filter={filter}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/v3?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;filter={filter}</h1>
+<div>
+    <p>Gets the list of courses with additional information about follow-up task count, task count and list of teachers.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">filter</td>
+                    <td class="parameter-documentation">
+                        <p>Option filter .</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.ContentAreaFilterType">Itsolutions.ItslUtils.Constants.ContentAreaFilterType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is All</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>This method return a collection of entity .</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonCourseCardData">EntityListOfItslearning.RestApi.Entities.PersonCourseCardData</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseCardData">Itslearning.RestApi.Entities.PersonCourseCardData</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;FollowUpTaskCount&quot;: 1,
+      &quot;TaskCount&quot;: 2,
+      &quot;TeachersInCourse&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FirstName&quot;: &quot;sample string 2&quot;,
+          &quot;LastName&quot;: &quot;sample string 3&quot;,
+          &quot;FullName&quot;: &quot;sample string 4&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+          &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+          &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+          &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FirstName&quot;: &quot;sample string 2&quot;,
+          &quot;LastName&quot;: &quot;sample string 3&quot;,
+          &quot;FullName&quot;: &quot;sample string 4&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+          &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+          &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+          &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+        }
+      ],
+      &quot;Role&quot;: 1,
+      &quot;PlanType&quot;: 0,
+      &quot;LastUpdatedUtc&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;NewNotificationsCount&quot;: 3,
+      &quot;NewBulletinsCount&quot;: 4,
+      &quot;Url&quot;: &quot;sample string 5&quot;,
+      &quot;HasAdminPermissions&quot;: true,
+      &quot;HasStudentPermissions&quot;: true,
+      &quot;CourseFocus&quot;: 1,
+      &quot;TopicColumnName&quot;: &quot;sample string 8&quot;,
+      &quot;CourseId&quot;: 9,
+      &quot;Title&quot;: &quot;sample string 10&quot;,
+      &quot;FriendlyName&quot;: &quot;sample string 11&quot;,
+      &quot;CourseColor&quot;: &quot;sample string 12&quot;,
+      &quot;CourseFillColor&quot;: &quot;sample string 13&quot;,
+      &quot;CourseCode&quot;: &quot;sample string 14&quot;
+    },
+    {
+      &quot;FollowUpTaskCount&quot;: 1,
+      &quot;TaskCount&quot;: 2,
+      &quot;TeachersInCourse&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FirstName&quot;: &quot;sample string 2&quot;,
+          &quot;LastName&quot;: &quot;sample string 3&quot;,
+          &quot;FullName&quot;: &quot;sample string 4&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+          &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+          &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+          &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FirstName&quot;: &quot;sample string 2&quot;,
+          &quot;LastName&quot;: &quot;sample string 3&quot;,
+          &quot;FullName&quot;: &quot;sample string 4&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+          &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+          &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+          &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+        }
+      ],
+      &quot;Role&quot;: 1,
+      &quot;PlanType&quot;: 0,
+      &quot;LastUpdatedUtc&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;NewNotificationsCount&quot;: 3,
+      &quot;NewBulletinsCount&quot;: 4,
+      &quot;Url&quot;: &quot;sample string 5&quot;,
+      &quot;HasAdminPermissions&quot;: true,
+      &quot;HasStudentPermissions&quot;: true,
+      &quot;CourseFocus&quot;: 1,
+      &quot;TopicColumnName&quot;: &quot;sample string 8&quot;,
+      &quot;CourseId&quot;: 9,
+      &quot;Title&quot;: &quot;sample string 10&quot;,
+      &quot;FriendlyName&quot;: &quot;sample string 11&quot;,
+      &quot;CourseColor&quot;: &quot;sample string 12&quot;,
+      &quot;CourseFillColor&quot;: &quot;sample string 13&quot;,
+      &quot;CourseCode&quot;: &quot;sample string 14&quot;
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;PersonCourseCardData&gt;
+      &lt;CourseCode&gt;sample string 14&lt;/CourseCode&gt;
+      &lt;CourseColor&gt;sample string 12&lt;/CourseColor&gt;
+      &lt;CourseFillColor&gt;sample string 13&lt;/CourseFillColor&gt;
+      &lt;CourseId&gt;9&lt;/CourseId&gt;
+      &lt;FriendlyName&gt;sample string 11&lt;/FriendlyName&gt;
+      &lt;Title&gt;sample string 10&lt;/Title&gt;
+      &lt;CourseFocus&gt;Subject&lt;/CourseFocus&gt;
+      &lt;HasAdminPermissions&gt;true&lt;/HasAdminPermissions&gt;
+      &lt;HasStudentPermissions&gt;true&lt;/HasStudentPermissions&gt;
+      &lt;LastUpdatedUtc&gt;2026-03-07T16:36:58Z&lt;/LastUpdatedUtc&gt;
+      &lt;NewBulletinsCount&gt;4&lt;/NewBulletinsCount&gt;
+      &lt;NewNotificationsCount&gt;3&lt;/NewNotificationsCount&gt;
+      &lt;TopicColumnName&gt;sample string 8&lt;/TopicColumnName&gt;
+      &lt;Url&gt;sample string 5&lt;/Url&gt;
+      &lt;FollowUpTaskCount&gt;1&lt;/FollowUpTaskCount&gt;
+      &lt;PlanType&gt;DeadLineDriven&lt;/PlanType&gt;
+      &lt;Role&gt;Member&lt;/Role&gt;
+      &lt;TaskCount&gt;2&lt;/TaskCount&gt;
+      &lt;TeachersInCourse&gt;
+        &lt;PersonSimple&gt;
+          &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+          &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+          &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+          &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+          &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+          &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+        &lt;/PersonSimple&gt;
+        &lt;PersonSimple&gt;
+          &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+          &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+          &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+          &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+          &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+          &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+        &lt;/PersonSimple&gt;
+      &lt;/TeachersInCourse&gt;
+    &lt;/PersonCourseCardData&gt;
+    &lt;PersonCourseCardData&gt;
+      &lt;CourseCode&gt;sample string 14&lt;/CourseCode&gt;
+      &lt;CourseColor&gt;sample string 12&lt;/CourseColor&gt;
+      &lt;CourseFillColor&gt;sample string 13&lt;/CourseFillColor&gt;
+      &lt;CourseId&gt;9&lt;/CourseId&gt;
+      &lt;FriendlyName&gt;sample string 11&lt;/FriendlyName&gt;
+      &lt;Title&gt;sample string 10&lt;/Title&gt;
+      &lt;CourseFocus&gt;Subject&lt;/CourseFocus&gt;
+      &lt;HasAdminPermissions&gt;true&lt;/HasAdminPermissions&gt;
+      &lt;HasStudentPermissions&gt;true&lt;/HasStudentPermissions&gt;
+      &lt;LastUpdatedUtc&gt;2026-03-07T16:36:58Z&lt;/LastUpdatedUtc&gt;
+      &lt;NewBulletinsCount&gt;4&lt;/NewBulletinsCount&gt;
+      &lt;NewNotificationsCount&gt;3&lt;/NewNotificationsCount&gt;
+      &lt;TopicColumnName&gt;sample string 8&lt;/TopicColumnName&gt;
+      &lt;Url&gt;sample string 5&lt;/Url&gt;
+      &lt;FollowUpTaskCount&gt;1&lt;/FollowUpTaskCount&gt;
+      &lt;PlanType&gt;DeadLineDriven&lt;/PlanType&gt;
+      &lt;Role&gt;Member&lt;/Role&gt;
+      &lt;TaskCount&gt;2&lt;/TaskCount&gt;
+      &lt;TeachersInCourse&gt;
+        &lt;PersonSimple&gt;
+          &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+          &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+          &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+          &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+          &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+          &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+        &lt;/PersonSimple&gt;
+        &lt;PersonSimple&gt;
+          &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+          &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+          &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+          &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+          &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+          &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+        &lt;/PersonSimple&gt;
+      &lt;/TeachersInCourse&gt;
+    &lt;/PersonCourseCardData&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

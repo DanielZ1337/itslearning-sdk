@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/course/{courseId}/assessmentrecord/assessmentrecordelements/v1?termId={termId}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/course/{courseId}/assessmentrecord/assessmentrecordelements/v1?termId={termId}</h1>
+<div>
+    <p>Gets the elements for the gradebook</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of a course to get assessment record elements from.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">termId</td>
+                    <td class="parameter-documentation">
+                        <p>[optional] Used for filtering assessment record elements by term.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordElements">Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordElements</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">AssessmentRecordItems</td>
+                    <td class="parameter-documentation">
+                        <p>Returns the assessment record items</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem">Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentRecordItemsCount</td>
+                    <td class="parameter-documentation">
+                        <p>Returns the assessment record items' count</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FinalAssessmentRecordItems</td>
+                    <td class="parameter-documentation">
+                        <p>Returns the final assessment record items</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem">Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentScales</td>
+                    <td class="parameter-documentation">
+                        <p>Returns the assessment scales</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentScale">Itslearning.RestApi.Entities.AssessmentRecord.AssessmentScale</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsScoreInUse</td>
+                    <td class="parameter-documentation">
+                        <p>Returns true if any asessment record items uses score</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;AssessmentRecordItems&quot;: [
+    {
+      &quot;GradeBookItemId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Weight&quot;: 3.1,
+      &quot;WhenToShowResult&quot;: 0,
+      &quot;AssessmentId&quot;: 4,
+      &quot;IsFinal&quot;: true,
+      &quot;IsPassedDeadline&quot;: true,
+      &quot;TermId&quot;: 7,
+      &quot;CategoryId&quot;: 8,
+      &quot;ElementType&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 1,
+      &quot;MaxScore&quot;: 10.1,
+      &quot;UseScore&quot;: true,
+      &quot;IsActive&quot;: true,
+      &quot;IsAssessmentVisible&quot;: true,
+      &quot;IsCustomAssessmentVisible&quot;: true,
+      &quot;IsReadOnly&quot;: true,
+      &quot;LearningToolId&quot;: 16,
+      &quot;Deadline&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;FormattedDeadline&quot;: &quot;sample string 17&quot;,
+      &quot;IsLearningPathSubElement&quot;: true
+    },
+    {
+      &quot;GradeBookItemId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Weight&quot;: 3.1,
+      &quot;WhenToShowResult&quot;: 0,
+      &quot;AssessmentId&quot;: 4,
+      &quot;IsFinal&quot;: true,
+      &quot;IsPassedDeadline&quot;: true,
+      &quot;TermId&quot;: 7,
+      &quot;CategoryId&quot;: 8,
+      &quot;ElementType&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 1,
+      &quot;MaxScore&quot;: 10.1,
+      &quot;UseScore&quot;: true,
+      &quot;IsActive&quot;: true,
+      &quot;IsAssessmentVisible&quot;: true,
+      &quot;IsCustomAssessmentVisible&quot;: true,
+      &quot;IsReadOnly&quot;: true,
+      &quot;LearningToolId&quot;: 16,
+      &quot;Deadline&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;FormattedDeadline&quot;: &quot;sample string 17&quot;,
+      &quot;IsLearningPathSubElement&quot;: true
+    }
+  ],
+  &quot;AssessmentRecordItemsCount&quot;: 1,
+  &quot;FinalAssessmentRecordItems&quot;: [
+    {
+      &quot;GradeBookItemId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Weight&quot;: 3.1,
+      &quot;WhenToShowResult&quot;: 0,
+      &quot;AssessmentId&quot;: 4,
+      &quot;IsFinal&quot;: true,
+      &quot;IsPassedDeadline&quot;: true,
+      &quot;TermId&quot;: 7,
+      &quot;CategoryId&quot;: 8,
+      &quot;ElementType&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 1,
+      &quot;MaxScore&quot;: 10.1,
+      &quot;UseScore&quot;: true,
+      &quot;IsActive&quot;: true,
+      &quot;IsAssessmentVisible&quot;: true,
+      &quot;IsCustomAssessmentVisible&quot;: true,
+      &quot;IsReadOnly&quot;: true,
+      &quot;LearningToolId&quot;: 16,
+      &quot;Deadline&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;FormattedDeadline&quot;: &quot;sample string 17&quot;,
+      &quot;IsLearningPathSubElement&quot;: true
+    },
+    {
+      &quot;GradeBookItemId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Weight&quot;: 3.1,
+      &quot;WhenToShowResult&quot;: 0,
+      &quot;AssessmentId&quot;: 4,
+      &quot;IsFinal&quot;: true,
+      &quot;IsPassedDeadline&quot;: true,
+      &quot;TermId&quot;: 7,
+      &quot;CategoryId&quot;: 8,
+      &quot;ElementType&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 1,
+      &quot;MaxScore&quot;: 10.1,
+      &quot;UseScore&quot;: true,
+      &quot;IsActive&quot;: true,
+      &quot;IsAssessmentVisible&quot;: true,
+      &quot;IsCustomAssessmentVisible&quot;: true,
+      &quot;IsReadOnly&quot;: true,
+      &quot;LearningToolId&quot;: 16,
+      &quot;Deadline&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;FormattedDeadline&quot;: &quot;sample string 17&quot;,
+      &quot;IsLearningPathSubElement&quot;: true
+    }
+  ],
+  &quot;AssessmentScales&quot;: [
+    {
+      &quot;AssessmentScaleId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;AssessmentTotals&quot;: 3,
+      &quot;Values&quot;: [
+        {
+          &quot;AssessmentItemId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;OrderPosition&quot;: 3,
+          &quot;PercentFrom&quot;: 4.1,
+          &quot;PercentTo&quot;: 5.1
+        },
+        {
+          &quot;AssessmentItemId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;OrderPosition&quot;: 3,
+          &quot;PercentFrom&quot;: 4.1,
+          &quot;PercentTo&quot;: 5.1
+        }
+      ]
+    },
+    {
+      &quot;AssessmentScaleId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;AssessmentTotals&quot;: 3,
+      &quot;Values&quot;: [
+        {
+          &quot;AssessmentItemId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;OrderPosition&quot;: 3,
+          &quot;PercentFrom&quot;: 4.1,
+          &quot;PercentTo&quot;: 5.1
+        },
+        {
+          &quot;AssessmentItemId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;OrderPosition&quot;: 3,
+          &quot;PercentFrom&quot;: 4.1,
+          &quot;PercentTo&quot;: 5.1
+        }
+      ]
+    }
+  ],
+  &quot;IsScoreInUse&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AssessmentRecordElements xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;AssessmentRecordItems&gt;
+    &lt;AssessmentRecordItem&gt;
+      &lt;AssessmentId&gt;4&lt;/AssessmentId&gt;
+      &lt;CategoryId&gt;8&lt;/CategoryId&gt;
+      &lt;Deadline&gt;2026-03-07T09:02:56Z&lt;/Deadline&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;sample string 9&lt;/ElementType&gt;
+      &lt;FormattedDeadline&gt;sample string 17&lt;/FormattedDeadline&gt;
+      &lt;GradeBookItemId&gt;1&lt;/GradeBookItemId&gt;
+      &lt;IsActive&gt;true&lt;/IsActive&gt;
+      &lt;IsAssessmentVisible&gt;true&lt;/IsAssessmentVisible&gt;
+      &lt;IsCustomAssessmentVisible&gt;true&lt;/IsCustomAssessmentVisible&gt;
+      &lt;IsFinal&gt;true&lt;/IsFinal&gt;
+      &lt;IsLearningPathSubElement&gt;true&lt;/IsLearningPathSubElement&gt;
+      &lt;IsPassedDeadline&gt;true&lt;/IsPassedDeadline&gt;
+      &lt;IsReadOnly&gt;true&lt;/IsReadOnly&gt;
+      &lt;LearningToolId&gt;16&lt;/LearningToolId&gt;
+      &lt;MaxScore&gt;10.1&lt;/MaxScore&gt;
+      &lt;TermId&gt;7&lt;/TermId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;UseScore&gt;true&lt;/UseScore&gt;
+      &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;WhenToShowResult&gt;Undefined&lt;/WhenToShowResult&gt;
+    &lt;/AssessmentRecordItem&gt;
+    &lt;AssessmentRecordItem&gt;
+      &lt;AssessmentId&gt;4&lt;/AssessmentId&gt;
+      &lt;CategoryId&gt;8&lt;/CategoryId&gt;
+      &lt;Deadline&gt;2026-03-07T09:02:56Z&lt;/Deadline&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;sample string 9&lt;/ElementType&gt;
+      &lt;FormattedDeadline&gt;sample string 17&lt;/FormattedDeadline&gt;
+      &lt;GradeBookItemId&gt;1&lt;/GradeBookItemId&gt;
+      &lt;IsActive&gt;true&lt;/IsActive&gt;
+      &lt;IsAssessmentVisible&gt;true&lt;/IsAssessmentVisible&gt;
+      &lt;IsCustomAssessmentVisible&gt;true&lt;/IsCustomAssessmentVisible&gt;
+      &lt;IsFinal&gt;true&lt;/IsFinal&gt;
+      &lt;IsLearningPathSubElement&gt;true&lt;/IsLearningPathSubElement&gt;
+      &lt;IsPassedDeadline&gt;true&lt;/IsPassedDeadline&gt;
+      &lt;IsReadOnly&gt;true&lt;/IsReadOnly&gt;
+      &lt;LearningToolId&gt;16&lt;/LearningToolId&gt;
+      &lt;MaxScore&gt;10.1&lt;/MaxScore&gt;
+      &lt;TermId&gt;7&lt;/TermId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;UseScore&gt;true&lt;/UseScore&gt;
+      &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;WhenToShowResult&gt;Undefined&lt;/WhenToShowResult&gt;
+    &lt;/AssessmentRecordItem&gt;
+  &lt;/AssessmentRecordItems&gt;
+  &lt;AssessmentRecordItemsCount&gt;1&lt;/AssessmentRecordItemsCount&gt;
+  &lt;AssessmentScales&gt;
+    &lt;AssessmentScale&gt;
+      &lt;AssessmentScaleId&gt;1&lt;/AssessmentScaleId&gt;
+      &lt;AssessmentTotals&gt;3&lt;/AssessmentTotals&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Values&gt;
+        &lt;AssessmentScaleValue&gt;
+          &lt;AssessmentItemId&gt;1&lt;/AssessmentItemId&gt;
+          &lt;OrderPosition&gt;3&lt;/OrderPosition&gt;
+          &lt;PercentFrom&gt;4.1&lt;/PercentFrom&gt;
+          &lt;PercentTo&gt;5.1&lt;/PercentTo&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/AssessmentScaleValue&gt;
+        &lt;AssessmentScaleValue&gt;
+          &lt;AssessmentItemId&gt;1&lt;/AssessmentItemId&gt;
+          &lt;OrderPosition&gt;3&lt;/OrderPosition&gt;
+          &lt;PercentFrom&gt;4.1&lt;/PercentFrom&gt;
+          &lt;PercentTo&gt;5.1&lt;/PercentTo&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/AssessmentScaleValue&gt;
+      &lt;/Values&gt;
+    &lt;/AssessmentScale&gt;
+    &lt;AssessmentScale&gt;
+      &lt;AssessmentScaleId&gt;1&lt;/AssessmentScaleId&gt;
+      &lt;AssessmentTotals&gt;3&lt;/AssessmentTotals&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Values&gt;
+        &lt;AssessmentScaleValue&gt;
+          &lt;AssessmentItemId&gt;1&lt;/AssessmentItemId&gt;
+          &lt;OrderPosition&gt;3&lt;/OrderPosition&gt;
+          &lt;PercentFrom&gt;4.1&lt;/PercentFrom&gt;
+          &lt;PercentTo&gt;5.1&lt;/PercentTo&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/AssessmentScaleValue&gt;
+        &lt;AssessmentScaleValue&gt;
+          &lt;AssessmentItemId&gt;1&lt;/AssessmentItemId&gt;
+          &lt;OrderPosition&gt;3&lt;/OrderPosition&gt;
+          &lt;PercentFrom&gt;4.1&lt;/PercentFrom&gt;
+          &lt;PercentTo&gt;5.1&lt;/PercentTo&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/AssessmentScaleValue&gt;
+      &lt;/Values&gt;
+    &lt;/AssessmentScale&gt;
+  &lt;/AssessmentScales&gt;
+  &lt;FinalAssessmentRecordItems&gt;
+    &lt;AssessmentRecordItem&gt;
+      &lt;AssessmentId&gt;4&lt;/AssessmentId&gt;
+      &lt;CategoryId&gt;8&lt;/CategoryId&gt;
+      &lt;Deadline&gt;2026-03-07T09:02:56Z&lt;/Deadline&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;sample string 9&lt;/ElementType&gt;
+      &lt;FormattedDeadline&gt;sample string 17&lt;/FormattedDeadline&gt;
+      &lt;GradeBookItemId&gt;1&lt;/GradeBookItemId&gt;
+      &lt;IsActive&gt;true&lt;/IsActive&gt;
+      &lt;IsAssessmentVisible&gt;true&lt;/IsAssessmentVisible&gt;
+      &lt;IsCustomAssessmentVisible&gt;true&lt;/IsCustomAssessmentVisible&gt;
+      &lt;IsFinal&gt;true&lt;/IsFinal&gt;
+      &lt;IsLearningPathSubElement&gt;true&lt;/IsLearningPathSubElement&gt;
+      &lt;IsPassedDeadline&gt;true&lt;/IsPassedDeadline&gt;
+      &lt;IsReadOnly&gt;true&lt;/IsReadOnly&gt;
+      &lt;LearningToolId&gt;16&lt;/LearningToolId&gt;
+      &lt;MaxScore&gt;10.1&lt;/MaxScore&gt;
+      &lt;TermId&gt;7&lt;/TermId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;UseScore&gt;true&lt;/UseScore&gt;
+      &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;WhenToShowResult&gt;Undefined&lt;/WhenToShowResult&gt;
+    &lt;/AssessmentRecordItem&gt;
+    &lt;AssessmentRecordItem&gt;
+      &lt;AssessmentId&gt;4&lt;/AssessmentId&gt;
+      &lt;CategoryId&gt;8&lt;/CategoryId&gt;
+      &lt;Deadline&gt;2026-03-07T09:02:56Z&lt;/Deadline&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;sample string 9&lt;/ElementType&gt;
+      &lt;FormattedDeadline&gt;sample string 17&lt;/FormattedDeadline&gt;
+      &lt;GradeBookItemId&gt;1&lt;/GradeBookItemId&gt;
+      &lt;IsActive&gt;true&lt;/IsActive&gt;
+      &lt;IsAssessmentVisible&gt;true&lt;/IsAssessmentVisible&gt;
+      &lt;IsCustomAssessmentVisible&gt;true&lt;/IsCustomAssessmentVisible&gt;
+      &lt;IsFinal&gt;true&lt;/IsFinal&gt;
+      &lt;IsLearningPathSubElement&gt;true&lt;/IsLearningPathSubElement&gt;
+      &lt;IsPassedDeadline&gt;true&lt;/IsPassedDeadline&gt;
+      &lt;IsReadOnly&gt;true&lt;/IsReadOnly&gt;
+      &lt;LearningToolId&gt;16&lt;/LearningToolId&gt;
+      &lt;MaxScore&gt;10.1&lt;/MaxScore&gt;
+      &lt;TermId&gt;7&lt;/TermId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;UseScore&gt;true&lt;/UseScore&gt;
+      &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;WhenToShowResult&gt;Undefined&lt;/WhenToShowResult&gt;
+    &lt;/AssessmentRecordItem&gt;
+  &lt;/FinalAssessmentRecordItems&gt;
+  &lt;IsScoreInUse&gt;true&lt;/IsScoreInUse&gt;
+&lt;/AssessmentRecordElements&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/course/{courseId}/assessmentrecord/settings/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/course/{courseId}/assessmentrecord/settings/v1</h1>
+<div>
+    <p>Setup for the assessment record page, language, settings, paths, and permissions</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of a course to get assessment record setup from.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSetup">Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSetup</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Language</td>
+                    <td class="parameter-documentation">
+                        <p>Language for the assessment record page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordLanguage">Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordLanguage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Paths</td>
+                    <td class="parameter-documentation">
+                        <p>Paths for the assessment record page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPaths">Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPaths</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Settings</td>
+                    <td class="parameter-documentation">
+                        <p>Settings for the assessment record page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSettings">Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSettings</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Permissions</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets the permissions for the assessment record page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPermissions">Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPermissions</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Language&quot;: {
+    &quot;AddAssessment&quot;: &quot;sample string 1&quot;,
+    &quot;AddCategories&quot;: &quot;sample string 2&quot;,
+    &quot;AddGroups&quot;: &quot;sample string 3&quot;,
+    &quot;AddToGradebook&quot;: &quot;sample string 4&quot;,
+    &quot;AllAssessments&quot;: &quot;sample string 5&quot;,
+    &quot;AllGroups&quot;: &quot;sample string 6&quot;,
+    &quot;AllParticipants&quot;: &quot;sample string 7&quot;,
+    &quot;AnErrorOccurred&quot;: &quot;sample string 8&quot;,
+    &quot;Apply&quot;: &quot;sample string 9&quot;,
+    &quot;Assess&quot;: &quot;sample string 10&quot;,
+    &quot;AssessmentRecordCategory&quot;: &quot;sample string 11&quot;,
+    &quot;AssessmentRecordSettings&quot;: &quot;sample string 12&quot;,
+    &quot;AssessmentWeight&quot;: &quot;sample string 13&quot;,
+    &quot;AssessmentWeighting&quot;: &quot;sample string 14&quot;,
+    &quot;AverageAndCount&quot;: &quot;sample string 15&quot;,
+    &quot;Cancel&quot;: &quot;sample string 16&quot;,
+    &quot;CannotDeleteFinalAssessment&quot;: &quot;sample string 17&quot;,
+    &quot;Categories&quot;: &quot;sample string 18&quot;,
+    &quot;CategoryExistsButNotInUseMessage&quot;: &quot;sample string 19&quot;,
+    &quot;CategoryWeight&quot;: &quot;sample string 20&quot;,
+    &quot;CategoryWeighting&quot;: &quot;sample string 21&quot;,
+    &quot;Close&quot;: &quot;sample string 22&quot;,
+    &quot;ColumnsNotConnectedToTerms&quot;: &quot;sample string 23&quot;,
+    &quot;CompleteTerm&quot;: &quot;sample string 24&quot;,
+    &quot;CompletedTermMessage&quot;: &quot;sample string 25&quot;,
+    &quot;Confirm&quot;: &quot;sample string 26&quot;,
+    &quot;Deadline&quot;: &quot;sample string 27&quot;,
+    &quot;Delete&quot;: &quot;sample string 28&quot;,
+    &quot;Dismiss&quot;: &quot;sample string 29&quot;,
+    &quot;Edit&quot;: &quot;sample string 30&quot;,
+    &quot;ErrorDuringPageLoad&quot;: &quot;sample string 31&quot;,
+    &quot;ErrorMessage&quot;: &quot;sample string 32&quot;,
+    &quot;Ex&quot;: &quot;sample string 33&quot;,
+    &quot;Exempt&quot;: &quot;sample string 34&quot;,
+    &quot;ExistingAssessment&quot;: &quot;sample string 35&quot;,
+    &quot;ExportToCsv&quot;: &quot;sample string 36&quot;,
+    &quot;FilterBy&quot;: &quot;sample string 37&quot;,
+    &quot;FinalAssessment&quot;: &quot;sample string 38&quot;,
+    &quot;Functions&quot;: &quot;sample string 39&quot;,
+    &quot;Grade&quot;: &quot;sample string 40&quot;,
+    &quot;GradebookGroup&quot;: &quot;sample string 41&quot;,
+    &quot;Groups&quot;: &quot;sample string 42&quot;,
+    &quot;Information&quot;: &quot;sample string 43&quot;,
+    &quot;MoreOptions&quot;: &quot;sample string 44&quot;,
+    &quot;Name&quot;: &quot;sample string 45&quot;,
+    &quot;NewGradebookColumn&quot;: &quot;sample string 46&quot;,
+    &quot;NoAssessmentWeighting&quot;: &quot;sample string 47&quot;,
+    &quot;NoCategories&quot;: &quot;sample string 48&quot;,
+    &quot;NoCategoriesCreatedMessage&quot;: &quot;sample string 49&quot;,
+    &quot;NoGrading&quot;: &quot;sample string 50&quot;,
+    &quot;NoGroups&quot;: &quot;sample string 51&quot;,
+    &quot;NoGroupsCreatedMessage&quot;: &quot;sample string 52&quot;,
+    &quot;NoMoreExistingAssessments&quot;: &quot;sample string 53&quot;,
+    &quot;NoParticipantsAvailable&quot;: &quot;sample string 54&quot;,
+    &quot;NoStudentsMatchSearch&quot;: &quot;sample string 55&quot;,
+    &quot;LearningPathWarning&quot;: &quot;sample string 56&quot;,
+    &quot;NSlashA&quot;: &quot;sample string 57&quot;,
+    &quot;Options&quot;: &quot;sample string 58&quot;,
+    &quot;OverallAverage&quot;: &quot;sample string 59&quot;,
+    &quot;Overdue&quot;: &quot;sample string 60&quot;,
+    &quot;PageTitle&quot;: &quot;sample string 61&quot;,
+    &quot;ParticipantsNotInAGroup&quot;: &quot;sample string 62&quot;,
+    &quot;Percent&quot;: &quot;sample string 63&quot;,
+    &quot;PleaseConfirm&quot;: &quot;sample string 64&quot;,
+    &quot;Points&quot;: &quot;sample string 65&quot;,
+    &quot;Refresh&quot;: &quot;sample string 66&quot;,
+    &quot;Retry&quot;: &quot;sample string 67&quot;,
+    &quot;RevertExemption&quot;: &quot;sample string 68&quot;,
+    &quot;Score&quot;: &quot;sample string 69&quot;,
+    &quot;Search&quot;: &quot;sample string 70&quot;,
+    &quot;SearchStudents&quot;: &quot;sample string 71&quot;,
+    &quot;Sort&quot;: &quot;sample string 72&quot;,
+    &quot;Summary&quot;: &quot;sample string 73&quot;,
+    &quot;SubmissionLink&quot;: &quot;sample string 74&quot;,
+    &quot;Term&quot;: &quot;sample string 75&quot;,
+    &quot;Title&quot;: &quot;sample string 76&quot;,
+    &quot;TransferTo&quot;: &quot;sample string 77&quot;,
+    &quot;TrendsAndProgress&quot;: &quot;sample string 78&quot;,
+    &quot;UnableToExempt&quot;: &quot;sample string 79&quot;,
+    &quot;UnableToOverwrite&quot;: &quot;sample string 80&quot;,
+    &quot;UnableToSetGrade&quot;: &quot;sample string 81&quot;,
+    &quot;UnableToSetScore&quot;: &quot;sample string 82&quot;,
+    &quot;Uncategorised&quot;: &quot;sample string 83&quot;,
+    &quot;ValidationNumberBetween&quot;: &quot;sample string 84&quot;,
+    &quot;View&quot;: &quot;sample string 85&quot;,
+    &quot;ViewInExcel&quot;: &quot;sample string 86&quot;,
+    &quot;WarningForCompletingTerm&quot;: &quot;sample string 87&quot;,
+    &quot;WarningForDeletingElement&quot;: &quot;sample string 88&quot;,
+    &quot;NotAvailable&quot;: &quot;sample string 89&quot;
+  },
+  &quot;Paths&quot;: {
+    &quot;StaticContent&quot;: &quot;sample string 1&quot;
+  },
+  &quot;Settings&quot;: {
+    &quot;ExtensionModules&quot;: [
+      {
+        &quot;ModuleExtensionSetupId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;OpenInNewWindow&quot;: true
+      },
+      {
+        &quot;ModuleExtensionSetupId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;OpenInNewWindow&quot;: true
+      }
+    ],
+    &quot;Categories&quot;: [
+      {
+        &quot;CategoryId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Weight&quot;: 3.1,
+        &quot;Position&quot;: 4.1
+      },
+      {
+        &quot;CategoryId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Weight&quot;: 3.1,
+        &quot;Position&quot;: 4.1
+      }
+    ],
+    &quot;DefaultProfilePicture&quot;: &quot;sample string 1&quot;,
+    &quot;DefaultProfilePictureSmall&quot;: &quot;sample string 2&quot;,
+    &quot;AssessmentRecordIcon&quot;: &quot;sample string 3&quot;,
+    &quot;ExternalSystemName&quot;: &quot;sample string 4&quot;,
+    &quot;ExtraUserInformation&quot;: &quot;sample string 5&quot;,
+    &quot;Groups&quot;: [
+      {
+        &quot;GroupId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;
+      },
+      {
+        &quot;GroupId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;
+      }
+    ],
+    &quot;HasExistingAssessment&quot;: true,
+    &quot;IsAccessibilityModeEnabled&quot;: true,
+    &quot;IsAssessmentRecordEnabledForCourse&quot;: true,
+    &quot;IsAssessmentRecordSettingsLinkVisible&quot;: true,
+    &quot;IsAverageAndCountEnabled&quot;: true,
+    &quot;IsCategoryWeightingEnabled&quot;: true,
+    &quot;IsExemptEnabled&quot;: true,
+    &quot;IsSummaryEnabled&quot;: true,
+    &quot;IsTransferToExternalSystemEnabled&quot;: true,
+    &quot;LastUsedCategoryIds&quot;: [
+      1,
+      2
+    ],
+    &quot;LocaleDecimalSeparator&quot;: &quot;sample string 15&quot;,
+    &quot;NameFormat&quot;: 0,
+    &quot;ShowOverallAverage&quot;: true,
+    &quot;SelectedCategoryIds&quot;: [
+      1,
+      2
+    ],
+    &quot;SelectedGroupIds&quot;: [
+      1,
+      2
+    ],
+    &quot;SelectedScoreFormatId&quot;: 17,
+    &quot;SelectedSortOptionId&quot;: 18,
+    &quot;SelectedTermId&quot;: 19,
+    &quot;Terms&quot;: [
+      {
+        &quot;TermId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Status&quot;: 3,
+        &quot;IsCompleted&quot;: true,
+        &quot;CompletedDate&quot;: &quot;sample string 5&quot;,
+        &quot;CompletedBy&quot;: &quot;sample string 6&quot;,
+        &quot;IsDeleted&quot;: true
+      },
+      {
+        &quot;TermId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Status&quot;: 3,
+        &quot;IsCompleted&quot;: true,
+        &quot;CompletedDate&quot;: &quot;sample string 5&quot;,
+        &quot;CompletedBy&quot;: &quot;sample string 6&quot;,
+        &quot;IsDeleted&quot;: true
+      }
+    ],
+    &quot;UseAssessmentWeighting&quot;: true,
+    &quot;UserName&quot;: &quot;sample string 21&quot;,
+    &quot;UseScorePointsForAverage&quot;: true
+  },
+  &quot;Permissions&quot;: {
+    &quot;HasGeneralAdministrationPermission&quot;: true
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AssessmentRecordSetup xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Course.PageSetup&quot;&gt;
+  &lt;Language&gt;
+    &lt;AddAssessment&gt;sample string 1&lt;/AddAssessment&gt;
+    &lt;AddCategories&gt;sample string 2&lt;/AddCategories&gt;
+    &lt;AddGroups&gt;sample string 3&lt;/AddGroups&gt;
+    &lt;AddToGradebook&gt;sample string 4&lt;/AddToGradebook&gt;
+    &lt;AllAssessments&gt;sample string 5&lt;/AllAssessments&gt;
+    &lt;AllGroups&gt;sample string 6&lt;/AllGroups&gt;
+    &lt;AllParticipants&gt;sample string 7&lt;/AllParticipants&gt;
+    &lt;AnErrorOccurred&gt;sample string 8&lt;/AnErrorOccurred&gt;
+    &lt;Apply&gt;sample string 9&lt;/Apply&gt;
+    &lt;Assess&gt;sample string 10&lt;/Assess&gt;
+    &lt;AssessmentRecordCategory&gt;sample string 11&lt;/AssessmentRecordCategory&gt;
+    &lt;AssessmentRecordSettings&gt;sample string 12&lt;/AssessmentRecordSettings&gt;
+    &lt;AssessmentWeight&gt;sample string 13&lt;/AssessmentWeight&gt;
+    &lt;AssessmentWeighting&gt;sample string 14&lt;/AssessmentWeighting&gt;
+    &lt;AverageAndCount&gt;sample string 15&lt;/AverageAndCount&gt;
+    &lt;Cancel&gt;sample string 16&lt;/Cancel&gt;
+    &lt;CannotDeleteFinalAssessment&gt;sample string 17&lt;/CannotDeleteFinalAssessment&gt;
+    &lt;Categories&gt;sample string 18&lt;/Categories&gt;
+    &lt;CategoryExistsButNotInUseMessage&gt;sample string 19&lt;/CategoryExistsButNotInUseMessage&gt;
+    &lt;CategoryWeight&gt;sample string 20&lt;/CategoryWeight&gt;
+    &lt;CategoryWeighting&gt;sample string 21&lt;/CategoryWeighting&gt;
+    &lt;Close&gt;sample string 22&lt;/Close&gt;
+    &lt;ColumnsNotConnectedToTerms&gt;sample string 23&lt;/ColumnsNotConnectedToTerms&gt;
+    &lt;CompleteTerm&gt;sample string 24&lt;/CompleteTerm&gt;
+    &lt;CompletedTermMessage&gt;sample string 25&lt;/CompletedTermMessage&gt;
+    &lt;Confirm&gt;sample string 26&lt;/Confirm&gt;
+    &lt;Deadline&gt;sample string 27&lt;/Deadline&gt;
+    &lt;Delete&gt;sample string 28&lt;/Delete&gt;
+    &lt;Dismiss&gt;sample string 29&lt;/Dismiss&gt;
+    &lt;Edit&gt;sample string 30&lt;/Edit&gt;
+    &lt;ErrorDuringPageLoad&gt;sample string 31&lt;/ErrorDuringPageLoad&gt;
+    &lt;ErrorMessage&gt;sample string 32&lt;/ErrorMessage&gt;
+    &lt;Ex&gt;sample string 33&lt;/Ex&gt;
+    &lt;Exempt&gt;sample string 34&lt;/Exempt&gt;
+    &lt;ExistingAssessment&gt;sample string 35&lt;/ExistingAssessment&gt;
+    &lt;ExportToCsv&gt;sample string 36&lt;/ExportToCsv&gt;
+    &lt;FilterBy&gt;sample string 37&lt;/FilterBy&gt;
+    &lt;FinalAssessment&gt;sample string 38&lt;/FinalAssessment&gt;
+    &lt;Functions&gt;sample string 39&lt;/Functions&gt;
+    &lt;Grade&gt;sample string 40&lt;/Grade&gt;
+    &lt;GradebookGroup&gt;sample string 41&lt;/GradebookGroup&gt;
+    &lt;Groups&gt;sample string 42&lt;/Groups&gt;
+    &lt;Information&gt;sample string 43&lt;/Information&gt;
+    &lt;LearningPathWarning&gt;sample string 56&lt;/LearningPathWarning&gt;
+    &lt;MoreOptions&gt;sample string 44&lt;/MoreOptions&gt;
+    &lt;NSlashA&gt;sample string 57&lt;/NSlashA&gt;
+    &lt;Name&gt;sample string 45&lt;/Name&gt;
+    &lt;NewGradebookColumn&gt;sample string 46&lt;/NewGradebookColumn&gt;
+    &lt;NoAssessmentWeighting&gt;sample string 47&lt;/NoAssessmentWeighting&gt;
+    &lt;NoCategories&gt;sample string 48&lt;/NoCategories&gt;
+    &lt;NoCategoriesCreatedMessage&gt;sample string 49&lt;/NoCategoriesCreatedMessage&gt;
+    &lt;NoGrading&gt;sample string 50&lt;/NoGrading&gt;
+    &lt;NoGroups&gt;sample string 51&lt;/NoGroups&gt;
+    &lt;NoGroupsCreatedMessage&gt;sample string 52&lt;/NoGroupsCreatedMessage&gt;
+    &lt;NoMoreExistingAssessments&gt;sample string 53&lt;/NoMoreExistingAssessments&gt;
+    &lt;NoParticipantsAvailable&gt;sample string 54&lt;/NoParticipantsAvailable&gt;
+    &lt;NoStudentsMatchSearch&gt;sample string 55&lt;/NoStudentsMatchSearch&gt;
+    &lt;NotAvailable&gt;sample string 89&lt;/NotAvailable&gt;
+    &lt;Options&gt;sample string 58&lt;/Options&gt;
+    &lt;OverallAverage&gt;sample string 59&lt;/OverallAverage&gt;
+    &lt;Overdue&gt;sample string 60&lt;/Overdue&gt;
+    &lt;PageTitle&gt;sample string 61&lt;/PageTitle&gt;
+    &lt;ParticipantsNotInAGroup&gt;sample string 62&lt;/ParticipantsNotInAGroup&gt;
+    &lt;Percent&gt;sample string 63&lt;/Percent&gt;
+    &lt;PleaseConfirm&gt;sample string 64&lt;/PleaseConfirm&gt;
+    &lt;Points&gt;sample string 65&lt;/Points&gt;
+    &lt;Refresh&gt;sample string 66&lt;/Refresh&gt;
+    &lt;Retry&gt;sample string 67&lt;/Retry&gt;
+    &lt;RevertExemption&gt;sample string 68&lt;/RevertExemption&gt;
+    &lt;Score&gt;sample string 69&lt;/Score&gt;
+    &lt;Search&gt;sample string 70&lt;/Search&gt;
+    &lt;SearchStudents&gt;sample string 71&lt;/SearchStudents&gt;
+    &lt;Sort&gt;sample string 72&lt;/Sort&gt;
+    &lt;SubmissionLink&gt;sample string 74&lt;/SubmissionLink&gt;
+    &lt;Summary&gt;sample string 73&lt;/Summary&gt;
+    &lt;Term&gt;sample string 75&lt;/Term&gt;
+    &lt;Title&gt;sample string 76&lt;/Title&gt;
+    &lt;TransferTo&gt;sample string 77&lt;/TransferTo&gt;
+    &lt;TrendsAndProgress&gt;sample string 78&lt;/TrendsAndProgress&gt;
+    &lt;UnableToExempt&gt;sample string 79&lt;/UnableToExempt&gt;
+    &lt;UnableToOverwrite&gt;sample string 80&lt;/UnableToOverwrite&gt;
+    &lt;UnableToSetGrade&gt;sample string 81&lt;/UnableToSetGrade&gt;
+    &lt;UnableToSetScore&gt;sample string 82&lt;/UnableToSetScore&gt;
+    &lt;Uncategorised&gt;sample string 83&lt;/Uncategorised&gt;
+    &lt;ValidationNumberBetween&gt;sample string 84&lt;/ValidationNumberBetween&gt;
+    &lt;View&gt;sample string 85&lt;/View&gt;
+    &lt;ViewInExcel&gt;sample string 86&lt;/ViewInExcel&gt;
+    &lt;WarningForCompletingTerm&gt;sample string 87&lt;/WarningForCompletingTerm&gt;
+    &lt;WarningForDeletingElement&gt;sample string 88&lt;/WarningForDeletingElement&gt;
+  &lt;/Language&gt;
+  &lt;Paths&gt;
+    &lt;StaticContent&gt;sample string 1&lt;/StaticContent&gt;
+  &lt;/Paths&gt;
+  &lt;Permissions&gt;
+    &lt;HasGeneralAdministrationPermission&gt;true&lt;/HasGeneralAdministrationPermission&gt;
+  &lt;/Permissions&gt;
+  &lt;Settings&gt;
+    &lt;AssessmentRecordIcon&gt;sample string 3&lt;/AssessmentRecordIcon&gt;
+    &lt;Categories&gt;
+      &lt;AssessmentRecordCategory xmlns=&quot;&quot;&gt;
+        &lt;CategoryId&gt;1&lt;/CategoryId&gt;
+        &lt;Position&gt;4.1&lt;/Position&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;/AssessmentRecordCategory&gt;
+      &lt;AssessmentRecordCategory xmlns=&quot;&quot;&gt;
+        &lt;CategoryId&gt;1&lt;/CategoryId&gt;
+        &lt;Position&gt;4.1&lt;/Position&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Weight&gt;3.1&lt;/Weight&gt;
+      &lt;/AssessmentRecordCategory&gt;
+    &lt;/Categories&gt;
+    &lt;DefaultProfilePicture&gt;sample string 1&lt;/DefaultProfilePicture&gt;
+    &lt;DefaultProfilePictureSmall&gt;sample string 2&lt;/DefaultProfilePictureSmall&gt;
+    &lt;ExtensionModules&gt;
+      &lt;ExtensionModuleModel&gt;
+        &lt;ModuleExtensionSetupId&gt;1&lt;/ModuleExtensionSetupId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/ExtensionModuleModel&gt;
+      &lt;ExtensionModuleModel&gt;
+        &lt;ModuleExtensionSetupId&gt;1&lt;/ModuleExtensionSetupId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/ExtensionModuleModel&gt;
+    &lt;/ExtensionModules&gt;
+    &lt;ExternalSystemName&gt;sample string 4&lt;/ExternalSystemName&gt;
+    &lt;ExtraUserInformation&gt;sample string 5&lt;/ExtraUserInformation&gt;
+    &lt;Groups&gt;
+      &lt;AssessmentRecordGroup xmlns=&quot;&quot;&gt;
+        &lt;GroupId&gt;1&lt;/GroupId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/AssessmentRecordGroup&gt;
+      &lt;AssessmentRecordGroup xmlns=&quot;&quot;&gt;
+        &lt;GroupId&gt;1&lt;/GroupId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/AssessmentRecordGroup&gt;
+    &lt;/Groups&gt;
+    &lt;HasExistingAssessment&gt;true&lt;/HasExistingAssessment&gt;
+    &lt;IsAccessibilityModeEnabled&gt;true&lt;/IsAccessibilityModeEnabled&gt;
+    &lt;IsAssessmentRecordEnabledForCourse&gt;true&lt;/IsAssessmentRecordEnabledForCourse&gt;
+    &lt;IsAssessmentRecordSettingsLinkVisible&gt;true&lt;/IsAssessmentRecordSettingsLinkVisible&gt;
+    &lt;IsAverageAndCountEnabled&gt;true&lt;/IsAverageAndCountEnabled&gt;
+    &lt;IsCategoryWeightingEnabled&gt;true&lt;/IsCategoryWeightingEnabled&gt;
+    &lt;IsExemptEnabled&gt;true&lt;/IsExemptEnabled&gt;
+    &lt;IsSummaryEnabled&gt;true&lt;/IsSummaryEnabled&gt;
+    &lt;IsTransferToExternalSystemEnabled&gt;true&lt;/IsTransferToExternalSystemEnabled&gt;
+    &lt;LastUsedCategoryIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:int&gt;1&lt;/d3p1:int&gt;
+      &lt;d3p1:int&gt;2&lt;/d3p1:int&gt;
+    &lt;/LastUsedCategoryIds&gt;
+    &lt;LocaleDecimalSeparator&gt;sample string 15&lt;/LocaleDecimalSeparator&gt;
+    &lt;NameFormat&gt;LastFirst&lt;/NameFormat&gt;
+    &lt;SelectedCategoryIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:int&gt;1&lt;/d3p1:int&gt;
+      &lt;d3p1:int&gt;2&lt;/d3p1:int&gt;
+    &lt;/SelectedCategoryIds&gt;
+    &lt;SelectedGroupIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:int&gt;1&lt;/d3p1:int&gt;
+      &lt;d3p1:int&gt;2&lt;/d3p1:int&gt;
+    &lt;/SelectedGroupIds&gt;
+    &lt;SelectedScoreFormatId&gt;17&lt;/SelectedScoreFormatId&gt;
+    &lt;SelectedSortOptionId&gt;18&lt;/SelectedSortOptionId&gt;
+    &lt;SelectedTermId&gt;19&lt;/SelectedTermId&gt;
+    &lt;ShowOverallAverage&gt;true&lt;/ShowOverallAverage&gt;
+    &lt;Terms&gt;
+      &lt;AssessmentRecordTerm xmlns=&quot;&quot;&gt;
+        &lt;CompletedBy&gt;sample string 6&lt;/CompletedBy&gt;
+        &lt;CompletedDate&gt;sample string 5&lt;/CompletedDate&gt;
+        &lt;IsCompleted&gt;true&lt;/IsCompleted&gt;
+        &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+        &lt;Status&gt;3&lt;/Status&gt;
+        &lt;TermId&gt;1&lt;/TermId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/AssessmentRecordTerm&gt;
+      &lt;AssessmentRecordTerm xmlns=&quot;&quot;&gt;
+        &lt;CompletedBy&gt;sample string 6&lt;/CompletedBy&gt;
+        &lt;CompletedDate&gt;sample string 5&lt;/CompletedDate&gt;
+        &lt;IsCompleted&gt;true&lt;/IsCompleted&gt;
+        &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+        &lt;Status&gt;3&lt;/Status&gt;
+        &lt;TermId&gt;1&lt;/TermId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/AssessmentRecordTerm&gt;
+    &lt;/Terms&gt;
+    &lt;UseAssessmentWeighting&gt;true&lt;/UseAssessmentWeighting&gt;
+    &lt;UseScorePointsForAverage&gt;true&lt;/UseScorePointsForAverage&gt;
+    &lt;UserName&gt;sample string 21&lt;/UserName&gt;
+  &lt;/Settings&gt;
+&lt;/AssessmentRecordSetup&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

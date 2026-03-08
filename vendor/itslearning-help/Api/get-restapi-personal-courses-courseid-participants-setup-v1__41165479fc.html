@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/participants/setup/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/participants/setup/v1</h1>
+<div>
+    <p>Setup for the course participant and add participant page. Language settings and permissions.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Setup for the course participant page</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSetup">Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSetup</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Language</td>
+                    <td class="parameter-documentation">
+                        <p>Language for the course participant page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantLanguage">Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantLanguage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Paths</td>
+                    <td class="parameter-documentation">
+                        <p>Paths for the course participant page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPaths">Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPaths</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Settings</td>
+                    <td class="parameter-documentation">
+                        <p>Settings for the course participant page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSettings">Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSettings</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Permissions</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets the permissions for the course participant page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPermissions">Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPermissions</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Language&quot;: {
+    &quot;All&quot;: &quot;sample string 1&quot;,
+    &quot;Add&quot;: &quot;sample string 2&quot;,
+    &quot;AddHierarchy&quot;: &quot;sample string 3&quot;,
+    &quot;AddParticipant&quot;: &quot;sample string 4&quot;,
+    &quot;BrowseHierarchies&quot;: &quot;sample string 5&quot;,
+    &quot;BrowseUsers&quot;: &quot;sample string 6&quot;,
+    &quot;Cancel&quot;: &quot;sample string 7&quot;,
+    &quot;ChangeRole&quot;: &quot;sample string 8&quot;,
+    &quot;ChangeRoleFor&quot;: &quot;sample string 9&quot;,
+    &quot;Close&quot;: &quot;sample string 10&quot;,
+    &quot;ConfirmRemoveParticipant&quot;: &quot;sample string 11&quot;,
+    &quot;ConfirmRemoveMultipleParticipants&quot;: &quot;sample string 12&quot;,
+    &quot;CouldNotRemoveParticipant&quot;: &quot;sample string 13&quot;,
+    &quot;CouldNotRemoveMultipleParticipants&quot;: &quot;sample string 14&quot;,
+    &quot;Email&quot;: &quot;sample string 15&quot;,
+    &quot;FilteredParticipantsCount&quot;: &quot;sample string 16&quot;,
+    &quot;Freely&quot;: &quot;sample string 17&quot;,
+    &quot;Hierarchy&quot;: &quot;sample string 18&quot;,
+    &quot;LastVisited&quot;: &quot;sample string 19&quot;,
+    &quot;MaxAllowedInstantMessageRecipientsExceeded&quot;: &quot;sample string 20&quot;,
+    &quot;Name&quot;: &quot;sample string 21&quot;,
+    &quot;NoParticipants&quot;: &quot;sample string 22&quot;,
+    &quot;NoSearchResults&quot;: &quot;sample string 23&quot;,
+    &quot;Ok&quot;: &quot;sample string 24&quot;,
+    &quot;OpenProfileCardFor&quot;: &quot;sample string 25&quot;,
+    &quot;Options&quot;: &quot;sample string 26&quot;,
+    &quot;Participants&quot;: &quot;sample string 27&quot;,
+    &quot;ParticipantsCount&quot;: &quot;sample string 28&quot;,
+    &quot;Password&quot;: &quot;sample string 29&quot;,
+    &quot;Unenrolled&quot;: &quot;sample string 30&quot;,
+    &quot;Remove&quot;: &quot;sample string 31&quot;,
+    &quot;RemoveParticipantsConfirmation&quot;: &quot;sample string 32&quot;,
+    &quot;Role&quot;: &quot;sample string 33&quot;,
+    &quot;Save&quot;: &quot;sample string 34&quot;,
+    &quot;Search&quot;: &quot;sample string 35&quot;,
+    &quot;SelectAll&quot;: &quot;sample string 36&quot;,
+    &quot;SelectUsersFrom&quot;: &quot;sample string 37&quot;,
+    &quot;SendMessage&quot;: &quot;sample string 38&quot;,
+    &quot;Registration&quot;: &quot;sample string 39&quot;,
+    &quot;Tasks&quot;: &quot;sample string 40&quot;,
+    &quot;User&quot;: &quot;sample string 41&quot;,
+    &quot;Users&quot;: &quot;sample string 42&quot;,
+    &quot;AddParticipantsEmptyState&quot;: &quot;sample string 43&quot;,
+    &quot;SynchronizedHierarchiesEmptyState&quot;: &quot;sample string 44&quot;,
+    &quot;UnerolledParticipantsEmptyState&quot;: &quot;sample string 45&quot;,
+    &quot;ApplicantsEmptyState&quot;: &quot;sample string 46&quot;,
+    &quot;Applicants&quot;: &quot;sample string 47&quot;,
+    &quot;ApplicationState&quot;: &quot;sample string 48&quot;,
+    &quot;Approve&quot;: &quot;sample string 49&quot;,
+    &quot;Reject&quot;: &quot;sample string 50&quot;,
+    &quot;Accepted&quot;: &quot;sample string 51&quot;,
+    &quot;Pending&quot;: &quot;sample string 52&quot;,
+    &quot;Rejected&quot;: &quot;sample string 53&quot;,
+    &quot;NoApplicants&quot;: &quot;sample string 54&quot;,
+    &quot;CourseGroups&quot;: &quot;sample string 55&quot;,
+    &quot;DateUnenrolled&quot;: &quot;sample string 56&quot;,
+    &quot;TemporaryAccess&quot;: &quot;sample string 57&quot;,
+    &quot;Assessment&quot;: &quot;sample string 58&quot;,
+    &quot;SendMessageToolTip&quot;: &quot;sample string 59&quot;
+  },
+  &quot;Paths&quot;: {
+    &quot;StaticContent&quot;: &quot;sample string 1&quot;,
+    &quot;EmptyStateImage&quot;: &quot;sample string 2&quot;
+  },
+  &quot;Settings&quot;: {
+    &quot;CourseProfiles&quot;: [
+      {
+        &quot;CourseProfileId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;ExistsInCourse&quot;: true,
+        &quot;CanBeUsedForAddingParticipantsToCourse&quot;: true
+      },
+      {
+        &quot;CourseProfileId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;ExistsInCourse&quot;: true,
+        &quot;CanBeUsedForAddingParticipantsToCourse&quot;: true
+      }
+    ],
+    &quot;DefaultCourseProfileId&quot;: 1,
+    &quot;InstantMessageMaxPersonsPerThread&quot;: 2,
+    &quot;ShowApplicantTab&quot;: true,
+    &quot;FirstNameFirst&quot;: true,
+    &quot;ExtraInformationTitle&quot;: &quot;sample string 5&quot;,
+    &quot;FunctionalityMessages&quot;: true,
+    &quot;CurrentPersonId&quot;: 7,
+    &quot;TemporaryAccessToCourses&quot;: true
+  },
+  &quot;Permissions&quot;: {
+    &quot;HasManageParticipantsAndGroupsPermission&quot;: true,
+    &quot;HasGeneralAdministrationPermission&quot;: true,
+    &quot;CanViewDetailedInformation&quot;: true
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CourseParticipantSetup xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Course.PageSetup&quot;&gt;
+  &lt;Language&gt;
+    &lt;Accepted&gt;sample string 51&lt;/Accepted&gt;
+    &lt;Add&gt;sample string 2&lt;/Add&gt;
+    &lt;AddHierarchy&gt;sample string 3&lt;/AddHierarchy&gt;
+    &lt;AddParticipant&gt;sample string 4&lt;/AddParticipant&gt;
+    &lt;AddParticipantsEmptyState&gt;sample string 43&lt;/AddParticipantsEmptyState&gt;
+    &lt;All&gt;sample string 1&lt;/All&gt;
+    &lt;Applicants&gt;sample string 47&lt;/Applicants&gt;
+    &lt;ApplicantsEmptyState&gt;sample string 46&lt;/ApplicantsEmptyState&gt;
+    &lt;ApplicationState&gt;sample string 48&lt;/ApplicationState&gt;
+    &lt;Approve&gt;sample string 49&lt;/Approve&gt;
+    &lt;Assessment&gt;sample string 58&lt;/Assessment&gt;
+    &lt;BrowseHierarchies&gt;sample string 5&lt;/BrowseHierarchies&gt;
+    &lt;BrowseUsers&gt;sample string 6&lt;/BrowseUsers&gt;
+    &lt;Cancel&gt;sample string 7&lt;/Cancel&gt;
+    &lt;ChangeRole&gt;sample string 8&lt;/ChangeRole&gt;
+    &lt;ChangeRoleFor&gt;sample string 9&lt;/ChangeRoleFor&gt;
+    &lt;Close&gt;sample string 10&lt;/Close&gt;
+    &lt;ConfirmRemoveMultipleParticipants&gt;sample string 12&lt;/ConfirmRemoveMultipleParticipants&gt;
+    &lt;ConfirmRemoveParticipant&gt;sample string 11&lt;/ConfirmRemoveParticipant&gt;
+    &lt;CouldNotRemoveMultipleParticipants&gt;sample string 14&lt;/CouldNotRemoveMultipleParticipants&gt;
+    &lt;CouldNotRemoveParticipant&gt;sample string 13&lt;/CouldNotRemoveParticipant&gt;
+    &lt;CourseGroups&gt;sample string 55&lt;/CourseGroups&gt;
+    &lt;DateUnenrolled&gt;sample string 56&lt;/DateUnenrolled&gt;
+    &lt;Email&gt;sample string 15&lt;/Email&gt;
+    &lt;FilteredParticipantsCount&gt;sample string 16&lt;/FilteredParticipantsCount&gt;
+    &lt;Freely&gt;sample string 17&lt;/Freely&gt;
+    &lt;Hierarchy&gt;sample string 18&lt;/Hierarchy&gt;
+    &lt;LastVisited&gt;sample string 19&lt;/LastVisited&gt;
+    &lt;MaxAllowedInstantMessageRecipientsExceeded&gt;sample string 20&lt;/MaxAllowedInstantMessageRecipientsExceeded&gt;
+    &lt;Name&gt;sample string 21&lt;/Name&gt;
+    &lt;NoApplicants&gt;sample string 54&lt;/NoApplicants&gt;
+    &lt;NoParticipants&gt;sample string 22&lt;/NoParticipants&gt;
+    &lt;NoSearchResults&gt;sample string 23&lt;/NoSearchResults&gt;
+    &lt;Ok&gt;sample string 24&lt;/Ok&gt;
+    &lt;OpenProfileCardFor&gt;sample string 25&lt;/OpenProfileCardFor&gt;
+    &lt;Options&gt;sample string 26&lt;/Options&gt;
+    &lt;Participants&gt;sample string 27&lt;/Participants&gt;
+    &lt;ParticipantsCount&gt;sample string 28&lt;/ParticipantsCount&gt;
+    &lt;Password&gt;sample string 29&lt;/Password&gt;
+    &lt;Pending&gt;sample string 52&lt;/Pending&gt;
+    &lt;Registration&gt;sample string 39&lt;/Registration&gt;
+    &lt;Reject&gt;sample string 50&lt;/Reject&gt;
+    &lt;Rejected&gt;sample string 53&lt;/Rejected&gt;
+    &lt;Remove&gt;sample string 31&lt;/Remove&gt;
+    &lt;RemoveParticipantsConfirmation&gt;sample string 32&lt;/RemoveParticipantsConfirmation&gt;
+    &lt;Role&gt;sample string 33&lt;/Role&gt;
+    &lt;Save&gt;sample string 34&lt;/Save&gt;
+    &lt;Search&gt;sample string 35&lt;/Search&gt;
+    &lt;SelectAll&gt;sample string 36&lt;/SelectAll&gt;
+    &lt;SelectUsersFrom&gt;sample string 37&lt;/SelectUsersFrom&gt;
+    &lt;SendMessage&gt;sample string 38&lt;/SendMessage&gt;
+    &lt;SendMessageToolTip&gt;sample string 59&lt;/SendMessageToolTip&gt;
+    &lt;SynchronizedHierarchiesEmptyState&gt;sample string 44&lt;/SynchronizedHierarchiesEmptyState&gt;
+    &lt;Tasks&gt;sample string 40&lt;/Tasks&gt;
+    &lt;TemporaryAccess&gt;sample string 57&lt;/TemporaryAccess&gt;
+    &lt;Unenrolled&gt;sample string 30&lt;/Unenrolled&gt;
+    &lt;UnerolledParticipantsEmptyState&gt;sample string 45&lt;/UnerolledParticipantsEmptyState&gt;
+    &lt;User&gt;sample string 41&lt;/User&gt;
+    &lt;Users&gt;sample string 42&lt;/Users&gt;
+  &lt;/Language&gt;
+  &lt;Paths&gt;
+    &lt;EmptyStateImage&gt;sample string 2&lt;/EmptyStateImage&gt;
+    &lt;StaticContent&gt;sample string 1&lt;/StaticContent&gt;
+  &lt;/Paths&gt;
+  &lt;Permissions&gt;
+    &lt;CanViewDetailedInformation&gt;true&lt;/CanViewDetailedInformation&gt;
+    &lt;HasGeneralAdministrationPermission&gt;true&lt;/HasGeneralAdministrationPermission&gt;
+    &lt;HasManageParticipantsAndGroupsPermission&gt;true&lt;/HasManageParticipantsAndGroupsPermission&gt;
+  &lt;/Permissions&gt;
+  &lt;Settings&gt;
+    &lt;CourseProfiles&gt;
+      &lt;CourseProfile&gt;
+        &lt;CanBeUsedForAddingParticipantsToCourse&gt;true&lt;/CanBeUsedForAddingParticipantsToCourse&gt;
+        &lt;CourseProfileId&gt;1&lt;/CourseProfileId&gt;
+        &lt;ExistsInCourse&gt;true&lt;/ExistsInCourse&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/CourseProfile&gt;
+      &lt;CourseProfile&gt;
+        &lt;CanBeUsedForAddingParticipantsToCourse&gt;true&lt;/CanBeUsedForAddingParticipantsToCourse&gt;
+        &lt;CourseProfileId&gt;1&lt;/CourseProfileId&gt;
+        &lt;ExistsInCourse&gt;true&lt;/ExistsInCourse&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/CourseProfile&gt;
+    &lt;/CourseProfiles&gt;
+    &lt;CurrentPersonId&gt;7&lt;/CurrentPersonId&gt;
+    &lt;DefaultCourseProfileId&gt;1&lt;/DefaultCourseProfileId&gt;
+    &lt;ExtraInformationTitle&gt;sample string 5&lt;/ExtraInformationTitle&gt;
+    &lt;FirstNameFirst&gt;true&lt;/FirstNameFirst&gt;
+    &lt;FunctionalityMessages&gt;true&lt;/FunctionalityMessages&gt;
+    &lt;InstantMessageMaxPersonsPerThread&gt;2&lt;/InstantMessageMaxPersonsPerThread&gt;
+    &lt;ShowApplicantTab&gt;true&lt;/ShowApplicantTab&gt;
+    &lt;TemporaryAccessToCourses&gt;true&lt;/TemporaryAccessToCourses&gt;
+  &lt;/Settings&gt;
+&lt;/CourseParticipantSetup&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

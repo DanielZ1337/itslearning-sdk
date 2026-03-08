@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/courses/{courseId}/folders/{folderId}/file/filerepo/v1?planId={planId}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/courses/{courseId}/folders/{folderId}/file/filerepo/v1?planId={planId}</h1>
+<div>
+    <p><p>
+ Creates a file element in the course containing the file.
+ </p>
+<p>
+ Returns HTTP status 403 not found, if the user don't have access to the course or folder.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the course does not exist.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">folderId</td>
+                    <td class="parameter-documentation">
+                        <p>The folder identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">planId</td>
+                    <td class="parameter-documentation">
+                        <p>If files are added to a plan, supply this parameter so learning objectives and visibility settings are inherited from the plan</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is 0</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Information about file to create</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Metadata.UploadMetadata">Itslearning.Web.UI.Controls.Uploaders.Metadata.UploadMetadata</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SourceType</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.FileRepo.Common.Models.SourceType">Itslearning.FileRepo.Common.Models.SourceType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MimeType</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginalFileId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">signedFileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">signature</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">isTemplate</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">customId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;id&quot;: &quot;e40b978c-98b0-42aa-b4c0-5a13fd14c5e6&quot;,
+    &quot;name&quot;: &quot;sample string 1&quot;,
+    &quot;sourceType&quot;: 1,
+    &quot;mimeType&quot;: &quot;sample string 2&quot;,
+    &quot;OriginalFileId&quot;: &quot;sample string 3&quot;,
+    &quot;signedFileRepoId&quot;: &quot;sample string 4&quot;,
+    &quot;signature&quot;: &quot;sample string 5&quot;,
+    &quot;isTemplate&quot;: true,
+    &quot;customId&quot;: &quot;sample string 7&quot;
+  },
+  {
+    &quot;id&quot;: &quot;d5d55aa8-688d-4d29-9fe6-65d8fbc894bb&quot;,
+    &quot;name&quot;: &quot;sample string 1&quot;,
+    &quot;sourceType&quot;: 1,
+    &quot;mimeType&quot;: &quot;sample string 2&quot;,
+    &quot;OriginalFileId&quot;: &quot;sample string 3&quot;,
+    &quot;signedFileRepoId&quot;: &quot;sample string 4&quot;,
+    &quot;signature&quot;: &quot;sample string 5&quot;,
+    &quot;isTemplate&quot;: true,
+    &quot;customId&quot;: &quot;sample string 7&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfUploadMetadata xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Web.UI.Controls.Uploaders.Metadata&quot;&gt;
+  &lt;UploadMetadata&gt;
+    &lt;CustomId&gt;sample string 7&lt;/CustomId&gt;
+    &lt;Id&gt;e40b978c-98b0-42aa-b4c0-5a13fd14c5e6&lt;/Id&gt;
+    &lt;IsTemplate&gt;true&lt;/IsTemplate&gt;
+    &lt;MimeType&gt;sample string 2&lt;/MimeType&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;OriginalFileId&gt;sample string 3&lt;/OriginalFileId&gt;
+    &lt;Signature&gt;sample string 5&lt;/Signature&gt;
+    &lt;SignedFileRepoId&gt;sample string 4&lt;/SignedFileRepoId&gt;
+    &lt;SourceType&gt;Dropbox&lt;/SourceType&gt;
+  &lt;/UploadMetadata&gt;
+  &lt;UploadMetadata&gt;
+    &lt;CustomId&gt;sample string 7&lt;/CustomId&gt;
+    &lt;Id&gt;d5d55aa8-688d-4d29-9fe6-65d8fbc894bb&lt;/Id&gt;
+    &lt;IsTemplate&gt;true&lt;/IsTemplate&gt;
+    &lt;MimeType&gt;sample string 2&lt;/MimeType&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;OriginalFileId&gt;sample string 3&lt;/OriginalFileId&gt;
+    &lt;Signature&gt;sample string 5&lt;/Signature&gt;
+    &lt;SignedFileRepoId&gt;sample string 4&lt;/SignedFileRepoId&gt;
+    &lt;SourceType&gt;Dropbox&lt;/SourceType&gt;
+  &lt;/UploadMetadata&gt;
+&lt;/ArrayOfUploadMetadata&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CreateFileResponse">Itslearning.RestApi.Entities.Personal.Course.CreateFileResponse</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ElementId</td>
+                    <td class="parameter-documentation">
+                        <p>Element id for the file created</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CloudId</td>
+                    <td class="parameter-documentation">
+                        <p>The cloud id of the file created</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ErrorMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The error message if creation failed</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ErrorCodes</td>
+                    <td class="parameter-documentation">
+                        <p>The error message if creation failed</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.FileErrorCode">Itslearning.RestApi.Entities.Personal.Course.FileErrorCode</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Success</td>
+                    <td class="parameter-documentation">
+                        <p>If the creation was successful or not</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title for the newly created file element</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;ElementId&quot;: 1,
+    &quot;CloudId&quot;: &quot;sample string 2&quot;,
+    &quot;ErrorMessage&quot;: &quot;sample string 3&quot;,
+    &quot;ErrorCodes&quot;: [],
+    &quot;Success&quot;: true,
+    &quot;Title&quot;: &quot;sample string 5&quot;
+  },
+  {
+    &quot;ElementId&quot;: 1,
+    &quot;CloudId&quot;: &quot;sample string 2&quot;,
+    &quot;ErrorMessage&quot;: &quot;sample string 3&quot;,
+    &quot;ErrorCodes&quot;: [],
+    &quot;Success&quot;: true,
+    &quot;Title&quot;: &quot;sample string 5&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfCreateFileResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CreateFileResponse&gt;
+    &lt;CloudId&gt;sample string 2&lt;/CloudId&gt;
+    &lt;ElementId&gt;1&lt;/ElementId&gt;
+    &lt;ErrorCodes xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Course&quot; /&gt;
+    &lt;ErrorMessage&gt;sample string 3&lt;/ErrorMessage&gt;
+    &lt;Success&gt;true&lt;/Success&gt;
+    &lt;Title&gt;sample string 5&lt;/Title&gt;
+  &lt;/CreateFileResponse&gt;
+  &lt;CreateFileResponse&gt;
+    &lt;CloudId&gt;sample string 2&lt;/CloudId&gt;
+    &lt;ElementId&gt;1&lt;/ElementId&gt;
+    &lt;ErrorCodes xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Course&quot; /&gt;
+    &lt;ErrorMessage&gt;sample string 3&lt;/ErrorMessage&gt;
+    &lt;Success&gt;true&lt;/Success&gt;
+    &lt;Title&gt;sample string 5&lt;/Title&gt;
+  &lt;/CreateFileResponse&gt;
+&lt;/ArrayOfCreateFileResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

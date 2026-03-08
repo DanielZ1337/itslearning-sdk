@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/pages/{elementId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/pages/{elementId}/v1</h1>
+<div>
+    <p>Get a page element by elementId.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the page element to retrieve</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>PageResponse containing the page data</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageResponse">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ElementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the page element in scope of a customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ContentBlocks</td>
+                    <td class="parameter-documentation">
+                        <p>The content blocks on the page.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlock">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlock</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEdit</td>
+                    <td class="parameter-documentation">
+                        <p>True if the page can be edited by the current user.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanChangePermissions</td>
+                    <td class="parameter-documentation">
+                        <p>True if the current user is able to manage permissions for the current element.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsLearningPathSubElement</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current element belongs to learning path.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Layout</td>
+                    <td class="parameter-documentation">
+                        <p>The layout of the page (how many columns).</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.LayoutSchemaType">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.LayoutSchemaType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Urls</td>
+                    <td class="parameter-documentation">
+                        <p>URLs used in page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageUrls">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageUrls</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IconUrls</td>
+                    <td class="parameter-documentation">
+                        <p>URLs for the icons used for page.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageIconUrls">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageIconUrls</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsActive</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether the page is active. Derived from ActiveFrom and ActiveTo.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveFrom</td>
+                    <td class="parameter-documentation">
+                        <p>When the page becomes active. Null means it is active immediately.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveTo</td>
+                    <td class="parameter-documentation">
+                        <p>When the page becomes inactive. Null means it remains active indefinitely.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningObjectives</td>
+                    <td class="parameter-documentation">
+                        <p>The learning objectives linked to the page.
+ Can be empty if no learning objectives are linked.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ElementLearningObjective">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ElementLearningObjective</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;elementId&quot;: 1,
+  &quot;title&quot;: &quot;sample string 2&quot;,
+  &quot;contentBlocks&quot;: null,
+  &quot;canEdit&quot;: true,
+  &quot;canChangePermissions&quot;: true,
+  &quot;isLearningPathSubElement&quot;: true,
+  &quot;layout&quot;: &quot;OneColumn&quot;,
+  &quot;urls&quot;: {
+    &quot;permissions&quot;: &quot;sample string 1&quot;
+  },
+  &quot;iconUrls&quot;: {
+    &quot;layoutOneColumnIcon&quot;: &quot;sample string 1&quot;,
+    &quot;layoutTwoColumnsIcon&quot;: &quot;sample string 2&quot;,
+    &quot;layoutTwoColumnsWideLeftIcon&quot;: &quot;sample string 3&quot;,
+    &quot;contentBlockRichTextIcon&quot;: &quot;sample string 4&quot;,
+    &quot;contentBlockImagesIcon&quot;: &quot;sample string 5&quot;,
+    &quot;contentBlockFilesIcon&quot;: &quot;sample string 6&quot;,
+    &quot;contentBlockPollIcon&quot;: &quot;sample string 7&quot;,
+    &quot;contentBlockRssIcon&quot;: &quot;sample string 8&quot;,
+    &quot;contentBlockMoveUpIcon&quot;: &quot;sample string 9&quot;,
+    &quot;contentBlockMoveDownIcon&quot;: &quot;sample string 10&quot;,
+    &quot;contentBlockChangeColumnIcon&quot;: &quot;sample string 11&quot;,
+    &quot;listenIcon&quot;: &quot;sample string 12&quot;,
+    &quot;contentBlockEditIcon&quot;: &quot;sample string 13&quot;,
+    &quot;contentBlockDeleteIcon&quot;: &quot;sample string 14&quot;,
+    &quot;notifyAboutChangesIcon&quot;: &quot;sample string 15&quot;,
+    &quot;permissions&quot;: &quot;sample string 16&quot;,
+    &quot;learningObjectiveIcon&quot;: &quot;sample string 17&quot;
+  },
+  &quot;isActive&quot;: true,
+  &quot;activeFrom&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;activeTo&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;learningObjectives&quot;: [
+    {
+      &quot;learningObjectiveId&quot;: 1,
+      &quot;title&quot;: &quot;sample string 2&quot;,
+      &quot;description&quot;: &quot;sample string 3&quot;
+    },
+    {
+      &quot;learningObjectiveId&quot;: 1,
+      &quot;title&quot;: &quot;sample string 2&quot;,
+      &quot;description&quot;: &quot;sample string 3&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;PageResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses&quot;&gt;
+  &lt;ActiveFrom&gt;2026-03-07T16:36:58Z&lt;/ActiveFrom&gt;
+  &lt;ActiveTo&gt;2026-03-07T16:36:58Z&lt;/ActiveTo&gt;
+  &lt;CanChangePermissions&gt;true&lt;/CanChangePermissions&gt;
+  &lt;CanEdit&gt;true&lt;/CanEdit&gt;
+  &lt;ContentBlocks i:nil=&quot;true&quot; /&gt;
+  &lt;ElementId&gt;1&lt;/ElementId&gt;
+  &lt;IconUrls&gt;
+    &lt;ContentBlockChangeColumnIcon&gt;sample string 11&lt;/ContentBlockChangeColumnIcon&gt;
+    &lt;ContentBlockDeleteIcon&gt;sample string 14&lt;/ContentBlockDeleteIcon&gt;
+    &lt;ContentBlockEditIcon&gt;sample string 13&lt;/ContentBlockEditIcon&gt;
+    &lt;ContentBlockFilesIcon&gt;sample string 6&lt;/ContentBlockFilesIcon&gt;
+    &lt;ContentBlockImagesIcon&gt;sample string 5&lt;/ContentBlockImagesIcon&gt;
+    &lt;ContentBlockMoveDownIcon&gt;sample string 10&lt;/ContentBlockMoveDownIcon&gt;
+    &lt;ContentBlockMoveUpIcon&gt;sample string 9&lt;/ContentBlockMoveUpIcon&gt;
+    &lt;ContentBlockPollIcon&gt;sample string 7&lt;/ContentBlockPollIcon&gt;
+    &lt;ContentBlockRichTextIcon&gt;sample string 4&lt;/ContentBlockRichTextIcon&gt;
+    &lt;ContentBlockRssIcon&gt;sample string 8&lt;/ContentBlockRssIcon&gt;
+    &lt;LayoutOneColumnIcon&gt;sample string 1&lt;/LayoutOneColumnIcon&gt;
+    &lt;LayoutTwoColumnsIcon&gt;sample string 2&lt;/LayoutTwoColumnsIcon&gt;
+    &lt;LayoutTwoColumnsWideLeftIcon&gt;sample string 3&lt;/LayoutTwoColumnsWideLeftIcon&gt;
+    &lt;LearningObjectiveIcon&gt;sample string 17&lt;/LearningObjectiveIcon&gt;
+    &lt;ListenIcon&gt;sample string 12&lt;/ListenIcon&gt;
+    &lt;NotifyAboutChangesIcon&gt;sample string 15&lt;/NotifyAboutChangesIcon&gt;
+    &lt;Permissions&gt;sample string 16&lt;/Permissions&gt;
+  &lt;/IconUrls&gt;
+  &lt;IsActive&gt;true&lt;/IsActive&gt;
+  &lt;IsLearningPathSubElement&gt;true&lt;/IsLearningPathSubElement&gt;
+  &lt;Layout&gt;OneColumn&lt;/Layout&gt;
+  &lt;LearningObjectives xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models&quot;&gt;
+    &lt;d2p1:ElementLearningObjective&gt;
+      &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+      &lt;d2p1:LearningObjectiveId&gt;1&lt;/d2p1:LearningObjectiveId&gt;
+      &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+    &lt;/d2p1:ElementLearningObjective&gt;
+    &lt;d2p1:ElementLearningObjective&gt;
+      &lt;d2p1:Description&gt;sample string 3&lt;/d2p1:Description&gt;
+      &lt;d2p1:LearningObjectiveId&gt;1&lt;/d2p1:LearningObjectiveId&gt;
+      &lt;d2p1:Title&gt;sample string 2&lt;/d2p1:Title&gt;
+    &lt;/d2p1:ElementLearningObjective&gt;
+  &lt;/LearningObjectives&gt;
+  &lt;Title&gt;sample string 2&lt;/Title&gt;
+  &lt;Urls&gt;
+    &lt;Permissions&gt;sample string 1&lt;/Permissions&gt;
+  &lt;/Urls&gt;
+&lt;/PageResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

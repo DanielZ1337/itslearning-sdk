@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/immersivereader/v1?resourceId={resourceId}&amp;resourceType={resourceType}&amp;contentBlockId={contentBlockId}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/immersivereader/v1?resourceId={resourceId}&amp;resourceType={resourceType}&amp;contentBlockId={contentBlockId}</h1>
+<div>
+    <p>Gets the required info for use with Immersive Reader.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">resourceId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the resource</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">resourceType</td>
+                    <td class="parameter-documentation">
+                        <p>The type of resource being accessed</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ResourceType">Itslearning.RestApi.Entities.ResourceType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">contentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>Used for page text content block identification. Defaults to 0 when not applicable</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is 0</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p> </p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ImmersiveReaderInfo">Itslearning.RestApi.Entities.ImmersiveReaderInfo</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title to send to the immersive reader</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text to send to the immersive reader</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AccessToken</td>
+                    <td class="parameter-documentation">
+                        <p>The access token to use with the immersive reader</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SubDomain</td>
+                    <td class="parameter-documentation">
+                        <p>The subdomain to use with the immersive reader</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UiLang</td>
+                    <td class="parameter-documentation">
+                        <p>The current language used in the UI</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Title&quot;: &quot;sample string 1&quot;,
+  &quot;Text&quot;: &quot;sample string 2&quot;,
+  &quot;AccessToken&quot;: &quot;sample string 3&quot;,
+  &quot;SubDomain&quot;: &quot;sample string 4&quot;,
+  &quot;UiLang&quot;: &quot;sample string 5&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ImmersiveReaderInfo xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;AccessToken&gt;sample string 3&lt;/AccessToken&gt;
+  &lt;SubDomain&gt;sample string 4&lt;/SubDomain&gt;
+  &lt;Text&gt;sample string 2&lt;/Text&gt;
+  &lt;Title&gt;sample string 1&lt;/Title&gt;
+  &lt;UiLang&gt;sample string 5&lt;/UiLang&gt;
+&lt;/ImmersiveReaderInfo&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/person/{personId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/person/{personId}/v1</h1>
+<div>
+    <p>Gets basic information about the requested person. The person should be allowed to search for by Esafety rules.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">personId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier of the person.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">PersonId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for for the person, in scope of a site (itslearning customer).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FirstName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's first name. It can only be used when first name is displayed without last name. Otherwise must be used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's last name. It can only be used when last name is displayed without first name. Otherwise must be used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FullName</td>
+                    <td class="parameter-documentation">
+                        <p>The person's full name formatted according to regional settings of a site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to view the person's profile in itslearning.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AdditionalInfo</td>
+                    <td class="parameter-documentation">
+                        <p>Additional information about the person. This can be context sensitive. For example when using the rest api method for message recipients search, this field
+ can contain extra information about the person, that helps the user distinguish between persons with identical names.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileImageUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The absolute URL to the person's profile image. This can be null or empty if the person does not have a profile image.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileImageUrlSmall</td>
+                    <td class="parameter-documentation">
+                        <p>The absolute URL to the person's profile image. This can be null or empty if the person does not have a profile image.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;PersonId&quot;: 1,
+  &quot;FirstName&quot;: &quot;sample string 2&quot;,
+  &quot;LastName&quot;: &quot;sample string 3&quot;,
+  &quot;FullName&quot;: &quot;sample string 4&quot;,
+  &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+  &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+  &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+  &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;PersonSimple xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+  &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+  &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+  &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+  &lt;PersonId&gt;1&lt;/PersonId&gt;
+  &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+  &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+  &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+&lt;/PersonSimple&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

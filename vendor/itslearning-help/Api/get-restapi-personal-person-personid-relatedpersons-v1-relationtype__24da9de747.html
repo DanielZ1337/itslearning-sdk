@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/person/{personId}/relatedpersons/v1?relationType={relationType}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/person/{personId}/relatedpersons/v1?relationType={relationType}</h1>
+<div>
+    <p>Gets the relation between persons with detailed info about related person and relation type.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">personId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the person we want the relation information for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">relationType</td>
+                    <td class="parameter-documentation">
+                        <p>Type of the relation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelationType">Itslearning.RestApi.Entities.RelationType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelatedPerson">Itslearning.RestApi.Entities.RelatedPerson</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Person</td>
+                    <td class="parameter-documentation">
+                        <p>Related person.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RelationType</td>
+                    <td class="parameter-documentation">
+                        <p>Relation type between persons.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelationType">Itslearning.RestApi.Entities.RelationType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RelationInfo</td>
+                    <td class="parameter-documentation">
+                        <p>Extra information about the relation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelationInfo">Itslearning.RestApi.Entities.RelationInfo</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Person&quot;: {
+      &quot;PersonId&quot;: 1,
+      &quot;FirstName&quot;: &quot;sample string 2&quot;,
+      &quot;LastName&quot;: &quot;sample string 3&quot;,
+      &quot;FullName&quot;: &quot;sample string 4&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+    },
+    &quot;RelationType&quot;: &quot;Teacher&quot;,
+    &quot;RelationInfo&quot;: {
+      &quot;Courses&quot;: [
+        {
+          &quot;CourseId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+          &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+          &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+          &quot;CourseCode&quot;: &quot;sample string 6&quot;
+        },
+        {
+          &quot;CourseId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+          &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+          &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+          &quot;CourseCode&quot;: &quot;sample string 6&quot;
+        }
+      ]
+    }
+  },
+  {
+    &quot;Person&quot;: {
+      &quot;PersonId&quot;: 1,
+      &quot;FirstName&quot;: &quot;sample string 2&quot;,
+      &quot;LastName&quot;: &quot;sample string 3&quot;,
+      &quot;FullName&quot;: &quot;sample string 4&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+    },
+    &quot;RelationType&quot;: &quot;Teacher&quot;,
+    &quot;RelationInfo&quot;: {
+      &quot;Courses&quot;: [
+        {
+          &quot;CourseId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+          &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+          &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+          &quot;CourseCode&quot;: &quot;sample string 6&quot;
+        },
+        {
+          &quot;CourseId&quot;: 1,
+          &quot;Title&quot;: &quot;sample string 2&quot;,
+          &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+          &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+          &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+          &quot;CourseCode&quot;: &quot;sample string 6&quot;
+        }
+      ]
+    }
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfRelatedPerson xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;RelatedPerson&gt;
+    &lt;Person&gt;
+      &lt;AdditionalInfo xmlns=&quot;&quot;&gt;sample string 6&lt;/AdditionalInfo&gt;
+      &lt;FirstName xmlns=&quot;&quot;&gt;sample string 2&lt;/FirstName&gt;
+      &lt;FullName xmlns=&quot;&quot;&gt;sample string 4&lt;/FullName&gt;
+      &lt;LastName xmlns=&quot;&quot;&gt;sample string 3&lt;/LastName&gt;
+      &lt;PersonId xmlns=&quot;&quot;&gt;1&lt;/PersonId&gt;
+      &lt;ProfileImageUrl xmlns=&quot;&quot;&gt;sample string 7&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall xmlns=&quot;&quot;&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl xmlns=&quot;&quot;&gt;sample string 5&lt;/ProfileUrl&gt;
+    &lt;/Person&gt;
+    &lt;RelationInfo&gt;
+      &lt;Courses&gt;
+        &lt;PersonCourseBase xmlns=&quot;&quot;&gt;
+          &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+          &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+          &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+          &lt;CourseId&gt;1&lt;/CourseId&gt;
+          &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/PersonCourseBase&gt;
+        &lt;PersonCourseBase xmlns=&quot;&quot;&gt;
+          &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+          &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+          &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+          &lt;CourseId&gt;1&lt;/CourseId&gt;
+          &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/PersonCourseBase&gt;
+      &lt;/Courses&gt;
+    &lt;/RelationInfo&gt;
+    &lt;RelationType&gt;Teacher&lt;/RelationType&gt;
+  &lt;/RelatedPerson&gt;
+  &lt;RelatedPerson&gt;
+    &lt;Person&gt;
+      &lt;AdditionalInfo xmlns=&quot;&quot;&gt;sample string 6&lt;/AdditionalInfo&gt;
+      &lt;FirstName xmlns=&quot;&quot;&gt;sample string 2&lt;/FirstName&gt;
+      &lt;FullName xmlns=&quot;&quot;&gt;sample string 4&lt;/FullName&gt;
+      &lt;LastName xmlns=&quot;&quot;&gt;sample string 3&lt;/LastName&gt;
+      &lt;PersonId xmlns=&quot;&quot;&gt;1&lt;/PersonId&gt;
+      &lt;ProfileImageUrl xmlns=&quot;&quot;&gt;sample string 7&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall xmlns=&quot;&quot;&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl xmlns=&quot;&quot;&gt;sample string 5&lt;/ProfileUrl&gt;
+    &lt;/Person&gt;
+    &lt;RelationInfo&gt;
+      &lt;Courses&gt;
+        &lt;PersonCourseBase xmlns=&quot;&quot;&gt;
+          &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+          &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+          &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+          &lt;CourseId&gt;1&lt;/CourseId&gt;
+          &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/PersonCourseBase&gt;
+        &lt;PersonCourseBase xmlns=&quot;&quot;&gt;
+          &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+          &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+          &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+          &lt;CourseId&gt;1&lt;/CourseId&gt;
+          &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+          &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;/PersonCourseBase&gt;
+      &lt;/Courses&gt;
+    &lt;/RelationInfo&gt;
+    &lt;RelationType&gt;Teacher&lt;/RelationType&gt;
+  &lt;/RelatedPerson&gt;
+&lt;/ArrayOfRelatedPerson&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/courses/{courseId}/resources/extended/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/courses/{courseId}/resources/extended/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</h1>
+<div>
+    <p>Returns all resources in course.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>ID of course</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Request parameters</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.GetCourseResourcesPayload">Itslearning.RestApi.Entities.Personal.Course.GetCourseResourcesPayload</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ElementType</td>
+                    <td class="parameter-documentation">
+                        <p>Type of element</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.ElementType">Itsolutions.ItslUtils.Constants.ElementType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningToolIds</td>
+                    <td class="parameter-documentation">
+                        <p>IDs of learning tool (extension IDs)</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningToolType</td>
+                    <td class="parameter-documentation">
+                        <p>Type of learning tool</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.LearningToolType">Itslearning.Platform.RestApi.Sdk.Common.Entities.LearningToolType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ElementPermission</td>
+                    <td class="parameter-documentation">
+                        <p>Permissions for the element</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.LearningToolApp.Entities.ElementPermission">Itslearning.Platform.RestApi.Sdk.LearningToolApp.Entities.ElementPermission</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ElementIds</td>
+                    <td class="parameter-documentation">
+                        <p>Element IDs</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IncludeDeleted</td>
+                    <td class="parameter-documentation">
+                        <p>Whether to include deleted resources</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IncludeExtraWorkElements</td>
+                    <td class="parameter-documentation">
+                        <p>Whether to include extra work elements</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;ElementType&quot;: 0,
+  &quot;LearningToolIds&quot;: [
+    1,
+    2
+  ],
+  &quot;LearningToolType&quot;: 0,
+  &quot;ElementPermission&quot;: 0,
+  &quot;ElementIds&quot;: [
+    1,
+    2
+  ],
+  &quot;IncludeDeleted&quot;: true,
+  &quot;IncludeExtraWorkElements&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;GetCourseResourcesPayload xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;ElementIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/ElementIds&gt;
+  &lt;ElementPermission&gt;All&lt;/ElementPermission&gt;
+  &lt;ElementType&gt;Post&lt;/ElementType&gt;
+  &lt;IncludeDeleted&gt;true&lt;/IncludeDeleted&gt;
+  &lt;IncludeExtraWorkElements&gt;true&lt;/IncludeExtraWorkElements&gt;
+  &lt;LearningToolIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/LearningToolIds&gt;
+  &lt;LearningToolType&gt;LearningResource&lt;/LearningToolType&gt;
+&lt;/GetCourseResourcesPayload&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseResource">EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseResource</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseResource">Itslearning.RestApi.Entities.Personal.Course.CourseResource</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;Title&quot;: &quot;sample string 1&quot;,
+      &quot;ElementId&quot;: 2,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;CourseId&quot;: 3,
+      &quot;Url&quot;: &quot;sample string 4&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+      &quot;BrandIconUrl&quot;: &quot;sample string 7&quot;,
+      &quot;Active&quot;: true,
+      &quot;LearningToolId&quot;: 9,
+      &quot;AddElementUrl&quot;: &quot;sample string 10&quot;,
+      &quot;Homework&quot;: true,
+      &quot;Path&quot;: &quot;sample string 12&quot;,
+      &quot;LearningObjectId&quot;: 13,
+      &quot;LearningObjectInstanceId&quot;: 14
+    },
+    {
+      &quot;Title&quot;: &quot;sample string 1&quot;,
+      &quot;ElementId&quot;: 2,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;CourseId&quot;: 3,
+      &quot;Url&quot;: &quot;sample string 4&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+      &quot;BrandIconUrl&quot;: &quot;sample string 7&quot;,
+      &quot;Active&quot;: true,
+      &quot;LearningToolId&quot;: 9,
+      &quot;AddElementUrl&quot;: &quot;sample string 10&quot;,
+      &quot;Homework&quot;: true,
+      &quot;Path&quot;: &quot;sample string 12&quot;,
+      &quot;LearningObjectId&quot;: 13,
+      &quot;LearningObjectInstanceId&quot;: 14
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;CourseResource&gt;
+      &lt;Active&gt;true&lt;/Active&gt;
+      &lt;AddElementUrl&gt;sample string 10&lt;/AddElementUrl&gt;
+      &lt;BrandIconUrl&gt;sample string 7&lt;/BrandIconUrl&gt;
+      &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+      &lt;CourseId&gt;3&lt;/CourseId&gt;
+      &lt;ElementId&gt;2&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;Homework&gt;true&lt;/Homework&gt;
+      &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+      &lt;LearningObjectId&gt;13&lt;/LearningObjectId&gt;
+      &lt;LearningObjectInstanceId&gt;14&lt;/LearningObjectInstanceId&gt;
+      &lt;LearningToolId&gt;9&lt;/LearningToolId&gt;
+      &lt;Path&gt;sample string 12&lt;/Path&gt;
+      &lt;Title&gt;sample string 1&lt;/Title&gt;
+      &lt;Url&gt;sample string 4&lt;/Url&gt;
+    &lt;/CourseResource&gt;
+    &lt;CourseResource&gt;
+      &lt;Active&gt;true&lt;/Active&gt;
+      &lt;AddElementUrl&gt;sample string 10&lt;/AddElementUrl&gt;
+      &lt;BrandIconUrl&gt;sample string 7&lt;/BrandIconUrl&gt;
+      &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+      &lt;CourseId&gt;3&lt;/CourseId&gt;
+      &lt;ElementId&gt;2&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;Homework&gt;true&lt;/Homework&gt;
+      &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+      &lt;LearningObjectId&gt;13&lt;/LearningObjectId&gt;
+      &lt;LearningObjectInstanceId&gt;14&lt;/LearningObjectInstanceId&gt;
+      &lt;LearningToolId&gt;9&lt;/LearningToolId&gt;
+      &lt;Path&gt;sample string 12&lt;/Path&gt;
+      &lt;Title&gt;sample string 1&lt;/Title&gt;
+      &lt;Url&gt;sample string 4&lt;/Url&gt;
+    &lt;/CourseResource&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

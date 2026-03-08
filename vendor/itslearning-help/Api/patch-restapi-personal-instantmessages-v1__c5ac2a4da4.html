@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PATCH restapi/personal/instantmessages/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PATCH restapi/personal/instantmessages/v1</h1>
+<div>
+    <p>Updates the text for an instant message.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The message to patch</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageToPatch">Itslearning.RestApi.Entities.InstantMessageToPatch</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">InstantMessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The instant messageId to patch.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;InstantMessageId&quot;: 1,
+  &quot;Text&quot;: &quot;sample string 2&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;InstantMessageToPatch xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;InstantMessageId&gt;1&lt;/InstantMessageId&gt;
+  &lt;Text&gt;sample string 2&lt;/Text&gt;
+&lt;/InstantMessageToPatch&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">MessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for the message, in scope of a site (itslearning customer)</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>Obsolete use InstantMessageThreadId instead</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for the thread in scope of a site</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageThreadParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Recipients for new message threads - does not need to be filled if not used when posting a new thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageParticipant">Itslearning.RestApi.Entities.InstantMessageParticipant</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Created</td>
+                    <td class="parameter-documentation">
+                        <p>DateTime when the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedFormatted</td>
+                    <td class="parameter-documentation">
+                        <p>Formatted DateTime when the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedRelative</td>
+                    <td class="parameter-documentation">
+                        <p>How long ago the message was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EditedRelative</td>
+                    <td class="parameter-documentation">
+                        <p>How long ago the message was edited</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the author of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByName</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the author of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HomeOrganization</td>
+                    <td class="parameter-documentation">
+                        <p>Home organization of the author of the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByAvatar</td>
+                    <td class="parameter-documentation">
+                        <p>Url to the avatar of the author</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The message text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachmentUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to the attached file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachmentName</td>
+                    <td class="parameter-documentation">
+                        <p>File name of the attached file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Link</td>
+                    <td class="parameter-documentation">
+                        <p>The link to combine together with the message text</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LinkTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Link title to create a friendly name for the link</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LinkTarget</td>
+                    <td class="parameter-documentation">
+                        <p>The target to the link eg. _blank</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSystemMessage</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message a system message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsDeleted</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message deleted</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DeletedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the person, who deleted this message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanDelete</td>
+                    <td class="parameter-documentation">
+                        <p>If the current user is allowed to delete the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsEdited</td>
+                    <td class="parameter-documentation">
+                        <p>Is the message edited</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEdit</td>
+                    <td class="parameter-documentation">
+                        <p>If the current user is allowed to edit the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsStarred</td>
+                    <td class="parameter-documentation">
+                        <p>If this message has been marked as starred by the user</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSilent</td>
+                    <td class="parameter-documentation">
+                        <p>Flag used for messages we should not update the UI for</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuse</td>
+                    <td class="parameter-documentation">
+                        <p>This message was reported as abusive by the current user.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasShared</td>
+                    <td class="parameter-documentation">
+                        <p>The message is used to share another message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasRepliedTo</td>
+                    <td class="parameter-documentation">
+                        <p>The message is used to reply to another message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasAbuseReported</td>
+                    <td class="parameter-documentation">
+                        <p>The message is an abuse report. It has a child message that was marked as abusive message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasAbuseThreadReported</td>
+                    <td class="parameter-documentation">
+                        <p>The message is an report for abusive thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The origin message for child message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The origin instant message thread identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadDeletedBy</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the person, who delete original instant message thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OriginInstantMessageThreadName</td>
+                    <td class="parameter-documentation">
+                        <p>The origin instant message thread name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ChildMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The child message is shared by the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AdditionalHeading</td>
+                    <td class="parameter-documentation">
+                        <p>Additional heading to display. Extra information about where the message had its origin if a message was shared or replied to.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsBroadcastMassMessage</td>
+                    <td class="parameter-documentation">
+                        <p>This message was sent as broadcast mass message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsChildMessageDeletedPermanently</td>
+                    <td class="parameter-documentation">
+                        <p>Defines that child message has been deleted permanently</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocal</td>
+                    <td class="parameter-documentation">
+                        <p>DateTime when the message was created converted to user's timezone</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalTimeStamp</td>
+                    <td class="parameter-documentation">
+                        <p>Time when the message was created in user's timezone.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalDateStamp</td>
+                    <td class="parameter-documentation">
+                        <p>Date when the message was created in user's timezone formatted considering culture.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByShortName</td>
+                    <td class="parameter-documentation">
+                        <p>First name of the author.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedLocalShortNumericDate</td>
+                    <td class="parameter-documentation">
+                        <p>Date when the message was created in user's timezone formatted as short numeric date without year.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;MessageId&quot;: 1,
+  &quot;MessageThreadId&quot;: 2,
+  &quot;InstantMessageThreadId&quot;: 3,
+  &quot;MessageThreadParticipants&quot;: [
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 1&quot;,
+      &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+      &quot;LocationType&quot;: 1,
+      &quot;LocationId&quot;: 1
+    },
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 1&quot;,
+      &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+      &quot;LocationType&quot;: 1,
+      &quot;LocationId&quot;: 1
+    }
+  ],
+  &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+  &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+  &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+  &quot;CreatedBy&quot;: 8,
+  &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+  &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+  &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+  &quot;Text&quot;: &quot;sample string 12&quot;,
+  &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+  &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+  &quot;Link&quot;: &quot;sample string 15&quot;,
+  &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+  &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+  &quot;IsSystemMessage&quot;: true,
+  &quot;IsDeleted&quot;: true,
+  &quot;DeletedBy&quot;: 20,
+  &quot;CanDelete&quot;: true,
+  &quot;IsEdited&quot;: true,
+  &quot;CanEdit&quot;: true,
+  &quot;IsStarred&quot;: true,
+  &quot;IsSilent&quot;: true,
+  &quot;IsAbuse&quot;: true,
+  &quot;HasShared&quot;: true,
+  &quot;HasRepliedTo&quot;: true,
+  &quot;HasAbuseReported&quot;: true,
+  &quot;HasAbuseThreadReported&quot;: true,
+  &quot;OriginInstantMessage&quot;: {
+    &quot;MessageId&quot;: 1,
+    &quot;MessageThreadId&quot;: 2,
+    &quot;InstantMessageThreadId&quot;: 3,
+    &quot;MessageThreadParticipants&quot;: [
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      },
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      }
+    ],
+    &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+    &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+    &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+    &quot;CreatedBy&quot;: 8,
+    &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+    &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+    &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+    &quot;Text&quot;: &quot;sample string 12&quot;,
+    &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+    &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+    &quot;Link&quot;: &quot;sample string 15&quot;,
+    &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+    &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+    &quot;IsSystemMessage&quot;: true,
+    &quot;IsDeleted&quot;: true,
+    &quot;DeletedBy&quot;: 20,
+    &quot;CanDelete&quot;: true,
+    &quot;IsEdited&quot;: true,
+    &quot;CanEdit&quot;: true,
+    &quot;IsStarred&quot;: true,
+    &quot;IsSilent&quot;: true,
+    &quot;IsAbuse&quot;: true,
+    &quot;HasShared&quot;: true,
+    &quot;HasRepliedTo&quot;: true,
+    &quot;HasAbuseReported&quot;: true,
+    &quot;HasAbuseThreadReported&quot;: true,
+    &quot;OriginInstantMessage&quot;: null,
+    &quot;OriginInstantMessageThreadId&quot;: 1,
+    &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+    &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+    &quot;ChildMessage&quot;: null,
+    &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+    &quot;IsBroadcastMassMessage&quot;: true,
+    &quot;IsChildMessageDeletedPermanently&quot;: true,
+    &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+    &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+    &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+    &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+  },
+  &quot;OriginInstantMessageThreadId&quot;: 1,
+  &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+  &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+  &quot;ChildMessage&quot;: {
+    &quot;MessageId&quot;: 1,
+    &quot;MessageThreadId&quot;: 2,
+    &quot;InstantMessageThreadId&quot;: 3,
+    &quot;MessageThreadParticipants&quot;: [
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      },
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      }
+    ],
+    &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+    &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+    &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+    &quot;CreatedBy&quot;: 8,
+    &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+    &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+    &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+    &quot;Text&quot;: &quot;sample string 12&quot;,
+    &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+    &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+    &quot;Link&quot;: &quot;sample string 15&quot;,
+    &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+    &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+    &quot;IsSystemMessage&quot;: true,
+    &quot;IsDeleted&quot;: true,
+    &quot;DeletedBy&quot;: 20,
+    &quot;CanDelete&quot;: true,
+    &quot;IsEdited&quot;: true,
+    &quot;CanEdit&quot;: true,
+    &quot;IsStarred&quot;: true,
+    &quot;IsSilent&quot;: true,
+    &quot;IsAbuse&quot;: true,
+    &quot;HasShared&quot;: true,
+    &quot;HasRepliedTo&quot;: true,
+    &quot;HasAbuseReported&quot;: true,
+    &quot;HasAbuseThreadReported&quot;: true,
+    &quot;OriginInstantMessage&quot;: null,
+    &quot;OriginInstantMessageThreadId&quot;: 1,
+    &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+    &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+    &quot;ChildMessage&quot;: null,
+    &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+    &quot;IsBroadcastMassMessage&quot;: true,
+    &quot;IsChildMessageDeletedPermanently&quot;: true,
+    &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+    &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+    &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+    &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+  },
+  &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+  &quot;IsBroadcastMassMessage&quot;: true,
+  &quot;IsChildMessageDeletedPermanently&quot;: true,
+  &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+  &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+  &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+  &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;InstantMessage xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;AdditionalHeading&gt;sample string 32&lt;/AdditionalHeading&gt;
+  &lt;AttachmentName&gt;sample string 14&lt;/AttachmentName&gt;
+  &lt;AttachmentUrl&gt;sample string 13&lt;/AttachmentUrl&gt;
+  &lt;CanDelete&gt;true&lt;/CanDelete&gt;
+  &lt;CanEdit&gt;true&lt;/CanEdit&gt;
+  &lt;ChildMessage&gt;
+    &lt;AdditionalHeading&gt;sample string 32&lt;/AdditionalHeading&gt;
+    &lt;AttachmentName&gt;sample string 14&lt;/AttachmentName&gt;
+    &lt;AttachmentUrl&gt;sample string 13&lt;/AttachmentUrl&gt;
+    &lt;CanDelete&gt;true&lt;/CanDelete&gt;
+    &lt;CanEdit&gt;true&lt;/CanEdit&gt;
+    &lt;ChildMessage i:nil=&quot;true&quot; /&gt;
+    &lt;Created&gt;2026-03-07T09:02:56Z&lt;/Created&gt;
+    &lt;CreatedBy&gt;8&lt;/CreatedBy&gt;
+    &lt;CreatedByAvatar&gt;sample string 11&lt;/CreatedByAvatar&gt;
+    &lt;CreatedByName&gt;sample string 9&lt;/CreatedByName&gt;
+    &lt;CreatedByShortName&gt;sample string 38&lt;/CreatedByShortName&gt;
+    &lt;CreatedFormatted&gt;sample string 5&lt;/CreatedFormatted&gt;
+    &lt;CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/CreatedLocal&gt;
+    &lt;CreatedLocalDateStamp&gt;sample string 37&lt;/CreatedLocalDateStamp&gt;
+    &lt;CreatedLocalShortNumericDate&gt;sample string 39&lt;/CreatedLocalShortNumericDate&gt;
+    &lt;CreatedLocalTimeStamp&gt;sample string 36&lt;/CreatedLocalTimeStamp&gt;
+    &lt;CreatedRelative&gt;sample string 6&lt;/CreatedRelative&gt;
+    &lt;DeletedBy&gt;20&lt;/DeletedBy&gt;
+    &lt;EditedRelative&gt;sample string 7&lt;/EditedRelative&gt;
+    &lt;HasAbuseReported&gt;true&lt;/HasAbuseReported&gt;
+    &lt;HasAbuseThreadReported&gt;true&lt;/HasAbuseThreadReported&gt;
+    &lt;HasRepliedTo&gt;true&lt;/HasRepliedTo&gt;
+    &lt;HasShared&gt;true&lt;/HasShared&gt;
+    &lt;HomeOrganization&gt;sample string 10&lt;/HomeOrganization&gt;
+    &lt;InstantMessageThreadId&gt;3&lt;/InstantMessageThreadId&gt;
+    &lt;IsAbuse&gt;true&lt;/IsAbuse&gt;
+    &lt;IsBroadcastMassMessage&gt;true&lt;/IsBroadcastMassMessage&gt;
+    &lt;IsChildMessageDeletedPermanently&gt;true&lt;/IsChildMessageDeletedPermanently&gt;
+    &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+    &lt;IsEdited&gt;true&lt;/IsEdited&gt;
+    &lt;IsSilent&gt;true&lt;/IsSilent&gt;
+    &lt;IsStarred&gt;true&lt;/IsStarred&gt;
+    &lt;IsSystemMessage&gt;true&lt;/IsSystemMessage&gt;
+    &lt;Link&gt;sample string 15&lt;/Link&gt;
+    &lt;LinkTarget&gt;sample string 17&lt;/LinkTarget&gt;
+    &lt;LinkTitle&gt;sample string 16&lt;/LinkTitle&gt;
+    &lt;MessageId&gt;1&lt;/MessageId&gt;
+    &lt;MessageThreadId&gt;2&lt;/MessageThreadId&gt;
+    &lt;MessageThreadParticipants&gt;
+      &lt;InstantMessageParticipant&gt;
+        &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+        &lt;LocationId&gt;1&lt;/LocationId&gt;
+        &lt;LocationType&gt;1&lt;/LocationType&gt;
+        &lt;Name&gt;sample string 1&lt;/Name&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;/InstantMessageParticipant&gt;
+      &lt;InstantMessageParticipant&gt;
+        &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+        &lt;LocationId&gt;1&lt;/LocationId&gt;
+        &lt;LocationType&gt;1&lt;/LocationType&gt;
+        &lt;Name&gt;sample string 1&lt;/Name&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;/InstantMessageParticipant&gt;
+    &lt;/MessageThreadParticipants&gt;
+    &lt;OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+    &lt;OriginInstantMessageThreadDeletedBy&gt;1&lt;/OriginInstantMessageThreadDeletedBy&gt;
+    &lt;OriginInstantMessageThreadId&gt;1&lt;/OriginInstantMessageThreadId&gt;
+    &lt;OriginInstantMessageThreadName&gt;sample string 31&lt;/OriginInstantMessageThreadName&gt;
+    &lt;Text&gt;sample string 12&lt;/Text&gt;
+  &lt;/ChildMessage&gt;
+  &lt;Created&gt;2026-03-07T09:02:56Z&lt;/Created&gt;
+  &lt;CreatedBy&gt;8&lt;/CreatedBy&gt;
+  &lt;CreatedByAvatar&gt;sample string 11&lt;/CreatedByAvatar&gt;
+  &lt;CreatedByName&gt;sample string 9&lt;/CreatedByName&gt;
+  &lt;CreatedByShortName&gt;sample string 38&lt;/CreatedByShortName&gt;
+  &lt;CreatedFormatted&gt;sample string 5&lt;/CreatedFormatted&gt;
+  &lt;CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/CreatedLocal&gt;
+  &lt;CreatedLocalDateStamp&gt;sample string 37&lt;/CreatedLocalDateStamp&gt;
+  &lt;CreatedLocalShortNumericDate&gt;sample string 39&lt;/CreatedLocalShortNumericDate&gt;
+  &lt;CreatedLocalTimeStamp&gt;sample string 36&lt;/CreatedLocalTimeStamp&gt;
+  &lt;CreatedRelative&gt;sample string 6&lt;/CreatedRelative&gt;
+  &lt;DeletedBy&gt;20&lt;/DeletedBy&gt;
+  &lt;EditedRelative&gt;sample string 7&lt;/EditedRelative&gt;
+  &lt;HasAbuseReported&gt;true&lt;/HasAbuseReported&gt;
+  &lt;HasAbuseThreadReported&gt;true&lt;/HasAbuseThreadReported&gt;
+  &lt;HasRepliedTo&gt;true&lt;/HasRepliedTo&gt;
+  &lt;HasShared&gt;true&lt;/HasShared&gt;
+  &lt;HomeOrganization&gt;sample string 10&lt;/HomeOrganization&gt;
+  &lt;InstantMessageThreadId&gt;3&lt;/InstantMessageThreadId&gt;
+  &lt;IsAbuse&gt;true&lt;/IsAbuse&gt;
+  &lt;IsBroadcastMassMessage&gt;true&lt;/IsBroadcastMassMessage&gt;
+  &lt;IsChildMessageDeletedPermanently&gt;true&lt;/IsChildMessageDeletedPermanently&gt;
+  &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+  &lt;IsEdited&gt;true&lt;/IsEdited&gt;
+  &lt;IsSilent&gt;true&lt;/IsSilent&gt;
+  &lt;IsStarred&gt;true&lt;/IsStarred&gt;
+  &lt;IsSystemMessage&gt;true&lt;/IsSystemMessage&gt;
+  &lt;Link&gt;sample string 15&lt;/Link&gt;
+  &lt;LinkTarget&gt;sample string 17&lt;/LinkTarget&gt;
+  &lt;LinkTitle&gt;sample string 16&lt;/LinkTitle&gt;
+  &lt;MessageId&gt;1&lt;/MessageId&gt;
+  &lt;MessageThreadId&gt;2&lt;/MessageThreadId&gt;
+  &lt;MessageThreadParticipants&gt;
+    &lt;InstantMessageParticipant&gt;
+      &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+      &lt;LocationId&gt;1&lt;/LocationId&gt;
+      &lt;LocationType&gt;1&lt;/LocationType&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;/InstantMessageParticipant&gt;
+    &lt;InstantMessageParticipant&gt;
+      &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+      &lt;LocationId&gt;1&lt;/LocationId&gt;
+      &lt;LocationType&gt;1&lt;/LocationType&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;/InstantMessageParticipant&gt;
+  &lt;/MessageThreadParticipants&gt;
+  &lt;OriginInstantMessage&gt;
+    &lt;AdditionalHeading&gt;sample string 32&lt;/AdditionalHeading&gt;
+    &lt;AttachmentName&gt;sample string 14&lt;/AttachmentName&gt;
+    &lt;AttachmentUrl&gt;sample string 13&lt;/AttachmentUrl&gt;
+    &lt;CanDelete&gt;true&lt;/CanDelete&gt;
+    &lt;CanEdit&gt;true&lt;/CanEdit&gt;
+    &lt;ChildMessage i:nil=&quot;true&quot; /&gt;
+    &lt;Created&gt;2026-03-07T09:02:56Z&lt;/Created&gt;
+    &lt;CreatedBy&gt;8&lt;/CreatedBy&gt;
+    &lt;CreatedByAvatar&gt;sample string 11&lt;/CreatedByAvatar&gt;
+    &lt;CreatedByName&gt;sample string 9&lt;/CreatedByName&gt;
+    &lt;CreatedByShortName&gt;sample string 38&lt;/CreatedByShortName&gt;
+    &lt;CreatedFormatted&gt;sample string 5&lt;/CreatedFormatted&gt;
+    &lt;CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/CreatedLocal&gt;
+    &lt;CreatedLocalDateStamp&gt;sample string 37&lt;/CreatedLocalDateStamp&gt;
+    &lt;CreatedLocalShortNumericDate&gt;sample string 39&lt;/CreatedLocalShortNumericDate&gt;
+    &lt;CreatedLocalTimeStamp&gt;sample string 36&lt;/CreatedLocalTimeStamp&gt;
+    &lt;CreatedRelative&gt;sample string 6&lt;/CreatedRelative&gt;
+    &lt;DeletedBy&gt;20&lt;/DeletedBy&gt;
+    &lt;EditedRelative&gt;sample string 7&lt;/EditedRelative&gt;
+    &lt;HasAbuseReported&gt;true&lt;/HasAbuseReported&gt;
+    &lt;HasAbuseThreadReported&gt;true&lt;/HasAbuseThreadReported&gt;
+    &lt;HasRepliedTo&gt;true&lt;/HasRepliedTo&gt;
+    &lt;HasShared&gt;true&lt;/HasShared&gt;
+    &lt;HomeOrganization&gt;sample string 10&lt;/HomeOrganization&gt;
+    &lt;InstantMessageThreadId&gt;3&lt;/InstantMessageThreadId&gt;
+    &lt;IsAbuse&gt;true&lt;/IsAbuse&gt;
+    &lt;IsBroadcastMassMessage&gt;true&lt;/IsBroadcastMassMessage&gt;
+    &lt;IsChildMessageDeletedPermanently&gt;true&lt;/IsChildMessageDeletedPermanently&gt;
+    &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+    &lt;IsEdited&gt;true&lt;/IsEdited&gt;
+    &lt;IsSilent&gt;true&lt;/IsSilent&gt;
+    &lt;IsStarred&gt;true&lt;/IsStarred&gt;
+    &lt;IsSystemMessage&gt;true&lt;/IsSystemMessage&gt;
+    &lt;Link&gt;sample string 15&lt;/Link&gt;
+    &lt;LinkTarget&gt;sample string 17&lt;/LinkTarget&gt;
+    &lt;LinkTitle&gt;sample string 16&lt;/LinkTitle&gt;
+    &lt;MessageId&gt;1&lt;/MessageId&gt;
+    &lt;MessageThreadId&gt;2&lt;/MessageThreadId&gt;
+    &lt;MessageThreadParticipants&gt;
+      &lt;InstantMessageParticipant&gt;
+        &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+        &lt;LocationId&gt;1&lt;/LocationId&gt;
+        &lt;LocationType&gt;1&lt;/LocationType&gt;
+        &lt;Name&gt;sample string 1&lt;/Name&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;/InstantMessageParticipant&gt;
+      &lt;InstantMessageParticipant&gt;
+        &lt;AvatarUrl&gt;sample string 2&lt;/AvatarUrl&gt;
+        &lt;LocationId&gt;1&lt;/LocationId&gt;
+        &lt;LocationType&gt;1&lt;/LocationType&gt;
+        &lt;Name&gt;sample string 1&lt;/Name&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;/InstantMessageParticipant&gt;
+    &lt;/MessageThreadParticipants&gt;
+    &lt;OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+    &lt;OriginInstantMessageThreadDeletedBy&gt;1&lt;/OriginInstantMessageThreadDeletedBy&gt;
+    &lt;OriginInstantMessageThreadId&gt;1&lt;/OriginInstantMessageThreadId&gt;
+    &lt;OriginInstantMessageThreadName&gt;sample string 31&lt;/OriginInstantMessageThreadName&gt;
+    &lt;Text&gt;sample string 12&lt;/Text&gt;
+  &lt;/OriginInstantMessage&gt;
+  &lt;OriginInstantMessageThreadDeletedBy&gt;1&lt;/OriginInstantMessageThreadDeletedBy&gt;
+  &lt;OriginInstantMessageThreadId&gt;1&lt;/OriginInstantMessageThreadId&gt;
+  &lt;OriginInstantMessageThreadName&gt;sample string 31&lt;/OriginInstantMessageThreadName&gt;
+  &lt;Text&gt;sample string 12&lt;/Text&gt;
+&lt;/InstantMessage&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

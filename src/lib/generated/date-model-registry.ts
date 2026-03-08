@@ -7,6 +7,15 @@
 import type { ModelRegistry } from "../response-schema";
 
 export const dateModelRegistry = {
+	"EntityListOfItslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson": {
+		"EntityArray": {
+			"kind": "array",
+			"item": {
+				"kind": "model",
+				"model": "Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson"
+			}
+		}
+	},
 	"EntityListOfItslearning.RestApi.Entities.Comment": {
 		"EntityArray": {
 			"kind": "array",
@@ -259,6 +268,20 @@ export const dateModelRegistry = {
 	},
 	"Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem": {
 		"Deadline": {
+			"kind": "date"
+		}
+	},
+	"Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson": {
+		"PersonAssessments": {
+			"kind": "array",
+			"item": {
+				"kind": "model",
+				"model": "Itslearning.RestApi.Entities.AssessmentRecord.PersonAssessmentValue"
+			}
+		}
+	},
+	"Itslearning.RestApi.Entities.AssessmentRecord.PersonAssessmentValue": {
+		"AnswerDateTime": {
 			"kind": "date"
 		}
 	},

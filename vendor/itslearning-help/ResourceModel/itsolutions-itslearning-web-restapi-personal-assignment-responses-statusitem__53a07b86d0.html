@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title></title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <h1>Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.StatusItem</h1>
+    <p>Assessment status item, used to define the status of a given answer (submission), example: &quot;Not submitted&quot;, &quot;Submitted&quot;, &quot;Completed&quot;.
+            Name of the class is &quot;StatusItem&quot; to avoid confusion with &quot;AssessmentItem&quot; which is used for setting grade.</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">AssessmentStatusItemId</td>
+                    <td class="parameter-documentation">
+                        <p>Assessment status item id.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>Assessment status item title. Example can be "Not submitted".</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsEditable</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether status is "editable", meaning that the learner can modify the work.
+ There can be multiple status items in the list with this property set to true.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsCompleted</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether status is "completed", meaning that the learner has completed the work.
+ There can be multiple status items in the list with this property set to true, e.g. both "Satisfactory" and "Not satisfactory" can be completed statuses.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSubmitted</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether this status is "submitted", meaning that the learner has submitted something.
+ Only one status item in the list should have this property set to true.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsInitialStatus</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether this status is the initial status, i.e. "not submitted", meaning that the learner has not submitted anything.
+ Only one status item in the list should have this property set to true.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+</body>
+</html>

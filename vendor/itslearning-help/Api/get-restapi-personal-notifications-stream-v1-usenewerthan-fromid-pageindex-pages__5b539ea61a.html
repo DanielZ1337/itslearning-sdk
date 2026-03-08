@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/notifications/stream/v1?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;fromPublishedDate={fromPublishedDate}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/notifications/stream/v1?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;fromPublishedDate={fromPublishedDate}</h1>
+<div>
+    <p><p>
+ Gets user's stream feed, which is collected from user's favorite courses or projects.
+ </p>
+<p>
+ If no parameters specified, 100 latest items will be returned.
+ </p>
+<p>
+ The client can specify paging with a combination of UseNewerThan, FromId and fromPublishedDate to be able to page directly from a specified NotificationId.
+ Due to the fact that stream items are sorted by PublishedDate (not by ID), it's required to specify both FromId and fromPublishedDate parameters.
+ Both should belong to a single StreamItem entity. By default items older than specified are returned, but it's possible to override that behavior by setting UseNewerThan to true.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">UseNewerThan</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FromId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromPublishedDate</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The PublishedDate of last stream item to get the collection of items next to it. Optional, if not supplied then the list will be populated with the latest items. Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The collection of StreamItems.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.StreamItem">EntityListOfItslearning.RestApi.Entities.StreamItem</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StreamItem">Itslearning.RestApi.Entities.StreamItem</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;NotificationId&quot;: 1,
+      &quot;Text&quot;: &quot;sample string 2&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 3&quot;,
+      &quot;PublishedDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;PublishedBy&quot;: {
+        &quot;PersonId&quot;: 1,
+        &quot;FirstName&quot;: &quot;sample string 2&quot;,
+        &quot;LastName&quot;: &quot;sample string 3&quot;,
+        &quot;FullName&quot;: &quot;sample string 4&quot;,
+        &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+        &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+        &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+        &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+      },
+      &quot;Url&quot;: &quot;sample string 5&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 6&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 7&quot;,
+      &quot;LightBulletin&quot;: {
+        &quot;LightBulletinId&quot;: 1,
+        &quot;Text&quot;: &quot;sample string 2&quot;,
+        &quot;EmbedUrl&quot;: &quot;sample string 3&quot;,
+        &quot;AllowComments&quot;: true,
+        &quot;ElementLinks&quot;: [
+          {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;LearningToolId&quot;: 6,
+            &quot;Homework&quot;: true
+          },
+          {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;LearningToolId&quot;: 6,
+            &quot;Homework&quot;: true
+          }
+        ]
+      },
+      &quot;ElementId&quot;: 1,
+      &quot;ElementType&quot;: &quot;Unknown&quot;
+    },
+    {
+      &quot;NotificationId&quot;: 1,
+      &quot;Text&quot;: &quot;sample string 2&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 3&quot;,
+      &quot;PublishedDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;PublishedBy&quot;: {
+        &quot;PersonId&quot;: 1,
+        &quot;FirstName&quot;: &quot;sample string 2&quot;,
+        &quot;LastName&quot;: &quot;sample string 3&quot;,
+        &quot;FullName&quot;: &quot;sample string 4&quot;,
+        &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+        &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+        &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+        &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+      },
+      &quot;Url&quot;: &quot;sample string 5&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 6&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 7&quot;,
+      &quot;LightBulletin&quot;: {
+        &quot;LightBulletinId&quot;: 1,
+        &quot;Text&quot;: &quot;sample string 2&quot;,
+        &quot;EmbedUrl&quot;: &quot;sample string 3&quot;,
+        &quot;AllowComments&quot;: true,
+        &quot;ElementLinks&quot;: [
+          {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;LearningToolId&quot;: 6,
+            &quot;Homework&quot;: true
+          },
+          {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;LearningToolId&quot;: 6,
+            &quot;Homework&quot;: true
+          }
+        ]
+      },
+      &quot;ElementId&quot;: 1,
+      &quot;ElementType&quot;: &quot;Unknown&quot;
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;StreamItem&gt;
+      &lt;ContentUrl&gt;sample string 6&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;IconUrl&gt;sample string 7&lt;/IconUrl&gt;
+      &lt;LightBulletin&gt;
+        &lt;AllowComments&gt;true&lt;/AllowComments&gt;
+        &lt;ElementLinks&gt;
+          &lt;ElementLink&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/ElementLink&gt;
+          &lt;ElementLink&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/ElementLink&gt;
+        &lt;/ElementLinks&gt;
+        &lt;EmbedUrl&gt;sample string 3&lt;/EmbedUrl&gt;
+        &lt;LightBulletinId&gt;1&lt;/LightBulletinId&gt;
+        &lt;Text&gt;sample string 2&lt;/Text&gt;
+      &lt;/LightBulletin&gt;
+      &lt;LocationTitle&gt;sample string 3&lt;/LocationTitle&gt;
+      &lt;NotificationId&gt;1&lt;/NotificationId&gt;
+      &lt;PublishedBy&gt;
+        &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+        &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+        &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+        &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+        &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+        &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+        &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+      &lt;/PublishedBy&gt;
+      &lt;PublishedDate&gt;2026-03-07T09:02:56Z&lt;/PublishedDate&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+      &lt;Url&gt;sample string 5&lt;/Url&gt;
+    &lt;/StreamItem&gt;
+    &lt;StreamItem&gt;
+      &lt;ContentUrl&gt;sample string 6&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;IconUrl&gt;sample string 7&lt;/IconUrl&gt;
+      &lt;LightBulletin&gt;
+        &lt;AllowComments&gt;true&lt;/AllowComments&gt;
+        &lt;ElementLinks&gt;
+          &lt;ElementLink&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/ElementLink&gt;
+          &lt;ElementLink&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/ElementLink&gt;
+        &lt;/ElementLinks&gt;
+        &lt;EmbedUrl&gt;sample string 3&lt;/EmbedUrl&gt;
+        &lt;LightBulletinId&gt;1&lt;/LightBulletinId&gt;
+        &lt;Text&gt;sample string 2&lt;/Text&gt;
+      &lt;/LightBulletin&gt;
+      &lt;LocationTitle&gt;sample string 3&lt;/LocationTitle&gt;
+      &lt;NotificationId&gt;1&lt;/NotificationId&gt;
+      &lt;PublishedBy&gt;
+        &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+        &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+        &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+        &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+        &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+        &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+        &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+      &lt;/PublishedBy&gt;
+      &lt;PublishedDate&gt;2026-03-07T09:02:56Z&lt;/PublishedDate&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+      &lt;Url&gt;sample string 5&lt;/Url&gt;
+    &lt;/StreamItem&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

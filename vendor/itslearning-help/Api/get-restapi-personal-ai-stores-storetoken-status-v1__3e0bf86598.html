@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/ai/stores/{storeToken}/status/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/ai/stores/{storeToken}/status/v1</h1>
+<div>
+    <p>Gets the status of all files in a store.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">storeToken</td>
+                    <td class="parameter-documentation">
+                        <p>The store token.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Response containing file statuses.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.StoreStatusResponse">Itslearning.RestApi.Entities.Personal.Ai.StoreStatusResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">StoreToken</td>
+                    <td class="parameter-documentation">
+                        <p>The store token.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AllFilesReady</td>
+                    <td class="parameter-documentation">
+                        <p>True if all files are ready for use.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Files</td>
+                    <td class="parameter-documentation">
+                        <p>List of files with their current status.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.StoreFileInfo">Itslearning.RestApi.Entities.Personal.Ai.StoreFileInfo</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;StoreToken&quot;: &quot;sample string 1&quot;,
+  &quot;AllFilesReady&quot;: true,
+  &quot;Files&quot;: [
+    {
+      &quot;FileId&quot;: &quot;sample string 1&quot;,
+      &quot;FileName&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 3,
+      &quot;Status&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;FileId&quot;: &quot;sample string 1&quot;,
+      &quot;FileName&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 3,
+      &quot;Status&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;StoreStatusResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Ai&quot;&gt;
+  &lt;AllFilesReady&gt;true&lt;/AllFilesReady&gt;
+  &lt;Files&gt;
+    &lt;StoreFileInfo&gt;
+      &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+      &lt;FileName&gt;sample string 2&lt;/FileName&gt;
+      &lt;Size&gt;3&lt;/Size&gt;
+      &lt;Status&gt;sample string 4&lt;/Status&gt;
+    &lt;/StoreFileInfo&gt;
+    &lt;StoreFileInfo&gt;
+      &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+      &lt;FileName&gt;sample string 2&lt;/FileName&gt;
+      &lt;Size&gt;3&lt;/Size&gt;
+      &lt;Status&gt;sample string 4&lt;/Status&gt;
+    &lt;/StoreFileInfo&gt;
+  &lt;/Files&gt;
+  &lt;StoreToken&gt;sample string 1&lt;/StoreToken&gt;
+&lt;/StoreStatusResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

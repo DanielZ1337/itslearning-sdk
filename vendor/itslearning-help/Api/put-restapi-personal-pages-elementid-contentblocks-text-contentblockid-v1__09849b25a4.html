@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/pages/{elementId}/contentblocks/text/{contentBlockId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/pages/{elementId}/contentblocks/text/{contentBlockId}/v1</h1>
+<div>
+    <p>Updates a text content block.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the page element</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">contentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the content block</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The text content block update request</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockTextRequestUI">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockTextRequestUI</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text content to display in this content block.
+ Can contain formatted text or plain text.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ContentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>The type of the content block (e.g. "text", "image", "files", "rss", "poll").
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the content block.
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Order</td>
+                    <td class="parameter-documentation">
+                        <p>The display order of the content block within its Layout Zone.
+ Lower values appear first.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LayoutZone</td>
+                    <td class="parameter-documentation">
+                        <p>The layout zone where the content block should be placed (e.g. "Left", "Right").
+ Determines the positioning within the page layout.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Color</td>
+                    <td class="parameter-documentation">
+                        <p>The color of the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;text&quot;: &quot;sample string 1&quot;,
+  &quot;contentBlockId&quot;: 2,
+  &quot;type&quot;: &quot;sample string 3&quot;,
+  &quot;title&quot;: &quot;sample string 4&quot;,
+  &quot;order&quot;: 5,
+  &quot;layoutZone&quot;: &quot;sample string 6&quot;,
+  &quot;color&quot;: &quot;sample string 7&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CreateContentBlockTextRequestUI xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests&quot;&gt;
+  &lt;Color&gt;sample string 7&lt;/Color&gt;
+  &lt;ContentBlockId&gt;2&lt;/ContentBlockId&gt;
+  &lt;LayoutZone&gt;sample string 6&lt;/LayoutZone&gt;
+  &lt;Order&gt;5&lt;/Order&gt;
+  &lt;Title&gt;sample string 4&lt;/Title&gt;
+  &lt;Type&gt;sample string 3&lt;/Type&gt;
+  &lt;Text&gt;sample string 1&lt;/Text&gt;
+&lt;/CreateContentBlockTextRequestUI&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Updated text content block</p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/participants/unenrolled/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}&amp;dropDateFrom={dropDateFrom}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/participants/unenrolled/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}&amp;dropDateFrom={dropDateFrom}</h1>
+<div>
+    <p>Gets a list of the unenrolled course participants for a given course.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the course we want the participants from</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">searchText</td>
+                    <td class="parameter-documentation">
+                        <p>[OPTIONAL] The text to search for</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">orderByField</td>
+                    <td class="parameter-documentation">
+                        <p>[OPTIONAL] The field to sort by.Defaults to fullname. Example usage ?orderbyfield=droppeddt</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is fullName</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">orderAscending</td>
+                    <td class="parameter-documentation">
+                        <p>[OPTIONAL] Whether we should sort ascending or not. Example usage ?orderAscending=false</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is True</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">dropDateFrom</td>
+                    <td class="parameter-documentation">
+                        <p>[OPTIONAL] The field to filter participants by date when they are dropped.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled">EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled">Itslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;TemporaryAccess&quot;: true,
+      &quot;DateUnenrolled&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;DateUnenrolledRelative&quot;: &quot;sample string 4&quot;,
+      &quot;MemberOfCourseGroups&quot;: &quot;sample string 5&quot;,
+      &quot;PictureUrl&quot;: &quot;sample string 6&quot;,
+      &quot;AssessmentUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ExtraInformation&quot;: &quot;sample string 8&quot;
+    },
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;TemporaryAccess&quot;: true,
+      &quot;DateUnenrolled&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;DateUnenrolledRelative&quot;: &quot;sample string 4&quot;,
+      &quot;MemberOfCourseGroups&quot;: &quot;sample string 5&quot;,
+      &quot;PictureUrl&quot;: &quot;sample string 6&quot;,
+      &quot;AssessmentUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ExtraInformation&quot;: &quot;sample string 8&quot;
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;CourseParticipantUnenrolled&gt;
+      &lt;AssessmentUrl&gt;sample string 7&lt;/AssessmentUrl&gt;
+      &lt;DateUnenrolled&gt;2026-03-07T16:36:58Z&lt;/DateUnenrolled&gt;
+      &lt;DateUnenrolledRelative&gt;sample string 4&lt;/DateUnenrolledRelative&gt;
+      &lt;ExtraInformation&gt;sample string 8&lt;/ExtraInformation&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;MemberOfCourseGroups&gt;sample string 5&lt;/MemberOfCourseGroups&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;PictureUrl&gt;sample string 6&lt;/PictureUrl&gt;
+      &lt;TemporaryAccess&gt;true&lt;/TemporaryAccess&gt;
+    &lt;/CourseParticipantUnenrolled&gt;
+    &lt;CourseParticipantUnenrolled&gt;
+      &lt;AssessmentUrl&gt;sample string 7&lt;/AssessmentUrl&gt;
+      &lt;DateUnenrolled&gt;2026-03-07T16:36:58Z&lt;/DateUnenrolled&gt;
+      &lt;DateUnenrolledRelative&gt;sample string 4&lt;/DateUnenrolledRelative&gt;
+      &lt;ExtraInformation&gt;sample string 8&lt;/ExtraInformation&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;MemberOfCourseGroups&gt;sample string 5&lt;/MemberOfCourseGroups&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;PictureUrl&gt;sample string 6&lt;/PictureUrl&gt;
+      &lt;TemporaryAccess&gt;true&lt;/TemporaryAccess&gt;
+    &lt;/CourseParticipantUnenrolled&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

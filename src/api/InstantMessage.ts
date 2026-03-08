@@ -524,7 +524,7 @@ export class InstantMessagesAPI extends Manager {
 	 *
 	 * @param personId - The unique ID of the person.
 	 */
-	public async checkPrivacyRules(personId: number): Promise<unknown> {
+	public async checkPrivacyRules(personId: number): Promise<boolean> {
 		return this.http.get(
 			`/restapi/personal/instantmessages/privacy/${personId}/v1`,
 		);
@@ -555,7 +555,7 @@ export class InstantMessagesAPI extends Manager {
 		searchText: string,
 		instantMessageThreadId?: number,
 		recipientRoles?: string[],
-	): Promise<unknown> {
+	): Promise<Array<ItslearningRestApiEntitiesInstantMessageRecipient>> {
 		const queryParams = createSearchParams({
 			searchText,
 			instantMessageThreadId,
@@ -580,7 +580,7 @@ export class InstantMessagesAPI extends Manager {
 		personIds: number[],
 		courseId?: number,
 		projectId?: number,
-	): Promise<unknown> {
+	): Promise<Array<ItslearningRestApiEntitiesInstantMessageRecipient>> {
 		const queryParams = createSearchParams({
 			courseId,
 			projectId,
@@ -602,7 +602,7 @@ export class InstantMessagesAPI extends Manager {
 		personIds: number[],
 		courseIds: number[],
 		projectIds: number[],
-	): Promise<unknown> {
+	): Promise<Array<ItslearningRestApiEntitiesInstantMessageRecipient>> {
 		const queryParams = createSearchParams({
 			personIds,
 			courseIds,

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST RestApi/personal/mediarecorder/saveziggeorecording/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST RestApi/personal/mediarecorder/saveziggeorecording/v1</h1>
+<div>
+    <p>Saves a Ziggeo redcorded video or audio clip to the server
+ with the provided name</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Video details and save name</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController%2BRecordingRequest">Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController+RecordingRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">id</td>
+                    <td class="parameter-documentation">
+                        <p>Ziggeo video id</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">videoUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to the temporary storage</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">name</td>
+                    <td class="parameter-documentation">
+                        <p>User supplied file name to save as</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">video</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates if the recording is video or audio</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">usedInFileUploader</td>
+                    <td class="parameter-documentation">
+                        <p>Whether the media recorder integrated in the file uploader</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ziggeoRegion</td>
+                    <td class="parameter-documentation">
+                        <p>The Ziggeo region this recording was made on</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;id&quot;: &quot;sample string 1&quot;,
+  &quot;videoUrl&quot;: &quot;sample string 2&quot;,
+  &quot;name&quot;: &quot;sample string 3&quot;,
+  &quot;video&quot;: true,
+  &quot;usedInFileUploader&quot;: true,
+  &quot;ziggeoRegion&quot;: 6
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;MediaRecorderController.RecordingRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal&quot;&gt;
+  &lt;id&gt;sample string 1&lt;/id&gt;
+  &lt;name&gt;sample string 3&lt;/name&gt;
+  &lt;usedInFileUploader&gt;true&lt;/usedInFileUploader&gt;
+  &lt;video&gt;true&lt;/video&gt;
+  &lt;videoUrl&gt;sample string 2&lt;/videoUrl&gt;
+  &lt;ziggeoRegion&gt;6&lt;/ziggeoRegion&gt;
+&lt;/MediaRecorderController.RecordingRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Result of save attempt</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController%2BVideoResponse">Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController+VideoResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">playerHtml</td>
+                    <td class="parameter-documentation">
+                        <p>The raw html of a video player for the video uploaded</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">success</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates if the video was uploaded successfully</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">error</td>
+                    <td class="parameter-documentation">
+                        <p>Description of the error if any</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">mediaRecorderUploadResult</td>
+                    <td class="parameter-documentation">
+                        <p>Metadata of the recorded file</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderUploadResult">Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderUploadResult</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;playerHtml&quot;: &quot;sample string 1&quot;,
+  &quot;success&quot;: true,
+  &quot;error&quot;: &quot;sample string 3&quot;,
+  &quot;mediaRecorderUploadResult&quot;: {
+    &quot;id&quot;: &quot;sample string 1&quot;,
+    &quot;name&quot;: &quot;sample string 2&quot;,
+    &quot;url&quot;: &quot;sample string 1&quot;
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;MediaRecorderController.VideoResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal&quot;&gt;
+  &lt;error&gt;sample string 3&lt;/error&gt;
+  &lt;mediaRecorderUploadResult&gt;
+    &lt;id&gt;sample string 1&lt;/id&gt;
+    &lt;name&gt;sample string 2&lt;/name&gt;
+    &lt;url&gt;sample string 1&lt;/url&gt;
+  &lt;/mediaRecorderUploadResult&gt;
+  &lt;playerHtml&gt;sample string 1&lt;/playerHtml&gt;
+  &lt;success&gt;true&lt;/success&gt;
+&lt;/MediaRecorderController.VideoResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/courses/activeplans/v1?startDate={startDate}&amp;endDate={endDate}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/courses/activeplans/v1?startDate={startDate}&amp;endDate={endDate}</h1>
+<div>
+    <p>Gets information about the courses with the specified sync keys and having active lesson plans within the specified dates range.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">startDate</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">endDate</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        Collection of string
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  &quot;sample string 1&quot;,
+  &quot;sample string 2&quot;
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+  &lt;string&gt;sample string 1&lt;/string&gt;
+  &lt;string&gt;sample string 2&lt;/string&gt;
+&lt;/ArrayOfstring&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of objects containing course id, its name and the ids of active lesson plans.</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.CourseWithActivePlans">Itslearning.RestApi.Entities.Personal.CourseWithActivePlans</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CourseId</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseSyncKey</td>
+                    <td class="parameter-documentation">
+                        <p>Course synchronization key.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Title of the course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanIds</td>
+                    <td class="parameter-documentation">
+                        <p>List of active plans' ids.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of string
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;CourseId&quot;: 1,
+    &quot;CourseSyncKey&quot;: &quot;sample string 2&quot;,
+    &quot;CourseTitle&quot;: &quot;sample string 3&quot;,
+    &quot;PlanIds&quot;: [
+      &quot;sample string 1&quot;,
+      &quot;sample string 2&quot;
+    ]
+  },
+  {
+    &quot;CourseId&quot;: 1,
+    &quot;CourseSyncKey&quot;: &quot;sample string 2&quot;,
+    &quot;CourseTitle&quot;: &quot;sample string 3&quot;,
+    &quot;PlanIds&quot;: [
+      &quot;sample string 1&quot;,
+      &quot;sample string 2&quot;
+    ]
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfCourseWithActivePlans xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CourseWithActivePlans&gt;
+    &lt;CourseId&gt;1&lt;/CourseId&gt;
+    &lt;CourseSyncKey&gt;sample string 2&lt;/CourseSyncKey&gt;
+    &lt;CourseTitle&gt;sample string 3&lt;/CourseTitle&gt;
+    &lt;PlanIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:string&gt;sample string 1&lt;/d3p1:string&gt;
+      &lt;d3p1:string&gt;sample string 2&lt;/d3p1:string&gt;
+    &lt;/PlanIds&gt;
+  &lt;/CourseWithActivePlans&gt;
+  &lt;CourseWithActivePlans&gt;
+    &lt;CourseId&gt;1&lt;/CourseId&gt;
+    &lt;CourseSyncKey&gt;sample string 2&lt;/CourseSyncKey&gt;
+    &lt;CourseTitle&gt;sample string 3&lt;/CourseTitle&gt;
+    &lt;PlanIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:string&gt;sample string 1&lt;/d3p1:string&gt;
+      &lt;d3p1:string&gt;sample string 2&lt;/d3p1:string&gt;
+    &lt;/PlanIds&gt;
+  &lt;/CourseWithActivePlans&gt;
+&lt;/ArrayOfCourseWithActivePlans&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

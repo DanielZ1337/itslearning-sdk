@@ -1,0 +1,3037 @@
+{
+	"startUrl": "https://www.itslearning.com/restapi/help/",
+	"pages": [
+		{
+			"url": "https://www.itslearning.com/restapi/help/",
+			"file": "index/index.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-administration-customlabels-id-v1",
+			"file": "Api/delete-restapi-administration-customlabels-id-v1__bc564c4ce7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-oauth2-token-v1",
+			"file": "Api/delete-restapi-oauth2-token-v1__d5f5e0c207.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-ai-stores-storeToken-files-fileId-v1",
+			"file": "Api/delete-restapi-personal-ai-stores-storetoken-files-fileid-v1__7501f840ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-course-courseId-assessmentrecord-personassessmentgrade-v1_gradebookItemId_personId",
+			"file": "Api/delete-restapi-personal-course-courseid-assessmentrecord-personassessmentgrade-v__4ee12c4c7c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-course-courseId-assessmentrecord-personassessmentscore-v1_gradebookItemId_personId",
+			"file": "Api/delete-restapi-personal-course-courseid-assessmentrecord-personassessmentscore-v__e89f0d988a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-courses-bulletins-bulletinId-v1",
+			"file": "Api/delete-restapi-personal-courses-bulletins-bulletinid-v1__a8755a9558.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-courses-courseId-groups-v1",
+			"file": "Api/delete-restapi-personal-courses-courseid-groups-v1__f83104b240.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-courses-courseId-participants-v1",
+			"file": "Api/delete-restapi-personal-courses-courseid-participants-v1__36d3b95eba.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-courses-courseId-participants-v2",
+			"file": "Api/delete-restapi-personal-courses-courseid-participants-v2__b667111a14.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-attachment-v1_fileId",
+			"file": "Api/delete-restapi-personal-instantmessages-attachment-v1-fileid__daabcf6de6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-broadcast-v1",
+			"file": "Api/delete-restapi-personal-instantmessages-broadcast-v1__70546a426f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-instantMessageId-abusereport-v1",
+			"file": "Api/delete-restapi-personal-instantmessages-instantmessageid-abusereport-v1__3795ed15a8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-instantMessageId-v1",
+			"file": "Api/delete-restapi-personal-instantmessages-instantmessageid-v1__f40b3dd7b8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-messagethreads-threadId-participants-v1",
+			"file": "Api/delete-restapi-personal-instantmessages-messagethreads-threadid-participants-v1__5bc38b5cd6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-instantmessages-messagethreads-threadId-v1",
+			"file": "Api/delete-restapi-personal-instantmessages-messagethreads-threadid-v1__8577ea01b1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-lightbulletins-comments-commentId-v1",
+			"file": "Api/delete-restapi-personal-lightbulletins-comments-commentid-v1__a011ce74f3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-messages-messageId-v1_messageOrigin",
+			"file": "Api/delete-restapi-personal-messages-messageid-v1-messageorigin__c3df7ce4ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-votes-v1",
+			"file": "Api/delete-restapi-personal-pages-elementid-contentblocks-polls-contentblockid-votes__3b95d21f2c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-pages-elementId-contentblocks-v1",
+			"file": "Api/delete-restapi-personal-pages-elementid-contentblocks-v1__5be6a8ddb4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-yourfiles-files-zip-v1",
+			"file": "Api/delete-restapi-personal-yourfiles-files-zip-v1__d1e85a3962.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-yourfiles-private-files-v1",
+			"file": "Api/delete-restapi-personal-yourfiles-private-files-v1__5e8d00975c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-yourfiles-private-folders-v1",
+			"file": "Api/delete-restapi-personal-yourfiles-private-folders-v1__4abf34939a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-yourfiles-public-files-v1",
+			"file": "Api/delete-restapi-personal-yourfiles-public-files-v1__3364a1f59c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/DELETE-restapi-personal-yourfiles-public-folders-v1",
+			"file": "Api/delete-restapi-personal-yourfiles-public-folders-v1__a4a69f3572.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-administration-customlabels-v1",
+			"file": "Api/get-restapi-administration-customlabels-v1__7e906d4b02.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-customersettings-key-v1",
+			"file": "Api/get-restapi-customersettings-key-v1__18696358ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-learningobjectiverepository-subjects-countryCode-v1",
+			"file": "Api/get-restapi-learningobjectiverepository-subjects-countrycode-v1__8b20cb09f3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-nativeapp-versioncheck-applicationKey-v1_currentVersion_operatingSystem",
+			"file": "Api/get-restapi-nativeapp-versioncheck-applicationkey-v1-currentversion-operatingsys__d13370f4c7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-pageurl-ckeditorconfigurls",
+			"file": "Api/get-restapi-pageurl-ckeditorconfigurls__0701609b18.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-pageurl-courseelement_courseId_elementId_elementType",
+			"file": "Api/get-restapi-pageurl-courseelement-courseid-elementid-elementtype__edee62c96e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-pageurl-services-v1",
+			"file": "Api/get-restapi-pageurl-services-v1__06cb284e45.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-pageurl-treelink",
+			"file": "Api/get-restapi-pageurl-treelink__b7c0574e30.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-pageurl-viewLearningToolElement_elementId",
+			"file": "Api/get-restapi-pageurl-viewlearningtoolelement-elementid__2e829ee27c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-ai-stores-storeToken-status-v1",
+			"file": "Api/get-restapi-personal-ai-stores-storetoken-status-v1__3e0bf86598.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-answerId-files-fileId-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-answers-answerid-files-fileid-v1__a3b062eda3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-answerId-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-answers-answerid-v1__07996544f5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-persons-personId-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-answers-persons-personid-v1__ffd2ed4175.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-files-fileId-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-files-fileid-v1__dfa3212ccc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-participants-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-assignments-elementid-participants-v1-pageindex-pagesize__5bd96a882c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-settings-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-settings-v1__76247c985b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-assignments-elementId-v1",
+			"file": "Api/get-restapi-personal-assignments-elementid-v1__994b2b1082.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-calendar-events-eventId-v1",
+			"file": "Api/get-restapi-personal-calendar-events-eventid-v1__f7d5800fc2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-calendar-events-v1_fromDate_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-calendar-events-v1-fromdate-pageindex-pagesize__c4f785cbbe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-events-v1_fromDate_toDate_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-children-childid-courses-courseid-events-v1-fromdate-todate__ac7175012b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-features-v1",
+			"file": "Api/get-restapi-personal-children-childid-courses-courseid-features-v1__8a9a78779f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework_fromDate_toDate",
+			"file": "Api/get-restapi-personal-children-childid-courses-courseid-tasks-v1-pageindex-pagesi__b07d3c405b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-courses-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-children-childid-courses-v1-pageindex-pagesize__91bf026aad.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-events-eventId-v1",
+			"file": "Api/get-restapi-personal-children-childid-events-eventid-v1__f5016d9811.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-permissions-v1",
+			"file": "Api/get-restapi-personal-children-childid-permissions-v1__720022e644.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-plans-planId-v1",
+			"file": "Api/get-restapi-personal-children-childid-plans-planid-v1__6737121b71.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-plans-v1_startDate_stopDate_onlyWithoutDates_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-children-childid-plans-v1-startdate-stopdate-onlywithoutdat__803b40602b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework_fromDate_toDate",
+			"file": "Api/get-restapi-personal-children-childid-tasks-v1-pageindex-pagesize-status-deadlin__0ae201e25a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-childId-upcoming-v1_fromDate_toDate",
+			"file": "Api/get-restapi-personal-children-childid-upcoming-v1-fromdate-todate__5cca86e08e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-children-v1",
+			"file": "Api/get-restapi-personal-children-v1__9605e05c05.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-assessmentrecordelements-v1_termId",
+			"file": "Api/get-restapi-personal-course-courseid-assessmentrecord-assessmentrecordelements-v__31263265f4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-assessmentrecordpersonitems-v1_termId_paging.PageIndex_paging.PageSize_searchText_groupIds[0]_groupIds[1]_includePersonsNotInAnyGroups",
+			"file": "Api/get-restapi-personal-course-courseid-assessmentrecord-assessmentrecordpersonitem__9040b5a86a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-settings-v1",
+			"file": "Api/get-restapi-personal-course-courseid-assessmentrecord-settings-v1__cee57a1121.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-addparticipants-search-v1_searchText",
+			"file": "Api/get-restapi-personal-courses-addparticipants-search-v1-searchtext__4fbe633093.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-bulletins-bulletinId-elements-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-bulletins-bulletinid-elements-v1-pageindex-pagesize__40e43f0528.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-bulletins-bulletinId-v1",
+			"file": "Api/get-restapi-personal-courses-bulletins-bulletinid-v1__6da876cf35.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-cards-courseId-settings-v1",
+			"file": "Api/get-restapi-personal-courses-cards-courseid-settings-v1__009e2f3d25.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-cards-starred-v1_PageIndex_PageSize_sortBy_searchText_isShowMore",
+			"file": "Api/get-restapi-personal-courses-cards-starred-v1-pageindex-pagesize-sortby-searchte__54d0e8ac6f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-cards-unstarred-v1_PageIndex_PageSize_sortBy_searchText_isShowMore",
+			"file": "Api/get-restapi-personal-courses-cards-unstarred-v1-pageindex-pagesize-sortby-search__aea1718e5a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-addparticipants-search-v1_searchText",
+			"file": "Api/get-restapi-personal-courses-courseid-addparticipants-search-v1-searchtext__e4d9b081c3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-applicants-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-applicants-v1__b1fd72b666.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-bulletins-v1_timePeriod_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-courseid-bulletins-v1-timeperiod-usenewerthan-fromi__e50030662c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-calendarevents-v1_PageIndex_PageSize_fromDate_toDate",
+			"file": "Api/get-restapi-personal-courses-courseid-calendarevents-v1-pageindex-pagesize-fromd__bc9df6e386.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-features-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-features-v1__f44812634a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-features-v2",
+			"file": "Api/get-restapi-personal-courses-courseid-features-v2__a97afcc2e8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-folders-folderId-resources-v1_PageIndex_PageSize_elementType_learningToolType",
+			"file": "Api/get-restapi-personal-courses-courseid-folders-folderid-resources-v1-pageindex-pa__20a3954dcd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-followuptasks-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-courseid-followuptasks-v1-pageindex-pagesize__2c2087c2f8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participantgroups-v1_pageIndex_pageSize_search",
+			"file": "Api/get-restapi-personal-courses-courseid-participantgroups-v1-pageindex-pagesize-se__7c785577f9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-setup-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-participants-setup-v1__41165479fc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-unenrolled-v1_PageIndex_PageSize_searchText_orderByField_orderAscending_dropDateFrom",
+			"file": "Api/get-restapi-personal-courses-courseid-participants-unenrolled-v1-pageindex-pages__77a91a5731.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v1_PageIndex_PageSize_courseProfileId_searchText_orderByField_orderAscending",
+			"file": "Api/get-restapi-personal-courses-courseid-participants-v1-pageindex-pagesize-coursep__9421461b0b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v2_paging.PageIndex_paging.PageSize_courseProfileIds[0]_courseProfileIds[1]_searchText_orderByField_orderAscending",
+			"file": "Api/get-restapi-personal-courses-courseid-participants-v2-paging-pageindex-paging-pa__c13293c2cf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v3_paging.PageIndex_paging.PageSize_courseProfileIds[0]_courseProfileIds[1]_groupIds[0]_groupIds[1]_hierarchyIds[0]_hierarchyIds[1]_notInGroup_searchText_orderByField_orderAscending",
+			"file": "Api/get-restapi-personal-courses-courseid-participants-v3-paging-pageindex-paging-pa__074879456d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-profiles-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-profiles-v1__6352a24280.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-resources-lastupdated-v1_elementType_numberOfElements_excludeLearningPathSubElements",
+			"file": "Api/get-restapi-personal-courses-courseid-resources-lastupdated-v1-elementtype-numbe__a58518ca6c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-resources-v1_PageIndex_PageSize_elementType_learningToolType",
+			"file": "Api/get-restapi-personal-courses-courseid-resources-v1-pageindex-pagesize-elementtyp__8d561f2ec9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-searchhierarchies-v1_searchText",
+			"file": "Api/get-restapi-personal-courses-courseid-searchhierarchies-v1-searchtext__4e62499307.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-stream-v1_showLightBulletins_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-courseid-stream-v1-showlightbulletins-usenewerthan__2ff6889059.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-students-v1_pageIndex_pageSize_search",
+			"file": "Api/get-restapi-personal-courses-courseid-students-v1-pageindex-pagesize-search__fd40db9b69.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-synchronisedhierarchies-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-synchronisedhierarchies-v1__c0810baeb3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-tasks-count-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-tasks-count-v1__b13c975dfc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework",
+			"file": "Api/get-restapi-personal-courses-courseid-tasks-v1-pageindex-pagesize-status-deadlin__9d3cbce59f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-topics-topicId-elementids-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-courseid-topics-topicid-elementids-v1-pageindex-pag__4af9e0d4fe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-topics-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-courseid-topics-v1-pageindex-pagesize__e7fc010b6a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-v1",
+			"file": "Api/get-restapi-personal-courses-courseid-v1__57814d95ec.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-courseId-yourstudents-v1_PageIndex_PageSize_sort_sortDescending_search",
+			"file": "Api/get-restapi-personal-courses-courseid-yourstudents-v1-pageindex-pagesize-sort-so__e0fa8febf1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-iteach-v1_PageIndex_PageSize_onlyWithResources",
+			"file": "Api/get-restapi-personal-courses-iteach-v1-pageindex-pagesize-onlywithresources__26a0523bc1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-locationId-resources-search-v1_locationType_searchText",
+			"file": "Api/get-restapi-personal-courses-locationid-resources-search-v1-locationtype-searcht__7ed6a8ad7c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-notifications-notificationId-elements-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-notifications-notificationid-elements-v1-pageindex__6538739a9b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-resources-resourceId-v1",
+			"file": "Api/get-restapi-personal-courses-resources-resourceid-v1__d0879f3d75.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-search-v1_courseSyncKey",
+			"file": "Api/get-restapi-personal-courses-search-v1-coursesynckey__7ad6e20d1a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-students-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-students-v1-pageindex-pagesize__2bdfa483e1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-courses-v1-pageindex-pagesize__e8893feb7f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-v2_PageIndex_PageSize_filter",
+			"file": "Api/get-restapi-personal-courses-v2-pageindex-pagesize-filter__1904162d73.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-v3_PageIndex_PageSize_filter",
+			"file": "Api/get-restapi-personal-courses-v3-pageindex-pagesize-filter__3312e73358.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-v4_PageIndex_PageSize_filter",
+			"file": "Api/get-restapi-personal-courses-v4-pageindex-pagesize-filter__7bf5171e40.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-withrole-courseId-v1",
+			"file": "Api/get-restapi-personal-courses-withrole-courseid-v1__60ad8ce25a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-yourstudents-courses-v1",
+			"file": "Api/get-restapi-personal-courses-yourstudents-courses-v1__fe5c53c8ee.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-courses-yourstudents-v1_PageIndex_PageSize_sort_sortDescending_search",
+			"file": "Api/get-restapi-personal-courses-yourstudents-v1-pageindex-pagesize-sort-sortdescend__8a75381f81.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-default-v1",
+			"file": "Api/get-restapi-personal-hierarchies-default-v1__c0acabed30.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-defaultforcourse-courseId",
+			"file": "Api/get-restapi-personal-hierarchies-defaultforcourse-courseid__8a9ab9a7a8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-defaultwithmembercount-v1",
+			"file": "Api/get-restapi-personal-hierarchies-defaultwithmembercount-v1__053c8121e3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-children-v1",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-children-v1__2e898dcd8a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-childrenwithmembercountforcourse-v1_courseId",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-childrenwithmembercountforcourse-v1__60f1576dbd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-childrenwithmembercountforperson-v1",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-childrenwithmembercountforperson-v1__b22dcc5210.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-members-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-members-v1-pageindex-pagesize__49e56c84be.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-members-v2_PageIndex_PageSize_courseContext",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-members-v2-pageindex-pagesize-cours__9bb3bfe6db.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-parents-v1_visibleInSearchOnly",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-parents-v1-visibleinsearchonly__c00d3c11d0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-v1_role",
+			"file": "Api/get-restapi-personal-hierarchies-hierarchyid-v1-role__b92eb018ba.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-organisations-v1_role",
+			"file": "Api/get-restapi-personal-hierarchies-organisations-v1-role__9e9ae73dde.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-hierarchies-organizations-v1_role",
+			"file": "Api/get-restapi-personal-hierarchies-organizations-v1-role__c844a09af4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-immersivereader-v1_resourceId_resourceType_contentBlockId",
+			"file": "Api/get-restapi-personal-immersivereader-v1-resourceid-resourcetype-contentblockid__f6a2e0d42c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-broadcastStatistics-threadId-v1",
+			"file": "Api/get-restapi-personal-instantmessages-broadcaststatistics-threadid-v1__04d60221de.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-collaborations-collaborationId-v1",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-collaborations-collaboration__20743a3464.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-instantMessageThreadId-unread-count-v1",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-instantmessagethreadid-unrea__1b2d6f5e69.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-onetoone-personId-v1",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-onetoone-personid-v1__2e4a466a30.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-suggestions-v1_searchText",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-suggestions-v1-searchtext__bd0978ea60.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-search-v1_searchText",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-messages-search-v1__b708f675f1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-v2_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-messages-v2-maxmess__c7d44a47a7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-v3_pageSize_fromId",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-messages-v3-pagesiz__e0227953e5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-participants-messages-disabled-v1",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-participants-messag__3fdcae1b93.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v1_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-v1-maxmessages-uppe__ec28ecf984.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v2_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-v2-maxmessages-uppe__eb05f07674.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v3_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-threadid-v3-maxmessages-uppe__473df98310.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-unread-count-v1",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-unread-count-v1__548d9ab2a5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v1_maxThreadCount_threadPage_maxMessages",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-v1-maxthreadcount-threadpage__1c018cb436.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v2_maxThreadCount_threadPage_maxMessages",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-v2-maxthreadcount-threadpage__114950a7f6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v3_fromSortIndex_pageSize",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-v3-fromsortindex-pagesize__f12acdac22.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v4_fromSortIndex_pageSize",
+			"file": "Api/get-restapi-personal-instantmessages-messagethreads-v4-fromsortindex-pagesize__3feb766af9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-permissions-v1",
+			"file": "Api/get-restapi-personal-instantmessages-permissions-v1__60739ac85a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-privacy-personId-v1",
+			"file": "Api/get-restapi-personal-instantmessages-privacy-personid-v1__7905b41a8c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-search-v1_searchText_instantMessageThreadId_recipientRoles[0]_recipientRoles[1]",
+			"file": "Api/get-restapi-personal-instantmessages-recipients-search-v1-searchtext-instantmess__9489370f4f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-v1_personIds[0]_personIds[1]_courseId_projectId",
+			"file": "Api/get-restapi-personal-instantmessages-recipients-v1-personids-0-personids-1-cours__580724b95c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-v2_personIds[0]_personIds[1]_courseIds[0]_courseIds[1]_projectIds[0]_projectIds[1]",
+			"file": "Api/get-restapi-personal-instantmessages-recipients-v2-personids-0-personids-1-cours__f9e00f761d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-settings-v1",
+			"file": "Api/get-restapi-personal-instantmessages-settings-v1__00a15473fe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-settings-v2",
+			"file": "Api/get-restapi-personal-instantmessages-settings-v2__9eab697121.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-starred-count-v1",
+			"file": "Api/get-restapi-personal-instantmessages-starred-count-v1__1a1e1d682e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-instantmessages-suggestions-v1_searchText_maxSuggestions",
+			"file": "Api/get-restapi-personal-instantmessages-suggestions-v1-searchtext-maxsuggestions__bd1ba6eb9a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-lightbulletins-lightBulletinId-comments-v1_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-lightbulletins-lightbulletinid-comments-v1-usenewerthan-fro__298b9d1f71.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-lti-extensionId-details-v1_courseId",
+			"file": "Api/get-restapi-personal-lti-extensionid-details-v1-courseid__8f39b5f4f1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-lti-extensionId-details-v2_courseId",
+			"file": "Api/get-restapi-personal-lti-extensionid-details-v2-courseid__6ee895f633.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-RestApi-personal-mediarecorder-video-videoId-streams-v1",
+			"file": "Api/get-restapi-personal-mediarecorder-video-videoid-streams-v1__39b09de007.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-RestApi-personal-mediarecorder-ziggeo-region-video-videoId-streams-v1",
+			"file": "Api/get-restapi-personal-mediarecorder-ziggeo-region-video-videoid-streams-v1__5a80e642b4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-attachments-fileId-v1",
+			"file": "Api/get-restapi-personal-messages-attachments-fileid-v1__537a1d47b0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-messageId-v1",
+			"file": "Api/get-restapi-personal-messages-messageid-v1__7153c97698.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-recipients-search-v1_searchText",
+			"file": "Api/get-restapi-personal-messages-recipients-search-v1-searchtext__c050e2dcbc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-unread-count-v1",
+			"file": "Api/get-restapi-personal-messages-unread-count-v1__753d6cb800.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-unread-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-messages-unread-v1-pageindex-pagesize__1ff205e792.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-messages-v1_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-messages-v1-usenewerthan-fromid-pageindex-pagesize__da7297a13c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-bulletins-bulletinId-elements-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-bulletins-bulletinid-elements-v1-pageindex-pa__079b3bc3cd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-newsfeed-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-newsfeed-v1-pageindex-pagesize__e63a9aa66e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-notificationId-elements-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-notificationid-elements-v1-pageindex-pagesize__a789ec828d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-stream-v1_UseNewerThan_FromId_PageIndex_PageSize_fromPublishedDate",
+			"file": "Api/get-restapi-personal-notifications-stream-v1-usenewerthan-fromid-pageindex-pages__5b539ea61a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-stream-v2_showLightBulletins_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-stream-v2-showlightbulletins-usenewerthan-fro__dcbebf1396.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-unread-count-v1",
+			"file": "Api/get-restapi-personal-notifications-unread-count-v1__02a5d33c69.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-unseen-count-v1",
+			"file": "Api/get-restapi-personal-notifications-unseen-count-v1__025ee89140.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-v1-pageindex-pagesize__b81c31adf9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-notifications-v2_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-notifications-v2-usenewerthan-fromid-pageindex-pagesize__6cb91f2754.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-contentBlockId-files-fileId-v1",
+			"file": "Api/get-restapi-personal-pages-elementid-contentblocks-contentblockid-files-fileid-v__6de72a106a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-contentBlockId-v1",
+			"file": "Api/get-restapi-personal-pages-elementid-contentblocks-contentblockid-v1__22ae937182.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-trashcan-v1",
+			"file": "Api/get-restapi-personal-pages-elementid-contentblocks-trashcan-v1__45da256e1b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-pages-elementId-v1",
+			"file": "Api/get-restapi-personal-pages-elementid-v1__33ff9fbe2e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-extrauserinformation-personId-v1",
+			"file": "Api/get-restapi-personal-person-extrauserinformation-personid-v1__82f44845cd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-features-v1",
+			"file": "Api/get-restapi-personal-person-features-v1__a3b70e5a2c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-image-dimensions-v1",
+			"file": "Api/get-restapi-personal-person-image-dimensions-v1__2c9cabc271.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-personId-relatedpersons-v1_relationType",
+			"file": "Api/get-restapi-personal-person-personid-relatedpersons-v1-relationtype__24da9de747.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-personId-v1",
+			"file": "Api/get-restapi-personal-person-personid-v1__79f10bcfcf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-relations-personId-v1",
+			"file": "Api/get-restapi-personal-person-relations-personid-v1__7fb32f5e59.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-roles-v1",
+			"file": "Api/get-restapi-personal-person-roles-v1__a3a41c66b5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-sitelinks-v1",
+			"file": "Api/get-restapi-personal-person-sitelinks-v1__428c0ba4e1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-person-v1",
+			"file": "Api/get-restapi-personal-person-v1__241f094ca8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-planner-plansinfo-v1_plansIds[0]_plansIds[1]",
+			"file": "Api/get-restapi-personal-planner-plansinfo-v1-plansids-0-plansids-1__4d518f43f3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-planner-v1_courseId_startDate_stopDate",
+			"file": "Api/get-restapi-personal-planner-v1-courseid-startdate-stopdate__8e38f7df1c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-courses-v1_learningObjectiveId_onlyWithCriteria",
+			"file": "Api/get-restapi-personal-progressreport-courses-v1-learningobjectiveid-onlywithcrite__cbc5c4e33e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-criteria-personId-v1_courseId_criteriaIds_fromDateTime_toDateTime",
+			"file": "Api/get-restapi-personal-progressreport-criteria-personid-v1-courseid-criteriaids-fr__e29df1ae58.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-criteria-v1_courseId_learningObjectiveId",
+			"file": "Api/get-restapi-personal-progressreport-criteria-v1-courseid-learningobjectiveid__7d9a01a6d6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-personId-v1_subjectId_fromDateTime_toDateTime_statuses",
+			"file": "Api/get-restapi-personal-progressreport-personid-v1-subjectid-fromdatetime-todatetim__b62ff71882.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-reportsubjects-personId-v1_fromDateTime_toDateTime_subjectIds",
+			"file": "Api/get-restapi-personal-progressreport-reportsubjects-personid-v1-fromdatetime-toda__03f6454f9f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-reportsubjects-v1_personSyncKey_fromDateTime_toDateTime_subjectIds",
+			"file": "Api/get-restapi-personal-progressreport-reportsubjects-v1-personsynckey-fromdatetime__9a55a47b19.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-statuses-personId-v1",
+			"file": "Api/get-restapi-personal-progressreport-statuses-personid-v1__55c87550bf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-statuses-v1_personSyncKey",
+			"file": "Api/get-restapi-personal-progressreport-statuses-v1-personsynckey__6850b7e328.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-progressreport-v1_subjectId_personSyncKey_fromDateTime_toDateTime_statuses",
+			"file": "Api/get-restapi-personal-progressreport-v1-subjectid-personsynckey-fromdatetime-toda__f37b987c39.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-sso-url-v1_url",
+			"file": "Api/get-restapi-personal-sso-url-v1-url__96170b9ee6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-active-v1_courseId",
+			"file": "Api/get-restapi-personal-studentplan-achievementgoals-active-v1-courseid__dbd604b8c5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-archived-v1_courseId",
+			"file": "Api/get-restapi-personal-studentplan-achievementgoals-archived-v1-courseid__cf5ecb4b3b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-coursewide-v1",
+			"file": "Api/get-restapi-personal-studentplan-achievementgoals-coursewide-v1__63959d0bbe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-assessments-topics-v1_courseId",
+			"file": "Api/get-restapi-personal-studentplan-assessments-topics-v1-courseid__da53b987aa.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-assessments-topics-v1_courseId_fromId",
+			"file": "Api/get-restapi-personal-studentplan-assessments-topics-v1-courseid-fromid__14cf15bc8c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-comments-v1_courseId_UseNewerThan_FromId_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-studentplan-comments-v1-courseid-usenewerthan-fromid-pagein__357fcacb67.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-courses-v1_lastCommentReadDateTimesUtc",
+			"file": "Api/get-restapi-personal-studentplan-courses-v1-lastcommentreaddatetimesutc__923bd98a8a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-studentplan-overview-v1_courseId_lastCommentReadDateTimeUtc",
+			"file": "Api/get-restapi-personal-studentplan-overview-v1-courseid-lastcommentreaddatetimeutc__1ffc734aab.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-supervisor-supervised-v1_supervisorType_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-supervisor-supervised-v1-supervisortype-pageindex-pagesize__67f81e7840.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-child-childId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-child-childid-v1-pageindex-pagesize__7a3673abba.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-completed-child-childId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-completed-child-childid-v1-pageindex__78e6a56e56.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-completed-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-courseid-completed-v1-pageindex-pages__9040dbbe88.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-courseid-v1-pageindex-pagesize__6127127186.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-viewas-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-courseid-viewas-v1-pageindex-pagesize__586df8378c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasklistdailyworkflow-v1-pageindex-pagesize__b613bd17de.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasks-followuptasks-courseId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasks-followuptasks-courseid-v1-pageindex-pagesize__71205bc2f1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasks-followuptasks-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-tasks-followuptasks-v1-pageindex-pagesize__eea8ddd3b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-tasks-v1_PageIndex_PageSize_status_deadline_isHomework",
+			"file": "Api/get-restapi-personal-tasks-v1-pageindex-pagesize-status-deadline-ishomework__5bcc87cc2a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-workload-assignments-studentId-courseId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-workload-assignments-studentid-courseid-v1-pageindex-pagesi__10ba2037bb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-workload-course-courseId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-workload-course-courseid-v1-pageindex-pagesize__3d80eab69f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-workload-courses-studentId-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-workload-courses-studentid-v1-pageindex-pagesize__f29d7a6bfb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-workload-mentees-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-workload-mentees-v1-pageindex-pagesize__970030a3fb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-workload-students-v1_PageIndex_PageSize",
+			"file": "Api/get-restapi-personal-workload-students-v1-pageindex-pagesize__b0ce0f2c39.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-attachments-v1_PageIndex_PageSize_searchPhrase_sortField_sortOrder",
+			"file": "Api/get-restapi-personal-yourfiles-attachments-v1-pageindex-pagesize-searchphrase-so__b0a779a216.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-courses-v1_PageIndex_PageSize_searchPhrase_sortField_sortOrder",
+			"file": "Api/get-restapi-personal-yourfiles-courses-v1-pageindex-pagesize-searchphrase-sortfi__f984b442ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-files-usedspace-v1_folderIds[0]_folderIds[1]",
+			"file": "Api/get-restapi-personal-yourfiles-files-usedspace-v1-folderids-0-folderids-1__74afbe535a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-files-zip-v1",
+			"file": "Api/get-restapi-personal-yourfiles-files-zip-v1__ec5fb13b40.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-files-zip-zipJobId-v1",
+			"file": "Api/get-restapi-personal-yourfiles-files-zip-zipjobid-v1__3a7c67ca57.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-folders-folderId-v1",
+			"file": "Api/get-restapi-personal-yourfiles-folders-folderid-v1__bf8c7c9310.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-private-files-fileId-v1_attachment",
+			"file": "Api/get-restapi-personal-yourfiles-private-files-fileid-v1-attachment__01aa63c36a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-private-folders-folderId-v1_searchPhrase",
+			"file": "Api/get-restapi-personal-yourfiles-private-folders-folderid-v1-searchphrase__93448c8d5d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-public-files-fileId-v1_attachment",
+			"file": "Api/get-restapi-personal-yourfiles-public-files-fileid-v1-attachment__e70ded6263.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-personal-yourfiles-public-folders-folderId-v1_searchPhrase",
+			"file": "Api/get-restapi-personal-yourfiles-public-folders-folderid-v1-searchphrase__8d76080a2d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-all-organisations-search-v1_searchText_PageIndex_PageSize_sitesFilter",
+			"file": "Api/get-restapi-sites-all-organisations-search-v1-searchtext-pageindex-pagesize-site__a8570014d8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-all-organisations-v1_sitesFilter",
+			"file": "Api/get-restapi-sites-all-organisations-v1-sitesfilter__769ffa6b1a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-all-v1_sitesFilter",
+			"file": "Api/get-restapi-sites-all-v1-sitesfilter__f02548dccf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-countries-countryCode-organisations-v1",
+			"file": "Api/get-restapi-sites-countries-countrycode-organisations-v1__f2e7bd2eae.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-countries-countryCode-v1_searchText",
+			"file": "Api/get-restapi-sites-countries-countrycode-v1-searchtext__8dc7c34d39.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-customerId-logindetails-v1",
+			"file": "Api/get-restapi-sites-customerid-logindetails-v1__ca7ab7aae5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-customerId-v1",
+			"file": "Api/get-restapi-sites-customerid-v1__2cda604bd1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-shortnames-shortname-v1",
+			"file": "Api/get-restapi-sites-shortnames-shortname-v1__29b9ca6e41.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-sites-v1_startsWith_PageIndex_PageSize_sitesFilter",
+			"file": "Api/get-restapi-sites-v1-startswith-pageindex-pagesize-sitesfilter__7801d0b197.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-warmup-cache-extensionmodule-v1",
+			"file": "Api/get-restapi-warmup-cache-extensionmodule-v1__0539ee0bbf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-warmup-cache-learningtool-v1",
+			"file": "Api/get-restapi-warmup-cache-learningtool-v1__9bd9116ee8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/GET-restapi-warmup-cache-plugin-v1",
+			"file": "Api/get-restapi-warmup-cache-plugin-v1__0f61d63576.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PATCH-restapi-personal-instantmessages-instantMessageId-restore-v1",
+			"file": "Api/patch-restapi-personal-instantmessages-instantmessageid-restore-v1__b77e0b83a2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PATCH-restapi-personal-instantmessages-messagethreads-threadId-restore-v1",
+			"file": "Api/patch-restapi-personal-instantmessages-messagethreads-threadid-restore-v1__0a1682021e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PATCH-restapi-personal-instantmessages-v1",
+			"file": "Api/patch-restapi-personal-instantmessages-v1__c5ac2a4da4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-administration-customlabels-v1",
+			"file": "Api/post-restapi-administration-customlabels-v1__5c5a3fd728.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-learningtool-searchdata-v1",
+			"file": "Api/post-restapi-learningtool-searchdata-v1__7c35233846.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-oauth2-token",
+			"file": "Api/post-restapi-oauth2-token__a87d80eb7e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-elements-v1",
+			"file": "Api/post-restapi-personal-ai-elements-v1__23cca14dd2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-responses-v1",
+			"file": "Api/post-restapi-personal-ai-responses-v1__669466810b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-files-v1_storeToken",
+			"file": "Api/post-restapi-personal-ai-stores-files-v1-storetoken__858fa89462.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-links-v1_storeToken",
+			"file": "Api/post-restapi-personal-ai-stores-links-v1-storetoken__377170a197.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-resources-v1_storeToken",
+			"file": "Api/post-restapi-personal-ai-stores-resources-v1-storetoken__81c888f27c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-files-v1",
+			"file": "Api/post-restapi-personal-ai-stores-storetoken-files-v1__fb8ed8ec3f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-links-v1",
+			"file": "Api/post-restapi-personal-ai-stores-storetoken-links-v1__ed7e757641.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-resources-v1",
+			"file": "Api/post-restapi-personal-ai-stores-storetoken-resources-v1__9eee173c50.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-ai-v1",
+			"file": "Api/post-restapi-personal-ai-v1__7f7668cc40.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-assignments-elementId-answers-v1",
+			"file": "Api/post-restapi-personal-assignments-elementid-answers-v1__9d012ac1dc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-assignments-v1",
+			"file": "Api/post-restapi-personal-assignments-v1__92cab97e70.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-calendar-events-areanyforgroups-v1",
+			"file": "Api/post-restapi-personal-calendar-events-areanyforgroups-v1__adbeeedc0e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-activeplans-v1_startDate_endDate",
+			"file": "Api/post-restapi-personal-courses-activeplans-v1-startdate-enddate__0d17206241.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-bulletins-bulletinId-uploadimage-v1",
+			"file": "Api/post-restapi-personal-courses-bulletins-bulletinid-uploadimage-v1__fcab9169b3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-bulletins-v1",
+			"file": "Api/post-restapi-personal-courses-bulletins-v1__b405407ece.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-cards-courseId-settings-v1",
+			"file": "Api/post-restapi-personal-courses-cards-courseid-settings-v1__a099e0ac3b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-cards-rank-v1",
+			"file": "Api/post-restapi-personal-courses-cards-rank-v1__b503de4702.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktofile",
+			"file": "Api/post-restapi-personal-courses-convertfileorlinktofile__9be49f04ed.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktogoogle",
+			"file": "Api/post-restapi-personal-courses-convertfileorlinktogoogle__00659bcf65.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktolink",
+			"file": "Api/post-restapi-personal-courses-convertfileorlinktolink__fa6ad896f4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktoonedrive",
+			"file": "Api/post-restapi-personal-courses-convertfileorlinktoonedrive__401d705980.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-convertonedrivetofile",
+			"file": "Api/post-restapi-personal-courses-convertonedrivetofile__a4f60aa35c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-addparticipants-v1",
+			"file": "Api/post-restapi-personal-courses-courseid-addparticipants-v1__ca883c56e5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-changerole-bulk-v1_roleId",
+			"file": "Api/post-restapi-personal-courses-courseid-changerole-bulk-v1-roleid__ae0d425752.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-changerole-v1_participantId_roleId",
+			"file": "Api/post-restapi-personal-courses-courseid-changerole-v1-participantid-roleid__fa140fe7f3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-folders-folderId-file-cloud-v1_planId",
+			"file": "Api/post-restapi-personal-courses-courseid-folders-folderid-file-cloud-v1-planid__8dd358ac2e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-folders-folderId-file-filerepo-v1_planId",
+			"file": "Api/post-restapi-personal-courses-courseid-folders-folderid-file-filerepo-v1-planid__1d74d1bf2e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-participants-temporaryaccess-v1",
+			"file": "Api/post-restapi-personal-courses-courseid-participants-temporaryaccess-v1__765e2370fe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-resources-extended-v1_PageIndex_PageSize",
+			"file": "Api/post-restapi-personal-courses-courseid-resources-extended-v1-pageindex-pagesize__ad2d6f3a14.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-courseId-synchronisehierarchies-v1",
+			"file": "Api/post-restapi-personal-courses-courseid-synchronisehierarchies-v1__4f78b8dccc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-measure-v1",
+			"file": "Api/post-restapi-personal-courses-measure-v1__22b9a66226.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-measurefilelinkingkpi-v1",
+			"file": "Api/post-restapi-personal-courses-measurefilelinkingkpi-v1__c05faf01af.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-measurefileuploadkpi-v1",
+			"file": "Api/post-restapi-personal-courses-measurefileuploadkpi-v1__0bdfd7eee5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-courses-v1",
+			"file": "Api/post-restapi-personal-courses-v1__1067d23e47.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-fileupload-temp-v1",
+			"file": "Api/post-restapi-personal-fileupload-temp-v1__4480d372b3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-attachment-v1",
+			"file": "Api/post-restapi-personal-instantmessages-attachment-v1__e6b1bc23ff.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-broadcast-v1",
+			"file": "Api/post-restapi-personal-instantmessages-broadcast-v1__bb866d1753.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-communicationchannel-channelId-v1_unregister",
+			"file": "Api/post-restapi-personal-instantmessages-communicationchannel-channelid-v1-unregist__278755e7b5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-messagethreads-search-v1",
+			"file": "Api/post-restapi-personal-instantmessages-messagethreads-search-v1__c83f86a698.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-recipients-persons-v1",
+			"file": "Api/post-restapi-personal-instantmessages-recipients-persons-v1__2f31835b51.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-v1",
+			"file": "Api/post-restapi-personal-instantmessages-v1__99a02974f3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-instantmessages-v2",
+			"file": "Api/post-restapi-personal-instantmessages-v2__9cacd9b107.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-lightbulletins-lightBulletinId-comments-v1",
+			"file": "Api/post-restapi-personal-lightbulletins-lightbulletinid-comments-v1__18289e1b43.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-lightbulletins-lightBulletinId-comments-v2",
+			"file": "Api/post-restapi-personal-lightbulletins-lightbulletinid-comments-v2__8b147cdd44.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-RestApi-personal-mediarecorder-createplayer-v1",
+			"file": "Api/post-restapi-personal-mediarecorder-createplayer-v1__42b2a0c6d3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-RestApi-personal-mediarecorder-recordingcomplete-v1",
+			"file": "Api/post-restapi-personal-mediarecorder-recordingcomplete-v1__cca17823b4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-RestApi-personal-mediarecorder-saveziggeorecording-v1",
+			"file": "Api/post-restapi-personal-mediarecorder-saveziggeorecording-v1__1e3df19005.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-RestApi-personal-mediarecorder-uploadrecording-v1",
+			"file": "Api/post-restapi-personal-mediarecorder-uploadrecording-v1__7f5ad058b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-messages-messageId-toggleFavorite-v1_isFavorite_messageOrigin",
+			"file": "Api/post-restapi-personal-messages-messageid-togglefavorite-v1-isfavorite-messageori__d74011bb6a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-messages-push-v1",
+			"file": "Api/post-restapi-personal-messages-push-v1__8164911c36.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-messages-send-v1",
+			"file": "Api/post-restapi-personal-messages-send-v1__43945a04eb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-notifications-deletetriggers-location-v1",
+			"file": "Api/post-restapi-personal-notifications-deletetriggers-location-v1__c75706ff96.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-notifications-deletetriggers-object-v1",
+			"file": "Api/post-restapi-personal-notifications-deletetriggers-object-v1__8b1cbc2ebe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-notifications-posts-course-courseId-module-moduleId-exportCompleted-v1_section_state_fileName_status",
+			"file": "Api/post-restapi-personal-notifications-posts-course-courseid-module-moduleid-export__f543f67d48.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-notifications-posts-course-courseId-module-moduleId-importCompleted-v1_section_state_folders_resources",
+			"file": "Api/post-restapi-personal-notifications-posts-course-courseid-module-moduleid-import__57033c21a6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-notifications-posts-v1",
+			"file": "Api/post-restapi-personal-notifications-posts-v1__12e6409038.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-files-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-files-v1__fa37809491.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-images-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-images-v1__c904fdc876.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-votes-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-polls-contentblockid-votes-v__2937aeaa98.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-polls-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-polls-v1__128174472d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-rss-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-rss-v1__25f618e6bc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-text-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-text-v1__3f0ffab56a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-trashcan-v1",
+			"file": "Api/post-restapi-personal-pages-elementid-contentblocks-trashcan-v1__05f3bd29fd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-person-image-v1",
+			"file": "Api/post-restapi-personal-person-image-v1__abd7155f31.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-person-push-v1",
+			"file": "Api/post-restapi-personal-person-push-v1__f5e3216a59.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-planner-targetCourse-targetCourseId-targetTopic-targetTopicId-targetPlan-targetPlanId-v1",
+			"file": "Api/post-restapi-personal-planner-targetcourse-targetcourseid-targettopic-targettopi__6fac8346d4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-RestApi-personal-statistics-events-v1",
+			"file": "Api/post-restapi-personal-statistics-events-v1__86ddcb936c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-files-temp-v1",
+			"file": "Api/post-restapi-personal-yourfiles-files-temp-v1__40b7f8f8c7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-files-zip-v1",
+			"file": "Api/post-restapi-personal-yourfiles-files-zip-v1__92c771810c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-private-files-v1",
+			"file": "Api/post-restapi-personal-yourfiles-private-files-v1__cce40e562b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-files-empty-v1",
+			"file": "Api/post-restapi-personal-yourfiles-private-folders-folderid-files-empty-v1__aa559f1e9b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-files-v1",
+			"file": "Api/post-restapi-personal-yourfiles-private-folders-folderid-files-v1__9846d36b67.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-v1",
+			"file": "Api/post-restapi-personal-yourfiles-private-folders-folderid-v1__67cd73a96e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-v1",
+			"file": "Api/post-restapi-personal-yourfiles-private-folders-v1__86ef92052f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-public-files-v1",
+			"file": "Api/post-restapi-personal-yourfiles-public-files-v1__4e8901b94d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-folderId-files-v1",
+			"file": "Api/post-restapi-personal-yourfiles-public-folders-folderid-files-v1__bbd440b2e6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-folderId-v1",
+			"file": "Api/post-restapi-personal-yourfiles-public-folders-folderid-v1__7114a4eb9e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-v1",
+			"file": "Api/post-restapi-personal-yourfiles-public-folders-v1__9399571f57.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/POST-restapi-release-notify-v1",
+			"file": "Api/post-restapi-release-notify-v1__a85ecd4c96.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-administration-customlabels-id-v1",
+			"file": "Api/put-restapi-administration-customlabels-id-v1__08b52d7de2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-ai-guidelines-v1",
+			"file": "Api/put-restapi-personal-ai-guidelines-v1__4956fd1749.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentgrade-v1_gradebookItemId_personId_assessmentId_assessmentItemId",
+			"file": "Api/put-restapi-personal-course-courseid-assessmentrecord-personassessmentgrade-v1-g__d4bd56e683.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwritten-v1_gradebookItemId_personId",
+			"file": "Api/put-restapi-personal-course-courseid-assessmentrecord-personassessmentoverwritte__6c4f1e2af6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwrittengrade-v1_gradebookItemId_personId_oldAssessmentItemId_assessmentId_overwrittenAssessmentItemId",
+			"file": "Api/put-restapi-personal-course-courseid-assessmentrecord-personassessmentoverwritte__1fa388e415.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwrittenscore-v1_gradebookItemId_personId_overwrittenScore_oldScore",
+			"file": "Api/put-restapi-personal-course-courseid-assessmentrecord-personassessmentoverwritte__d7ad8ba506.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentscore-v1_gradebookItemId_personId_score",
+			"file": "Api/put-restapi-personal-course-courseid-assessmentrecord-personassessmentscore-v1-g__91216373ec.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-bulletins-bulletinId-comments-v1_allowComments",
+			"file": "Api/put-restapi-personal-courses-bulletins-bulletinid-comments-v1-allowcomments__813193a4e7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-bulletins-bulletinId-pinned-v1_pinned",
+			"file": "Api/put-restapi-personal-courses-bulletins-bulletinid-pinned-v1-pinned__41bd81d15d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-bulletins-v1",
+			"file": "Api/put-restapi-personal-courses-bulletins-v1__cbf5e0d0d3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-courseId-aisettings-v1",
+			"file": "Api/put-restapi-personal-courses-courseid-aisettings-v1__d7b82ce5a0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-courseId-groupsets-v1",
+			"file": "Api/put-restapi-personal-courses-courseid-groupsets-v1__6be3d7e434.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-courseId-lastvisited-v1",
+			"file": "Api/put-restapi-personal-courses-courseid-lastvisited-v1__7a2e5c5706.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-RestApi-personal-courses-courseId-toggleFavorite-v1",
+			"file": "Api/put-restapi-personal-courses-courseid-togglefavorite-v1__02b4d2b744.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-courses-courseId-v1",
+			"file": "Api/put-restapi-personal-courses-courseid-v1__9c5b3c64b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-cancelabusethreadreport-threadId-v1",
+			"file": "Api/put-restapi-personal-instantmessages-cancelabusethreadreport-threadid-v1__d3ec8f34fd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-moderators-v1",
+			"file": "Api/put-restapi-personal-instantmessages-messagethreads-threadid-moderators-v1__eedfb12e87.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-participants-v1",
+			"file": "Api/put-restapi-personal-instantmessages-messagethreads-threadid-participants-v1__8ddeace3d5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-toggleEnableDisableReplies-v1",
+			"file": "Api/put-restapi-personal-instantmessages-messagethreads-threadid-toggleenabledisable__c65af91789.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-updatelastread-lastReadInstantMessageId-v1_sortIndex_operation",
+			"file": "Api/put-restapi-personal-instantmessages-messagethreads-threadid-updatelastread-last__5d85669c57.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-v1",
+			"file": "Api/put-restapi-personal-instantmessages-messagethreads-threadid-v1__98d044fb9a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-togglemessagestar-instantMessageId-v1",
+			"file": "Api/put-restapi-personal-instantmessages-togglemessagestar-instantmessageid-v1__4f9256230a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-instantmessages-togglepersonblock-personId-v1",
+			"file": "Api/put-restapi-personal-instantmessages-togglepersonblock-personid-v1__45a063d28d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-lightbulletins-comments-commentId-v1",
+			"file": "Api/put-restapi-personal-lightbulletins-comments-commentid-v1__5ca015e299.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-lightbulletins-comments-commentId-v2",
+			"file": "Api/put-restapi-personal-lightbulletins-comments-commentid-v2__f7a18aecee.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-lightbulletins-lightBulletinId-comments-subscription-v1",
+			"file": "Api/put-restapi-personal-lightbulletins-lightbulletinid-comments-subscription-v1__4e4735e0b0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-lightbulletins-v1",
+			"file": "Api/put-restapi-personal-lightbulletins-v1__613598322d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-messages-messageId-v1_messageOrigin",
+			"file": "Api/put-restapi-personal-messages-messageid-v1-messageorigin__1956c6a7e9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-messages-v1",
+			"file": "Api/put-restapi-personal-messages-v1__9f4b83a852.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-notifications-seenmark-all-v1",
+			"file": "Api/put-restapi-personal-notifications-seenmark-all-v1__f44324d611.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-notifications-v1",
+			"file": "Api/put-restapi-personal-notifications-v1__fd3c314224.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-notifications-v2",
+			"file": "Api/put-restapi-personal-notifications-v2__573e020c18.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-files-contentBlockId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-files-contentblockid-v1__adf74d478c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-images-contentBlockId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-images-contentblockid-v1__3a7e9a33b4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-placement-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-placement-v1__93eb964772.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-polls-contentblockid-v1__5adc6368d0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-rss-contentBlockId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-rss-contentblockid-v1__ac74fa4c34.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-text-contentBlockId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-contentblocks-text-contentblockid-v1__09849b25a4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-pages-elementId-v1",
+			"file": "Api/put-restapi-personal-pages-elementid-v1__a61860bf3c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-person-online-v1",
+			"file": "Api/put-restapi-personal-person-online-v1__a2a7e80dc7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-person-PersonSetting-RemindConnectGoogleOnLogin-v1",
+			"file": "Api/put-restapi-personal-person-personsetting-remindconnectgoogleonlogin-v1__3c837c9971.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-RestApi-personal-projects-projectId-toggleFavorite-v1",
+			"file": "Api/put-restapi-personal-projects-projectid-togglefavorite-v1__49d3995d1f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-files-v1",
+			"file": "Api/put-restapi-personal-yourfiles-files-v1__05992fefdf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-folders-v1",
+			"file": "Api/put-restapi-personal-yourfiles-folders-v1__533436c05a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-private-files-fileId-quota-v1",
+			"file": "Api/put-restapi-personal-yourfiles-private-files-fileid-quota-v1__8d18bfa51d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-private-files-fileId-v1",
+			"file": "Api/put-restapi-personal-yourfiles-private-files-fileid-v1__75ccf30140.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-private-folders-folderId-v1",
+			"file": "Api/put-restapi-personal-yourfiles-private-folders-folderid-v1__2013aac6f1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-public-files-fileId-v1",
+			"file": "Api/put-restapi-personal-yourfiles-public-files-fileid-v1__a383631b64.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/Api/PUT-restapi-personal-yourfiles-public-folders-folderId-v1",
+			"file": "Api/put-restapi-personal-yourfiles-public-folders-folderid-v1__8bbd977d7e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.AggregatedOrganisation",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-aggregatedorganisation__a9d80b80b0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.AggregatedOrganisationLite",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-aggregatedorganisationlite__820d88a3b3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-assessmentrecord-assessmentrecordperson__be8e234a28.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.ChildCourse",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-childcourse__f9efd0e42f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.ChildV2",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-childv2__27973f0f7e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Comment",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-comment__6a358dee4f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Course",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-course__e027855720.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.CourseCard",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-coursecard__c87e99e871.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.CourseTopic",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-coursetopic__fdd4ec68a9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.CourseWithWorkload",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-coursewithworkload__0861914da9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.ElementLink",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-elementlink__e49756795c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.FollowUpTask",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-followuptask__3973d94ec9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.HierarchySimple",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-hierarchysimple__a1636e6408.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.HierarchySimpleWithMemberCount",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-hierarchysimplewithmembercount__7c1f913f27.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.InstantMessage",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-instantmessage__c56bcde5c3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.InstantMessageThread",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-instantmessagethread__496a77ff30.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportAssessmentStatus",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-learningobjectiveprogressreport-reporta__d5e6f66855.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportSubject",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-learningobjectiveprogressreport-reports__fa5c741d3d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.LearningToolElementAnswerWithWorkload",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-learningtoolelementanswerwithworkload__78ab374e27.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.LightBulletins.LightBulletinV2",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-lightbulletins-lightbulletinv2__97727f1edd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.MessagePreview",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-messagepreview__e3748c9bd7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.NewsFeedItem",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-newsfeeditem__88c890280d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Notification",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-notification__41ecd73065.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-calendar-calendareventv2__841fe0fa49.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.CalendarEvent",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-calendarevent__46e11fe658.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-course-courseparticipant__63a9571029.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-course-courseparticipantunenro__e2be5d883c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseResource",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-course-courseresource__0b8bdd8c62.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Course.ElementSimple",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personal-course-elementsimple__6de0dcf528.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonCourse",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personcourse__2814b557b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonCourseCardData",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personcoursecarddata__04cce185b7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonCourseCardDataV4",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personcoursecarddatav4__af45c2fff0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonSimple",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personsimple__fd6e972271.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonSimpleWithHierarchyRole",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personsimplewithhierarchyrole__9f102bc13d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonSimpleWithHierarchyRoleAndCourseMembership",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personsimplewithhierarchyroleandcoursem__8db350aa0e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.PersonSimpleWithWorkload",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-personsimplewithworkload__8252ad87f6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Planner.PlanPreview",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-planner-planpreview__9e606e1a0f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Planner.PlanPreviewV2",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-planner-planpreviewv2__0a7a96ef89.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.SiteBase",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-sitebase__7a4f66580c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.SiteLink",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-sitelink__356e0b9a2b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.StreamItem",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-streamitem__d0d866b172.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.StreamItemV2",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-streamitemv2__4375d51549.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Task",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-task__d17769152f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.TaskDailyWorkflow",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-taskdailyworkflow__68694949b0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.TaskDailyWorkflowSection",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-taskdailyworkflowsection__4f6005b96a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.YourFiles.CourseModel",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-yourfiles-coursemodel__ceccd67592.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.YourFiles.MessageAttachmentModel",
+			"file": "ResourceModel/entitylistofitslearning-restapi-entities-yourfiles-messageattachmentmodel__bed45f439b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Common.RestApi.Entities.VersionResponse",
+			"file": "ResourceModel/itslearning-common-restapi-entities-versionresponse__12077446c1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.FileRepo.Common.Models.SourceType",
+			"file": "ResourceModel/itslearning-filerepo-common-models-sourcetype__22e201b9ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.ElementCompletionMode",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-common-entities-elementcompletionmode__d66aa8562f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.LearningToolType",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-common-entities-learningtooltype__7ac06f14a1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.SharingScope",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-common-entities-sharingscope__dba8255961.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.WhenToShowResult",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-common-entities-whentoshowresult__99a9062a66.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.ItslEntities.Planner.PlanElement",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-itslentities-planner-planelement__978f86a8f1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.LearningToolApp.Entities.AssessmentStatusItem",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-learningtoolapp-entities-assessmentstatusitem__7c537b74bb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.LearningToolApp.Entities.ElementPermission",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-learningtoolapp-entities-elementpermission__0d7b02ab97.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.LearningToolApp.Entities.OrganizationType",
+			"file": "ResourceModel/itslearning-platform-restapi-sdk-learningtoolapp-entities-organizationtype__89cb1a9b63.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Client.Requests.SearchDataItslearningRequest",
+			"file": "ResourceModel/itslearning-restapi-client-requests-searchdataitslearningrequest__70a2ac22b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AggregatedOrganisation",
+			"file": "ResourceModel/itslearning-restapi-entities-aggregatedorganisation__a92e085ed3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AggregatedOrganisationLite",
+			"file": "ResourceModel/itslearning-restapi-entities-aggregatedorganisationlite__af365796cc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AiChatMessage",
+			"file": "ResourceModel/itslearning-restapi-entities-aichatmessage__62a80c62ca.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AiResponse",
+			"file": "ResourceModel/itslearning-restapi-entities-airesponse__d6f1cc314a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordCategory",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecordcategory__f71c6b53ea.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordElements",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecordelements__52e5677bdb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordGroup",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecordgroup__d2b939a250.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordItem",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecorditem__d0cc5bb3cf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecordperson__7e7ebf4aaf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordTerm",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentrecordterm__1d72c32af4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentScale",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentscale__ce19675bf3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.AssessmentScaleValue",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-assessmentscalevalue__581705c190.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.PersonAssessment",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-personassessment__9357f179ab.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AssessmentRecord.PersonAssessmentValue",
+			"file": "ResourceModel/itslearning-restapi-entities-assessmentrecord-personassessmentvalue__9affb1f384.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Attachment",
+			"file": "ResourceModel/itslearning-restapi-entities-attachment__2f27a478ff.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.BroadcastInstantMessageToSend",
+			"file": "ResourceModel/itslearning-restapi-entities-broadcastinstantmessagetosend__9b315f9640.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CalendarEventSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-calendareventsimple__25f5578395.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Child",
+			"file": "ResourceModel/itslearning-restapi-entities-child__2a26ad8929.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ChildCourse",
+			"file": "ResourceModel/itslearning-restapi-entities-childcourse__62f54eaed8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ChildOrganisationPermissions",
+			"file": "ResourceModel/itslearning-restapi-entities-childorganisationpermissions__14c15b8834.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ChildV2",
+			"file": "ResourceModel/itslearning-restapi-entities-childv2__4afe634383.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Comment",
+			"file": "ResourceModel/itslearning-restapi-entities-comment__b37816e112.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Course",
+			"file": "ResourceModel/itslearning-restapi-entities-course__07a40dbde5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCard",
+			"file": "ResourceModel/itslearning-restapi-entities-coursecard__6f684094b0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCardSettings",
+			"file": "ResourceModel/itslearning-restapi-entities-coursecardsettings__ca1defd062.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCardTeacher",
+			"file": "ResourceModel/itslearning-restapi-entities-coursecardteacher__4325aaf7a7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseFocus",
+			"file": "ResourceModel/itslearning-restapi-entities-coursefocus__c1ead588f6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroup",
+			"file": "ResourceModel/itslearning-restapi-entities-coursegroups-coursegroup__031619dc5a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroupSet",
+			"file": "ResourceModel/itslearning-restapi-entities-coursegroups-coursegroupset__b1e2a4cac4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroupSetSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-coursegroups-coursegroupsetsimple__6dd129a36b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroupsToRemove",
+			"file": "ResourceModel/itslearning-restapi-entities-coursegroups-coursegroupstoremove__d3a34bd3a3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseHierarchyToSync",
+			"file": "ResourceModel/itslearning-restapi-entities-coursehierarchytosync__1183b1a5bd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseParticipants.CourseParticipantsTemporaryAccess",
+			"file": "ResourceModel/itslearning-restapi-entities-courseparticipants-courseparticipantstemporaryacces__3ae2f8d986.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseParticipants.CourseParticipantsToRemove",
+			"file": "ResourceModel/itslearning-restapi-entities-courseparticipants-courseparticipantstoremove__2204434bf6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseParticipantToAdd",
+			"file": "ResourceModel/itslearning-restapi-entities-courseparticipanttoadd__61f1066fdc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseTopic",
+			"file": "ResourceModel/itslearning-restapi-entities-coursetopic__e84608584a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseUpcoming",
+			"file": "ResourceModel/itslearning-restapi-entities-courseupcoming__4212bac5b3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseWithContextRole",
+			"file": "ResourceModel/itslearning-restapi-entities-coursewithcontextrole__f3436a27d0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseWithWorkload",
+			"file": "ResourceModel/itslearning-restapi-entities-coursewithworkload__fb51f6b97a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReport",
+			"file": "ResourceModel/itslearning-restapi-entities-criteriaassessmentreport-criteriaassessmentreport__c738c582fa.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReportItem",
+			"file": "ResourceModel/itslearning-restapi-entities-criteriaassessmentreport-criteriaassessmentreportit__8d415bd145.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.Criterion",
+			"file": "ResourceModel/itslearning-restapi-entities-criteriaassessmentreport-criterion__f6a0897f55.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriterionAssessment",
+			"file": "ResourceModel/itslearning-restapi-entities-criteriaassessmentreport-criterionassessment__5d383b81de.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.DeletePersonalNotificationsForLocationTriggerV1",
+			"file": "ResourceModel/itslearning-restapi-entities-deletepersonalnotificationsforlocationtriggerv1__5427f74cd4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.DeletePersonalNotificationsForObjectTriggerV1",
+			"file": "ResourceModel/itslearning-restapi-entities-deletepersonalnotificationsforobjecttriggerv1__9b5902c354.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Element",
+			"file": "ResourceModel/itslearning-restapi-entities-element__6a8b2dcd6b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ElementLink",
+			"file": "ResourceModel/itslearning-restapi-entities-elementlink__e0bd61ef75.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ElementType",
+			"file": "ResourceModel/itslearning-restapi-entities-elementtype__1fd42bb15d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.FederatedLoginProvider",
+			"file": "ResourceModel/itslearning-restapi-entities-federatedloginprovider__1913146a2f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.FollowUpTask",
+			"file": "ResourceModel/itslearning-restapi-entities-followuptask__420c8a15a6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.HierarchyExtendedRole",
+			"file": "ResourceModel/itslearning-restapi-entities-hierarchyextendedrole__1460e1de3d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.HierarchyRole",
+			"file": "ResourceModel/itslearning-restapi-entities-hierarchyrole__9c8b5da412.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.HierarchySimple",
+			"file": "ResourceModel/itslearning-restapi-entities-hierarchysimple__cfd4a6118a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.HierarchySimpleWithMemberCount",
+			"file": "ResourceModel/itslearning-restapi-entities-hierarchysimplewithmembercount__96d4f57b14.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ImmersiveReaderInfo",
+			"file": "ResourceModel/itslearning-restapi-entities-immersivereaderinfo__d7ec2c946d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessage__6d583b000c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageFilterSuggestion",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagefiltersuggestion__cc6a4d3e64.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageListModel",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagelistmodel__5d101782ec.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageMassMessageType",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagemassmessagetype__8905639bbf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageParticipant",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessageparticipant__db4a4485b1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessagePermissions",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagepermissions__3491bafcc5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageRecipient",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagerecipient__6e5862869d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageRecipientRole",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagerecipientrole__75f9812577.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageSettings",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagesettings__75284d03ef.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageSettingsV2",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagesettingsv2__b1790be053.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageSignalRServiceVersion",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagesignalrserviceversion__617d195055.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageThread",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagethread__ac66cc0ccc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageThreadListModel",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagethreadlistmodel__3ab903cb3d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageThreadSearchParams",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagethreadsearchparams__48dfed793c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageToPatch",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagetopatch__6731e0ad31.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageToSend",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagetosend__206665936b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageToSendV2",
+			"file": "ResourceModel/itslearning-restapi-entities-instantmessagetosendv2__c46ba1f98a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReport",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-aggregatedreport__7485220bfc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReportAssessmentStatus",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-aggregatedreportass__5d5c8070ac.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportAssessmentStatus",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportassessmentsta__5837690d87.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportCluster",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportcluster__0219fc03e9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportGroup",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportgroup__6339f7a8a5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportGroupItem",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportgroupitem__e5bb5edc16.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportLearningObjectiveParent",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportlearningobjec__b24a61d82b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportSubject",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiveprogressreport-reportsubject__d3d7baff66.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveRepository.SubjectLabel",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectiverepository-subjectlabel__007ac7c355.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveType",
+			"file": "ResourceModel/itslearning-restapi-entities-learningobjectivetype__6cf8e08ca8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningToolElementAnswerWithWorkload",
+			"file": "ResourceModel/itslearning-restapi-entities-learningtoolelementanswerwithworkload__d0a837014b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletin",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletin__2526b724eb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinIdentifier",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletinidentifier__45b64218a8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinImage",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletinimage__cf3c352c6b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinOutputImageData",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletinoutputimagedata__116a392119.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinTimePeriod",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletintimeperiod__c7b373ee19.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinV2",
+			"file": "ResourceModel/itslearning-restapi-entities-lightbulletins-lightbulletinv2__4a3ec0adde.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocalizedText",
+			"file": "ResourceModel/itslearning-restapi-entities-localizedtext__3e2118d394.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationRecipient",
+			"file": "ResourceModel/itslearning-restapi-entities-locationrecipient__f15a86a5c7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationRecipientType",
+			"file": "ResourceModel/itslearning-restapi-entities-locationrecipienttype__93a78c9778.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationType",
+			"file": "ResourceModel/itslearning-restapi-entities-locationtype__4fa025708a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LogoutType",
+			"file": "ResourceModel/itslearning-restapi-entities-logouttype__aacb136ef6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Message",
+			"file": "ResourceModel/itslearning-restapi-entities-message__6b4231ff5c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.MessagePreview",
+			"file": "ResourceModel/itslearning-restapi-entities-messagepreview__ecce6b07a5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.MessagesDisabledThreadParticipants",
+			"file": "ResourceModel/itslearning-restapi-entities-messagesdisabledthreadparticipants__0ca9966875.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.MessageToSend",
+			"file": "ResourceModel/itslearning-restapi-entities-messagetosend__8493d9ecd1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.NewsFeedItem",
+			"file": "ResourceModel/itslearning-restapi-entities-newsfeeditem__9bb0ca8847.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Notification",
+			"file": "ResourceModel/itslearning-restapi-entities-notification__70e9ec9537.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.NotificationType",
+			"file": "ResourceModel/itslearning-restapi-entities-notificationtype__6d5694f8d4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AddLinkRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-addlinkrequest__2c367a344c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AiFeatureType",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-aifeaturetype__b6dea2468c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AiRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-airequest__786c612551.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AiResponseRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-airesponserequest__22d7d9d113.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.CreateElementRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-createelementrequest__b317bb907b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.CreateStoreResponse",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-createstoreresponse__ec28120021.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.StoreFileInfo",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-storefileinfo__b765b5eaa5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.StoreStatusResponse",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ai-storestatusresponse__c070baf9ce.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.Attendance.AttendanceDetails",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-attendance-attendancedetails__84fc21027c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.Attendance.AttendanceStatistics",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-attendance-attendancestatistics__4a9514fb66.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.Booking",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-booking__3dcf46f1bd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventDetails",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-calendareventdetails__71a60e6f22.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventType",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-calendareventtype__aa45a6d2e9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-calendareventv2__ccf913e2e5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.PlanLink",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendar-planlink__41b9d70c49.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.CalendarEvent",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-calendarevent__2cb8dc31e2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseAction",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseaction__2877743707.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseAiSettings",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseaisettings__2dd660f1cc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseApplicant",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseapplicant__82586256e0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseFolderDetails",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-coursefolderdetails__682e9958bc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseParticipant",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseparticipant__76457bd6b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseParticipantUnenrolled",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseparticipantunenrolled__aa41549844.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseResource",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseresource__d6a9057b61.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseResourceWithRole",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-courseresourcewithrole__f44db99be7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CreateFileResponse",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-createfileresponse__7ffc713638.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.ElementSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-elementsimple__763bf3e4cd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.FileErrorCode",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-fileerrorcode__8b26890e41.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.GetCourseResourcesPayload",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-getcourseresourcespayload__54c42ca1a3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordLanguage",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-assessmentrecordlanguage__41b24f4b06.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPaths",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-assessmentrecordpaths__ffce1a33c2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordPermissions",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-assessmentrecordpermissio__d1500b4a4c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSettings",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-assessmentrecordsettings__5180e2cb24.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.AssessmentRecordSetup",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-assessmentrecordsetup__12a867fa77.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantLanguage",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseparticipantlanguage__f5eef69bef.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPaths",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseparticipantpaths__ce62ded80a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantPermissions",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseparticipantpermissi__0551c161e4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSettings",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseparticipantsettings__81f873ebb7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseParticipantSetup",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseparticipantsetup__410945c5be.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.CourseProfile",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-courseprofile__0877405270.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.PageSetup.ExtensionModuleModel",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-pagesetup-extensionmodulemodel__1d6f5f813e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.YourStudent",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-yourstudent__ffa53f1495.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.YourStudentCourse",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-course-yourstudentcourse__86e95a79be.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.CourseWithActivePlans",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-coursewithactiveplans__083e9e0cb8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Feature",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-feature__5bc6adcff0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.ItslearningUrl",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-itslearningurl__3356733a60.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.LtiExtensionCustomerSetup",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ltiextensioncustomersetup__87b3a7ef20.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.LtiExtensionDetails",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-ltiextensiondetails__4259c59bfb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanElementBasic",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-planelementbasic__70545cd777.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanLearningObjectiveBasic",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-planlearningobjectivebasic__37abd9bffc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanWithObjectivesAndElements",
+			"file": "ResourceModel/itslearning-restapi-entities-personal-planwithobjectivesandelements__dcd1f87c6e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonalNotificationsPostV1",
+			"file": "ResourceModel/itslearning-restapi-entities-personalnotificationspostv1__49f06a7ab8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonContextRole",
+			"file": "ResourceModel/itslearning-restapi-entities-personcontextrole__56a2bdb4d8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourse",
+			"file": "ResourceModel/itslearning-restapi-entities-personcourse__36a8ff1b8b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseBase",
+			"file": "ResourceModel/itslearning-restapi-entities-personcoursebase__6d8190d1e4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseCardData",
+			"file": "ResourceModel/itslearning-restapi-entities-personcoursecarddata__0ebaf0a7c5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseCardDataV4",
+			"file": "ResourceModel/itslearning-restapi-entities-personcoursecarddatav4__0591e7dd4b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseCardTaskCount",
+			"file": "ResourceModel/itslearning-restapi-entities-personcoursecardtaskcount__7d4edf632a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonCourseRank",
+			"file": "ResourceModel/itslearning-restapi-entities-personcourserank__5545636f36.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonImageDimensions",
+			"file": "ResourceModel/itslearning-restapi-entities-personimagedimensions__e84a6cccab.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonProfile",
+			"file": "ResourceModel/itslearning-restapi-entities-personprofile__b2be7f45f4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonRole",
+			"file": "ResourceModel/itslearning-restapi-entities-personrole__d74a496e47.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-personsimple__bba40af459.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimpleWithHierarchyExtendedRole",
+			"file": "ResourceModel/itslearning-restapi-entities-personsimplewithhierarchyextendedrole__ff2a7c3e52.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimpleWithHierarchyRole",
+			"file": "ResourceModel/itslearning-restapi-entities-personsimplewithhierarchyrole__bb23dfba2b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimpleWithHierarchyRoleAndCourseMembership",
+			"file": "ResourceModel/itslearning-restapi-entities-personsimplewithhierarchyroleandcoursemembership__0c7087593b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimpleWithWorkload",
+			"file": "ResourceModel/itslearning-restapi-entities-personsimplewithworkload__0b87855526.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonUpcoming",
+			"file": "ResourceModel/itslearning-restapi-entities-personupcoming__63fdb77e85.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.Plan",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-plan__08a6be502f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanClassHoursColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planclasshourscolumn__3e01a5168f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-plancolumn__7b2ad92ced.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanDateColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-plandatecolumn__f3985a6b47.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanElement",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planelement__8a5e44996f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanElementsColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planelementscolumn__a844e612e7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanLearningObjective",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planlearningobjective__7783e5e14b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanLearningObjectivesColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planlearningobjectivescolumn__ae78f3f138.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanPreview",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planpreview__0880827c28.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanPreviewV2",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planpreviewv2__ac8fd9b869.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanThumbnailColumn",
+			"file": "ResourceModel/itslearning-restapi-entities-planner-planthumbnailcolumn__3facc22861.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PlanSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-plansimple__41283461a6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PushSetting",
+			"file": "ResourceModel/itslearning-restapi-entities-pushsetting__abf4bd54b2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ReferencedInstantMessageType",
+			"file": "ResourceModel/itslearning-restapi-entities-referencedinstantmessagetype__263fec0244.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelatedPerson",
+			"file": "ResourceModel/itslearning-restapi-entities-relatedperson__68c62c3660.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Relation",
+			"file": "ResourceModel/itslearning-restapi-entities-relation__1f9ca40cfa.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelationInfo",
+			"file": "ResourceModel/itslearning-restapi-entities-relationinfo__1ab7b7bc6c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.RelationType",
+			"file": "ResourceModel/itslearning-restapi-entities-relationtype__63dc26d319.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ResourceType",
+			"file": "ResourceModel/itslearning-restapi-entities-resourcetype__afc05172e7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Site",
+			"file": "ResourceModel/itslearning-restapi-entities-site__1dda00b9cf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.SiteBase",
+			"file": "ResourceModel/itslearning-restapi-entities-sitebase__9062f1afcc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.SiteLink",
+			"file": "ResourceModel/itslearning-restapi-entities-sitelink__ad1e2ca932.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.SiteLoginDetails",
+			"file": "ResourceModel/itslearning-restapi-entities-sitelogindetails__b347d0b88d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StreamItem",
+			"file": "ResourceModel/itslearning-restapi-entities-streamitem__74892e8145.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StreamItemV2",
+			"file": "ResourceModel/itslearning-restapi-entities-streamitemv2__06ad3dda5c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.AchievementGoal",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-achievementgoal__6c5b5277e8.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.AchievementGoalAssessment",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-achievementgoalassessm__b9ac2eb731.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.AchievementGoalStatusType",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-achievementgoalstatust__d78c365fdf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.AssessmentItem",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-assessmentitem__7e4f0d7fcd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.AssessmentPerson",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-assessmentperson__e801dfbe9c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AchievementGoals.CourseWideAchievementGoal",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-achievementgoals-coursewideachievementg__d82194c5e9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.Activity",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessments-activity__fa4ec85507.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.Assessment",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessments-assessment__b187332a36.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.GradeComment",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessments-gradecomment__bacb7fc979.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanPlan",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessments-studentplanplan__408173ec3f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanTopic",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessments-studentplantopic__41bfdaf086.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.AssessmentsErrorType",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-assessmentserrortype__620460d429.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Comments.StudentPlanComment",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-comments-studentplancomment__7fff093945.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.StudentPlanCourse",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-studentplancourse__4e0d424f20.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.StudentPlanCourseSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-studentplancoursesimple__676f4201bf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.StudentPlanOverview",
+			"file": "ResourceModel/itslearning-restapi-entities-studentplan-studentplanoverview__aa231a8cf0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.SupervisorType",
+			"file": "ResourceModel/itslearning-restapi-entities-supervisortype__6fe6125d40.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Task",
+			"file": "ResourceModel/itslearning-restapi-entities-task__e2d0e376b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskDailyWorkflow",
+			"file": "ResourceModel/itslearning-restapi-entities-taskdailyworkflow__775fa3c6fb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskDailyWorkflowSection",
+			"file": "ResourceModel/itslearning-restapi-entities-taskdailyworkflowsection__781de9c959.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskDeadlineFilter",
+			"file": "ResourceModel/itslearning-restapi-entities-taskdeadlinefilter__0e64e8293d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskSimple",
+			"file": "ResourceModel/itslearning-restapi-entities-tasksimple__a7fffe33d0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskStatus",
+			"file": "ResourceModel/itslearning-restapi-entities-taskstatus__63d82c7556.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TaskStatusFilter",
+			"file": "ResourceModel/itslearning-restapi-entities-taskstatusfilter__812264a79f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ThreadParticipant",
+			"file": "ResourceModel/itslearning-restapi-entities-threadparticipant__49e7806e4a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.TypedId",
+			"file": "ResourceModel/itslearning-restapi-entities-typedid__bdf7950a9b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.FileDataV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-filedatav1__30765e1165.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.InstantMessageThreadUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-instantmessagethreadupdatev1__c344da976d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinAddInputDataV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletin-lightbulletinaddinputdatav1__c96f6bf125.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinInputImageDataV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletin-lightbulletininputimagedata__3a6666f15e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletin.LightBulletinUpdateInputDataV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletin-lightbulletinupdateinputdat__65d77b25ab.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletinCommentUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletincommentupdatev1__090675a32a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletinSubscriptionUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletinsubscriptionupdatev1__89a6fbb1dc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.LightBulletinUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-lightbulletinupdatev1__14cd2c14b5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.MessageUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-messageupdatev1__fa443c9f48.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.NotificationUpdateV1",
+			"file": "ResourceModel/itslearning-restapi-entities-updatable-notificationupdatev1__d3623910d9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Workload",
+			"file": "ResourceModel/itslearning-restapi-entities-workload__7a6b0cd8c2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.WorkloadType",
+			"file": "ResourceModel/itslearning-restapi-entities-workloadtype__5c87a96d77.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.CopyRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-copyrequest__0a87325656.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.CourseModel",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-coursemodel__4a6f90cada.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.DuplicateBehaviour",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-duplicatebehaviour__8e07fb9ded.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.FileModel",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-filemodel__3b75f84861.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.MessageAttachmentModel",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-messageattachmentmodel__e8874001c3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.MoveRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-moverequest__e37bf33503.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.UpdateRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-updaterequest__c422c7cf7b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.UploadedFileModel",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-uploadedfilemodel__151d1bdd2a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.ZipFileJobModel",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-zipfilejobmodel__9f8c01f5fe.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.ZipRequest",
+			"file": "ResourceModel/itslearning-restapi-entities-yourfiles-ziprequest__3ff116f52c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Authorisation.OAuthAccessToken",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-authorisation-oauthaccesstoken__40093f877b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Authorisation.OAuthContext",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-authorisation-oauthcontext__b8ed7b1107.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Authorisation.OAuthToken",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-authorisation-oauthtoken__a6d0542eb5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Authorisation.OAuthUser",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-authorisation-oauthuser__30c43b0fe2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Metadata.FileInCloudMetadata",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-metadata-fileincloudmetadata__a694a228dd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itslearning.Web.UI.Controls.Uploaders.Metadata.UploadMetadata",
+			"file": "ResourceModel/itslearning-web-ui-controls-uploaders-metadata-uploadmetadata__98cd068566.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.ItslCore.BusinessLayer.InstantMessage.Broadcast.BroadcastMessageStatisticsEntity",
+			"file": "ResourceModel/itsolutions-itslearning-itslcore-businesslayer-instantmessage-broadcast-broadcas__97e07304b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.ItslCore.BusinessLayer.Person.CustomInfo.ExtraUserInformationField",
+			"file": "ResourceModel/itsolutions-itslearning-itslcore-businesslayer-person-custominfo-extrauserinform__7ec3159314.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.ItslCore.BusinessLayer.ZiggeoRecorder.ZiggeoRegion",
+			"file": "ResourceModel/itsolutions-itslearning-itslcore-businesslayer-ziggeorecorder-ziggeoregion__cf5c08c3cc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.ItslCore.BusinessLayer.ZiggeoRecorder.ZiggeoVideoStream",
+			"file": "ResourceModel/itsolutions-itslearning-itslcore-businesslayer-ziggeorecorder-ziggeovideostream__a21d9426f2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.Areas.Administration.CustomLabels.Models.AddEditCustomLabelRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-areas-administration-customlabels-models-addeditcust__b1d679282f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.Areas.Administration.CustomLabels.Models.BaseCustomLabelModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-areas-administration-customlabels-models-basecustoml__a0277d3108.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Internal.Models.Planner.ShareablePlanner.AddSharedResourcesToCoursePlanRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-internal-models-planner-shareableplanner-add__8d45367e67.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Models.KpiOperation",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-models-kpioperation__8051bd65f0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Models.PersonCourseRankWithKpi",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-models-personcourserankwithkpi__6527a359fd.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Enums.AssignmentSubmissionType",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-enums-assignmentsubmissi__beb7d8bc4e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Requests.CreateAssignmentRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-requests-createassignmen__2a75650e55.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Requests.SubmitAnswerRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-requests-submitanswerreq__43f38f43be.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentAnswerResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-responses-assignmentansw__9f284ecdec.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentFileModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-responses-assignmentfile__65a3f921eb.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-responses-assignmentresp__d12ecd5b5a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.StatusItem",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-responses-statusitem__53a07b86d0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.SubmitAnswerResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-assignment-responses-submitanswerre__980b58c978.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantGroupItemModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-contentareasettings-models-particip__578c6b068f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantItemModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-contentareasettings-models-particip__a3d1f02a7d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantsGroupModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-contentareasettings-models-particip__fb4851262a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantsModel",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-contentareasettings-models-particip__10dcaaaa08.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssessmentItem",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-assessmentitem__a5e991c210.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssessmentScale",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-assessmentscale__0554898cc5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssignTo",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-assignto__57f4502a6f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ElementLearningObjective",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-elementlearningobjec__9a4c465d92.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.ParticipantReport",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-participantreport__153cfd18e3.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.StatusScale",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-models-statusscale__d87a9dd62f.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Responses.ElementSettingsResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-responses-elementsettingsre__211332cdb9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Responses.ParticipantsReportResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-element-responses-participantsrepor__2fca311e00.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.FileUpload.UploadedTempFile",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-fileupload-uploadedtempfile__d052cf1f7c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController%2BRecordingRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-mediarecordercontroller-recordingre__83e5aa349a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderController%2BVideoResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-mediarecordercontroller-videorespon__253d1b274e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderUploadResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-mediarecorderuploadresponse__01b4394935.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.MediaRecorderUploadResult",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-mediarecorderuploadresult__1fc57fcf23.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Enums.LayoutSchemaDto",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-enums-layoutsche__0ae0a06fd6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.ImageMetaData",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-imagemetadata__5328b2165d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.ImageItem",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-requests-imageit__39f153ef69.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.TempFileRepoFile",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-requests-tempfil__4c8d0f939b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.UpdatePageRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-requests-updatep__0d181eeca9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.UpdatePlacementRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-pageapimodels-requests-updatep__d34ac4a213.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockFilesRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-createcontentblockfil__27fc3ce303.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockImagesRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-createcontentblockima__b1e491daf6.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockPollsRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-createcontentblockpol__da5fa4ec7b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockRssRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-createcontentblockrss__77fa9f31b9.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockTextRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-createcontentblocktex__a0db916130.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.DeleteRestoreRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-deleterestorerequestu__32c8b02f40.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PermanentlyDeleteContentBlocksRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-permanentlydeletecont__0949efb401.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollAlternative",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-pollalternative__1ed7b19bc4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollSettings",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-pollsettings__93f48f0185.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.UpdateContentBlockFilesRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-updatecontentblockfil__dd868ed5ba.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.UpdateContentBlockImagesRequestUI",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-updatecontentblockima__795dd213fa.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.VoteRequest",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-requests-voterequest__8c44462971.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ColorSchema",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-colorschema__7cdb4914da.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlock",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblock__0072be346c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlockLayoutZone",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblocklayoutzo__a63c8e005c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlockPoll",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblockpoll__1e75530a8a.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlockPollAlternativeData",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblockpollalte__d2f6d9ca2c.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlockPollSettings",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblockpollsett__27d050da63.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.ContentBlockType",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-contentblocktype__68df24a662.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.LayoutSchemaType",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-layoutschematype__98fcefedcc.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageIconUrls",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-pageiconurls__e3b4b10732.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-pageresponse__299dbb93a1.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PageUrls",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-pageurls__8b99cac5e0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Responses.PollShowResultsType",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-page-responses-pollshowresultstype__a6aac2d3d5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-personal-tokenresponse__2617ac5c39.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Public.Unauthenticated.SitesFilter",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-public-unauthenticated-sitesfilter__eb7dcfb752.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.ServiceLogic.Statistics.Events.UserEventDto",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-servicelogic-statistics-events-usereventdto__674c539fa5.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.ServiceLogic.Statistics.Events.UserEventType",
+			"file": "ResourceModel/itsolutions-itslearning-web-restapi-servicelogic-statistics-events-usereventtype__ff305dcc82.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.ContentAreaFilterType",
+			"file": "ResourceModel/itsolutions-itslutils-constants-contentareafiltertype__a364925bd4.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.CustomerEducationSegment",
+			"file": "ResourceModel/itsolutions-itslutils-constants-customereducationsegment__886e9fe6ff.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.ElementType",
+			"file": "ResourceModel/itsolutions-itslutils-constants-elementtype__760f0f3515.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.HierarchyRole",
+			"file": "ResourceModel/itsolutions-itslutils-constants-hierarchyrole__e0e7c258e7.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.ItslearningSectionUrlParameter",
+			"file": "ResourceModel/itsolutions-itslutils-constants-itslearningsectionurlparameter__2d01f6b8c0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.LocationType",
+			"file": "ResourceModel/itsolutions-itslutils-constants-locationtype__a9ca73d679.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.MessageOrigin",
+			"file": "ResourceModel/itsolutions-itslutils-constants-messageorigin__9a43c1c17b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.NameFormat",
+			"file": "ResourceModel/itsolutions-itslutils-constants-nameformat__3aebb026e2.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.PlannerConstants%2BPlanType",
+			"file": "ResourceModel/itsolutions-itslutils-constants-plannerconstants-plantype__1ccfbaee4b.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.SessionStatus",
+			"file": "ResourceModel/itsolutions-itslutils-constants-sessionstatus__d0a3a246a0.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Net.Http.HttpContent",
+			"file": "ResourceModel/system-net-http-httpcontent__21bd8cdd55.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Net.Http.HttpMethod",
+			"file": "ResourceModel/system-net-http-httpmethod__f07665dfea.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Net.Http.HttpRequestMessage",
+			"file": "ResourceModel/system-net-http-httprequestmessage__465dbb8f60.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Net.Http.HttpResponseMessage",
+			"file": "ResourceModel/system-net-http-httpresponsemessage__021ef66bcf.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Net.HttpStatusCode",
+			"file": "ResourceModel/system-net-httpstatuscode__372ae57127.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Version",
+			"file": "ResourceModel/system-version__4b95c6321d.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult",
+			"file": "ResourceModel/system-web-http-ihttpactionresult__24b6c36c4e.html"
+		},
+		{
+			"url": "https://www.itslearning.com/restapi/help/ResourceModel?modelName=TupleOfSystem.GuidAndSystem.String",
+			"file": "ResourceModel/tupleofsystem-guidandsystem-string__014b15c12a.html"
+		}
+	]
+}

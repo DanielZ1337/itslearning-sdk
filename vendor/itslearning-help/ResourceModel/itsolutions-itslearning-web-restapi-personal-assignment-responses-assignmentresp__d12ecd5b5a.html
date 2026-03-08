@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title></title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <h1>Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentResponse</h1>
+    <p>Response model for the assignment.</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ElementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the assignment element (which is used in a course) in scope of a customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the assignment</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsHomework</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether the assignment is a homework assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Deadline</td>
+                    <td class="parameter-documentation">
+                        <p>Deadline for the assignment. If null, there is no deadline.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UsePlagiarismCheck</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether answers will be checked for plagiarism. When true there are some restrictions on the files that can be uploaded.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentId</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment id (grades / assessment scale) used for the assignment, will be null if assessment scale is not used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentStatusId</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment status id ("not submitted", "completed" etc) used for the assignment, will be null if no status is used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAssessmentVisibleForStudents</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether the assessment is visible for students.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSubmissionAfterDeadlineAllowed</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether submission after the deadline is allowed.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SubmissionType</td>
+                    <td class="parameter-documentation">
+                        <p>Submission type for the assignment</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Enums.AssignmentSubmissionType">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Enums.AssignmentSubmissionType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompletionMode</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether submission is required for this assignment, or if it can be marked as completed without submission.
+ ElementCompletionMode.ManualByTeacher and ElementCompletionMode.ManualByStudent means that assignment is in "task" mode,
+ otherwise submission is required - standard old assignment functionality.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.ElementCompletionMode">Itslearning.Platform.RestApi.Sdk.Common.Entities.ElementCompletionMode</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ExcludeFromTeacherTaskList</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether to exclude from teacher's follow-up tasks or not.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAnonymous</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether submission is anonymous.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSelfAssessmentRequired</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether self-assessment is required.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PeersToAssessCount</td>
+                    <td class="parameter-documentation">
+                        <p>How many other students should each student peer assess. null means that peer assessment is not used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Files</td>
+                    <td class="parameter-documentation">
+                        <p>Files attached to the assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentFileModel">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentFileModel</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AnswerId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEditAssignment</td>
+                    <td class="parameter-documentation">
+                        <p>True if the user can edit the assignment itself - Text and Files, false otherwise.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEvaluateAnswers</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanSubmitOrEditAnswer</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+</body>
+</html>

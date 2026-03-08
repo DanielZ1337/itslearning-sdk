@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/planner/plansinfo/v1?plansIds[0]={plansIds[0]}&amp;plansIds[1]={plansIds[1]}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/planner/plansinfo/v1?plansIds[0]={plansIds[0]}&amp;plansIds[1]={plansIds[1]}</h1>
+<div>
+    <p>Gets list of plans with learning objective and elements attached.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">plansIds</td>
+                    <td class="parameter-documentation">
+                        <p>Requested plan IDs.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>list of plans with learning objective and elements attached.</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanWithObjectivesAndElements">Itslearning.RestApi.Entities.Personal.PlanWithObjectivesAndElements</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CourseId</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the course the plan is created for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseName</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the course the plan is created for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseSyncKey</td>
+                    <td class="parameter-documentation">
+                        <p>Sync key of the course the plan is created for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier of the plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanTopicName</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the topic the plan belongs to.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanTopicColor</td>
+                    <td class="parameter-documentation">
+                        <p>Color of the topic the plan belongs to.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Title of the plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanDescription</td>
+                    <td class="parameter-documentation">
+                        <p>Description of the plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanStartDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>The date and time the plan starts.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanEndDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>The date and time the plan ends.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CoursePlannerUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The URL to pointing to Planner of the course the plans is created for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningObjectives</td>
+                    <td class="parameter-documentation">
+                        <p>The list of learning objectives specified for the plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanLearningObjectiveBasic">Itslearning.RestApi.Entities.Personal.PlanLearningObjectiveBasic</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Elements</td>
+                    <td class="parameter-documentation">
+                        <p>The list of course elements attached to the plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.PlanElementBasic">Itslearning.RestApi.Entities.Personal.PlanElementBasic</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;CourseId&quot;: 1,
+    &quot;CourseName&quot;: &quot;sample string 2&quot;,
+    &quot;CourseSyncKey&quot;: &quot;sample string 3&quot;,
+    &quot;PlanId&quot;: 4,
+    &quot;PlanTopicName&quot;: &quot;sample string 5&quot;,
+    &quot;PlanTopicColor&quot;: &quot;sample string 6&quot;,
+    &quot;PlanTitle&quot;: &quot;sample string 7&quot;,
+    &quot;PlanDescription&quot;: &quot;sample string 8&quot;,
+    &quot;PlanStartDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;PlanEndDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CoursePlannerUrl&quot;: &quot;sample string 11&quot;,
+    &quot;LearningObjectives&quot;: [
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;IsFromRepository&quot;: true,
+        &quot;Type&quot;: 1
+      },
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;IsFromRepository&quot;: true,
+        &quot;Type&quot;: 1
+      }
+    ],
+    &quot;Elements&quot;: [
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Type&quot;: &quot;Unknown&quot;,
+        &quot;IsMarkedAsHomework&quot;: true,
+        &quot;IconUri&quot;: &quot;sample string 4&quot;
+      },
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Type&quot;: &quot;Unknown&quot;,
+        &quot;IsMarkedAsHomework&quot;: true,
+        &quot;IconUri&quot;: &quot;sample string 4&quot;
+      }
+    ]
+  },
+  {
+    &quot;CourseId&quot;: 1,
+    &quot;CourseName&quot;: &quot;sample string 2&quot;,
+    &quot;CourseSyncKey&quot;: &quot;sample string 3&quot;,
+    &quot;PlanId&quot;: 4,
+    &quot;PlanTopicName&quot;: &quot;sample string 5&quot;,
+    &quot;PlanTopicColor&quot;: &quot;sample string 6&quot;,
+    &quot;PlanTitle&quot;: &quot;sample string 7&quot;,
+    &quot;PlanDescription&quot;: &quot;sample string 8&quot;,
+    &quot;PlanStartDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;PlanEndDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CoursePlannerUrl&quot;: &quot;sample string 11&quot;,
+    &quot;LearningObjectives&quot;: [
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;IsFromRepository&quot;: true,
+        &quot;Type&quot;: 1
+      },
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;IsFromRepository&quot;: true,
+        &quot;Type&quot;: 1
+      }
+    ],
+    &quot;Elements&quot;: [
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Type&quot;: &quot;Unknown&quot;,
+        &quot;IsMarkedAsHomework&quot;: true,
+        &quot;IconUri&quot;: &quot;sample string 4&quot;
+      },
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Type&quot;: &quot;Unknown&quot;,
+        &quot;IsMarkedAsHomework&quot;: true,
+        &quot;IconUri&quot;: &quot;sample string 4&quot;
+      }
+    ]
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfPlanWithObjectivesAndElements xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;PlanWithObjectivesAndElements&gt;
+    &lt;CourseId&gt;1&lt;/CourseId&gt;
+    &lt;CourseName&gt;sample string 2&lt;/CourseName&gt;
+    &lt;CoursePlannerUrl&gt;sample string 11&lt;/CoursePlannerUrl&gt;
+    &lt;CourseSyncKey&gt;sample string 3&lt;/CourseSyncKey&gt;
+    &lt;Elements&gt;
+      &lt;PlanElementBasic&gt;
+        &lt;IconUri&gt;sample string 4&lt;/IconUri&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;IsMarkedAsHomework&gt;true&lt;/IsMarkedAsHomework&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Type&gt;Unknown&lt;/Type&gt;
+      &lt;/PlanElementBasic&gt;
+      &lt;PlanElementBasic&gt;
+        &lt;IconUri&gt;sample string 4&lt;/IconUri&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;IsMarkedAsHomework&gt;true&lt;/IsMarkedAsHomework&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Type&gt;Unknown&lt;/Type&gt;
+      &lt;/PlanElementBasic&gt;
+    &lt;/Elements&gt;
+    &lt;LearningObjectives xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal&quot;&gt;
+      &lt;d3p1:PlanLearningObjectiveBasic&gt;
+        &lt;d3p1:Description&gt;sample string 3&lt;/d3p1:Description&gt;
+        &lt;d3p1:Id&gt;1&lt;/d3p1:Id&gt;
+        &lt;d3p1:IsFromRepository&gt;true&lt;/d3p1:IsFromRepository&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+        &lt;d3p1:Type&gt;Subject&lt;/d3p1:Type&gt;
+      &lt;/d3p1:PlanLearningObjectiveBasic&gt;
+      &lt;d3p1:PlanLearningObjectiveBasic&gt;
+        &lt;d3p1:Description&gt;sample string 3&lt;/d3p1:Description&gt;
+        &lt;d3p1:Id&gt;1&lt;/d3p1:Id&gt;
+        &lt;d3p1:IsFromRepository&gt;true&lt;/d3p1:IsFromRepository&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+        &lt;d3p1:Type&gt;Subject&lt;/d3p1:Type&gt;
+      &lt;/d3p1:PlanLearningObjectiveBasic&gt;
+    &lt;/LearningObjectives&gt;
+    &lt;PlanDescription&gt;sample string 8&lt;/PlanDescription&gt;
+    &lt;PlanEndDateTime&gt;2026-03-07T09:02:56Z&lt;/PlanEndDateTime&gt;
+    &lt;PlanId&gt;4&lt;/PlanId&gt;
+    &lt;PlanStartDateTime&gt;2026-03-07T09:02:56Z&lt;/PlanStartDateTime&gt;
+    &lt;PlanTitle&gt;sample string 7&lt;/PlanTitle&gt;
+    &lt;PlanTopicColor&gt;sample string 6&lt;/PlanTopicColor&gt;
+    &lt;PlanTopicName&gt;sample string 5&lt;/PlanTopicName&gt;
+  &lt;/PlanWithObjectivesAndElements&gt;
+  &lt;PlanWithObjectivesAndElements&gt;
+    &lt;CourseId&gt;1&lt;/CourseId&gt;
+    &lt;CourseName&gt;sample string 2&lt;/CourseName&gt;
+    &lt;CoursePlannerUrl&gt;sample string 11&lt;/CoursePlannerUrl&gt;
+    &lt;CourseSyncKey&gt;sample string 3&lt;/CourseSyncKey&gt;
+    &lt;Elements&gt;
+      &lt;PlanElementBasic&gt;
+        &lt;IconUri&gt;sample string 4&lt;/IconUri&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;IsMarkedAsHomework&gt;true&lt;/IsMarkedAsHomework&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Type&gt;Unknown&lt;/Type&gt;
+      &lt;/PlanElementBasic&gt;
+      &lt;PlanElementBasic&gt;
+        &lt;IconUri&gt;sample string 4&lt;/IconUri&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;IsMarkedAsHomework&gt;true&lt;/IsMarkedAsHomework&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;Type&gt;Unknown&lt;/Type&gt;
+      &lt;/PlanElementBasic&gt;
+    &lt;/Elements&gt;
+    &lt;LearningObjectives xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal&quot;&gt;
+      &lt;d3p1:PlanLearningObjectiveBasic&gt;
+        &lt;d3p1:Description&gt;sample string 3&lt;/d3p1:Description&gt;
+        &lt;d3p1:Id&gt;1&lt;/d3p1:Id&gt;
+        &lt;d3p1:IsFromRepository&gt;true&lt;/d3p1:IsFromRepository&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+        &lt;d3p1:Type&gt;Subject&lt;/d3p1:Type&gt;
+      &lt;/d3p1:PlanLearningObjectiveBasic&gt;
+      &lt;d3p1:PlanLearningObjectiveBasic&gt;
+        &lt;d3p1:Description&gt;sample string 3&lt;/d3p1:Description&gt;
+        &lt;d3p1:Id&gt;1&lt;/d3p1:Id&gt;
+        &lt;d3p1:IsFromRepository&gt;true&lt;/d3p1:IsFromRepository&gt;
+        &lt;d3p1:Title&gt;sample string 2&lt;/d3p1:Title&gt;
+        &lt;d3p1:Type&gt;Subject&lt;/d3p1:Type&gt;
+      &lt;/d3p1:PlanLearningObjectiveBasic&gt;
+    &lt;/LearningObjectives&gt;
+    &lt;PlanDescription&gt;sample string 8&lt;/PlanDescription&gt;
+    &lt;PlanEndDateTime&gt;2026-03-07T09:02:56Z&lt;/PlanEndDateTime&gt;
+    &lt;PlanId&gt;4&lt;/PlanId&gt;
+    &lt;PlanStartDateTime&gt;2026-03-07T09:02:56Z&lt;/PlanStartDateTime&gt;
+    &lt;PlanTitle&gt;sample string 7&lt;/PlanTitle&gt;
+    &lt;PlanTopicColor&gt;sample string 6&lt;/PlanTopicColor&gt;
+    &lt;PlanTopicName&gt;sample string 5&lt;/PlanTopicName&gt;
+  &lt;/PlanWithObjectivesAndElements&gt;
+&lt;/ArrayOfPlanWithObjectivesAndElements&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

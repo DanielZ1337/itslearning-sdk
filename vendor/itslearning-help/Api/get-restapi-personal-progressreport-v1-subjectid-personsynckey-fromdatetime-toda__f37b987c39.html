@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/progressreport/v1?subjectId={subjectId}&amp;personSyncKey={personSyncKey}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;statuses={statuses}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/progressreport/v1?subjectId={subjectId}&amp;personSyncKey={personSyncKey}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;statuses={statuses}</h1>
+<div>
+    <p><p>
+ Gets the person learning objectives aggregated progress report.
+ </p>
+<p>
+ The client of this API may supply additional parameters to get a more detailed report.
+ For instance supplying a time period parameters (fromDateTime and toDateTime) one can get a report only in
+ this particular time period.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">subjectId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The subject id. Required to get a report.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">personSyncKey</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The person sync key. Optional, if not supplied the report is constructed based on a caller of the this api method (gets identity from a authorization information).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] Report period start date. Optional, if not supplied a date of the earliest learning objective assessment date is used. Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">toDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] Report period stop date. Optional, if not supplied the current date is used. Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">statuses</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The learning objective statuses types to filter by.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Person learning objectives aggregated progress report.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReport">Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReport</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">SubjectId</td>
+                    <td class="parameter-documentation">
+                        <p>The subject id a report is constructed for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SubjectSummary</td>
+                    <td class="parameter-documentation">
+                        <p>A list of assessment status entities representing summary information about the subject.
+ (e.g. how many Meets, Exceeds etc. assessment status items are there).</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReportAssessmentStatus">Itslearning.RestApi.Entities.LearningObjectiveProgressReport.AggregatedReportAssessmentStatus</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SubjectMasteryPercentage</td>
+                    <td class="parameter-documentation">
+                        <p>The percentage of mastered learning objectives in the subject (across all clusters). 
+ (it is calculated as percentage from all assessed learning objectives in the cluster).</p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Clusters</td>
+                    <td class="parameter-documentation">
+                        <p>The list of learning objective clusters in the current subject.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportCluster">Itslearning.RestApi.Entities.LearningObjectiveProgressReport.ReportCluster</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UseMastery</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether mastery is used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FullReportUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Full report URL. Directs to a person profile page with learning objectives tab selected.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;SubjectId&quot;: 1,
+  &quot;SubjectSummary&quot;: [
+    {
+      &quot;Count&quot;: 1,
+      &quot;Label&quot;: &quot;sample string 2&quot;,
+      &quot;StatusType&quot;: 3
+    },
+    {
+      &quot;Count&quot;: 1,
+      &quot;Label&quot;: &quot;sample string 2&quot;,
+      &quot;StatusType&quot;: 3
+    }
+  ],
+  &quot;SubjectMasteryPercentage&quot;: 2.1,
+  &quot;Clusters&quot;: [
+    {
+      &quot;ClusterId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;ClusterSummary&quot;: [
+        {
+          &quot;Count&quot;: 1,
+          &quot;Label&quot;: &quot;sample string 2&quot;,
+          &quot;StatusType&quot;: 3
+        },
+        {
+          &quot;Count&quot;: 1,
+          &quot;Label&quot;: &quot;sample string 2&quot;,
+          &quot;StatusType&quot;: 3
+        }
+      ],
+      &quot;ClusterMasteryPercentage&quot;: 4.1,
+      &quot;Groups&quot;: [
+        {
+          &quot;GroupId&quot;: 1,
+          &quot;Parents&quot;: [
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            },
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            }
+          ],
+          &quot;ReportGroupItems&quot;: [
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            },
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            }
+          ]
+        },
+        {
+          &quot;GroupId&quot;: 1,
+          &quot;Parents&quot;: [
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            },
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            }
+          ],
+          &quot;ReportGroupItems&quot;: [
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            },
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;ClusterId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Description&quot;: &quot;sample string 3&quot;,
+      &quot;ClusterSummary&quot;: [
+        {
+          &quot;Count&quot;: 1,
+          &quot;Label&quot;: &quot;sample string 2&quot;,
+          &quot;StatusType&quot;: 3
+        },
+        {
+          &quot;Count&quot;: 1,
+          &quot;Label&quot;: &quot;sample string 2&quot;,
+          &quot;StatusType&quot;: 3
+        }
+      ],
+      &quot;ClusterMasteryPercentage&quot;: 4.1,
+      &quot;Groups&quot;: [
+        {
+          &quot;GroupId&quot;: 1,
+          &quot;Parents&quot;: [
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            },
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            }
+          ],
+          &quot;ReportGroupItems&quot;: [
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            },
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            }
+          ]
+        },
+        {
+          &quot;GroupId&quot;: 1,
+          &quot;Parents&quot;: [
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            },
+            {
+              &quot;Id&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;
+            }
+          ],
+          &quot;ReportGroupItems&quot;: [
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            },
+            {
+              &quot;LearningObjectiveId&quot;: 1,
+              &quot;Title&quot;: &quot;sample string 2&quot;,
+              &quot;Description&quot;: &quot;sample string 3&quot;,
+              &quot;Status&quot;: {
+                &quot;Label&quot;: &quot;sample string 1&quot;,
+                &quot;StatusType&quot;: 2
+              },
+              &quot;Mastered&quot;: true,
+              &quot;MasteredDate&quot;: &quot;2026-03-07T16:36:58Z&quot;
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  &quot;UseMastery&quot;: true,
+  &quot;FullReportUrl&quot;: &quot;sample string 4&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AggregatedReport xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;Clusters&gt;
+    &lt;ReportCluster&gt;
+      &lt;ClusterId&gt;1&lt;/ClusterId&gt;
+      &lt;ClusterMasteryPercentage&gt;4.1&lt;/ClusterMasteryPercentage&gt;
+      &lt;ClusterSummary&gt;
+        &lt;AggregatedReportAssessmentStatus&gt;
+          &lt;Label&gt;sample string 2&lt;/Label&gt;
+          &lt;StatusType&gt;3&lt;/StatusType&gt;
+          &lt;Count&gt;1&lt;/Count&gt;
+        &lt;/AggregatedReportAssessmentStatus&gt;
+        &lt;AggregatedReportAssessmentStatus&gt;
+          &lt;Label&gt;sample string 2&lt;/Label&gt;
+          &lt;StatusType&gt;3&lt;/StatusType&gt;
+          &lt;Count&gt;1&lt;/Count&gt;
+        &lt;/AggregatedReportAssessmentStatus&gt;
+      &lt;/ClusterSummary&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;Groups&gt;
+        &lt;ReportGroup&gt;
+          &lt;GroupId&gt;1&lt;/GroupId&gt;
+          &lt;Parents&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+          &lt;/Parents&gt;
+          &lt;ReportGroupItems&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+          &lt;/ReportGroupItems&gt;
+        &lt;/ReportGroup&gt;
+        &lt;ReportGroup&gt;
+          &lt;GroupId&gt;1&lt;/GroupId&gt;
+          &lt;Parents&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+          &lt;/Parents&gt;
+          &lt;ReportGroupItems&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+          &lt;/ReportGroupItems&gt;
+        &lt;/ReportGroup&gt;
+      &lt;/Groups&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+    &lt;/ReportCluster&gt;
+    &lt;ReportCluster&gt;
+      &lt;ClusterId&gt;1&lt;/ClusterId&gt;
+      &lt;ClusterMasteryPercentage&gt;4.1&lt;/ClusterMasteryPercentage&gt;
+      &lt;ClusterSummary&gt;
+        &lt;AggregatedReportAssessmentStatus&gt;
+          &lt;Label&gt;sample string 2&lt;/Label&gt;
+          &lt;StatusType&gt;3&lt;/StatusType&gt;
+          &lt;Count&gt;1&lt;/Count&gt;
+        &lt;/AggregatedReportAssessmentStatus&gt;
+        &lt;AggregatedReportAssessmentStatus&gt;
+          &lt;Label&gt;sample string 2&lt;/Label&gt;
+          &lt;StatusType&gt;3&lt;/StatusType&gt;
+          &lt;Count&gt;1&lt;/Count&gt;
+        &lt;/AggregatedReportAssessmentStatus&gt;
+      &lt;/ClusterSummary&gt;
+      &lt;Description&gt;sample string 3&lt;/Description&gt;
+      &lt;Groups&gt;
+        &lt;ReportGroup&gt;
+          &lt;GroupId&gt;1&lt;/GroupId&gt;
+          &lt;Parents&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+          &lt;/Parents&gt;
+          &lt;ReportGroupItems&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+          &lt;/ReportGroupItems&gt;
+        &lt;/ReportGroup&gt;
+        &lt;ReportGroup&gt;
+          &lt;GroupId&gt;1&lt;/GroupId&gt;
+          &lt;Parents&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+            &lt;ReportLearningObjectiveParent&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;Id&gt;1&lt;/Id&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportLearningObjectiveParent&gt;
+          &lt;/Parents&gt;
+          &lt;ReportGroupItems&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+            &lt;ReportGroupItem&gt;
+              &lt;Description&gt;sample string 3&lt;/Description&gt;
+              &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+              &lt;Mastered&gt;true&lt;/Mastered&gt;
+              &lt;MasteredDate&gt;2026-03-07T16:36:58Z&lt;/MasteredDate&gt;
+              &lt;Status&gt;
+                &lt;Label&gt;sample string 1&lt;/Label&gt;
+                &lt;StatusType&gt;2&lt;/StatusType&gt;
+              &lt;/Status&gt;
+              &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;/ReportGroupItem&gt;
+          &lt;/ReportGroupItems&gt;
+        &lt;/ReportGroup&gt;
+      &lt;/Groups&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+    &lt;/ReportCluster&gt;
+  &lt;/Clusters&gt;
+  &lt;FullReportUrl&gt;sample string 4&lt;/FullReportUrl&gt;
+  &lt;SubjectId&gt;1&lt;/SubjectId&gt;
+  &lt;SubjectMasteryPercentage&gt;2.1&lt;/SubjectMasteryPercentage&gt;
+  &lt;SubjectSummary&gt;
+    &lt;AggregatedReportAssessmentStatus&gt;
+      &lt;Label&gt;sample string 2&lt;/Label&gt;
+      &lt;StatusType&gt;3&lt;/StatusType&gt;
+      &lt;Count&gt;1&lt;/Count&gt;
+    &lt;/AggregatedReportAssessmentStatus&gt;
+    &lt;AggregatedReportAssessmentStatus&gt;
+      &lt;Label&gt;sample string 2&lt;/Label&gt;
+      &lt;StatusType&gt;3&lt;/StatusType&gt;
+      &lt;Count&gt;1&lt;/Count&gt;
+    &lt;/AggregatedReportAssessmentStatus&gt;
+  &lt;/SubjectSummary&gt;
+  &lt;UseMastery&gt;true&lt;/UseMastery&gt;
+&lt;/AggregatedReport&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

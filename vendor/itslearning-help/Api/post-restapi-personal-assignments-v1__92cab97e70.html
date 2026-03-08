@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/assignments/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/assignments/v1</h1>
+<div>
+    <p>Create a new assignment in a course, in a specific folder.
+ This endpoint is currently not available using Oauth2.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Request with parameters required to create an assignment</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Requests.CreateAssignmentRequest">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Requests.CreateAssignmentRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ParentFolderId</td>
+                    <td class="parameter-documentation">
+                        <p>The folder to create the assignment in (must be a folder in a course).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsActive</td>
+                    <td class="parameter-documentation">
+                        <p>Set to true or false to make the element active or inactive.
+ Or you can use and to set a time range when the element is active.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveFrom</td>
+                    <td class="parameter-documentation">
+                        <p>Active from date and time in UTC. If set, the element will be active from this date.
+ If is set, and this one is null, the element will be active until .</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveTo</td>
+                    <td class="parameter-documentation">
+                        <p>Active to date and time in UTC. If set, the element will be active until this date.
+ If is set, and this one is null, the element will be active from and onwards.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssignTo</td>
+                    <td class="parameter-documentation">
+                        <p>Defines who to assign the element (e.g. assignment) to (specific users and/or groups).
+ If null, or if no specific Ids are provided, the assignment is assigned to all users in the parent folder.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssignTo">Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models.AssignTo</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningObjectivesIds</td>
+                    <td class="parameter-documentation">
+                        <p>List of learning objective IDs to associate with this assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Deadline</td>
+                    <td class="parameter-documentation">
+                        <p>Deadline date and time in UTC. If null, there is no deadline.
+ See also .</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSubmissionAfterDeadlineAllowed</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether submission after the deadline is allowed.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentStatusId</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment status id ("not submitted", "completed" etc) used for the assignment, will be null if no status is used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AssessmentId</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment id (grades / assessment scale) used for the assignment, will be null if assessment scale is not used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MaxScore</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AddToAssessmentRecord</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TermId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAnonymous</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether submission is anonymous.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsHomework</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether the assignment is a homework assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsMandatory</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether submission is mandatory.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompletionMode</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether submission of an answer is required for this assignment, or if it can be marked as completed without submission.
+ ElementCompletionMode.ManualByTeacher and ElementCompletionMode.ManualByStudent means that assignment is in "task" mode,
+ otherwise submission is required - standard old assignment functionality.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.Common.Entities.ElementCompletionMode">Itslearning.Platform.RestApi.Sdk.Common.Entities.ElementCompletionMode</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ExcludeFromTeacherTaskList</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether to exclude from teacher's follow-up tasks or not.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The description text for the assignment, which may contain HTML and embedded files (e.g. images).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UsePlagiarismCheck</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether answers will be checked for plagiarism. When true there are some restrictions on the files that can be uploaded.
+ Will not be possible to set this to true if the customer does not have a plagiarism check service configured.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ShowPlagiarismResultsToStudents</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether plagiarism results will be shown to students.
+ Depends on being true.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SubmissionType</td>
+                    <td class="parameter-documentation">
+                        <p>Submission type for the assignment</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Enums.AssignmentSubmissionType">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Enums.AssignmentSubmissionType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PeersToAssessCount</td>
+                    <td class="parameter-documentation">
+                        <p>How many students should each student peer assess. null means that peer assessment is not used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsPeerAssessmentAnonymous</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether peer assessment is anonymous.
+ Only relevant if is set.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSelfAssessmentRequired</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether self-assessment is required.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAssessmentVisibleForStudents</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether the assessment is visible for students.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CustomLabelId</td>
+                    <td class="parameter-documentation">
+                        <p>Set a custom label ID to associate with this assignment.
+ If null (or equal to 0), no custom label is associated.
+ The custom labels are defined at site level, currently only supported for assignments.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">WorkloadEstimationInMinutes</td>
+                    <td class="parameter-documentation">
+                        <p>Estimated workload in minutes for completing the assignment. If null, no estimation is set and "Workload" is not being used.
+ Workload is an optional feature that must be enabled at site level to be visible in the UI.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Files</td>
+                    <td class="parameter-documentation">
+                        <p>Attachments to be added to the assignment.
+ Files (e.g. images) embedded in , should NOT be included here.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.FileUpload.UploadedTempFile">Itsolutions.Itslearning.Web.RestApi.Personal.FileUpload.UploadedTempFile</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;ParentFolderId&quot;: 1,
+  &quot;Title&quot;: &quot;sample string 2&quot;,
+  &quot;IsActive&quot;: true,
+  &quot;ActiveFrom&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;ActiveTo&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;AssignTo&quot;: {
+    &quot;ParticipantIds&quot;: [
+      1,
+      2
+    ],
+    &quot;GroupIds&quot;: [
+      1,
+      2
+    ]
+  },
+  &quot;LearningObjectivesIds&quot;: [
+    1,
+    2
+  ],
+  &quot;Deadline&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;IsSubmissionAfterDeadlineAllowed&quot;: true,
+  &quot;AssessmentStatusId&quot;: 1,
+  &quot;AssessmentId&quot;: 1,
+  &quot;MaxScore&quot;: 1.1,
+  &quot;AddToAssessmentRecord&quot;: true,
+  &quot;TermId&quot;: 1,
+  &quot;IsAnonymous&quot;: true,
+  &quot;IsHomework&quot;: true,
+  &quot;IsMandatory&quot;: true,
+  &quot;CompletionMode&quot;: 1,
+  &quot;ExcludeFromTeacherTaskList&quot;: true,
+  &quot;Text&quot;: &quot;sample string 8&quot;,
+  &quot;UsePlagiarismCheck&quot;: true,
+  &quot;ShowPlagiarismResultsToStudents&quot;: true,
+  &quot;SubmissionType&quot;: 0,
+  &quot;PeersToAssessCount&quot;: 1,
+  &quot;IsPeerAssessmentAnonymous&quot;: true,
+  &quot;IsSelfAssessmentRequired&quot;: true,
+  &quot;IsAssessmentVisibleForStudents&quot;: true,
+  &quot;CustomLabelId&quot;: 1,
+  &quot;WorkloadEstimationInMinutes&quot;: 1,
+  &quot;Files&quot;: [
+    {
+      &quot;FileRepoId&quot;: &quot;sample string 1&quot;,
+      &quot;SignedFileRepoId&quot;: &quot;sample string 2&quot;,
+      &quot;Name&quot;: &quot;sample string 3&quot;,
+      &quot;MimeType&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;FileRepoId&quot;: &quot;sample string 1&quot;,
+      &quot;SignedFileRepoId&quot;: &quot;sample string 2&quot;,
+      &quot;Name&quot;: &quot;sample string 3&quot;,
+      &quot;MimeType&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CreateAssignmentRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Requests&quot;&gt;
+  &lt;ActiveFrom&gt;2026-03-07T09:02:56Z&lt;/ActiveFrom&gt;
+  &lt;ActiveTo&gt;2026-03-07T09:02:56Z&lt;/ActiveTo&gt;
+  &lt;AddToAssessmentRecord&gt;true&lt;/AddToAssessmentRecord&gt;
+  &lt;AssessmentId&gt;1&lt;/AssessmentId&gt;
+  &lt;AssessmentStatusId&gt;1&lt;/AssessmentStatusId&gt;
+  &lt;AssignTo xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Element.Models&quot;&gt;
+    &lt;d2p1:GroupIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:int&gt;1&lt;/d3p1:int&gt;
+      &lt;d3p1:int&gt;2&lt;/d3p1:int&gt;
+    &lt;/d2p1:GroupIds&gt;
+    &lt;d2p1:ParticipantIds xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:int&gt;1&lt;/d3p1:int&gt;
+      &lt;d3p1:int&gt;2&lt;/d3p1:int&gt;
+    &lt;/d2p1:ParticipantIds&gt;
+  &lt;/AssignTo&gt;
+  &lt;CompletionMode&gt;NotApplicable&lt;/CompletionMode&gt;
+  &lt;CustomLabelId&gt;1&lt;/CustomLabelId&gt;
+  &lt;Deadline&gt;2026-03-07T09:02:56Z&lt;/Deadline&gt;
+  &lt;ExcludeFromTeacherTaskList&gt;true&lt;/ExcludeFromTeacherTaskList&gt;
+  &lt;Files xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.FileUpload&quot;&gt;
+    &lt;d2p1:UploadedTempFile&gt;
+      &lt;d2p1:FileRepoId&gt;sample string 1&lt;/d2p1:FileRepoId&gt;
+      &lt;d2p1:MimeType&gt;sample string 4&lt;/d2p1:MimeType&gt;
+      &lt;d2p1:Name&gt;sample string 3&lt;/d2p1:Name&gt;
+      &lt;d2p1:SignedFileRepoId&gt;sample string 2&lt;/d2p1:SignedFileRepoId&gt;
+    &lt;/d2p1:UploadedTempFile&gt;
+    &lt;d2p1:UploadedTempFile&gt;
+      &lt;d2p1:FileRepoId&gt;sample string 1&lt;/d2p1:FileRepoId&gt;
+      &lt;d2p1:MimeType&gt;sample string 4&lt;/d2p1:MimeType&gt;
+      &lt;d2p1:Name&gt;sample string 3&lt;/d2p1:Name&gt;
+      &lt;d2p1:SignedFileRepoId&gt;sample string 2&lt;/d2p1:SignedFileRepoId&gt;
+    &lt;/d2p1:UploadedTempFile&gt;
+  &lt;/Files&gt;
+  &lt;IsActive&gt;true&lt;/IsActive&gt;
+  &lt;IsAnonymous&gt;true&lt;/IsAnonymous&gt;
+  &lt;IsAssessmentVisibleForStudents&gt;true&lt;/IsAssessmentVisibleForStudents&gt;
+  &lt;IsHomework&gt;true&lt;/IsHomework&gt;
+  &lt;IsMandatory&gt;true&lt;/IsMandatory&gt;
+  &lt;IsPeerAssessmentAnonymous&gt;true&lt;/IsPeerAssessmentAnonymous&gt;
+  &lt;IsSelfAssessmentRequired&gt;true&lt;/IsSelfAssessmentRequired&gt;
+  &lt;IsSubmissionAfterDeadlineAllowed&gt;true&lt;/IsSubmissionAfterDeadlineAllowed&gt;
+  &lt;LearningObjectivesIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/LearningObjectivesIds&gt;
+  &lt;MaxScore&gt;1.1&lt;/MaxScore&gt;
+  &lt;ParentFolderId&gt;1&lt;/ParentFolderId&gt;
+  &lt;PeersToAssessCount&gt;1&lt;/PeersToAssessCount&gt;
+  &lt;ShowPlagiarismResultsToStudents&gt;true&lt;/ShowPlagiarismResultsToStudents&gt;
+  &lt;SubmissionType&gt;Individual&lt;/SubmissionType&gt;
+  &lt;TermId&gt;1&lt;/TermId&gt;
+  &lt;Text&gt;sample string 8&lt;/Text&gt;
+  &lt;Title&gt;sample string 2&lt;/Title&gt;
+  &lt;UsePlagiarismCheck&gt;true&lt;/UsePlagiarismCheck&gt;
+  &lt;WorkloadEstimationInMinutes&gt;1&lt;/WorkloadEstimationInMinutes&gt;
+&lt;/CreateAssignmentRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+integer
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+1
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;int xmlns=&quot;http://schemas.microsoft.com/2003/10/Serialization/&quot;&gt;1&lt;/int&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

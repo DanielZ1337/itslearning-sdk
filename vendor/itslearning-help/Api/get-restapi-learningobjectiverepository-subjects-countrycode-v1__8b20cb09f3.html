@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/learningobjectiverepository/subjects/{countryCode}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/learningobjectiverepository/subjects/{countryCode}/v1</h1>
+<div>
+    <p>Retrieves the Subjects that have been defined for the given Country code.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">countryCode</td>
+                    <td class="parameter-documentation">
+                        <p>Country to retrieve subjects for</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>A collection with Subjects.</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LearningObjectiveRepository.SubjectLabel">Itslearning.RestApi.Entities.LearningObjectiveRepository.SubjectLabel</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Id of the subject label</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Name of the subject label</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Aliases</td>
+                    <td class="parameter-documentation">
+                        <p>Collection of aliases belonging to this subject label</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of string
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CountryCode</td>
+                    <td class="parameter-documentation">
+                        <p>Country code belonging to this subject label</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Id&quot;: 1,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Aliases&quot;: [
+      &quot;sample string 1&quot;,
+      &quot;sample string 2&quot;
+    ],
+    &quot;CountryCode&quot;: &quot;sample string 3&quot;
+  },
+  {
+    &quot;Id&quot;: 1,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Aliases&quot;: [
+      &quot;sample string 1&quot;,
+      &quot;sample string 2&quot;
+    ],
+    &quot;CountryCode&quot;: &quot;sample string 3&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfSubjectLabel xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;SubjectLabel&gt;
+    &lt;Aliases xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:string&gt;sample string 1&lt;/d3p1:string&gt;
+      &lt;d3p1:string&gt;sample string 2&lt;/d3p1:string&gt;
+    &lt;/Aliases&gt;
+    &lt;CountryCode&gt;sample string 3&lt;/CountryCode&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/SubjectLabel&gt;
+  &lt;SubjectLabel&gt;
+    &lt;Aliases xmlns:d3p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+      &lt;d3p1:string&gt;sample string 1&lt;/d3p1:string&gt;
+      &lt;d3p1:string&gt;sample string 2&lt;/d3p1:string&gt;
+    &lt;/Aliases&gt;
+    &lt;CountryCode&gt;sample string 3&lt;/CountryCode&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;/SubjectLabel&gt;
+&lt;/ArrayOfSubjectLabel&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

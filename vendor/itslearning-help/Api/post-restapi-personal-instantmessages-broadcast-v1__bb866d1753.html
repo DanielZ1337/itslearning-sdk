@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/instantmessages/broadcast/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/instantmessages/broadcast/v1</h1>
+<div>
+    <p>Send a broadcast instant message. Creates a new thread for a new broadcast message.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.BroadcastInstantMessageToSend">Itslearning.RestApi.Entities.BroadcastInstantMessageToSend</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">SenderName</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the sender (can be site or a school name or custromized by admin) to assign as the thread's name</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SenderHierarchyId</td>
+                    <td class="parameter-documentation">
+                        <p>Id of sender's hierarchy</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseIds</td>
+                    <td class="parameter-documentation">
+                        <p>CourseIds to send instant message to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProjectIds</td>
+                    <td class="parameter-documentation">
+                        <p>ProjectIds to send instant message to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HierarchyIds</td>
+                    <td class="parameter-documentation">
+                        <p>HierarchyIds to send instant message to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RecipientRoles</td>
+                    <td class="parameter-documentation">
+                        <p>The list of roles in specified hierarchies to send instant message to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageRecipientRole">Itslearning.RestApi.Entities.InstantMessageRecipientRole</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ProfileIds</td>
+                    <td class="parameter-documentation">
+                        <p>The list of person profile ids to send instant message to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileIds</td>
+                    <td class="parameter-documentation">
+                        <p>Guids of files already uploaded to temporary file repo storage</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of string
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ToPersonIds</td>
+                    <td class="parameter-documentation">
+                        <p>PersonIds to send instant message to. A new thread will be created if the persons don't have an
+ existing thread already. The ToPersonIds or the InstantMessageThreadId
+ or CourseIds or ProjectIds
+ need to have a valid value.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The thread to send to, if this is null or zero we will assume it's a new thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text of the message</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SendAsIndividualMessages</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether a message to multiple recipients should be sent as individual messages</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;SenderName&quot;: &quot;sample string 1&quot;,
+  &quot;SenderHierarchyId&quot;: 2,
+  &quot;CourseIds&quot;: [
+    1,
+    2
+  ],
+  &quot;ProjectIds&quot;: [
+    1,
+    2
+  ],
+  &quot;HierarchyIds&quot;: [
+    1,
+    2
+  ],
+  &quot;RecipientRoles&quot;: [
+    &quot;Guest&quot;,
+    &quot;Guest&quot;
+  ],
+  &quot;ProfileIds&quot;: [
+    1,
+    2
+  ],
+  &quot;FileIds&quot;: [
+    &quot;sample string 1&quot;,
+    &quot;sample string 2&quot;
+  ],
+  &quot;ToPersonIds&quot;: [
+    1,
+    2
+  ],
+  &quot;InstantMessageThreadId&quot;: 1,
+  &quot;Text&quot;: &quot;sample string 3&quot;,
+  &quot;SendAsIndividualMessages&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;BroadcastInstantMessageToSend xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;InstantMessageThreadId&gt;1&lt;/InstantMessageThreadId&gt;
+  &lt;SendAsIndividualMessages&gt;true&lt;/SendAsIndividualMessages&gt;
+  &lt;Text&gt;sample string 3&lt;/Text&gt;
+  &lt;ToPersonIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/ToPersonIds&gt;
+  &lt;SenderHierarchyId&gt;2&lt;/SenderHierarchyId&gt;
+&lt;/BroadcastInstantMessageToSend&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

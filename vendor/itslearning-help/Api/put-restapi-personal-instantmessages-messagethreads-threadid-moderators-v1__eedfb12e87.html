@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/instantmessages/messagethreads/{threadId}/moderators/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/instantmessages/messagethreads/{threadId}/moderators/v1</h1>
+<div>
+    <p>Adds moderator to an instant message thread.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">threadId</td>
+                    <td class="parameter-documentation">
+                        <p>The instant message thread Id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The modified instant message thread</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.InstantMessageThreadUpdateV1">Itslearning.RestApi.Entities.Updatable.InstantMessageThreadUpdateV1</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The Id of the message thread to update</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UpdateName</td>
+                    <td class="parameter-documentation">
+                        <p>Determines if the name should be updated</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UpdateParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Determines if the list of participants should be updated</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>The new name of the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PersonIds</td>
+                    <td class="parameter-documentation">
+                        <p>PersonIds to send instant message to. A new thread will be created if the persons don't have an
+ existing thread already. The ToPersonIds or the InstantMessageThreadId
+ need to have a valid value.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ToggleEnableDisableReplies</td>
+                    <td class="parameter-documentation">
+                        <p>Determines if the option to send to close the conversation should be updated</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RepliesAreEnabled</td>
+                    <td class="parameter-documentation">
+                        <p>Whether students can reply to the conversation or not</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;InstantMessageThreadId&quot;: 1,
+  &quot;UpdateName&quot;: true,
+  &quot;UpdateParticipants&quot;: true,
+  &quot;Name&quot;: &quot;sample string 4&quot;,
+  &quot;PersonIds&quot;: [
+    1,
+    2
+  ],
+  &quot;ToggleEnableDisableReplies&quot;: true,
+  &quot;RepliesAreEnabled&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;InstantMessageThreadUpdateV1 xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Updatable&quot;&gt;
+  &lt;InstantMessageThreadId&gt;1&lt;/InstantMessageThreadId&gt;
+  &lt;Name&gt;sample string 4&lt;/Name&gt;
+  &lt;PersonIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/PersonIds&gt;
+  &lt;RepliesAreEnabled&gt;true&lt;/RepliesAreEnabled&gt;
+  &lt;ToggleEnableDisableReplies&gt;true&lt;/ToggleEnableDisableReplies&gt;
+  &lt;UpdateName&gt;true&lt;/UpdateName&gt;
+  &lt;UpdateParticipants&gt;true&lt;/UpdateParticipants&gt;
+&lt;/InstantMessageThreadUpdateV1&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The updated instant message thread</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageThread">Itslearning.RestApi.Entities.InstantMessageThread</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier for the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Created</td>
+                    <td class="parameter-documentation">
+                        <p>The date the thread was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByTeacher</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether the user who created thread is a teacher.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedBy</td>
+                    <td class="parameter-documentation">
+                        <p>The person identifier who has created the thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>The type of thread this is
+ <p>
+ Valid values are 'Course', 'Project', 'Group', 'OneToOne' and 'GroupPlaceHolder'
+ </p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColorSchema</td>
+                    <td class="parameter-documentation">
+                        <p>The colorSchema for this thread. Only applies if type is 'Course'</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Messages</td>
+                    <td class="parameter-documentation">
+                        <p>Some message in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.InstantMessage">EntityListOfItslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The last message in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MatchingMessageIds</td>
+                    <td class="parameter-documentation">
+                        <p>The id's of all messages in the thread that match the search query (if any)</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer, 64 bit
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Participants</td>
+                    <td class="parameter-documentation">
+                        <p>An array of participants in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ThreadParticipant">Itslearning.RestApi.Entities.ThreadParticipant</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ParticipantsCount</td>
+                    <td class="parameter-documentation">
+                        <p>Number of participants in the thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasActiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current thread has any recipients except current user who are able to receive messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasInactiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current thread has any recipients except current user who are not able to receive messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">NumberOfInactiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Number of persons who are not able to receive messages in a conversation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InactiveParticipantFullName</td>
+                    <td class="parameter-documentation">
+                        <p>Full name of person who are not able to receive messages in case if there's the only one such person
+ in a conversation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasCreatorInThread</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether person who created current thread is still in the list of its participants.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsCurrentUserARecipientWithSourceLocation</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current person is in the list of current thread participants
+ as course/project/collaboration/hierarchy member.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationRecipients</td>
+                    <td class="parameter-documentation">
+                        <p>An array of location recipients in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationRecipient">Itslearning.RestApi.Entities.LocationRecipient</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanShowParticipantsPage</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether course participants page is allowed to be seen.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastReadInstantMessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the last read instant message if there is one</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SortIndex</td>
+                    <td class="parameter-documentation">
+                        <p>A number that the threads will be sorted by. Highest number is shown as the thread with most recent update (contains newest message).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OnlyThreadAdminCanSendToThread</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether only thread admins can send to this thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsThreadAdministrator</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether the current user is an administrator of this thread
+ Only course threads have administrators</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsThreadModerator</td>
+                    <td class="parameter-documentation">
+                        <p>Thread moderator have additional permissions to moderate the thread:
+ to close or delete the thread, delete individual messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InstantMessageLocationId</td>
+                    <td class="parameter-documentation">
+                        <p>The location identifier for the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsBlocked</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread is blocked.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserAllowToBlockThread</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread can be blocked by current user.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuse</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread is abusive (marked as abusive by the current user
+ or the current user got a report message about abuse).</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuseReportedByCurrentUser</td>
+                    <td class="parameter-documentation">
+                        <p>Contains true if the current person has sent a report message that the thread is abusive.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MassMessageType</td>
+                    <td class="parameter-documentation">
+                        <p>Determines types of messages in thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageMassMessageType">Itslearning.RestApi.Entities.InstantMessageMassMessageType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Tooltip</td>
+                    <td class="parameter-documentation">
+                        <p>Tooltip to be displayed on the thread title.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanDelete</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread can be hard deleted.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;InstantMessageThreadId&quot;: 1,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;CreatedByTeacher&quot;: true,
+  &quot;CreatedBy&quot;: 5,
+  &quot;Type&quot;: &quot;sample string 6&quot;,
+  &quot;ColorSchema&quot;: &quot;sample string 7&quot;,
+  &quot;Messages&quot;: {
+    &quot;EntityArray&quot;: [
+      {
+        &quot;MessageId&quot;: 1,
+        &quot;MessageThreadId&quot;: 2,
+        &quot;InstantMessageThreadId&quot;: 3,
+        &quot;MessageThreadParticipants&quot;: [
+          {
+            &quot;PersonId&quot;: 1,
+            &quot;Name&quot;: &quot;sample string 1&quot;,
+            &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+            &quot;LocationType&quot;: 1,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;PersonId&quot;: 1,
+            &quot;Name&quot;: &quot;sample string 1&quot;,
+            &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+            &quot;LocationType&quot;: 1,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+        &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+        &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+        &quot;CreatedBy&quot;: 8,
+        &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+        &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+        &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+        &quot;Text&quot;: &quot;sample string 12&quot;,
+        &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+        &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+        &quot;Link&quot;: &quot;sample string 15&quot;,
+        &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+        &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+        &quot;IsSystemMessage&quot;: true,
+        &quot;IsDeleted&quot;: true,
+        &quot;DeletedBy&quot;: 20,
+        &quot;CanDelete&quot;: true,
+        &quot;IsEdited&quot;: true,
+        &quot;CanEdit&quot;: true,
+        &quot;IsStarred&quot;: true,
+        &quot;IsSilent&quot;: true,
+        &quot;IsAbuse&quot;: true,
+        &quot;HasShared&quot;: true,
+        &quot;HasRepliedTo&quot;: true,
+        &quot;HasAbuseReported&quot;: true,
+        &quot;HasAbuseThreadReported&quot;: true,
+        &quot;OriginInstantMessage&quot;: {
+          &quot;MessageId&quot;: 1,
+          &quot;MessageThreadId&quot;: 2,
+          &quot;InstantMessageThreadId&quot;: 3,
+          &quot;MessageThreadParticipants&quot;: [
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            },
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            }
+          ],
+          &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+          &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+          &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+          &quot;CreatedBy&quot;: 8,
+          &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+          &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+          &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+          &quot;Text&quot;: &quot;sample string 12&quot;,
+          &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+          &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+          &quot;Link&quot;: &quot;sample string 15&quot;,
+          &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+          &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+          &quot;IsSystemMessage&quot;: true,
+          &quot;IsDeleted&quot;: true,
+          &quot;DeletedBy&quot;: 20,
+          &quot;CanDelete&quot;: true,
+          &quot;IsEdited&quot;: true,
+          &quot;CanEdit&quot;: true,
+          &quot;IsStarred&quot;: true,
+          &quot;IsSilent&quot;: true,
+          &quot;IsAbuse&quot;: true,
+          &quot;HasShared&quot;: true,
+          &quot;HasRepliedTo&quot;: true,
+          &quot;HasAbuseReported&quot;: true,
+          &quot;HasAbuseThreadReported&quot;: true,
+          &quot;OriginInstantMessage&quot;: null,
+          &quot;OriginInstantMessageThreadId&quot;: 1,
+          &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+          &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+          &quot;ChildMessage&quot;: null,
+          &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+          &quot;IsBroadcastMassMessage&quot;: true,
+          &quot;IsChildMessageDeletedPermanently&quot;: true,
+          &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+          &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+          &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+          &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+        },
+        &quot;OriginInstantMessageThreadId&quot;: 1,
+        &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+        &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+        &quot;ChildMessage&quot;: {
+          &quot;MessageId&quot;: 1,
+          &quot;MessageThreadId&quot;: 2,
+          &quot;InstantMessageThreadId&quot;: 3,
+          &quot;MessageThreadParticipants&quot;: [
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            },
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            }
+          ],
+          &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+          &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+          &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+          &quot;CreatedBy&quot;: 8,
+          &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+          &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+          &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+          &quot;Text&quot;: &quot;sample string 12&quot;,
+          &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+          &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+          &quot;Link&quot;: &quot;sample string 15&quot;,
+          &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+          &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+          &quot;IsSystemMessage&quot;: true,
+          &quot;IsDeleted&quot;: true,
+          &quot;DeletedBy&quot;: 20,
+          &quot;CanDelete&quot;: true,
+          &quot;IsEdited&quot;: true,
+          &quot;CanEdit&quot;: true,
+          &quot;IsStarred&quot;: true,
+          &quot;IsSilent&quot;: true,
+          &quot;IsAbuse&quot;: true,
+          &quot;HasShared&quot;: true,
+          &quot;HasRepliedTo&quot;: true,
+          &quot;HasAbuseReported&quot;: true,
+          &quot;HasAbuseThreadReported&quot;: true,
+          &quot;OriginInstantMessage&quot;: null,
+          &quot;OriginInstantMessageThreadId&quot;: 1,
+          &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+          &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+          &quot;ChildMessage&quot;: null,
+          &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+          &quot;IsBroadcastMassMessage&quot;: true,
+          &quot;IsChildMessageDeletedPermanently&quot;: true,
+          &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+          &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+          &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+          &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+        },
+        &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+        &quot;IsBroadcastMassMessage&quot;: true,
+        &quot;IsChildMessageDeletedPermanently&quot;: true,
+        &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+        &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+        &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+        &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+      },
+      {
+        &quot;MessageId&quot;: 1,
+        &quot;MessageThreadId&quot;: 2,
+        &quot;InstantMessageThreadId&quot;: 3,
+        &quot;MessageThreadParticipants&quot;: [
+          {
+            &quot;PersonId&quot;: 1,
+            &quot;Name&quot;: &quot;sample string 1&quot;,
+            &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+            &quot;LocationType&quot;: 1,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;PersonId&quot;: 1,
+            &quot;Name&quot;: &quot;sample string 1&quot;,
+            &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+            &quot;LocationType&quot;: 1,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+        &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+        &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+        &quot;CreatedBy&quot;: 8,
+        &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+        &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+        &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+        &quot;Text&quot;: &quot;sample string 12&quot;,
+        &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+        &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+        &quot;Link&quot;: &quot;sample string 15&quot;,
+        &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+        &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+        &quot;IsSystemMessage&quot;: true,
+        &quot;IsDeleted&quot;: true,
+        &quot;DeletedBy&quot;: 20,
+        &quot;CanDelete&quot;: true,
+        &quot;IsEdited&quot;: true,
+        &quot;CanEdit&quot;: true,
+        &quot;IsStarred&quot;: true,
+        &quot;IsSilent&quot;: true,
+        &quot;IsAbuse&quot;: true,
+        &quot;HasShared&quot;: true,
+        &quot;HasRepliedTo&quot;: true,
+        &quot;HasAbuseReported&quot;: true,
+        &quot;HasAbuseThreadReported&quot;: true,
+        &quot;OriginInstantMessage&quot;: {
+          &quot;MessageId&quot;: 1,
+          &quot;MessageThreadId&quot;: 2,
+          &quot;InstantMessageThreadId&quot;: 3,
+          &quot;MessageThreadParticipants&quot;: [
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            },
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            }
+          ],
+          &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+          &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+          &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+          &quot;CreatedBy&quot;: 8,
+          &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+          &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+          &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+          &quot;Text&quot;: &quot;sample string 12&quot;,
+          &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+          &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+          &quot;Link&quot;: &quot;sample string 15&quot;,
+          &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+          &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+          &quot;IsSystemMessage&quot;: true,
+          &quot;IsDeleted&quot;: true,
+          &quot;DeletedBy&quot;: 20,
+          &quot;CanDelete&quot;: true,
+          &quot;IsEdited&quot;: true,
+          &quot;CanEdit&quot;: true,
+          &quot;IsStarred&quot;: true,
+          &quot;IsSilent&quot;: true,
+          &quot;IsAbuse&quot;: true,
+          &quot;HasShared&quot;: true,
+          &quot;HasRepliedTo&quot;: true,
+          &quot;HasAbuseReported&quot;: true,
+          &quot;HasAbuseThreadReported&quot;: true,
+          &quot;OriginInstantMessage&quot;: null,
+          &quot;OriginInstantMessageThreadId&quot;: 1,
+          &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+          &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+          &quot;ChildMessage&quot;: null,
+          &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+          &quot;IsBroadcastMassMessage&quot;: true,
+          &quot;IsChildMessageDeletedPermanently&quot;: true,
+          &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+          &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+          &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+          &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+        },
+        &quot;OriginInstantMessageThreadId&quot;: 1,
+        &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+        &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+        &quot;ChildMessage&quot;: {
+          &quot;MessageId&quot;: 1,
+          &quot;MessageThreadId&quot;: 2,
+          &quot;InstantMessageThreadId&quot;: 3,
+          &quot;MessageThreadParticipants&quot;: [
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            },
+            {
+              &quot;PersonId&quot;: 1,
+              &quot;Name&quot;: &quot;sample string 1&quot;,
+              &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+              &quot;LocationType&quot;: 1,
+              &quot;LocationId&quot;: 1
+            }
+          ],
+          &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+          &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+          &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+          &quot;CreatedBy&quot;: 8,
+          &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+          &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+          &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+          &quot;Text&quot;: &quot;sample string 12&quot;,
+          &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+          &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+          &quot;Link&quot;: &quot;sample string 15&quot;,
+          &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+          &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+          &quot;IsSystemMessage&quot;: true,
+          &quot;IsDeleted&quot;: true,
+          &quot;DeletedBy&quot;: 20,
+          &quot;CanDelete&quot;: true,
+          &quot;IsEdited&quot;: true,
+          &quot;CanEdit&quot;: true,
+          &quot;IsStarred&quot;: true,
+          &quot;IsSilent&quot;: true,
+          &quot;IsAbuse&quot;: true,
+          &quot;HasShared&quot;: true,
+          &quot;HasRepliedTo&quot;: true,
+          &quot;HasAbuseReported&quot;: true,
+          &quot;HasAbuseThreadReported&quot;: true,
+          &quot;OriginInstantMessage&quot;: null,
+          &quot;OriginInstantMessageThreadId&quot;: 1,
+          &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+          &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+          &quot;ChildMessage&quot;: null,
+          &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+          &quot;IsBroadcastMassMessage&quot;: true,
+          &quot;IsChildMessageDeletedPermanently&quot;: true,
+          &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+          &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+          &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+          &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+          &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+        },
+        &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+        &quot;IsBroadcastMassMessage&quot;: true,
+        &quot;IsChildMessageDeletedPermanently&quot;: true,
+        &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+        &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+        &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+        &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+      }
+    ],
+    &quot;Total&quot;: 1,
+    &quot;CurrentPageIndex&quot;: 2,
+    &quot;PageSize&quot;: 3
+  },
+  &quot;LastMessage&quot;: {
+    &quot;MessageId&quot;: 1,
+    &quot;MessageThreadId&quot;: 2,
+    &quot;InstantMessageThreadId&quot;: 3,
+    &quot;MessageThreadParticipants&quot;: [
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      },
+      {
+        &quot;PersonId&quot;: 1,
+        &quot;Name&quot;: &quot;sample string 1&quot;,
+        &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+        &quot;LocationType&quot;: 1,
+        &quot;LocationId&quot;: 1
+      }
+    ],
+    &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+    &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+    &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+    &quot;CreatedBy&quot;: 8,
+    &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+    &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+    &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+    &quot;Text&quot;: &quot;sample string 12&quot;,
+    &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+    &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+    &quot;Link&quot;: &quot;sample string 15&quot;,
+    &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+    &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+    &quot;IsSystemMessage&quot;: true,
+    &quot;IsDeleted&quot;: true,
+    &quot;DeletedBy&quot;: 20,
+    &quot;CanDelete&quot;: true,
+    &quot;IsEdited&quot;: true,
+    &quot;CanEdit&quot;: true,
+    &quot;IsStarred&quot;: true,
+    &quot;IsSilent&quot;: true,
+    &quot;IsAbuse&quot;: true,
+    &quot;HasShared&quot;: true,
+    &quot;HasRepliedTo&quot;: true,
+    &quot;HasAbuseReported&quot;: true,
+    &quot;HasAbuseThreadReported&quot;: true,
+    &quot;OriginInstantMessage&quot;: {
+      &quot;MessageId&quot;: 1,
+      &quot;MessageThreadId&quot;: 2,
+      &quot;InstantMessageThreadId&quot;: 3,
+      &quot;MessageThreadParticipants&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;Name&quot;: &quot;sample string 1&quot;,
+          &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+          &quot;LocationType&quot;: 1,
+          &quot;LocationId&quot;: 1
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;Name&quot;: &quot;sample string 1&quot;,
+          &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+          &quot;LocationType&quot;: 1,
+          &quot;LocationId&quot;: 1
+        }
+      ],
+      &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+      &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+      &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+      &quot;CreatedBy&quot;: 8,
+      &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+      &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+      &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+      &quot;Text&quot;: &quot;sample string 12&quot;,
+      &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+      &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+      &quot;Link&quot;: &quot;sample string 15&quot;,
+      &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+      &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+      &quot;IsSystemMessage&quot;: true,
+      &quot;IsDeleted&quot;: true,
+      &quot;DeletedBy&quot;: 20,
+      &quot;CanDelete&quot;: true,
+      &quot;IsEdited&quot;: true,
+      &quot;CanEdit&quot;: true,
+      &quot;IsStarred&quot;: true,
+      &quot;IsSilent&quot;: true,
+      &quot;IsAbuse&quot;: true,
+      &quot;HasShared&quot;: true,
+      &quot;HasRepliedTo&quot;: true,
+      &quot;HasAbuseReported&quot;: true,
+      &quot;HasAbuseThreadReported&quot;: true,
+      &quot;OriginInstantMessage&quot;: null,
+      &quot;OriginInstantMessageThreadId&quot;: 1,
+      &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+      &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+      &quot;ChildMessage&quot;: null,
+      &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+      &quot;IsBroadcastMassMessage&quot;: true,
+      &quot;IsChildMessageDeletedPermanently&quot;: true,
+      &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+      &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+      &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+      &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+    },
+    &quot;OriginInstantMessageThreadId&quot;: 1,
+    &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+    &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+    &quot;ChildMessage&quot;: {
+      &quot;MessageId&quot;: 1,
+      &quot;MessageThreadId&quot;: 2,
+      &quot;InstantMessageThreadId&quot;: 3,
+      &quot;MessageThreadParticipants&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;Name&quot;: &quot;sample string 1&quot;,
+          &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+          &quot;LocationType&quot;: 1,
+          &quot;LocationId&quot;: 1
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;Name&quot;: &quot;sample string 1&quot;,
+          &quot;AvatarUrl&quot;: &quot;sample string 2&quot;,
+          &quot;LocationType&quot;: 1,
+          &quot;LocationId&quot;: 1
+        }
+      ],
+      &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;CreatedFormatted&quot;: &quot;sample string 5&quot;,
+      &quot;CreatedRelative&quot;: &quot;sample string 6&quot;,
+      &quot;EditedRelative&quot;: &quot;sample string 7&quot;,
+      &quot;CreatedBy&quot;: 8,
+      &quot;CreatedByName&quot;: &quot;sample string 9&quot;,
+      &quot;HomeOrganization&quot;: &quot;sample string 10&quot;,
+      &quot;CreatedByAvatar&quot;: &quot;sample string 11&quot;,
+      &quot;Text&quot;: &quot;sample string 12&quot;,
+      &quot;AttachmentUrl&quot;: &quot;sample string 13&quot;,
+      &quot;AttachmentName&quot;: &quot;sample string 14&quot;,
+      &quot;Link&quot;: &quot;sample string 15&quot;,
+      &quot;LinkTitle&quot;: &quot;sample string 16&quot;,
+      &quot;LinkTarget&quot;: &quot;sample string 17&quot;,
+      &quot;IsSystemMessage&quot;: true,
+      &quot;IsDeleted&quot;: true,
+      &quot;DeletedBy&quot;: 20,
+      &quot;CanDelete&quot;: true,
+      &quot;IsEdited&quot;: true,
+      &quot;CanEdit&quot;: true,
+      &quot;IsStarred&quot;: true,
+      &quot;IsSilent&quot;: true,
+      &quot;IsAbuse&quot;: true,
+      &quot;HasShared&quot;: true,
+      &quot;HasRepliedTo&quot;: true,
+      &quot;HasAbuseReported&quot;: true,
+      &quot;HasAbuseThreadReported&quot;: true,
+      &quot;OriginInstantMessage&quot;: null,
+      &quot;OriginInstantMessageThreadId&quot;: 1,
+      &quot;OriginInstantMessageThreadDeletedBy&quot;: 1,
+      &quot;OriginInstantMessageThreadName&quot;: &quot;sample string 31&quot;,
+      &quot;ChildMessage&quot;: null,
+      &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+      &quot;IsBroadcastMassMessage&quot;: true,
+      &quot;IsChildMessageDeletedPermanently&quot;: true,
+      &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+      &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+      &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+      &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+    },
+    &quot;AdditionalHeading&quot;: &quot;sample string 32&quot;,
+    &quot;IsBroadcastMassMessage&quot;: true,
+    &quot;IsChildMessageDeletedPermanently&quot;: true,
+    &quot;CreatedLocal&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;CreatedLocalTimeStamp&quot;: &quot;sample string 36&quot;,
+    &quot;CreatedLocalDateStamp&quot;: &quot;sample string 37&quot;,
+    &quot;CreatedByShortName&quot;: &quot;sample string 38&quot;,
+    &quot;CreatedLocalShortNumericDate&quot;: &quot;sample string 39&quot;
+  },
+  &quot;MatchingMessageIds&quot;: [
+    1,
+    2
+  ],
+  &quot;Participants&quot;: [
+    {
+      &quot;SourceLocationId&quot;: 1,
+      &quot;SourceLocationType&quot;: 1,
+      &quot;IsDeleted&quot;: true,
+      &quot;CanReceive&quot;: true,
+      &quot;RoleInHierarchyTitle&quot;: &quot;sample string 3&quot;,
+      &quot;RoleInHierarchy&quot;: 0,
+      &quot;ExtraUserInformation&quot;: &quot;sample string 4&quot;,
+      &quot;PersonId&quot;: 5,
+      &quot;FirstName&quot;: &quot;sample string 6&quot;,
+      &quot;LastName&quot;: &quot;sample string 7&quot;,
+      &quot;FullName&quot;: &quot;sample string 8&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 9&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 10&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 12&quot;
+    },
+    {
+      &quot;SourceLocationId&quot;: 1,
+      &quot;SourceLocationType&quot;: 1,
+      &quot;IsDeleted&quot;: true,
+      &quot;CanReceive&quot;: true,
+      &quot;RoleInHierarchyTitle&quot;: &quot;sample string 3&quot;,
+      &quot;RoleInHierarchy&quot;: 0,
+      &quot;ExtraUserInformation&quot;: &quot;sample string 4&quot;,
+      &quot;PersonId&quot;: 5,
+      &quot;FirstName&quot;: &quot;sample string 6&quot;,
+      &quot;LastName&quot;: &quot;sample string 7&quot;,
+      &quot;FullName&quot;: &quot;sample string 8&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 9&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 10&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 12&quot;
+    }
+  ],
+  &quot;ParticipantsCount&quot;: 8,
+  &quot;HasActiveParticipants&quot;: true,
+  &quot;HasInactiveParticipants&quot;: true,
+  &quot;NumberOfInactiveParticipants&quot;: 11,
+  &quot;InactiveParticipantFullName&quot;: &quot;sample string 12&quot;,
+  &quot;HasCreatorInThread&quot;: true,
+  &quot;IsCurrentUserARecipientWithSourceLocation&quot;: true,
+  &quot;LocationRecipients&quot;: [
+    {
+      &quot;LocationRecipientId&quot;: 1,
+      &quot;Type&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;ColorSchema&quot;: &quot;sample string 3&quot;
+    },
+    {
+      &quot;LocationRecipientId&quot;: 1,
+      &quot;Type&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;ColorSchema&quot;: &quot;sample string 3&quot;
+    }
+  ],
+  &quot;CanShowParticipantsPage&quot;: true,
+  &quot;LastReadInstantMessageId&quot;: 1,
+  &quot;SortIndex&quot;: 1,
+  &quot;OnlyThreadAdminCanSendToThread&quot;: true,
+  &quot;IsThreadAdministrator&quot;: true,
+  &quot;IsThreadModerator&quot;: true,
+  &quot;InstantMessageLocationId&quot;: 1,
+  &quot;IsBlocked&quot;: true,
+  &quot;UserAllowToBlockThread&quot;: true,
+  &quot;IsAbuse&quot;: true,
+  &quot;IsAbuseReportedByCurrentUser&quot;: true,
+  &quot;MassMessageType&quot;: 1,
+  &quot;Tooltip&quot;: &quot;sample string 23&quot;,
+  &quot;CanDelete&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;InstantMessageThread xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;CanDelete&gt;true&lt;/CanDelete&gt;
+  &lt;CanShowParticipantsPage&gt;true&lt;/CanShowParticipantsPage&gt;
+  &lt;ColorSchema&gt;sample string 7&lt;/ColorSchema&gt;
+  &lt;Created&gt;2026-03-07T09:02:56Z&lt;/Created&gt;
+  &lt;CreatedBy&gt;5&lt;/CreatedBy&gt;
+  &lt;CreatedByTeacher&gt;true&lt;/CreatedByTeacher&gt;
+  &lt;HasActiveParticipants&gt;true&lt;/HasActiveParticipants&gt;
+  &lt;HasCreatorInThread&gt;true&lt;/HasCreatorInThread&gt;
+  &lt;HasInactiveParticipants&gt;true&lt;/HasInactiveParticipants&gt;
+  &lt;InactiveParticipantFullName&gt;sample string 12&lt;/InactiveParticipantFullName&gt;
+  &lt;InstantMessageLocationId&gt;1&lt;/InstantMessageLocationId&gt;
+  &lt;InstantMessageThreadId&gt;1&lt;/InstantMessageThreadId&gt;
+  &lt;IsAbuse&gt;true&lt;/IsAbuse&gt;
+  &lt;IsAbuseReportedByCurrentUser&gt;true&lt;/IsAbuseReportedByCurrentUser&gt;
+  &lt;IsBlocked&gt;true&lt;/IsBlocked&gt;
+  &lt;IsCurrentUserARecipientWithSourceLocation&gt;true&lt;/IsCurrentUserARecipientWithSourceLocation&gt;
+  &lt;IsThreadAdministrator&gt;true&lt;/IsThreadAdministrator&gt;
+  &lt;IsThreadModerator&gt;true&lt;/IsThreadModerator&gt;
+  &lt;LastReadInstantMessageId&gt;1&lt;/LastReadInstantMessageId&gt;
+  &lt;LocationRecipients&gt;
+    &lt;LocationRecipient&gt;
+      &lt;ColorSchema&gt;sample string 3&lt;/ColorSchema&gt;
+      &lt;LocationRecipientId&gt;1&lt;/LocationRecipientId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Type&gt;Course&lt;/Type&gt;
+    &lt;/LocationRecipient&gt;
+    &lt;LocationRecipient&gt;
+      &lt;ColorSchema&gt;sample string 3&lt;/ColorSchema&gt;
+      &lt;LocationRecipientId&gt;1&lt;/LocationRecipientId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Type&gt;Course&lt;/Type&gt;
+    &lt;/LocationRecipient&gt;
+  &lt;/LocationRecipients&gt;
+  &lt;MassMessageType&gt;None&lt;/MassMessageType&gt;
+  &lt;MatchingMessageIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:long&gt;1&lt;/d2p1:long&gt;
+    &lt;d2p1:long&gt;2&lt;/d2p1:long&gt;
+  &lt;/MatchingMessageIds&gt;
+  &lt;Messages&gt;
+    &lt;CurrentPageIndex xmlns=&quot;&quot;&gt;2&lt;/CurrentPageIndex&gt;
+    &lt;EntityArray xmlns:d3p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot; xmlns=&quot;&quot;&gt;
+      &lt;d3p1:InstantMessage&gt;
+        &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+        &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+        &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+        &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+        &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+        &lt;d3p1:ChildMessage&gt;
+          &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+          &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+          &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+          &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+          &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+          &lt;d3p1:ChildMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+          &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+          &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+          &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+          &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+          &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+          &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+          &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+          &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+          &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+          &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+          &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+          &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+          &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+          &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+          &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+          &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+          &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+          &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+          &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+          &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+          &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+          &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+          &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+          &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+          &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+          &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+          &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+          &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+          &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+          &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+          &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+          &lt;d3p1:MessageThreadParticipants&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;/d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+          &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+          &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+          &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+        &lt;/d3p1:ChildMessage&gt;
+        &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+        &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+        &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+        &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+        &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+        &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+        &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+        &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+        &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+        &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+        &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+        &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+        &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+        &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+        &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+        &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+        &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+        &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+        &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+        &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+        &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+        &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+        &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+        &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+        &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+        &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+        &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+        &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+        &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+        &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+        &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+        &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+        &lt;d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+            &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+            &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+            &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+            &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+          &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+            &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+            &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+            &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+            &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+          &lt;/d3p1:InstantMessageParticipant&gt;
+        &lt;/d3p1:MessageThreadParticipants&gt;
+        &lt;d3p1:OriginInstantMessage&gt;
+          &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+          &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+          &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+          &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+          &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+          &lt;d3p1:ChildMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+          &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+          &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+          &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+          &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+          &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+          &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+          &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+          &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+          &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+          &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+          &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+          &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+          &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+          &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+          &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+          &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+          &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+          &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+          &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+          &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+          &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+          &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+          &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+          &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+          &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+          &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+          &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+          &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+          &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+          &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+          &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+          &lt;d3p1:MessageThreadParticipants&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;/d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+          &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+          &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+          &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+        &lt;/d3p1:OriginInstantMessage&gt;
+        &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+        &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+        &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+        &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+      &lt;/d3p1:InstantMessage&gt;
+      &lt;d3p1:InstantMessage&gt;
+        &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+        &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+        &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+        &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+        &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+        &lt;d3p1:ChildMessage&gt;
+          &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+          &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+          &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+          &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+          &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+          &lt;d3p1:ChildMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+          &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+          &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+          &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+          &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+          &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+          &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+          &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+          &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+          &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+          &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+          &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+          &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+          &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+          &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+          &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+          &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+          &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+          &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+          &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+          &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+          &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+          &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+          &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+          &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+          &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+          &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+          &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+          &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+          &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+          &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+          &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+          &lt;d3p1:MessageThreadParticipants&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;/d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+          &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+          &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+          &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+        &lt;/d3p1:ChildMessage&gt;
+        &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+        &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+        &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+        &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+        &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+        &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+        &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+        &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+        &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+        &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+        &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+        &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+        &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+        &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+        &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+        &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+        &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+        &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+        &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+        &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+        &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+        &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+        &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+        &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+        &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+        &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+        &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+        &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+        &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+        &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+        &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+        &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+        &lt;d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+            &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+            &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+            &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+            &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+          &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+            &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+            &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+            &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+            &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+          &lt;/d3p1:InstantMessageParticipant&gt;
+        &lt;/d3p1:MessageThreadParticipants&gt;
+        &lt;d3p1:OriginInstantMessage&gt;
+          &lt;d3p1:AdditionalHeading&gt;sample string 32&lt;/d3p1:AdditionalHeading&gt;
+          &lt;d3p1:AttachmentName&gt;sample string 14&lt;/d3p1:AttachmentName&gt;
+          &lt;d3p1:AttachmentUrl&gt;sample string 13&lt;/d3p1:AttachmentUrl&gt;
+          &lt;d3p1:CanDelete&gt;true&lt;/d3p1:CanDelete&gt;
+          &lt;d3p1:CanEdit&gt;true&lt;/d3p1:CanEdit&gt;
+          &lt;d3p1:ChildMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:Created&gt;2026-03-07T09:02:56Z&lt;/d3p1:Created&gt;
+          &lt;d3p1:CreatedBy&gt;8&lt;/d3p1:CreatedBy&gt;
+          &lt;d3p1:CreatedByAvatar&gt;sample string 11&lt;/d3p1:CreatedByAvatar&gt;
+          &lt;d3p1:CreatedByName&gt;sample string 9&lt;/d3p1:CreatedByName&gt;
+          &lt;d3p1:CreatedByShortName&gt;sample string 38&lt;/d3p1:CreatedByShortName&gt;
+          &lt;d3p1:CreatedFormatted&gt;sample string 5&lt;/d3p1:CreatedFormatted&gt;
+          &lt;d3p1:CreatedLocal&gt;2026-03-07T09:02:56Z&lt;/d3p1:CreatedLocal&gt;
+          &lt;d3p1:CreatedLocalDateStamp&gt;sample string 37&lt;/d3p1:CreatedLocalDateStamp&gt;
+          &lt;d3p1:CreatedLocalShortNumericDate&gt;sample string 39&lt;/d3p1:CreatedLocalShortNumericDate&gt;
+          &lt;d3p1:CreatedLocalTimeStamp&gt;sample string 36&lt;/d3p1:CreatedLocalTimeStamp&gt;
+          &lt;d3p1:CreatedRelative&gt;sample string 6&lt;/d3p1:CreatedRelative&gt;
+          &lt;d3p1:DeletedBy&gt;20&lt;/d3p1:DeletedBy&gt;
+          &lt;d3p1:EditedRelative&gt;sample string 7&lt;/d3p1:EditedRelative&gt;
+          &lt;d3p1:HasAbuseReported&gt;true&lt;/d3p1:HasAbuseReported&gt;
+          &lt;d3p1:HasAbuseThreadReported&gt;true&lt;/d3p1:HasAbuseThreadReported&gt;
+          &lt;d3p1:HasRepliedTo&gt;true&lt;/d3p1:HasRepliedTo&gt;
+          &lt;d3p1:HasShared&gt;true&lt;/d3p1:HasShared&gt;
+          &lt;d3p1:HomeOrganization&gt;sample string 10&lt;/d3p1:HomeOrganization&gt;
+          &lt;d3p1:InstantMessageThreadId&gt;3&lt;/d3p1:InstantMessageThreadId&gt;
+          &lt;d3p1:IsAbuse&gt;true&lt;/d3p1:IsAbuse&gt;
+          &lt;d3p1:IsBroadcastMassMessage&gt;true&lt;/d3p1:IsBroadcastMassMessage&gt;
+          &lt;d3p1:IsChildMessageDeletedPermanently&gt;true&lt;/d3p1:IsChildMessageDeletedPermanently&gt;
+          &lt;d3p1:IsDeleted&gt;true&lt;/d3p1:IsDeleted&gt;
+          &lt;d3p1:IsEdited&gt;true&lt;/d3p1:IsEdited&gt;
+          &lt;d3p1:IsSilent&gt;true&lt;/d3p1:IsSilent&gt;
+          &lt;d3p1:IsStarred&gt;true&lt;/d3p1:IsStarred&gt;
+          &lt;d3p1:IsSystemMessage&gt;true&lt;/d3p1:IsSystemMessage&gt;
+          &lt;d3p1:Link&gt;sample string 15&lt;/d3p1:Link&gt;
+          &lt;d3p1:LinkTarget&gt;sample string 17&lt;/d3p1:LinkTarget&gt;
+          &lt;d3p1:LinkTitle&gt;sample string 16&lt;/d3p1:LinkTitle&gt;
+          &lt;d3p1:MessageId&gt;1&lt;/d3p1:MessageId&gt;
+          &lt;d3p1:MessageThreadId&gt;2&lt;/d3p1:MessageThreadId&gt;
+          &lt;d3p1:MessageThreadParticipants&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+            &lt;d3p1:InstantMessageParticipant&gt;
+              &lt;d3p1:AvatarUrl&gt;sample string 2&lt;/d3p1:AvatarUrl&gt;
+              &lt;d3p1:LocationId&gt;1&lt;/d3p1:LocationId&gt;
+              &lt;d3p1:LocationType&gt;1&lt;/d3p1:LocationType&gt;
+              &lt;d3p1:Name&gt;sample string 1&lt;/d3p1:Name&gt;
+              &lt;d3p1:PersonId&gt;1&lt;/d3p1:PersonId&gt;
+            &lt;/d3p1:InstantMessageParticipant&gt;
+          &lt;/d3p1:MessageThreadParticipants&gt;
+          &lt;d3p1:OriginInstantMessage i:nil=&quot;true&quot; /&gt;
+          &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+          &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+          &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+          &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+        &lt;/d3p1:OriginInstantMessage&gt;
+        &lt;d3p1:OriginInstantMessageThreadDeletedBy&gt;1&lt;/d3p1:OriginInstantMessageThreadDeletedBy&gt;
+        &lt;d3p1:OriginInstantMessageThreadId&gt;1&lt;/d3p1:OriginInstantMessageThreadId&gt;
+        &lt;d3p1:OriginInstantMessageThreadName&gt;sample string 31&lt;/d3p1:OriginInstantMessageThreadName&gt;
+        &lt;d3p1:Text&gt;sample string 12&lt;/d3p1:Text&gt;
+      &lt;/d3p1:InstantMessage&gt;
+    &lt;/EntityArray&gt;
+    &lt;PageSize xmlns=&quot;&quot;&gt;3&lt;/PageSize&gt;
+    &lt;Total xmlns=&quot;&quot;&gt;1&lt;/Total&gt;
+  &lt;/Messages&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;NumberOfInactiveParticipants&gt;11&lt;/NumberOfInactiveParticipants&gt;
+  &lt;OnlyThreadAdminCanSendToThread&gt;true&lt;/OnlyThreadAdminCanSendToThread&gt;
+  &lt;Participants&gt;
+    &lt;ThreadParticipant xmlns=&quot;&quot;&gt;
+      &lt;AdditionalInfo&gt;sample string 10&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 6&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 8&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 7&lt;/LastName&gt;
+      &lt;PersonId&gt;5&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 11&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 12&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 9&lt;/ProfileUrl&gt;
+      &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+      &lt;ExtraUserInformation&gt;sample string 4&lt;/ExtraUserInformation&gt;
+      &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+      &lt;RoleInHierarchy&gt;None&lt;/RoleInHierarchy&gt;
+      &lt;RoleInHierarchyTitle&gt;sample string 3&lt;/RoleInHierarchyTitle&gt;
+      &lt;SourceLocationId&gt;1&lt;/SourceLocationId&gt;
+      &lt;SourceLocationType&gt;Course&lt;/SourceLocationType&gt;
+    &lt;/ThreadParticipant&gt;
+    &lt;ThreadParticipant xmlns=&quot;&quot;&gt;
+      &lt;AdditionalInfo&gt;sample string 10&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 6&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 8&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 7&lt;/LastName&gt;
+      &lt;PersonId&gt;5&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 11&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 12&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 9&lt;/ProfileUrl&gt;
+      &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+      &lt;ExtraUserInformation&gt;sample string 4&lt;/ExtraUserInformation&gt;
+      &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+      &lt;RoleInHierarchy&gt;None&lt;/RoleInHierarchy&gt;
+      &lt;RoleInHierarchyTitle&gt;sample string 3&lt;/RoleInHierarchyTitle&gt;
+      &lt;SourceLocationId&gt;1&lt;/SourceLocationId&gt;
+      &lt;SourceLocationType&gt;Course&lt;/SourceLocationType&gt;
+    &lt;/ThreadParticipant&gt;
+  &lt;/Participants&gt;
+  &lt;ParticipantsCount&gt;8&lt;/ParticipantsCount&gt;
+  &lt;SortIndex&gt;1&lt;/SortIndex&gt;
+  &lt;Tooltip&gt;sample string 23&lt;/Tooltip&gt;
+  &lt;Type&gt;sample string 6&lt;/Type&gt;
+  &lt;UserAllowToBlockThread&gt;true&lt;/UserAllowToBlockThread&gt;
+&lt;/InstantMessageThread&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

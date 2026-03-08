@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/ai/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/ai/v1</h1>
+<div>
+    <p>Runs the AI prompt for the given feature. It uses Daisy API.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Request with the data needed to run the AI feature.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AiRequest">Itslearning.RestApi.Entities.Personal.Ai.AiRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Feature</td>
+                    <td class="parameter-documentation">
+                        <p>The feature to use.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AiFeatureType">Itslearning.RestApi.Entities.Personal.Ai.AiFeatureType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationId</td>
+                    <td class="parameter-documentation">
+                        <p>Course or project id.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationType</td>
+                    <td class="parameter-documentation">
+                        <p>Course or project.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.LocationType">Itsolutions.ItslUtils.Constants.LocationType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanId</td>
+                    <td class="parameter-documentation">
+                        <p>Plan identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SystemPrompt</td>
+                    <td class="parameter-documentation">
+                        <p>System prompt for the AI (template). Normally is empty, only taken into account when the prompt engineering feature is enabled.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserPrompt</td>
+                    <td class="parameter-documentation">
+                        <p>User prompt for the AI.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Content</td>
+                    <td class="parameter-documentation">
+                        <p>Content if already present.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ChatHistoryId</td>
+                    <td class="parameter-documentation">
+                        <p>The chat history identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Feature&quot;: 0,
+  &quot;LocationId&quot;: 1,
+  &quot;LocationType&quot;: 1,
+  &quot;PlanId&quot;: 2,
+  &quot;SystemPrompt&quot;: &quot;sample string 3&quot;,
+  &quot;UserPrompt&quot;: &quot;sample string 4&quot;,
+  &quot;Content&quot;: &quot;sample string 5&quot;,
+  &quot;ChatHistoryId&quot;: &quot;sample string 6&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AiRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Ai&quot;&gt;
+  &lt;ChatHistoryId&gt;sample string 6&lt;/ChatHistoryId&gt;
+  &lt;Content&gt;sample string 5&lt;/Content&gt;
+  &lt;Feature&gt;None&lt;/Feature&gt;
+  &lt;LocationId&gt;1&lt;/LocationId&gt;
+  &lt;LocationType&gt;Course&lt;/LocationType&gt;
+  &lt;PlanId&gt;2&lt;/PlanId&gt;
+  &lt;SystemPrompt&gt;sample string 3&lt;/SystemPrompt&gt;
+  &lt;UserPrompt&gt;sample string 4&lt;/UserPrompt&gt;
+&lt;/AiRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Text and history reference for the prompt.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AiResponse">Itslearning.RestApi.Entities.AiResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text from the AI service</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ChatHistoryId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier for the chat history (legacy, use ResponseId for new implementations)</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ResponseId</td>
+                    <td class="parameter-documentation">
+                        <p>The response identifier from the Daisy Responses API.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Prompt</td>
+                    <td class="parameter-documentation">
+                        <p>The prompt that was used to generate the response.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.AiChatMessage">Itslearning.RestApi.Entities.AiChatMessage</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Text&quot;: &quot;sample string 1&quot;,
+  &quot;ChatHistoryId&quot;: &quot;sample string 2&quot;,
+  &quot;ResponseId&quot;: &quot;sample string 3&quot;,
+  &quot;Prompt&quot;: [
+    {
+      &quot;Role&quot;: &quot;sample string 1&quot;,
+      &quot;Text&quot;: &quot;sample string 2&quot;
+    },
+    {
+      &quot;Role&quot;: &quot;sample string 1&quot;,
+      &quot;Text&quot;: &quot;sample string 2&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AiResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;ChatHistoryId&gt;sample string 2&lt;/ChatHistoryId&gt;
+  &lt;Prompt&gt;
+    &lt;AiChatMessage&gt;
+      &lt;Role&gt;sample string 1&lt;/Role&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+    &lt;/AiChatMessage&gt;
+    &lt;AiChatMessage&gt;
+      &lt;Role&gt;sample string 1&lt;/Role&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+    &lt;/AiChatMessage&gt;
+  &lt;/Prompt&gt;
+  &lt;ResponseId&gt;sample string 3&lt;/ResponseId&gt;
+  &lt;Text&gt;sample string 1&lt;/Text&gt;
+&lt;/AiResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

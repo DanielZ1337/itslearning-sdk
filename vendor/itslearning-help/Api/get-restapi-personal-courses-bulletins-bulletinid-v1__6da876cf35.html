@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/bulletins/{bulletinId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/bulletins/{bulletinId}/v1</h1>
+<div>
+    <p>Gets light bulletin by identifier.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">bulletinId</td>
+                    <td class="parameter-documentation">
+                        <p>The light bulletin identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Light bulletin</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinV2">Itslearning.RestApi.Entities.LightBulletins.LightBulletinV2</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">LightBulletinId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for for the light bulletin, in scope of a site (itslearning customer).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>Descriptive text for the light bulletin. It's intended to be a plain text, so should be encoded.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EmbedUrl</td>
+                    <td class="parameter-documentation">
+                        <p>A link to 3rd party content, which can be embedded or inserted as OGP.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Pinned</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current announcement is pinned.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AllowComments</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether comments creation is allowed for current light bulletin. If there are some comments already, they can still be seen.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasResources</td>
+                    <td class="parameter-documentation">
+                        <p><p>
+ DEPRECATED Use ResourcesCount instead.
+ </p>
+ Defines whether any resources were attached to the bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttachedImages</td>
+                    <td class="parameter-documentation">
+                        <p>The list of images attached to the light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LightBulletins.LightBulletinImage">Itslearning.RestApi.Entities.LightBulletins.LightBulletinImage</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ResourcesCount</td>
+                    <td class="parameter-documentation">
+                        <p>The count of resources attached to the light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CommentsCount</td>
+                    <td class="parameter-documentation">
+                        <p>The count of comments for the light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveFromDate</td>
+                    <td class="parameter-documentation">
+                        <p>The time when to show the bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActiveToDate</td>
+                    <td class="parameter-documentation">
+                        <p>The time when to remove the bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsSubscribed</td>
+                    <td class="parameter-documentation">
+                        <p>Defines if person is subscribed on light bulletin notifications.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PublishedDate</td>
+                    <td class="parameter-documentation">
+                        <p>The time when the bulletin was created.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PublishedBy</td>
+                    <td class="parameter-documentation">
+                        <p>The person who created the light bulletin.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;LightBulletinId&quot;: 1,
+  &quot;Text&quot;: &quot;sample string 2&quot;,
+  &quot;EmbedUrl&quot;: &quot;sample string 3&quot;,
+  &quot;Pinned&quot;: true,
+  &quot;AllowComments&quot;: true,
+  &quot;HasResources&quot;: true,
+  &quot;AttachedImages&quot;: [
+    {
+      &quot;PreviewFileId&quot;: 1,
+      &quot;PreviewFileUrl&quot;: &quot;sample string 2&quot;,
+      &quot;OriginalFileId&quot;: 3,
+      &quot;OriginalFileUrl&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;PreviewFileId&quot;: 1,
+      &quot;PreviewFileUrl&quot;: &quot;sample string 2&quot;,
+      &quot;OriginalFileId&quot;: 3,
+      &quot;OriginalFileUrl&quot;: &quot;sample string 4&quot;
+    }
+  ],
+  &quot;ResourcesCount&quot;: 7,
+  &quot;CommentsCount&quot;: 8,
+  &quot;ActiveFromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;ActiveToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;IsSubscribed&quot;: true,
+  &quot;PublishedDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;PublishedBy&quot;: {
+    &quot;PersonId&quot;: 1,
+    &quot;FirstName&quot;: &quot;sample string 2&quot;,
+    &quot;LastName&quot;: &quot;sample string 3&quot;,
+    &quot;FullName&quot;: &quot;sample string 4&quot;,
+    &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+    &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+    &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+    &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;LightBulletinV2 xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;ActiveFromDate&gt;2026-03-07T16:36:58Z&lt;/ActiveFromDate&gt;
+  &lt;ActiveToDate&gt;2026-03-07T16:36:58Z&lt;/ActiveToDate&gt;
+  &lt;AllowComments&gt;true&lt;/AllowComments&gt;
+  &lt;AttachedImages&gt;
+    &lt;LightBulletinImage&gt;
+      &lt;OriginalFileId&gt;3&lt;/OriginalFileId&gt;
+      &lt;OriginalFileUrl&gt;sample string 4&lt;/OriginalFileUrl&gt;
+      &lt;PreviewFileId&gt;1&lt;/PreviewFileId&gt;
+      &lt;PreviewFileUrl&gt;sample string 2&lt;/PreviewFileUrl&gt;
+    &lt;/LightBulletinImage&gt;
+    &lt;LightBulletinImage&gt;
+      &lt;OriginalFileId&gt;3&lt;/OriginalFileId&gt;
+      &lt;OriginalFileUrl&gt;sample string 4&lt;/OriginalFileUrl&gt;
+      &lt;PreviewFileId&gt;1&lt;/PreviewFileId&gt;
+      &lt;PreviewFileUrl&gt;sample string 2&lt;/PreviewFileUrl&gt;
+    &lt;/LightBulletinImage&gt;
+  &lt;/AttachedImages&gt;
+  &lt;CommentsCount&gt;8&lt;/CommentsCount&gt;
+  &lt;EmbedUrl&gt;sample string 3&lt;/EmbedUrl&gt;
+  &lt;HasResources&gt;true&lt;/HasResources&gt;
+  &lt;IsSubscribed&gt;true&lt;/IsSubscribed&gt;
+  &lt;LightBulletinId&gt;1&lt;/LightBulletinId&gt;
+  &lt;Pinned&gt;true&lt;/Pinned&gt;
+  &lt;PublishedBy&gt;
+    &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+    &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+    &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+    &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+    &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+    &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+    &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+  &lt;/PublishedBy&gt;
+  &lt;PublishedDate&gt;2026-03-07T16:36:58Z&lt;/PublishedDate&gt;
+  &lt;ResourcesCount&gt;7&lt;/ResourcesCount&gt;
+  &lt;Text&gt;sample string 2&lt;/Text&gt;
+&lt;/LightBulletinV2&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

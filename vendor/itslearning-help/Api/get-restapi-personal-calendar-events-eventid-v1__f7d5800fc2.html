@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/calendar/events/{eventId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/calendar/events/{eventId}/v1</h1>
+<div>
+    <p>Gets a single calendar event by the specified <paramref name="eventId" />.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">eventId</td>
+                    <td class="parameter-documentation">
+                        <p>ID of event to get.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Calendar event.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventDetails">Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventDetails</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EventUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The URL in itslearning web to open the calendar event in the web view.
+ In case of course event there's the URL pointing to the course dashboard with opened calendar event pop-up dialog.
+ In case of project or personal events there's the URL pointing to the calendar day view.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasMoreContent</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates whether calendar event contains more information than API can consume.
+ For now it indicates whether Description or ImportDescription contain HTML text which is striped by API.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Bookings</td>
+                    <td class="parameter-documentation">
+                        <p>Rooms or equipment booked for the event.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.Booking">Itslearning.RestApi.Entities.Personal.Calendar.Booking</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ElementLinks</td>
+                    <td class="parameter-documentation">
+                        <p>Elements connected to the event.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ElementLink">Itslearning.RestApi.Entities.ElementLink</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanLinks</td>
+                    <td class="parameter-documentation">
+                        <p>Plans relevant for the event.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.PlanLink">Itslearning.RestApi.Entities.Personal.Calendar.PlanLink</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EventId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FromDate</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ToDate</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EventTitle</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Description</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ImportDescription</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EventType</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventType">Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationGroupId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationColor</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationFillColor</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationTitle</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationFriendlyName</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HidePersonalWordForPersonalEvent</td>
+                    <td class="parameter-documentation">
+                        <p>If <c>true</c> and `EventType` is `Personal`
+ then the word "Personal" must be hidden from UI for this event.
+ This property is always <c>false</c> for non personal event types.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AttendanceDetails</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.Attendance.AttendanceDetails">Itslearning.RestApi.Entities.Personal.Calendar.Attendance.AttendanceDetails</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EventUrl&quot;: &quot;sample string 1&quot;,
+  &quot;HasMoreContent&quot;: true,
+  &quot;Bookings&quot;: [
+    {
+      &quot;Name&quot;: &quot;sample string 1&quot;
+    },
+    {
+      &quot;Name&quot;: &quot;sample string 1&quot;
+    }
+  ],
+  &quot;ElementLinks&quot;: [
+    {
+      &quot;ElementId&quot;: 1,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Url&quot;: &quot;sample string 3&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+      &quot;LearningToolId&quot;: 6,
+      &quot;Homework&quot;: true
+    },
+    {
+      &quot;ElementId&quot;: 1,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;Url&quot;: &quot;sample string 3&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+      &quot;LearningToolId&quot;: 6,
+      &quot;Homework&quot;: true
+    }
+  ],
+  &quot;PlanLinks&quot;: [
+    {
+      &quot;PlanId&quot;: 1,
+      &quot;PlanName&quot;: &quot;sample string 2&quot;,
+      &quot;TopicName&quot;: &quot;sample string 3&quot;,
+      &quot;Url&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;PlanId&quot;: 1,
+      &quot;PlanName&quot;: &quot;sample string 2&quot;,
+      &quot;TopicName&quot;: &quot;sample string 3&quot;,
+      &quot;Url&quot;: &quot;sample string 4&quot;
+    }
+  ],
+  &quot;EventId&quot;: 3,
+  &quot;FromDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;ToDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;EventTitle&quot;: &quot;sample string 6&quot;,
+  &quot;Description&quot;: &quot;sample string 7&quot;,
+  &quot;ImportDescription&quot;: &quot;sample string 8&quot;,
+  &quot;EventType&quot;: &quot;Course&quot;,
+  &quot;LocationId&quot;: 9,
+  &quot;LocationGroupId&quot;: 10,
+  &quot;LocationColor&quot;: &quot;sample string 11&quot;,
+  &quot;LocationFillColor&quot;: &quot;sample string 12&quot;,
+  &quot;LocationTitle&quot;: &quot;sample string 13&quot;,
+  &quot;LocationFriendlyName&quot;: &quot;sample string 14&quot;,
+  &quot;HidePersonalWordForPersonalEvent&quot;: true,
+  &quot;AttendanceDetails&quot;: {
+    &quot;KeepAttendancePageUrl&quot;: &quot;sample string 1&quot;,
+    &quot;AttendanceStatistics&quot;: {
+      &quot;Present&quot;: 1,
+      &quot;Absent&quot;: 2,
+      &quot;Excluded&quot;: 3
+    }
+  }
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CalendarEventDetails xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;AttendanceDetails&gt;
+    &lt;AttendanceStatistics&gt;
+      &lt;Absent&gt;2&lt;/Absent&gt;
+      &lt;Excluded&gt;3&lt;/Excluded&gt;
+      &lt;Present&gt;1&lt;/Present&gt;
+    &lt;/AttendanceStatistics&gt;
+    &lt;KeepAttendancePageUrl&gt;sample string 1&lt;/KeepAttendancePageUrl&gt;
+  &lt;/AttendanceDetails&gt;
+  &lt;Description&gt;sample string 7&lt;/Description&gt;
+  &lt;EventId&gt;3&lt;/EventId&gt;
+  &lt;EventTitle&gt;sample string 6&lt;/EventTitle&gt;
+  &lt;EventType&gt;Course&lt;/EventType&gt;
+  &lt;FromDate&gt;2026-03-07T09:02:56Z&lt;/FromDate&gt;
+  &lt;HidePersonalWordForPersonalEvent&gt;true&lt;/HidePersonalWordForPersonalEvent&gt;
+  &lt;ImportDescription&gt;sample string 8&lt;/ImportDescription&gt;
+  &lt;LocationColor&gt;sample string 11&lt;/LocationColor&gt;
+  &lt;LocationFillColor&gt;sample string 12&lt;/LocationFillColor&gt;
+  &lt;LocationFriendlyName&gt;sample string 14&lt;/LocationFriendlyName&gt;
+  &lt;LocationGroupId&gt;10&lt;/LocationGroupId&gt;
+  &lt;LocationId&gt;9&lt;/LocationId&gt;
+  &lt;LocationTitle&gt;sample string 13&lt;/LocationTitle&gt;
+  &lt;ToDate&gt;2026-03-07T09:02:56Z&lt;/ToDate&gt;
+  &lt;Bookings&gt;
+    &lt;Booking&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;/Booking&gt;
+    &lt;Booking&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;/Booking&gt;
+  &lt;/Bookings&gt;
+  &lt;ElementLinks&gt;
+    &lt;ElementLink&gt;
+      &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;Homework&gt;true&lt;/Homework&gt;
+      &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+      &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Url&gt;sample string 3&lt;/Url&gt;
+    &lt;/ElementLink&gt;
+    &lt;ElementLink&gt;
+      &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;1&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;Homework&gt;true&lt;/Homework&gt;
+      &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+      &lt;LearningToolId&gt;6&lt;/LearningToolId&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;Url&gt;sample string 3&lt;/Url&gt;
+    &lt;/ElementLink&gt;
+  &lt;/ElementLinks&gt;
+  &lt;EventUrl&gt;sample string 1&lt;/EventUrl&gt;
+  &lt;HasMoreContent&gt;true&lt;/HasMoreContent&gt;
+  &lt;PlanLinks&gt;
+    &lt;PlanLink&gt;
+      &lt;PlanId&gt;1&lt;/PlanId&gt;
+      &lt;PlanName&gt;sample string 2&lt;/PlanName&gt;
+      &lt;TopicName&gt;sample string 3&lt;/TopicName&gt;
+      &lt;Url&gt;sample string 4&lt;/Url&gt;
+    &lt;/PlanLink&gt;
+    &lt;PlanLink&gt;
+      &lt;PlanId&gt;1&lt;/PlanId&gt;
+      &lt;PlanName&gt;sample string 2&lt;/PlanName&gt;
+      &lt;TopicName&gt;sample string 3&lt;/TopicName&gt;
+      &lt;Url&gt;sample string 4&lt;/Url&gt;
+    &lt;/PlanLink&gt;
+  &lt;/PlanLinks&gt;
+&lt;/CalendarEventDetails&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

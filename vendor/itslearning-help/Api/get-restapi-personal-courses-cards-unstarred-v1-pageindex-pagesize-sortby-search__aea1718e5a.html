@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/cards/unstarred/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sortBy={sortBy}&amp;searchText={searchText}&amp;isShowMore={isShowMore}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/cards/unstarred/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sortBy={sortBy}&amp;searchText={searchText}&amp;isShowMore={isShowMore}</h1>
+<div>
+    <p>Gets the list of cards for user's unstarred courses</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">sortBy</td>
+                    <td class="parameter-documentation">
+                        <p>The property to sort by.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is Title</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">searchText</td>
+                    <td class="parameter-documentation">
+                        <p>Text search in course title, friendly name field.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">isShowMore</td>
+                    <td class="parameter-documentation">
+                        <p>Request is from a show more button click</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is False</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>This method returns a collection of course cards entities .</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.CourseCard">EntityListOfItslearning.RestApi.Entities.CourseCard</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCard">Itslearning.RestApi.Entities.CourseCard</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;CourseId&quot;: 1,
+      &quot;FriendlyName&quot;: &quot;sample string 2&quot;,
+      &quot;Title&quot;: &quot;sample string 3&quot;,
+      &quot;TeacherName&quot;: &quot;sample string 4&quot;,
+      &quot;TeacherPictureUrl&quot;: &quot;sample string 5&quot;,
+      &quot;NumberOfTeachers&quot;: 6,
+      &quot;Teachers&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FullName&quot;: &quot;sample string 2&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+          &quot;IsVisibleOnCourseCard&quot;: true
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FullName&quot;: &quot;sample string 2&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+          &quot;IsVisibleOnCourseCard&quot;: true
+        }
+      ],
+      &quot;CourseColorClass&quot;: &quot;sample string 7&quot;,
+      &quot;NumberOfAnnouncements&quot;: 8,
+      &quot;NumberOfTasks&quot;: 9,
+      &quot;NumberOfFollowUpTasks&quot;: 10,
+      &quot;CourseCardImageFileRepoId&quot;: &quot;783aa803-0af3-471e-88e9-d0bcfc0c879e&quot;,
+      &quot;CourseCardImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;CourseCardImageDescription&quot;: &quot;sample string 12&quot;,
+      &quot;LastUpdatedDisplayTime&quot;: &quot;sample string 13&quot;,
+      &quot;LastUpdated&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;LastOnlineDisplayTime&quot;: &quot;sample string 14&quot;,
+      &quot;LastOnline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;IsFavouriteCourse&quot;: true,
+      &quot;NotificationsEnabled&quot;: true,
+      &quot;CanAdminCourse&quot;: true
+    },
+    {
+      &quot;CourseId&quot;: 1,
+      &quot;FriendlyName&quot;: &quot;sample string 2&quot;,
+      &quot;Title&quot;: &quot;sample string 3&quot;,
+      &quot;TeacherName&quot;: &quot;sample string 4&quot;,
+      &quot;TeacherPictureUrl&quot;: &quot;sample string 5&quot;,
+      &quot;NumberOfTeachers&quot;: 6,
+      &quot;Teachers&quot;: [
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FullName&quot;: &quot;sample string 2&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+          &quot;IsVisibleOnCourseCard&quot;: true
+        },
+        {
+          &quot;PersonId&quot;: 1,
+          &quot;FullName&quot;: &quot;sample string 2&quot;,
+          &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+          &quot;IsVisibleOnCourseCard&quot;: true
+        }
+      ],
+      &quot;CourseColorClass&quot;: &quot;sample string 7&quot;,
+      &quot;NumberOfAnnouncements&quot;: 8,
+      &quot;NumberOfTasks&quot;: 9,
+      &quot;NumberOfFollowUpTasks&quot;: 10,
+      &quot;CourseCardImageFileRepoId&quot;: &quot;09931d5d-5351-4888-b61c-b389e2243d18&quot;,
+      &quot;CourseCardImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;CourseCardImageDescription&quot;: &quot;sample string 12&quot;,
+      &quot;LastUpdatedDisplayTime&quot;: &quot;sample string 13&quot;,
+      &quot;LastUpdated&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;LastOnlineDisplayTime&quot;: &quot;sample string 14&quot;,
+      &quot;LastOnline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;IsFavouriteCourse&quot;: true,
+      &quot;NotificationsEnabled&quot;: true,
+      &quot;CanAdminCourse&quot;: true
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;CourseCard&gt;
+      &lt;CanAdminCourse&gt;true&lt;/CanAdminCourse&gt;
+      &lt;CourseCardImageDescription&gt;sample string 12&lt;/CourseCardImageDescription&gt;
+      &lt;CourseCardImageFileRepoId&gt;783aa803-0af3-471e-88e9-d0bcfc0c879e&lt;/CourseCardImageFileRepoId&gt;
+      &lt;CourseCardImageUrl&gt;sample string 11&lt;/CourseCardImageUrl&gt;
+      &lt;CourseColorClass&gt;sample string 7&lt;/CourseColorClass&gt;
+      &lt;CourseId&gt;1&lt;/CourseId&gt;
+      &lt;FriendlyName&gt;sample string 2&lt;/FriendlyName&gt;
+      &lt;IsFavouriteCourse&gt;true&lt;/IsFavouriteCourse&gt;
+      &lt;LastOnline&gt;2026-03-07T16:36:58Z&lt;/LastOnline&gt;
+      &lt;LastOnlineDisplayTime&gt;sample string 14&lt;/LastOnlineDisplayTime&gt;
+      &lt;LastUpdated&gt;2026-03-07T16:36:58Z&lt;/LastUpdated&gt;
+      &lt;LastUpdatedDisplayTime&gt;sample string 13&lt;/LastUpdatedDisplayTime&gt;
+      &lt;NotificationsEnabled&gt;true&lt;/NotificationsEnabled&gt;
+      &lt;NumberOfAnnouncements&gt;8&lt;/NumberOfAnnouncements&gt;
+      &lt;NumberOfFollowUpTasks&gt;10&lt;/NumberOfFollowUpTasks&gt;
+      &lt;NumberOfTasks&gt;9&lt;/NumberOfTasks&gt;
+      &lt;NumberOfTeachers&gt;6&lt;/NumberOfTeachers&gt;
+      &lt;TeacherName&gt;sample string 4&lt;/TeacherName&gt;
+      &lt;TeacherPictureUrl&gt;sample string 5&lt;/TeacherPictureUrl&gt;
+      &lt;Teachers&gt;
+        &lt;CourseCardTeacher&gt;
+          &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+          &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+        &lt;/CourseCardTeacher&gt;
+        &lt;CourseCardTeacher&gt;
+          &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+          &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+        &lt;/CourseCardTeacher&gt;
+      &lt;/Teachers&gt;
+      &lt;Title&gt;sample string 3&lt;/Title&gt;
+    &lt;/CourseCard&gt;
+    &lt;CourseCard&gt;
+      &lt;CanAdminCourse&gt;true&lt;/CanAdminCourse&gt;
+      &lt;CourseCardImageDescription&gt;sample string 12&lt;/CourseCardImageDescription&gt;
+      &lt;CourseCardImageFileRepoId&gt;09931d5d-5351-4888-b61c-b389e2243d18&lt;/CourseCardImageFileRepoId&gt;
+      &lt;CourseCardImageUrl&gt;sample string 11&lt;/CourseCardImageUrl&gt;
+      &lt;CourseColorClass&gt;sample string 7&lt;/CourseColorClass&gt;
+      &lt;CourseId&gt;1&lt;/CourseId&gt;
+      &lt;FriendlyName&gt;sample string 2&lt;/FriendlyName&gt;
+      &lt;IsFavouriteCourse&gt;true&lt;/IsFavouriteCourse&gt;
+      &lt;LastOnline&gt;2026-03-07T16:36:58Z&lt;/LastOnline&gt;
+      &lt;LastOnlineDisplayTime&gt;sample string 14&lt;/LastOnlineDisplayTime&gt;
+      &lt;LastUpdated&gt;2026-03-07T16:36:58Z&lt;/LastUpdated&gt;
+      &lt;LastUpdatedDisplayTime&gt;sample string 13&lt;/LastUpdatedDisplayTime&gt;
+      &lt;NotificationsEnabled&gt;true&lt;/NotificationsEnabled&gt;
+      &lt;NumberOfAnnouncements&gt;8&lt;/NumberOfAnnouncements&gt;
+      &lt;NumberOfFollowUpTasks&gt;10&lt;/NumberOfFollowUpTasks&gt;
+      &lt;NumberOfTasks&gt;9&lt;/NumberOfTasks&gt;
+      &lt;NumberOfTeachers&gt;6&lt;/NumberOfTeachers&gt;
+      &lt;TeacherName&gt;sample string 4&lt;/TeacherName&gt;
+      &lt;TeacherPictureUrl&gt;sample string 5&lt;/TeacherPictureUrl&gt;
+      &lt;Teachers&gt;
+        &lt;CourseCardTeacher&gt;
+          &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+          &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+        &lt;/CourseCardTeacher&gt;
+        &lt;CourseCardTeacher&gt;
+          &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+          &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+          &lt;PersonId&gt;1&lt;/PersonId&gt;
+          &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+        &lt;/CourseCardTeacher&gt;
+      &lt;/Teachers&gt;
+      &lt;Title&gt;sample string 3&lt;/Title&gt;
+    &lt;/CourseCard&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

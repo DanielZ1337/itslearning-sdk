@@ -8,7 +8,7 @@ export type ItslearningRestApiEntitiesAssessmentRecordPersonAssessmentValue = {
 	OverwrittenScore: number | null;
 	AnswerSubmitted: boolean;
 	AttemptId: number | null;
-	AnswerDateTime: string | null;
+	AnswerDateTime: Date | null;
 	AssessmentVisible: boolean;
 	ElementSessionStatus: number;
 	ElementResultId: number | null;

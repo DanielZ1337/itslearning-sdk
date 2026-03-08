@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/courses/{courseId}/groupsets/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/courses/{courseId}/groupsets/v1</h1>
+<div>
+    <p><p>
+ Create or replace existing course groups sets in specified course.
+ </p>
+<p>
+ If the course groups don't exist yet, new groups will be created and identifiers of the created groups will be returned in the response with the same ordering as was given in the request.
+ </p>
+<p>
+ If course groups already exist, then the groups will be updated. Any existing participants of any existing course groups will be replaced by new participants from this request. Course group titles will also be updated.
+ </p>
+<p>
+ The user needs course-admin rights in the course to be authorized.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier of a course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Object containing group set id, title and course groups.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroupSet">Itslearning.RestApi.Entities.CourseGroups.CourseGroupSet</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">GroupSetId</td>
+                    <td class="parameter-documentation">
+                        <p>Group set identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>Group set title.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Groups</td>
+                    <td class="parameter-documentation">
+                        <p>Array of groups in the current group set.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroup">Itslearning.RestApi.Entities.CourseGroups.CourseGroup</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;GroupSetId&quot;: 1,
+  &quot;Title&quot;: &quot;sample string 2&quot;,
+  &quot;Groups&quot;: [
+    {
+      &quot;GroupId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;ParticipantIds&quot;: [
+        1,
+        2
+      ]
+    },
+    {
+      &quot;GroupId&quot;: 1,
+      &quot;Title&quot;: &quot;sample string 2&quot;,
+      &quot;ParticipantIds&quot;: [
+        1,
+        2
+      ]
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CourseGroupSet xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;GroupSetId&gt;1&lt;/GroupSetId&gt;
+  &lt;Groups&gt;
+    &lt;CourseGroup&gt;
+      &lt;GroupId&gt;1&lt;/GroupId&gt;
+      &lt;ParticipantIds xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:int&gt;1&lt;/d4p1:int&gt;
+        &lt;d4p1:int&gt;2&lt;/d4p1:int&gt;
+      &lt;/ParticipantIds&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+    &lt;/CourseGroup&gt;
+    &lt;CourseGroup&gt;
+      &lt;GroupId&gt;1&lt;/GroupId&gt;
+      &lt;ParticipantIds xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:int&gt;1&lt;/d4p1:int&gt;
+        &lt;d4p1:int&gt;2&lt;/d4p1:int&gt;
+      &lt;/ParticipantIds&gt;
+      &lt;Title&gt;sample string 2&lt;/Title&gt;
+    &lt;/CourseGroup&gt;
+  &lt;/Groups&gt;
+  &lt;Title&gt;sample string 2&lt;/Title&gt;
+&lt;/CourseGroupSet&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Object containing CourseGroupSetId and array of CourseGroupIds in the same order that was presented by input object.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseGroups.CourseGroupSetSimple">Itslearning.RestApi.Entities.CourseGroups.CourseGroupSetSimple</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">GroupSetId</td>
+                    <td class="parameter-documentation">
+                        <p>Group set identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">GroupIds</td>
+                    <td class="parameter-documentation">
+                        <p>Array of groups identifiers in the current group set.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;GroupSetId&quot;: 1,
+  &quot;GroupIds&quot;: [
+    1,
+    2
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CourseGroupSetSimple xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;GroupIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/GroupIds&gt;
+  &lt;GroupSetId&gt;1&lt;/GroupSetId&gt;
+&lt;/CourseGroupSetSimple&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

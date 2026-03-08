@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/instantmessages/suggestions/v1?searchText={searchText}&amp;maxSuggestions={maxSuggestions}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/instantmessages/suggestions/v1?searchText={searchText}&amp;maxSuggestions={maxSuggestions}</h1>
+<div>
+    <p><p> Searches for suggestions of person names or thread names that match the input search query for the current user</p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">searchText</td>
+                    <td class="parameter-documentation">
+                        <p>The query to get suggestions for</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">maxSuggestions</td>
+                    <td class="parameter-documentation">
+                        <p>The maximum number of suggestions to return (defaults to 10 if not supplied)</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Array of suggestions that match the specified query</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageFilterSuggestion">Itslearning.RestApi.Entities.InstantMessageFilterSuggestion</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>Type can be: OneToOne, Course, Project, Group</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>PersonId if TypeName == OneToOne, or ThreadId if otherwise</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Label</td>
+                    <td class="parameter-documentation">
+                        <p>Label for the suggestion</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Type&quot;: &quot;sample string 1&quot;,
+    &quot;Id&quot;: 2,
+    &quot;Label&quot;: &quot;sample string 3&quot;
+  },
+  {
+    &quot;Type&quot;: &quot;sample string 1&quot;,
+    &quot;Id&quot;: 2,
+    &quot;Label&quot;: &quot;sample string 3&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfInstantMessageFilterSuggestion xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;InstantMessageFilterSuggestion&gt;
+    &lt;Id&gt;2&lt;/Id&gt;
+    &lt;Label&gt;sample string 3&lt;/Label&gt;
+    &lt;Type&gt;sample string 1&lt;/Type&gt;
+  &lt;/InstantMessageFilterSuggestion&gt;
+  &lt;InstantMessageFilterSuggestion&gt;
+    &lt;Id&gt;2&lt;/Id&gt;
+    &lt;Label&gt;sample string 3&lt;/Label&gt;
+    &lt;Type&gt;sample string 1&lt;/Type&gt;
+  &lt;/InstantMessageFilterSuggestion&gt;
+&lt;/ArrayOfInstantMessageFilterSuggestion&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

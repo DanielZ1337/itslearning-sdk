@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/yourfiles/public/folders/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/yourfiles/public/folders/v1</h1>
+<div>
+    <p>Copy folders to a different location</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The request with identifiers and new destination</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.CopyRequest">Itslearning.RestApi.Entities.YourFiles.CopyRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ParentFolderId</td>
+                    <td class="parameter-documentation">
+                        <p>The new parent folder identifier where the files or folders will be copied to</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Ids</td>
+                    <td class="parameter-documentation">
+                        <p>The list of identifiers of the files or folders to be copied</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DuplicateBehaviour</td>
+                    <td class="parameter-documentation">
+                        <p>How to handle duplicates in destination folder</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.DuplicateBehaviour">Itslearning.RestApi.Entities.YourFiles.DuplicateBehaviour</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;ParentFolderId&quot;: 1,
+  &quot;Ids&quot;: [
+    1,
+    2
+  ],
+  &quot;DuplicateBehaviour&quot;: 1
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CopyRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;DuplicateBehaviour&gt;Skip&lt;/DuplicateBehaviour&gt;
+  &lt;Ids xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/Ids&gt;
+  &lt;ParentFolderId&gt;1&lt;/ParentFolderId&gt;
+&lt;/CopyRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The file model for destination folder</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.FileModel">Itslearning.RestApi.Entities.YourFiles.FileModel</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the file/folder</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastModified</td>
+                    <td class="parameter-documentation">
+                        <p>The date and time the file was last modified</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastModifiedString</td>
+                    <td class="parameter-documentation">
+                        <p>The date and time the file was last modified as string</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileType</td>
+                    <td class="parameter-documentation">
+                        <p>The type of file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileSize</td>
+                    <td class="parameter-documentation">
+                        <p>The file size in Kb</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileId</td>
+                    <td class="parameter-documentation">
+                        <p>The file identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>The file repository identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SignedFileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>Signed file repository identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsFolder</td>
+                    <td class="parameter-documentation">
+                        <p>If the item is folder</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">VirtualPath</td>
+                    <td class="parameter-documentation">
+                        <p>Virtual Path</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Icon</td>
+                    <td class="parameter-documentation">
+                        <p>Icon for the item</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FolderId</td>
+                    <td class="parameter-documentation">
+                        <p>The folder identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ParentFolderId</td>
+                    <td class="parameter-documentation">
+                        <p>The parent folder identifier. If this is a root folder or IsFolder = false, then this value is null.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">NameWithoutExtension</td>
+                    <td class="parameter-documentation">
+                        <p>The name without file extension</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Extension</td>
+                    <td class="parameter-documentation">
+                        <p>The file extension</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Children</td>
+                    <td class="parameter-documentation">
+                        <p>The children of the FileModel if the file model is a folder</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.FileModel">Itslearning.RestApi.Entities.YourFiles.FileModel</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsEditable</td>
+                    <td class="parameter-documentation">
+                        <p>If file can be edited</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsViewable</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether the item is viewable in the browser.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FolderType</td>
+                    <td class="parameter-documentation">
+                        <p>Gets or sets a value indicating whether the item is viewable in the browser.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PublicLink</td>
+                    <td class="parameter-documentation">
+                        <p>Embed link for files.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Name&quot;: &quot;sample string 1&quot;,
+  &quot;LastModified&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;LastModifiedString&quot;: &quot;sample string 3&quot;,
+  &quot;FileType&quot;: &quot;sample string 4&quot;,
+  &quot;FileSize&quot;: 5,
+  &quot;FileId&quot;: 6,
+  &quot;FileRepoId&quot;: &quot;31383d60-dc91-488f-88e7-1d4b4a62f5f3&quot;,
+  &quot;SignedFileRepoId&quot;: &quot;sample string 8&quot;,
+  &quot;IsFolder&quot;: true,
+  &quot;VirtualPath&quot;: &quot;sample string 10&quot;,
+  &quot;Icon&quot;: &quot;sample string 11&quot;,
+  &quot;FolderId&quot;: 12,
+  &quot;ParentFolderId&quot;: 1,
+  &quot;NameWithoutExtension&quot;: &quot;sample string 13&quot;,
+  &quot;Extension&quot;: &quot;sample string 14&quot;,
+  &quot;Children&quot;: [
+    {
+      &quot;Name&quot;: &quot;sample string 1&quot;,
+      &quot;LastModified&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;LastModifiedString&quot;: &quot;sample string 3&quot;,
+      &quot;FileType&quot;: &quot;sample string 4&quot;,
+      &quot;FileSize&quot;: 5,
+      &quot;FileId&quot;: 6,
+      &quot;FileRepoId&quot;: &quot;33942041-e948-4039-a5b8-83e95d421919&quot;,
+      &quot;SignedFileRepoId&quot;: &quot;sample string 8&quot;,
+      &quot;IsFolder&quot;: true,
+      &quot;VirtualPath&quot;: &quot;sample string 10&quot;,
+      &quot;Icon&quot;: &quot;sample string 11&quot;,
+      &quot;FolderId&quot;: 12,
+      &quot;ParentFolderId&quot;: 1,
+      &quot;NameWithoutExtension&quot;: &quot;sample string 13&quot;,
+      &quot;Extension&quot;: &quot;sample string 14&quot;,
+      &quot;Children&quot;: null,
+      &quot;IsEditable&quot;: true,
+      &quot;IsViewable&quot;: true,
+      &quot;FolderType&quot;: &quot;sample string 17&quot;,
+      &quot;PublicLink&quot;: &quot;sample string 18&quot;
+    },
+    {
+      &quot;Name&quot;: &quot;sample string 1&quot;,
+      &quot;LastModified&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;LastModifiedString&quot;: &quot;sample string 3&quot;,
+      &quot;FileType&quot;: &quot;sample string 4&quot;,
+      &quot;FileSize&quot;: 5,
+      &quot;FileId&quot;: 6,
+      &quot;FileRepoId&quot;: &quot;2a52ecb9-017d-48dc-99d1-6d3a76714439&quot;,
+      &quot;SignedFileRepoId&quot;: &quot;sample string 8&quot;,
+      &quot;IsFolder&quot;: true,
+      &quot;VirtualPath&quot;: &quot;sample string 10&quot;,
+      &quot;Icon&quot;: &quot;sample string 11&quot;,
+      &quot;FolderId&quot;: 12,
+      &quot;ParentFolderId&quot;: 1,
+      &quot;NameWithoutExtension&quot;: &quot;sample string 13&quot;,
+      &quot;Extension&quot;: &quot;sample string 14&quot;,
+      &quot;Children&quot;: null,
+      &quot;IsEditable&quot;: true,
+      &quot;IsViewable&quot;: true,
+      &quot;FolderType&quot;: &quot;sample string 17&quot;,
+      &quot;PublicLink&quot;: &quot;sample string 18&quot;
+    }
+  ],
+  &quot;IsEditable&quot;: true,
+  &quot;IsViewable&quot;: true,
+  &quot;FolderType&quot;: &quot;sample string 17&quot;,
+  &quot;PublicLink&quot;: &quot;sample string 18&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;FileModel xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;Children&gt;
+    &lt;FileModel&gt;
+      &lt;Children i:nil=&quot;true&quot; /&gt;
+      &lt;Extension&gt;sample string 14&lt;/Extension&gt;
+      &lt;FileId&gt;6&lt;/FileId&gt;
+      &lt;FileRepoId&gt;33942041-e948-4039-a5b8-83e95d421919&lt;/FileRepoId&gt;
+      &lt;FileSize&gt;5&lt;/FileSize&gt;
+      &lt;FileType&gt;sample string 4&lt;/FileType&gt;
+      &lt;FolderId&gt;12&lt;/FolderId&gt;
+      &lt;FolderType&gt;sample string 17&lt;/FolderType&gt;
+      &lt;Icon&gt;sample string 11&lt;/Icon&gt;
+      &lt;IsEditable&gt;true&lt;/IsEditable&gt;
+      &lt;IsFolder&gt;true&lt;/IsFolder&gt;
+      &lt;IsViewable&gt;true&lt;/IsViewable&gt;
+      &lt;LastModified&gt;2026-03-07T16:36:58Z&lt;/LastModified&gt;
+      &lt;LastModifiedString&gt;sample string 3&lt;/LastModifiedString&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+      &lt;NameWithoutExtension&gt;sample string 13&lt;/NameWithoutExtension&gt;
+      &lt;ParentFolderId&gt;1&lt;/ParentFolderId&gt;
+      &lt;PublicLink&gt;sample string 18&lt;/PublicLink&gt;
+      &lt;SignedFileRepoId&gt;sample string 8&lt;/SignedFileRepoId&gt;
+      &lt;VirtualPath&gt;sample string 10&lt;/VirtualPath&gt;
+    &lt;/FileModel&gt;
+    &lt;FileModel&gt;
+      &lt;Children i:nil=&quot;true&quot; /&gt;
+      &lt;Extension&gt;sample string 14&lt;/Extension&gt;
+      &lt;FileId&gt;6&lt;/FileId&gt;
+      &lt;FileRepoId&gt;2a52ecb9-017d-48dc-99d1-6d3a76714439&lt;/FileRepoId&gt;
+      &lt;FileSize&gt;5&lt;/FileSize&gt;
+      &lt;FileType&gt;sample string 4&lt;/FileType&gt;
+      &lt;FolderId&gt;12&lt;/FolderId&gt;
+      &lt;FolderType&gt;sample string 17&lt;/FolderType&gt;
+      &lt;Icon&gt;sample string 11&lt;/Icon&gt;
+      &lt;IsEditable&gt;true&lt;/IsEditable&gt;
+      &lt;IsFolder&gt;true&lt;/IsFolder&gt;
+      &lt;IsViewable&gt;true&lt;/IsViewable&gt;
+      &lt;LastModified&gt;2026-03-07T16:36:58Z&lt;/LastModified&gt;
+      &lt;LastModifiedString&gt;sample string 3&lt;/LastModifiedString&gt;
+      &lt;Name&gt;sample string 1&lt;/Name&gt;
+      &lt;NameWithoutExtension&gt;sample string 13&lt;/NameWithoutExtension&gt;
+      &lt;ParentFolderId&gt;1&lt;/ParentFolderId&gt;
+      &lt;PublicLink&gt;sample string 18&lt;/PublicLink&gt;
+      &lt;SignedFileRepoId&gt;sample string 8&lt;/SignedFileRepoId&gt;
+      &lt;VirtualPath&gt;sample string 10&lt;/VirtualPath&gt;
+    &lt;/FileModel&gt;
+  &lt;/Children&gt;
+  &lt;Extension&gt;sample string 14&lt;/Extension&gt;
+  &lt;FileId&gt;6&lt;/FileId&gt;
+  &lt;FileRepoId&gt;31383d60-dc91-488f-88e7-1d4b4a62f5f3&lt;/FileRepoId&gt;
+  &lt;FileSize&gt;5&lt;/FileSize&gt;
+  &lt;FileType&gt;sample string 4&lt;/FileType&gt;
+  &lt;FolderId&gt;12&lt;/FolderId&gt;
+  &lt;FolderType&gt;sample string 17&lt;/FolderType&gt;
+  &lt;Icon&gt;sample string 11&lt;/Icon&gt;
+  &lt;IsEditable&gt;true&lt;/IsEditable&gt;
+  &lt;IsFolder&gt;true&lt;/IsFolder&gt;
+  &lt;IsViewable&gt;true&lt;/IsViewable&gt;
+  &lt;LastModified&gt;2026-03-07T16:36:58Z&lt;/LastModified&gt;
+  &lt;LastModifiedString&gt;sample string 3&lt;/LastModifiedString&gt;
+  &lt;Name&gt;sample string 1&lt;/Name&gt;
+  &lt;NameWithoutExtension&gt;sample string 13&lt;/NameWithoutExtension&gt;
+  &lt;ParentFolderId&gt;1&lt;/ParentFolderId&gt;
+  &lt;PublicLink&gt;sample string 18&lt;/PublicLink&gt;
+  &lt;SignedFileRepoId&gt;sample string 8&lt;/SignedFileRepoId&gt;
+  &lt;VirtualPath&gt;sample string 10&lt;/VirtualPath&gt;
+&lt;/FileModel&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

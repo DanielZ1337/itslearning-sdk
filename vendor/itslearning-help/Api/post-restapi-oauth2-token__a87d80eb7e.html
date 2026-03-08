@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/oauth2/token</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/oauth2/token</h1>
+<div>
+    <p><p>
+ Get a new access token from either refresh_token, authorization_code or JWT bearer.
+ </p>
+<p>
+ The request's Content-Type must be <b>x-www-form-urlencoded.</b></p>
+<p>
+ The post should look like this on authorization request:
+ <pre>client_id=7abc00f3-32e6-4602-a784-c51b36d2798d&amp;grant_type=authorization_code&amp;code=1-53aa19e823514c1c936dc2a654ba30ec7cF3KUBGTq</pre>
+ When refreshing the token, the post should look like this:
+ <pre>client_id=7abc00f3-32e6-4602-a784-c51b36d2798d&amp;grant_type=refresh_token&amp;refresh_token=1-53aa19e823514c1c936dc2a654ba30ec7cF3KUBGTq</pre>
+ When requesting a server-to-server access token, the post should look like this:
+ <pre>grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&amp;assertion=...</pre></p>
+<p>
+ Note that the grant_type should be "authorization_code" when doing the first request after getting authorization by the user.
+ However, when refreshing the token, the grant_type should be "refresh_token".
+ The token parameter is "code" on authorization, and "refresh_token" on refreshing access_token.
+ In case of a server-to-server access token the grant_type should be "urn:ietf:params:oauth:grant-type:jwt-bearer".
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The new access token and refresh token</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse">Itsolutions.Itslearning.Web.RestApi.Personal.TokenResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">access_token</td>
+                    <td class="parameter-documentation">
+                        <p>The accesstoken that's used for calling API</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">token_type</td>
+                    <td class="parameter-documentation">
+                        <p>The token type. Refer to OAuth2 specs for more detailed information</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">expires_in</td>
+                    <td class="parameter-documentation">
+                        <p>Seconds until expiry of the access token</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">refresh_token</td>
+                    <td class="parameter-documentation">
+                        <p>The refresh_token, used for getting a new access token and refresh token pair after expiry.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;access_token&quot;: &quot;WTwJWDdWq8aSY3DcBuuEI04rBzFC_L8ddnlzkm138KzxoiEKHU2bjVW-tg7tmaNfXxK1ToL8mUzLEzeL3WVDITiTL4AE5asyWwGE9-39HK6W-02VHMuh7k0T57H_q_Ck&quot;,
+  &quot;token_type&quot;: &quot;Bearer&quot;,
+  &quot;expires_in&quot;: 3600,
+  &quot;refresh_token&quot;: &quot;1-a93f13a473ec45d7a24494cf9c9b27663Rw8M&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;TokenResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal&quot;&gt;
+  &lt;access_token&gt;WTwJWDdWq8aSY3DcBuuEI04rBzFC_L8ddnlzkm138KzxoiEKHU2bjVW-tg7tmaNfXxK1ToL8mUzLEzeL3WVDITiTL4AE5asyWwGE9-39HK6W-02VHMuh7k0T57H_q_Ck&lt;/access_token&gt;
+  &lt;expires_in&gt;3600&lt;/expires_in&gt;
+  &lt;refresh_token&gt;1-a93f13a473ec45d7a24494cf9c9b27663Rw8M&lt;/refresh_token&gt;
+  &lt;token_type&gt;Bearer&lt;/token_type&gt;
+&lt;/TokenResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

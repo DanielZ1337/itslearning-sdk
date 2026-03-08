@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/instantmessages/messagethreads/{threadId}/updatelastread/{lastReadInstantMessageId}/v1?sortIndex={sortIndex}&amp;operation={operation}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/instantmessages/messagethreads/{threadId}/updatelastread/{lastReadInstantMessageId}/v1?sortIndex={sortIndex}&amp;operation={operation}</h1>
+<div>
+    <p><p>
+ Updates last read instant message id for a thread
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">threadId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the thread to update</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">lastReadInstantMessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The id for the last read instant message</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">sortIndex</td>
+                    <td class="parameter-documentation">
+                        <p>The ID of the last meaningful message for the person which can optionally be set.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">operation</td>
+                    <td class="parameter-documentation">
+                        <p>The operaiton type for KPI which can optionally be set.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Returns 200 OK</p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

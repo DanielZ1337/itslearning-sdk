@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/cards/{courseId}/settings/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/cards/{courseId}/settings/v1</h1>
+<div>
+    <p>Gets the course card settings</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course Id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>This method returns the course card settings .</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCardSettings">Itslearning.RestApi.Entities.CourseCardSettings</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CourseTitle</td>
+                    <td class="parameter-documentation">
+                        <p>Course title.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FriendlyName</td>
+                    <td class="parameter-documentation">
+                        <p>Friendly course name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseColorClass</td>
+                    <td class="parameter-documentation">
+                        <p>Course colour.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">VisibleCourseCardCandidateIds</td>
+                    <td class="parameter-documentation">
+                        <p>Teacher representatives id's, comma separated</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">VisibleCourseCardCandidates</td>
+                    <td class="parameter-documentation">
+                        <p>Teacher representatives</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseCardTeacher">Itslearning.RestApi.Entities.CourseCardTeacher</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseCardImageFileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>The ID of course card image in the FileRepo.</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseCardImageUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Signed FileRepo URL of course card image which is used to display image on the user interface.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseCardImageSignedFileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>Signed FileRepo URL of course card image which is used to check the validation when uploading a new image.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEditCourseColour</td>
+                    <td class="parameter-documentation">
+                        <p>True if person can change the colour</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanEditFriendlyName</td>
+                    <td class="parameter-documentation">
+                        <p>True if person can change the friendly name</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseCardImageDescription</td>
+                    <td class="parameter-documentation">
+                        <p>Image description for course card</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SaveImageToYourImagesForEasyReuse</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether newly uploaded course card image should be saved into media repository to be reused in
+ "Your images" tab later.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;CourseTitle&quot;: &quot;sample string 1&quot;,
+  &quot;FriendlyName&quot;: &quot;sample string 2&quot;,
+  &quot;CourseColorClass&quot;: &quot;sample string 3&quot;,
+  &quot;VisibleCourseCardCandidateIds&quot;: &quot;sample string 4&quot;,
+  &quot;VisibleCourseCardCandidates&quot;: [
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+      &quot;IsVisibleOnCourseCard&quot;: true
+    },
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 3&quot;,
+      &quot;IsVisibleOnCourseCard&quot;: true
+    }
+  ],
+  &quot;CourseCardImageFileRepoId&quot;: &quot;b09e51bb-d458-4ef3-93dd-7161f28d0609&quot;,
+  &quot;CourseCardImageUrl&quot;: &quot;sample string 6&quot;,
+  &quot;CourseCardImageSignedFileRepoId&quot;: &quot;sample string 7&quot;,
+  &quot;CanEditCourseColour&quot;: true,
+  &quot;CanEditFriendlyName&quot;: true,
+  &quot;CourseCardImageDescription&quot;: &quot;sample string 10&quot;,
+  &quot;SaveImageToYourImagesForEasyReuse&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CourseCardSettings xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CanEditCourseColour&gt;true&lt;/CanEditCourseColour&gt;
+  &lt;CanEditFriendlyName&gt;true&lt;/CanEditFriendlyName&gt;
+  &lt;CourseCardImageDescription&gt;sample string 10&lt;/CourseCardImageDescription&gt;
+  &lt;CourseCardImageFileRepoId&gt;b09e51bb-d458-4ef3-93dd-7161f28d0609&lt;/CourseCardImageFileRepoId&gt;
+  &lt;CourseCardImageSignedFileRepoId&gt;sample string 7&lt;/CourseCardImageSignedFileRepoId&gt;
+  &lt;CourseCardImageUrl&gt;sample string 6&lt;/CourseCardImageUrl&gt;
+  &lt;CourseColorClass&gt;sample string 3&lt;/CourseColorClass&gt;
+  &lt;CourseTitle&gt;sample string 1&lt;/CourseTitle&gt;
+  &lt;FriendlyName&gt;sample string 2&lt;/FriendlyName&gt;
+  &lt;SaveImageToYourImagesForEasyReuse&gt;true&lt;/SaveImageToYourImagesForEasyReuse&gt;
+  &lt;VisibleCourseCardCandidateIds&gt;sample string 4&lt;/VisibleCourseCardCandidateIds&gt;
+  &lt;VisibleCourseCardCandidates&gt;
+    &lt;CourseCardTeacher&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+    &lt;/CourseCardTeacher&gt;
+    &lt;CourseCardTeacher&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;IsVisibleOnCourseCard&gt;true&lt;/IsVisibleOnCourseCard&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;ProfileUrl&gt;sample string 3&lt;/ProfileUrl&gt;
+    &lt;/CourseCardTeacher&gt;
+  &lt;/VisibleCourseCardCandidates&gt;
+&lt;/CourseCardSettings&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/instantmessages/messagethreads/{threadId}/participants/messages-disabled/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/instantmessages/messagethreads/{threadId}/participants/messages-disabled/v1</h1>
+<div>
+    <p>Gets a collection of thread participants who cannot see messages.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">threadId</td>
+                    <td class="parameter-documentation">
+                        <p>Thread ID.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of InstantMessageThread entities.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.MessagesDisabledThreadParticipants">Itslearning.RestApi.Entities.MessagesDisabledThreadParticipants</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Count</td>
+                    <td class="parameter-documentation">
+                        <p>Number of instant message conversation participants who have messages disabled.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ThreadParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>The list of instant message conversation participants. Can be null in case if there's no such participants
+ or if there are too many of them.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ThreadParticipant">Itslearning.RestApi.Entities.ThreadParticipant</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Count&quot;: 1,
+  &quot;ThreadParticipants&quot;: [
+    {
+      &quot;SourceLocationId&quot;: 1,
+      &quot;SourceLocationType&quot;: 1,
+      &quot;IsDeleted&quot;: true,
+      &quot;CanReceive&quot;: true,
+      &quot;RoleInHierarchyTitle&quot;: &quot;sample string 3&quot;,
+      &quot;RoleInHierarchy&quot;: 0,
+      &quot;ExtraUserInformation&quot;: &quot;sample string 4&quot;,
+      &quot;PersonId&quot;: 5,
+      &quot;FirstName&quot;: &quot;sample string 6&quot;,
+      &quot;LastName&quot;: &quot;sample string 7&quot;,
+      &quot;FullName&quot;: &quot;sample string 8&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 9&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 10&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 12&quot;
+    },
+    {
+      &quot;SourceLocationId&quot;: 1,
+      &quot;SourceLocationType&quot;: 1,
+      &quot;IsDeleted&quot;: true,
+      &quot;CanReceive&quot;: true,
+      &quot;RoleInHierarchyTitle&quot;: &quot;sample string 3&quot;,
+      &quot;RoleInHierarchy&quot;: 0,
+      &quot;ExtraUserInformation&quot;: &quot;sample string 4&quot;,
+      &quot;PersonId&quot;: 5,
+      &quot;FirstName&quot;: &quot;sample string 6&quot;,
+      &quot;LastName&quot;: &quot;sample string 7&quot;,
+      &quot;FullName&quot;: &quot;sample string 8&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 9&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 10&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 11&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 12&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;MessagesDisabledThreadParticipants xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;Count&gt;1&lt;/Count&gt;
+  &lt;ThreadParticipants&gt;
+    &lt;ThreadParticipant xmlns=&quot;&quot;&gt;
+      &lt;AdditionalInfo&gt;sample string 10&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 6&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 8&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 7&lt;/LastName&gt;
+      &lt;PersonId&gt;5&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 11&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 12&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 9&lt;/ProfileUrl&gt;
+      &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+      &lt;ExtraUserInformation&gt;sample string 4&lt;/ExtraUserInformation&gt;
+      &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+      &lt;RoleInHierarchy&gt;None&lt;/RoleInHierarchy&gt;
+      &lt;RoleInHierarchyTitle&gt;sample string 3&lt;/RoleInHierarchyTitle&gt;
+      &lt;SourceLocationId&gt;1&lt;/SourceLocationId&gt;
+      &lt;SourceLocationType&gt;Course&lt;/SourceLocationType&gt;
+    &lt;/ThreadParticipant&gt;
+    &lt;ThreadParticipant xmlns=&quot;&quot;&gt;
+      &lt;AdditionalInfo&gt;sample string 10&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 6&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 8&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 7&lt;/LastName&gt;
+      &lt;PersonId&gt;5&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 11&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 12&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 9&lt;/ProfileUrl&gt;
+      &lt;CanReceive&gt;true&lt;/CanReceive&gt;
+      &lt;ExtraUserInformation&gt;sample string 4&lt;/ExtraUserInformation&gt;
+      &lt;IsDeleted&gt;true&lt;/IsDeleted&gt;
+      &lt;RoleInHierarchy&gt;None&lt;/RoleInHierarchy&gt;
+      &lt;RoleInHierarchyTitle&gt;sample string 3&lt;/RoleInHierarchyTitle&gt;
+      &lt;SourceLocationId&gt;1&lt;/SourceLocationId&gt;
+      &lt;SourceLocationType&gt;Course&lt;/SourceLocationType&gt;
+    &lt;/ThreadParticipant&gt;
+  &lt;/ThreadParticipants&gt;
+&lt;/MessagesDisabledThreadParticipants&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

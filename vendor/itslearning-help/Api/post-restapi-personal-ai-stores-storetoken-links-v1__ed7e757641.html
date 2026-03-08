@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/ai/stores/{storeToken}/links/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/ai/stores/{storeToken}/links/v1</h1>
+<div>
+    <p>Creates a new store from a link or adds a link to an existing store.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">storeToken</td>
+                    <td class="parameter-documentation">
+                        <p>Optional store token. If provided, adds to existing store; otherwise creates new one.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Request containing the URL to add.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.AddLinkRequest">Itslearning.RestApi.Entities.Personal.Ai.AddLinkRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Url</td>
+                    <td class="parameter-documentation">
+                        <p>The URL to add.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Url&quot;: &quot;sample string 1&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AddLinkRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Ai&quot;&gt;
+  &lt;Url&gt;sample string 1&lt;/Url&gt;
+&lt;/AddLinkRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Response containing the store token and whether web search should be used.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.CreateStoreResponse">Itslearning.RestApi.Entities.Personal.Ai.CreateStoreResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">StoreToken</td>
+                    <td class="parameter-documentation">
+                        <p>Opaque token for the store. Use this token in subsequent requests.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Files</td>
+                    <td class="parameter-documentation">
+                        <p>List of files in the store.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Ai.StoreFileInfo">Itslearning.RestApi.Entities.Personal.Ai.StoreFileInfo</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;StoreToken&quot;: &quot;sample string 1&quot;,
+  &quot;Files&quot;: [
+    {
+      &quot;FileId&quot;: &quot;sample string 1&quot;,
+      &quot;FileName&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 3,
+      &quot;Status&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;FileId&quot;: &quot;sample string 1&quot;,
+      &quot;FileName&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 3,
+      &quot;Status&quot;: &quot;sample string 4&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CreateStoreResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Personal.Ai&quot;&gt;
+  &lt;Files&gt;
+    &lt;StoreFileInfo&gt;
+      &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+      &lt;FileName&gt;sample string 2&lt;/FileName&gt;
+      &lt;Size&gt;3&lt;/Size&gt;
+      &lt;Status&gt;sample string 4&lt;/Status&gt;
+    &lt;/StoreFileInfo&gt;
+    &lt;StoreFileInfo&gt;
+      &lt;FileId&gt;sample string 1&lt;/FileId&gt;
+      &lt;FileName&gt;sample string 2&lt;/FileName&gt;
+      &lt;Size&gt;3&lt;/Size&gt;
+      &lt;Status&gt;sample string 4&lt;/Status&gt;
+    &lt;/StoreFileInfo&gt;
+  &lt;/Files&gt;
+  &lt;StoreToken&gt;sample string 1&lt;/StoreToken&gt;
+&lt;/CreateStoreResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

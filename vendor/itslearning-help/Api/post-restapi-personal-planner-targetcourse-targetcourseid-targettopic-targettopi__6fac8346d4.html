@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/planner/targetCourse/{targetCourseId}/targetTopic/{targetTopicId}/targetPlan/{targetPlanId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/planner/targetCourse/{targetCourseId}/targetTopic/{targetTopicId}/targetPlan/{targetPlanId}/v1</h1>
+<div>
+    <p>Adds shared plan elements to the course plan.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">targetCourseId</td>
+                    <td class="parameter-documentation">
+                        <p>ID of the course where the elements are added.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">targetTopicId</td>
+                    <td class="parameter-documentation">
+                        <p>ID of the course topic where the elements are added. Can be 0.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">targetPlanId</td>
+                    <td class="parameter-documentation">
+                        <p>ID of the course plan where the elements are added.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>Payload contains element IDs and flag indicating if only existing in the target course learning objectives can be used.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Internal.Models.Planner.ShareablePlanner.AddSharedResourcesToCoursePlanRequest">Itsolutions.Itslearning.Web.RestApi.Internal.Models.Planner.ShareablePlanner.AddSharedResourcesToCoursePlanRequest</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Elements</td>
+                    <td class="parameter-documentation">
+                        <p>Elements to be added.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.Platform.RestApi.Sdk.ItslEntities.Planner.PlanElement">Itslearning.Platform.RestApi.Sdk.ItslEntities.Planner.PlanElement</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">AddOnlyExistingInCourseLearningObjectives</td>
+                    <td class="parameter-documentation">
+                        <p>Indicates if only existing in the target course learning objectives can be used.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Elements&quot;: [
+    {
+      &quot;LearningObjectInstanceId&quot;: 1,
+      &quot;ExtensionId&quot;: 2,
+      &quot;AuthorPersonId&quot;: 3,
+      &quot;AuthorName&quot;: &quot;sample string 4&quot;,
+      &quot;SharedWith&quot;: &quot;sample string 5&quot;,
+      &quot;SharingScope&quot;: 0,
+      &quot;VendorDefaultName&quot;: &quot;sample string 6&quot;,
+      &quot;VendorAuthorName&quot;: &quot;sample string 7&quot;,
+      &quot;ElementLearningObjectives&quot;: [
+        1,
+        2
+      ],
+      &quot;IconTypeId&quot;: 1,
+      &quot;IconsVersion&quot;: 8,
+      &quot;ElementId&quot;: 9,
+      &quot;Title&quot;: &quot;sample string 10&quot;,
+      &quot;LearningObjectId&quot;: 11,
+      &quot;LearningToolType&quot;: 0,
+      &quot;Order&quot;: 12
+    },
+    {
+      &quot;LearningObjectInstanceId&quot;: 1,
+      &quot;ExtensionId&quot;: 2,
+      &quot;AuthorPersonId&quot;: 3,
+      &quot;AuthorName&quot;: &quot;sample string 4&quot;,
+      &quot;SharedWith&quot;: &quot;sample string 5&quot;,
+      &quot;SharingScope&quot;: 0,
+      &quot;VendorDefaultName&quot;: &quot;sample string 6&quot;,
+      &quot;VendorAuthorName&quot;: &quot;sample string 7&quot;,
+      &quot;ElementLearningObjectives&quot;: [
+        1,
+        2
+      ],
+      &quot;IconTypeId&quot;: 1,
+      &quot;IconsVersion&quot;: 8,
+      &quot;ElementId&quot;: 9,
+      &quot;Title&quot;: &quot;sample string 10&quot;,
+      &quot;LearningObjectId&quot;: 11,
+      &quot;LearningToolType&quot;: 0,
+      &quot;Order&quot;: 12
+    }
+  ],
+  &quot;AddOnlyExistingInCourseLearningObjectives&quot;: true
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AddSharedResourcesToCoursePlanRequest xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Internal.Models.Planner.ShareablePlanner&quot;&gt;
+  &lt;AddOnlyExistingInCourseLearningObjectives&gt;true&lt;/AddOnlyExistingInCourseLearningObjectives&gt;
+  &lt;Elements xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Platform.RestApi.Sdk.ItslEntities.Planner&quot;&gt;
+    &lt;d2p1:PlanElement&gt;
+      &lt;d2p1:ElementId&gt;9&lt;/d2p1:ElementId&gt;
+      &lt;d2p1:LearningObjectId&gt;11&lt;/d2p1:LearningObjectId&gt;
+      &lt;d2p1:LearningToolType&gt;LearningResource&lt;/d2p1:LearningToolType&gt;
+      &lt;d2p1:Order&gt;12&lt;/d2p1:Order&gt;
+      &lt;d2p1:Title&gt;sample string 10&lt;/d2p1:Title&gt;
+      &lt;d2p1:AuthorName&gt;sample string 4&lt;/d2p1:AuthorName&gt;
+      &lt;d2p1:AuthorPersonId&gt;3&lt;/d2p1:AuthorPersonId&gt;
+      &lt;d2p1:ElementLearningObjectives xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:int&gt;1&lt;/d4p1:int&gt;
+        &lt;d4p1:int&gt;2&lt;/d4p1:int&gt;
+      &lt;/d2p1:ElementLearningObjectives&gt;
+      &lt;d2p1:ExtensionId&gt;2&lt;/d2p1:ExtensionId&gt;
+      &lt;d2p1:IconTypeId&gt;1&lt;/d2p1:IconTypeId&gt;
+      &lt;d2p1:IconsVersion&gt;8&lt;/d2p1:IconsVersion&gt;
+      &lt;d2p1:LearningObjectInstanceId&gt;1&lt;/d2p1:LearningObjectInstanceId&gt;
+      &lt;d2p1:SharedWith&gt;sample string 5&lt;/d2p1:SharedWith&gt;
+      &lt;d2p1:SharingScope&gt;None&lt;/d2p1:SharingScope&gt;
+      &lt;d2p1:VendorAuthorName&gt;sample string 7&lt;/d2p1:VendorAuthorName&gt;
+      &lt;d2p1:VendorDefaultName&gt;sample string 6&lt;/d2p1:VendorDefaultName&gt;
+    &lt;/d2p1:PlanElement&gt;
+    &lt;d2p1:PlanElement&gt;
+      &lt;d2p1:ElementId&gt;9&lt;/d2p1:ElementId&gt;
+      &lt;d2p1:LearningObjectId&gt;11&lt;/d2p1:LearningObjectId&gt;
+      &lt;d2p1:LearningToolType&gt;LearningResource&lt;/d2p1:LearningToolType&gt;
+      &lt;d2p1:Order&gt;12&lt;/d2p1:Order&gt;
+      &lt;d2p1:Title&gt;sample string 10&lt;/d2p1:Title&gt;
+      &lt;d2p1:AuthorName&gt;sample string 4&lt;/d2p1:AuthorName&gt;
+      &lt;d2p1:AuthorPersonId&gt;3&lt;/d2p1:AuthorPersonId&gt;
+      &lt;d2p1:ElementLearningObjectives xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:int&gt;1&lt;/d4p1:int&gt;
+        &lt;d4p1:int&gt;2&lt;/d4p1:int&gt;
+      &lt;/d2p1:ElementLearningObjectives&gt;
+      &lt;d2p1:ExtensionId&gt;2&lt;/d2p1:ExtensionId&gt;
+      &lt;d2p1:IconTypeId&gt;1&lt;/d2p1:IconTypeId&gt;
+      &lt;d2p1:IconsVersion&gt;8&lt;/d2p1:IconsVersion&gt;
+      &lt;d2p1:LearningObjectInstanceId&gt;1&lt;/d2p1:LearningObjectInstanceId&gt;
+      &lt;d2p1:SharedWith&gt;sample string 5&lt;/d2p1:SharedWith&gt;
+      &lt;d2p1:SharingScope&gt;None&lt;/d2p1:SharingScope&gt;
+      &lt;d2p1:VendorAuthorName&gt;sample string 7&lt;/d2p1:VendorAuthorName&gt;
+      &lt;d2p1:VendorDefaultName&gt;sample string 6&lt;/d2p1:VendorDefaultName&gt;
+    &lt;/d2p1:PlanElement&gt;
+  &lt;/Elements&gt;
+&lt;/AddSharedResourcesToCoursePlanRequest&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

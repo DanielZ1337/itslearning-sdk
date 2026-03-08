@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/pages/{elementId}/contentblocks/polls/{contentBlockId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/pages/{elementId}/contentblocks/polls/{contentBlockId}/v1</h1>
+<div>
+    <p>Update a poll content block.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the page element</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">contentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the content block</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The poll content block update request</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockPollsRequestUI">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.CreateContentBlockPollsRequestUI</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">VotedAlternativeId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of the alternative that the current user has voted for.
+ Null if the user has not voted yet.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TotalVotes</td>
+                    <td class="parameter-documentation">
+                        <p>The total number of votes cast across all poll alternatives.
+ Null if vote count is not available.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Question</td>
+                    <td class="parameter-documentation">
+                        <p>The main question text displayed to users for the poll.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Settings</td>
+                    <td class="parameter-documentation">
+                        <p>The configuration settings that control poll behavior and display options.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollSettings">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollSettings</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Alternatives</td>
+                    <td class="parameter-documentation">
+                        <p>The collection of available voting options for the poll.
+ Defaults to an empty list.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollAlternative">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.PollAlternative</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ContentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>The type of the content block (e.g. "text", "image", "files", "rss", "poll").
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the content block.
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Order</td>
+                    <td class="parameter-documentation">
+                        <p>The display order of the content block within its Layout Zone.
+ Lower values appear first.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LayoutZone</td>
+                    <td class="parameter-documentation">
+                        <p>The layout zone where the content block should be placed (e.g. "Left", "Right").
+ Determines the positioning within the page layout.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Color</td>
+                    <td class="parameter-documentation">
+                        <p>The color of the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;votedAlternativeId&quot;: 1,
+  &quot;totalVotes&quot;: 1,
+  &quot;question&quot;: &quot;sample string 1&quot;,
+  &quot;settings&quot;: {
+    &quot;showResults&quot;: &quot;sample string 1&quot;,
+    &quot;displayNumberOfVotes&quot;: true,
+    &quot;userCanChangeVote&quot;: true
+  },
+  &quot;alternatives&quot;: [
+    {
+      &quot;alternativeId&quot;: 1,
+      &quot;text&quot;: &quot;sample string 2&quot;
+    },
+    {
+      &quot;alternativeId&quot;: 1,
+      &quot;text&quot;: &quot;sample string 2&quot;
+    }
+  ],
+  &quot;contentBlockId&quot;: 2,
+  &quot;type&quot;: &quot;sample string 3&quot;,
+  &quot;title&quot;: &quot;sample string 4&quot;,
+  &quot;order&quot;: 5,
+  &quot;layoutZone&quot;: &quot;sample string 6&quot;,
+  &quot;color&quot;: &quot;sample string 7&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CreateContentBlockPollsRequestUI xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests&quot;&gt;
+  &lt;Color&gt;sample string 7&lt;/Color&gt;
+  &lt;ContentBlockId&gt;2&lt;/ContentBlockId&gt;
+  &lt;LayoutZone&gt;sample string 6&lt;/LayoutZone&gt;
+  &lt;Order&gt;5&lt;/Order&gt;
+  &lt;Title&gt;sample string 4&lt;/Title&gt;
+  &lt;Type&gt;sample string 3&lt;/Type&gt;
+  &lt;Alternatives&gt;
+    &lt;PollAlternative&gt;
+      &lt;AlternativeId&gt;1&lt;/AlternativeId&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+    &lt;/PollAlternative&gt;
+    &lt;PollAlternative&gt;
+      &lt;AlternativeId&gt;1&lt;/AlternativeId&gt;
+      &lt;Text&gt;sample string 2&lt;/Text&gt;
+    &lt;/PollAlternative&gt;
+  &lt;/Alternatives&gt;
+  &lt;Question&gt;sample string 1&lt;/Question&gt;
+  &lt;Settings&gt;
+    &lt;DisplayNumberOfVotes&gt;true&lt;/DisplayNumberOfVotes&gt;
+    &lt;ShowResults&gt;sample string 1&lt;/ShowResults&gt;
+    &lt;UserCanChangeVote&gt;true&lt;/UserCanChangeVote&gt;
+  &lt;/Settings&gt;
+  &lt;TotalVotes&gt;1&lt;/TotalVotes&gt;
+  &lt;VotedAlternativeId&gt;1&lt;/VotedAlternativeId&gt;
+&lt;/CreateContentBlockPollsRequestUI&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Updated poll content block</p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

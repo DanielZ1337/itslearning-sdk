@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/yourfiles/files/zip/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/yourfiles/files/zip/v1</h1>
+<div>
+    <p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.ZipFileJobModel">Itslearning.RestApi.Entities.YourFiles.ZipFileJobModel</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">JobId</td>
+                    <td class="parameter-documentation">
+                        <p>The job identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>The file repository identifier for the zip file</p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ZipFileName</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the zip file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Created</td>
+                    <td class="parameter-documentation">
+                        <p>When the job was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Status</td>
+                    <td class="parameter-documentation">
+                        <p>Status for the job</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DownloadUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The url to download the file if status is completed</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;JobId&quot;: 1,
+  &quot;FileRepoId&quot;: &quot;5224ba7a-8ebd-46cb-a3cd-8c4391d42839&quot;,
+  &quot;ZipFileName&quot;: &quot;sample string 3&quot;,
+  &quot;Created&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;Status&quot;: &quot;sample string 5&quot;,
+  &quot;DownloadUrl&quot;: &quot;sample string 6&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ZipFileJobModel xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.YourFiles&quot;&gt;
+  &lt;Created&gt;2026-03-07T09:02:56Z&lt;/Created&gt;
+  &lt;DownloadUrl&gt;sample string 6&lt;/DownloadUrl&gt;
+  &lt;FileRepoId&gt;5224ba7a-8ebd-46cb-a3cd-8c4391d42839&lt;/FileRepoId&gt;
+  &lt;JobId&gt;1&lt;/JobId&gt;
+  &lt;Status&gt;sample string 5&lt;/Status&gt;
+  &lt;ZipFileName&gt;sample string 3&lt;/ZipFileName&gt;
+&lt;/ZipFileJobModel&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

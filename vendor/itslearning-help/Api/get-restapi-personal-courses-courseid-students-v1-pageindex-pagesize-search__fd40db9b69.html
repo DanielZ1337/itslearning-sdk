@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/students/v1?pageIndex={pageIndex}&amp;pageSize={pageSize}&amp;search={search}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/students/v1?pageIndex={pageIndex}&amp;pageSize={pageSize}&amp;search={search}</h1>
+<div>
+    <p>Get students in course</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>Course Id</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">pageIndex</td>
+                    <td class="parameter-documentation">
+                        <p>Page index for pagination</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is 0</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">pageSize</td>
+                    <td class="parameter-documentation">
+                        <p>Number of items per page</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is 100</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">search</td>
+                    <td class="parameter-documentation">
+                        <p>Search filter</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantsModel">Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantsModel</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Participants</td>
+                    <td class="parameter-documentation">
+                        <p>The array of participant items.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantItemModel">Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models.ParticipantItemModel</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TotalCount</td>
+                    <td class="parameter-documentation">
+                        <p>The total count of participants available.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Participants&quot;: [
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;ExtraInformation&quot;: &quot;sample string 3&quot;,
+      &quot;PictureUrl&quot;: &quot;sample string 4&quot;
+    },
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FullName&quot;: &quot;sample string 2&quot;,
+      &quot;ExtraInformation&quot;: &quot;sample string 3&quot;,
+      &quot;PictureUrl&quot;: &quot;sample string 4&quot;
+    }
+  ],
+  &quot;TotalCount&quot;: 1
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ParticipantsModel xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.ContentAreaSettings.Models&quot;&gt;
+  &lt;Participants&gt;
+    &lt;ParticipantItemModel&gt;
+      &lt;ExtraInformation&gt;sample string 3&lt;/ExtraInformation&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;PictureUrl&gt;sample string 4&lt;/PictureUrl&gt;
+    &lt;/ParticipantItemModel&gt;
+    &lt;ParticipantItemModel&gt;
+      &lt;ExtraInformation&gt;sample string 3&lt;/ExtraInformation&gt;
+      &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;PictureUrl&gt;sample string 4&lt;/PictureUrl&gt;
+    &lt;/ParticipantItemModel&gt;
+  &lt;/Participants&gt;
+  &lt;TotalCount&gt;1&lt;/TotalCount&gt;
+&lt;/ParticipantsModel&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

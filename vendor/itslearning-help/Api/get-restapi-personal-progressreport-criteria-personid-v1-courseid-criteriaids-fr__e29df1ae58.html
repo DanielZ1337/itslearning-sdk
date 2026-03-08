@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/progressreport/criteria/{personId}/v1?courseId={courseId}&amp;criteriaIds={criteriaIds}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/progressreport/criteria/{personId}/v1?courseId={courseId}&amp;criteriaIds={criteriaIds}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}</h1>
+<div>
+    <p><p>
+ Gets the person criteria assessment report.
+ </p>
+<p>
+ The client of this API may supply additional parameters to get a more detailed report.
+ For instance supplying a time period parameters (fromDateTime and toDateTime) one can get a report only in
+ this particular time period.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">personId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of a person to get assessments for.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of a course to get assessments from.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">criteriaIds</td>
+                    <td class="parameter-documentation">
+                        <p>The criteria ids separated by comma. Only criteria from the specified course will be returned.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] Report period start date. Optional, if not supplied a date of the earliest criteria assessment date is used. Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">toDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] Report period stop date. Optional, if not supplied the current date is used. Date has to contain also time in, for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Person criteria assessment report.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReport">Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReport</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ReportItems</td>
+                    <td class="parameter-documentation">
+                        <p>The assessment report items.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReportItem">Itslearning.RestApi.Entities.CriteriaAssessmentReport.CriteriaAssessmentReportItem</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;ReportItems&quot;: [
+    {
+      &quot;Criterion&quot;: {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;
+      },
+      &quot;Assessments&quot;: [
+        {
+          &quot;AchievementLevelTitle&quot;: &quot;sample string 1&quot;,
+          &quot;AssessmentDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+          &quot;Comment&quot;: &quot;sample string 3&quot;,
+          &quot;PercentScore&quot;: 4.1,
+          &quot;AssessedBy&quot;: {
+            &quot;PersonId&quot;: 1,
+            &quot;FirstName&quot;: &quot;sample string 2&quot;,
+            &quot;LastName&quot;: &quot;sample string 3&quot;,
+            &quot;FullName&quot;: &quot;sample string 4&quot;,
+            &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+            &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+            &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+            &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+          },
+          &quot;Element&quot;: {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: 2,
+            &quot;Title&quot;: &quot;sample string 3&quot;,
+            &quot;LearningToolId&quot;: 4,
+            &quot;ElementOrder&quot;: 5,
+            &quot;ActiveFromDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ActiveToDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;DeadlineDT&quot;: &quot;2026-03-07T16:36:58Z&quot;
+          }
+        },
+        {
+          &quot;AchievementLevelTitle&quot;: &quot;sample string 1&quot;,
+          &quot;AssessmentDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+          &quot;Comment&quot;: &quot;sample string 3&quot;,
+          &quot;PercentScore&quot;: 4.1,
+          &quot;AssessedBy&quot;: {
+            &quot;PersonId&quot;: 1,
+            &quot;FirstName&quot;: &quot;sample string 2&quot;,
+            &quot;LastName&quot;: &quot;sample string 3&quot;,
+            &quot;FullName&quot;: &quot;sample string 4&quot;,
+            &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+            &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+            &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+            &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+          },
+          &quot;Element&quot;: {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: 2,
+            &quot;Title&quot;: &quot;sample string 3&quot;,
+            &quot;LearningToolId&quot;: 4,
+            &quot;ElementOrder&quot;: 5,
+            &quot;ActiveFromDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ActiveToDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;DeadlineDT&quot;: &quot;2026-03-07T16:36:58Z&quot;
+          }
+        }
+      ]
+    },
+    {
+      &quot;Criterion&quot;: {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;
+      },
+      &quot;Assessments&quot;: [
+        {
+          &quot;AchievementLevelTitle&quot;: &quot;sample string 1&quot;,
+          &quot;AssessmentDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+          &quot;Comment&quot;: &quot;sample string 3&quot;,
+          &quot;PercentScore&quot;: 4.1,
+          &quot;AssessedBy&quot;: {
+            &quot;PersonId&quot;: 1,
+            &quot;FirstName&quot;: &quot;sample string 2&quot;,
+            &quot;LastName&quot;: &quot;sample string 3&quot;,
+            &quot;FullName&quot;: &quot;sample string 4&quot;,
+            &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+            &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+            &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+            &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+          },
+          &quot;Element&quot;: {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: 2,
+            &quot;Title&quot;: &quot;sample string 3&quot;,
+            &quot;LearningToolId&quot;: 4,
+            &quot;ElementOrder&quot;: 5,
+            &quot;ActiveFromDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ActiveToDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;DeadlineDT&quot;: &quot;2026-03-07T16:36:58Z&quot;
+          }
+        },
+        {
+          &quot;AchievementLevelTitle&quot;: &quot;sample string 1&quot;,
+          &quot;AssessmentDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+          &quot;Comment&quot;: &quot;sample string 3&quot;,
+          &quot;PercentScore&quot;: 4.1,
+          &quot;AssessedBy&quot;: {
+            &quot;PersonId&quot;: 1,
+            &quot;FirstName&quot;: &quot;sample string 2&quot;,
+            &quot;LastName&quot;: &quot;sample string 3&quot;,
+            &quot;FullName&quot;: &quot;sample string 4&quot;,
+            &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+            &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+            &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+            &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+          },
+          &quot;Element&quot;: {
+            &quot;ElementId&quot;: 1,
+            &quot;ElementType&quot;: 2,
+            &quot;Title&quot;: &quot;sample string 3&quot;,
+            &quot;LearningToolId&quot;: 4,
+            &quot;ElementOrder&quot;: 5,
+            &quot;ActiveFromDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ActiveToDT&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;DeadlineDT&quot;: &quot;2026-03-07T16:36:58Z&quot;
+          }
+        }
+      ]
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;CriteriaAssessmentReport xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;ReportItems&gt;
+    &lt;CriteriaAssessmentReportItem&gt;
+      &lt;Assessments&gt;
+        &lt;CriterionAssessment&gt;
+          &lt;AchievementLevelTitle&gt;sample string 1&lt;/AchievementLevelTitle&gt;
+          &lt;AssessedBy&gt;
+            &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+            &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+            &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+            &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+            &lt;PersonId&gt;1&lt;/PersonId&gt;
+            &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+            &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+            &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+          &lt;/AssessedBy&gt;
+          &lt;AssessmentDate&gt;2026-03-07T16:36:58Z&lt;/AssessmentDate&gt;
+          &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+          &lt;Element&gt;
+            &lt;ActiveFromDT&gt;2026-03-07T16:36:58Z&lt;/ActiveFromDT&gt;
+            &lt;ActiveToDT&gt;2026-03-07T16:36:58Z&lt;/ActiveToDT&gt;
+            &lt;DeadlineDT&gt;2026-03-07T16:36:58Z&lt;/DeadlineDT&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementOrder&gt;5&lt;/ElementOrder&gt;
+            &lt;ElementType&gt;2&lt;/ElementType&gt;
+            &lt;LearningToolId&gt;4&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 3&lt;/Title&gt;
+          &lt;/Element&gt;
+          &lt;PercentScore&gt;4.1&lt;/PercentScore&gt;
+        &lt;/CriterionAssessment&gt;
+        &lt;CriterionAssessment&gt;
+          &lt;AchievementLevelTitle&gt;sample string 1&lt;/AchievementLevelTitle&gt;
+          &lt;AssessedBy&gt;
+            &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+            &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+            &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+            &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+            &lt;PersonId&gt;1&lt;/PersonId&gt;
+            &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+            &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+            &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+          &lt;/AssessedBy&gt;
+          &lt;AssessmentDate&gt;2026-03-07T16:36:58Z&lt;/AssessmentDate&gt;
+          &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+          &lt;Element&gt;
+            &lt;ActiveFromDT&gt;2026-03-07T16:36:58Z&lt;/ActiveFromDT&gt;
+            &lt;ActiveToDT&gt;2026-03-07T16:36:58Z&lt;/ActiveToDT&gt;
+            &lt;DeadlineDT&gt;2026-03-07T16:36:58Z&lt;/DeadlineDT&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementOrder&gt;5&lt;/ElementOrder&gt;
+            &lt;ElementType&gt;2&lt;/ElementType&gt;
+            &lt;LearningToolId&gt;4&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 3&lt;/Title&gt;
+          &lt;/Element&gt;
+          &lt;PercentScore&gt;4.1&lt;/PercentScore&gt;
+        &lt;/CriterionAssessment&gt;
+      &lt;/Assessments&gt;
+      &lt;Criterion&gt;
+        &lt;Description&gt;sample string 3&lt;/Description&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/Criterion&gt;
+    &lt;/CriteriaAssessmentReportItem&gt;
+    &lt;CriteriaAssessmentReportItem&gt;
+      &lt;Assessments&gt;
+        &lt;CriterionAssessment&gt;
+          &lt;AchievementLevelTitle&gt;sample string 1&lt;/AchievementLevelTitle&gt;
+          &lt;AssessedBy&gt;
+            &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+            &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+            &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+            &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+            &lt;PersonId&gt;1&lt;/PersonId&gt;
+            &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+            &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+            &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+          &lt;/AssessedBy&gt;
+          &lt;AssessmentDate&gt;2026-03-07T16:36:58Z&lt;/AssessmentDate&gt;
+          &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+          &lt;Element&gt;
+            &lt;ActiveFromDT&gt;2026-03-07T16:36:58Z&lt;/ActiveFromDT&gt;
+            &lt;ActiveToDT&gt;2026-03-07T16:36:58Z&lt;/ActiveToDT&gt;
+            &lt;DeadlineDT&gt;2026-03-07T16:36:58Z&lt;/DeadlineDT&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementOrder&gt;5&lt;/ElementOrder&gt;
+            &lt;ElementType&gt;2&lt;/ElementType&gt;
+            &lt;LearningToolId&gt;4&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 3&lt;/Title&gt;
+          &lt;/Element&gt;
+          &lt;PercentScore&gt;4.1&lt;/PercentScore&gt;
+        &lt;/CriterionAssessment&gt;
+        &lt;CriterionAssessment&gt;
+          &lt;AchievementLevelTitle&gt;sample string 1&lt;/AchievementLevelTitle&gt;
+          &lt;AssessedBy&gt;
+            &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+            &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+            &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+            &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+            &lt;PersonId&gt;1&lt;/PersonId&gt;
+            &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+            &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+            &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+          &lt;/AssessedBy&gt;
+          &lt;AssessmentDate&gt;2026-03-07T16:36:58Z&lt;/AssessmentDate&gt;
+          &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+          &lt;Element&gt;
+            &lt;ActiveFromDT&gt;2026-03-07T16:36:58Z&lt;/ActiveFromDT&gt;
+            &lt;ActiveToDT&gt;2026-03-07T16:36:58Z&lt;/ActiveToDT&gt;
+            &lt;DeadlineDT&gt;2026-03-07T16:36:58Z&lt;/DeadlineDT&gt;
+            &lt;ElementId&gt;1&lt;/ElementId&gt;
+            &lt;ElementOrder&gt;5&lt;/ElementOrder&gt;
+            &lt;ElementType&gt;2&lt;/ElementType&gt;
+            &lt;LearningToolId&gt;4&lt;/LearningToolId&gt;
+            &lt;Title&gt;sample string 3&lt;/Title&gt;
+          &lt;/Element&gt;
+          &lt;PercentScore&gt;4.1&lt;/PercentScore&gt;
+        &lt;/CriterionAssessment&gt;
+      &lt;/Assessments&gt;
+      &lt;Criterion&gt;
+        &lt;Description&gt;sample string 3&lt;/Description&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/Criterion&gt;
+    &lt;/CriteriaAssessmentReportItem&gt;
+  &lt;/ReportItems&gt;
+&lt;/CriteriaAssessmentReport&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

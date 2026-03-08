@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/pages/{elementId}/contentblocks/images/{contentBlockId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/pages/{elementId}/contentblocks/images/{contentBlockId}/v1</h1>
+<div>
+    <p>Updates images content block.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the page element.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">contentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier of the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The image content block update request.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.UpdateContentBlockImagesRequestUI">Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests.UpdateContentBlockImagesRequestUI</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">NewImages</td>
+                    <td class="parameter-documentation">
+                        <p>Images to add to the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.ImageItem">Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests.ImageItem</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DeletedImageIds</td>
+                    <td class="parameter-documentation">
+                        <p>Image IDs to delete from the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UpdatedImages</td>
+                    <td class="parameter-documentation">
+                        <p>Images that should be updated in the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.ImageMetaData">Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.ImageMetaData</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ContentBlockId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>The type of the content block (e.g. "text", "image", "files", "rss", "poll").
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title of the content block.
+ Defaults to an empty string.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Order</td>
+                    <td class="parameter-documentation">
+                        <p>The display order of the content block within its Layout Zone.
+ Lower values appear first.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LayoutZone</td>
+                    <td class="parameter-documentation">
+                        <p>The layout zone where the content block should be placed (e.g. "Left", "Right").
+ Determines the positioning within the page layout.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Color</td>
+                    <td class="parameter-documentation">
+                        <p>The color of the content block.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;newImages&quot;: [
+    {
+      &quot;imageFile&quot;: {
+        &quot;fileRepoId&quot;: &quot;e79b80f0-92f9-47d3-8c48-b42057b5b9cc&quot;,
+        &quot;signedFileRepoId&quot;: &quot;sample string 2&quot;,
+        &quot;name&quot;: &quot;sample string 3&quot;,
+        &quot;mimeType&quot;: &quot;sample string 4&quot;
+      },
+      &quot;altText&quot;: &quot;sample string 1&quot;,
+      &quot;caption&quot;: &quot;sample string 2&quot;
+    },
+    {
+      &quot;imageFile&quot;: {
+        &quot;fileRepoId&quot;: &quot;2a4e1166-1690-4268-9422-158297c95233&quot;,
+        &quot;signedFileRepoId&quot;: &quot;sample string 2&quot;,
+        &quot;name&quot;: &quot;sample string 3&quot;,
+        &quot;mimeType&quot;: &quot;sample string 4&quot;
+      },
+      &quot;altText&quot;: &quot;sample string 1&quot;,
+      &quot;caption&quot;: &quot;sample string 2&quot;
+    }
+  ],
+  &quot;deletedImageIds&quot;: [
+    1,
+    2
+  ],
+  &quot;updatedImages&quot;: [
+    {
+      &quot;imageId&quot;: 1,
+      &quot;altText&quot;: &quot;sample string 2&quot;,
+      &quot;caption&quot;: &quot;sample string 3&quot;
+    },
+    {
+      &quot;imageId&quot;: 1,
+      &quot;altText&quot;: &quot;sample string 2&quot;,
+      &quot;caption&quot;: &quot;sample string 3&quot;
+    }
+  ],
+  &quot;contentBlockId&quot;: 1,
+  &quot;type&quot;: &quot;sample string 2&quot;,
+  &quot;title&quot;: &quot;sample string 3&quot;,
+  &quot;order&quot;: 4,
+  &quot;layoutZone&quot;: &quot;sample string 5&quot;,
+  &quot;color&quot;: &quot;sample string 6&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;UpdateContentBlockImagesRequestUI xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.Requests&quot;&gt;
+  &lt;Color&gt;sample string 6&lt;/Color&gt;
+  &lt;ContentBlockId&gt;1&lt;/ContentBlockId&gt;
+  &lt;LayoutZone&gt;sample string 5&lt;/LayoutZone&gt;
+  &lt;Order&gt;4&lt;/Order&gt;
+  &lt;Title&gt;sample string 3&lt;/Title&gt;
+  &lt;Type&gt;sample string 2&lt;/Type&gt;
+  &lt;DeletedImageIds xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:int&gt;1&lt;/d2p1:int&gt;
+    &lt;d2p1:int&gt;2&lt;/d2p1:int&gt;
+  &lt;/DeletedImageIds&gt;
+  &lt;NewImages xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels.Requests&quot;&gt;
+    &lt;d2p1:ImageItem&gt;
+      &lt;d2p1:AltText&gt;sample string 1&lt;/d2p1:AltText&gt;
+      &lt;d2p1:Caption&gt;sample string 2&lt;/d2p1:Caption&gt;
+      &lt;d2p1:ImageFile&gt;
+        &lt;d2p1:FileRepoId&gt;e79b80f0-92f9-47d3-8c48-b42057b5b9cc&lt;/d2p1:FileRepoId&gt;
+        &lt;d2p1:MimeType&gt;sample string 4&lt;/d2p1:MimeType&gt;
+        &lt;d2p1:Name&gt;sample string 3&lt;/d2p1:Name&gt;
+        &lt;d2p1:SignedFileRepoId&gt;sample string 2&lt;/d2p1:SignedFileRepoId&gt;
+      &lt;/d2p1:ImageFile&gt;
+    &lt;/d2p1:ImageItem&gt;
+    &lt;d2p1:ImageItem&gt;
+      &lt;d2p1:AltText&gt;sample string 1&lt;/d2p1:AltText&gt;
+      &lt;d2p1:Caption&gt;sample string 2&lt;/d2p1:Caption&gt;
+      &lt;d2p1:ImageFile&gt;
+        &lt;d2p1:FileRepoId&gt;2a4e1166-1690-4268-9422-158297c95233&lt;/d2p1:FileRepoId&gt;
+        &lt;d2p1:MimeType&gt;sample string 4&lt;/d2p1:MimeType&gt;
+        &lt;d2p1:Name&gt;sample string 3&lt;/d2p1:Name&gt;
+        &lt;d2p1:SignedFileRepoId&gt;sample string 2&lt;/d2p1:SignedFileRepoId&gt;
+      &lt;/d2p1:ImageFile&gt;
+    &lt;/d2p1:ImageItem&gt;
+  &lt;/NewImages&gt;
+  &lt;UpdatedImages xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Page.PageApiModels&quot;&gt;
+    &lt;d2p1:ImageMetaData&gt;
+      &lt;d2p1:AltText&gt;sample string 2&lt;/d2p1:AltText&gt;
+      &lt;d2p1:Caption&gt;sample string 3&lt;/d2p1:Caption&gt;
+      &lt;d2p1:ImageId&gt;1&lt;/d2p1:ImageId&gt;
+    &lt;/d2p1:ImageMetaData&gt;
+    &lt;d2p1:ImageMetaData&gt;
+      &lt;d2p1:AltText&gt;sample string 2&lt;/d2p1:AltText&gt;
+      &lt;d2p1:Caption&gt;sample string 3&lt;/d2p1:Caption&gt;
+      &lt;d2p1:ImageId&gt;1&lt;/d2p1:ImageId&gt;
+    &lt;/d2p1:ImageMetaData&gt;
+  &lt;/UpdatedImages&gt;
+&lt;/UpdateContentBlockImagesRequestUI&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Updated image content block.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=System.Web.Http.IHttpActionResult">System.Web.Http.IHttpActionResult</a>    <p>None.</p>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json, application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+                    <p>Sample not available.</p>
+
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

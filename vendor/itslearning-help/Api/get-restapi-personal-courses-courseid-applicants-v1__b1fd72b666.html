@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/applicants/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/applicants/v1</h1>
+<div>
+    <p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.CourseApplicant">Itslearning.RestApi.Entities.Personal.Course.CourseApplicant</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">PersonId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the course participant</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FullName</td>
+                    <td class="parameter-documentation">
+                        <p>Full name of the course participant</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PictureUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Avatar Url</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Status</td>
+                    <td class="parameter-documentation">
+                        <p>EnrrollmentStatus</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Mode</td>
+                    <td class="parameter-documentation">
+                        <p>EnrrollmentMode</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Email</td>
+                    <td class="parameter-documentation">
+                        <p>Email</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsExternal</td>
+                    <td class="parameter-documentation">
+                        <p>Defines if the person is external.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CourseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course's identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsMember</td>
+                    <td class="parameter-documentation">
+                        <p>If true then the person is a member of the course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DefaultOrganisation</td>
+                    <td class="parameter-documentation">
+                        <p>Default organisation for the person</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Role</td>
+                    <td class="parameter-documentation">
+                        <p>Person role</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CustomerName</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the customer site the person belongs to.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;PersonId&quot;: 1,
+    &quot;FullName&quot;: &quot;sample string 2&quot;,
+    &quot;PictureUrl&quot;: &quot;sample string 3&quot;,
+    &quot;Status&quot;: 4,
+    &quot;Mode&quot;: 5,
+    &quot;Email&quot;: &quot;sample string 6&quot;,
+    &quot;IsExternal&quot;: true,
+    &quot;CourseId&quot;: 8,
+    &quot;IsMember&quot;: true,
+    &quot;DefaultOrganisation&quot;: &quot;sample string 10&quot;,
+    &quot;Role&quot;: &quot;sample string 11&quot;,
+    &quot;CustomerName&quot;: &quot;sample string 12&quot;
+  },
+  {
+    &quot;PersonId&quot;: 1,
+    &quot;FullName&quot;: &quot;sample string 2&quot;,
+    &quot;PictureUrl&quot;: &quot;sample string 3&quot;,
+    &quot;Status&quot;: 4,
+    &quot;Mode&quot;: 5,
+    &quot;Email&quot;: &quot;sample string 6&quot;,
+    &quot;IsExternal&quot;: true,
+    &quot;CourseId&quot;: 8,
+    &quot;IsMember&quot;: true,
+    &quot;DefaultOrganisation&quot;: &quot;sample string 10&quot;,
+    &quot;Role&quot;: &quot;sample string 11&quot;,
+    &quot;CustomerName&quot;: &quot;sample string 12&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfCourseApplicant xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CourseApplicant&gt;
+    &lt;CourseId&gt;8&lt;/CourseId&gt;
+    &lt;CustomerName&gt;sample string 12&lt;/CustomerName&gt;
+    &lt;DefaultOrganisation&gt;sample string 10&lt;/DefaultOrganisation&gt;
+    &lt;Email&gt;sample string 6&lt;/Email&gt;
+    &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+    &lt;IsExternal&gt;true&lt;/IsExternal&gt;
+    &lt;IsMember&gt;true&lt;/IsMember&gt;
+    &lt;Mode&gt;5&lt;/Mode&gt;
+    &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;PictureUrl&gt;sample string 3&lt;/PictureUrl&gt;
+    &lt;Role&gt;sample string 11&lt;/Role&gt;
+    &lt;Status&gt;4&lt;/Status&gt;
+  &lt;/CourseApplicant&gt;
+  &lt;CourseApplicant&gt;
+    &lt;CourseId&gt;8&lt;/CourseId&gt;
+    &lt;CustomerName&gt;sample string 12&lt;/CustomerName&gt;
+    &lt;DefaultOrganisation&gt;sample string 10&lt;/DefaultOrganisation&gt;
+    &lt;Email&gt;sample string 6&lt;/Email&gt;
+    &lt;FullName&gt;sample string 2&lt;/FullName&gt;
+    &lt;IsExternal&gt;true&lt;/IsExternal&gt;
+    &lt;IsMember&gt;true&lt;/IsMember&gt;
+    &lt;Mode&gt;5&lt;/Mode&gt;
+    &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;PictureUrl&gt;sample string 3&lt;/PictureUrl&gt;
+    &lt;Role&gt;sample string 11&lt;/Role&gt;
+    &lt;Status&gt;4&lt;/Status&gt;
+  &lt;/CourseApplicant&gt;
+&lt;/ArrayOfCourseApplicant&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/children/{childId}/plans/{planId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/children/{childId}/plans/{planId}/v1</h1>
+<div>
+    <p><p>
+ Gets the child's single plan details.
+ </p>
+ Returns HTTP status 404 not found, if the plan does not exist for the user.
+ It will only return plan the user has access to.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">childId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The child identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">planId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The plan identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>This method returns plan details .</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.Plan">Itslearning.RestApi.Entities.Planner.Plan</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">ThumbnailColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Thumbnail' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanThumbnailColumn">Itslearning.RestApi.Entities.Planner.PlanThumbnailColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">NameColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Plan' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanColumn">Itslearning.RestApi.Entities.Planner.PlanColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DescriptionColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Description' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanColumn">Itslearning.RestApi.Entities.Planner.PlanColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DateColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Date' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanDateColumn">Itslearning.RestApi.Entities.Planner.PlanDateColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ClassHoursColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Class hours' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanClassHoursColumn">Itslearning.RestApi.Entities.Planner.PlanClassHoursColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LearningObjectivesColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Learning objectives' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanLearningObjectivesColumn">Itslearning.RestApi.Entities.Planner.PlanLearningObjectivesColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ResourcesColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Resources' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanElementsColumn">Itslearning.RestApi.Entities.Planner.PlanElementsColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ActivitiesColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Activities' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanElementsColumn">Itslearning.RestApi.Entities.Planner.PlanElementsColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ElementsColumn</td>
+                    <td class="parameter-documentation">
+                        <p>The 'Resources and activities' plan column data.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanElementsColumn">Itslearning.RestApi.Entities.Planner.PlanElementsColumn</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Columns</td>
+                    <td class="parameter-documentation">
+                        <p>The list of custom columns for plan.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanColumn">Itslearning.RestApi.Entities.Planner.PlanColumn</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PlanId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for plan, in scope of a site (itslearning customer).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TopicId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of topic.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Order</td>
+                    <td class="parameter-documentation">
+                        <p>The plan order.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationId</td>
+                    <td class="parameter-documentation">
+                        <p>The plan location identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationType</td>
+                    <td class="parameter-documentation">
+                        <p>The plan location type.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationType">Itslearning.RestApi.Entities.LocationType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationTitle</td>
+                    <td class="parameter-documentation">
+                        <p>The plan location title.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationColor</td>
+                    <td class="parameter-documentation">
+                        <p>The location color (e.g. #ffffff).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TopicColor</td>
+                    <td class="parameter-documentation">
+                        <p>The topic color (e.g. #ffffff).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TopicName</td>
+                    <td class="parameter-documentation">
+                        <p>The topic name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;TopicName&quot;: &quot;sample string 1&quot;,
+  &quot;ThumbnailColumn&quot;: {
+    &quot;FileUrl&quot;: &quot;sample string 1&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Order&quot;: 3,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;NameColumn&quot;: {
+    &quot;Value&quot;: &quot;sample string 1&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Order&quot;: 3,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;DescriptionColumn&quot;: {
+    &quot;Value&quot;: &quot;sample string 1&quot;,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Order&quot;: 3,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;DateColumn&quot;: {
+    &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+    &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+    &quot;Name&quot;: &quot;sample string 1&quot;,
+    &quot;Order&quot;: 2,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;ClassHoursColumn&quot;: {
+    &quot;ClassHours&quot;: 1,
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;Order&quot;: 3,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;LearningObjectivesColumn&quot;: {
+    &quot;LearningObjectives&quot;: [
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;RepositoryId&quot;: 1
+      },
+      {
+        &quot;Id&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;Description&quot;: &quot;sample string 3&quot;,
+        &quot;RepositoryId&quot;: 1
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 1&quot;,
+    &quot;Order&quot;: 2,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;ResourcesColumn&quot;: {
+    &quot;Elements&quot;: [
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      },
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 1&quot;,
+    &quot;Order&quot;: 2,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;ActivitiesColumn&quot;: {
+    &quot;Elements&quot;: [
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      },
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 1&quot;,
+    &quot;Order&quot;: 2,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;ElementsColumn&quot;: {
+    &quot;Elements&quot;: [
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      },
+      {
+        &quot;Order&quot;: 1,
+        &quot;ElementId&quot;: 2,
+        &quot;ElementType&quot;: &quot;Unknown&quot;,
+        &quot;Title&quot;: &quot;sample string 3&quot;,
+        &quot;Url&quot;: &quot;sample string 4&quot;,
+        &quot;ContentUrl&quot;: &quot;sample string 5&quot;,
+        &quot;IconUrl&quot;: &quot;sample string 6&quot;,
+        &quot;LearningToolId&quot;: 7,
+        &quot;Homework&quot;: true
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 1&quot;,
+    &quot;Order&quot;: 2,
+    &quot;LocalizedName&quot;: {
+      &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+      &quot;LocalizedArgs&quot;: [
+        &quot;sample string 1&quot;,
+        &quot;sample string 2&quot;
+      ]
+    }
+  },
+  &quot;Columns&quot;: [
+    {
+      &quot;Value&quot;: &quot;sample string 1&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Order&quot;: 3,
+      &quot;LocalizedName&quot;: {
+        &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+        &quot;LocalizedArgs&quot;: [
+          &quot;sample string 1&quot;,
+          &quot;sample string 2&quot;
+        ]
+      }
+    },
+    {
+      &quot;Value&quot;: &quot;sample string 1&quot;,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Order&quot;: 3,
+      &quot;LocalizedName&quot;: {
+        &quot;LocalizedKey&quot;: &quot;sample string 1&quot;,
+        &quot;LocalizedArgs&quot;: [
+          &quot;sample string 1&quot;,
+          &quot;sample string 2&quot;
+        ]
+      }
+    }
+  ],
+  &quot;PlanId&quot;: 1,
+  &quot;TopicId&quot;: 2,
+  &quot;Order&quot;: 3,
+  &quot;LocationId&quot;: 4,
+  &quot;LocationType&quot;: &quot;Course&quot;,
+  &quot;LocationTitle&quot;: &quot;sample string 5&quot;,
+  &quot;LocationColor&quot;: &quot;sample string 6&quot;,
+  &quot;TopicColor&quot;: &quot;sample string 7&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;Plan xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;LocationColor&gt;sample string 6&lt;/LocationColor&gt;
+  &lt;LocationId&gt;4&lt;/LocationId&gt;
+  &lt;LocationTitle&gt;sample string 5&lt;/LocationTitle&gt;
+  &lt;LocationType&gt;Course&lt;/LocationType&gt;
+  &lt;Order&gt;3&lt;/Order&gt;
+  &lt;PlanId&gt;1&lt;/PlanId&gt;
+  &lt;TopicColor&gt;sample string 7&lt;/TopicColor&gt;
+  &lt;TopicId&gt;2&lt;/TopicId&gt;
+  &lt;ActivitiesColumn xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Planner&quot;&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;Order&gt;2&lt;/Order&gt;
+    &lt;d2p1:Elements&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+    &lt;/d2p1:Elements&gt;
+  &lt;/ActivitiesColumn&gt;
+  &lt;ClassHoursColumn&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Order&gt;3&lt;/Order&gt;
+    &lt;ClassHours&gt;1&lt;/ClassHours&gt;
+  &lt;/ClassHoursColumn&gt;
+  &lt;Columns&gt;
+    &lt;PlanColumn&gt;
+      &lt;LocalizedName&gt;
+        &lt;LocalizedArgs xmlns:d5p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+          &lt;d5p1:string&gt;sample string 1&lt;/d5p1:string&gt;
+          &lt;d5p1:string&gt;sample string 2&lt;/d5p1:string&gt;
+        &lt;/LocalizedArgs&gt;
+        &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+      &lt;/LocalizedName&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Order&gt;3&lt;/Order&gt;
+      &lt;Value&gt;sample string 1&lt;/Value&gt;
+    &lt;/PlanColumn&gt;
+    &lt;PlanColumn&gt;
+      &lt;LocalizedName&gt;
+        &lt;LocalizedArgs xmlns:d5p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+          &lt;d5p1:string&gt;sample string 1&lt;/d5p1:string&gt;
+          &lt;d5p1:string&gt;sample string 2&lt;/d5p1:string&gt;
+        &lt;/LocalizedArgs&gt;
+        &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+      &lt;/LocalizedName&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Order&gt;3&lt;/Order&gt;
+      &lt;Value&gt;sample string 1&lt;/Value&gt;
+    &lt;/PlanColumn&gt;
+  &lt;/Columns&gt;
+  &lt;DateColumn&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;Order&gt;2&lt;/Order&gt;
+    &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+    &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+  &lt;/DateColumn&gt;
+  &lt;DescriptionColumn&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Order&gt;3&lt;/Order&gt;
+    &lt;Value&gt;sample string 1&lt;/Value&gt;
+  &lt;/DescriptionColumn&gt;
+  &lt;ElementsColumn xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Planner&quot;&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;Order&gt;2&lt;/Order&gt;
+    &lt;d2p1:Elements&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+    &lt;/d2p1:Elements&gt;
+  &lt;/ElementsColumn&gt;
+  &lt;LearningObjectivesColumn xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Planner&quot;&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;Order&gt;2&lt;/Order&gt;
+    &lt;d2p1:LearningObjectives&gt;
+      &lt;PlanLearningObjective&gt;
+        &lt;Description&gt;sample string 3&lt;/Description&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;RepositoryId&gt;1&lt;/RepositoryId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/PlanLearningObjective&gt;
+      &lt;PlanLearningObjective&gt;
+        &lt;Description&gt;sample string 3&lt;/Description&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+        &lt;RepositoryId&gt;1&lt;/RepositoryId&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+      &lt;/PlanLearningObjective&gt;
+    &lt;/d2p1:LearningObjectives&gt;
+  &lt;/LearningObjectivesColumn&gt;
+  &lt;NameColumn&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Order&gt;3&lt;/Order&gt;
+    &lt;Value&gt;sample string 1&lt;/Value&gt;
+  &lt;/NameColumn&gt;
+  &lt;ResourcesColumn xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Planner&quot;&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 1&lt;/Name&gt;
+    &lt;Order&gt;2&lt;/Order&gt;
+    &lt;d2p1:Elements&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+      &lt;PlanElement&gt;
+        &lt;ContentUrl&gt;sample string 5&lt;/ContentUrl&gt;
+        &lt;ElementId&gt;2&lt;/ElementId&gt;
+        &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+        &lt;Homework&gt;true&lt;/Homework&gt;
+        &lt;IconUrl&gt;sample string 6&lt;/IconUrl&gt;
+        &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+        &lt;Title&gt;sample string 3&lt;/Title&gt;
+        &lt;Url&gt;sample string 4&lt;/Url&gt;
+        &lt;Order&gt;1&lt;/Order&gt;
+      &lt;/PlanElement&gt;
+    &lt;/d2p1:Elements&gt;
+  &lt;/ResourcesColumn&gt;
+  &lt;ThumbnailColumn&gt;
+    &lt;LocalizedName&gt;
+      &lt;LocalizedArgs xmlns:d4p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+        &lt;d4p1:string&gt;sample string 1&lt;/d4p1:string&gt;
+        &lt;d4p1:string&gt;sample string 2&lt;/d4p1:string&gt;
+      &lt;/LocalizedArgs&gt;
+      &lt;LocalizedKey&gt;sample string 1&lt;/LocalizedKey&gt;
+    &lt;/LocalizedName&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Order&gt;3&lt;/Order&gt;
+    &lt;FileUrl&gt;sample string 1&lt;/FileUrl&gt;
+  &lt;/ThumbnailColumn&gt;
+  &lt;TopicName&gt;sample string 1&lt;/TopicName&gt;
+&lt;/Plan&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

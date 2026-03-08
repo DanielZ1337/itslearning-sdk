@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/planner/v1?courseId={courseId}&amp;startDate={startDate}&amp;stopDate={stopDate}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/planner/v1?courseId={courseId}&amp;startDate={startDate}&amp;stopDate={stopDate}</h1>
+<div>
+    <p><p>
+ Get previews of plans for the specified course.
+ </p>
+<p>
+ By supplying a time period parameters (<paramref name="startDate" /> and <paramref name="stopDate" />) one can get plans only within
+ this particular time period. Plan will be included into the result if it starts or ends within the period.
+ If period is not supplied the list will contain all plans for the course.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The course identifier. Required to get a plans.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">startDate</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The start date for plans. Time zone is UTC.
+ Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">stopDate</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The plan stop date for plans. Time zone is UTC.
+ Date has to contain also time in , for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>This method returns a list of plans for the specified course.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Planner.PlanPreview">EntityListOfItslearning.RestApi.Entities.Planner.PlanPreview</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Planner.PlanPreview">Itslearning.RestApi.Entities.Planner.PlanPreview</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;PlanName&quot;: &quot;sample string 1&quot;,
+      &quot;PlanDescription&quot;: &quot;sample string 2&quot;,
+      &quot;Start&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;Stop&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;ClassHours&quot;: 3,
+      &quot;PlanId&quot;: 1,
+      &quot;TopicId&quot;: 2,
+      &quot;Order&quot;: 3,
+      &quot;LocationId&quot;: 4,
+      &quot;LocationType&quot;: &quot;Course&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 5&quot;,
+      &quot;LocationColor&quot;: &quot;sample string 6&quot;,
+      &quot;TopicColor&quot;: &quot;sample string 7&quot;
+    },
+    {
+      &quot;PlanName&quot;: &quot;sample string 1&quot;,
+      &quot;PlanDescription&quot;: &quot;sample string 2&quot;,
+      &quot;Start&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;Stop&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;ClassHours&quot;: 3,
+      &quot;PlanId&quot;: 1,
+      &quot;TopicId&quot;: 2,
+      &quot;Order&quot;: 3,
+      &quot;LocationId&quot;: 4,
+      &quot;LocationType&quot;: &quot;Course&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 5&quot;,
+      &quot;LocationColor&quot;: &quot;sample string 6&quot;,
+      &quot;TopicColor&quot;: &quot;sample string 7&quot;
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;PlanPreview&gt;
+      &lt;LocationColor&gt;sample string 6&lt;/LocationColor&gt;
+      &lt;LocationId&gt;4&lt;/LocationId&gt;
+      &lt;LocationTitle&gt;sample string 5&lt;/LocationTitle&gt;
+      &lt;LocationType&gt;Course&lt;/LocationType&gt;
+      &lt;Order&gt;3&lt;/Order&gt;
+      &lt;PlanId&gt;1&lt;/PlanId&gt;
+      &lt;TopicColor&gt;sample string 7&lt;/TopicColor&gt;
+      &lt;TopicId&gt;2&lt;/TopicId&gt;
+      &lt;ClassHours&gt;3&lt;/ClassHours&gt;
+      &lt;PlanDescription&gt;sample string 2&lt;/PlanDescription&gt;
+      &lt;PlanName&gt;sample string 1&lt;/PlanName&gt;
+      &lt;Start&gt;2026-03-07T16:36:58Z&lt;/Start&gt;
+      &lt;Stop&gt;2026-03-07T16:36:58Z&lt;/Stop&gt;
+    &lt;/PlanPreview&gt;
+    &lt;PlanPreview&gt;
+      &lt;LocationColor&gt;sample string 6&lt;/LocationColor&gt;
+      &lt;LocationId&gt;4&lt;/LocationId&gt;
+      &lt;LocationTitle&gt;sample string 5&lt;/LocationTitle&gt;
+      &lt;LocationType&gt;Course&lt;/LocationType&gt;
+      &lt;Order&gt;3&lt;/Order&gt;
+      &lt;PlanId&gt;1&lt;/PlanId&gt;
+      &lt;TopicColor&gt;sample string 7&lt;/TopicColor&gt;
+      &lt;TopicId&gt;2&lt;/TopicId&gt;
+      &lt;ClassHours&gt;3&lt;/ClassHours&gt;
+      &lt;PlanDescription&gt;sample string 2&lt;/PlanDescription&gt;
+      &lt;PlanName&gt;sample string 1&lt;/PlanName&gt;
+      &lt;Start&gt;2026-03-07T16:36:58Z&lt;/Start&gt;
+      &lt;Stop&gt;2026-03-07T16:36:58Z&lt;/Stop&gt;
+    &lt;/PlanPreview&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

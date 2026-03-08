@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>PUT restapi/personal/messages/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>PUT restapi/personal/messages/v1</h1>
+<div>
+    <p><p>
+ Updates messages.
+ </p>
+<p>
+ Only supports updating the IsRead field of each Message.
+ </p>
+<p>
+ Will return 404 if none of the messageIds are found, or the user does not have access to any.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p>The messages to update</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Updatable.MessageUpdateV1">Itslearning.RestApi.Entities.Updatable.MessageUpdateV1</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">MessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The MessageId</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsRead</td>
+                    <td class="parameter-documentation">
+                        <p>Whether the message has been read</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Request Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;MessageId&quot;: 1,
+    &quot;IsRead&quot;: true
+  },
+  {
+    &quot;MessageId&quot;: 1,
+    &quot;IsRead&quot;: true
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfMessageUpdateV1 xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities.Updatable&quot;&gt;
+  &lt;MessageUpdateV1&gt;
+    &lt;IsRead&gt;true&lt;/IsRead&gt;
+    &lt;MessageId&gt;1&lt;/MessageId&gt;
+  &lt;/MessageUpdateV1&gt;
+  &lt;MessageUpdateV1&gt;
+    &lt;IsRead&gt;true&lt;/IsRead&gt;
+    &lt;MessageId&gt;1&lt;/MessageId&gt;
+  &lt;/MessageUpdateV1&gt;
+&lt;/ArrayOfMessageUpdateV1&gt;
+</pre>
+        </div>
+        <h4 class="sample-header">application/x-www-form-urlencoded</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+No sample available
+</pre>
+        </div>
+</div>
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of modified MessagePreview entities that were updated. Messages that were not updated (e.g. not found),
+ will not be returned in response</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.MessagePreview">EntityListOfItslearning.RestApi.Entities.MessagePreview</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.MessagePreview">Itslearning.RestApi.Entities.MessagePreview</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;MessageId&quot;: 1,
+      &quot;From&quot;: {
+        &quot;PersonId&quot;: 1,
+        &quot;FirstName&quot;: &quot;sample string 2&quot;,
+        &quot;LastName&quot;: &quot;sample string 3&quot;,
+        &quot;FullName&quot;: &quot;sample string 4&quot;,
+        &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+        &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+        &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+        &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+      },
+      &quot;DateReceived&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;Subject&quot;: &quot;sample string 3&quot;,
+      &quot;PreviewText&quot;: &quot;sample string 4&quot;,
+      &quot;MessageUrl&quot;: &quot;sample string 5&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 6&quot;,
+      &quot;HasAttachments&quot;: true,
+      &quot;IsRead&quot;: true,
+      &quot;IsForwarded&quot;: true,
+      &quot;LastForwardedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;IsReplied&quot;: true,
+      &quot;LastRepliedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;
+    },
+    {
+      &quot;MessageId&quot;: 1,
+      &quot;From&quot;: {
+        &quot;PersonId&quot;: 1,
+        &quot;FirstName&quot;: &quot;sample string 2&quot;,
+        &quot;LastName&quot;: &quot;sample string 3&quot;,
+        &quot;FullName&quot;: &quot;sample string 4&quot;,
+        &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+        &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+        &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+        &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+      },
+      &quot;DateReceived&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;Subject&quot;: &quot;sample string 3&quot;,
+      &quot;PreviewText&quot;: &quot;sample string 4&quot;,
+      &quot;MessageUrl&quot;: &quot;sample string 5&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 6&quot;,
+      &quot;HasAttachments&quot;: true,
+      &quot;IsRead&quot;: true,
+      &quot;IsForwarded&quot;: true,
+      &quot;LastForwardedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+      &quot;IsReplied&quot;: true,
+      &quot;LastRepliedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;MessagePreview&gt;
+      &lt;ContentUrl&gt;sample string 6&lt;/ContentUrl&gt;
+      &lt;DateReceived&gt;2026-03-07T09:02:56Z&lt;/DateReceived&gt;
+      &lt;From&gt;
+        &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+        &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+        &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+        &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+        &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+        &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+        &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+      &lt;/From&gt;
+      &lt;HasAttachments&gt;true&lt;/HasAttachments&gt;
+      &lt;IsForwarded&gt;true&lt;/IsForwarded&gt;
+      &lt;IsRead&gt;true&lt;/IsRead&gt;
+      &lt;IsReplied&gt;true&lt;/IsReplied&gt;
+      &lt;LastForwardedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastForwardedDateTime&gt;
+      &lt;LastRepliedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastRepliedDateTime&gt;
+      &lt;MessageId&gt;1&lt;/MessageId&gt;
+      &lt;MessageUrl&gt;sample string 5&lt;/MessageUrl&gt;
+      &lt;PreviewText&gt;sample string 4&lt;/PreviewText&gt;
+      &lt;Subject&gt;sample string 3&lt;/Subject&gt;
+    &lt;/MessagePreview&gt;
+    &lt;MessagePreview&gt;
+      &lt;ContentUrl&gt;sample string 6&lt;/ContentUrl&gt;
+      &lt;DateReceived&gt;2026-03-07T09:02:56Z&lt;/DateReceived&gt;
+      &lt;From&gt;
+        &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+        &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+        &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+        &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+        &lt;PersonId&gt;1&lt;/PersonId&gt;
+        &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+        &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+        &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+      &lt;/From&gt;
+      &lt;HasAttachments&gt;true&lt;/HasAttachments&gt;
+      &lt;IsForwarded&gt;true&lt;/IsForwarded&gt;
+      &lt;IsRead&gt;true&lt;/IsRead&gt;
+      &lt;IsReplied&gt;true&lt;/IsReplied&gt;
+      &lt;LastForwardedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastForwardedDateTime&gt;
+      &lt;LastRepliedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastRepliedDateTime&gt;
+      &lt;MessageId&gt;1&lt;/MessageId&gt;
+      &lt;MessageUrl&gt;sample string 5&lt;/MessageUrl&gt;
+      &lt;PreviewText&gt;sample string 4&lt;/PreviewText&gt;
+      &lt;Subject&gt;sample string 3&lt;/Subject&gt;
+    &lt;/MessagePreview&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

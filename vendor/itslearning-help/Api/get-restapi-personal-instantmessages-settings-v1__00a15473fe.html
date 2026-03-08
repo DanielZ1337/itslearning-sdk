@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/instantmessages/settings/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/instantmessages/settings/v1</h1>
+<div>
+    <p>Gets the settings for the instant message system. Boundaries for attachment size, max participants in a group thread etc.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The settings that the current user has for instant messaging.</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageSettings">Itslearning.RestApi.Entities.InstantMessageSettings</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">MaxAttachmentFileSizeInBytes</td>
+                    <td class="parameter-documentation">
+                        <p>Gets the maximum file size in bytes an attachment can have.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MaxParticipantsInAMessageThread</td>
+                    <td class="parameter-documentation">
+                        <p>Gets the maximum participants in a message thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MaxParticipantsInAOneWayThread</td>
+                    <td class="parameter-documentation">
+                        <p>Gets the maximum participants in a one way thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IllegalFileExtensions</td>
+                    <td class="parameter-documentation">
+                        <p>Gets an array of illegal file extensions. Files with illegal file extensions are not allowed to upload as an attachment to a message.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of string
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SignalRHubEndpoint</td>
+                    <td class="parameter-documentation">
+                        <p>The signalR endpoint for instant message system for the current user. This varies by customer</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;MaxAttachmentFileSizeInBytes&quot;: 1,
+  &quot;MaxParticipantsInAMessageThread&quot;: 2,
+  &quot;MaxParticipantsInAOneWayThread&quot;: 3,
+  &quot;IllegalFileExtensions&quot;: [
+    &quot;sample string 1&quot;,
+    &quot;sample string 2&quot;
+  ],
+  &quot;SignalRHubEndpoint&quot;: &quot;sample string 4&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;InstantMessageSettings xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+  &lt;IllegalFileExtensions xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot;&gt;
+    &lt;d2p1:string&gt;sample string 1&lt;/d2p1:string&gt;
+    &lt;d2p1:string&gt;sample string 2&lt;/d2p1:string&gt;
+  &lt;/IllegalFileExtensions&gt;
+  &lt;MaxAttachmentFileSizeInBytes&gt;1&lt;/MaxAttachmentFileSizeInBytes&gt;
+  &lt;MaxParticipantsInAMessageThread&gt;2&lt;/MaxParticipantsInAMessageThread&gt;
+  &lt;MaxParticipantsInAOneWayThread&gt;3&lt;/MaxParticipantsInAOneWayThread&gt;
+  &lt;SignalRHubEndpoint&gt;sample string 4&lt;/SignalRHubEndpoint&gt;
+&lt;/InstantMessageSettings&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

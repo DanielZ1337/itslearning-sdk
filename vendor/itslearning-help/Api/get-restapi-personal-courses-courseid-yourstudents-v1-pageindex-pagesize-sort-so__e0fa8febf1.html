@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/yourstudents/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sort={sort}&amp;sortDescending={sortDescending}&amp;search={search}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/yourstudents/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sort={sort}&amp;sortDescending={sortDescending}&amp;search={search}</h1>
+<div>
+    <p>Get a list of your students for a given course.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The Course ID for the requested course, if null it will fetch all students from all courses of the current user</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">sort</td>
+                    <td class="parameter-documentation">
+                        <p>Field to sort by</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is LastVisited</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">sortDescending</td>
+                    <td class="parameter-documentation">
+                        <p>True if sorting ascending</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is True</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">search</td>
+                    <td class="parameter-documentation">
+                        <p>Search term over student first and last name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Default value is </p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Course.YourStudent">Itslearning.RestApi.Entities.Personal.Course.YourStudent</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">FallbackPictureUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Used if main picture will not be loaded on client side.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CompletedTasks</td>
+                    <td class="parameter-documentation">
+                        <p>Completed Tasks for this Course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TotalTasks</td>
+                    <td class="parameter-documentation">
+                        <p>Total Tasks for this Course.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PersonId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the course participant</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">FullName</td>
+                    <td class="parameter-documentation">
+                        <p>Full name of the course participant</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastVisited</td>
+                    <td class="parameter-documentation">
+                        <p>Last time the course participant visited this course</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastVisitedRelative</td>
+                    <td class="parameter-documentation">
+                        <p>Last time the course participant visited this course relative to the current time
+ Examples: 3 days ago, 2 hours ago, Just now, etc.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PictureUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Avatar Url</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Role</td>
+                    <td class="parameter-documentation">
+                        <p>The role that the course participant has in the course</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RoleId</td>
+                    <td class="parameter-documentation">
+                        <p>The role id that the course participant has in the course</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ExtraInformation</td>
+                    <td class="parameter-documentation">
+                        <p>Extra information for this participant</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanHaveTasks</td>
+                    <td class="parameter-documentation">
+                        <p>Show if course participant can have tasks</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Groups</td>
+                    <td class="parameter-documentation">
+                        <p>Comma-separated list of course groups the participant is a member of</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TemporaryAccess</td>
+                    <td class="parameter-documentation">
+                        <p>Boolean value indicating if the participant has been granted temporary access to the course</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;FallbackPictureUrl&quot;: &quot;sample string 1&quot;,
+    &quot;CompletedTasks&quot;: 2,
+    &quot;TotalTasks&quot;: 3,
+    &quot;PersonId&quot;: 4,
+    &quot;FullName&quot;: &quot;sample string 5&quot;,
+    &quot;LastVisited&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;LastVisitedRelative&quot;: &quot;sample string 6&quot;,
+    &quot;PictureUrl&quot;: &quot;sample string 7&quot;,
+    &quot;Role&quot;: &quot;sample string 8&quot;,
+    &quot;RoleId&quot;: 9,
+    &quot;ExtraInformation&quot;: &quot;sample string 10&quot;,
+    &quot;CanHaveTasks&quot;: true,
+    &quot;Groups&quot;: &quot;sample string 12&quot;,
+    &quot;TemporaryAccess&quot;: true
+  },
+  {
+    &quot;FallbackPictureUrl&quot;: &quot;sample string 1&quot;,
+    &quot;CompletedTasks&quot;: 2,
+    &quot;TotalTasks&quot;: 3,
+    &quot;PersonId&quot;: 4,
+    &quot;FullName&quot;: &quot;sample string 5&quot;,
+    &quot;LastVisited&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;LastVisitedRelative&quot;: &quot;sample string 6&quot;,
+    &quot;PictureUrl&quot;: &quot;sample string 7&quot;,
+    &quot;Role&quot;: &quot;sample string 8&quot;,
+    &quot;RoleId&quot;: 9,
+    &quot;ExtraInformation&quot;: &quot;sample string 10&quot;,
+    &quot;CanHaveTasks&quot;: true,
+    &quot;Groups&quot;: &quot;sample string 12&quot;,
+    &quot;TemporaryAccess&quot;: true
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfYourStudent xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;YourStudent&gt;
+    &lt;CanHaveTasks&gt;true&lt;/CanHaveTasks&gt;
+    &lt;CompletedTasks&gt;0&lt;/CompletedTasks&gt;
+    &lt;ExtraInformation&gt;sample string 10&lt;/ExtraInformation&gt;
+    &lt;FullName&gt;sample string 5&lt;/FullName&gt;
+    &lt;Groups&gt;sample string 12&lt;/Groups&gt;
+    &lt;LastVisited&gt;2026-03-07T09:02:56Z&lt;/LastVisited&gt;
+    &lt;LastVisitedRelative&gt;sample string 6&lt;/LastVisitedRelative&gt;
+    &lt;PersonId&gt;4&lt;/PersonId&gt;
+    &lt;PictureUrl&gt;sample string 7&lt;/PictureUrl&gt;
+    &lt;Role&gt;sample string 8&lt;/Role&gt;
+    &lt;RoleId&gt;9&lt;/RoleId&gt;
+    &lt;TemporaryAccess&gt;true&lt;/TemporaryAccess&gt;
+    &lt;TotalTasks&gt;0&lt;/TotalTasks&gt;
+    &lt;CompletedTasks&gt;2&lt;/CompletedTasks&gt;
+    &lt;FallbackPictureUrl&gt;sample string 1&lt;/FallbackPictureUrl&gt;
+    &lt;TotalTasks&gt;3&lt;/TotalTasks&gt;
+  &lt;/YourStudent&gt;
+  &lt;YourStudent&gt;
+    &lt;CanHaveTasks&gt;true&lt;/CanHaveTasks&gt;
+    &lt;CompletedTasks&gt;0&lt;/CompletedTasks&gt;
+    &lt;ExtraInformation&gt;sample string 10&lt;/ExtraInformation&gt;
+    &lt;FullName&gt;sample string 5&lt;/FullName&gt;
+    &lt;Groups&gt;sample string 12&lt;/Groups&gt;
+    &lt;LastVisited&gt;2026-03-07T09:02:56Z&lt;/LastVisited&gt;
+    &lt;LastVisitedRelative&gt;sample string 6&lt;/LastVisitedRelative&gt;
+    &lt;PersonId&gt;4&lt;/PersonId&gt;
+    &lt;PictureUrl&gt;sample string 7&lt;/PictureUrl&gt;
+    &lt;Role&gt;sample string 8&lt;/Role&gt;
+    &lt;RoleId&gt;9&lt;/RoleId&gt;
+    &lt;TemporaryAccess&gt;true&lt;/TemporaryAccess&gt;
+    &lt;TotalTasks&gt;0&lt;/TotalTasks&gt;
+    &lt;CompletedTasks&gt;2&lt;/CompletedTasks&gt;
+    &lt;FallbackPictureUrl&gt;sample string 1&lt;/FallbackPictureUrl&gt;
+    &lt;TotalTasks&gt;3&lt;/TotalTasks&gt;
+  &lt;/YourStudent&gt;
+&lt;/ArrayOfYourStudent&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

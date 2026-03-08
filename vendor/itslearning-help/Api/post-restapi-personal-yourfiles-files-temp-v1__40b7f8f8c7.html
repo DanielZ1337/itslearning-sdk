@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/yourfiles/files/temp/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/yourfiles/files/temp/v1</h1>
+<div>
+    <p>Upload files to a file area</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of uploaded files</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.YourFiles.UploadedFileModel">Itslearning.RestApi.Entities.YourFiles.UploadedFileModel</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>The file identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MimeType</td>
+                    <td class="parameter-documentation">
+                        <p>The MIME type of the file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SignedFileRepoId</td>
+                    <td class="parameter-documentation">
+                        <p>The signed file repository identifier</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Signature</td>
+                    <td class="parameter-documentation">
+                        <p>The signature for the file</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Error</td>
+                    <td class="parameter-documentation">
+                        <p>The error message if any error occurred during the upload to file repo</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Id&quot;: &quot;sample string 1&quot;,
+  &quot;Name&quot;: &quot;sample string 2&quot;,
+  &quot;MimeType&quot;: &quot;sample string 3&quot;,
+  &quot;SignedFileRepoId&quot;: &quot;sample string 4&quot;,
+  &quot;Signature&quot;: &quot;sample string 5&quot;,
+  &quot;Error&quot;: &quot;sample string 6&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;UploadedFileModel xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;Error&gt;sample string 6&lt;/Error&gt;
+  &lt;Id&gt;sample string 1&lt;/Id&gt;
+  &lt;MimeType&gt;sample string 3&lt;/MimeType&gt;
+  &lt;Name&gt;sample string 2&lt;/Name&gt;
+  &lt;Signature&gt;sample string 5&lt;/Signature&gt;
+  &lt;SignedFileRepoId&gt;sample string 4&lt;/SignedFileRepoId&gt;
+&lt;/UploadedFileModel&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

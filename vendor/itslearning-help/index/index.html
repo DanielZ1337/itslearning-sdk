@@ -1,0 +1,3402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>RestApi Help Page</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1>RestApi Help Page</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+    <section class="featured">
+        <section class="content-wrapper">
+            <h2>Introduction</h2>
+            <p>
+                This documentation is provided to give developers a detailed overview of this rest api.
+            </p>
+            <h3>Pagination</h3>
+            <p>
+                The services that have paging as parameters, use zero-based pageindex. Unless you provide paging yourself,
+                a default pagesize of 100 with <b>PageIndex</b> 0 will be used. <b>MaxPageSize</b> is 100.
+            </p>
+            <p>
+                For some methods there is a possibility to specify items newer than or older than a specified Id. In this case you can set <b>FromId</b>
+                to get only items newer than or older than one with specified ID. Use <b>UseNewerThan</b> = True to retrieve items newer than specified one,
+                False to retrieve items older than specified one.
+            </p>
+            <h3>Versioning</h3>
+            <p>
+                We use versioning in the restapi URLs. We do this in order to provide your application with a backwards-compatible API even after introducing
+                breaking changes. Please follow our development if you want to stay up to date in your application.
+            </p>
+            <p>
+                The first version of an API method will be "v1". A new version of the same method, will be "v2" and so on. Since we have a good reason for making a new version,
+                please try and use the highest version of the API.
+            </p>
+            <h3>API scope</h3>
+            <p>
+                An API scope defines a set of API methods can can be used by a consumer using OAuth2. Make sure that you send the needed API scopes to the itslearning authorize.aspx page.
+                A request to grant access for a user to Notifications and Messages can look like this:<br/>
+                <pre>https://site.itslearning.com/oauth2/authorize.aspx?client_id=12aaef6f-caaa-aa5b-b6ff-667d1310512e&state=SomeGeneratedStateString&response_type=code&scope=Messages Notifications&redirect_uri=SomeRegisteredUri</pre>
+                The following API scopes are possible to use once you have an OAuth2 access token:
+            </p>
+                    <a href="#All">All</a><br/>
+                    <a href="#Assignment">Assignment</a><br/>
+                    <a href="#Calendar">Calendar</a><br/>
+                    <a href="#Children">Children</a><br/>
+                    <a href="#CkEditor">CkEditor</a><br/>
+                    <a href="#Courses">Courses</a><br/>
+                    <a href="#FileUpload">FileUpload</a><br/>
+                    <a href="#Hierarchies">Hierarchies</a><br/>
+                    <a href="#LearningObjectiveRepository">LearningObjectiveRepository</a><br/>
+                    <a href="#LearningObjectivesReports">LearningObjectivesReports</a><br/>
+                    <a href="#LightBulletin">LightBulletin</a><br/>
+                    <a href="#Messages">Messages</a><br/>
+                    <a href="#Notifications">Notifications</a><br/>
+                    <a href="#Page">Page</a><br/>
+                    <a href="#Person">Person</a><br/>
+                    <a href="#Planner">Planner</a><br/>
+                    <a href="#Sso">Sso</a><br/>
+                    <a href="#Statistics">Statistics</a><br/>
+                    <a href="#StudentPlan">StudentPlan</a><br/>
+                    <a href="#Supervisor">Supervisor</a><br/>
+                    <a href="#TaskListDailyWorkflow">TaskListDailyWorkflow</a><br/>
+                    <a href="#Tasks">Tasks</a><br/>
+                    <a href="#Workload">Workload</a><br/>
+            <h4>Additional APIs</h4>
+            <a href="#Sites">Sites</a> - open to get all itslearning sites<br/>
+            <a href="#Token">Token</a> - to handle oauth2 access<br/>
+            <a href="#NativeApp">NativeApp</a> - utility methods for native apps, e.g. version checking<br/>
+        </section>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        <h2>Api</h2>
+
+
+<h3 id="Ai">Ai</h3>
+    <p>Overview:<br/>Handles calling AI features, currently from the editor plugin.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-elements-v1">POST restapi/personal/ai/elements/v1</a></td>
+            <td class="api-documentation">
+                <p>Method for creating elements</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-ai-guidelines-v1">PUT restapi/personal/ai/guidelines/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the AI Guidelines confirmation date for the user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-responses-v1">POST restapi/personal/ai/responses/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a response using the Responses API with optional file search.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-ai-stores-storeToken-files-fileId-v1">DELETE restapi/personal/ai/stores/{storeToken}/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes a file from a store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-files-v1">POST restapi/personal/ai/stores/{storeToken}/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a store from uploaded files or adds files to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-links-v1">POST restapi/personal/ai/stores/{storeToken}/links/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a new store from a link or adds a link to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-storeToken-resources-v1">POST restapi/personal/ai/stores/{storeToken}/resources/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a store from itslearning resources or adds resources to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-ai-stores-storeToken-status-v1">GET restapi/personal/ai/stores/{storeToken}/status/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the status of all files in a store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-files-v1_storeToken">POST restapi/personal/ai/stores/files/v1?storeToken={storeToken}</a></td>
+            <td class="api-documentation">
+                <p>Creates a store from uploaded files or adds files to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-links-v1_storeToken">POST restapi/personal/ai/stores/links/v1?storeToken={storeToken}</a></td>
+            <td class="api-documentation">
+                <p>Creates a new store from a link or adds a link to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-stores-resources-v1_storeToken">POST restapi/personal/ai/stores/resources/v1?storeToken={storeToken}</a></td>
+            <td class="api-documentation">
+                <p>Creates a store from itslearning resources or adds resources to an existing store.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-ai-v1">POST restapi/personal/ai/v1</a></td>
+            <td class="api-documentation">
+                <p>Runs the AI prompt for the given feature. It uses Daisy API.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ApplicationInitialisationCacheWarmUp">ApplicationInitialisationCacheWarmUp</h3>
+    <p>Overview:<br/>Controller to help initialise the cache on start up. The cache is called from Web.config. It is triggered on application start-up /'iisreset'
+ and application recycle.
+ See tag 'applicationInitialization' in web.config.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-warmup-cache-extensionmodule-v1">GET restapi/warmup/cache/extensionmodule/v1</a></td>
+            <td class="api-documentation">
+                <p>Load extension modules into memory cache on start-up.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-warmup-cache-learningtool-v1">GET restapi/warmup/cache/learningtool/v1</a></td>
+            <td class="api-documentation">
+                <p>Load learning tools into memory cache on start-up.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-warmup-cache-plugin-v1">GET restapi/warmup/cache/plugin/v1</a></td>
+            <td class="api-documentation">
+                <p>Load plugins into memory cache on start-up.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="AssessmentRecord">AssessmentRecord</h3>
+    <p>Overview:<br/>End point for Assessmentrecord API</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-assessmentrecordelements-v1_termId">GET restapi/personal/course/{courseId}/assessmentrecord/assessmentrecordelements/v1?termId={termId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the elements for the gradebook</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-assessmentrecordpersonitems-v1_termId_paging.PageIndex_paging.PageSize_searchText_groupIds[0]_groupIds[1]_includePersonsNotInAnyGroups">GET restapi/personal/course/{courseId}/assessmentrecord/assessmentrecordpersonitems/v1?termId={termId}&amp;paging.PageIndex={paging.PageIndex}&amp;paging.PageSize={paging.PageSize}&amp;searchText={searchText}&amp;groupIds[0]={groupIds[0]}&amp;groupIds[1]={groupIds[1]}&amp;includePersonsNotInAnyGroups={includePersonsNotInAnyGroups}</a></td>
+            <td class="api-documentation">
+                <p>Gets the persons with details and assessment values</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-course-courseId-assessmentrecord-personassessmentgrade-v1_gradebookItemId_personId">DELETE restapi/personal/course/{courseId}/assessmentrecord/personassessmentgrade/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}</a></td>
+            <td class="api-documentation">
+                <p>Delete a person assessment for an assessment record item</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentgrade-v1_gradebookItemId_personId_assessmentId_assessmentItemId">PUT restapi/personal/course/{courseId}/assessmentrecord/personassessmentgrade/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}&amp;assessmentId={assessmentId}&amp;assessmentItemId={assessmentItemId}</a></td>
+            <td class="api-documentation">
+                <p>Save a person assessment for an assessment record item</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwritten-v1_gradebookItemId_personId">PUT restapi/personal/course/{courseId}/assessmentrecord/personassessmentoverwritten/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}</a></td>
+            <td class="api-documentation">
+                <p>Clear a person assessment overwritten grade/score.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwrittengrade-v1_gradebookItemId_personId_oldAssessmentItemId_assessmentId_overwrittenAssessmentItemId">PUT restapi/personal/course/{courseId}/assessmentrecord/personassessmentoverwrittengrade/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}&amp;oldAssessmentItemId={oldAssessmentItemId}&amp;assessmentId={assessmentId}&amp;overwrittenAssessmentItemId={overwrittenAssessmentItemId}</a></td>
+            <td class="api-documentation">
+                <p>Save a person assessment overwritten grade.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentoverwrittenscore-v1_gradebookItemId_personId_overwrittenScore_oldScore">PUT restapi/personal/course/{courseId}/assessmentrecord/personassessmentoverwrittenscore/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}&amp;overwrittenScore={overwrittenScore}&amp;oldScore={oldScore}</a></td>
+            <td class="api-documentation">
+                <p>Save a person assessment overwritten score.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-course-courseId-assessmentrecord-personassessmentscore-v1_gradebookItemId_personId">DELETE restapi/personal/course/{courseId}/assessmentrecord/personassessmentscore/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}</a></td>
+            <td class="api-documentation">
+                <p>Delete a person assessment for an assessment record item</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-course-courseId-assessmentrecord-personassessmentscore-v1_gradebookItemId_personId_score">PUT restapi/personal/course/{courseId}/assessmentrecord/personassessmentscore/v1?gradebookItemId={gradebookItemId}&amp;personId={personId}&amp;score={score}</a></td>
+            <td class="api-documentation">
+                <p>Save a person assessment for an assessment record item</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-course-courseId-assessmentrecord-settings-v1">GET restapi/personal/course/{courseId}/assessmentrecord/settings/v1</a></td>
+            <td class="api-documentation">
+                <p>Setup for the assessment record page, language, settings, paths, and permissions</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Assignment">Assignment</h3>
+    <p>Overview:<br/>Endpoint for assignment for personal API. Requests will be forwarded to the assignment api.
+ We want to abstract SharableObjectId (learningObjectId) and LearningObjectInstanceId from the client (e.g. mobile), therefore endpoints use ElementId.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope .
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-answerId-files-fileId-v1">GET restapi/personal/assignments/{elementId}/answers/{answerId}/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Download a file attached to an assignment answer. The user must have read access to the answer.
+ The client must follow the redirect to get the file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-answerId-v1">GET restapi/personal/assignments/{elementId}/answers/{answerId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get assignment answer for an assignment</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-answers-persons-personId-v1">GET restapi/personal/assignments/{elementId}/answers/persons/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get assignment answer for an assignment for a specific person. Not possible to use to get others' answers when assignment is anonymous.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-assignments-elementId-answers-v1">POST restapi/personal/assignments/{elementId}/answers/v1</a></td>
+            <td class="api-documentation">
+                <p>Submit answer for an assignment, only to be used by students.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-files-fileId-v1">GET restapi/personal/assignments/{elementId}/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Download a file attached to an assignment. The user must have read access to the assignment.
+ The client must follow the redirect to get the file.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-participants-v1_PageIndex_PageSize">GET restapi/personal/assignments/{elementId}/participants/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets the participants report for a given assignment.
+ Only users with evaluate permission can access this report. Report will not be returned if the assignment is anonymous.
+ The participant's extra info is only included if the current user has access to protected data (like "Username").
+ The participants who no longer have (participate) permission to the assignment are not included in the report, even if they have submitted an answer.
+ Participants who have not submitted an answer are also included in the report.
+ Participants are paged using the provided paging parameters, sorting will be with the newest submissions first and then sorted by last names.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-settings-v1">GET restapi/personal/assignments/{elementId}/settings/v1</a></td>
+            <td class="api-documentation">
+                <p>Get settings for an assignment. This includes assessment scale (if used), and assessment status (if used).</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-assignments-elementId-v1">GET restapi/personal/assignments/{elementId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get information about an assignment</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-assignments-v1">POST restapi/personal/assignments/v1</a></td>
+            <td class="api-documentation">
+                <p>Create a new assignment in a course, in a specific folder.
+ This endpoint is currently not available using Oauth2.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Calendar">Calendar</h3>
+    <p>Overview:<br/>Calendar endpoint for personal API.
+ <p>
+ Secured with Oauth2,
+ and requires OAuth2 API scope Calendar.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-calendar-events-eventId-v1">GET restapi/personal/calendar/events/{eventId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets a single calendar event by the specified <paramref name="eventId" />.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-calendar-events-areanyforgroups-v1">POST restapi/personal/calendar/events/areanyforgroups/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-calendar-events-v1_fromDate_PageIndex_PageSize">GET restapi/personal/calendar/events/v1?fromDate={fromDate}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of calendar events.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Children">Children</h3>
+    <p>Overview:<br/>Endpoint for retrieving children-related data.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework_fromDate_toDate">GET restapi/personal/children/{childId}/courses/{courseId}/tasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;status={status}&amp;deadline={deadline}&amp;isHomework={isHomework}&amp;fromDate={fromDate}&amp;toDate={toDate}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to the child in the requested course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework_fromDate_toDate">GET restapi/personal/children/{childId}/tasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;status={status}&amp;deadline={deadline}&amp;isHomework={isHomework}&amp;fromDate={fromDate}&amp;toDate={toDate}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to the child.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-v1">GET restapi/personal/children/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the related children details for a given person</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ChildrenCalendar">ChildrenCalendar</h3>
+    <p>Overview:<br/>The controller is used to get information about children events.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-events-v1_fromDate_toDate_PageIndex_PageSize">GET restapi/personal/children/{childId}/courses/{courseId}/events/v1?fromDate={fromDate}&amp;toDate={toDate}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of calendar events for the child in course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-events-eventId-v1">GET restapi/personal/children/{childId}/events/{eventId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets a single course calendar event for the child by the specified <paramref name="eventId" />.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ChildrenCourses">ChildrenCourses</h3>
+    <p>Overview:<br/>The controller is used to get information about children courses and teachers.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-courses-courseId-features-v1">GET restapi/personal/children/{childId}/courses/{courseId}/features/v1</a></td>
+            <td class="api-documentation">
+                <p>Returns available feature and sub-features in a course where the child is a learner.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-courses-v1_PageIndex_PageSize">GET restapi/personal/children/{childId}/courses/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Returns list of courses where the child is a learner.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-upcoming-v1_fromDate_toDate">GET restapi/personal/children/{childId}/upcoming/v1?fromDate={fromDate}&amp;toDate={toDate}</a></td>
+            <td class="api-documentation">
+                <p>Returns list of courses upcoming plans, tasks and events in a dates range (one day only so far).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ChildrenOrganisation">ChildrenOrganisation</h3>
+    <p>Overview:<br/>Endpoint for retrieving settings of the organization where a child is a member.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-permissions-v1">GET restapi/personal/children/{childId}/permissions/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets permissions of the parent in the child's organisation.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ChildrenPlans">ChildrenPlans</h3>
+    <p>Overview:<br/>Endpoint for retrieving children-related data.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-plans-planId-v1">GET restapi/personal/children/{childId}/plans/{planId}/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the child's single plan details.
+ </p>
+ Returns HTTP status 404 not found, if the plan does not exist for the user.
+ It will only return plan the user has access to.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-children-childId-plans-v1_startDate_stopDate_onlyWithoutDates_PageIndex_PageSize">GET restapi/personal/children/{childId}/plans/v1?startDate={startDate}&amp;stopDate={stopDate}&amp;onlyWithoutDates={onlyWithoutDates}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of plans assigned to the child.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="CourseCards">CourseCards</h3>
+    <p>Overview:<br/><p>
+ Endpoint for CourseCards API
+ </p>
+<p>
+ Course cards in itslearning is personal and gives a better overview in the homepage for the daily workflow.
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-cards-courseId-settings-v1">GET restapi/personal/courses/cards/{courseId}/settings/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the course card settings</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-cards-courseId-settings-v1">POST restapi/personal/courses/cards/{courseId}/settings/v1</a></td>
+            <td class="api-documentation">
+                <p>Apply course card information to course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-cards-rank-v1">POST restapi/personal/courses/cards/rank/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-cards-starred-v1_PageIndex_PageSize_sortBy_searchText_isShowMore">GET restapi/personal/courses/cards/starred/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sortBy={sortBy}&amp;searchText={searchText}&amp;isShowMore={isShowMore}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of cards for user's starred courses</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-cards-unstarred-v1_PageIndex_PageSize_sortBy_searchText_isShowMore">GET restapi/personal/courses/cards/unstarred/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sortBy={sortBy}&amp;searchText={searchText}&amp;isShowMore={isShowMore}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of cards for user's unstarred courses</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="CourseFeatures">CourseFeatures</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Courses features API.
+ </p>
+<p>
+ Courses in itslearning are personal, and are related to person.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-features-v1">GET restapi/personal/courses/{courseId}/features/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets features for the given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-features-v2">GET restapi/personal/courses/{courseId}/features/v2</a></td>
+            <td class="api-documentation">
+                <p>Gets features for the given course.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Courses">Courses</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Courses API.
+ </p>
+<p>
+ Courses in itslearning are personal, and are related to person.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-addparticipants-search-v1_searchText">GET restapi/personal/courses/{courseId}/addparticipants/search/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Search for persons to add to a course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-addparticipants-v1">POST restapi/personal/courses/{courseId}/addparticipants/v1</a></td>
+            <td class="api-documentation">
+                <p>Add persons to add to a course.
+ <p>
+ The user needs access to add persons to a course. The user can not add persons with higher profiles than the user itself.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-courseId-aisettings-v1">PUT restapi/personal/courses/{courseId}/aisettings/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-applicants-v1">GET restapi/personal/courses/{courseId}/applicants/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-calendarevents-v1_PageIndex_PageSize_fromDate_toDate">GET restapi/personal/courses/{courseId}/calendarevents/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;fromDate={fromDate}&amp;toDate={toDate}</a></td>
+            <td class="api-documentation">
+                <p>Gets the calendar events for the given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-changerole-bulk-v1_roleId">POST restapi/personal/courses/{courseId}/changerole/bulk/v1?roleId={roleId}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-changerole-v1_participantId_roleId">POST restapi/personal/courses/{courseId}/changerole/v1?participantId={participantId}&amp;roleId={roleId}</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-folders-folderId-file-cloud-v1_planId">POST restapi/personal/courses/{courseId}/folders/{folderId}/file/cloud/v1?planId={planId}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Creates a file element in the course containing the cloud file.
+ </p>
+<p>
+ Returns HTTP status 403 not found, if the user don't have access to the course or folder.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the course does not exist.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-folders-folderId-file-filerepo-v1_planId">POST restapi/personal/courses/{courseId}/folders/{folderId}/file/filerepo/v1?planId={planId}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Creates a file element in the course containing the file.
+ </p>
+<p>
+ Returns HTTP status 403 not found, if the user don't have access to the course or folder.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the course does not exist.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-folders-folderId-resources-v1_PageIndex_PageSize_elementType_learningToolType">GET restapi/personal/courses/{courseId}/folders/{folderId}/resources/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;elementType={elementType}&amp;learningToolType={learningToolType}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of resources for the given course and folder.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-followuptasks-v1_PageIndex_PageSize">GET restapi/personal/courses/{courseId}/followuptasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>Gets the follow-up tasks for the given course.</p>
+<p>
+ The list shows activities for specified course that have new or updated submissions/student work, or if the teacher needs to assess a submission/attempt.
+ This will give the teacher an easy overview to see if there are updates, and to decide which to follow up next.
+ </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-courseId-lastvisited-v1">PUT restapi/personal/courses/{courseId}/lastvisited/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the timestamp for when the user has last visited the course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participantgroups-v1_pageIndex_pageSize_search">GET restapi/personal/courses/{courseId}/participantgroups/v1?pageIndex={pageIndex}&amp;pageSize={pageSize}&amp;search={search}</a></td>
+            <td class="api-documentation">
+                <p>Retrieves a paginated list of participant groups in course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-setup-v1">GET restapi/personal/courses/{courseId}/participants/setup/v1</a></td>
+            <td class="api-documentation">
+                <p>Setup for the course participant and add participant page. Language settings and permissions.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-participants-temporaryaccess-v1">POST restapi/personal/courses/{courseId}/participants/temporaryaccess/v1</a></td>
+            <td class="api-documentation">
+                <p>Give persons temporary access to a course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-unenrolled-v1_PageIndex_PageSize_searchText_orderByField_orderAscending_dropDateFrom">GET restapi/personal/courses/{courseId}/participants/unenrolled/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}&amp;dropDateFrom={dropDateFrom}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of the unenrolled course participants for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-courses-courseId-participants-v1">DELETE restapi/personal/courses/{courseId}/participants/v1</a></td>
+            <td class="api-documentation">
+                <p>Removes one or more participants from the given courses</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v1_PageIndex_PageSize_courseProfileId_searchText_orderByField_orderAscending">GET restapi/personal/courses/{courseId}/participants/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;courseProfileId={courseProfileId}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of the course participants for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-courses-courseId-participants-v2">DELETE restapi/personal/courses/{courseId}/participants/v2</a></td>
+            <td class="api-documentation">
+                <p>Removes one or more participants from the given courses</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v2_paging.PageIndex_paging.PageSize_courseProfileIds[0]_courseProfileIds[1]_searchText_orderByField_orderAscending">GET restapi/personal/courses/{courseId}/participants/v2?paging.PageIndex={paging.PageIndex}&amp;paging.PageSize={paging.PageSize}&amp;courseProfileIds[0]={courseProfileIds[0]}&amp;courseProfileIds[1]={courseProfileIds[1]}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of the course participants for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-participants-v3_paging.PageIndex_paging.PageSize_courseProfileIds[0]_courseProfileIds[1]_groupIds[0]_groupIds[1]_hierarchyIds[0]_hierarchyIds[1]_notInGroup_searchText_orderByField_orderAscending">GET restapi/personal/courses/{courseId}/participants/v3?paging.PageIndex={paging.PageIndex}&amp;paging.PageSize={paging.PageSize}&amp;courseProfileIds[0]={courseProfileIds[0]}&amp;courseProfileIds[1]={courseProfileIds[1]}&amp;groupIds[0]={groupIds[0]}&amp;groupIds[1]={groupIds[1]}&amp;hierarchyIds[0]={hierarchyIds[0]}&amp;hierarchyIds[1]={hierarchyIds[1]}&amp;notInGroup={notInGroup}&amp;searchText={searchText}&amp;orderByField={orderByField}&amp;orderAscending={orderAscending}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of the course participants for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-profiles-v1">GET restapi/personal/courses/{courseId}/profiles/v1</a></td>
+            <td class="api-documentation">
+                <p>Information on available course profiles for this course</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-resources-extended-v1_PageIndex_PageSize">POST restapi/personal/courses/{courseId}/resources/extended/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Returns all resources in course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-resources-lastupdated-v1_elementType_numberOfElements_excludeLearningPathSubElements">GET restapi/personal/courses/{courseId}/resources/lastupdated/v1?elementType={elementType}&amp;numberOfElements={numberOfElements}&amp;excludeLearningPathSubElements={excludeLearningPathSubElements}</a></td>
+            <td class="api-documentation">
+                <p>Gets the last three updated resources for a given element type in a given course for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-resources-v1_PageIndex_PageSize_elementType_learningToolType">GET restapi/personal/courses/{courseId}/resources/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;elementType={elementType}&amp;learningToolType={learningToolType}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of resources (in the root folder) for the given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-searchhierarchies-v1_searchText">GET restapi/personal/courses/{courseId}/searchhierarchies/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Search syncable hierarchies for the course provided</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-stream-v1_showLightBulletins_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/courses/{courseId}/stream/v1?showLightBulletins={showLightBulletins}&amp;UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets user's stream feed, which is collected from the course.
+ </p>
+<p>
+ If no parameters specified, 100 latest items will be returned.
+ </p>
+<p>
+ The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified NotificationId.
+ Due to the fact that stream items are sorted by PublishedDate (not by ID), it's required to specify FromId parameter.
+ Both should belong to a single StreamItem entity. By default, items older than specified are returned, but it's possible to override that behavior by setting UseNewerThan to true.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-students-v1_pageIndex_pageSize_search">GET restapi/personal/courses/{courseId}/students/v1?pageIndex={pageIndex}&amp;pageSize={pageSize}&amp;search={search}</a></td>
+            <td class="api-documentation">
+                <p>Get students in course</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-synchronisedhierarchies-v1">GET restapi/personal/courses/{courseId}/synchronisedhierarchies/v1</a></td>
+            <td class="api-documentation">
+                <p>Get all hierarchies synchronised with the course provided</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-courseId-synchronisehierarchies-v1">POST restapi/personal/courses/{courseId}/synchronisehierarchies/v1</a></td>
+            <td class="api-documentation">
+                <p>Sync hierarchies to course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-tasks-count-v1">GET restapi/personal/courses/{courseId}/tasks/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Retrieves followUp task count and task count for the given course for the current user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-tasks-v1_PageIndex_PageSize_status_deadline_isHomework">GET restapi/personal/courses/{courseId}/tasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;status={status}&amp;deadline={deadline}&amp;isHomework={isHomework}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks for the given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-RestApi-personal-courses-courseId-toggleFavorite-v1">PUT RestApi/personal/courses/{courseId}/toggleFavorite/v1</a></td>
+            <td class="api-documentation">
+                <p>Toggles whether the user has this course favorite</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-topics-topicId-elementids-v1_PageIndex_PageSize">GET restapi/personal/courses/{courseId}/topics/{topicId}/elementids/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Provides the list of element IDs for a given topic in a course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-topics-v1_PageIndex_PageSize">GET restapi/personal/courses/{courseId}/topics/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Provides the list of topic IDs and names for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-v1">GET restapi/personal/courses/{courseId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Retrieves some basic information on the given course for the current user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-courseId-v1">PUT restapi/personal/courses/{courseId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-yourstudents-v1_PageIndex_PageSize_sort_sortDescending_search">GET restapi/personal/courses/{courseId}/yourstudents/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sort={sort}&amp;sortDescending={sortDescending}&amp;search={search}</a></td>
+            <td class="api-documentation">
+                <p>Get a list of your students for a given course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-locationId-resources-search-v1_locationType_searchText">GET restapi/personal/courses/{locationId}/resources/search/v1?locationType={locationType}&amp;searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of resources in a given course, matching the search text provided</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-activeplans-v1_startDate_endDate">POST restapi/personal/courses/activeplans/v1?startDate={startDate}&amp;endDate={endDate}</a></td>
+            <td class="api-documentation">
+                <p>Gets information about the courses with the specified sync keys and having active lesson plans within the specified dates range.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-addparticipants-search-v1_searchText">GET restapi/personal/courses/addparticipants/search/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Gets persons that the user is allowed to communicate with given the customer's eSafety rules configured in itslearning.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktofile">POST restapi/personal/courses/convertfileorlinktofile</a></td>
+            <td class="api-documentation">
+                <p>Not in use will be removed in R108 (BMT-CONVERT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktogoogle">POST restapi/personal/courses/convertfileorlinktogoogle</a></td>
+            <td class="api-documentation">
+                <p>Not in use will be removed in R108 (BMT-CONVERT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktolink">POST restapi/personal/courses/convertfileorlinktolink</a></td>
+            <td class="api-documentation">
+                <p>Not in use will be removed in R108 (BMT-CONVERT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-convertfileorlinktoonedrive">POST restapi/personal/courses/convertfileorlinktoonedrive</a></td>
+            <td class="api-documentation">
+                <p>Not in use will be removed in R108 (BMT-CONVERT)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-convertonedrivetofile">POST restapi/personal/courses/convertonedrivetofile</a></td>
+            <td class="api-documentation">
+                <p>Converts OneDriveResource to File</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-iteach-v1_PageIndex_PageSize_onlyWithResources">GET restapi/personal/courses/iteach/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;onlyWithResources={onlyWithResources}</a></td>
+            <td class="api-documentation">
+                <p>Retrieves a list with Courses for the given teacher.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-measure-v1">POST restapi/personal/courses/measure/v1</a></td>
+            <td class="api-documentation">
+                <p>Measures course related kpis.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-measurefilelinkingkpi-v1">POST restapi/personal/courses/measurefilelinkingkpi/v1</a></td>
+            <td class="api-documentation">
+                <p>Endpoint for counting KPI's for files which are being linked when added to a course</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-measurefileuploadkpi-v1">POST restapi/personal/courses/measurefileuploadkpi/v1</a></td>
+            <td class="api-documentation">
+                <p>Endpoint for counting KPI's for files which are uploaded when added to a course</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-notifications-notificationId-elements-v1_PageIndex_PageSize">GET restapi/personal/courses/notifications/{notificationId}/elements/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the list of elements related to given notification
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-resources-resourceId-v1">GET restapi/personal/courses/resources/{resourceId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the resource, the course where the resource is located and the current person's role in the course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-search-v1_courseSyncKey">GET restapi/personal/courses/search/v1?courseSyncKey={courseSyncKey}</a></td>
+            <td class="api-documentation">
+                <p>Gets the course by synchronization key.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-students-v1_PageIndex_PageSize">GET restapi/personal/courses/students/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of my students.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-v1">POST restapi/personal/courses/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a new course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-v1_PageIndex_PageSize">GET restapi/personal/courses/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of courses.
+ BUG: This endpoint returns only favourite courses
+ USE v2 instead</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-v2_PageIndex_PageSize_filter">GET restapi/personal/courses/v2?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;filter={filter}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of courses.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-v3_PageIndex_PageSize_filter">GET restapi/personal/courses/v3?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;filter={filter}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of courses with additional information about follow-up task count, task count and list of teachers.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-v4_PageIndex_PageSize_filter">GET restapi/personal/courses/v4?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;filter={filter}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of courses with additional information and list of teachers without followUp task count and task count.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-withrole-courseId-v1">GET restapi/personal/courses/withrole/{courseId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Retrieves basic information on the given course for the current user and their course role in this course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-yourstudents-courses-v1">GET restapi/personal/courses/yourstudents/courses/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets all courses of your students of the current user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-yourstudents-v1_PageIndex_PageSize_sort_sortDescending_search">GET restapi/personal/courses/yourstudents/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sort={sort}&amp;sortDescending={sortDescending}&amp;search={search}</a></td>
+            <td class="api-documentation">
+                <p>Get a list of the all students for teacher in all courses where teacher has teacher's role.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="CoursesGroups">CoursesGroups</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Courses groups API.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-courses-courseId-groups-v1">DELETE restapi/personal/courses/{courseId}/groups/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Remove course groups with specified identifiers.
+ </p>
+<p>
+ The user needs course-admin rights in the course to be authorized.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-courseId-groupsets-v1">PUT restapi/personal/courses/{courseId}/groupsets/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Create or replace existing course groups sets in specified course.
+ </p>
+<p>
+ If the course groups don't exist yet, new groups will be created and identifiers of the created groups will be returned in the response with the same ordering as was given in the request.
+ </p>
+<p>
+ If course groups already exist, then the groups will be updated. Any existing participants of any existing course groups will be replaced by new participants from this request. Course group titles will also be updated.
+ </p>
+<p>
+ The user needs course-admin rights in the course to be authorized.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="CustomerSettings">CustomerSettings</h3>
+    <p>Overview:<br/>Endpoint to fetch customer setting values.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-customersettings-key-v1">GET restapi/customersettings/{key}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets course info by specified id.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="CustomLabelsApi">CustomLabelsApi</h3>
+    <p>Overview:<br/>Controller to handle api calls from the custom labels page.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-administration-customlabels-id-v1">PUT restapi/administration/customlabels/{id}/v1</a></td>
+            <td class="api-documentation">
+                <p>Edit custom label</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-administration-customlabels-id-v1">DELETE restapi/administration/customlabels/{id}/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete custom label.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-administration-customlabels-v1">GET restapi/administration/customlabels/v1</a></td>
+            <td class="api-documentation">
+                <p>Get custom labels</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-administration-customlabels-v1">POST restapi/administration/customlabels/v1</a></td>
+            <td class="api-documentation">
+                <p>Create new custom label</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="FileUpload">FileUpload</h3>
+    <p>Overview:<br/>Controller to handle file uploads, for oauth2 the scope is required.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-fileupload-temp-v1">POST restapi/personal/fileupload/temp/v1</a></td>
+            <td class="api-documentation">
+                <p>Upload a file to temporary storage.
+ The file must be included in the post so we can extract it from HttpContext.Current.Request.Files (multipart/form-data).
+ The file can only be used once, and will be deleted automatically after 24 hours (depending on FileRepo's config for temp file).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Hierarchies">Hierarchies</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Hierarchies API.
+ </p>
+<p>
+ Hierarchies in itslearning are personal, and are related to person.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope <see cref="F:Itsolutions.Itslearning.ItslCore.BusinessLayer.OAuth2.ApiScope.Hierarchies">Hierarchies</see>.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-children-v1">GET restapi/personal/hierarchies/{hierarchyId}/children/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all children of a specific hierarchy. Returns only hierarchies to which person has access to.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the hierarchyId does not exist for the user or user has no permission to read it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-childrenwithmembercountforcourse-v1_courseId">GET restapi/personal/hierarchies/{hierarchyId}/childrenwithmembercountforcourse/v1?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all children of a specific hierarchy, with a count of how many members the hierarchy has.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the hierarchyId does not exist for the user or user has no permission to read it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-childrenwithmembercountforperson-v1">GET restapi/personal/hierarchies/{hierarchyId}/childrenwithmembercountforperson/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all children of a specific hierarchy, with a count of how many members the hierarchy has.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the hierarchyId does not exist for the user or user has no permission to read it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-members-v1_PageIndex_PageSize">GET restapi/personal/hierarchies/{hierarchyId}/members/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all members and their role in the specified hierarchy. Will only return members the calling user is allowed to see.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-members-v2_PageIndex_PageSize_courseContext">GET restapi/personal/hierarchies/{hierarchyId}/members/v2?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;courseContext={courseContext}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all members and their role in the specified hierarchy. Will only return members the calling user is allowed to see.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-parents-v1_visibleInSearchOnly">GET restapi/personal/hierarchies/{hierarchyId}/parents/v1?visibleInSearchOnly={visibleInSearchOnly}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all parents of a specific hierarchy.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the hierarchyId does not exist for the user or user has no permission to read it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-hierarchyId-v1_role">GET restapi/personal/hierarchies/{hierarchyId}/v1?role={role}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all members of a specific hierarchy with the given role.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the hierarchyId does not exist for the user or user has no permission to read it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-default-v1">GET restapi/personal/hierarchies/default/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get default hierarchy for the current person.
+ </p>
+<p>
+ Could be School if person is a member of only one school or has home organization set, a whole Site otherwise.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-defaultforcourse-courseId">GET restapi/personal/hierarchies/defaultforcourse/{courseId}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get default hierarchy for the current course.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-defaultwithmembercount-v1">GET restapi/personal/hierarchies/defaultwithmembercount/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get default hierarchy for the current person.
+ </p>
+<p>
+ Could be School if person is a member of only one school or has home organization set, a whole Site otherwise.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-organisations-v1_role">GET restapi/personal/hierarchies/organisations/v1?role={role}</a></td>
+            <td class="api-documentation">
+                <p>Get all organisations to which current person belongs to and has specific role.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-hierarchies-organizations-v1_role">GET restapi/personal/hierarchies/organizations/v1?role={role}</a></td>
+            <td class="api-documentation">
+                <p>Get all organizations to which current person belongs to and has specific role.
+ This method obsolete, use 'organisations/v1' instead.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ImmersiveReader">ImmersiveReader</h3>
+    <p>Overview:<br/>API controller for Immersive Reader.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-immersivereader-v1_resourceId_resourceType_contentBlockId">GET restapi/personal/immersivereader/v1?resourceId={resourceId}&amp;resourceType={resourceType}&amp;contentBlockId={contentBlockId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the required info for use with Immersive Reader.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="InstantMessage">InstantMessage</h3>
+    <p>Overview:<br/>Endpoint for internal instant messages for personal API.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope InstantMessage.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-instantMessageId-abusereport-v1">DELETE restapi/personal/instantmessages/{instantMessageId}/abusereport/v1</a></td>
+            <td class="api-documentation">
+                <p>Cancels abuse report.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PATCH-restapi-personal-instantmessages-instantMessageId-restore-v1">PATCH restapi/personal/instantmessages/{instantMessageId}/restore/v1</a></td>
+            <td class="api-documentation">
+                <p>Undo deletion for an instant message.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-instantMessageId-v1">DELETE restapi/personal/instantmessages/{instantMessageId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes an instant message.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-attachment-v1">POST restapi/personal/instantmessages/attachment/v1</a></td>
+            <td class="api-documentation">
+                <p>Upload file attachment to temporary storage.
+ The file should be included in the post call so we can extract it as HttpContext.Current.Request.Files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-attachment-v1_fileId">DELETE restapi/personal/instantmessages/attachment/v1?fileId={fileId}</a></td>
+            <td class="api-documentation">
+                <p>Delete temporary files that were uploaded</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-cancelabusethreadreport-threadId-v1">PUT restapi/personal/instantmessages/cancelabusethreadreport/{threadId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Cancels abuse report for thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-communicationchannel-channelId-v1_unregister">POST restapi/personal/instantmessages/communicationchannel/{channelId}/v1?unregister={unregister}</a></td>
+            <td class="api-documentation">
+                <p>Register a (SignalR) communication channel</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-instantMessageThreadId-unread-count-v1">GET restapi/personal/instantmessages/messagethreads/{instantMessageThreadId}/unread/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets number of unread messages in a specific thread for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-search-v1_searchText">GET restapi/personal/instantmessages/messagethreads/{threadId}/messages/search/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Searches inside the given thread for messages matching the given search text.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-v2_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId">GET restapi/personal/instantmessages/messagethreads/{threadId}/messages/v2?maxMessages={maxMessages}&amp;upperBoundInstantMessageId={upperBoundInstantMessageId}&amp;lowerBoundInstantMessageId={lowerBoundInstantMessageId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the messages in a specific thread.
+ The impersonated user need to be a member of the thread.
+ One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-messages-v3_pageSize_fromId">GET restapi/personal/instantmessages/messagethreads/{threadId}/messages/v3?pageSize={pageSize}&amp;fromId={fromId}</a></td>
+            <td class="api-documentation">
+                <p>Gets a collection of instant messages extended with hasMore field.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-moderators-v1">PUT restapi/personal/instantmessages/messagethreads/{threadId}/moderators/v1</a></td>
+            <td class="api-documentation">
+                <p>Adds moderator to an instant message thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-participants-messages-disabled-v1">GET restapi/personal/instantmessages/messagethreads/{threadId}/participants/messages-disabled/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets a collection of thread participants who cannot see messages.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-participants-v1">PUT restapi/personal/instantmessages/messagethreads/{threadId}/participants/v1</a></td>
+            <td class="api-documentation">
+                <p>Adds participants to an instant message thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-messagethreads-threadId-participants-v1">DELETE restapi/personal/instantmessages/messagethreads/{threadId}/participants/v1</a></td>
+            <td class="api-documentation">
+                <p>Remove participants from an instant message thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PATCH-restapi-personal-instantmessages-messagethreads-threadId-restore-v1">PATCH restapi/personal/instantmessages/messagethreads/{threadId}/restore/v1</a></td>
+            <td class="api-documentation">
+                <p>Restores deletion for thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-toggleEnableDisableReplies-v1">PUT restapi/personal/instantmessages/messagethreads/{threadId}/toggleEnableDisableReplies/v1</a></td>
+            <td class="api-documentation">
+                <p>Toggle whether students can send replies to this thread or not</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-updatelastread-lastReadInstantMessageId-v1_sortIndex_operation">PUT restapi/personal/instantmessages/messagethreads/{threadId}/updatelastread/{lastReadInstantMessageId}/v1?sortIndex={sortIndex}&amp;operation={operation}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates last read instant message id for a thread
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-messagethreads-threadId-v1">DELETE restapi/personal/instantmessages/messagethreads/{threadId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes a thread.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-messagethreads-threadId-v1">PUT restapi/personal/instantmessages/messagethreads/{threadId}/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates a instant message thread.
+ Supports updating the name of the thread or the list of the participants.
+ Will return HTTP status 404 if the InstantMessageThreadId is not found or the user does not have access to it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v1_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId">GET restapi/personal/instantmessages/messagethreads/{threadId}/v1?maxMessages={maxMessages}&amp;upperBoundInstantMessageId={upperBoundInstantMessageId}&amp;lowerBoundInstantMessageId={lowerBoundInstantMessageId}</a></td>
+            <td class="api-documentation">
+                <p>DEPRECATED use "messagethreads/{threadId}/messages/v2" instead.
+ <p>
+ Gets the messages in a specific thread if the user is a recipient in the thread.
+ One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v2_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId">GET restapi/personal/instantmessages/messagethreads/{threadId}/v2?maxMessages={maxMessages}&amp;upperBoundInstantMessageId={upperBoundInstantMessageId}&amp;lowerBoundInstantMessageId={lowerBoundInstantMessageId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the instant message thread and the messages in a specific thread.
+ The impersonated user need to be a member of the thread.
+ One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
+ <p>
+ If you only need messages from the thread, consider using "messagethreads/{threadId}/messages/v2" instead.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-threadId-v3_maxMessages_upperBoundInstantMessageId_lowerBoundInstantMessageId">GET restapi/personal/instantmessages/messagethreads/{threadId}/v3?maxMessages={maxMessages}&amp;upperBoundInstantMessageId={upperBoundInstantMessageId}&amp;lowerBoundInstantMessageId={lowerBoundInstantMessageId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the instant message thread and the messages in a specific thread.
+ The impersonated user need to be a member of the thread.
+ One cannot use both lowerBoundInstantMessageId and upperBoundInstantMessageId.
+ <p>
+ If you only need messages from the thread, consider using "messagethreads/{threadId}/messages/v2" instead.
+ This version doesn't return thread participants for course threads for performance reasons.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-collaborations-collaborationId-v1">GET restapi/personal/instantmessages/messagethreads/collaborations/{collaborationId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the instant message thread id for group answer. Creates it if not there yet.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-onetoone-personId-v1">GET restapi/personal/instantmessages/messagethreads/onetoone/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the instant message thread id for a one to one conversation between the caller and a user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-messagethreads-search-v1">POST restapi/personal/instantmessages/messagethreads/search/v1</a></td>
+            <td class="api-documentation">
+                <p><p> Searches the logged in user's message threads. PersonId is gotten from the authorization (session or oauth)</p>
+<p> Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0 </p>
+<p> The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified messageId</p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-suggestions-v1_searchText">GET restapi/personal/instantmessages/messagethreads/suggestions/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p>Suggests conversations which names contain search string.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-unread-count-v1">GET restapi/personal/instantmessages/messagethreads/unread/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets number of threads that contain unread messages</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v1_maxThreadCount_threadPage_maxMessages">GET restapi/personal/instantmessages/messagethreads/v1?maxThreadCount={maxThreadCount}&amp;threadPage={threadPage}&amp;maxMessages={maxMessages}</a></td>
+            <td class="api-documentation">
+                <p><p> Gets the logged in user's message threads. PersonId is gotten from the authorization (session or oauth)</p>
+<p> Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0 </p>
+<p> The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified messageId</p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v2_maxThreadCount_threadPage_maxMessages">GET restapi/personal/instantmessages/messagethreads/v2?maxThreadCount={maxThreadCount}&amp;threadPage={threadPage}&amp;maxMessages={maxMessages}</a></td>
+            <td class="api-documentation">
+                <p><p> Gets the logged in user's message threads. PersonId is gotten from the authorization (session or oauth)</p>
+<p> Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0 </p>
+<p> The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified messageId</p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v3_fromSortIndex_pageSize">GET restapi/personal/instantmessages/messagethreads/v3?fromSortIndex={fromSortIndex}&amp;pageSize={pageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a collection of threads for logged in user extended with hasMore field.
+ Supports paging by sort index field. If <paramref name="fromSortIndex" /> parameter is not provided, threads with highest sort index will be returned.
+ If <paramref name="pageSize" /> is not provided, default page size will be used instead.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-messagethreads-v4_fromSortIndex_pageSize">GET restapi/personal/instantmessages/messagethreads/v4?fromSortIndex={fromSortIndex}&amp;pageSize={pageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a collection of threads for logged in user extended with hasMore field.
+ Supports paging by sort index field. If <paramref name="fromSortIndex" /> parameter is not provided, threads with highest sort index will be returned.
+ If <paramref name="pageSize" /> is not provided, default page size will be used instead.
+ This version doesn't return thread participants for course threads for performance reasons.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-permissions-v1">GET restapi/personal/instantmessages/permissions/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets permissions for the instant message system.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-privacy-personId-v1">GET restapi/personal/instantmessages/privacy/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Checks privacy rules to determine if user is allowed to initiate communication with a person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-recipients-persons-v1">POST restapi/personal/instantmessages/recipients/persons/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets recipient persons requested</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-search-v1_searchText_instantMessageThreadId_recipientRoles[0]_recipientRoles[1]">GET restapi/personal/instantmessages/recipients/search/v1?searchText={searchText}&amp;instantMessageThreadId={instantMessageThreadId}&amp;recipientRoles[0]={recipientRoles[0]}&amp;recipientRoles[1]={recipientRoles[1]}</a></td>
+            <td class="api-documentation">
+                <p>Gets persons that the user is allowed to communicate with given the customer's esafety rules configured in itslearning.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-v1_personIds[0]_personIds[1]_courseId_projectId">GET restapi/personal/instantmessages/recipients/v1?personIds[0]={personIds[0]}&amp;personIds[1]={personIds[1]}&amp;courseId={courseId}&amp;projectId={projectId}</a></td>
+            <td class="api-documentation">
+                <p>Gets recipients(persons, course or project) requested</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-recipients-v2_personIds[0]_personIds[1]_courseIds[0]_courseIds[1]_projectIds[0]_projectIds[1]">GET restapi/personal/instantmessages/recipients/v2?personIds[0]={personIds[0]}&amp;personIds[1]={personIds[1]}&amp;courseIds[0]={courseIds[0]}&amp;courseIds[1]={courseIds[1]}&amp;projectIds[0]={projectIds[0]}&amp;projectIds[1]={projectIds[1]}</a></td>
+            <td class="api-documentation">
+                <p>Gets recipients(persons, course or project) requested</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-settings-v1">GET restapi/personal/instantmessages/settings/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the settings for the instant message system. Boundaries for attachment size, max participants in a group thread etc.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-settings-v2">GET restapi/personal/instantmessages/settings/v2</a></td>
+            <td class="api-documentation">
+                <p>Gets the settings for the instant message system. Boundaries for attachment size, max participants in a group thread etc.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-starred-count-v1">GET restapi/personal/instantmessages/starred/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the number of starred messages for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-suggestions-v1_searchText_maxSuggestions">GET restapi/personal/instantmessages/suggestions/v1?searchText={searchText}&amp;maxSuggestions={maxSuggestions}</a></td>
+            <td class="api-documentation">
+                <p><p> Searches for suggestions of person names or thread names that match the input search query for the current user</p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-togglemessagestar-instantMessageId-v1">PUT restapi/personal/instantmessages/togglemessagestar/{instantMessageId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Toggle whether the given message is starred or not</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-instantmessages-togglepersonblock-personId-v1">PUT restapi/personal/instantmessages/togglepersonblock/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Toggles block for specific <paramref name="personId" />.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-v1">POST restapi/personal/instantmessages/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ DEPRECATED use v2 instead
+ </p>
+<p>
+ Send an instant message.
+ </p>
+ Creates a new thread or reuse an old. The thread the message was sent to will be returned.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PATCH-restapi-personal-instantmessages-v1">PATCH restapi/personal/instantmessages/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the text for an instant message.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-v2">POST restapi/personal/instantmessages/v2</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Send an instant message.
+ </p>
+ Creates a new thread or reuse an old. The thread the message was sent to will be returned.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="InstantMessageBroadcast">InstantMessageBroadcast</h3>
+    <p>Overview:<br/>Endpoint for internal instant messages broadcasting for personal API.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope InstantMessage.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-instantmessages-broadcast-v1">POST restapi/personal/instantmessages/broadcast/v1</a></td>
+            <td class="api-documentation">
+                <p>Send a broadcast instant message. Creates a new thread for a new broadcast message.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-instantmessages-broadcast-v1">DELETE restapi/personal/instantmessages/broadcast/v1</a></td>
+            <td class="api-documentation">
+                <p>Marks broadcast threads as deleted and created the async task to delete permanently them and all associated data.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-instantmessages-broadcastStatistics-threadId-v1">GET restapi/personal/instantmessages/broadcastStatistics/{threadId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets statistics how many recipients read messages of specified threads</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="LearningObjectiveRepository">LearningObjectiveRepository</h3>
+    <p>Overview:<br/>Endpoint for learning objectives for the personal api.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope LearningObjectiveRepository.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-learningobjectiverepository-subjects-countryCode-v1">GET restapi/learningobjectiverepository/subjects/{countryCode}/v1</a></td>
+            <td class="api-documentation">
+                <p>Retrieves the Subjects that have been defined for the given Country code.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="LearningObjectivesReports">LearningObjectivesReports</h3>
+    <p>Overview:<br/>Endpoint to get users' learning objectives aggregated progress reports and / or corresponding information.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Reports.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-personId-v1_subjectId_fromDateTime_toDateTime_statuses">GET restapi/personal/progressreport/{personId}/v1?subjectId={subjectId}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;statuses={statuses}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the person learning objectives aggregated progress report.
+ </p>
+<p>
+ The client of this API may supply additional parameters to get a more detailed report.
+ For instance supplying a time period parameters (fromDateTime and toDateTime) one can get a report only in
+ this particular time period.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-courses-v1_learningObjectiveId_onlyWithCriteria">GET restapi/personal/progressreport/courses/v1?learningObjectiveId={learningObjectiveId}&amp;onlyWithCriteria={onlyWithCriteria}</a></td>
+            <td class="api-documentation">
+                <p>Gets the favourite courses where current user is a teacher and where the learning objective used.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-criteria-personId-v1_courseId_criteriaIds_fromDateTime_toDateTime">GET restapi/personal/progressreport/criteria/{personId}/v1?courseId={courseId}&amp;criteriaIds={criteriaIds}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the person criteria assessment report.
+ </p>
+<p>
+ The client of this API may supply additional parameters to get a more detailed report.
+ For instance supplying a time period parameters (fromDateTime and toDateTime) one can get a report only in
+ this particular time period.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-criteria-v1_courseId_learningObjectiveId">GET restapi/personal/progressreport/criteria/v1?courseId={courseId}&amp;learningObjectiveId={learningObjectiveId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the criteria list for learning objective at specified course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-reportsubjects-personId-v1_fromDateTime_toDateTime_subjectIds">GET restapi/personal/progressreport/reportsubjects/{personId}/v1?fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;subjectIds={subjectIds}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets list of subjects the person learning objectives aggregated progress report is based on.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-reportsubjects-v1_personSyncKey_fromDateTime_toDateTime_subjectIds">GET restapi/personal/progressreport/reportsubjects/v1?personSyncKey={personSyncKey}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;subjectIds={subjectIds}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets list of subjects the person learning objectives aggregated progress report is based on.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-statuses-personId-v1">GET restapi/personal/progressreport/statuses/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets list of available learning objective statuses.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-statuses-v1_personSyncKey">GET restapi/personal/progressreport/statuses/v1?personSyncKey={personSyncKey}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets list of available learning objective statuses.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-progressreport-v1_subjectId_personSyncKey_fromDateTime_toDateTime_statuses">GET restapi/personal/progressreport/v1?subjectId={subjectId}&amp;personSyncKey={personSyncKey}&amp;fromDateTime={fromDateTime}&amp;toDateTime={toDateTime}&amp;statuses={statuses}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the person learning objectives aggregated progress report.
+ </p>
+<p>
+ The client of this API may supply additional parameters to get a more detailed report.
+ For instance supplying a time period parameters (fromDateTime and toDateTime) one can get a report only in
+ this particular time period.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="LightBulletin">LightBulletin</h3>
+    <p>Overview:<br/>Endpoint for light bulletins for personal api.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope light bulletin.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-lightbulletins-lightBulletinId-comments-subscription-v1">PUT restapi/personal/lightbulletins/{lightBulletinId}/comments/subscription/v1</a></td>
+            <td class="api-documentation">
+                <p>Turn on/off notifications for new comments for the light bulletin.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-lightbulletins-lightBulletinId-comments-v1">POST restapi/personal/lightbulletins/{lightBulletinId}/comments/v1</a></td>
+            <td class="api-documentation">
+                <p>Adds a new comment for light bulletin.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-lightbulletins-lightBulletinId-comments-v1_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/lightbulletins/{lightBulletinId}/comments/v1?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets the list of all comments added for given light bulletin sorted in chronological order (by date creation) from newest to oldest.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-lightbulletins-lightBulletinId-comments-v2">POST restapi/personal/lightbulletins/{lightBulletinId}/comments/v2</a></td>
+            <td class="api-documentation">
+                <p>Adds a new comment for light bulletin.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-lightbulletins-comments-commentId-v1">PUT restapi/personal/lightbulletins/comments/{commentId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates comment's text.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-lightbulletins-comments-commentId-v1">DELETE restapi/personal/lightbulletins/comments/{commentId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes comment.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-lightbulletins-comments-commentId-v2">PUT restapi/personal/lightbulletins/comments/{commentId}/v2</a></td>
+            <td class="api-documentation">
+                <p>Updates comment's text.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-lightbulletins-v1">PUT restapi/personal/lightbulletins/v1</a></td>
+            <td class="api-documentation">
+                <p>Marks light bulletins as seen.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="LightBulletinCourse">LightBulletinCourse</h3>
+    <p>Overview:<br/><p>
+ Endpoint for light bulletins in course scope.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-courseId-bulletins-v1_timePeriod_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/courses/{courseId}/bulletins/v1?timePeriod={timePeriod}&amp;UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets light bulletins by course identifier.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-bulletins-bulletinId-comments-v1_allowComments">PUT restapi/personal/courses/bulletins/{bulletinId}/comments/v1?allowComments={allowComments}</a></td>
+            <td class="api-documentation">
+                <p>Enables or disables comments for the bulletin</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-bulletins-bulletinId-elements-v1_PageIndex_PageSize">GET restapi/personal/courses/bulletins/{bulletinId}/elements/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the list of resources attached to given bulletin
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-bulletins-bulletinId-pinned-v1_pinned">PUT restapi/personal/courses/bulletins/{bulletinId}/pinned/v1?pinned={pinned}</a></td>
+            <td class="api-documentation">
+                <p>Toggles announcement Pinned status.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-bulletins-bulletinId-uploadimage-v1">POST restapi/personal/courses/bulletins/{bulletinId}/uploadimage/v1</a></td>
+            <td class="api-documentation">
+                <p>Upload file attachment to temporary storage. The file should be included in the post call so we can extract it as HttpContext.Current.Request.Files.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-courses-bulletins-bulletinId-v1">DELETE restapi/personal/courses/bulletins/{bulletinId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes bulletin created in course and the bulletin's comments, embedded links, attached images and resources.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-courses-bulletins-bulletinId-v1">GET restapi/personal/courses/bulletins/{bulletinId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets light bulletin by identifier.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-courses-bulletins-v1">POST restapi/personal/courses/bulletins/v1</a></td>
+            <td class="api-documentation">
+                <p>Create new light bulletin.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-courses-bulletins-v1">PUT restapi/personal/courses/bulletins/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the light bulletin</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="LtiExtension">LtiExtension</h3>
+    <p>Overview:<br/>API controller for Lti extensions.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-lti-extensionId-details-v1_courseId">GET restapi/personal/lti/{extensionId}/details/v1?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the LTI details for user and for the given course (if defined).</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-lti-extensionId-details-v2_courseId">GET restapi/personal/lti/{extensionId}/details/v2?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the LTI customer setup for user and for the given course (if defined).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="MediaRecorder">MediaRecorder</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Video Recording API.
+ </p>
+<p>
+ Secured with Oauth2
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-RestApi-personal-mediarecorder-createplayer-v1">POST RestApi/personal/mediarecorder/createplayer/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-RestApi-personal-mediarecorder-recordingcomplete-v1">POST RestApi/personal/mediarecorder/recordingcomplete/v1</a></td>
+            <td class="api-documentation">
+                <p>Saves a Ziggeo redcorded video or audio clip to the server
+ with the provided name</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-RestApi-personal-mediarecorder-saveziggeorecording-v1">POST RestApi/personal/mediarecorder/saveziggeorecording/v1</a></td>
+            <td class="api-documentation">
+                <p>Saves a Ziggeo redcorded video or audio clip to the server
+ with the provided name</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-RestApi-personal-mediarecorder-uploadrecording-v1">POST RestApi/personal/mediarecorder/uploadrecording/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-RestApi-personal-mediarecorder-video-videoId-streams-v1">GET RestApi/personal/mediarecorder/video/{videoId}/streams/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-RestApi-personal-mediarecorder-ziggeo-region-video-videoId-streams-v1">GET RestApi/personal/mediarecorder/ziggeo/{region}/video/{videoId}/streams/v1</a></td>
+            <td class="api-documentation">
+                <p>Parameter is left only for backwards compatibility, it's not in use.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Messages">Messages</h3>
+    <p>Overview:<br/>Endpoint for internal messages for personal api.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Messages.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-messages-messageId-toggleFavorite-v1_isFavorite_messageOrigin">POST restapi/personal/messages/{messageId}/toggleFavorite/v1?isFavorite={isFavorite}&amp;messageOrigin={messageOrigin}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Toggles a message's IsFavorite property.
+ </p>
+<p>
+ Only supports toggling the current favorite value of the message.
+ Will return HTTP status 401 if user does not have access.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-messageId-v1">GET restapi/personal/messages/{messageId}/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get a single message by its messageId.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the messageId does not exist for the user.
+ It will only return messages the user has access to.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-messages-messageId-v1_messageOrigin">PUT restapi/personal/messages/{messageId}/v1?messageOrigin={messageOrigin}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates a message's properties.
+ </p>
+<p>
+ Only supports updating the IsRead field of Message.
+ Will return HTTP status 404 if the messageId is not found or the user does not have access to it.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-messages-messageId-v1_messageOrigin">DELETE restapi/personal/messages/{messageId}/v1?messageOrigin={messageOrigin}</a></td>
+            <td class="api-documentation">
+                <p><p> Deletes a message by moving it to the deleted folder. </p>
+<p> Will return HTTP status 401 if user does not have access. </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-attachments-fileId-v1">GET restapi/personal/messages/attachments/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets an attachment from a message.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the fileid does not exist for the user.
+ It will only return attachment the user has access to.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-messages-push-v1">POST restapi/personal/messages/push/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ This method is obsolete, use restapi/personal/person/push/v1 instead.
+ </p>
+ Set push notifications in itslearning (on or off) for a device.
+ This method will also register the device for push notifications with the push provider (if needed).</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-recipients-search-v1_searchText">GET restapi/personal/messages/recipients/search/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Search for message recipients. 
+ </p>
+<p>
+ Only returns persons that the user is allowed to communicate with given the customer's esafety rules configured in itslearning.
+ </p>
+<p>
+ The searchText parameter is required and must contain at least 3 characters .
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-messages-send-v1">POST restapi/personal/messages/send/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Sends a MessageToSend to recipients. 
+ </p>
+<p>
+ The client should use the search endpoint to get personIds in order to fill the To and Bcc fields of a message.
+ </p>
+<p>
+ ReplyToMessageId is optional and should be used when replying to another message.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-unread-count-v1">GET restapi/personal/messages/unread/count/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Returns the number of unread messages for the user
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-unread-v1_PageIndex_PageSize">GET restapi/personal/messages/unread/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the user's unread messages. 
+ </p>
+<p>
+ The method supports paging. 
+ When paging is not specified, it will use a default pageSize on pageIndex 0.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-messages-v1">PUT restapi/personal/messages/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates messages.
+ </p>
+<p>
+ Only supports updating the IsRead field of each Message.
+ </p>
+<p>
+ Will return 404 if none of the messageIds are found, or the user does not have access to any.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-messages-v1_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/messages/v1?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>Gets the user's messages. </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p>
+<p>
+ The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified messageId.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="NativeApp">NativeApp</h3>
+    <p>Overview:<br/>Some utility methods for native apps</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-nativeapp-versioncheck-applicationKey-v1_currentVersion_operatingSystem">GET restapi/nativeapp/versioncheck/{applicationKey}/v1?currentVersion={currentVersion}&amp;operatingSystem={operatingSystem}</a></td>
+            <td class="api-documentation">
+                <p>Check if the current version for the application is ok or not.
+ This requires that the native app has registered minimum required version and latest version.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Notifications">Notifications</h3>
+    <p>Overview:<br/><p>
+ Endpoint for notifications and news feed for personal api.
+ </p>
+<p>
+ The notifications you get access to are the same that are shown under the bell in itslearning.
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Notifications.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-notificationId-elements-v1_PageIndex_PageSize">GET restapi/personal/notifications/{notificationId}/elements/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the list of elements related to given notification
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-bulletins-bulletinId-elements-v1_PageIndex_PageSize">GET restapi/personal/notifications/bulletins/{bulletinId}/elements/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the list of resources attached to given bulletin
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-newsfeed-v1_PageIndex_PageSize">GET restapi/personal/notifications/newsfeed/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets the user's news feed. New activities, resources and bulletins.
+ The news feed is collected from all courses, all courses or projects, favorite courses or favorite courses or projects
+ depending on the setting for "Latest changes" content block on the "My Page" dashboard.
+ </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-notifications-seenmark-all-v1">PUT restapi/personal/notifications/seenmark/all/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates all the personal notifications to be seen.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-stream-v1_UseNewerThan_FromId_PageIndex_PageSize_fromPublishedDate">GET restapi/personal/notifications/stream/v1?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;fromPublishedDate={fromPublishedDate}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets user's stream feed, which is collected from user's favorite courses or projects.
+ </p>
+<p>
+ If no parameters specified, 100 latest items will be returned.
+ </p>
+<p>
+ The client can specify paging with a combination of UseNewerThan, FromId and fromPublishedDate to be able to page directly from a specified NotificationId.
+ Due to the fact that stream items are sorted by PublishedDate (not by ID), it's required to specify both FromId and fromPublishedDate parameters.
+ Both should belong to a single StreamItem entity. By default items older than specified are returned, but it's possible to override that behavior by setting UseNewerThan to true.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-stream-v2_showLightBulletins_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/notifications/stream/v2?showLightBulletins={showLightBulletins}&amp;UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Gets user's stream feed, which is collected from user's favorite courses or projects.
+ </p>
+<p>
+ If no parameters specified, 100 latest items will be returned.
+ </p>
+<p>
+ The client can specify paging with a combination of UseNewerThan and FromId to be able to page directly from a specified NotificationId.
+ By default items older than specified are returned, but it's possible to override that behavior by setting UseNewerThan to true.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-unread-count-v1">GET restapi/personal/notifications/unread/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Returns number of unread personal notifications for the user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-unseen-count-v1">GET restapi/personal/notifications/unseen/count/v1</a></td>
+            <td class="api-documentation">
+                <p>Returns number of unseen personal notifications for the user.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-notifications-v1">PUT restapi/personal/notifications/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates the personal notifications to be read. Obsolete. Use v2 instead.
+ </p>
+<p>
+ Updated notifications will be returned.
+ </p>
+<p>
+ Notifications where IsRead=false or the person does not have access to, will just be disregarded.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-v1_PageIndex_PageSize">GET restapi/personal/notifications/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Get personal notifications (read and unread). Obsolete. Use v2 instead.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-notifications-v2">PUT restapi/personal/notifications/v2</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Updates the personal notifications to be read.
+ </p>
+<p>
+ Notifications where IsRead=false or the person does not have access to, will just be disregarded.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-notifications-v2_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/notifications/v2?UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Get personal notifications (read and unread).</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="NotificationsPost">NotificationsPost</h3>
+    <p>Overview:<br/><p>
+ Endpoint for posting a new notifications for personal api.
+ </p>
+<p>
+ The notifications you get access to are the same that are shown under the bell in itslearning.
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Notifications.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-notifications-deletetriggers-location-v1">POST restapi/personal/notifications/deletetriggers/location/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete all personal notifications which related to a specific location.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-notifications-deletetriggers-object-v1">POST restapi/personal/notifications/deletetriggers/object/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete all personal notifications which related to a specific object.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-notifications-posts-course-courseId-module-moduleId-exportCompleted-v1_section_state_fileName_status">POST restapi/personal/notifications/posts/course/{courseId}/module/{moduleId}/exportCompleted/v1?section={section}&amp;state={state}&amp;fileName={fileName}&amp;status={status}</a></td>
+            <td class="api-documentation">
+                <p>Send Export completed notification. Current user will be set as an author and a recipient.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-notifications-posts-course-courseId-module-moduleId-importCompleted-v1_section_state_folders_resources">POST restapi/personal/notifications/posts/course/{courseId}/module/{moduleId}/importCompleted/v1?section={section}&amp;state={state}&amp;folders={folders}&amp;resources={resources}</a></td>
+            <td class="api-documentation">
+                <p>Send Import completed notification. Current user will be set as an author and a recipient.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-notifications-posts-v1">POST restapi/personal/notifications/posts/v1</a></td>
+            <td class="api-documentation">
+                <p>Send personal notifications. Current user will be set as an author of all notifications.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Page">Page</h3>
+    <p>Overview:<br/>Endpoint for page for personal API. Requests will be forwarded to the page api.
+ We want to abstract SharableObjectId (learningObjectId) and LearningObjectInstanceId from the client (e.g. mobile), therefore endpoints use ElementId.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope .
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-contentBlockId-files-fileId-v1">GET restapi/personal/pages/{elementId}/contentblocks/{contentBlockId}/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Download a file from a content block by redirecting to the secure download URL.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-contentBlockId-v1">GET restapi/personal/pages/{elementId}/contentblocks/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get a content block by contentBlockId.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-files-contentBlockId-v1">PUT restapi/personal/pages/{elementId}/contentblocks/files/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Update a poll content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-files-v1">POST restapi/personal/pages/{elementId}/contentblocks/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Create a new files content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-images-contentBlockId-v1">PUT restapi/personal/pages/{elementId}/contentblocks/images/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates images content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-images-v1">POST restapi/personal/pages/{elementId}/contentblocks/images/v1</a></td>
+            <td class="api-documentation">
+                <p>Creates a new images content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-placement-v1">PUT restapi/personal/pages/{elementId}/contentblocks/placement/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates the placement position of a content block within the page layout.
+ Returns 404 if the block is not found or 403 if the user lacks permission.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-v1">PUT restapi/personal/pages/{elementId}/contentblocks/polls/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Update a poll content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-votes-v1">POST restapi/personal/pages/{elementId}/contentblocks/polls/{contentBlockId}/votes/v1</a></td>
+            <td class="api-documentation">
+                <p>Vote on a content block poll.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-pages-elementId-contentblocks-polls-contentBlockId-votes-v1">DELETE restapi/personal/pages/{elementId}/contentblocks/polls/{contentBlockId}/votes/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete all the votes for a poll content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-polls-v1">POST restapi/personal/pages/{elementId}/contentblocks/polls/v1</a></td>
+            <td class="api-documentation">
+                <p>Create a new poll content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-rss-contentBlockId-v1">PUT restapi/personal/pages/{elementId}/contentblocks/rss/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Update an RSS content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-rss-v1">POST restapi/personal/pages/{elementId}/contentblocks/rss/v1</a></td>
+            <td class="api-documentation">
+                <p>Create a new RSS content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-contentblocks-text-contentBlockId-v1">PUT restapi/personal/pages/{elementId}/contentblocks/text/{contentBlockId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates a text content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-text-v1">POST restapi/personal/pages/{elementId}/contentblocks/text/v1</a></td>
+            <td class="api-documentation">
+                <p>Create a new text content block.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-pages-elementId-contentblocks-trashcan-v1">POST restapi/personal/pages/{elementId}/contentblocks/trashcan/v1</a></td>
+            <td class="api-documentation">
+                <p>Performs trashcan operations (delete or restore) on content blocks.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-pages-elementId-contentblocks-trashcan-v1">GET restapi/personal/pages/{elementId}/contentblocks/trashcan/v1</a></td>
+            <td class="api-documentation">
+                <p>Get all content blocks currently in the trashcan for a page element.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-pages-elementId-contentblocks-v1">DELETE restapi/personal/pages/{elementId}/contentblocks/v1</a></td>
+            <td class="api-documentation">
+                <p>Permanently delete content blocks from the trashcan. This action cannot be undone.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-pages-elementId-v1">GET restapi/personal/pages/{elementId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get a page element by elementId.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-pages-elementId-v1">PUT restapi/personal/pages/{elementId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Update an existing page for a learning object.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="PageUrl">PageUrl</h3>
+    <p>Overview:<br/><p>
+ Endpoint to get URLs from the itslearning.
+ </p>
+<p>
+ This API does not require authentication.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-pageurl-ckeditorconfigurls">GET restapi/pageurl/ckeditorconfigurls</a></td>
+            <td class="api-documentation">
+                <p>Get the urls to configure the CkEditor.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-pageurl-courseelement_courseId_elementId_elementType">GET restapi/pageurl/courseelement?courseId={courseId}&amp;elementId={elementId}&amp;elementType={elementType}</a></td>
+            <td class="api-documentation">
+                <p>Get 'course element' page url.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-pageurl-services-v1">GET restapi/pageurl/services/v1</a></td>
+            <td class="api-documentation">
+                <p>Get the base Url for different customer specific services.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-pageurl-treelink">GET restapi/pageurl/treelink</a></td>
+            <td class="api-documentation">
+                <p>Get the base Url to build a tree link navigation urls.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-pageurl-viewLearningToolElement_elementId">GET restapi/pageurl/viewLearningToolElement?elementId={elementId}</a></td>
+            <td class="api-documentation">
+                <p>Get 'view learning tool element' page url.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Person">Person</h3>
+    <p>Overview:<br/>Endpoint to get and modify a user's profile.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-personId-v1">GET restapi/personal/person/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets basic information about the requested person. The person should be allowed to search for by Esafety rules.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-extrauserinformation-personId-v1">GET restapi/personal/person/extrauserinformation/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets extra user information (if such exists) for a given person
+ If no such field has been configured on the customer site, or if the current user does not have access to see it, a field with empty name and value will be returned.
+ If such a field exists, but no value has been set for the given personId, then a field with the correct name, but empty value will be returned.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-features-v1">GET restapi/personal/person/features/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets available features for the current person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-image-dimensions-v1">GET restapi/personal/person/image/dimensions/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get the dimensions that should be used for profile images that you upload through this API.
+ </p>
+<p>
+ This method returns the maximum pixel height and width of the image.
+ </p>
+<p>
+ This method may be used for e.g. determining dimensions of a cropping rectangle that the user can use before the client uploads an image.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-person-image-v1">POST restapi/personal/person/image/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Upload and update a person's profile image.
+ </p>
+<p>
+ The maximum dimensions of the persons image can be retrieved using the resource
+ URL [personal/person/image/dimensions]. If the image is bigger in size, then it will automatically
+ be scaled to the correct size.
+ </p>
+<p>
+ The image can be sent using the HTTP Content-Type set for the image. For example, for JPEG images set
+ content type to 'image/jpeg' or for PNG images set content type to 'image/png'.
+ 
+ Alternatively, the image can be uploaded as a multi-part content, using the content type 'multipart/form-data'.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-person-online-v1">PUT restapi/personal/person/online/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ This method is used to mark the online status of a user.
+ </p>
+<p>
+ In itslearning, being online means that other users can see that this user
+ is logged on from a client (e.g. from the itslearning platform).
+ </p>
+<p>
+ If a client calls this, the user will be marked as online until the timeout in the response has passed.
+ To prevent a user reverting to offline, call this method again until timeout from response has passed.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-person-PersonSetting-RemindConnectGoogleOnLogin-v1">PUT restapi/personal/person/PersonSetting/RemindConnectGoogleOnLogin/v1</a></td>
+            <td class="api-documentation">
+                <p>Set the person setting "RemindConnectGoogleOnLogin".
+ <p>
+ When this setting is on the user will be reminded to connect his/her the Google account if a IsGoogleIntegrationEnabled and IsGlobalSsoFromGoogleEnabled on the site
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-person-push-v1">POST restapi/personal/person/push/v1</a></td>
+            <td class="api-documentation">
+                <p>Set push notifications in itslearning (on or off) for a device.
+ This method will also register the device for push notifications with the push provider (if needed).</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-relations-personId-v1">GET restapi/personal/person/relations/{personId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get list of relations for the person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-roles-v1">GET restapi/personal/person/roles/v1</a></td>
+            <td class="api-documentation">
+                <p>Get list of roles for person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-v1">GET restapi/personal/person/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get the user's profile details.
+ </p>
+<p>
+ The Language property of the returned type is a Language Code on the form "nb-NO" and "en-GB", where
+ the language part is based on ISO-639-1.
+ </p>
+<p>
+ The client of this API may use the user's language to automatically choose localisation for the user.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="PersonRelation">PersonRelation</h3>
+    <p>Overview:<br/>Endpoint to get the person relations.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-personId-relatedpersons-v1_relationType">GET restapi/personal/person/{personId}/relatedpersons/v1?relationType={relationType}</a></td>
+            <td class="api-documentation">
+                <p>Gets the relation between persons with detailed info about related person and relation type.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Planner">Planner</h3>
+    <p>Overview:<br/>Endpoint to get planner information.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Planner.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-planner-plansinfo-v1_plansIds[0]_plansIds[1]">GET restapi/personal/planner/plansinfo/v1?plansIds[0]={plansIds[0]}&amp;plansIds[1]={plansIds[1]}</a></td>
+            <td class="api-documentation">
+                <p>Gets list of plans with learning objective and elements attached.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-planner-targetCourse-targetCourseId-targetTopic-targetTopicId-targetPlan-targetPlanId-v1">POST restapi/personal/planner/targetCourse/{targetCourseId}/targetTopic/{targetTopicId}/targetPlan/{targetPlanId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Adds shared plan elements to the course plan.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-planner-v1_courseId_startDate_stopDate">GET restapi/personal/planner/v1?courseId={courseId}&amp;startDate={startDate}&amp;stopDate={stopDate}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get previews of plans for the specified course.
+ </p>
+<p>
+ By supplying a time period parameters (<paramref name="startDate" /> and <paramref name="stopDate" />) one can get plans only within
+ this particular time period. Plan will be included into the result if it starts or ends within the period.
+ If period is not supplied the list will contain all plans for the course.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="ProductRelease">ProductRelease</h3>
+    <p>Overview:<br/>Controller for product release related operations.</p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-release-notify-v1">POST restapi/release/notify/v1</a></td>
+            <td class="api-documentation">
+                <p>Notifies the system about a new product release.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Projects">Projects</h3>
+    <p>Overview:<br/><p>
+ Endpoint to Projects API.
+ </p>
+<p>
+ Secured with Oauth2, and required OAuth2 API scope Courses.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-RestApi-personal-projects-projectId-toggleFavorite-v1">PUT RestApi/personal/projects/{projectId}/toggleFavorite/v1</a></td>
+            <td class="api-documentation">
+                <p>Toggles the user's favorite for the specified project</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="SearchData">SearchData</h3>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-learningtool-searchdata-v1">POST restapi/learningtool/searchdata/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="SiteLinks">SiteLinks</h3>
+    <p>Overview:<br/>Endpoint for retrieving the site links.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Person.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-person-sitelinks-v1">GET restapi/personal/person/sitelinks/v1</a></td>
+            <td class="api-documentation">
+                <p>Gets the site links those are visible for the user.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Sites">Sites</h3>
+    <p>Overview:<br/><p>
+ Endpoint to get information about all active itslearning sites.
+ </p>
+<p>
+ This API does not require authentication
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-customerId-logindetails-v1">GET restapi/sites/{customerId}/logindetails/v1</a></td>
+            <td class="api-documentation">
+                <p>Get login details for an itslearning site by customerId.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-customerId-v1">GET restapi/sites/{customerId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get an itslearning site by customerId.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-all-organisations-search-v1_searchText_PageIndex_PageSize_sitesFilter">GET restapi/sites/all/organisations/search/v1?searchText={searchText}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sitesFilter={sitesFilter}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get organisations (sites and schools).
+ </p>
+<p>
+ Optional filtering by names containing words starting with specific phrases (separated by space).
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p>
+<p>
+ Optional filtering by site type: Itslearning, Parents.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-all-organisations-v1_sitesFilter">GET restapi/sites/all/organisations/v1?sitesFilter={sitesFilter}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all organisations (sites and schools).
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p>
+<p>
+ Optional filtering by site type: Itslearning, Parents.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-all-v1_sitesFilter">GET restapi/sites/all/v1?sitesFilter={sitesFilter}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get all customer sites (used e.g. by welcome page)
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p>
+<p>
+ Optional filtering by site type: Itslearning, Parents.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-countries-countryCode-organisations-v1">GET restapi/sites/countries/{countryCode}/organisations/v1</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get organisations (sites and schools) for a specific country by country code (case insensitive).
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p>
+<p>
+ Optional filtering by names containing words starting with specific phrases (separated by space).
+ </p>
+<p>
+ Optional filtering by site type: Itslearning, Parents.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-countries-countryCode-v1_searchText">GET restapi/sites/countries/{countryCode}/v1?searchText={searchText}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get sites by country code (case insensitive).
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-shortnames-shortname-v1">GET restapi/sites/shortnames/{shortname}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get an itslearning site by shortname. The site may be inactive. If a site with the given shortname does not exist, null will be returned.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-sites-v1_startsWith_PageIndex_PageSize_sitesFilter">GET restapi/sites/v1?startsWith={startsWith}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;sitesFilter={sitesFilter}</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get sites that have itslearning ordered by title.
+ </p>
+<p>
+ This method does not have security checks - it is open.
+ </p>
+<p>
+ Optional filtering by titles containing words starting with specific phrases (separated by space).
+ </p>
+<p>
+ Optional filtering by site type: Itslearning, Parents.
+ </p></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Sso">Sso</h3>
+    <p>Overview:<br/><p>
+ Endpoint for SSO related functionality such as SSO Urls to itslearning.
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Sso.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-sso-url-v1_url">GET restapi/personal/sso/url/v1?url={url}</a></td>
+            <td class="api-documentation">
+                <p>Creates a short-lived SSO Url to itslearning. Users will be not be prompted to log in when using this Url.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Statistics">Statistics</h3>
+    <p>Overview:<br/>Endpoint for statistics API
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Statistics.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-RestApi-personal-statistics-events-v1">POST RestApi/personal/statistics/events/v1</a></td>
+            <td class="api-documentation">
+                <p>Endpoint for posting user events.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="StudentPlan">StudentPlan</h3>
+    <p>Overview:<br/>Endpoint for Student Plans in Personal API.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope StudentPlan.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-active-v1_courseId">GET restapi/personal/studentplan/achievementgoals/active/v1?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the active goals.
+ <param name="courseId">The course identifier.</param></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-archived-v1_courseId">GET restapi/personal/studentplan/achievementgoals/archived/v1?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p>Gets the archived goals.
+ <param name="courseId">The course identifier.</param></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-achievementgoals-coursewide-v1">GET restapi/personal/studentplan/achievementgoals/coursewide/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-assessments-topics-v1_courseId">GET restapi/personal/studentplan/assessments/topics/v1?courseId={courseId}</a></td>
+            <td class="api-documentation">
+                <p>Returns list of topic assessments for the course and student.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-assessments-topics-v1_courseId_fromId">GET restapi/personal/studentplan/assessments/topics/v1?courseId={courseId}&amp;fromId={fromId}</a></td>
+            <td class="api-documentation">
+                <p>Returns list of topic assessments for the course and student.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-comments-v1_courseId_UseNewerThan_FromId_PageIndex_PageSize">GET restapi/personal/studentplan/comments/v1?courseId={courseId}&amp;UseNewerThan={UseNewerThan}&amp;FromId={FromId}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Retrieves a list of comments that relates to specific person student plan.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-courses-v1_lastCommentReadDateTimesUtc">GET restapi/personal/studentplan/courses/v1?lastCommentReadDateTimesUtc={lastCommentReadDateTimesUtc}</a></td>
+            <td class="api-documentation">
+                <p>Returns a list of courses for the Student Plan.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-studentplan-overview-v1_courseId_lastCommentReadDateTimeUtc">GET restapi/personal/studentplan/overview/v1?courseId={courseId}&amp;lastCommentReadDateTimeUtc={lastCommentReadDateTimeUtc}</a></td>
+            <td class="api-documentation">
+                <p>Returns an overview entity for the Student Plan.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Supervisor">Supervisor</h3>
+    <p>Overview:<br/>Endpoint for retrieving data for supervisors - mentors and headteachers.
+ <p>
+ Secured with Oauth2, and requires OAuth2 API scope Supervisor.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-supervisor-supervised-v1_supervisorType_PageIndex_PageSize">GET restapi/personal/supervisor/supervised/v1?supervisorType={supervisorType}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of all persons current user is a supervisor for - mentorees.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="TaskListDailyWorkflow">TaskListDailyWorkflow</h3>
+    <p>Overview:<br/><p>
+ Endpoint for tasklistdailyworkflow API
+ </p>
+<p>
+ Daily workflow tasklist in itslearning is personal with focus on task with deadline in near future.
+ This API is used to display tasks in a chronological way (overdue, today, tomorrow, later).
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope TaskListDailyWorkflow.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-completed-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/{courseId}/completed/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of completed tasks for a user in a course.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/{courseId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to the user separated into sections.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-courseId-viewas-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/{courseId}/viewas/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to a user in View As mode.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-child-childId-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/child/{childId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>For a parent gets a list of tasks assigned to a child separated into sections.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-completed-child-childId-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/completed/child/{childId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>For a parent gets a list of tasks completed for a child.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasklistdailyworkflow-v1_PageIndex_PageSize">GET restapi/personal/tasklistdailyworkflow/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to the user separated into sections.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Tasks">Tasks</h3>
+    <p>Overview:<br/><p>
+ Endpoint for Tasks API. 
+ </p>
+<p>
+ Tasks in itslearning are personal, and are related to something a user should do in the future.
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Tasks.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasks-followuptasks-courseId-v1_PageIndex_PageSize">GET restapi/personal/tasks/followuptasks/{courseId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>Gets follow up tasks for a course.</p>
+<p>
+ The list shows activities a given course that have new or updated submissions/student work, or if the teacher needs to assess a submission/attempt. Requires admin permissions for the course.
+ </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasks-followuptasks-v1_PageIndex_PageSize">GET restapi/personal/tasks/followuptasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p><p>Gets the user's follow up tasks.</p>
+<p>
+ The list shows activities from favorite courses that have new or updated submissions/student work, or if the teacher needs to assess a submission/attempt. 
+ This will give the teacher an easy overview to see if there are updates, and to decide which to follow up next.
+ </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-tasks-v1_PageIndex_PageSize_status_deadline_isHomework">GET restapi/personal/tasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;status={status}&amp;deadline={deadline}&amp;isHomework={isHomework}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of tasks assigned to the user.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Token">Token</h3>
+    <p>Overview:<br/><p>
+ API that handles OAuth2 access control:
+ </p>
+<p>
+ Grants accesstokens based on authorization code, refreshtoken or JWT bearer
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-oauth2-token">POST restapi/oauth2/token</a></td>
+            <td class="api-documentation">
+                <p><p>
+ Get a new access token from either refresh_token, authorization_code or JWT bearer.
+ </p>
+<p>
+ The request's Content-Type must be <b>x-www-form-urlencoded.</b></p>
+<p>
+ The post should look like this on authorization request:
+ <pre>client_id=7abc00f3-32e6-4602-a784-c51b36d2798d&amp;grant_type=authorization_code&amp;code=1-53aa19e823514c1c936dc2a654ba30ec7cF3KUBGTq</pre>
+ When refreshing the token, the post should look like this:
+ <pre>client_id=7abc00f3-32e6-4602-a784-c51b36d2798d&amp;grant_type=refresh_token&amp;refresh_token=1-53aa19e823514c1c936dc2a654ba30ec7cF3KUBGTq</pre>
+ When requesting a server-to-server access token, the post should look like this:
+ <pre>grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&amp;assertion=...</pre></p>
+<p>
+ Note that the grant_type should be "authorization_code" when doing the first request after getting authorization by the user.
+ However, when refreshing the token, the grant_type should be "refresh_token".
+ The token parameter is "code" on authorization, and "refresh_token" on refreshing access_token.
+ In case of a server-to-server access token the grant_type should be "urn:ietf:params:oauth:grant-type:jwt-bearer".
+ </p></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-oauth2-token-v1">DELETE restapi/oauth2/token/v1</a></td>
+            <td class="api-documentation">
+                <p>Revoke refresh token and disable push notifications if it's last one.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="Workload">Workload</h3>
+    <p>Overview:<br/><p>
+ Endpoint for Workload API. 
+ </p>
+<p>
+ Secured with Oauth2, and requires OAuth2 API scope Workload.
+ </p></p>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-workload-assignments-studentId-courseId-v1_PageIndex_PageSize">GET restapi/personal/workload/assignments/{studentId}/{courseId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of assignments for a particular student in a particular course with corresponding workload</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-workload-course-courseId-v1_PageIndex_PageSize">GET restapi/personal/workload/course/{courseId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of students in a specified course with corresponding workload.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-workload-courses-studentId-v1_PageIndex_PageSize">GET restapi/personal/workload/courses/{studentId}/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of courses with corresponding workload for a student.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-workload-mentees-v1_PageIndex_PageSize">GET restapi/personal/workload/mentees/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of mentees with corresponding workload.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-workload-students-v1_PageIndex_PageSize">GET restapi/personal/workload/students/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</a></td>
+            <td class="api-documentation">
+                <p>Gets a list of all students with their corresponding workload.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="YourFiles">YourFiles</h3>
+<table class="help-page-table">
+    <thead>
+        <tr><th>API</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-attachments-v1_PageIndex_PageSize_searchPhrase_sortField_sortOrder">GET restapi/personal/yourfiles/attachments/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;searchPhrase={searchPhrase}&amp;sortField={sortField}&amp;sortOrder={sortOrder}</a></td>
+            <td class="api-documentation">
+                <p>Get attachments for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-courses-v1_PageIndex_PageSize_searchPhrase_sortField_sortOrder">GET restapi/personal/yourfiles/courses/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}&amp;searchPhrase={searchPhrase}&amp;sortField={sortField}&amp;sortOrder={sortOrder}</a></td>
+            <td class="api-documentation">
+                <p>Get courses for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-files-temp-v1">POST restapi/personal/yourfiles/files/temp/v1</a></td>
+            <td class="api-documentation">
+                <p>Upload files to a file area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-files-usedspace-v1_folderIds[0]_folderIds[1]">GET restapi/personal/yourfiles/files/usedspace/v1?folderIds[0]={folderIds[0]}&amp;folderIds[1]={folderIds[1]}</a></td>
+            <td class="api-documentation">
+                <p>Get used space in bytes</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-files-v1">PUT restapi/personal/yourfiles/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Moves files in your files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-files-zip-zipJobId-v1">GET restapi/personal/yourfiles/files/zip/{zipJobId}/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-files-zip-v1">POST restapi/personal/yourfiles/files/zip/v1</a></td>
+            <td class="api-documentation">
+                <p>Start zipping files in your files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-files-zip-v1">GET restapi/personal/yourfiles/files/zip/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-yourfiles-files-zip-v1">DELETE restapi/personal/yourfiles/files/zip/v1</a></td>
+            <td class="api-documentation">
+                <p>No documentation available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-folders-folderId-v1">GET restapi/personal/yourfiles/folders/{folderId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Get public and private files for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-folders-v1">PUT restapi/personal/yourfiles/folders/v1</a></td>
+            <td class="api-documentation">
+                <p>Moves folders in your private files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-private-files-fileId-quota-v1">PUT restapi/personal/yourfiles/private/files/{fileId}/quota/v1</a></td>
+            <td class="api-documentation">
+                <p>Updates used quota for your files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-private-files-fileId-v1">PUT restapi/personal/yourfiles/private/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Renames or/and moves a file in your private files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-private-files-fileId-v1_attachment">GET restapi/personal/yourfiles/private/files/{fileId}/v1?attachment={attachment}</a></td>
+            <td class="api-documentation">
+                <p>Get download url for a file. Will be valid for 1 minute.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-yourfiles-private-files-v1">DELETE restapi/personal/yourfiles/private/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete files in your private files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-private-files-v1">POST restapi/personal/yourfiles/private/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Copy files to a different location</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-files-empty-v1">POST restapi/personal/yourfiles/private/folders/{folderId}/files/empty/v1</a></td>
+            <td class="api-documentation">
+                <p>Saves new private files for person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-files-v1">POST restapi/personal/yourfiles/private/folders/{folderId}/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Saves new private files for person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-private-folders-folderId-v1">PUT restapi/personal/yourfiles/private/folders/{folderId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Renames/moves a folder in your private files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-folderId-v1">POST restapi/personal/yourfiles/private/folders/{folderId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Add new folder in private files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-private-folders-folderId-v1_searchPhrase">GET restapi/personal/yourfiles/private/folders/{folderId}/v1?searchPhrase={searchPhrase}</a></td>
+            <td class="api-documentation">
+                <p>Get private files for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-private-folders-v1">POST restapi/personal/yourfiles/private/folders/v1</a></td>
+            <td class="api-documentation">
+                <p>Copy folders to a different location</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-yourfiles-private-folders-v1">DELETE restapi/personal/yourfiles/private/folders/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes a folder in private files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-public-files-fileId-v1">PUT restapi/personal/yourfiles/public/files/{fileId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Renames or/and moves a file in your public files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-public-files-fileId-v1_attachment">GET restapi/personal/yourfiles/public/files/{fileId}/v1?attachment={attachment}</a></td>
+            <td class="api-documentation">
+                <p>Get download url for a file. Will be valid for 1 minute.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-yourfiles-public-files-v1">DELETE restapi/personal/yourfiles/public/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Delete files in your public files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-public-files-v1">POST restapi/personal/yourfiles/public/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Copy files to a different location</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-folderId-files-v1">POST restapi/personal/yourfiles/public/folders/{folderId}/files/v1</a></td>
+            <td class="api-documentation">
+                <p>Saves new public files for person.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/PUT-restapi-personal-yourfiles-public-folders-folderId-v1">PUT restapi/personal/yourfiles/public/folders/{folderId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Renames a folder in your public files</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-folderId-v1">POST restapi/personal/yourfiles/public/folders/{folderId}/v1</a></td>
+            <td class="api-documentation">
+                <p>Add new folder in public files area</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/GET-restapi-personal-yourfiles-public-folders-folderId-v1_searchPhrase">GET restapi/personal/yourfiles/public/folders/{folderId}/v1?searchPhrase={searchPhrase}</a></td>
+            <td class="api-documentation">
+                <p>Get public files for the current user</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/POST-restapi-personal-yourfiles-public-folders-v1">POST restapi/personal/yourfiles/public/folders/v1</a></td>
+            <td class="api-documentation">
+                <p>Copy folders to a different location</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="api-name"><a href="/restapi/help/Api/DELETE-restapi-personal-yourfiles-public-folders-v1">DELETE restapi/personal/yourfiles/public/folders/v1</a></td>
+            <td class="api-documentation">
+                <p>Deletes a folder in public files area</p>
+            </td>
+        </tr>
+    </tbody>
+</table>    </section>
+</div>
+
+</body>
+</html>

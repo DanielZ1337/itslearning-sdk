@@ -148,6 +148,14 @@ export const responseRouteRegistry = [
 	},
 	{
 		"method": "GET",
+		"pathTemplate": "/restapi/personal/course/{courseid}/assessmentrecord/assessmentrecordpersonitems/v1",
+		"schema": {
+			"kind": "model",
+			"model": "EntityListOfItslearning.RestApi.Entities.AssessmentRecord.AssessmentRecordPerson"
+		}
+	},
+	{
+		"method": "GET",
 		"pathTemplate": "/restapi/personal/courses/{courseid}/bulletins/v1",
 		"schema": {
 			"kind": "model",
@@ -173,6 +181,22 @@ export const responseRouteRegistry = [
 	{
 		"method": "GET",
 		"pathTemplate": "/restapi/personal/courses/{courseid}/participants/v1",
+		"schema": {
+			"kind": "model",
+			"model": "EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant"
+		}
+	},
+	{
+		"method": "GET",
+		"pathTemplate": "/restapi/personal/courses/{courseid}/participants/v2",
+		"schema": {
+			"kind": "model",
+			"model": "EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant"
+		}
+	},
+	{
+		"method": "GET",
+		"pathTemplate": "/restapi/personal/courses/{courseid}/participants/v3",
 		"schema": {
 			"kind": "model",
 			"model": "EntityListOfItslearning.RestApi.Entities.Personal.Course.CourseParticipant"

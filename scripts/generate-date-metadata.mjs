@@ -77,6 +77,20 @@ function sanitizeModelName(modelName) {
 	return modelName.replace(/[^A-Za-z0-9]/g, "");
 }
 
+function isResourceModelFile(filePath) {
+	if (!filePath.endsWith(".html")) {
+		return false;
+	}
+
+	const parentDirectoryName = path.basename(path.dirname(filePath));
+	const fileName = path.basename(filePath);
+
+	return (
+		parentDirectoryName === "ResourceModel" ||
+		fileName.startsWith("ResourceModel__modelName%3D")
+	);
+}
+
 /**
  * @param {string} typeHtml
  * @returns {Schema}
@@ -131,12 +145,7 @@ function parseTypeSchema(typeHtml) {
 }
 
 function parseModelSchemas() {
-	const resourceFiles = collectFiles(
-		resourceDirectory,
-		(filePath) =>
-			path.basename(filePath).startsWith("ResourceModel__modelName%3D") &&
-			filePath.endsWith(".html"),
-	);
+	const resourceFiles = collectFiles(resourceDirectory, isResourceModelFile);
 
 	/** @type {Record<string, Record<string, Schema>>} */
 	const modelSchemas = {};

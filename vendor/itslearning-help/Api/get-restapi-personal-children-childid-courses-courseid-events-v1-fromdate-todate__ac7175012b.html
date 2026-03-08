@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/children/{childId}/courses/{courseId}/events/v1?fromDate={fromDate}&amp;toDate={toDate}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/children/{childId}/courses/{courseId}/events/v1?fromDate={fromDate}&amp;toDate={toDate}&amp;PageIndex={PageIndex}&amp;PageSize={PageSize}</h1>
+<div>
+    <p>Gets a list of calendar events for the child in course.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">childId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The child person identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>[Required] The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromDate</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The start date for filtering calendar events. Time zone is UTC.
+ Date has to contain also time, for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">toDate</td>
+                    <td class="parameter-documentation">
+                        <p>[Optional] The stop date for filtering calendar events. Time zone is UTC.
+ Date has to contain also time, for ex. YYYY-MM-DDTHH:MM:SS.sssssss or YYYY-MM-DD HH:MM:SS.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>A list of entities .</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2">EntityListOfItslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2">Itslearning.RestApi.Entities.Personal.Calendar.CalendarEventV2</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;EventId&quot;: 1,
+      &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;EventTitle&quot;: &quot;sample string 4&quot;,
+      &quot;Description&quot;: &quot;sample string 5&quot;,
+      &quot;ImportDescription&quot;: &quot;sample string 6&quot;,
+      &quot;EventType&quot;: &quot;Course&quot;,
+      &quot;LocationId&quot;: 7,
+      &quot;LocationGroupId&quot;: 8,
+      &quot;LocationColor&quot;: &quot;sample string 9&quot;,
+      &quot;LocationFillColor&quot;: &quot;sample string 10&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 11&quot;,
+      &quot;LocationFriendlyName&quot;: &quot;sample string 12&quot;,
+      &quot;HidePersonalWordForPersonalEvent&quot;: true,
+      &quot;AttendanceDetails&quot;: {
+        &quot;KeepAttendancePageUrl&quot;: &quot;sample string 1&quot;,
+        &quot;AttendanceStatistics&quot;: {
+          &quot;Present&quot;: 1,
+          &quot;Absent&quot;: 2,
+          &quot;Excluded&quot;: 3
+        }
+      }
+    },
+    {
+      &quot;EventId&quot;: 1,
+      &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+      &quot;EventTitle&quot;: &quot;sample string 4&quot;,
+      &quot;Description&quot;: &quot;sample string 5&quot;,
+      &quot;ImportDescription&quot;: &quot;sample string 6&quot;,
+      &quot;EventType&quot;: &quot;Course&quot;,
+      &quot;LocationId&quot;: 7,
+      &quot;LocationGroupId&quot;: 8,
+      &quot;LocationColor&quot;: &quot;sample string 9&quot;,
+      &quot;LocationFillColor&quot;: &quot;sample string 10&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 11&quot;,
+      &quot;LocationFriendlyName&quot;: &quot;sample string 12&quot;,
+      &quot;HidePersonalWordForPersonalEvent&quot;: true,
+      &quot;AttendanceDetails&quot;: {
+        &quot;KeepAttendancePageUrl&quot;: &quot;sample string 1&quot;,
+        &quot;AttendanceStatistics&quot;: {
+          &quot;Present&quot;: 1,
+          &quot;Absent&quot;: 2,
+          &quot;Excluded&quot;: 3
+        }
+      }
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;CalendarEventV2&gt;
+      &lt;AttendanceDetails&gt;
+        &lt;AttendanceStatistics&gt;
+          &lt;Absent&gt;2&lt;/Absent&gt;
+          &lt;Excluded&gt;3&lt;/Excluded&gt;
+          &lt;Present&gt;1&lt;/Present&gt;
+        &lt;/AttendanceStatistics&gt;
+        &lt;KeepAttendancePageUrl&gt;sample string 1&lt;/KeepAttendancePageUrl&gt;
+      &lt;/AttendanceDetails&gt;
+      &lt;Description&gt;sample string 5&lt;/Description&gt;
+      &lt;EventId&gt;1&lt;/EventId&gt;
+      &lt;EventTitle&gt;sample string 4&lt;/EventTitle&gt;
+      &lt;EventType&gt;Course&lt;/EventType&gt;
+      &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+      &lt;HidePersonalWordForPersonalEvent&gt;true&lt;/HidePersonalWordForPersonalEvent&gt;
+      &lt;ImportDescription&gt;sample string 6&lt;/ImportDescription&gt;
+      &lt;LocationColor&gt;sample string 9&lt;/LocationColor&gt;
+      &lt;LocationFillColor&gt;sample string 10&lt;/LocationFillColor&gt;
+      &lt;LocationFriendlyName&gt;sample string 12&lt;/LocationFriendlyName&gt;
+      &lt;LocationGroupId&gt;8&lt;/LocationGroupId&gt;
+      &lt;LocationId&gt;7&lt;/LocationId&gt;
+      &lt;LocationTitle&gt;sample string 11&lt;/LocationTitle&gt;
+      &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+    &lt;/CalendarEventV2&gt;
+    &lt;CalendarEventV2&gt;
+      &lt;AttendanceDetails&gt;
+        &lt;AttendanceStatistics&gt;
+          &lt;Absent&gt;2&lt;/Absent&gt;
+          &lt;Excluded&gt;3&lt;/Excluded&gt;
+          &lt;Present&gt;1&lt;/Present&gt;
+        &lt;/AttendanceStatistics&gt;
+        &lt;KeepAttendancePageUrl&gt;sample string 1&lt;/KeepAttendancePageUrl&gt;
+      &lt;/AttendanceDetails&gt;
+      &lt;Description&gt;sample string 5&lt;/Description&gt;
+      &lt;EventId&gt;1&lt;/EventId&gt;
+      &lt;EventTitle&gt;sample string 4&lt;/EventTitle&gt;
+      &lt;EventType&gt;Course&lt;/EventType&gt;
+      &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+      &lt;HidePersonalWordForPersonalEvent&gt;true&lt;/HidePersonalWordForPersonalEvent&gt;
+      &lt;ImportDescription&gt;sample string 6&lt;/ImportDescription&gt;
+      &lt;LocationColor&gt;sample string 9&lt;/LocationColor&gt;
+      &lt;LocationFillColor&gt;sample string 10&lt;/LocationFillColor&gt;
+      &lt;LocationFriendlyName&gt;sample string 12&lt;/LocationFriendlyName&gt;
+      &lt;LocationGroupId&gt;8&lt;/LocationGroupId&gt;
+      &lt;LocationId&gt;7&lt;/LocationId&gt;
+      &lt;LocationTitle&gt;sample string 11&lt;/LocationTitle&gt;
+      &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+    &lt;/CalendarEventV2&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

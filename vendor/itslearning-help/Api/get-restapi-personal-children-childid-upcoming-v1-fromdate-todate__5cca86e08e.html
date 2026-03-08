@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/children/{childId}/upcoming/v1?fromDate={fromDate}&amp;toDate={toDate}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/children/{childId}/upcoming/v1?fromDate={fromDate}&amp;toDate={toDate}</h1>
+<div>
+    <p>Returns list of courses upcoming plans, tasks and events in a dates range (one day only so far).</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">childId</td>
+                    <td class="parameter-documentation">
+                        <p>Identifier if a child.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromDate</td>
+                    <td class="parameter-documentation">
+                        <p>Start date.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">toDate</td>
+                    <td class="parameter-documentation">
+                        <p>End date.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>Aggregated list of events, plans and tasks</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonUpcoming">Itslearning.RestApi.Entities.PersonUpcoming</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Date</td>
+                    <td class="parameter-documentation">
+                        <p>Date of upcoming events, plans and tasks.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Courses</td>
+                    <td class="parameter-documentation">
+                        <p>List of course items, each item contains basic information about course and related plans/events/tasks.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.CourseUpcoming">Itslearning.RestApi.Entities.CourseUpcoming</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Date&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+    &quot;Courses&quot;: [
+      {
+        &quot;Tasks&quot;: [
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Plans&quot;: [
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          },
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          }
+        ],
+        &quot;CalendarEvents&quot;: [
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          },
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          }
+        ],
+        &quot;CourseId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+        &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+        &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+        &quot;CourseCode&quot;: &quot;sample string 6&quot;
+      },
+      {
+        &quot;Tasks&quot;: [
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Plans&quot;: [
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          },
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          }
+        ],
+        &quot;CalendarEvents&quot;: [
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          },
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          }
+        ],
+        &quot;CourseId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+        &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+        &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+        &quot;CourseCode&quot;: &quot;sample string 6&quot;
+      }
+    ]
+  },
+  {
+    &quot;Date&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+    &quot;Courses&quot;: [
+      {
+        &quot;Tasks&quot;: [
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Plans&quot;: [
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          },
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          }
+        ],
+        &quot;CalendarEvents&quot;: [
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          },
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          }
+        ],
+        &quot;CourseId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+        &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+        &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+        &quot;CourseCode&quot;: &quot;sample string 6&quot;
+      },
+      {
+        &quot;Tasks&quot;: [
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          },
+          {
+            &quot;TaskId&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Status&quot;: &quot;Unknown&quot;,
+            &quot;Deadline&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;ContentUrl&quot;: &quot;sample string 4&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 5&quot;,
+            &quot;ElementId&quot;: 6,
+            &quot;ElementType&quot;: &quot;Unknown&quot;,
+            &quot;LearningToolId&quot;: 7,
+            &quot;Homework&quot;: true,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 1
+          }
+        ],
+        &quot;Plans&quot;: [
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          },
+          {
+            &quot;PlanId&quot;: 1,
+            &quot;TopicId&quot;: 2,
+            &quot;Order&quot;: 3,
+            &quot;Name&quot;: &quot;sample string 4&quot;,
+            &quot;StartDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;StopDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;LocationId&quot;: 7,
+            &quot;LocationType&quot;: &quot;Course&quot;,
+            &quot;TopicColor&quot;: &quot;sample string 8&quot;,
+            &quot;TopicName&quot;: &quot;sample string 9&quot;
+          }
+        ],
+        &quot;CalendarEvents&quot;: [
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          },
+          {
+            &quot;EventId&quot;: 1,
+            &quot;EventUrl&quot;: &quot;sample string 2&quot;,
+            &quot;EventTitle&quot;: &quot;sample string 3&quot;,
+            &quot;FromDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;ToDate&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+            &quot;EventType&quot;: &quot;Course&quot;,
+            &quot;LocationId&quot;: 6,
+            &quot;LocationType&quot;: &quot;Course&quot;
+          }
+        ],
+        &quot;CourseId&quot;: 1,
+        &quot;Title&quot;: &quot;sample string 2&quot;,
+        &quot;FriendlyName&quot;: &quot;sample string 3&quot;,
+        &quot;CourseColor&quot;: &quot;sample string 4&quot;,
+        &quot;CourseFillColor&quot;: &quot;sample string 5&quot;,
+        &quot;CourseCode&quot;: &quot;sample string 6&quot;
+      }
+    ]
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfPersonUpcoming xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;PersonUpcoming&gt;
+    &lt;Courses&gt;
+      &lt;CourseUpcoming&gt;
+        &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+        &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+        &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+        &lt;CourseId&gt;1&lt;/CourseId&gt;
+        &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;CalendarEvents&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+        &lt;/CalendarEvents&gt;
+        &lt;Plans&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+        &lt;/Plans&gt;
+        &lt;Tasks&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+        &lt;/Tasks&gt;
+      &lt;/CourseUpcoming&gt;
+      &lt;CourseUpcoming&gt;
+        &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+        &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+        &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+        &lt;CourseId&gt;1&lt;/CourseId&gt;
+        &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;CalendarEvents&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+        &lt;/CalendarEvents&gt;
+        &lt;Plans&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+        &lt;/Plans&gt;
+        &lt;Tasks&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+        &lt;/Tasks&gt;
+      &lt;/CourseUpcoming&gt;
+    &lt;/Courses&gt;
+    &lt;Date&gt;2026-03-07T16:36:58Z&lt;/Date&gt;
+  &lt;/PersonUpcoming&gt;
+  &lt;PersonUpcoming&gt;
+    &lt;Courses&gt;
+      &lt;CourseUpcoming&gt;
+        &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+        &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+        &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+        &lt;CourseId&gt;1&lt;/CourseId&gt;
+        &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;CalendarEvents&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+        &lt;/CalendarEvents&gt;
+        &lt;Plans&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+        &lt;/Plans&gt;
+        &lt;Tasks&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+        &lt;/Tasks&gt;
+      &lt;/CourseUpcoming&gt;
+      &lt;CourseUpcoming&gt;
+        &lt;CourseCode&gt;sample string 6&lt;/CourseCode&gt;
+        &lt;CourseColor&gt;sample string 4&lt;/CourseColor&gt;
+        &lt;CourseFillColor&gt;sample string 5&lt;/CourseFillColor&gt;
+        &lt;CourseId&gt;1&lt;/CourseId&gt;
+        &lt;FriendlyName&gt;sample string 3&lt;/FriendlyName&gt;
+        &lt;Title&gt;sample string 2&lt;/Title&gt;
+        &lt;CalendarEvents&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+          &lt;CalendarEventSimple&gt;
+            &lt;EventId&gt;1&lt;/EventId&gt;
+            &lt;EventTitle&gt;sample string 3&lt;/EventTitle&gt;
+            &lt;EventType&gt;Course&lt;/EventType&gt;
+            &lt;EventUrl&gt;sample string 2&lt;/EventUrl&gt;
+            &lt;FromDate&gt;2026-03-07T16:36:58Z&lt;/FromDate&gt;
+            &lt;LocationId&gt;6&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;ToDate&gt;2026-03-07T16:36:58Z&lt;/ToDate&gt;
+          &lt;/CalendarEventSimple&gt;
+        &lt;/CalendarEvents&gt;
+        &lt;Plans&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+          &lt;PlanSimple&gt;
+            &lt;LocationId&gt;7&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Name&gt;sample string 4&lt;/Name&gt;
+            &lt;Order&gt;3&lt;/Order&gt;
+            &lt;PlanId&gt;1&lt;/PlanId&gt;
+            &lt;StartDate&gt;2026-03-07T16:36:58Z&lt;/StartDate&gt;
+            &lt;StopDate&gt;2026-03-07T16:36:58Z&lt;/StopDate&gt;
+            &lt;TopicColor&gt;sample string 8&lt;/TopicColor&gt;
+            &lt;TopicId&gt;2&lt;/TopicId&gt;
+            &lt;TopicName&gt;sample string 9&lt;/TopicName&gt;
+          &lt;/PlanSimple&gt;
+        &lt;/Plans&gt;
+        &lt;Tasks&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+          &lt;TaskSimple&gt;
+            &lt;ContentUrl&gt;sample string 4&lt;/ContentUrl&gt;
+            &lt;Deadline&gt;2026-03-07T16:36:58Z&lt;/Deadline&gt;
+            &lt;ElementId&gt;6&lt;/ElementId&gt;
+            &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+            &lt;Homework&gt;true&lt;/Homework&gt;
+            &lt;IconUrl&gt;sample string 5&lt;/IconUrl&gt;
+            &lt;LearningToolId&gt;7&lt;/LearningToolId&gt;
+            &lt;LocationId&gt;1&lt;/LocationId&gt;
+            &lt;LocationType&gt;Course&lt;/LocationType&gt;
+            &lt;Status&gt;Unknown&lt;/Status&gt;
+            &lt;TaskId&gt;1&lt;/TaskId&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/TaskSimple&gt;
+        &lt;/Tasks&gt;
+      &lt;/CourseUpcoming&gt;
+    &lt;/Courses&gt;
+    &lt;Date&gt;2026-03-07T16:36:58Z&lt;/Date&gt;
+  &lt;/PersonUpcoming&gt;
+&lt;/ArrayOfPersonUpcoming&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

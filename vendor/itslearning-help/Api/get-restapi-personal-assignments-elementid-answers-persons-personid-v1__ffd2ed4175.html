@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/assignments/{elementId}/answers/persons/{personId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/assignments/{elementId}/answers/persons/{personId}/v1</h1>
+<div>
+    <p>Get assignment answer for an assignment for a specific person. Not possible to use to get others' answers when assignment is anonymous.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">elementId</td>
+                    <td class="parameter-documentation">
+                        <p>The elementId for the assignment, unique in scope of a customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">personId</td>
+                    <td class="parameter-documentation">
+                        <p>The personId to get answer for</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p><p>
+ when request was successful (200 - ok)</p>
+<p>403 - Forbidden when user does not have access to the assignment answer</p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentAnswerResponse">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentAnswerResponse</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">AnswerId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique identifier for the answer to the assignment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsDraft</td>
+                    <td class="parameter-documentation">
+                        <p>True if the answer is a draft.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Submitted</td>
+                    <td class="parameter-documentation">
+                        <p>The time when answer was submitted, or last modified in case of a draft.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The text of the answer, which may contain HTML.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Files</td>
+                    <td class="parameter-documentation">
+                        <p>The files attached to the answer.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentFileModel">Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses.AssignmentFileModel</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;AnswerId&quot;: 1,
+  &quot;IsDraft&quot;: true,
+  &quot;Submitted&quot;: &quot;2026-03-07T16:36:58Z&quot;,
+  &quot;Text&quot;: &quot;sample string 4&quot;,
+  &quot;Files&quot;: [
+    {
+      &quot;FileId&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 1,
+      &quot;LastModified&quot;: &quot;2026-03-07T16:36:58Z&quot;
+    },
+    {
+      &quot;FileId&quot;: 1,
+      &quot;Name&quot;: &quot;sample string 2&quot;,
+      &quot;Size&quot;: 1,
+      &quot;LastModified&quot;: &quot;2026-03-07T16:36:58Z&quot;
+    }
+  ]
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;AssignmentAnswerResponse xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.Web.RestApi.Personal.Assignment.Responses&quot;&gt;
+  &lt;AnswerId&gt;1&lt;/AnswerId&gt;
+  &lt;Files&gt;
+    &lt;AssignmentFileModel&gt;
+      &lt;FileId&gt;1&lt;/FileId&gt;
+      &lt;LastModified&gt;2026-03-07T16:36:58Z&lt;/LastModified&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Size&gt;1&lt;/Size&gt;
+    &lt;/AssignmentFileModel&gt;
+    &lt;AssignmentFileModel&gt;
+      &lt;FileId&gt;1&lt;/FileId&gt;
+      &lt;LastModified&gt;2026-03-07T16:36:58Z&lt;/LastModified&gt;
+      &lt;Name&gt;sample string 2&lt;/Name&gt;
+      &lt;Size&gt;1&lt;/Size&gt;
+    &lt;/AssignmentFileModel&gt;
+  &lt;/Files&gt;
+  &lt;IsDraft&gt;true&lt;/IsDraft&gt;
+  &lt;Submitted&gt;2026-03-07T16:36:58Z&lt;/Submitted&gt;
+  &lt;Text&gt;sample string 4&lt;/Text&gt;
+&lt;/AssignmentAnswerResponse&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

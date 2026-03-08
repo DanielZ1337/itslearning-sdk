@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title></title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    <link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <h1>Itslearning.RestApi.Entities.InstantMessageThread</h1>
+    <p>Represent an instant message thread</p>
+    <section class="content-wrapper main-content clear-fix">
+            <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier for the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>The name of the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Created</td>
+                    <td class="parameter-documentation">
+                        <p>The date the thread was created</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedByTeacher</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether the user who created thread is a teacher.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CreatedBy</td>
+                    <td class="parameter-documentation">
+                        <p>The person identifier who has created the thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p>The type of thread this is
+ <p>
+ Valid values are 'Course', 'Project', 'Group', 'OneToOne' and 'GroupPlaceHolder'
+ </p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColorSchema</td>
+                    <td class="parameter-documentation">
+                        <p>The colorSchema for this thread. Only applies if type is 'Course'</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Messages</td>
+                    <td class="parameter-documentation">
+                        <p>Some message in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.InstantMessage">EntityListOfItslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastMessage</td>
+                    <td class="parameter-documentation">
+                        <p>The last message in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessage">Itslearning.RestApi.Entities.InstantMessage</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MatchingMessageIds</td>
+                    <td class="parameter-documentation">
+                        <p>The id's of all messages in the thread that match the search query (if any)</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of integer, 64 bit
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Participants</td>
+                    <td class="parameter-documentation">
+                        <p>An array of participants in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.ThreadParticipant">Itslearning.RestApi.Entities.ThreadParticipant</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ParticipantsCount</td>
+                    <td class="parameter-documentation">
+                        <p>Number of participants in the thread.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasActiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current thread has any recipients except current user who are able to receive messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasInactiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current thread has any recipients except current user who are not able to receive messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">NumberOfInactiveParticipants</td>
+                    <td class="parameter-documentation">
+                        <p>Number of persons who are not able to receive messages in a conversation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InactiveParticipantFullName</td>
+                    <td class="parameter-documentation">
+                        <p>Full name of person who are not able to receive messages in case if there's the only one such person
+ in a conversation.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasCreatorInThread</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether person who created current thread is still in the list of its participants.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsCurrentUserARecipientWithSourceLocation</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether current person is in the list of current thread participants
+ as course/project/collaboration/hierarchy member.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LocationRecipients</td>
+                    <td class="parameter-documentation">
+                        <p>An array of location recipients in the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.LocationRecipient">Itslearning.RestApi.Entities.LocationRecipient</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanShowParticipantsPage</td>
+                    <td class="parameter-documentation">
+                        <p>Defines whether course participants page is allowed to be seen.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastReadInstantMessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The id of the last read instant message if there is one</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">SortIndex</td>
+                    <td class="parameter-documentation">
+                        <p>A number that the threads will be sorted by. Highest number is shown as the thread with most recent update (contains newest message).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer, 64 bit
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OnlyThreadAdminCanSendToThread</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether only thread admins can send to this thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsThreadAdministrator</td>
+                    <td class="parameter-documentation">
+                        <p>Gets whether the current user is an administrator of this thread
+ Only course threads have administrators</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsThreadModerator</td>
+                    <td class="parameter-documentation">
+                        <p>Thread moderator have additional permissions to moderate the thread:
+ to close or delete the thread, delete individual messages.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">InstantMessageLocationId</td>
+                    <td class="parameter-documentation">
+                        <p>The location identifier for the thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsBlocked</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread is blocked.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">UserAllowToBlockThread</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread can be blocked by current user.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuse</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread is abusive (marked as abusive by the current user
+ or the current user got a report message about abuse).</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsAbuseReportedByCurrentUser</td>
+                    <td class="parameter-documentation">
+                        <p>Contains true if the current person has sent a report message that the thread is abusive.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MassMessageType</td>
+                    <td class="parameter-documentation">
+                        <p>Determines types of messages in thread</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.InstantMessageMassMessageType">Itslearning.RestApi.Entities.InstantMessageMassMessageType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Tooltip</td>
+                    <td class="parameter-documentation">
+                        <p>Tooltip to be displayed on the thread title.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CanDelete</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether the thread can be hard deleted.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+    </section>
+</div>
+
+</body>
+</html>

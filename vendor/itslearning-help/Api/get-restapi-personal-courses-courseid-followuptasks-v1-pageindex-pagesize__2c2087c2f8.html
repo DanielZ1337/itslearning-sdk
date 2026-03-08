@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/courses/{courseId}/followuptasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/courses/{courseId}/followuptasks/v1?PageIndex={PageIndex}&amp;PageSize={PageSize}</h1>
+<div>
+    <p><p>Gets the follow-up tasks for the given course.</p>
+<p>
+ The list shows activities for specified course that have new or updated submissions/student work, or if the teacher needs to assess a submission/attempt.
+ This will give the teacher an easy overview to see if there are updates, and to decide which to follow up next.
+ </p>
+<p>
+ Supports paging. If paging is not used, it will use a default pageSize on pageIndex 0.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of FollowUpTask</p>
+
+<a href="/restapi/help/ResourceModel?modelName=EntityListOfItslearning.RestApi.Entities.FollowUpTask">EntityListOfItslearning.RestApi.Entities.FollowUpTask</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">EntityArray</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.FollowUpTask">Itslearning.RestApi.Entities.FollowUpTask</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Total</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CurrentPageIndex</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PageSize</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;EntityArray&quot;: [
+    {
+      &quot;Title&quot;: &quot;sample string 1&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 2&quot;,
+      &quot;NumberOfNewOrUpdatedSubmissions&quot;: 3,
+      &quot;NumberOfSubmissionsToAssess&quot;: 4,
+      &quot;TotalNumberOfEvaluateSubmissions&quot;: 5,
+      &quot;Url&quot;: &quot;sample string 6&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 7&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 8&quot;,
+      &quot;BrandIconUrl&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 10,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;LearningToolId&quot;: 11
+    },
+    {
+      &quot;Title&quot;: &quot;sample string 1&quot;,
+      &quot;LocationTitle&quot;: &quot;sample string 2&quot;,
+      &quot;NumberOfNewOrUpdatedSubmissions&quot;: 3,
+      &quot;NumberOfSubmissionsToAssess&quot;: 4,
+      &quot;TotalNumberOfEvaluateSubmissions&quot;: 5,
+      &quot;Url&quot;: &quot;sample string 6&quot;,
+      &quot;ContentUrl&quot;: &quot;sample string 7&quot;,
+      &quot;IconUrl&quot;: &quot;sample string 8&quot;,
+      &quot;BrandIconUrl&quot;: &quot;sample string 9&quot;,
+      &quot;ElementId&quot;: 10,
+      &quot;ElementType&quot;: &quot;Unknown&quot;,
+      &quot;LearningToolId&quot;: 11
+    }
+  ],
+  &quot;Total&quot;: 1,
+  &quot;CurrentPageIndex&quot;: 2,
+  &quot;PageSize&quot;: 3
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;EntityList xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;CurrentPageIndex&gt;2&lt;/CurrentPageIndex&gt;
+  &lt;EntityArray&gt;
+    &lt;FollowUpTask&gt;
+      &lt;BrandIconUrl&gt;sample string 9&lt;/BrandIconUrl&gt;
+      &lt;ContentUrl&gt;sample string 7&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;10&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;IconUrl&gt;sample string 8&lt;/IconUrl&gt;
+      &lt;LearningToolId&gt;11&lt;/LearningToolId&gt;
+      &lt;LocationTitle&gt;sample string 2&lt;/LocationTitle&gt;
+      &lt;NumberOfNewOrUpdatedSubmissions&gt;3&lt;/NumberOfNewOrUpdatedSubmissions&gt;
+      &lt;NumberOfSubmissionsToAssess&gt;4&lt;/NumberOfSubmissionsToAssess&gt;
+      &lt;Title&gt;sample string 1&lt;/Title&gt;
+      &lt;TotalNumberOfEvaluateSubmissions&gt;5&lt;/TotalNumberOfEvaluateSubmissions&gt;
+      &lt;Url&gt;sample string 6&lt;/Url&gt;
+    &lt;/FollowUpTask&gt;
+    &lt;FollowUpTask&gt;
+      &lt;BrandIconUrl&gt;sample string 9&lt;/BrandIconUrl&gt;
+      &lt;ContentUrl&gt;sample string 7&lt;/ContentUrl&gt;
+      &lt;ElementId&gt;10&lt;/ElementId&gt;
+      &lt;ElementType&gt;Unknown&lt;/ElementType&gt;
+      &lt;IconUrl&gt;sample string 8&lt;/IconUrl&gt;
+      &lt;LearningToolId&gt;11&lt;/LearningToolId&gt;
+      &lt;LocationTitle&gt;sample string 2&lt;/LocationTitle&gt;
+      &lt;NumberOfNewOrUpdatedSubmissions&gt;3&lt;/NumberOfNewOrUpdatedSubmissions&gt;
+      &lt;NumberOfSubmissionsToAssess&gt;4&lt;/NumberOfSubmissionsToAssess&gt;
+      &lt;Title&gt;sample string 1&lt;/Title&gt;
+      &lt;TotalNumberOfEvaluateSubmissions&gt;5&lt;/TotalNumberOfEvaluateSubmissions&gt;
+      &lt;Url&gt;sample string 6&lt;/Url&gt;
+    &lt;/FollowUpTask&gt;
+  &lt;/EntityArray&gt;
+  &lt;PageSize&gt;3&lt;/PageSize&gt;
+  &lt;Total&gt;1&lt;/Total&gt;
+&lt;/EntityList&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

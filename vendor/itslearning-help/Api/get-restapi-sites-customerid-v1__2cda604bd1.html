@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/sites/{customerId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/sites/{customerId}/v1</h1>
+<div>
+    <p>Get an itslearning site by customerId.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">customerId</td>
+                    <td class="parameter-documentation">
+                        <p>The customerId for the site</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Site">Itslearning.RestApi.Entities.Site</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">IsFronterUpgradedSite</td>
+                    <td class="parameter-documentation">
+                        <p>IsFronterUpgradedSite flag.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsParentAppEnabled</td>
+                    <td class="parameter-documentation">
+                        <p>Determines whether parent app is enabled.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">OrgApiBaseUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The Url to Organisation Api (AKA Content Import).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CustomerId</td>
+                    <td class="parameter-documentation">
+                        <p>The customer id for this site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Title</td>
+                    <td class="parameter-documentation">
+                        <p>The title used for the site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ShortName</td>
+                    <td class="parameter-documentation">
+                        <p>The short name used for the site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CultureName</td>
+                    <td class="parameter-documentation">
+                        <p>The culture name used for the site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">BaseUrl</td>
+                    <td class="parameter-documentation">
+                        <p>Base url for the site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsPersonalRestApiEnabled</td>
+                    <td class="parameter-documentation">
+                        <p>Check to see if the Personal API has been enabled for this site.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ShowCustomerInDropdownList</td>
+                    <td class="parameter-documentation">
+                        <p>Flag to identify wheteher customer should appear in dropdown lists.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CountryCode</td>
+                    <td class="parameter-documentation">
+                        <p>The country code for the customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StateCode</td>
+                    <td class="parameter-documentation">
+                        <p>The state code for the customer.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Segment</td>
+                    <td class="parameter-documentation">
+                        <p>The education segment.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itsolutions.ItslUtils.Constants.CustomerEducationSegment">Itsolutions.ItslUtils.Constants.CustomerEducationSegment</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;IsFronterUpgradedSite&quot;: true,
+  &quot;IsParentAppEnabled&quot;: true,
+  &quot;OrgApiBaseUrl&quot;: &quot;sample string 3&quot;,
+  &quot;CustomerId&quot;: 4,
+  &quot;Title&quot;: &quot;sample string 5&quot;,
+  &quot;ShortName&quot;: &quot;sample string 6&quot;,
+  &quot;CultureName&quot;: &quot;sample string 7&quot;,
+  &quot;BaseUrl&quot;: &quot;sample string 8&quot;,
+  &quot;IsPersonalRestApiEnabled&quot;: true,
+  &quot;ShowCustomerInDropdownList&quot;: true,
+  &quot;CountryCode&quot;: &quot;sample string 11&quot;,
+  &quot;StateCode&quot;: &quot;sample string 12&quot;,
+  &quot;Segment&quot;: 0
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;Site xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;BaseUrl&gt;sample string 8&lt;/BaseUrl&gt;
+  &lt;CountryCode&gt;sample string 11&lt;/CountryCode&gt;
+  &lt;CultureName&gt;sample string 7&lt;/CultureName&gt;
+  &lt;CustomerId&gt;4&lt;/CustomerId&gt;
+  &lt;IsPersonalRestApiEnabled&gt;true&lt;/IsPersonalRestApiEnabled&gt;
+  &lt;Segment&gt;Higher&lt;/Segment&gt;
+  &lt;ShortName&gt;sample string 6&lt;/ShortName&gt;
+  &lt;ShowCustomerInDropdownList&gt;true&lt;/ShowCustomerInDropdownList&gt;
+  &lt;StateCode&gt;sample string 12&lt;/StateCode&gt;
+  &lt;Title&gt;sample string 5&lt;/Title&gt;
+  &lt;IsFronterUpgradedSite&gt;true&lt;/IsFronterUpgradedSite&gt;
+  &lt;IsParentAppEnabled&gt;true&lt;/IsParentAppEnabled&gt;
+  &lt;OrgApiBaseUrl&gt;sample string 3&lt;/OrgApiBaseUrl&gt;
+&lt;/Site&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

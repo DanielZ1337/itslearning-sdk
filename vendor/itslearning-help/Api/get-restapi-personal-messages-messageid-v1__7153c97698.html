@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/messages/{messageId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/messages/{messageId}/v1</h1>
+<div>
+    <p><p>
+ Get a single message by its messageId.
+ </p>
+<p>
+ Returns HTTP status 404 not found, if the messageId does not exist for the user.
+ It will only return messages the user has access to.
+ </p></p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">messageId</td>
+                    <td class="parameter-documentation">
+                        <p>The messageId</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The message</p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Message">Itslearning.RestApi.Entities.Message</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Text</td>
+                    <td class="parameter-documentation">
+                        <p>The message text. (can contain html)</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">To</td>
+                    <td class="parameter-documentation">
+                        <p>The list of users this message was sent to.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Attachments</td>
+                    <td class="parameter-documentation">
+                        <p>A list of attachments to this message.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.Attachment">Itslearning.RestApi.Entities.Attachment</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageId</td>
+                    <td class="parameter-documentation">
+                        <p>The unique id for for the message, in scope of a site (itslearning customer).</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">From</td>
+                    <td class="parameter-documentation">
+                        <p>Basic details of who sent the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.PersonSimple">Itslearning.RestApi.Entities.PersonSimple</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">DateReceived</td>
+                    <td class="parameter-documentation">
+                        <p>When the message was received. Time zone is UTC.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Subject</td>
+                    <td class="parameter-documentation">
+                        <p>The subject of the message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PreviewText</td>
+                    <td class="parameter-documentation">
+                        <p>The preview text (the first part of the message, stripped for html and html entities).</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">MessageUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The URL of the complete message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ContentUrl</td>
+                    <td class="parameter-documentation">
+                        <p>The content URL of the complete message.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">HasAttachments</td>
+                    <td class="parameter-documentation">
+                        <p>True if this message has any attachments.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsRead</td>
+                    <td class="parameter-documentation">
+                        <p>True if this message has been read.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsForwarded</td>
+                    <td class="parameter-documentation">
+                        <p>True if this message has been forwarded.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastForwardedDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>The time and date the last time this message was forwarded.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">IsReplied</td>
+                    <td class="parameter-documentation">
+                        <p>True if this message has been replied.</p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">LastRepliedDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>The time and date the last time this message was replied.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;Text&quot;: &quot;sample string 1&quot;,
+  &quot;To&quot;: [
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FirstName&quot;: &quot;sample string 2&quot;,
+      &quot;LastName&quot;: &quot;sample string 3&quot;,
+      &quot;FullName&quot;: &quot;sample string 4&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+    },
+    {
+      &quot;PersonId&quot;: 1,
+      &quot;FirstName&quot;: &quot;sample string 2&quot;,
+      &quot;LastName&quot;: &quot;sample string 3&quot;,
+      &quot;FullName&quot;: &quot;sample string 4&quot;,
+      &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+      &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+      &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+      &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+    }
+  ],
+  &quot;Attachments&quot;: [
+    {
+      &quot;FileId&quot;: 1,
+      &quot;Url&quot;: &quot;sample string 2&quot;,
+      &quot;DisplayName&quot;: &quot;sample string 3&quot;,
+      &quot;FileSizeInKiloBytes&quot;: 4
+    },
+    {
+      &quot;FileId&quot;: 1,
+      &quot;Url&quot;: &quot;sample string 2&quot;,
+      &quot;DisplayName&quot;: &quot;sample string 3&quot;,
+      &quot;FileSizeInKiloBytes&quot;: 4
+    }
+  ],
+  &quot;MessageId&quot;: 2,
+  &quot;From&quot;: {
+    &quot;PersonId&quot;: 1,
+    &quot;FirstName&quot;: &quot;sample string 2&quot;,
+    &quot;LastName&quot;: &quot;sample string 3&quot;,
+    &quot;FullName&quot;: &quot;sample string 4&quot;,
+    &quot;ProfileUrl&quot;: &quot;sample string 5&quot;,
+    &quot;AdditionalInfo&quot;: &quot;sample string 6&quot;,
+    &quot;ProfileImageUrl&quot;: &quot;sample string 7&quot;,
+    &quot;ProfileImageUrlSmall&quot;: &quot;sample string 8&quot;
+  },
+  &quot;DateReceived&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;Subject&quot;: &quot;sample string 4&quot;,
+  &quot;PreviewText&quot;: &quot;sample string 5&quot;,
+  &quot;MessageUrl&quot;: &quot;sample string 6&quot;,
+  &quot;ContentUrl&quot;: &quot;sample string 7&quot;,
+  &quot;HasAttachments&quot;: true,
+  &quot;IsRead&quot;: true,
+  &quot;IsForwarded&quot;: true,
+  &quot;LastForwardedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+  &quot;IsReplied&quot;: true,
+  &quot;LastRepliedDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;Message xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;ContentUrl&gt;sample string 7&lt;/ContentUrl&gt;
+  &lt;DateReceived&gt;2026-03-07T09:02:56Z&lt;/DateReceived&gt;
+  &lt;From&gt;
+    &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+    &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+    &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+    &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+    &lt;PersonId&gt;1&lt;/PersonId&gt;
+    &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+    &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+    &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+  &lt;/From&gt;
+  &lt;HasAttachments&gt;true&lt;/HasAttachments&gt;
+  &lt;IsForwarded&gt;true&lt;/IsForwarded&gt;
+  &lt;IsRead&gt;true&lt;/IsRead&gt;
+  &lt;IsReplied&gt;true&lt;/IsReplied&gt;
+  &lt;LastForwardedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastForwardedDateTime&gt;
+  &lt;LastRepliedDateTime&gt;2026-03-07T09:02:56Z&lt;/LastRepliedDateTime&gt;
+  &lt;MessageId&gt;2&lt;/MessageId&gt;
+  &lt;MessageUrl&gt;sample string 6&lt;/MessageUrl&gt;
+  &lt;PreviewText&gt;sample string 5&lt;/PreviewText&gt;
+  &lt;Subject&gt;sample string 4&lt;/Subject&gt;
+  &lt;Attachments xmlns:d2p1=&quot;http://schemas.datacontract.org/2004/07/Itslearning.RestApi.Entities&quot;&gt;
+    &lt;d2p1:Attachment&gt;
+      &lt;d2p1:DisplayName&gt;sample string 3&lt;/d2p1:DisplayName&gt;
+      &lt;d2p1:FileId&gt;1&lt;/d2p1:FileId&gt;
+      &lt;d2p1:FileSizeInKiloBytes&gt;4&lt;/d2p1:FileSizeInKiloBytes&gt;
+      &lt;d2p1:Url&gt;sample string 2&lt;/d2p1:Url&gt;
+    &lt;/d2p1:Attachment&gt;
+    &lt;d2p1:Attachment&gt;
+      &lt;d2p1:DisplayName&gt;sample string 3&lt;/d2p1:DisplayName&gt;
+      &lt;d2p1:FileId&gt;1&lt;/d2p1:FileId&gt;
+      &lt;d2p1:FileSizeInKiloBytes&gt;4&lt;/d2p1:FileSizeInKiloBytes&gt;
+      &lt;d2p1:Url&gt;sample string 2&lt;/d2p1:Url&gt;
+    &lt;/d2p1:Attachment&gt;
+  &lt;/Attachments&gt;
+  &lt;Text&gt;sample string 1&lt;/Text&gt;
+  &lt;To&gt;
+    &lt;PersonSimple&gt;
+      &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+    &lt;/PersonSimple&gt;
+    &lt;PersonSimple&gt;
+      &lt;AdditionalInfo&gt;sample string 6&lt;/AdditionalInfo&gt;
+      &lt;FirstName&gt;sample string 2&lt;/FirstName&gt;
+      &lt;FullName&gt;sample string 4&lt;/FullName&gt;
+      &lt;LastName&gt;sample string 3&lt;/LastName&gt;
+      &lt;PersonId&gt;1&lt;/PersonId&gt;
+      &lt;ProfileImageUrl&gt;sample string 7&lt;/ProfileImageUrl&gt;
+      &lt;ProfileImageUrlSmall&gt;sample string 8&lt;/ProfileImageUrlSmall&gt;
+      &lt;ProfileUrl&gt;sample string 5&lt;/ProfileUrl&gt;
+    &lt;/PersonSimple&gt;
+  &lt;/To&gt;
+&lt;/Message&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

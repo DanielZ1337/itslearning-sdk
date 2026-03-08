@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/studentplan/assessments/topics/v1?courseId={courseId}&amp;fromId={fromId}</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/studentplan/assessments/topics/v1?courseId={courseId}&amp;fromId={fromId}</h1>
+<div>
+    <p>Returns list of topic assessments for the course and student.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">courseId</td>
+                    <td class="parameter-documentation">
+                        <p>The course identifier.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">fromId</td>
+                    <td class="parameter-documentation">
+                        <p>The identifier of the topic to start search from.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>List of topics.</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanTopic">Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanTopic</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Id</td>
+                    <td class="parameter-documentation">
+                        <p>Topic id.</p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Plans</td>
+                    <td class="parameter-documentation">
+                        <p>List of plans.</p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="/restapi/help/ResourceModel?modelName=Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanPlan">Itslearning.RestApi.Entities.StudentPlan.Assessments.StudentPlanPlan</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Name</td>
+                    <td class="parameter-documentation">
+                        <p>Topic name.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ColorCode</td>
+                    <td class="parameter-documentation">
+                        <p>The topic color schema.</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StartDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>Topic start date and time.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">EndDateTime</td>
+                    <td class="parameter-documentation">
+                        <p>Topic end date and time.</p>
+                    </td>
+                    <td class="parameter-type">
+                        date
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;Id&quot;: 1,
+    &quot;Plans&quot;: [
+      {
+        &quot;StartDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;StopDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;Activities&quot;: [
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          },
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          }
+        ]
+      },
+      {
+        &quot;StartDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;StopDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;Activities&quot;: [
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          },
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          }
+        ]
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;ColorCode&quot;: &quot;sample string 3&quot;,
+    &quot;StartDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;EndDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;
+  },
+  {
+    &quot;Id&quot;: 1,
+    &quot;Plans&quot;: [
+      {
+        &quot;StartDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;StopDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;Activities&quot;: [
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          },
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          }
+        ]
+      },
+      {
+        &quot;StartDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;StopDate&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+        &quot;Activities&quot;: [
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          },
+          {
+            &quot;Id&quot;: 1,
+            &quot;Title&quot;: &quot;sample string 2&quot;,
+            &quot;Url&quot;: &quot;sample string 3&quot;,
+            &quot;IconUrl&quot;: &quot;sample string 4&quot;,
+            &quot;Assessments&quot;: [
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              },
+              {
+                &quot;LearningObjectiveId&quot;: 1,
+                &quot;Url&quot;: &quot;sample string 2&quot;,
+                &quot;Comment&quot;: &quot;sample string 3&quot;,
+                &quot;LearningObjectiveTitle&quot;: &quot;sample string 4&quot;,
+                &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;
+              }
+            ],
+            &quot;AssessmentTitle&quot;: &quot;sample string 5&quot;,
+            &quot;Feedback&quot;: {
+              &quot;RichContent&quot;: &quot;sample string 1&quot;,
+              &quot;PlainContent&quot;: &quot;sample string 2&quot;,
+              &quot;HasRichContent&quot;: true
+            }
+          }
+        ]
+      }
+    ],
+    &quot;Name&quot;: &quot;sample string 2&quot;,
+    &quot;ColorCode&quot;: &quot;sample string 3&quot;,
+    &quot;StartDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;,
+    &quot;EndDateTime&quot;: &quot;2026-03-07T09:02:56Z&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfStudentPlanTopic xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+  &lt;StudentPlanTopic&gt;
+    &lt;ColorCode&gt;sample string 3&lt;/ColorCode&gt;
+    &lt;EndDateTime&gt;2026-03-07T09:02:56Z&lt;/EndDateTime&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Plans&gt;
+      &lt;StudentPlanPlan&gt;
+        &lt;Activities&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+        &lt;/Activities&gt;
+        &lt;StartDate&gt;2026-03-07T09:02:56Z&lt;/StartDate&gt;
+        &lt;StopDate&gt;2026-03-07T09:02:56Z&lt;/StopDate&gt;
+      &lt;/StudentPlanPlan&gt;
+      &lt;StudentPlanPlan&gt;
+        &lt;Activities&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+        &lt;/Activities&gt;
+        &lt;StartDate&gt;2026-03-07T09:02:56Z&lt;/StartDate&gt;
+        &lt;StopDate&gt;2026-03-07T09:02:56Z&lt;/StopDate&gt;
+      &lt;/StudentPlanPlan&gt;
+    &lt;/Plans&gt;
+    &lt;StartDateTime&gt;2026-03-07T09:02:56Z&lt;/StartDateTime&gt;
+  &lt;/StudentPlanTopic&gt;
+  &lt;StudentPlanTopic&gt;
+    &lt;ColorCode&gt;sample string 3&lt;/ColorCode&gt;
+    &lt;EndDateTime&gt;2026-03-07T09:02:56Z&lt;/EndDateTime&gt;
+    &lt;Id&gt;1&lt;/Id&gt;
+    &lt;Name&gt;sample string 2&lt;/Name&gt;
+    &lt;Plans&gt;
+      &lt;StudentPlanPlan&gt;
+        &lt;Activities&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+        &lt;/Activities&gt;
+        &lt;StartDate&gt;2026-03-07T09:02:56Z&lt;/StartDate&gt;
+        &lt;StopDate&gt;2026-03-07T09:02:56Z&lt;/StopDate&gt;
+      &lt;/StudentPlanPlan&gt;
+      &lt;StudentPlanPlan&gt;
+        &lt;Activities&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+          &lt;Activity&gt;
+            &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+            &lt;Assessments&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+              &lt;Assessment&gt;
+                &lt;AssessmentTitle&gt;sample string 5&lt;/AssessmentTitle&gt;
+                &lt;Comment&gt;sample string 3&lt;/Comment&gt;
+                &lt;LearningObjectiveId&gt;1&lt;/LearningObjectiveId&gt;
+                &lt;LearningObjectiveTitle&gt;sample string 4&lt;/LearningObjectiveTitle&gt;
+                &lt;Url&gt;sample string 2&lt;/Url&gt;
+              &lt;/Assessment&gt;
+            &lt;/Assessments&gt;
+            &lt;Feedback&gt;
+              &lt;HasRichContent&gt;true&lt;/HasRichContent&gt;
+              &lt;PlainContent&gt;sample string 2&lt;/PlainContent&gt;
+              &lt;RichContent&gt;sample string 1&lt;/RichContent&gt;
+            &lt;/Feedback&gt;
+            &lt;IconUrl&gt;sample string 4&lt;/IconUrl&gt;
+            &lt;Id&gt;1&lt;/Id&gt;
+            &lt;Title&gt;sample string 2&lt;/Title&gt;
+            &lt;Url&gt;sample string 3&lt;/Url&gt;
+          &lt;/Activity&gt;
+        &lt;/Activities&gt;
+        &lt;StartDate&gt;2026-03-07T09:02:56Z&lt;/StartDate&gt;
+        &lt;StopDate&gt;2026-03-07T09:02:56Z&lt;/StopDate&gt;
+      &lt;/StudentPlanPlan&gt;
+    &lt;/Plans&gt;
+    &lt;StartDateTime&gt;2026-03-07T09:02:56Z&lt;/StartDateTime&gt;
+  &lt;/StudentPlanTopic&gt;
+&lt;/ArrayOfStudentPlanTopic&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

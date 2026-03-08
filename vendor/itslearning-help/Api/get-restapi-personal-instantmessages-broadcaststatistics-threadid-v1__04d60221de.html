@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>GET restapi/personal/instantmessages/broadcastStatistics/{threadId}/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET restapi/personal/instantmessages/broadcastStatistics/{threadId}/v1</h1>
+<div>
+    <p>Gets statistics how many recipients read messages of specified threads</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">threadId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                                <p>Required</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p></p>
+
+<a href="/restapi/help/ResourceModel?modelName=Itsolutions.Itslearning.ItslCore.BusinessLayer.InstantMessage.Broadcast.BroadcastMessageStatisticsEntity">Itsolutions.Itslearning.ItslCore.BusinessLayer.InstantMessage.Broadcast.BroadcastMessageStatisticsEntity</a>    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">InstantMessageThreadId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ReadMessageRecipientsCount</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TotalRecipientsCount</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ReadMessagePercentage</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        decimal number
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+{
+  &quot;InstantMessageThreadId&quot;: 1,
+  &quot;ReadMessageRecipientsCount&quot;: 2,
+  &quot;TotalRecipientsCount&quot;: 3,
+  &quot;ReadMessagePercentage&quot;: 66.666666666666671
+}
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;BroadcastMessageStatisticsEntity xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itsolutions.Itslearning.ItslCore.BusinessLayer.InstantMessage.Broadcast&quot;&gt;
+  &lt;_properties xmlns:d2p1=&quot;http://schemas.microsoft.com/2003/10/Serialization/Arrays&quot; i:nil=&quot;true&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Common.Core&quot; /&gt;
+  &lt;_x003C_IsDeleted_x003E_k__BackingField xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Common.Core&quot;&gt;true&lt;/_x003C_IsDeleted_x003E_k__BackingField&gt;
+  &lt;_x003C_IsSelected_x003E_k__BackingField xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Common.Core&quot;&gt;true&lt;/_x003C_IsSelected_x003E_k__BackingField&gt;
+  &lt;_x003C_SpecifyTableNameInSetAutoincrement_x003E_k__BackingField xmlns=&quot;http://schemas.datacontract.org/2004/07/Itslearning.Common.Core&quot;&gt;false&lt;/_x003C_SpecifyTableNameInSetAutoincrement_x003E_k__BackingField&gt;
+  &lt;InstantMessageThreadId&gt;1&lt;/InstantMessageThreadId&gt;
+  &lt;ReadMessageRecipientsCount&gt;2&lt;/ReadMessageRecipientsCount&gt;
+  &lt;TotalRecipientsCount&gt;3&lt;/TotalRecipientsCount&gt;
+&lt;/BroadcastMessageStatisticsEntity&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

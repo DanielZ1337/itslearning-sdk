@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Referrer for IE/Edge -->
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <title>POST restapi/personal/instantmessages/attachment/v1</title>
+    <link rel="shortcut icon" href="/Areas/HelpPage/icons/favicon.ico" type="image/x-icon" />
+    
+</head>
+<body>
+    
+
+<link type="text/css" href="/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="/restapi/help">&lt; Home &gt;</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>POST restapi/personal/instantmessages/attachment/v1</h1>
+<div>
+    <p>Upload file attachment to temporary storage.
+ The file should be included in the post call so we can extract it as HttpContext.Current.Request.Files</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <p>None.</p>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>A list of tuples with file repo guids to identify temporary file, and the name of the file</p>
+
+        Collection of <a href="/restapi/help/ResourceModel?modelName=TupleOfSystem.GuidAndSystem.String">TupleOfSystem.GuidAndSystem.String</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">Item1</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        globally unique identifier
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Item2</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+[
+  {
+    &quot;m_Item1&quot;: &quot;9ebfb484-b977-4599-886c-bd26ebc9496e&quot;,
+    &quot;m_Item2&quot;: &quot;sample string 2&quot;
+  },
+  {
+    &quot;m_Item1&quot;: &quot;a86453e2-f302-45fe-93bc-f33fa0536c24&quot;,
+    &quot;m_Item2&quot;: &quot;sample string 2&quot;
+  }
+]
+</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">
+&lt;ArrayOfTupleOfguidstring xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/System&quot;&gt;
+  &lt;TupleOfguidstring&gt;
+    &lt;m_Item1&gt;9ebfb484-b977-4599-886c-bd26ebc9496e&lt;/m_Item1&gt;
+    &lt;m_Item2&gt;sample string 2&lt;/m_Item2&gt;
+  &lt;/TupleOfguidstring&gt;
+  &lt;TupleOfguidstring&gt;
+    &lt;m_Item1&gt;a86453e2-f302-45fe-93bc-f33fa0536c24&lt;/m_Item1&gt;
+    &lt;m_Item2&gt;sample string 2&lt;/m_Item2&gt;
+  &lt;/TupleOfguidstring&gt;
+&lt;/ArrayOfTupleOfguidstring&gt;
+</pre>
+        </div>
+</div>
+</div>
+    </section>
+</div>
+
+</body>
+</html>

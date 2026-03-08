@@ -7,9 +7,10 @@ objects before returning data to consumers.
 
 - The source of truth is the vendored help-site mirror in
   `vendor/itslearning-help`.
-- Model pages (`ResourceModel__modelName=...html`) mark date properties with the
-  literal type `date`.
-- Endpoint pages under `Api/` expose the documented response model under
+- Model pages under `vendor/itslearning-help/ResourceModel/` mark date
+  properties with the literal type `date`.
+- Endpoint pages under `vendor/itslearning-help/Api/` expose the documented
+  response model under
   `Response Information -> Resource Description`.
 
 ## Generated metadata
@@ -63,6 +64,8 @@ The generator updates:
 
 - `npm run sync:help` refreshes the vendored docs mirror from
   `https://www.itslearning.com/restapi/help/`.
+- The mirror uses short hashed filenames plus `vendor/itslearning-help/manifest.json`
+  to keep Windows-safe path lengths while preserving a stable URL-to-file map.
 - Re-run the generator whenever the vendored help-site export changes or
   response models are added.
 - Review the generated diffs, especially if the docs change a response model.
